@@ -11,7 +11,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/3d_emblem_lockup.ico" rel="icon">
-  <link href="assets/img/3d_emblem_lockup.ico" rel="apple-touch-icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -42,18 +42,25 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Building Blocks</a></h1>
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="assets/img/Blue-Horizontal-Lockup.png" style="width:100%" class="img-fluid" alt="" >
+        </a>
+      </h1>
+
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#background">Background</a></li>
           <li><a class="nav-link scrollto" href="#granular">Granular Resources</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto o" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li><a class="nav-link scrollto o" href="#ogcapis">OGC APIs</a></li>
+          <li><a class="nav-link scrollto" href="#team">Examples</a></li>
+          <li><a class="nav-link scrollto" href="#team">FAQS</a></li>
+          <li><a class="nav-link scrollto" href="#team">OGC</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -72,7 +79,7 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -87,6 +94,8 @@
         <div class="col-xl-7 col-lg-9 text-center">
           <h1>Location Building Blocks</h1>
           <h2>Powering geo-enabled APIs</h2>
+          <br>
+          <p><a href="#background"><button type="button" class="btn btn-primary">Tell me More</button></a></p>
         </div>
       </div>
       <!-- <div class="text-center">
@@ -100,7 +109,7 @@
             <!-- <h4 class="title"><a href="">Mix & Match</a></h4> -->
             <p class="description">I need some specific bits of functionality to geo-enable my API.</p>
             <br><br>
-            <p><a href="#granular"><button type="button" class="btn btn-info box-button btn-block">Granular Resources</button></a></p>
+            <p><a href="#granular"><button type="button" class="btn btn-outline-primary box-button btn-block">Granular Resources</button></a></p>
           </div>
         </div>
 
@@ -110,7 +119,7 @@
             <!-- <h4 class="title"><a href="">Location-ready APIs</a></h4> -->
             <p class="description">I need a full fledged API for accessing a specific kind of geospatial resource.</p>
             <br>
-            <p><a href=""><button type="button" class="btn btn-info box-button">Location-ready APIs</button></a></p>
+            <p><a href="#ogcapis"><button type="button" class="btn btn-outline-primary box-button">Location-ready APIs</button></a></p>
           </div>
         </div>
 
@@ -121,6 +130,46 @@
 
   <main id="main">
 
+    <!-- ======= Background Section ======= -->
+    <section id="background" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>It's all about reusability.</h2>
+          <p>Each OGC API standard is made of a set of requirements, or <i>building blocks</i>, which can be reused beyond their original context. </p>
+        </div>
+
+        <div class="row content d-flex justify-content-center">
+
+          <!-- <div class="col-lg-6 video-box align-self-baseline"  data-aos="fade-right" data-aos-delay="100"> -->
+          <div class="col-lg-4"  data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/background/build-lego.jpg" style="width:100%" class="img-fluid" alt="" title="Photo by Jackson Simmer on Unsplash">
+          </div>
+
+
+
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Background Section -->
+
     <!-- ======= Granular Section ======= -->
     <section id="granular" class="services section-bg">
       <div class="container" data-aos="fade-up">
@@ -129,6 +178,8 @@
           <h2>Granular Resources</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
+
+
 
         <div class="row">
 
@@ -140,7 +191,7 @@
                 </svg>
                 <i class="bx bx-play"></i>
               </div>
-              <h4><a href="https://github.com/cportele/ogcapi-building-blocks">Try it</a></h4>
+              <h4><a href="#">Try it</a></h4>
               <p>Generate a <i>bounding box</i> building block, to use in your application.</p>
             </div>
           </div>
@@ -166,12 +217,12 @@
     </section><!-- End Granular Section -->
 
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= Ogcapis Section ======= -->
+    <section id="ogcapis" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About Us</h2>
+          <h2>OGC APIs</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. </p>
         </div>
 
@@ -198,7 +249,7 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section><!-- End ogcapis Section -->
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts section-bg">
