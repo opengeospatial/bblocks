@@ -28,6 +28,9 @@
   <!-- Fork me ribbon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 
+    <!-- Code Highlight -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -151,15 +154,16 @@
               Each OGC API standard is made of a set of requirements, or <i>building blocks</i>, which can be reused beyond their original context.
             </p>
             <ul>
-              <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bx bx-check-double"></i> Voluptate repellendus pariatur reprehenderit corporis sint.</li>
-              <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bx bx-check-double"></i> A building block could be a complete OGC API standard (e.g.: <a href="https://github.com/opengeospatial/ogcapi-features">OGC API Features</a>), one part of a multi-part standard (e.g.: <a href="https://docs.ogc.org/is/17-069r3/17-069r3.html">part 1 - Core</a>) or more granular functionality whithin the standard, such as data types or parameters (e.g.: <a href="https://github.com/cportele/ogcapi-building-blocks/blob/main/geo/common/parameter-bbox.adoc">bbox</a>, <a href="https://github.com/cportele/ogcapi-building-blocks/blob/main/geo/common/parameter-crs.adoc">crs</a>).</li>
+              <li><i class="bx bx-check-double"></i> One or more building blocks can be integrated into existing/novel web applications.</li>
+              <li><i class="bx bx-check-double"></i> Each building block represents a testable interface component.</li>
+              <!-- <li><i class="bx bx-check-double"></i> Each standard is a set of building blocks, grouped into conformance classes.</li> -->
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              Whether you need a complete web API to access a geospatial resource or just some bits to geo-enable your web application, 
+              the OGC building blocks could be a solution to provide standard, testable, interfaces, some of which with a high level of maturity.
+              Scroll to the <a href="#examples">examples</a> section, to see some real-life deployments of OGC building blocks.
+              <p><i>Let's not reinvent the wheel!</i></p>
             </p>
           </div>
 
@@ -174,8 +178,40 @@
 
         <div class="section-title">
           <h2>Granular Resources</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+
         </div>
+
+        <div class="row">
+
+          <p>
+            Did you ever had the need to define a <mark>bounding box</mark> parameter in your application? It is easy: you can just create an array of coordinates.
+            <i>But should you use the coordinates of the lower left and upper right corner, or upper left and lower right corner? What about the order - should it be x,y or lat,long ? And what happens with the crs?</i>
+          </p>
+          <!-- (B) AUTOMATIC PARSE -->
+          <pre><code>
+
+            // Here are a couple of variations for a bbox representation.
+
+            // Lower left, Upper Right - x,y
+            const bbox1=-[124.7844079,24.7433195,-66.9513812,49.3457868];
+            // Upper left, Lower Right - x,y
+            const bbox2=-[124.7844079,49.3457868,-66.9513812,4,24.7433195];
+            // Lower left, Upper Right - y,x
+            const bbox3=-[24.7433195,124.7844079,49.3457868,-66.9513812];
+
+          </code></pre>
+          <p>
+            Every day, developers around the world solve this same problem, in a slightly different way. 
+            And yet this is exactly what we want to avoid with the location building blocks - people solving the same problems, <i>again</i> and <i>again</i> - even if they solve them well, which is not always the case. 
+            The granular building blocks are used by the OGC APIS to address the requirements of these APIS, which are common requirements of location APIS;
+            for instance: the need of a bounding box parameter or an extent data type. 
+            Next time you need to address a geo requirement in your application, instead of spending time thinking about a solution, check-out the existing location buidling blocks. 
+          </p>
+
+
+
+          </div>
+
 
         <div class="row">
 
@@ -296,7 +332,9 @@
 
         <div class="section-title">
           <h2>Examples</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Check-out some real-life deployments of the OGC building blocks. 
+            Please get in touch by <a href="mailto:standards-team@ogc.org"><i class="bi bi-envelope"></i></a>,  
+            if you would like your application to be added to this gallery.</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="150">
@@ -634,6 +672,9 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
