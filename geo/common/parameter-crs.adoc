@@ -1,0 +1,47 @@
+= Parameter: crs
+
+Version: 1.0.0
+
+== Overview
+
+The `crs` query parameter can be used to request the coordinate reference system to use for any coordinates included in the response.
+
+https://github.com/cportele/ogcapi-building-blocks#building-block-maturity[*Maturity*]: Stable
+
+== Examples
+
+.Bounding box parameter example
+=================
+The following link:[Features request] will return the building geometries in the coordinate reference system NAD27 / UTM zone 3N that is used, for example, in Canada. 
+
+[source,TEXT]
+----
+.../collections/buildings/items
+?crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F26703
+&...
+----
+=================
+
+== Description
+
+If the `bbox-crs` parameter is specified, then the values of the `bbox` parameter are assumed to be in the specified coordinate reference system and the server will perform the necessary internal transformations to properly fetch data from within the specified bounding box.
+
+If the value of the `crs` parameter is not one of the supported coordinate reference system identifiers for the resource, the server will respond with a client error.
+
+How the supported coordinate reference systems are specified, depends on the resource type. For example, for a link:../features/json-features.adoc[Features resource], the supported coordinate reference systems are listed in the parent link:json-collection.adoc[OGC API Collection resource].
+
+== OpenAPI 3.0 specification
+
+ifdef::env-github[]
+include::schemas/parameter-crs.yaml[]
+endif::[]
+ifndef::env-github[]
+[source,YAML]
+----
+include::schemas/parameter-crs.yaml[]
+----
+endif::[]
+
+=== Source Reference
+
+http://www.opengis.net/doc/IS/ogcapi-features-2/1.0#_parameter_crs[OGC API - Features, Part 2, 6.3.2: Parameter crs]

@@ -1,0 +1,8 @@
+allOf:
+  - $ref: https://geojson.org/schema/Feature.json
+  - type: object
+    properties:
+      links:
+        type: array
+        items:
+          $ref: ../../../ogc-utils/schemas/json-link.yaml

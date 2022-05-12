@@ -1,0 +1,17 @@
+allOf:
+  - $ref: https://geojson.org/schema/FeatureCollection.json
+  - type: object
+    properties:
+      links:
+        type: array
+        items:
+          $ref: ../../../ogc-utils/schemas/json-link.yaml
+      timeStamp:
+        type: string
+        format: date-time
+      numberMatched:
+        type: integer
+        minimum: 0
+      numberReturned:
+        type: integer
+        minimum: 0
