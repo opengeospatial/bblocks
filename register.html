@@ -94,6 +94,26 @@
 
         <script>
 
+      function assignStatusBadge(status){
+
+        if (status === undefined) return "<span class='badge bg-danger'>no status</span>";
+
+        console.log(status);
+
+        switch (status) {
+          case "submitted":
+            return "<span class='badge bg-success'>submitted</span>";
+          case "Valid":
+            return "<span class='badge bg-primary'>valid</span>";
+          case "Superseded":
+            return "<span class='badge bg-secondary'>superseded</span>";
+          case "retiredinvalid":
+            return "<span class='badge bg-danger'>retiredinvalid</span>";
+          default:
+            return "<span class='badge bg-warning text-dark'>Warning</span>";
+          }
+      }
+
       function filterRecords() {
 
         var xmlhttp = new XMLHttpRequest();
@@ -105,10 +125,17 @@
             let text = "";
             var itemCount = 1
             for (let x in myObj) {
+
+              let statusBage= assignStatusBadge(myObj[x].status);
+              
+              console.log(status);
               let itemText = "<li data-aos='fade-up' data-aos-delay='"+(itemCount*100)+"'><i class='bx bx-help-circle icon-help'></i> <a data-bs-toggle='collapse' class='collapse' data-bs-target='#faq-list-"+itemCount+"'>" + myObj[x].name + "<i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>" +
               "<div id='faq-list-"+itemCount+"' class='collapse show' data-bs-parent='.faq-list'>" +
               "  <p>" +
               myObj[x].abstract +
+              "  </p>" +
+              "  <p>" +
+                statusBage +
               "  </p>" +
               "</div>" +
               "</li>";
