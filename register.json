@@ -14,7 +14,7 @@
     "maturity": "Mature"
   },
   {
-    "id": "r1.geo.common.data_types.ogc_collection",
+    "itemIdentifier": "r1.geo.common.data_types.ogc_collection",
     "name": "OGC Collection",
     "abstract": "An OGC Collection resource is a JSON object that provides information about and access to a set of geospatial resources, through links to API endpoints and/or files online. It is most commonly used to describe geospatial datasets, but can be used for collections of anything geospatial.",
     "status": "Valid",
@@ -28,37 +28,115 @@
     "maturity": "Mature"
   },
   {
-    "id": "r1.geo.common.data_types.extent",
+    "itemIdentifier": "r1.geo.common.data_types.extent",
     "name": "Extent",
-    "abstract": "This is where a description of this building block would go.",
+    "abstract": "This JSON object provides information about the spatial and temporal extent of a resource. A typical resource type is a collection and the object describes the extent of all items in the collection.",
     "status": "Valid",
-    "dateTimeAddition": "2022-05-24T11:00:05+00:00",
+    "dateTimeAddition": "2022-05-24T13:51:38+00:00",
     "itemClass": "ogc-building-block",
     "identifier": "ogc-building-block-register",
     "version": "0.1",
     "dateOfLastChange": "2022-05-24",
-    "link": "https://github.com/doublebyte1/bblocks/blob/master/registereditems/geo/common/json-collections.adoc",
+    "link": "https://github.com/doublebyte1/bblocks/blob/master/registereditems/geo/common/json-extent.adoc",
     "sources": ["ogc-api-features"],
     "maturity": "Mature"
   },
   {
-    "id": "r1.geo.common.data_types.bounding_box",
+    "itemIdentifier": "r1.geo.common.data_types.bounding_box",
     "name": "Bounding Box",
-    "abstract": "This is where a description of this building block would go."
+    "abstract": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.",
+    "status": "Valid",
+    "dateTimeAddition": "2022-05-24T13:51:38+00:00",
+    "itemClass": "ogc-building-block",
+    "identifier": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-05-24",
+    "link": "https://github.com/doublebyte1/bblocks/blob/master/registereditems/geo/common/json-bbox.adoc",
+    "sources": ["ogc-api-features"],
+    "maturity": "Mature"
   },
   {
-    "id": "r1.geo.common.parameters.bbox-crs",
+    "itemIdentifier": "r1.geo.common.parameters.bbox-crs",
     "name": "bbox-crs",
-    "abstract": "This is where a description of this building block would go."
+    "abstract": "The bbox-crs query parameter can be used to assert the coordinate reference system that is used for the coordinate values of the bbox parameter.",
+    "status": "Valid",
+    "dateTimeAddition": "2022-05-24T13:51:38+00:00",
+    "itemClass": "ogc-building-block",
+    "identifier": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-05-24",
+    "link": "https://github.com/doublebyte1/bblocks/blob/master/registereditems/geo/common/parameter-bbox-crs.adoc",
+    "sources": ["ogc-api-features"],
+    "maturity": "Stable"
   },
   {
-    "id": "r1.geo.common.parameters.bbox",
+    "itemIdentifier": "r1.geo.common.parameters.bbox",
     "name": "bbox",
-    "abstract": "This is where a description of this building block would go."
+    "abstract": "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).",
+    "status": "Valid",
+    "dateTimeAddition": "2022-05-24T13:51:38+00:00",
+    "itemClass": "ogc-building-block",
+    "identifier": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-05-24",
+    "link": "https://github.com/doublebyte1/bblocks/blob/master/registereditems/geo/common/parameter-bbox.adoc",
+    "sources": ["ogc-api-features"],
+    "maturity": "Mature"
   },
   {
-    "id": "r1.geo.common.parameters.crs",
+    "itemIdentifier": "r1.geo.common.parameters.crs",
     "name": "crs",
-    "abstract": "This is where a description of this building block would go."
+    "abstract": "The crs query parameter can be used to request the coordinate reference system to use for any coordinates included in the response.",
+    "status": "Valid",
+    "dateTimeAddition": "2022-05-24T14:56:51+00:00",
+    "itemClass": "ogc-building-block",
+    "identifier": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-05-24",
+    "link": "https://github.com/doublebyte1/bblocks/blob/master/registereditems/geo/common/parameter-crs.adoc",
+    "sources": ["ogc-api-features"],
+    "maturity": "Stable"
+  },
+  {
+    "itemIdentifier": "r1.geo.common.header.content-crs",
+    "name": "content-crs",
+    "abstract": "Because of the inconsistent provision of coordinate reference system (CRS) metadata in geospatial encodings and the continued confusion caused by the axis order of coordinates, this header provides a mechanism for a server to clearly and unambiguously assert the CRS being used in a response document independent of the requested output format.",
+    "status": "Valid",
+    "dateTimeAddition": "2022-05-24T14:56:51+00:00",
+    "itemClass": "ogc-building-block",
+    "identifier": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-05-24",
+    "link": "https://github.com/cportele/ogcapi-building-blocks/blob/main/geo/common/header-content-crs.adoc",
+    "sources": ["ogc-api-features"],
+    "maturity": "Stable"
+  } ,
+  {
+    "itemIdentifier": "r1.geo.features.data_types.feature",
+    "name": "feature",
+    "abstract": "A feature. Every feature is a sub-resource of an OGC Collection.",
+    "status": "Valid",
+    "dateTimeAddition": "2022-05-24T14:56:51+00:00",
+    "itemClass": "ogc-building-block",
+    "identifier": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-05-24",
+    "link": "https://github.com/doublebyte1/bblocks/blob/master/registereditems/geo/features/json-feature.adoc",
+    "sources": ["ogc-api-features"],
+    "maturity": "Mature"
+  },
+  {
+    "itemIdentifier": "r1.geo.features.data_types.features",
+    "name": "features",
+    "abstract": "The features in an OGC Collection. This resource supports spatial filtering with the <i>bbox</i> parameter, temporal filtering with the <i>datetime</i> parameter.",
+    "status": "Valid",
+    "dateTimeAddition": "2022-05-24T14:56:51+00:00",
+    "itemClass": "ogc-building-block",
+    "identifier": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-05-24",
+    "link": "https://github.com/doublebyte1/bblocks/blob/master/registereditems/geo/features/json-features.adoc",
+    "sources": ["ogc-api-features"],
+    "maturity": "Mature"
   }
 ]
