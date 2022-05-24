@@ -1,0 +1,67 @@
+= Instant
+
+Version: 1.0.1
+
+== Description
+
+Temporal instants are either a date or timestamp in the Gregorian calendar as specified by https://tools.ietf.org/html/rfc3339[RFC 3339]. See the syntax of `full-date` and `date-time` in https://tools.ietf.org/html/rfc3339#section-5.6[section 5.6]. 
+
+All timestamps include a timezone. The use of UTC ("Z") is recommended.
+
+This describes the initial range of instant values. This range may be extended in the future to support additional use cases. Clients processing instant values must be prepared to receive other values. Clients may ignore values that they do not understand.
+
+An instant is embedded as a string in JSON representations of OGC API resources.
+
+https://github.com/cportele/ogcapi-building-blocks#building-block-maturity[*Maturity*]: Mature
+
+=== Examples
+
+.Time instant example (date)
+=================
+[source,JSON]
+----
+"2017-08-17"
+----
+=================
+
+.Time instant example (date-time)
+=================
+[source,JSON]
+----
+"2017-08-17T08:05:32Z"
+----
+=================
+
+=== Schema
+
+ifdef::env-github[]
+include::instant.yaml[]
+endif::[]
+ifndef::env-github[]
+[source,YAML]
+----
+include::instant.yaml[]
+----
+endif::[]
+
+== Alternate Representation: Text 
+
+The text representation is identical to the RFC 3339 string.
+
+=== Examples
+
+.Time instant example (date)
+=================
+[source,TEXT]
+----
+2017-08-17
+----
+=================
+
+.Time instant example (date-time)
+=================
+[source,TEXT]
+----
+2017-08-17T08:05:32Z
+----
+=================

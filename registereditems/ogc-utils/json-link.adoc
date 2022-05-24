@@ -1,0 +1,69 @@
+= Link
+
+Version: 1.0.1
+
+== Overview
+
+Web linking according to http://tools.ietf.org/rfc/rfc8288.txt[RFC 8288] is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API's.
+
+https://github.com/cportele/ogcapi-building-blocks#building-block-maturity[*Maturity*]: Mature
+
+[[properties]]
+== Pre-defined properties
+
+.Properties
+[cols="20,10,70",options="header"]
+!===
+|Property |Type |Description
+|href |URI |**REQUIRED**. The link target URI, specified as an absolute or relative URI-Reference.
+|rel |String |**REQUIRED**. The link relation type(s). It identifies the semantics of the link, or it indicates that the target resource has particular attributes, or exhibits particular behaviors. All link relation types discussed in OGC API standards are either specified in the https://www.iana.org/assignments/link-relations[IANA link relation type register] or the http://www.opengis.net/def/rel[OGC link relation type register]. Link relation types that are URIs may also be encoded as a https://www.w3.org/TR/curie/[Safe CURIE] where the prefix has to be registered in the http://www.opengis.net/def/prefix[OGC prefix register] (which does not exist yet). The default prefix expands to `\http://www.opengis.net/def/rel/ogc/1.0/`. An example of a Safe CURIE is `[conformance]` for `\http://www.opengis.net/def/rel/ogc/1.0/conformance`. 
+|anchor |String |The anchor of the link. The default anchor is the JSON object that contains the JSON member that contains the Link object. For example, in a document that is a JSON object with a "links" member the anchor of each link in the "links" array is the document URI. In a Link object that is embedded deeper inside a JSON document, the anchor is the document URI with a URI fragment that is the JSON Pointer of the JSON member that contains the Link object.
+
+The `anchor` attribute is currently not mentioned in OGC API Features.
+|type |String |The `type` attribute, when present, is a hint indicating what the media type of the result of dereferencing the link should be. Note that this is only a hint; for example, it does not override the `Content-Type` header field of a HTTP response obtained by actually following the link.
+|title |String |The `title` attribute, when present, is used to label the destination of a link such that it can be used as a human-readable identifier in the language indicated by the `Content-Language` header field (if present).
+|hreflang |String |The `hreflang` attribute, when present, is a hint indicating what the language of the result of dereferencing the link should be. Note that this is only a hint; for example, it does not override the `Content-Language` header field of a HTTP response obtained by actually following the link.
+|length |Integer |The `length` attribute, when present, indicates an advisory length in octets of the representation returned when the target URI in the `href` attribute is dereferenced. Note that this is only a hint; for example, it does not override the `Content-Length` header field of a HTTP response obtained by actually following the link.
+!===
+
+Additional link attributes may be added to the Link object.
+
+=== Example
+
+.Link example (JSON)
+=================
+[source,JSON]
+----
+{
+   "href": "http://data.example.org/api.html",
+   "rel": "service-doc", 
+   "type": "text/html", 
+   "title": "the API documentation",
+   "hreflang": "en" 
+}
+----
+=================
+
+=== Schema
+
+ifdef::env-github[]
+include::link.yaml[]
+endif::[]
+ifndef::env-github[]
+[source,YAML]
+----
+include::link.yaml[]
+----
+endif::[]
+
+== Representation: HTTP Header 
+
+Links should be included in HTTP headers of requests or responses, too.
+
+.Link example (Header)
+=================
+[source,TEXT]
+----
+Link: <http://data.example.org/api.html>"; rel="service-doc"; type="text/html"; title="the API documentation"; hreflang="en"
+----
+=================

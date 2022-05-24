@@ -1,0 +1,83 @@
+= Resource: OGC Conformance Declaration
+
+Version: 1.0.1
+
+== Description
+
+An OGC Conformance Declaration is a JSON object that lists the conformance classes from standards or community specifications, identified by a URI, that the API conforms to. 
+
+Clients may but are not required to use this information. This resource is intended to support "generic" clients that want to access multiple implementations of OGC API standards - and not "just" a specific API / server. For this purpose, the server can declare the conformance classes it implements and conforms to.
+
+https://github.com/cportele/ogcapi-building-blocks#building-block-maturity[*Maturity*]: Mature
+
+[[properties]]
+== Pre-defined properties
+
+.Properties
+[cols="20,10a,70a",options="header"]
+!===
+|Property |Type |Description
+|conformsTo |[ URI ] |**REQUIRED**. The list of URIs of all OGC API conformance classes that the API conforms to. Servers MAY add also URIs of conformance classes that have not been standardized by OGC.
+!===
+
+[[link-relations]]
+== Link relation types
+
+This resource has no requirements or recommendations for outgoing links.
+
+The following link relation types are commonly used in links to an OGC Conformance Declaration:
+
+.Incoming link relation types
+[cols="25,75a",options="header"]
+!===
+|Link relation type |Description
+|`conformance` |From any resource that provides information about the API, e.g. a link:landing-page.adoc[landing page].
+
+This link relation type will not be registered with IANA. It will in the future be superseded by the `\http://www.opengis.net/def/rel/ogc/1.0/conformance` link relation type.
+|`\http://www.opengis.net/def/rel/ogc/1.0/conformance` |From any resource that provides information about the API, e.g. a link:landing-page.adoc[landing page].
+
+This link relation type will in the future supersede the `conformance` link relation type.
+!===
+
+=== Example
+
+.Conformance declaration example (JSON)
+=================
+This example is for an API implementing OGC API - Features - Part 1: Core and that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for features.
+
+[source,JSON]
+----
+{
+  "conformsTo": [
+    "http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core",
+    "http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30",
+    "http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html",
+    "http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson"
+  ]
+}
+----
+=================
+
+=== Media type
+
+`application/json`
+
+=== Schema
+
+ifdef::env-github[]
+include::schemas/json-conformance-declaration.yaml[]
+endif::[]
+ifndef::env-github[]
+[source,YAML]
+----
+include::schemas/json-conformance-declaration.yaml[]
+----
+endif::[]
+
+== Alternate Representation: HTML 
+
+An HTML representation should include all information that is part of the JSON representation.
+
+=== Media type
+
+`text/html`

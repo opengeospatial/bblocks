@@ -1,0 +1,85 @@
+= Interval
+
+Version: 1.0.1
+
+== Description
+
+Temporal intervals are described by the start and end link:instant.adoc[instants]. 
+
+Both start and end instants are included in the interval. 
+
+Open ranges at the start or end are supported.
+
+The interval is embedded as an array with two items (start, end) in JSON representations of OGC API resources.
+
+Open ranges at the start or end are represented by a `null` value for the start/end.
+
+https://github.com/cportele/ogcapi-building-blocks#building-block-maturity[*Maturity*]: Mature
+
+=== Examples
+
+.Time interval example (dates)
+=================
+[source,JSON]
+----
+[ "1969-07-16", "1969-07-24" ]
+----
+=================
+
+.Time interval example (timestamps)
+=================
+[source,JSON]
+----
+[ "1969-07-16T05:32:00Z", "1969-07-24T16:50:35Z" ]
+----
+=================
+
+.Time interval example with an open end
+=================
+[source,JSON]
+----
+[ "2019-10-14", null ]
+----
+=================
+
+=== Schema
+
+ifdef::env-github[]
+include::interval.yaml[]
+endif::[]
+ifndef::env-github[]
+[source,YAML]
+----
+include::interval.yaml[]
+----
+endif::[]
+
+== Alternate Representation: Text
+
+The text representation of an interval values does not use the standard representation of an array, that is as comma-separated values. The text representation is based on ISO 8601 and the two instants are separated by a solidus ("/"). Open ranges at the start or end are represented using a double-dot (".."). An empty string ("") represents an unknown value for the start/end and may be used, too.
+
+=== Examples
+
+.Time interval example (dates)
+=================
+[source,TEXT]
+----
+1969-07-16/1969-07-24
+----
+=================
+
+.Time interval example (timestamps)
+=================
+[source,TEXT]
+----
+1969-07-16T05:32:00Z/1969-07-24T16:50:35Z
+----
+=================
+
+.Time interval example with an open end
+=================
+[source,TEXT]
+----
+2019-10-14/..
+----
+=================

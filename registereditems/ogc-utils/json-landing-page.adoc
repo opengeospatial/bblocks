@@ -1,0 +1,118 @@
+= Resource: OGC API Landing Page
+
+Version: 1.0.1
+
+== Description
+
+The OGC API Landing Page provides links to important resources in the API, as a JSON object. All other OGC API resources are sub-resources of this resource.
+
+The landing page will typically also include essential metadata about the API, for example, a title and a description.
+
+https://github.com/cportele/ogcapi-building-blocks#building-block-maturity[*Maturity*]: Mature
+
+[[properties]]
+== Pre-defined properties
+
+.Properties
+[cols="20,10a,70a",options="header"]
+!===
+|Property |Type |Description
+|title |string |The name of the API.
+|description |string |A free-text description of the API. The content may include Markdown and HTML markup.
+|links |[ link:link.adoc[Link] ] |**REQUIRED**. Links to other resources. See <<link-relations>> for typical link relations included in a landing page.
+!===
+
+[[link-relations]]
+== Link relation types
+
+The following link relation types are commonly used in links from an OGC Collection:
+
+.Outgoing link relation types
+[cols="25,75a",options="header"]
+!===
+|Link relation type |Description
+|`service-desc` |**REQUIRED**. Identifies a service description for the API that is primarily intended for consumption by machines. Typically an OpenAPI definition.
+|`service-doc` |**REQUIRED**.  Identifies a service documentation for the API that is primarily intended for human consumption. Typically HTML pages derived from an OpenAPI definition.
+|`conformance` |**REQUIRED**. Refers to a link:conformance-declaration.adoc[conformance declaration] resource that identifies the specifications that the API conforms to.
+
+This link relation type will not be registered with IANA. It will in the future be superseded by the `\http://www.opengis.net/def/rel/ogc/1.0/conformance` link relation type.
+|`\http://www.opengis.net/def/rel/ogc/1.0/conformance` |**RECOMMENDED**. Refers to a link:conformance-declaration.adoc[conformance declaration] resource that identifies the specifications that the API conforms to. 
+
+This link relation type will in the future supersede the `conformance` link relation type, so it is recommended to already include this link.
+|`data` |**CONDITIONAL**. Refers to a link:../../../geo/common/resources/collections.adoc[OGC Collections] resource that represents the root resource of the distributions of a dataset.
+
+This link relation type will not be registered with IANA. It will in the future be superseded by the `\http://www.opengis.net/def/rel/ogc/1.0/data` link relation type.
+|`\http://www.opengis.net/def/rel/ogc/1.0/data` |Refers to a link:../../../geo/common/resources/collections.adoc[OGC Collections] resource that represents the root resource of the distributions of a dataset.
+
+This link relation type will in the future supersede the `data` link relation type, so it is recommended to already include this link.
+|`self` |**STRONGLY RECOMMENDED**. Link to the resource in the current representation.
+|`alternate` |**STRONGLY RECOMMENDED**. Link to the resource in every other media type supported by the server.
+!===
+
+The following link relation types may be useful in links to an OGC API Landing Page:
+
+.Incoming link relation types
+[cols="25,75a",options="header"]
+!===
+|Link relation type |Description
+|`home` |From sub-resources or external resources.
+
+The link relation type is not yet registered with IANA. It is proposed in an Internet Draft https://datatracker.ietf.org/doc/html/draft-nottingham-json-home-06[Home Documents for HTTP APIs].
+!===
+
+=== Example
+
+.Landing page example (JSON)
+=================
+[source,JSON]
+----
+{
+  "title": "Buildings in Bonn",
+  "description": "Access to data about buildings in the city of Bonn via a Web API that conforms to the OGC API Features specification.",
+  "links": [
+    { "href": "http://data.example.org/",
+      "rel": "self", "type": "application/json", "title": "this document" },
+    { "href": "http://data.example.org/?f=html",
+      "rel": "alternate", "type": "text/html", "title": "this document as HTML" },
+    { "href": "http://data.example.org/api.json",
+      "rel": "service-desc", "type": "application/vnd.oai.openapi+json;version=3.0", "title": "the API definition" },
+    { "href": "http://data.example.org/api.html",
+      "rel": "service-doc", "type": "text/html", "title": "the API documentation" },
+    { "href": "http://data.example.org/conformance",
+      "rel": "conformance", "title": "OGC API conformance classes implemented by this server" },
+    { "href": "http://data.example.org/conformance",
+      "rel": "http://www.opengis.nte/def/rel/ogc/1.0/conformance", "title": "OGC API conformance classes implemented by this server" },
+    { "href": "http://data.example.org/collections",
+      "rel": "data", "type": "application/json", "title": "Information about the collections in the dataset" },
+    { "href": "http://data.example.org/collections",
+      "rel": "http://www.opengis.nte/def/rel/ogc/1.0/data", "type": "application/json", "title": "Information about the collections in the dataset" }
+  ]
+}
+----
+=================
+
+=== Media type
+
+`application/json`
+
+=== Schema
+
+ifdef::env-github[]
+include::landing-page.yaml[]
+endif::[]
+ifndef::env-github[]
+[source,YAML]
+----
+include::landing-page.yaml[]
+----
+endif::[]
+
+== Alternate Representation: HTML 
+
+Providing an HTML representation is recommended so that the resource can be displayed in a web browser and indexed by search engines.
+
+The HTML representation should include all information that is part of the JSON representation.
+
+=== Media type
+
+`text/html`
