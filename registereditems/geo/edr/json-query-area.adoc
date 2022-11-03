@@ -1,0 +1,49 @@
+The Area query returns data within the polygon defined by the `coords` parameter. *Logic for identifying the best match for the requested area will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. The height or time of the area are specified through separate parameters. The results are further filtered by the constraints defined by the following query parameters:
+
+[#area-def-table,reftext='{table-caption} {counter:table-num}']
+.Area query structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **coords**
+
+* <<req_edr_coords-definition,definition>> 
+
+* <<req_edr_polygon-coords-response,rules>>|WKT string|**Yes**| The coordinates are defined by a Polygon Well Known Text (WKT) string a| * `coords=POLYGON\((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))`
+* `coords=MULTIPOLYGON\(((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8)),((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3)))`
+a| **z**
+
+* <<req_edr_z-definition,definition>> 
+
+* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response a| * `z=850` 
+* `z=1000,900,850,700` 
+* `z=2/100`
+a| **datetime**
+
+* <<req_collections_rc-time-definition,definition>> 
+
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
+* `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
+a| **parameter-name**
+
+* <<req_edr_parameters-definition,definition>> 
+
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names available options listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response a| * `parameter-name=Visibility,Air%20Temperature``
+a| **crs**
+
+* <<req_edr_crs-definition,definition>> 
+
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* `crs=A_CUSTOM_LABEL`
+a| **f**
+
+* <<req_edr_f-definition,definition>> 
+
+* <<req_edr_f-response,rules>>  |String|No| Data format for the output data (available options listed in the <<collection_metadata_desc, collections>> response), schemas describing JSON and XML outputs can be defined in the OpenAPI documentation (see https://swagger.io/docs/specification/data-models/) a| * `f=GeoJSON`
+* `f=netCDF4`
+* `f=CoverageJSON`
+* `f=CSV`
+|====
+
+#If a client request has a *coords* value which includes a height value and defines a *z* query parameter the *z* query parameter will be the requested height value#
