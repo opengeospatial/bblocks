@@ -1,0 +1,22 @@
+==== Parameter Names Object
+The parameter-names object provides information about the data parameters supported by the collection. As
+a set of key-value pairs, where the key is the name of the parameter and the value is a <<col-parameter, Parameter>> object i.e. as a Dictionary (Python) or HashMap(Java).
+
+
+[[col-parameter]]
+==== Parameter Object
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Parameter Object
+|==========================
+|Field Name|Type|Required|Description
+|id  |String|No| parameter id
+|**type**  |String|**Yes**| Always 'Parameter'
+|label  | String |No| A short text label for the parameter
+|description |String|No|  A description of the parameter
+|data-type |String|No|  The data type of the parameter values [integer, float, string]
+|unit |<<col-unit,unit>> object|No|  A description of the units of the parameter values
+|**observedProperty** |<<col-observed_property,observedProperty>> object|**Yes**|  A formal definition of the parameter
+|extent |<<col-extent,Extent>> object|No|  Information on the spatio-temporal extent of the parameter values (if different from other parameters in the collection)
+|measurementType |<<col-measurement_type,measurementType>> object|No| Information on how the value was derived
+
+|==========================
