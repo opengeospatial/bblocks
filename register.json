@@ -139,7 +139,7 @@
     "sources": ["ogc-api-features"],
     "maturity": "Mature"
   },
-   {
+  {
     "itemIdentifier": "r1.geo.edr.resource.position",
     "name": "Position Query",
     "abstract": "The Position Query supports the retrieval of data from a collection, at the position specified by WKT spatiotemporal coordinates.",
@@ -153,7 +153,7 @@
     "sources": ["ogc-api-edr"],
     "maturity": "Stable"
   },   
-   {
+  {
     "itemIdentifier": "r1.geo.edr.resource.radius",
     "name": "Radius Query",
     "abstract": "The Radius Query supports the retrieval of data from a collection, within the radius from a given point specified by WKT spatiotemporal coordinates.",
@@ -167,7 +167,7 @@
     "sources": ["ogc-api-edr"],
     "maturity": "Stable"
   }, 
-   {
+  {
     "itemIdentifier": "r1.geo.edr.resource.area",
     "name": "Area Query",
     "abstract": "The Area Query supports the retrieval of data from a collection, within the area specified by WKT spatiotemporal coordinates.",
@@ -181,7 +181,7 @@
     "sources": ["ogc-api-edr"],
     "maturity": "Stable"
   },  
-   {
+  {
     "itemIdentifier": "r1.geo.edr.resource.cube",
     "name": "Cube Query",
     "abstract": "The Cube Query supports the retrieval of data from a collection, within the specified bounding box and for the specified vertical coordinates.",
@@ -195,7 +195,7 @@
     "sources": ["ogc-api-edr"],
     "maturity": "Stable"
   }, 
-   {
+  {
     "itemIdentifier": "r1.geo.edr.resource.trajectory",
     "name": "Trajectory Query",
     "abstract": "The Trajectory Query supports the retrieval of data from a collection, along a trajectory specified by WKT spatiotemporal coordinates.",
@@ -209,7 +209,7 @@
     "sources": ["ogc-api-edr"],
     "maturity": "Stable"
   }, 
-   {
+  {
     "itemIdentifier": "r1.geo.edr.resource.corridor",
     "name": "Corridor Query",
     "abstract": "The Corridor Query supports the retrieval of data from a collection, around a trajectory specified by WKT spatiotemporal coordinates.",
@@ -223,7 +223,7 @@
     "sources": ["ogc-api-edr"],
     "maturity": "Stable"
   }, 
-   {
+  {
     "itemIdentifier": "r1.geo.edr.resource.item",
     "name": "Item Query",
     "abstract": "The Item Query supports the retrieval of features from a collection, specified by an identifier.",
@@ -237,7 +237,7 @@
     "sources": ["ogc-api-edr"],
     "maturity": "Stable"
   }, 
-   {
+  {
     "itemIdentifier": "r1.geo.edr.resource.locations",
     "name": "Locations Query",
     "abstract": "The Locations Query supports the retrieval of data from a collection, specified by a named location.",
@@ -250,7 +250,35 @@
     "link": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/edr/json-query-locations.adoc",
     "sources": ["ogc-api-edr"],
     "maturity": "Stable"
-  },   
+  },  
+  {
+    "itemIdentifier": "r1.geo.edr.resource.queries",
+    "name": "Data Queries",
+    "abstract": "The Data Queries supports the definition of custom queries for the retrieval of data from a collection, specified by spatiotemporal coordinates.",
+    "status": "Valid",
+    "dateTimeAddition": "2022-11-17T19:00:00+00:00",
+    "itemClass": "ogc-building-block",
+    "register": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-08-05",
+    "link": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/edr/json-data-queries.adoc",
+    "sources": ["ogc-api-edr"],
+    "maturity": "Stable"
+  }, 
+  {
+    "itemIdentifier": "r1.geo.edr.resource.queries",
+    "name": "Parameter Names",
+    "abstract": "The Parameter Names object supports the definition of data properties for the retrieval of data from a collection.",
+    "status": "Valid",
+    "dateTimeAddition": "2022-11-17T19:00:00+00:00",
+    "itemClass": "ogc-building-block",
+    "register": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2022-08-05",
+    "link": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/edr/json-parameter-names.adoc",
+    "sources": ["ogc-api-edr"],
+    "maturity": "Stable"
+  },
   {
     "itemIdentifier": "r1.ogc-utils.resource.conformance-declaration",
     "name": "OGC Conformance Declaration",
