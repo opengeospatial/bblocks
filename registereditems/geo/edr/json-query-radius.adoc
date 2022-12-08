@@ -1,3 +1,6 @@
+
+=== Radius #query
+==== Overview
 The Radius query returns data within the defined radius of the requested coordinate. The filter constraints are defined by the following query parameters:
 
 [#radius-def-table,reftext='{table-caption} {counter:table-num}']
@@ -58,3 +61,50 @@ a| **f**
 |====
 
 #If a client request has a *coords* value which includes a height value and defines a *z* query parameter the *z* query parameter will be the requested height value#
+
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.htm[OGC API-EDR V1.0.1 specification, Section 8.2.2] which is maintained by the OGC EDR API Standard Working Group using this https://github.com/opengeospatial/ogcapi-environmental-data-retrieval[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema
+Currently the schema is https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/standard/openapi/request-bodies/radius.yaml[defined in YAML]
+
+==== JSON-LD context TBD e.g. https://github.com/covjson/specification/blob/master/contexts/context.jsonld
+
+==== Validator
+https://cite.opengeospatial.org/te2/about/ogcapi-edr10/1.0/site/[OGC API - Environmental Data Retrieval 1.0 Conformance Test Suite, Beta, Version 0.5, 2022-11-08]. 
+
+==== Examples
+See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html#parameter-name[Standard, Clause 8.2.2].
+
+Also, some examples from an implementation
+
+===== Example 1, Height of the Maximum Wind (for aviation)
+----
+"max_wind_ht":{
+},
+----
+===== Example 2, Geopotential Height, measured in geopotential meters
+----
+"geo_pot_ht":{
+              },
+----
+===== Example 3, Relative Humidity, as a percentage
+----
+            "rh":{
+            }
+----
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html[Standard].
+
+==== Media type
+application/json
+
+==== Link relation types
+Link relation types do not seem applicable for a Radius Q~uery Object. Possibly `describedby` could be useful.
