@@ -85,19 +85,19 @@ See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-0
 
 ===== Example 1 Request data within a given radius of a specified Position, single level and single time
 ----
-.../position?coords=POINT(-3 51)&z=850&datetime=2018-02-12T00:00Z&within=20&within-units=Miles
+.../radius?coords=POINT(-3 51)&z=850&datetime=2018-02-12T00:00Z&within=20&within-units=Miles
 ----
 ===== Example 2 Request data within a given radius of a specified Position, single level and a range of times
 ----
-.../position?coords=POINT(-3 51)&z=850&datetime=2018-02-12T00:00/2018-03-18T12:31Z&within=20&within-units=km
+.../radius?coords=POINT(-3 51)&z=850&datetime=2018-02-12T00:00/2018-03-18T12:31Z&within=20&within-units=km
 ----
 ===== Example 3 Request data within a given radius of a specified Position, single time and for several levels
 ----
-.../position?coords=POINT(-3 51)&datetime=2018-02-12T00:00Z&z=1000,900,850,700&within=20&within-units=Miles
+.../radius?coords=POINT(-3 51)&datetime=2018-02-12T00:00Z&z=1000,900,850,700&within=20&within-units=Miles
 ----
 ===== Example 4 Request data within a given radius of several specified Positions for a single level and time
 ----
-.../position?coords=MULTIPOINT((-77 38.9),(2.35 48.85),(116.38 39.92),(149.1 -35.29),(-0.1 51.5))&z=850&datetime=2018-02-12T00:00Z&within=20&within-units=km
+.../radius?coords=MULTIPOINT((-77 38.9),(2.35 48.85),(116.38 39.92),(149.1 -35.29),(-0.1 51.5))&z=850&datetime=2018-02-12T00:00Z&within=20&within-units=km
 ----
 ==== Further guidance
 See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html[Standard].
