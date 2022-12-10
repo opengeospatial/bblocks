@@ -49,3 +49,49 @@ a| **f**
 |====
 
 #If a client request has a *coords* value which includes a height value and defines a *z* query parameter the *z* query parameter will be the requested height value#
+
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.htm[OGC API-EDR V1.0.1 specification, Section 8.2.3] which is maintained by the OGC EDR API Standard Working Group using this https://github.com/opengeospatial/ogcapi-environmental-data-retrieval[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema
+Currently the schema is https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/standard/openapi/request-bodies/area.yaml[defined in YAML]
+
+==== JSON-LD context TBD e.g. https://github.com/covjson/specification/blob/master/contexts/context.jsonld
+
+==== Validator
+https://cite.opengeospatial.org/te2/about/ogcapi-edr10/1.0/site/[OGC API - Environmental Data Retrieval 1.0 Conformance Test Suite, Beta, Version 0.5, 2022-11-08]. 
+
+==== Examples
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html#parameter-name[Standard, Clause 8.2.3].
+
+===== Example 1 Request data within a specified area for a single level and single time
+----
+.../area?coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))0&z=850&datetime=2018-02-12T00:00Z
+----
+===== Example 2 Request data within a specified area for a single level and a range of times
+----
+.../area?coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))p&z=850&datetime=2018-02-12T00:00/2018-03-18T12:31Z
+----
+===== Example 3 Request data within a specified area for a single time and for several levels
+----
+.../area?coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))&datetime=2018-02-12T00:00Z&z=1000,900,850,700
+----
+===== Example 4 Request data within several specified areas and for a single level and single time
+----
+.../area?coords=MULTIPOLYGON\(((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8)),((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3)))&z=2&datetime=2018-03-18T12:31Z
+----
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html[Standard].
+
+==== Media type
+application/json
+
+==== Link relation types
+Link relation types do not seem applicable for a Cube Query. Possibly `describedby`could be useful.
