@@ -75,15 +75,19 @@ See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-08
 ----
 .../area?coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))0&z=850&datetime=2018-02-12T00:00Z
 ----
-===== Example 2 Request data within a specified area for a single level and a range of times
+===== Example 2 Request data within a specified area, with an interior hole, for a single level and single time
+----
+.../area?coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3),(-5.0 50.2,-4.8 50.4,-5.0 50.4,-5.0 50.2))0&z=850&datetime=2018-02-12T00:00Z
+----
+===== Example 3 Request data within a specified area for a single level and a range of times
 ----
 .../area?coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))p&z=850&datetime=2018-02-12T00:00/2018-03-18T12:31Z
 ----
-===== Example 3 Request data within a specified area for a single time and for several levels
+===== Example 4 Request data within a specified area for a single time and for several levels
 ----
 .../area?coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))&datetime=2018-02-12T00:00Z&z=1000,900,850,700
 ----
-===== Example 4 Request data within several specified areas and for a single level and single time
+===== Example 5 Request data within several specified areas and for a single level and single time
 ----
 .../area?coords=MULTIPOLYGON\(((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8)),((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3)))&z=2&datetime=2018-03-18T12:31Z
 ----
