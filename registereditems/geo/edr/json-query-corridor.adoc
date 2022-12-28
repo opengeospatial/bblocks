@@ -1,0 +1,209 @@
+=== Corridor Query
+==== Overview
+The Corridor query returns data along and around the path defined by the `coords` parameter.  *Logic for identifying the best match for the requested corridor will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer* .  The results are further filtered by the constraints defined by the following query parameters:
+
+[#corridor-def-table,reftext='{table-caption} {counter:table-num}']
+.Corridor query structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **coords**
+
+* <<req_edr_coords-definition,definition>> 
+
+* <<req_edr_linestring-coords-response,rules>>|WKT string|**Yes** a| The coordinates are defined by one of the following Well Known Text (WKT) strings:
+
+* LINESTRING 
+* LINESTRINGZ
+* LINESTRINGM
+* LINESTRINGZM 
+ 
+
+* The *Z* in `LINESTRINGZ` and `LINESTRINGZM` refers to the height value.
+`If the specified CRS does not define the height units, the height units will default to metres above mean sea level`
+
+* The *M* in `LINESTRINGM` and `LINESTRINGZM` refers to the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+https://en.wikipedia.org/wiki/Unix_time a| * A 2D corridor, on the surface of earth with no time or vertical dimensions:
+    `coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)`
+
+* A 2D corridor with mutiple segments, on the surface of earth with no time or vertical dimensions:
+    `coords=MULTILINESTRING((-3.53 50.72,-3.35 50.92),(-3.11 51.02,-2.85 51.42,-2.59 51.46))`
+
+* A 2D corridor, on the surface of earth all at the same time and no vertical dimension, time value defined in ISO8601 format by the `datetime` query parameter :
+    `coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&datetime=2018-02-12T23:00:00Z`
+
+* A 2D corridor, on the surface of earth with no time value but at a fixed vertical height, height defined in the collection height units by the `z` query parameter :
+    `coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&z=850`
+
+* A 2D corridor, on the surface of earth all at a the same time and at a fixed vertical height, time value defined in ISO8601 format by the `datetime` query parameter and height defined in the collection height units by the `z` query parameter :
+    `coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&datetime=2018-02-12T23:00:00Z&z=850`
+
+* A 3D corridor, on the surface of the earth but over a range of time values with no height values:
+`coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)`
+
+* A 3D corridor, on the surface of the earth but over a range of time values with a fixed height value, height defined in the collection height units by the `z` query parameter :
+`coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&z=200`
+
+* A 3D corridor, through a 3D volume with vertical height or depth, but no defined time:
+`coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)`
+
+* A 3D corridor, through a 3D volume with a vertical extent, but at a fixed time, time value defined in ISO8601 format by the `datetime` query parameter:
+`coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)&datetime=2018-02-12T23:00:00Z`
+
+* A 4D corridor, through a 3D volume but over a range of time values:
+`coords=LINESTRINGZM (-3.53 50.72 0.1 1560507000,-3.35 50.92 0.2 1560508800,-3.11 51.02 0.3 1560510600,-2.85 51.42 0.41560513600,-2.59 51.46 0.5 1560515400)`
+
+a| **z**
+
+* <<req_edr_z-definition,definition>> 
+
+* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `z=850` 
+* `z=1000,900,850,700` 
+* `z=2/100`
+a| **datetime**
+
+* <<req_collections_rc-time-definition,definition>> 
+
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
+* `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
+a| **parameter-name**
+
+* <<req_edr_parameters-definition,definition>> 
+
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names available options listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response a| * `parameter-name=Visibility,Air%20Temperature`
+a| **resolution-x**
+
+* <<req_edr_resolution-x-definition,definition>> 
+
+* <<req_edr_resolution-x-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the x-axis, it denotes the number of intervals to retrieve data for along the x-axis
+ a| * `resolution-x=10`
+a| **resolution-y**
+
+* <<req_edr_resolution-y-definition,definition>> 
+
+* <<req_edr_resolution-y-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the y-axis, it denotes the number of intervals to retrieve data for along the y-axis
+ a| * `resolution-y=5`
+a| **resolution-z**
+
+* <<req_edr_resolution-z-definition,definition>> 
+
+* <<req_edr_resolution-z-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the z-axis, it denotes the number of intervals to retrieve data for along the z-axis
+ a| * `resolution-z=100`
+a| **corridor-width**
+
+* <<req_edr_corridor-width-definition,definition>> 
+
+* <<req_edr_corridor-width-response,rules>> |String  |*Yes*| The width value represents the whole width of the corridor where the trajectory supplied in the coords query parameter is the centre point of the corridor
+ a| * `corridor-width=100`
+a| **width-units**
+
+* <<req_edr_width_units-definition,definition>> 
+
+* <<req_edr_width_units-response,rules>> |String  |*Yes*| Distance units for the corridor-width parameter (available options defined in the *width_units* attribute of the corridor data_query section in the <<collection_metadata_desc, collections>> metadata response)
+ a| * `width-units=KM`
+a| **corridor-height**
+
+* <<req_edr_corridor-height-definition,definition>> 
+
+* <<req_edr_corridor-height-response,rules>> |String  |*Yes*| The height value represents the whole height of the corridor where the trajectory supplied in the coords query parameter is the centre point of the corridor
+ a| * `corridor-height=100`
+a| **height-units**
+
+* <<req_edr_height_units-definition,definition>> 
+
+* <<req_edr_height_units-response,rules>> |String  |*Yes*| Distance units for the corridor-height parameter (available options defined in the *height_units* attribute of the corridor data_query section in the <<collection_metadata_desc, collections>> metadata response)
+ a| * `height-units=hPa`
+a| **crs**
+
+* <<req_edr_crs-definition,definition>> 
+
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* `crs=A_CUSTOM_LABEL`
+a| **f**
+
+* <<req_edr_f-definition,definition>> 
+
+* <<req_edr_f-response,rules>>  |String|No| Data format for the output data (available options listed in the <<collection_metadata_desc, collections>> response), schemas describing JSON and XML outputs can be defined in the OpenAPI documentation (see https://swagger.io/docs/specification/data-models/) a| * `f=GeoJSON`
+* `f=netCDF4`
+* `f=CoverageJSON`
+* `f=CSV`
+|====
+
+#If any of the following occurs:#
+
+* client request contains coords=LINESTRINGZ(...) and a *z* query parameter 
+* client request contains coords=LINESTRINGM(...) and a *datetime* query parameter 
+* client request contains coords=LINESTRINGZM(...) and *z* or *datetime* query parameters 
+
+#An error MUST be thrown by the server#
+
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.htm[OGC API-EDR V1.0.1 specification, Section 8.2.6] which is maintained by the OGC EDR API Standard Working Group using this https://github.com/opengeospatial/ogcapi-environmental-data-retrieval[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema
+Currently the schema is https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/standard/openapi/request-bodies/corridor.yaml[defined in YAML]
+
+==== JSON-LD context TBD e.g. https://github.com/covjson/specification/blob/master/contexts/context.jsonld
+
+==== Validator
+https://cite.opengeospatial.org/te2/about/ogcapi-edr10/1.0/site/[OGC API - Environmental Data Retrieval 1.0 Conformance Test Suite, Beta, Version 0.5, 2022-11-08]. 
+
+==== Examples
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html#parameter-name[Standard, Clause 8.2.6].
+
+===== Example 1 Request data along and within a specified 2D corridor, on the surface of earth with no time or vertical dimensions
+----
+.../corridor?coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)
+----
+===== Example 2 Request data along and within a specified 2D corridor with mutiple discontinuous segments, on the surface of earth with no time or vertical dimensions
+----
+.../corridor?coords=MULTILINESTRING((-3.53 50.72,-3.35 50.92),(-3.11 51.02,-2.85 51.42,-2.59 51.46))
+----
+===== Example 3 Request data along a specified corridor, on the surface of earth, all at the same time and no vertical dimension
+----
+.../corridor?coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&datetime=2018-02-12T23:00:00Z
+----
+===== Example 4 Request data along and within a specified 2D corridor, on the surface of earth, with no time value but at a fixed vertical height
+----
+.../corridor?coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&z=850
+----
+===== Example 5 Request data along and within a specified 2D corridor, on the surface of earth, all at a the same time and at a fixed vertical height
+----
+.../corridor?coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&datetime=2018-02-12T23:00:00Z&z=850
+----
+===== Example 6 Request data along a specified 3D corridor, on the surface of the earth but over a range of time values with no height values
+----
+.../corridor?coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)
+----
+===== Example 7 Request data along a specified 3D corridor, on the surface of the earth but over a range of time values with a fixed height value
+----
+.../corridor?coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&z=200
+----
+===== Example 8 Request data along a specified 3D corridor, through a 3D volume with vertical height or depth, but no defined time
+----
+.../corridor?coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)
+----
+===== Example 9 Request data along a specified 3D corridor, through a 3D volume with a vertical extent, but at a fixed time
+----
+.../corridor?coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)&datetime=2018-02-12T23:00:00Z
+----
+===== Example 10 Request data along a specified 4D corridor, through a 3D volume but over a range of time values:
+----
+.../corridor?coords=LINESTRINGZM(-3.53 50.72 0.1 1560507000,-3.35 50.92 0.2 1560508800,-3.11 51.02 0.3 1560510600,-2.85 51.42 0.41560513600,-2.59 51.46 0.5 1560515400)
+----
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html[Standard].
+
+==== Media type
+application/json
+
+==== Link relation types
+Link relation types do not seem applicable for a Corridor Query. Possibly `describedby`could be useful.

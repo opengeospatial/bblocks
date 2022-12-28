@@ -1,0 +1,99 @@
+=== Position Query
+==== Overview
+
+The Position query returns data for the requested coordinate. *Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. The filter constraints are defined by the following query parameters:
+
+[#position-def-table,reftext='{table-caption} {counter:table-num}']
+.Position query structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **coords**
+
+* <<req_edr_coords-definition,definition>> 
+
+* <<req_edr_point-coords-response,rules>>|WKT string|**Yes**| The coordinates are defined by a Point Well Known Text (WKT) string a| * `coords=POINT(-3 51)`
+* `coords= MULTIPOINT\((-77 38.9),(2.35 48.85),(116.38 39.92),(149.1 -35.29),(-0.1 51.5))`
+a| **z**
+
+* <<req_edr_z-definition,definition>> 
+
+* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `z=850` 
+* `z=1000,900,850,700` 
+* `z=2/100`
+a| **datetime**
+
+* <<req_collections_rc-time-definition,definition>> 
+
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
+* `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
+a| **parameter-name**
+
+* <<req_edr_parameters-definition,definition>> 
+
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names available options listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response a| * `parameter-name=Visibility,Air%20Temperature``
+a| **crs**
+
+* <<req_edr_crs-definition,definition>> 
+
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* `crs=A_CUSTOM_LABEL`
+a| **f**
+
+* <<req_edr_f-definition,definition>> 
+
+* <<req_edr_f-response,rules>>  |String|No| Data format for the output data (available options listed in the <<collection_metadata_desc, collections>> response), schemas describing JSON and XML outputs can be defined in the OpenAPI documentation (see https://swagger.io/docs/specification/data-models/) a| * `f=GeoJSON`
+* `f=netCDF4`
+* `f=CoverageJSON`
+* `f=CSV`
+|====
+
+#If a client request has a *coords* value which includes a height value and defines a *z* query parameter the *z* query parameter will be the requested height value#
+
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.htm[OGC API-EDR V1.0.1 specification, Section 8.2.1] which is maintained by the OGC EDR API Standard Working Group using this https://github.com/opengeospatial/ogcapi-environmental-data-retrieval[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema
+Currently the schema is https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/standard/openapi/request-bodies/position.yaml[defined in YAML]
+
+==== JSON-LD context TBD e.g. https://github.com/covjson/specification/blob/master/contexts/context.jsonld
+
+==== Validator
+https://cite.opengeospatial.org/te2/about/ogcapi-edr10/1.0/site/[OGC API - Environmental Data Retrieval 1.0 Conformance Test Suite, Beta, Version 0.5, 2022-11-08]. 
+
+==== Examples
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html#parameter-name[Standard, Clause 8.2.1].
+
+
+===== Example 1 Request data at a specified Position, single level and single time
+----
+.../position?coords=POINT(-3 51)&z=850&datetime=2018-02-12T00:00Z
+----
+===== Example 2 Request data at a specified Position, single level and a range of times
+----
+.../position?coords=POINT(-3 51)&z=850&datetime=2018-02-12T00:00/2018-03-18T12:31Z
+----
+===== Example 3 Request data at a specified Position, single time and for several levels
+----
+.../position?coords=POINT(-3 51)&datetime=2018-02-12T00:00Z&z=1000,900,850,700
+----
+===== Example 4 Request data at several specified Positions for a single level and time
+----
+.../position?coords=MULTIPOINT((-77 38.9),(2.35 48.85),(116.38 39.92),(149.1 -35.29),(-0.1 51.5))&z=850&datetime=2018-02-12T00:00Z
+----
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html[Standard].
+
+==== Media type
+application/json
+
+==== Link relation types
+Link relation types do not seem applicable for a Position Query. Possibly `describedby`could be useful.
