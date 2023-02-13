@@ -1,0 +1,20 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+properties:
+  featureOfInterest:
+    '@id': http://www.w3.org/ns/sosa/featureOfInterest
+    type: string
+  hasResult:
+    '@id': http://www.w3.org/ns/sosa/hasResult
+    type: object
+  observationCollection:
+    type: string
+  observationTime:
+    '@id': http://www.w3.org/ns/sosa/resultTime
+    format: date-time
+    type: string
+required:
+- featureOfInterest
+- hasResult
+- observationTime
+title: Observation
+type: object

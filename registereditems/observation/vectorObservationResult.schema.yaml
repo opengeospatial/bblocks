@@ -1,0 +1,9 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+"@modelReference": vectorObservationResult.context.jsonld
+title: Vector Observation Result
+type: object
+properties:
+  geopose:
+    $ref: ../geopose/geopose.basic.ypr.schema.yaml
+  distance:
+    type: number

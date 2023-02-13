@@ -1,0 +1,21 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+"@modelReference": observation.context.jsonld
+title: Observation
+type: object
+required:
+  - featureOfInterest
+  - hasResult
+  - observationTime
+properties:
+  featureOfInterest:
+    type: string
+  hasResult:
+    type: object
+  observationTime:
+    type: string
+    format: date-time
+  observationCollection:
+    type: string
+
+
+
