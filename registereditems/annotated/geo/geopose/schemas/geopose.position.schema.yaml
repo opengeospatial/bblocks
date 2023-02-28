@@ -1,17 +1,17 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 description: GeoPose position
+type: object
 properties:
-  h:
-    '@id': http://example.com/geopose/h
-    type: number
   lat:
+    type: number
     '@id': http://example.com/geopose/lat
-    type: number
   lon:
-    '@id': http://example.com/geopose/lon
     type: number
+    '@id': http://example.com/geopose/lon
+  h:
+    type: number
+    '@id': http://example.com/geopose/h
 required:
 - lat
 - lon
 - h
-type: object

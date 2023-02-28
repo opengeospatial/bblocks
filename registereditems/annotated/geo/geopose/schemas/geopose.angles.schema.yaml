@@ -1,17 +1,17 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 description: GeoPose YPR angles
+type: object
 properties:
-  pitch:
-    '@id': http://example.com/geopose/pitch
-    type: number
-  roll:
-    '@id': http://example.com/geopose/roll
-    type: number
   yaw:
-    '@id': http://example.com/geopose/yaw
     type: number
+    '@id': http://example.com/geopose/yaw
+  pitch:
+    type: number
+    '@id': http://example.com/geopose/pitch
+  roll:
+    type: number
+    '@id': http://example.com/geopose/roll
 required:
 - yaw
 - pitch
 - roll
-type: object

@@ -1,13 +1,13 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'
+type: object
 properties:
-  angles:
-    $ref: geopose.angles.schema.yaml
-    '@id': http://example.com/geopose/angles
   position:
     $ref: geopose.position.schema.yaml
     '@id': http://example.com/geopose/position
+  angles:
+    $ref: geopose.angles.schema.yaml
+    '@id': http://example.com/geopose/angles
 required:
 - position
 - angles
-type: object

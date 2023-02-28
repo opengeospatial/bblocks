@@ -1,0 +1,10 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Vector Observation Result
+type: object
+properties:
+  geopose:
+    $ref: ../../../geo/geopose/schemas/geopose.basic.ypr.schema.yaml
+    '@id': http://example.com/vectorObservation/geopose
+  distance:
+    type: number
+    '@id': http://example.com/vectorObservation/distance

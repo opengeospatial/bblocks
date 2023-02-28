@@ -1,10 +1,9 @@
 $schema: https://json-schema.org/draft/2020-12/schema
+title: Vector Observation
 allOf:
-- $ref: observation.schema.yaml
+- $ref: ../../schemas/observation.schema.yaml
+required:
+- hasResult
 properties:
   hasResult:
     $ref: vectorObservationResult.schema.yaml
-    "@id": http://www.w3.org/ns/sosa/hasResult
-required:
-- hasResult
-title: Vector Observation
