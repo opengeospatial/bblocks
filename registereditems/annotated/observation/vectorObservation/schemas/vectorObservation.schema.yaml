@@ -1,5 +1,6 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: Vector Observation
+type: object
 allOf:
 - $ref: ../../schemas/observation.schema.yaml
 required:
@@ -7,3 +8,4 @@ required:
 properties:
   hasResult:
     $ref: vectorObservationResult.schema.yaml
+    '@id': http://www.w3.org/ns/sosa/hasResult
