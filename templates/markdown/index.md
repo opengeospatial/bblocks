@@ -34,7 +34,7 @@ ${example['content']}
 % if bblock.schema:
 ${'##'} Schema
 
-[schema.yaml](${assets_rel}/schema.yaml)
+[schema.yaml](${bblock_rel}/schema.yaml)
 
 ```yaml
 ${bblock.schema_contents}

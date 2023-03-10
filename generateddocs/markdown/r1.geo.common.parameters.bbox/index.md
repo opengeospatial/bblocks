@@ -69,7 +69,7 @@ fetch(url + `bbox=${bbox.join(',')}`)
 
 ## Schema
 
-[schema.yaml](../../../registereditems/geo/common/parameters/bbox/assets/schema.yaml)
+[schema.yaml](../../../registereditems/geo/common/parameters/bbox/schema.yaml)
 
 ```yaml
 name: bbox

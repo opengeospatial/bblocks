@@ -49,7 +49,7 @@ The text representation of a bounding box is based on the JSON representation an
 
 ## Schema
 
-[schema.yaml](None/schema.yaml)
+[schema.yaml](../../../registereditems/geo/common/data_types/bounding_box/schema.yaml)
 
 ```yaml
 type: array

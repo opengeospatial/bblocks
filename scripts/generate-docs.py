@@ -104,9 +104,11 @@ def generate_docs(regs: str | Path | Sequence[str | Path],
             for template in templates:
                 tpl_out = output_dir / template.lang / bblock.identifier / template.filename
                 tpl_out.parent.mkdir(parents=True, exist_ok=True)
+                bblock_rel = relpath(bblock.files_path, tpl_out.parent)
                 assets_rel = relpath(bblock.assets_path, tpl_out.parent) if bblock.assets_path else None
                 with open(tpl_out, 'w') as f:
                     f.write(template.render(bblock=bblock,
+                                            bblock_rel=bblock_rel,
                                             tplfile=template.path,
                                             outfile=tpl_out,
                                             assets_rel=assets_rel))
