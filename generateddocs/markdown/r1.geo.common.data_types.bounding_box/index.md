@@ -49,7 +49,7 @@ The text representation of a bounding box is based on the JSON representation an
 
 ## Schema
 
-[schema.yaml](assets_rel/schema.yaml)
+[schema.yaml](None/schema.yaml)
 
 ```yaml
 type: array
