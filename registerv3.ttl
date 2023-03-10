@@ -1,0 +1,51 @@
+@prefix bblocks: <http://example.com/ogc/def/bblocks/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
+    rdfs:label "Bounding Box" ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
+    dct:description "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other." ;
+    dct:hasVersion "1.0.1" ;
+    dct:modified "2023-03-09"^^xsd:date ;
+    dct:source [ rdfs:label "OGC API - Features, Part 1, 7.13.2: Feature Collections Response" ;
+            rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ] .
+
+bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
+    rdfs:label "bbox" ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
+    dct:description "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information)." ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2022-05-24"^^xsd:date ;
+    dct:source [ rdfs:label "OGC API - Features, Part 1, 7.15.3: Parameter bbox" ;
+            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox> ] ;
+    rdfs:seeAlso <https://doublebyte1.github.io/slate/> .
+
+[] a prov:Activity ;
+    prov:endedAtTime "2023-03-10T11:34:50.824897"^^xsd:dateTime ;
+    prov:startedAtTime "2023-03-10T11:34:50.689767"^^xsd:dateTime ;
+    prov:used [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            dct:hasVersion "git:cef1bb35d318f94a93c8ad9f0af98e8a779b3982" ;
+            rdfs:seeAlso <file:///home/alx5000/work/Proyectos/ogc/bblocks/registerv3.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:cef1bb35d318f94a93c8ad9f0af98e8a779b3982" ;
+            rdfs:seeAlso <file:///home/alx5000/work/Proyectos/ogc/bblocks/registerv3.json> ] ;
+    prov:wasAssociatedWith [ a prov:Agent,
+                <https://schema.org/SoftwareApplication> ;
+            rdfs:label "OGC-NA tools" ;
+            dct:hasVersion "0.1.dev58+gb523fd0.d20230310" ;
+            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
+    prov:wasInformedBy [ dct:identifier "f3a77cad-eaf9-4b8c-a11b-cb894b887ff5" ] .
+
