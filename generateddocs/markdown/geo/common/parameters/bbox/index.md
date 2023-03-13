@@ -26,7 +26,7 @@ If a resource has multiple spatial geometry properties, it is the decision of th
 
 `bbox=-124.7844079,24.7433195,-66.9513812,49.3457868`
 
-![Bounding box for the continental US states](../../../registereditems/geo/common/parameters/bbox/assets/example.png)
+![Bounding box for the continental US states](../../../../../../registereditems/geo/common/parameters/bbox/assets/example.png)
 
     
 ### Using a bounding box parameter in a request (shell)
@@ -69,7 +69,7 @@ fetch(url + `bbox=${bbox.join(',')}`)
 
 ## Schema
 
-[schema.yaml](../../../registereditems/geo/common/parameters/bbox/schema.yaml)
+[schema.yaml](../../../../../../registereditems/geo/common/parameters/bbox/schema.yaml)
 
 ```yaml
 name: bbox

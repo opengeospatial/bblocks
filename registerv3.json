@@ -2,7 +2,7 @@
   {
     "itemIdentifier": "r1.geo.common.data_types.bounding_box",
     "name": "Bounding Box",
-    "abstract": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.",
+    "abstract": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API\u2019s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.",
     "status": "valid",
     "dateTimeAddition": "2022-05-24T13:51:38+00:00",
     "itemClass": "schema",
@@ -16,7 +16,13 @@
       }
     ],
     "maturity": "mature",
-    "scope": "geo"
+    "scope": "geo",
+    "documentation": [
+      "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
+    ],
+    "schema": [
+      "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/bounding_box/schema.yaml"
+    ]
   },
   {
     "itemIdentifier": "r1.geo.common.parameters.bbox",
@@ -36,6 +42,12 @@
       }
     ],
     "maturity": "mature",
-    "scope": "geo"
+    "scope": "geo",
+    "documentation": [
+      "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/parameters/bbox/index.md"
+    ],
+    "schema": [
+      "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml"
+    ]
   }
 ]
