@@ -5,6 +5,7 @@
 
 bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
     rdfs:label "Bounding Box" ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/bounding_box/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -14,10 +15,44 @@ bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
     dct:hasVersion "1.0.1" ;
     dct:modified "2023-03-09"^^xsd:date ;
     dct:source [ rdfs:label "OGC API - Features, Part 1, 7.13.2: Feature Collections Response" ;
-            rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ] .
+            rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ] ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/bounding_box/index.md> .
+
+bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
+    rdfs:label "OGC Collection" ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
+    dct:description "An OGC Collection resource is a JSON object that provides information about and access to a set of geospatial resources, through links to API endpoints and/or files online. It is most commonly used to describe geospatial datasets, but can be used for collections of anything geospatial." ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2022-05-24"^^xsd:date ;
+    dct:source [ rdfs:label "OGC API - Features, Part 1, 7.14.2 Feature collection Response" ;
+            rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5> ] ;
+    rdfs:seeAlso <https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collection.adoc>,
+        <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md> .
+
+bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
+    rdfs:label "OGC Collections" ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collections/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    dct:created "2022-05-24T11:00:05+00:00"^^xsd:dateTime ;
+    dct:description "The distribution of a geospatial dataset in an API is organized into one or more collections of data. How the data is split into collections in a distribution depends on the intended use of the data. Two common approaches for organizing the data are: by semantic type and by spatial clustering. The OGC Collections JSON resource provides information about and access to the data in each collection of the distribution." ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2022-05-24"^^xsd:date ;
+    dct:source [ rdfs:label "OGC API - Features, Part 1, 7.13.2: Feature Collections Response" ;
+            rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ] ;
+    rdfs:seeAlso <https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collections.adoc>,
+        <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md> .
 
 bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
     rdfs:label "bbox" ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -28,5 +63,21 @@ bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
     dct:modified "2022-05-24"^^xsd:date ;
     dct:source [ rdfs:label "OGC API - Features, Part 1, 7.15.3: Parameter bbox" ;
             rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox> ] ;
-    rdfs:seeAlso <https://doublebyte1.github.io/slate/> .
+    rdfs:seeAlso <https://doublebyte1.github.io/slate/>,
+        <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/parameters/bbox/index.md> .
+
+bblocks:r1.geo.geopose.basic-ypr a bblocks:Schema ;
+    rdfs:label "GeoPose Basic-YPR" ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/proposal> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    dct:created "2023-03-15T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "Basic GeoPose using yaw, pitch, and roll to specify orientation" ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-03-15"^^xsd:date ;
+    dct:source [ rdfs:label "OGC GeoPose 1.0 Data Exchange Draft Standard" ;
+            rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/geopose/basic-ypr/index.md> .
 

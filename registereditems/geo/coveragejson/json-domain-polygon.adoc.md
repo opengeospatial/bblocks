@@ -1,0 +1,79 @@
+# Polygon
+
+Polygon is a coverage domain type. They can only contain `[x,y]`
+positions (and not `z` or additional coordinates): - A LinearRing is an
+array of 4 or more `[x,y]` arrays where each of `x` and `y` is a
+coordinate value. The first and last `[x,y]` elements are identical. - A
+Polygon is an array of LinearRing arrays. For Polygons with multiple
+rings, the first MUST be the exterior ring and any others MUST be
+interior rings or holes.
+
+  - A domain with Polygon domain type MUST have the axis `"composite"`
+    which has a single Polygon value.
+
+  - The axis `"composite"` MUST have the data type `"polygon"` and the
+    coordinate identifiers `"x","y"`, in that order.
+
+  - A Polygon domain MAY have the axes `"z"` and `"t"` which both MUST
+    have a single coordinate value only.
+
+Domain example:
+
+A polygon defined as a rectangle between coordinates `(100.0,0.0)` and
+`(101.0,1.0)`, at vertical coordinate `2`, and for the time
+`"2008-01-01T04:00:00Z"`
+
+``` json
+{
+  "type": "Domain",
+  "domainType": "Polygon",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+A coverage of temperature for the domain as in the previous example.
+
+``` json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Polygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "values" : [...]
+    }
+  }
+}
+```

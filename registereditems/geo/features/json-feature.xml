@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Resource</title>
+<subtitle>Feature</subtitle>
+<date>2023-02-12</date>
+</info>
+<simpara>Version: 1.0.1</simpara>
+<section xml:id="_overview">
+<title>Overview</title>
+<simpara>A feature. Every feature is a sub-resource of an <link xl:href="../common/json-collection.adoc">OGC Collection</link>.</simpara>
+<simpara><link xl:href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity"><emphasis role="strong">Maturity</emphasis></link>: Mature</simpara>
+</section>
+<section xml:id="properties">
+<title>Pre-defined properties</title>
+<table frame="all" rowsep="1" colsep="1">
+<title>Properties</title>
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="20*"/>
+<colspec colname="col_2" colwidth="10*"/>
+<colspec colname="col_3" colwidth="70*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Property</entry>
+<entry align="left" valign="top">Type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>links</simpara></entry>
+<entry align="left" valign="top"><simpara>[ <link xl:href="../../ogc-utils/json-link.adoc">Link</link> ]</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Links to other resources. See <xref linkend="link-relations"/> for typical link relations of this resource type.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>id</simpara></entry>
+<entry align="left" valign="top"><simpara>string or integer</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. The feature identifier in the collection.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<simpara>In addition, there will be properties that describe the real-world entity that the feature represents plus optionally properties that are metadata.</simpara>
+</section>
+<section xml:id="link-relations">
+<title>Link relation types</title>
+<simpara>The following link relation types are commonly used in links from a Feature:</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Outgoing link relation types</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="75*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Link relation type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><literal>self</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the resource in the current representation.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>alternate</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the resource in every other media type supported by the server.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>collection</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the OGC Collection that this feature belongs to.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>describedby</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to a resource providing information about the data, for example, a schema for the feature or a separate metadata resource.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>type</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to the canonical URI of a feature type that the feature implements.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>canonical</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to a persistent URI of this feature that will not change between API changes.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<simpara>The following link relation types are commonly used in links to a Feature:</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Incoming link relation types</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="75*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Link relation type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><literal>item</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>May by used to point to the feature from a static <link xl:href="../common/json-collection.adoc">OGC Collection resource</link>.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section xml:id="_representation_geojson">
+<title>Representation: GeoJSON</title>
+<simpara>The GeoJSON representation is the currently recommended representation that all APIs should support, where GeoJSON can be used for the data.</simpara>
+<simpara>In addition to the pre-defined properties listed above, each GeoJSON feature includes the following JSON members:</simpara>
+<itemizedlist>
+<listitem>
+<simpara><literal>type</literal>: fixed value "Feature".</simpara>
+</listitem>
+<listitem>
+<simpara><literal>geometry</literal>: the primary geometry of the feature describing its location as a GeoJSON geometry object. <literal>null</literal>, if the feature has no spatial geometry.</simpara>
+</listitem>
+<listitem>
+<simpara><literal>properties</literal>: an object with a member for each feature property.</simpara>
+</listitem>
+</itemizedlist>
+<section xml:id="_example">
+<title>Example</title>
+<example>
+<title>The Barra airport feature from OS Open Zoomstack</title>
+<programlisting language="JSON" linenumbering="unnumbered">{
+   "type":"Feature",
+   "links":[
+      {
+         "href":"https://demo.ldproxy.net/zoomstack/collections/airports/items/8?f=json",
+         "rel":"self",
+         "type":"application/geo+json",
+         "title":"This document"
+      },
+      {
+         "href":"https://demo.ldproxy.net/zoomstack/collections/airports/items/8?f=html",
+         "rel":"alternate",
+         "type":"text/html",
+         "title":"This document as HTML"
+      },
+      {
+         "href":"https://demo.ldproxy.net/zoomstack/collections/airports?f=json",
+         "rel":"collection",
+         "type":"application/json",
+         "title":"The collection the feature belongs to"
+      }
+   ],
+   "id":8,
+   "geometry":{
+      "type":"Point",
+      "coordinates":[
+         -7.4485984,
+         57.0255697
+      ]
+   },
+   "properties":{
+      "name":"Barra Airport"
+   }
+}</programlisting>
+</example>
+</section>
+<section xml:id="_media_type">
+<title>Media type</title>
+<simpara><literal>application/geo+json</literal></simpara>
+</section>
+<section xml:id="_schema">
+<title>Schema</title>
+<programlisting language="YAML" linenumbering="unnumbered">allOf:
+  - $ref: https://geojson.org/schema/Feature.json
+  - type: object
+    properties:
+      links:
+        type: array
+        items:
+          $ref: ../../../ogc-utils/schemas/json-link.yaml</programlisting>
+</section>
+</section>
+<section xml:id="_representation_html">
+<title>Representation: HTML</title>
+<simpara>Providing an HTML representation is recommended so that the resource can be displayed in a web browser and indexed by search engines.</simpara>
+<simpara>The HTML representation should include all information that is part of the JSON representation.</simpara>
+<section xml:id="_media_type_2">
+<title>Media type</title>
+<simpara><literal>text/html</literal></simpara>
+</section>
+</section>
+<section xml:id="_source_references">
+<title>Source References</title>
+<itemizedlist>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_7">OGC API - Features, Part 1, 7.16.2: Feature response</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_requirements_class_geojson">OGC API - Features, Part 1, 8.3: GeoJSON</link></simpara>
+</listitem>
+</itemizedlist>
+</section>
+</article>

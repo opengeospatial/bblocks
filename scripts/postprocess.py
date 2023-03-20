@@ -11,17 +11,20 @@ def postprocess(regs: str | Path | Sequence[str | Path],
                 base_url: str | None = None):
     doc_generator = DocGenerator()
 
+    if base_url and base_url[-1] not in ('/', '#'):
+        base_url += '/'
+
     def do_postprocess(bblock: BuildingBlock):
         cwd = Path()
         if base_url:
             if bblock.schema:
                 rel_schema = bblock.schema.relative_to(cwd)
-                schema_url = f"{base_url}{'/' if base_url[-1] not in ('/', '#') else ''}{rel_schema}"
+                schema_url = f"{base_url}{rel_schema}"
                 existing_schemas = bblock.metadata.setdefault('schema', [])
 
                 if bblock.annotated_schema:
                     rel_annotated = bblock.annotated_schema.relative_to(cwd)
-                    add_schema_url = f"{base_url}{'/' if base_url[-1] not in ('/', '#') else ''}{rel_annotated}"
+                    add_schema_url = f"{base_url}{rel_annotated}"
 
                     # Remove old, non-annotated schema if present
                     if schema_url in existing_schemas:

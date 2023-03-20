@@ -1,0 +1,141 @@
+Work-in-progress / placeholder
+
+# Overview
+
+An OGC Dataset Collection resource is a JSON object that provides
+information about and access to a geospatial dataset, such as a feature
+collection or a multi-dimensional coverage, through links to API
+endpoints and/or files online. It extends the [OGC
+Collection](../geo/common/json-collection.adoc) with additional fields
+that help describe a dataset, providing the key metadata to enable the
+crawling and search of geospatial datasets.
+
+The Dataset Collection can be mapped into an [OGC Dataset
+Record](https://github.com/opengeospatial/ogcapi-records/pull/130), to
+represent it as GeoJSON (and available in a Features API or Records
+API). (**NOTE** The OGC Dataset Record is still a proposal, once it is
+cleaned up it will get an unstable building block in this repo as well)
+
+[**Maturity**](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity):
+Proposal
+
+# Pre-defined properties
+
+| Property          | Type                                                  | Description                                                                                                                                                                                                                                                                                                   |
+| ----------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                | string                                                | **REQUIRED**. Unique identifier of the collection. The identifier is used, for example, as a path element in URIs.                                                                                                                                                                                            |
+| title             | string                                                | **REQUIRED**. The human readable title of the collection.                                                                                                                                                                                                                                                     |
+| description       | string                                                | **REQUIRED**. A free-text description of the resources in the collection. The content may include Markdown and HTML markup.                                                                                                                                                                                   |
+| links             | \[ [Link](../../../other/common/schemas/link.adoc) \] | **REQUIRED**. Links to other resources. See [Link relation types](#link-relations) for typical link relations included in a collection.                                                                                                                                                                       |
+| extent            | \[ [Extent](../schemas/extent.adoc) \]                | **REQUIRED**. The extent of the dataset described in the collection.                                                                                                                                                                                                                                          |
+| license           | string                                                | **REQUIRED**. A legal document under which the resource is made available.                                                                                                                                                                                                                                    |
+| itemType          | string                                                | Indicator about the type of the data items in the collection.                                                                                                                                                                                                                                                 |
+| crs               | \[ URI \]                                             | The list of coordinate reference systems supported by the API for this collection. Each coordinate reference systems is identified by a URI. See [Coordinate reference system (CRS) identifiers](#crs-identifiers). At least WGS84 longitude/latitude (with optional ellipsoidal height) has to be supported. |
+| keywords          | \[ string \]                                          | A list of keywords, tags, key phrases, or classification codes associated with the collection. Recommended best practice is to use a controlled vocabulary.                                                                                                                                                   |
+| keywordsCodespace | URI                                                   | A reference to a controlled vocabulary used for the keywords property. If a reference is not provided then the values of the keywords property should be considered a free list of tokens associated with the collection.                                                                                     |
+| language          | string                                                | This refers to the natural language used for textual values (e.g. titles, descriptions, etc.). ISO 639-1/639-2 codes should be used. TODO: The reference to ISO 639-2 is from Records. Wouldn’t it be better to recommend only the two letter codes from ISO 639-1?                                           |
+| created           | string                                                | The date or date-time the dataset was created, formatted according to [RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).                                                                                                                                                     |
+| updated           | string                                                | The more recent date or date-time on which the dataset was changed, formatted according to [RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).                                                                                                                                |
+| publisher         | Party                                                 | The entity making the resource available. TODO: Describe the Party object.                                                                                                                                                                                                                                    |
+| themes            | \[ Theme \]                                           | A knowledge organization system used to classify the resource. TODO: describe the Theme object.                                                                                                                                                                                                               |
+| contactPoint      | Party                                                 | An entity to contact about the resource. TODO: Describe the Party object.                                                                                                                                                                                                                                     |
+| rights            | string                                                | A statement that concerns all rights not addressed by the license such as a copyright statement.                                                                                                                                                                                                              |
+
+Properties
+
+# Link relation types
+
+See the [Link relations types
+section](../geo/common/json-collection.xml#link-relations) of OGC
+Collection for a full list of commonly used link relations in OGC
+Collections.
+
+# Coordinate reference system (CRS) identifiers
+
+See the [CRS identifiers
+section](../geo/common/json-collection.xml#crs-identifiers) of OGC
+Collection for a full explanation of how to use the CRS field.
+
+## Example
+
+``` JSON
+{
+    "id": "101290",
+    "title": "New Zealand Building Outlines",
+    "description": "This dataset provides current outlines of buildings within mainland New Zealand captured from the latest aerial imagery.",
+    "extent":
+    {
+        "spatial":
+        {
+            "bbox":
+            [
+                [
+                    167.325430204,
+                    -47.001329508,
+                    179.413063484,
+                    -34.310623441
+                ]
+            ]
+        }
+    },
+    "itemType": "feature",
+    "keywords":
+    [
+        "New Zealand",
+        "buildings"
+    ],
+    "language": "en-NZ",
+    "publisher":
+    {
+        "organizationName": "LINZ - Land Information New Zealand",
+        "contactInfo":
+        {
+            "onlineResource":
+            {
+                "href": "https://data.linz.govt.nz/"
+            },
+            "email": "customersupport@linz.govt.nz"
+        },
+        "role":
+        {
+            "name": "producer"
+        }
+    },
+    "license": "CC-BY-4.0",
+    "links":
+    [
+        {
+            "href": "https://www.linz.govt.nz/data/licensing-and-using-data/attributing-linz-data",
+            "rel": "license",
+            "type": "text/html",
+            "title": "license"
+        },
+        {
+            "href": "https://raw.githubusercontent.com/cholmes/static-ogc-examples/main/linz/buildings/nz-buildings-record.json",
+            "rel": "alternate",
+            "type": "application/geo+json",
+            "title": "OGC Record JSON of this data"
+        },
+        {
+            "href": "https://storage.googleapis.com/open-geodata/linz-examples/nz-building-outlines.gpkg",
+            "rel": "enclosure",
+            "type": "application/geopackage+sqlite3",
+            "length": 1449656320,
+            "title": "Data as a Geopackage"
+        }
+    ]
+}
+```
+
+## Media type
+
+`application/json`
+
+## Schema
+
+TODO: Add a schema
+
+``` YAML
+type: object
+# TODO
+```

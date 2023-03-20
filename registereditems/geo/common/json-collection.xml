@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Resource</title>
+<subtitle>OGC Collection</subtitle>
+<date>2023-02-12</date>
+</info>
+<section xml:id="_overview">
+<title>Overview</title>
+<simpara>An OGC Collection resource is a JSON object that provides information about and access to a set of geospatial resources, through links to API endpoints and/or files online. It is most commonly used to describe geospatial datasets, but can be used for collections of anything geospatial.</simpara>
+<simpara>It is often included in an API as one of several <link xl:href="json-collections.adoc">collections of data</link>. But it can also be used as a standalone file to provide static metadata and links to geospatial data.</simpara>
+<simpara><link xl:href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity"><emphasis role="strong">Maturity</emphasis></link>: Mature</simpara>
+</section>
+<section xml:id="properties">
+<title>Pre-defined properties</title>
+<table frame="all" rowsep="1" colsep="1">
+<title>Properties</title>
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="20*"/>
+<colspec colname="col_2" colwidth="10*"/>
+<colspec colname="col_3" colwidth="70*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Property</entry>
+<entry align="left" valign="top">Type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>id</simpara></entry>
+<entry align="left" valign="top"><simpara>string</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Unique identifier of the collection. The identifier is used, for example, as a path element in URIs.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>title</simpara></entry>
+<entry align="left" valign="top"><simpara>string</simpara></entry>
+<entry align="left" valign="top"><simpara>The human readable title of the collection.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>description</simpara></entry>
+<entry align="left" valign="top"><simpara>string</simpara></entry>
+<entry align="left" valign="top"><simpara>A free-text description of the resources in the collection. The content may include Markdown and HTML markup.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>itemType</simpara></entry>
+<entry align="left" valign="top"><simpara>string</simpara></entry>
+<entry align="left" valign="top"><simpara>Indicator about the type of the data items in the collection. The items can be accessed by following the <literal>items</literal> link, if provided. The default value is "feature".</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>links</simpara></entry>
+<entry align="left" valign="top"><simpara>[ <link xl:href="../../ogc-utils/json-link.adoc">Link</link> ]</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Links to other resources. See <xref linkend="link-relations"/> for typical link relations included in a collection.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>extent</simpara></entry>
+<entry align="left" valign="top"><simpara>[ <link xl:href="json-extent.adoc">Extent</link> ]</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">CONDITIONAL</emphasis>. The extent of the data in the collection. The property has to be provided, if the data has a spatial or temporal extent.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>crs</simpara></entry>
+<entry align="left" valign="top"><simpara>[ URI ]</simpara></entry>
+<entry align="left" valign="top"><simpara>The list of coordinate reference systems supported by the API for this collection. Each coordinate reference systems is identified by a URI. See <xref linkend="crs-identifiers"/>. At least WGS84 longitude/latitude (with optional ellipsoidal height) has to be supported.</simpara>
+<simpara>If the collection is embedded in an <link xl:href="json-collections.adoc">OGC Collections resource</link> that includes a global list of CRS identifiers, the special value "#/crs" can be used to declare all coordinate reference systems in the global list as supported coordinate reference systems of this collection.</simpara>
+<simpara>Default: <literal>[ "http://www.opengis.net/def/crs/OGC/1.3/CRS84" ]</literal></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>storageCrs</simpara></entry>
+<entry align="left" valign="top"><simpara>URI</simpara></entry>
+<entry align="left" valign="top"><simpara>The cooordinate reference system, from the list of supported CRS identifiers, in which the data is stored internally and that may be used to retrieve features from the collection without the need to apply a CRS transformation.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>storageCrsCoordinateEpoch</simpara></entry>
+<entry align="left" valign="top"><simpara>number</simpara></entry>
+<entry align="left" valign="top"><simpara>The point in time at which coordinates in the feature collection are referenced to the dynamic coordinate reference system in <literal>storageCrs</literal>. The epoch is expressed as a decimal year in the Gregorian calendar; for example, March 25th, 2017, in the Gregorian calendar is epoch 2017.23.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section xml:id="link-relations">
+<title>Link relation types</title>
+<simpara>The following link relation types are commonly used in links from an OGC Collection:</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Outgoing link relation types</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="75*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Link relation type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><literal>items</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Refers to the items in the collection, for example, a <link xl:href="../features/json-features.adoc">Features resource</link>, if the <literal>itemType</literal> is "feature".</simpara>
+<simpara>This link relation type will not be registered with IANA. In the future, it may be superseded by the <literal>search</literal> link relation type.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>search</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">RECOMMENDED</emphasis>. Refers to the items in the collection, for example, a <link xl:href="../features/json-features.adoc">Features resource</link>, if the <literal>itemType</literal> is "feature", with support for filtering features using spatial, temporal and thematic selection criteria.</simpara>
+<simpara>This link relation type will in the future supersede the <literal>items</literal> link relation type, so it is recommended to already include this link.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>self</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the resource in the current representation.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>alternate</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the resource in every other media type supported by the server.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>license</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">RECOMMENDED</emphasis>. Refers to the license associated with the data.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>type</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">RECOMMENDED</emphasis>. Refers to the canonical URI of the OGC Collection resource type and identifies the resource as an OGC Collection.</simpara>
+<simpara>No OGC API resource types have currently been registered by the OGC Naming Authority, a proposal is in preparation. A tentative URI could be <literal>http://www.opengis.net/def/type/ogc/0/ogc-collection</literal>.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>describedby</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to a resource providing information about the data, for example, a separate metadata resource.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>enclosure</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to a distribution of the data that is available for download as a single file.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>item</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to an item in this collection, for example, a link:../features/json-features.adoc [Feature resource], if the <literal>itemType</literal> is "feature".</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<simpara>The following link relation types are commonly used in links to an OGC Collection:</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Incoming link relation types</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="75*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Link relation type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><literal>collection</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Used in items of the collection, for example, a <link xl:href="../features/json-feature.adoc">Feature resource</link>.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section xml:id="crs-identifiers">
+<title>Coordinate reference system (CRS) identifiers</title>
+<simpara>It is common practice to use CRS identifiers using the following template:</simpara>
+<simpara><link xl:href="http://www.opengis.net/def/crs/{authority}/{version}/{code}">http://www.opengis.net/def/crs/{authority}/{version}/{code}</link></simpara>
+<simpara>In this template, the token <literal>{authority}</literal> is a placeholder for a value that designates the authority responsible for the definition of this CRS. Typical values include "EPSG" and "OGC".</simpara>
+<simpara>The token <literal>{version}</literal> is a placeholder for the specific version of the CRS definition or <literal>0</literal> for un-versioned CRS definitions.</simpara>
+<simpara>The token <literal>{code}</literal> is a placeholder for the authority’s code for the CRS. Some frequently used coordinate reference systems are:</simpara>
+<itemizedlist>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/def/crs/OGC/1.3/CRS84">http://www.opengis.net/def/crs/OGC/1.3/CRS84</link> - WGS84 longitude, latitude</simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/def/crs/EPSG/0/4326">http://www.opengis.net/def/crs/EPSG/0/4326</link> - WGS84 latitude, longitude</simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</link> - WGS84 longitude, latitude, ellipsoidal height</simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/def/crs/EPSG/0/4979">http://www.opengis.net/def/crs/EPSG/0/4979</link> - WGS84 latitude, longitude, ellipsoidal height</simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/def/crs/EPSG/0/3857">http://www.opengis.net/def/crs/EPSG/0/3857</link> - Web Mercator (used in Web Mapping)</simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/def/crs/EPSG/0/4258">http://www.opengis.net/def/crs/EPSG/0/4258</link> - ETRS89 latitude, longitude</simpara>
+</listitem>
+</itemizedlist>
+<section xml:id="_example">
+<title>Example</title>
+<example>
+<title>Collection example (JSON)</title>
+<programlisting language="JSON" linenumbering="unnumbered">{
+   "id": "buildings",
+   "title": "Buildings",
+   "description": "Buildings in the city of Bonn.",
+   "itemType": "feature",
+   "extent": {
+      "spatial": {
+         "bbox": [ [ 7.01, 50.63, 7.22, 50.78 ] ]
+      },
+      "temporal": {
+         "interval": [ [ "2010-02-15T12:34:56Z", null ] ]
+      }
+   },
+   "links": [
+      { "href": "https://data.example.org/collections/buildings.json",
+         "rel": "self", "type": "application/json", "title": "This collection" },
+      { "href": "https://data.example.org/collections/buildings.html",
+         "rel": "alternate", "type": "text/html", "title": "This collection as HTML" },
+      { "href": "https://data.example.org/collections/buildings/items",
+         "rel": "items", "type": "application/geo+json",
+         "title": "Buildings" },
+      { "href": "https://data.example.org/collections/buildings/items",
+         "rel": "http://www.opengis.net/def/rel/ogc/1.0/items", "type": "application/geo+json",
+         "title": "Buildings" },
+      { "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+         "rel": "license", "type": "text/html",
+         "title": "CC0-1.0" },
+      { "href": "https://creativecommons.org/publicdomain/zero/1.0/rdf",
+         "rel": "license", "type": "application/rdf+xml",
+         "title": "CC0-1.0" }
+   ]
+}</programlisting>
+</example>
+</section>
+<section xml:id="_media_type">
+<title>Media type</title>
+<simpara><literal>application/json</literal></simpara>
+</section>
+<section xml:id="_schema">
+<title>Schema</title>
+<programlisting language="YAML" linenumbering="unnumbered">type: object
+required:
+  - id
+  - links
+properties:
+  id:
+    type: string
+  title:
+    type: string
+  description:
+    type: string
+  links:
+    type: array
+    items:
+      $ref: ../../../ogc-utils/schemas/json-link.yaml
+  extent:
+    $ref: json-extent.yaml
+  itemType:
+    type: string
+    default: feature
+  crs:
+    type: array
+    items:
+      type: string
+    default:
+      - http://www.opengis.net/def/crs/OGC/1.3/CRS84</programlisting>
+</section>
+<section xml:id="_source_reference">
+<title>Source Reference</title>
+<simpara><link xl:href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5">OGC API - Features, Part 1, 7.14.2 Feature collection Response</link></simpara>
+</section>
+</section>
+</article>

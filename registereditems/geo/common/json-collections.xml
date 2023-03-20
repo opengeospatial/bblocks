@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Resource</title>
+<subtitle>OGC Collections</subtitle>
+<date>2023-02-12</date>
+</info>
+<section xml:id="_overview">
+<title>Overview</title>
+<simpara>The distribution of a geospatial dataset in an API is organized into one or more collections of data. How the data is split into collections in a distribution depends on the intended use of the data. Two common approaches for organizing the data are:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>By semantic type: For example, an airport dataset may be distributed with collections for buildings, taxiways, runways, etc.</simpara>
+</listitem>
+<listitem>
+<simpara>By spatial clustering: For example, the same airport dataset may be distributed with a collection for each airport or country.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>The OGC Collections JSON resource provides information about and access to the data in each collection of the distribution.</simpara>
+<simpara><link xl:href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity"><emphasis role="strong">Maturity</emphasis></link>: Mature</simpara>
+</section>
+<section xml:id="properties">
+<title>Pre-defined properties</title>
+<table frame="all" rowsep="1" colsep="1">
+<title>Properties</title>
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="20*"/>
+<colspec colname="col_2" colwidth="10*"/>
+<colspec colname="col_3" colwidth="70*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Property</entry>
+<entry align="left" valign="top">Type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>links</simpara></entry>
+<entry align="left" valign="top"><simpara>[ <link xl:href="../../ogc-utils/json-link.adoc">Link</link> ]</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Links to other resources. See <xref linkend="link-relations"/> for typical link relations included in a collection.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>collections</simpara></entry>
+<entry align="left" valign="top"><simpara>[ <link xl:href="json-collection.adoc">OGC Collection</link> ]</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. The collections with data in this API.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>crs</simpara></entry>
+<entry align="left" valign="top"><simpara>[ URI ]</simpara></entry>
+<entry align="left" valign="top"><simpara>A global list of CRS identifiers that are supported by collections in this API.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section xml:id="link-relations">
+<title>Link relation types</title>
+<simpara>The following link relation types are commonly used in links from an OGC Collections resource:</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Outgoing link relation types</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="75*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Link relation type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><literal>self</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the resource in the current representation.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>alternate</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the resource in every other media type supported by the server.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>license</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">RECOMMENDED</emphasis>. Refers to the license associated with the data.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>describedby</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to a resource providing information about the data, for example, a schema for the data items or a separate metadata resource.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>enclosure</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to a distribution of the data that is available for download as a single file.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<simpara>The following link relation types are commonly used in links to an OGC Collections resource:</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Incoming link relation types</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="75*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Link relation type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><literal>data</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>From any resource that provides information about the API, e.g. a <link xl:href="landing-page.adoc">landing page</link>.</simpara>
+<simpara>This link relation type will not be registered with IANA. It will in the future be superseded by the <literal>http://www.opengis.net/def/rel/ogc/1.0/data</literal> link relation type.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>http://www.opengis.net/def/rel/ogc/1.0/data</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>From any resource that provides information about the API, e.g. a <link xl:href="landing-page.adoc">landing page</link>.</simpara>
+<simpara>This link relation type will in the future supersede the <literal>data</literal> link relation type.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<section xml:id="_examples">
+<title>Examples</title>
+<example>
+<title>Collections example with a single collection</title>
+<programlisting language="JSON" linenumbering="unnumbered">{
+  "links": [
+    { "href": "http://data.example.org/collections.json",
+      "rel": "self", "type": "application/json", "title": "this document" },
+    { "href": "http://data.example.org/collections.html",
+      "rel": "alternate", "type": "text/html", "title": "this document as HTML" },
+    { "href": "http://schemas.example.org/1.0/buildings.json",
+      "rel": "describedby", "type": "application/schema+json", "title": "JSON schema for Acme Corporation building data" },
+    { "href": "http://download.example.org/buildings.gpkg",
+      "rel": "enclosure", "type": "application/geopackage+sqlite3", "title": "Bulk download (GeoPackage)", "length": 472546 }
+  ],
+  "collections": [
+      {
+         "id": "buildings",
+         "title": "Buildings",
+         "description": "Buildings in the city of Bonn.",
+         "itemType": "feature",
+         "extent": {
+            "spatial": {
+               "bbox": [ [ 7.01, 50.63, 7.22, 50.78 ] ]
+            },
+            "temporal": {
+               "interval": [ [ "2010-02-15T12:34:56Z", null ] ]
+            }
+         },
+         "links": [
+            { "href": "https://data.example.org/collections/buildings.json",
+               "rel": "self", "type": "application/json", "title": "This collection" },
+            { "href": "https://data.example.org/collections/buildings.html",
+               "rel": "alternate", "type": "text/html", "title": "This collection as HTML" },
+            { "href": "https://data.example.org/collections/buildings/items",
+               "rel": "items", "type": "application/geo+json",
+               "title": "Buildings" },
+            { "href": "https://data.example.org/collections/buildings/items",
+               "rel": "http://www.opengis.net/def/rel/ogc/1.0/items", "type": "application/geo+json",
+               "title": "Buildings" },
+            { "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+               "rel": "license", "type": "text/html",
+               "title": "CC0-1.0" },
+            { "href": "https://creativecommons.org/publicdomain/zero/1.0/rdf",
+               "rel": "license", "type": "application/rdf+xml",
+               "title": "CC0-1.0" }
+         ]
+      }
+   ]
+}</programlisting>
+</example>
+<example>
+<title>Collections example with a global list of CRS identifiers</title>
+<simpara>In this example, the "bonn_buildings" collection is offered in all the CRSs specified in the global list plus three other CRSs.</simpara>
+<simpara>The "tor_buildings" collection is offered in the CRSs specified in the global list.</simpara>
+<simpara>The "dc_buildings" collection is only offered in the default CRS (i.e., WGS 84 longitude, latitude).</simpara>
+<programlisting language="JSON" linenumbering="unnumbered">{
+  "links": [
+    { "href": "http://data.example.org/collections.json",
+      "rel": "self", "type": "application/json", "title": "this document" },
+    { "href": "http://data.example.org/collections.html",
+      "rel": "alternate", "type": "text/html", "title": "this document as HTML" },
+    { "href": "http://schemas.example.org/1.0/buildings.xsd",
+      "rel": "describedby", "type": "application/xml", "title": "GML application schema for Acme Corporation building data" },
+    { "href": "http://download.example.org/buildings.gpkg",
+      "rel": "enclosure", "type": "application/geopackage+sqlite3", "title": "Bulk download (GeoPackage)", "length": 472546 }
+  ],
+  "crs": [
+     "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+     "http://www.opengis.net/def/crs/EPSG/0/4326",
+     "http://www.opengis.net/def/crs/EPSG/0/3857",
+     "http://www.opengis.net/def/crs/EPSG/0/3395"
+  ],
+  "collections": [
+     {
+       "id": "bonn_buildings",
+       "title": "Bonn Buildings",
+       "description": "Buildings in the city of Bonn.",
+       "extent": {
+         "spatial": {
+           "bbox": [ [ 7.01, 50.63, 7.22, 50.78 ] ]
+         },
+         "temporal": {
+           "interval": [ [ "2010-02-15T12:34:56Z", null ] ]
+         }
+       },
+       "links": [
+         { "href": "http://data.example.org/collections/bonn_buildings/items",
+           "rel": "items", "type": "application/geo+json",
+           "title": "Bonn Buildings" },
+         { "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+           "rel": "license", "type": "text/html",
+           "title": "CC0-1.0" },
+         { "href": "https://creativecommons.org/publicdomain/zero/1.0/rdf",
+           "rel": "license", "type": "application/rdf+xml",
+           "title": "CC0-1.0" }
+       ],
+       "crs": [
+          "#/crs",
+          "http://www.opengis.net/def/crs/EPSG/0/4258",
+          "http://www.opengis.net/def/crs/EPSG/0/25831",
+          "http://www.opengis.net/def/crs/EPSG/0/25832"
+       ]
+     },
+     {
+       "id": "tor_buildings",
+       "title": "Toronto Buildings",
+       "description": "Buildings in the city of Toronto.",
+       "extent": {
+         "spatial": {
+           "bbox": [ [ -79.62, 43.58, -79.12, 43.87 ] ]
+         },
+         "temporal": {
+           "interval": [ [ "2010-02-15T12:34:56Z", null ] ]
+         }
+       },
+       "links": [
+         { "href": "http://data.example.org/collections/tor_buildings/items",
+           "rel": "items", "type": "application/geo+json",
+           "title": "Toronto Buildings" },
+         { "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+           "rel": "license", "type": "text/html",
+           "title": "CC0-1.0" },
+         { "href": "https://creativecommons.org/publicdomain/zero/1.0/rdf",
+           "rel": "license", "type": "application/rdf+xml",
+           "title": "CC0-1.0" }
+       ],
+       "crs": [
+          "#/crs"
+       ]
+     },
+     {
+       "id": "dc_buildings",
+       "title": "Washington DC Buildings",
+       "description": "Buildings in the city of Washington DC.",
+       "extent": {
+         "spatial": {
+           "bbox": [ [ -77.12, 38.80, -76.89, 39.01 ] ]
+         },
+         "temporal": {
+           "interval": [ [ "2010-02-15T12:34:56Z", null ] ]
+         }
+       },
+       "links": [
+         { "href": "http://data.example.org/collections/dc_buildings/items",
+           "rel": "items", "type": "application/geo+json",
+           "title": "DC Buildings" },
+         { "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+           "rel": "license", "type": "text/html",
+           "title": "CC0-1.0" },
+         { "href": "https://creativecommons.org/publicdomain/zero/1.0/rdf",
+           "rel": "license", "type": "application/rdf+xml",
+           "title": "CC0-1.0" }
+         ],
+         "crs": [
+           "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+       ]
+     }
+  ]
+}</programlisting>
+</example>
+</section>
+<section xml:id="_media_type">
+<title>Media type</title>
+<simpara><literal>application/json</literal></simpara>
+</section>
+<section xml:id="_schema">
+<title>Schema</title>
+<programlisting language="YAML" linenumbering="unnumbered">type: object
+required:
+  - links
+  - collections
+properties:
+  links:
+    type: array
+    items:
+      $ref: ../../../ogc-utils/schemas/json-link.yaml
+  collections:
+    type: array
+    items:
+      $ref: json-collection.yaml</programlisting>
+</section>
+<section xml:id="_source_reference">
+<title>Source Reference</title>
+<simpara><link xl:href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4">OGC API - Features, Part 1, 7.13.2: Feature Collections Response</link></simpara>
+</section>
+</section>
+</article>

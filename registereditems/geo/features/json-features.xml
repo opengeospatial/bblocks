@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Resource</title>
+<subtitle>Features</subtitle>
+<date>2023-02-12</date>
+</info>
+<simpara>Version: 1.0.1</simpara>
+<section xml:id="_overview">
+<title>Overview</title>
+<simpara>The features in an <link xl:href="../common/json-collection.adoc">OGC Collection</link>.</simpara>
+<simpara>This resource supports spatial filtering with the <link xl:href="../../common/parameters/bbox.adoc"><literal>bbox</literal> parameter</link>, temporal filtering with the <link xl:href="../common/parameters-datetime.adoc"><literal>datetime</literal> parameter</link>.</simpara>
+<simpara>To avoid overloading clients and servers, both clients and servers can limit the maximum number of features in a representation of the resource. In this case, paging is supported to provide access to all the features in the collection that match the specified filter conditions.</simpara>
+<simpara><link xl:href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity"><emphasis role="strong">Maturity</emphasis></link>: Mature</simpara>
+</section>
+<section xml:id="properties">
+<title>Pre-defined properties</title>
+<table frame="all" rowsep="1" colsep="1">
+<title>Properties</title>
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="20*"/>
+<colspec colname="col_2" colwidth="10*"/>
+<colspec colname="col_3" colwidth="70*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Property</entry>
+<entry align="left" valign="top">Type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>links</simpara></entry>
+<entry align="left" valign="top"><simpara>[ <link xl:href="../../ogc-utils/json-link.adoc">Link</link> ]</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Links to other resources. See <xref linkend="link-relations"/> for typical link relations of this resource type.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>features</simpara></entry>
+<entry align="left" valign="top"><simpara>[ <link xl:href="json-feature.adoc">Feature</link> ]</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. The features in the collection.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>timeStamp</simpara></entry>
+<entry align="left" valign="top"><simpara>string</simpara></entry>
+<entry align="left" valign="top"><simpara>The RFC 3339 time stamp when the resource representation was generated.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>numberMatched</simpara></entry>
+<entry align="left" valign="top"><simpara>integer</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">RECOMMENDED</emphasis>. If a property <literal>numberMatched</literal> is included in the response, the value is the number of features in the feature collections that match the filter parameters like <literal>bbox</literal>, <literal>datetime</literal>, etc. Servers can omit this information, if the information about the number of matching features is not known or difficult to compute.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>numberReturned</simpara></entry>
+<entry align="left" valign="top"><simpara>integer</simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">RECOMMENDED</emphasis>. If a property <literal>numberReturned</literal> is included in the response, the value is the number of features in the response document. Servers can omit this information, if the information about the number of features is not known or difficult to compute.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section xml:id="link-relations">
+<title>Link relation types</title>
+<simpara>The following link relation types are commonly used in links from a Features resource:</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Outgoing link relation types</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="75*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Link relation type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><literal>self</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the resource in the current representation.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>alternate</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">REQUIRED</emphasis>. Link to the resource in every other media type supported by the server.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>next</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">CONDITIONAL</emphasis>. If the response is a page of a paged response and there is another page, a link will reference that next page.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>prev</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>If the response is a page of a paged response and there is a previous page, a link may reference that previous page.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>first</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>If the response is a page of a paged response, a link may reference the first page.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>last</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>If the response is a page of a paged response, a link may reference the last page.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>license</literal></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">RECOMMENDED</emphasis>. Refers to the license associated with the data.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>describedby</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>Refers to a resource providing information about the data, for example, a schema for the feature collection or a separate metadata resource.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<simpara>The following link relation types are commonly used in links to a Features resource:</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Incoming link relation types</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="75*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Link relation type</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><literal>items</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>From a <link xl:href="../common/json-collection.adoc">OGC Collection resource</link>.</simpara>
+<simpara>This link relation type will not be registered with IANA. In the future, it may be superseded by the <literal>search</literal> link relation type.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><literal>search</literal></simpara></entry>
+<entry align="left" valign="top"><simpara>From any resource that wants to link to a resource that supports searching the features, e.g. from a <link xl:href="../../common/resources/collection.adoc">OGC Collection resource</link>.</simpara>
+<simpara>This link relation type is expected to supersede the use of the <literal>items</literal> link relation type.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section xml:id="_representation_geojson">
+<title>Representation: GeoJSON</title>
+<simpara>The GeoJSON representation is the currently recommended representation that all APIs should support, where GeoJSON can be used for the data.</simpara>
+<simpara>In addition to the pre-defined properties listed above, each GeoJSON feature collection includes a JSON member with the key <literal>type</literal> and the value "FeatureCollection".</simpara>
+<section xml:id="_example">
+<title>Example</title>
+<example>
+<title>First page of the airport features from OS Open Zoomstack</title>
+<programlisting language="JSON" linenumbering="unnumbered">{
+   "type":"FeatureCollection",
+   "links":[
+      {
+         "href":"https://demo.ldproxy.net/zoomstack/collections/airports/items?f=json",
+         "rel":"self",
+         "type":"application/geo+json",
+         "title":"This document"
+      },
+      {
+         "href":"https://demo.ldproxy.net/zoomstack/collections/airports/items?f=html",
+         "rel":"alternate",
+         "type":"text/html",
+         "title":"This document as HTML"
+      },
+      {
+         "href":"https://demo.ldproxy.net/zoomstack/collections/airports/items?f=json&amp;offset=10",
+         "rel":"next",
+         "type":"application/geo+json",
+         "title":"Next page"
+      }
+   ],
+   "numberReturned":10,
+   "timeStamp":"2021-07-07T12:38:27Z",
+   "features":[
+      {
+         "type":"Feature",
+         "id":1,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -1.6930015,
+               60.3216821
+            ]
+         },
+         "properties":{
+            "name":"Papa Stour Airstrip"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":2,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -1.2922268,
+               59.8782666
+            ]
+         },
+         "properties":{
+            "name":"Sumburgh Airport"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":3,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -1.2439112,
+               60.1917461
+            ]
+         },
+         "properties":{
+            "name":"Tingwall Airport"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":4,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -2.8997054,
+               58.9579609
+            ]
+         },
+         "properties":{
+            "name":"Kirkwall Airport"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":5,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -6.3295079,
+               58.2139012
+            ]
+         },
+         "properties":{
+            "name":"Port-Adhair Steòrnabhaigh/Stornoway Airport"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":6,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -3.094033,
+               58.4583627
+            ]
+         },
+         "properties":{
+            "name":"Wick John O'Groats Airport"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":7,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -7.3604149,
+               57.4838089
+            ]
+         },
+         "properties":{
+            "name":"Benbecula Airport"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":8,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -7.4485984,
+               57.0255697
+            ]
+         },
+         "properties":{
+            "name":"Barra Airport"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":9,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -4.0493516,
+               57.5431467
+            ]
+         },
+         "properties":{
+            "name":"Inverness Airport"
+         }
+      },
+      {
+         "type":"Feature",
+         "id":10,
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -2.2001789,
+               57.2023588
+            ]
+         },
+         "properties":{
+            "name":"Aberdeen International Airport"
+         }
+      }
+   ]
+}</programlisting>
+</example>
+</section>
+<section xml:id="_media_type">
+<title>Media type</title>
+<simpara><literal>application/geo+json</literal></simpara>
+</section>
+<section xml:id="_schema">
+<title>Schema</title>
+<programlisting language="YAML" linenumbering="unnumbered">allOf:
+  - $ref: https://geojson.org/schema/FeatureCollection.json
+  - type: object
+    properties:
+      links:
+        type: array
+        items:
+          $ref: ../../../ogc-utils/schemas/json-link.yaml
+      timeStamp:
+        type: string
+        format: date-time
+      numberMatched:
+        type: integer
+        minimum: 0
+      numberReturned:
+        type: integer
+        minimum: 0</programlisting>
+</section>
+</section>
+<section xml:id="_representation_html">
+<title>Representation: HTML</title>
+<simpara>Providing an HTML representation is recommended so that the resource can be displayed in a web browser and indexed by search engines.</simpara>
+<simpara>The HTML representation should include all information that is part of the JSON representation.</simpara>
+<section xml:id="_media_type_2">
+<title>Media type</title>
+<simpara><literal>text/html</literal></simpara>
+</section>
+</section>
+<section xml:id="_source_references">
+<title>Source References</title>
+<itemizedlist>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_6">OGC API - Features, Part 1, 7.15.7: Features response</link></simpara>
+</listitem>
+<listitem>
+<simpara><link xl:href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_requirements_class_geojson">OGC API - Features, Part 1, 8.3: GeoJSON</link></simpara>
+</listitem>
+</itemizedlist>
+</section>
+</article>

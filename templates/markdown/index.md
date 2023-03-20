@@ -5,7 +5,7 @@
 ${bblock.abstract}
 
 % if bblock.maturity:
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): ${bblock.maturity}
+[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): ${bblock.maturity.capitalize()}
 % endif
 
 % if bblock.description:
@@ -19,7 +19,7 @@ ${'##'} Examples
 
   % for example in bblock.examples:
     <% has_language = example.get('language') not in (None, '', '_') %>
-${'###'} ${example['title']}${f" ({example['language']})" if has_language else ''}
+${'###'} ${example.get('title', f"Example {loop.index + 1}")}${f" ({example['language']})" if has_language else ''}
 
     % if example.get('markdown'):
 ${example['content'].replace('@@assets@@', assets_rel or '')}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Header</title>
+<subtitle>Content-Crs</subtitle>
+<date>2023-02-12</date>
+</info>
+<simpara>Version: 1.0.0</simpara>
+<section xml:id="_overview">
+<title>Overview</title>
+<simpara>Because of the inconsistent provision of coordinate reference system (CRS) metadata in geospatial encodings and the continued confusion caused by the axis order of coordinates, this header provides a mechanism for a server to clearly and unambiguously assert the CRS being used in a response document independent of the requested output format.</simpara>
+<simpara><link xl:href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity"><emphasis role="strong">Maturity</emphasis></link>: Stable</simpara>
+</section>
+<section xml:id="_examples">
+<title>Examples</title>
+<example>
+<title>Bounding box parameter example</title>
+<simpara>The <literal>Content-Crs</literal> header in the response below asserts that any coordinates in the response are in the coordinate reference system World Mercator (used for very small scale conformal mapping) as requested using the <literal>crs</literal> query parameter.</simpara>
+<programlisting language="TEXT" linenumbering="unnumbered">$ curl -i "https://example.com/api/v1/collections/poi/items/1?crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3395"
+
+HTTP/1.1 200 OK
+Date: Sun, 24 May 2020 15:30:56 GMT
+Content-Type: application/geo+json
+Content-Language: en
+Content-Crs: &lt;http://www.opengis.net/def/crs/EPSG/0/3395&gt;
+Link: &lt;https://example.com/api/v1/collections/poi/items/1?crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3395&amp;f=json&gt;; rel="self"; title="This document"; type="application/geo+json"
+Link: &lt;https://example.com/api/v1/collections/poi/items/1?crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3395&amp;f=html&gt;; rel="alternate"; title="This document as HTML"; type="text/html"
+Link: &lt;https://example.com/api/v1/collections/poi&gt;; rel="collection"; title="The collection the feature belongs to"
+Vary: Accept-Language,Accept-Encoding
+Content-Length: 1064
+
+...</programlisting>
+</example>
+</section>
+<section xml:id="_description">
+<title>Description</title>
+<simpara>The value of the <literal>Content-Crs</literal> header is a URI identifying the coordinate reference system used in the response document according to the following grammar for <literal>CRS-header</literal>.</simpara>
+<programlisting language="TEXT" linenumbering="unnumbered">CRS-header = "Content-Crs" ":" CRS-value
+
+CRS-value = "&lt;" URI-reference "&gt;"</programlisting>
+</section>
+<section xml:id="_openapi_3_0_specification">
+<title>OpenAPI 3.0 specification</title>
+<programlisting language="YAML" linenumbering="unnumbered">schema:
+  type: string
+  format: uri</programlisting>
+<section xml:id="_source_reference">
+<title>Source Reference</title>
+<simpara><link xl:href="http://www.opengis.net/doc/IS/ogcapi-features-2/1.0#_coordinate_reference_system_information_independent_of_the_feature_encoding">OGC API - Features, Part 2, 6.3.4: Coordinate reference system information independent of the feature encoding</link></simpara>
+</section>
+</section>
+</article>

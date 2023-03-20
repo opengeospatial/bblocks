@@ -5,6 +5,8 @@ from os.path import relpath
 from pathlib import Path
 from argparse import ArgumentParser
 from typing import Sequence
+from urllib.parse import urljoin
+
 from mako.template import Template as MakoTemplate
 from mako.lookup import TemplateLookup
 
@@ -46,13 +48,19 @@ class DocGenerator:
             tpl_out.parent.mkdir(parents=True, exist_ok=True)
             bblock_rel = relpath(bblock.files_path, tpl_out.parent)
             assets_rel = relpath(bblock.assets_path, tpl_out.parent) if bblock.assets_path else None
+            if base_url:
+                tpl_out_url = urljoin(base_url, relpath(tpl_out))
+                bblock_rel = urljoin(tpl_out_url, bblock_rel)
+                if assets_rel:
+                    assets_rel = urljoin(tpl_out_url, assets_rel)
             with open(tpl_out, 'w') as f:
                 f.write(template.render(bblock=bblock,
                                         bblock_rel=bblock_rel,
                                         tplfile=template.path,
                                         outfile=tpl_out,
                                         assets_rel=assets_rel,
-                                        root_dir=Path()))
+                                        root_dir=Path(),
+                                        base_url=base_url))
                 if base_url and template.path.stem == 'index':
                     doc_url = f"{base_url}{'/' if base_url[-1] not in ('/', '#') else ''}" \
                               f"{self.output_dir.name}/{template.lang}/{bblock.subdirs}/{template.filename}"

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Polygon</title>
+<date>2023-02-12</date>
+</info>
+<section xml:id="_polygon">
+<title>Polygon</title>
+<simpara>Polygon is a coverage domain type. They can only contain <literal>[x,y]</literal> positions (and not <literal>z</literal> or additional coordinates):
+- A LinearRing is an array of 4 or more <literal>[x,y]</literal> arrays where each of <literal>x</literal> and <literal>y</literal> is a coordinate value. The first and last <literal>[x,y]</literal> elements are identical.
+- A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.</simpara>
+<itemizedlist>
+<listitem>
+<simpara>A domain with Polygon domain type MUST have the axis <literal>"composite"</literal> which has a single Polygon value.</simpara>
+</listitem>
+<listitem>
+<simpara>The axis <literal>"composite"</literal> MUST have the data type <literal>"polygon"</literal> and the coordinate identifiers <literal>"x","y"</literal>, in that order.</simpara>
+</listitem>
+<listitem>
+<simpara>A Polygon domain MAY have the axes <literal>"z"</literal> and <literal>"t"</literal> which both MUST have a single coordinate value only.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Domain example:</simpara>
+<simpara>A polygon defined as a rectangle between coordinates <literal>(100.0,0.0)</literal> and <literal>(101.0,1.0)</literal>, at vertical coordinate <literal>2</literal>, and for the time <literal>"2008-01-01T04:00:00Z"</literal></simpara>
+<programlisting language="json" linenumbering="unnumbered">{
+  "type": "Domain",
+  "domainType": "Polygon",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}</programlisting>
+<simpara>Coverage example:</simpara>
+<simpara>A coverage of temperature for the domain as in the previous example.</simpara>
+<programlisting language="json" linenumbering="unnumbered">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Polygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "values" : [...]
+    }
+  }
+}</programlisting>
+</section>
+</article>
