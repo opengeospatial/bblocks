@@ -9,6 +9,7 @@ from urllib.parse import urljoin
 
 from mako.template import Template as MakoTemplate
 from mako.lookup import TemplateLookup
+from mako import exceptions
 
 from scripts.util import load_bblocks, BuildingBlock
 
@@ -25,7 +26,11 @@ class DocTemplate:
         self._template = MakoTemplate(filename=str(p), lookup=self._lookup)
 
     def render(self, **kwargs) -> str:
-        return self._template.render(**kwargs)
+        try:
+            return self._template.render(**kwargs)
+        except:
+            print(exceptions.text_error_template().render())
+            raise
 
 
 def find_templates(root: Path) -> list[DocTemplate]:

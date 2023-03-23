@@ -1,12 +1,28 @@
-# GeoPose Basic-YPR (Schema)
+---
+title: GeoPose Basic-YPR (Schema)
 
-*Version 0.1*
+language_tabs:
+  - json
+
+toc_footers:
+  - Version 0.1
+  - <a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Proposal
+  - <a href='#'>{bblock.name}</a>
+  - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
+
+search: true
+
+code_clipboard: true
+
+meta:
+  - name: GeoPose Basic-YPR (Schema)
+---
+
+# Overview
 
 Basic GeoPose using yaw, pitch, and roll to specify orientation
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
-
-## Description
+# Description
 
 GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric
 objects (“Poses”) within reference frames anchored to the earth’s surface (“Geo”) or within other astronomical
@@ -24,11 +40,9 @@ coordinate system (where the coordinate axes East, North, and Up correspond to t
 rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The
 unit of measure SHALL be the degree and the angles represented as signed real number values.
 
-## Examples
+# Examples
 
-    
-### Example 1 (json)
-
+## Example
 ```json
 {
   "position": {
@@ -43,10 +57,6 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   }
 }
 ```
-
-    
-### Example 2 (json)
-
 ```json
 {
   "position": {
@@ -61,8 +71,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   }
 }
 ```
-
-## Schema
+# Schema
 
 [schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml)
 
@@ -81,6 +90,6 @@ required:
   - angles
 
 ```
-## Sources
+# Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)
