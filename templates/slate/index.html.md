@@ -8,7 +8,8 @@ title: ${bblock.name} (${bblock.itemClass.capitalize()})
   for example in bblock.examples:
     lang = example.get('language')
     lang = None if lang in (None, '_', '') else lang
-    langs.add(lang if lang else 'plaintext')
+    if not example.get('markdown'):
+      langs.add(lang if lang else 'plaintext')
     if lang:
       examples.setdefault(example.get('title', 'Example'), []).append(example)
     else:

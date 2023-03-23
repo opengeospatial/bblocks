@@ -2,10 +2,9 @@
 title: bbox (Parameter)
 
 language_tabs:
-  - plaintext
+  - javascript
   - python
   - shell
-  - javascript
 
 toc_footers:
   - Version 1.0
