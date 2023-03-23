@@ -534,35 +534,8 @@ longitude</p></li>
    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h1 id='schema'>Schema</h1>
-<p><a href="https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml">schema.yaml</a></p>
-<div class="highlight"><pre class="highlight yaml tab-yaml"><code><span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-<span class="na">required</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">id</span>
-  <span class="pi">-</span> <span class="s">links</span>
-<span class="na">properties</span><span class="pi">:</span>
-  <span class="na">id</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-  <span class="na">title</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-  <span class="na">description</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-  <span class="na">links</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-    <span class="na">items</span><span class="pi">:</span>
-      <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../../ogc-utils/schemas/json-link.yaml</span>
-  <span class="na">extent</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s">json-extent.yaml</span>
-  <span class="na">itemType</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-    <span class="na">default</span><span class="pi">:</span> <span class="s">feature</span>
-  <span class="na">crs</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-    <span class="na">items</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-    <span class="na">default</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">http://www.opengis.net/def/crs/OGC/1.3/CRS84</span>
-
-</code></pre></div><h1 id='sources'>Sources</h1>
+<p><a href="https://avillar.github.io/bblocks/geo/common/data_types/ogc_collection/schema.yaml">schema.yaml</a></p>
+<h1 id='sources'>Sources</h1>
 <ul>
 <li><a href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5">OGC API - Features, Part 1, 7.14.2 Feature collection Response</a></li>
 </ul>

@@ -32,6 +32,20 @@ code_clipboard: true
 
 meta:
   - name: ${bblock.name} (${bblock.itemClass.capitalize()})
+
+<%
+  import os
+  from urllib.parse import urljoin
+  url_bblock_rel = bblock_rel
+  url_assets_rel = assets_rel
+  if os.environ.get('SLATE_BASE_URL'):
+    base_url = os.environ.get('SLATE_BASE_URL')
+    if base_url[-1] not in ('#', '/'):
+      base_url += '/'
+    url_bblock_rel = base_url + bblock_rel.split('/registereditems/', 1)[1]
+    if assets_rel:
+      url_assets_rel = base_url + assets_rel.split('/registereditems/', 1)[1]
+%>
 ---
 
 ${'#'} Overview
@@ -41,7 +55,7 @@ ${bblock.abstract}
 % if bblock.description:
 ${'#'} Description
 
-${bblock.description.replace('@@assets@@', assets_rel or '')}
+${bblock.description.replace('@@assets@@', url_assets_rel or '')}
 
 % endif
 % if bblock.examples:
@@ -51,7 +65,7 @@ ${'#'} Examples
 ${'##'} ${title}
     % for example in title_examples:
       % if example.get('markdown'):
-${example['content'].replace('@@assets@@', assets_rel or '')}
+${example['content'].replace('@@assets@@', url_assets_rel or '')}
       % else:
 ```${example['language']}
 ${example['content']}
@@ -61,7 +75,7 @@ ${example['content']}
   % endfor
   % for example in non_lang_examples:
     % if example.get('markdown'):
-${example['content'].replace('@@assets@@', assets_rel or '')}
+${example['content'].replace('@@assets@@', url_assets_rel or '')}
     % else:
 ```plaintext
 ${example['content']}
@@ -72,11 +86,11 @@ ${example['content']}
 % if bblock.schema:
 ${'#'} Schema
 
-[schema.yaml](${bblock_rel}/schema.yaml)
-
-```yaml
-${bblock.schema_contents}
-```
+[schema.yaml](${url_bblock_rel}/schema.yaml)
+###
+### ```yaml
+###${bblock.schema_contents}
+### ```
 % endif
 % if bblock.sources:
 ${'#'} Sources

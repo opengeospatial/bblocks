@@ -16,6 +16,8 @@ code_clipboard: true
 
 meta:
   - name: OGC Collection (Schema)
+
+
 ---
 
 # Overview
@@ -140,37 +142,7 @@ CRS. Some frequently used coordinate reference systems are:
 ```
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
-
-```yaml
-type: object
-required:
-  - id
-  - links
-properties:
-  id:
-    type: string
-  title:
-    type: string
-  description:
-    type: string
-  links:
-    type: array
-    items:
-      $ref: ../../../ogc-utils/schemas/json-link.yaml
-  extent:
-    $ref: json-extent.yaml
-  itemType:
-    type: string
-    default: feature
-  crs:
-    type: array
-    items:
-      type: string
-    default:
-      - http://www.opengis.net/def/crs/OGC/1.3/CRS84
-
-```
+[schema.yaml](https://avillar.github.io/bblocks/geo/common/data_types/ogc_collection/schema.yaml)
 # Sources
 
 * [OGC API - Features, Part 1, 7.14.2 Feature collection Response](http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5)

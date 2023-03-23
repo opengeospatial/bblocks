@@ -16,6 +16,8 @@ code_clipboard: true
 
 meta:
   - name: OGC Collections (Schema)
+
+
 ---
 
 # Overview
@@ -189,24 +191,7 @@ The "dc_buildings" collection is only offered in the default CRS (i.e., WGS 84 l
 ```
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collections/schema.yaml)
-
-```yaml
-type: object
-required:
-  - links
-  - collections
-properties:
-  links:
-    type: array
-    items:
-      $ref: ../../../ogc-utils/schemas/json-link.yaml
-  collections:
-    type: array
-    items:
-      $ref: ../ogc_collection/schema.yaml
-
-```
+[schema.yaml](https://avillar.github.io/bblocks/geo/common/data_types/ogc_collections/schema.yaml)
 # Sources
 
 * [OGC API - Features, Part 1, 7.13.2: Feature Collections Response](http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4)

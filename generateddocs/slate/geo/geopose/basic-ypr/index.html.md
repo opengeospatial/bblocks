@@ -16,6 +16,8 @@ code_clipboard: true
 
 meta:
   - name: GeoPose Basic-YPR (Schema)
+
+
 ---
 
 # Overview
@@ -73,23 +75,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml)
-
-```yaml
-"$schema": https://json-schema.org/draft/2020-12/schema
-description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'
-'@modelReference': ../context.jsonld
-type: object
-properties:
-  position:
-    "$ref": ../position.schema.yaml
-  angles:
-    "$ref": ../angles.schema.yaml
-required:
-  - position
-  - angles
-
-```
+[schema.yaml](https://avillar.github.io/bblocks/geo/geopose/basic-ypr/schema.yaml)
 # Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)
