@@ -2,8 +2,8 @@
 title: Bounding Box (Schema)
 
 language_tabs:
-  - json
   - txt
+  - json
 
 toc_footers:
   - Version 1.0.1

@@ -2,9 +2,9 @@
 title: bbox (Parameter)
 
 language_tabs:
-  - javascript
-  - python
   - shell
+  - python
+  - javascript
 
 toc_footers:
   - Version 1.0
@@ -70,6 +70,7 @@ fetch(url + `bbox=${bbox.join(',')}`)
   .then((response) => response.json())
   .then((json) => console.log(json));
 ```
+## The following bounding box parameter includes the 48 contiguous states of the United States of America.
 `bbox=-124.7844079,24.7433195,-66.9513812,49.3457868`
 
 ![Bounding box for the continental US states](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/assets/example.png)

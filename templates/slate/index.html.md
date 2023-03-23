@@ -76,6 +76,7 @@ ${example['content']}
     % endfor
   % endfor
   % for example in non_lang_examples:
+${'##'} ${example.get('title', 'Example')}
     % if example.get('markdown'):
 ${example['content'].replace('@@assets@@', url_assets_rel or '')}
     % else:

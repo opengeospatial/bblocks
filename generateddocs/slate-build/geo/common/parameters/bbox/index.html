@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="geo geo_common geo_common_parameters geo_common_parameters_bbox geo_common_parameters_bbox_index" data-languages="[&quot;javascript&quot;,&quot;python&quot;,&quot;shell&quot;]">
+  <body class="geo geo_common geo_common_parameters geo_common_parameters_bbox geo_common_parameters_bbox_index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -304,9 +304,9 @@
     <div class="toc-wrapper">
       <img src="../../../../images/logo-1e815a84.png" class="logo" alt="" />
         <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
-              <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -324,6 +324,9 @@
               <ul class="toc-list-h2">
                   <li>
                     <a href="#using-a-bounding-box-parameter-in-a-request" class="toc-h2 toc-link" data-title="Using a bounding box parameter in a request">Using a bounding box parameter in a request</a>
+                  </li>
+                  <li>
+                    <a href="#the-following-bounding-box-parameter-includes-the-48-contiguous-states-of-the-united-states-of-america" class="toc-h2 toc-link" data-title="The following bounding box parameter includes the 48 contiguous states of the United States of America.">The following bounding box parameter includes the 48 contiguous states of the United States of America.</a>
                   </li>
               </ul>
           </li>
@@ -378,7 +381,7 @@ bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
 <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span> <span class="o">+</span> <span class="s2">`bbox=</span><span class="p">${</span><span class="nx">bbox</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">)}</span><span class="s2">`</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">json</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">));</span>
-</code></pre></div>
+</code></pre></div><h2 id='the-following-bounding-box-parameter-includes-the-48-contiguous-states-of-the-united-states-of-america'>The following bounding box parameter includes the 48 contiguous states of the United States of America.</h2>
 <p><code>bbox=-124.7844079,24.7433195,-66.9513812,49.3457868</code></p>
 
 <p><img src="https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/assets/example.png" alt="Bounding box for the continental US states" /></p>
@@ -392,9 +395,9 @@ bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
-                <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
