@@ -121,3 +121,19 @@ items:
     successor:
       description: Identifier or URI of the predecessor of this Building Block.
       type: string
+    dependsOn:
+      description: Identifier or URI of other Building Blocks that this Building Blocks depends on
+      type: array
+      items:
+        type: string
+    seeAlso:
+      description: Identifier or URI of other Building Blocks that may be of interest
+      type: array
+      items:
+        type: string
+    requirementClasses:
+      description: URI(s) of requirement classes that can be used to validate this Building Block
+      type: array
+      items:
+        type: string
+        format: uri
