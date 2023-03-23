@@ -179,7 +179,7 @@ The "dc_buildings" collection is only offered in the default CRS (i.e., WGS 84 l
 
 ## Schema
 
-[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collections/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/ogc_collections/schema.yaml)
 
 ```yaml
 type: object

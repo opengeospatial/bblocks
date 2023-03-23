@@ -22,7 +22,7 @@ language_tabs:
 
 toc_footers:
   - Version ${bblock.version}
-  - <a href='#'>{bblock.name}</a>
+  - <a href='#'>${bblock.name}</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
 search: true

@@ -6,7 +6,7 @@ language_tabs:
 
 toc_footers:
   - Version 0.1
-  - <a href='#'>{bblock.name}</a>
+  - <a href='#'>GeoPose Basic-YPR</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
 search: true
@@ -76,7 +76,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/geopose/basic-ypr/schema.yaml)
 # Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)

@@ -64,7 +64,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ## Schema
 
-[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/geopose/basic-ypr/schema.yaml)
 
 ```yaml
 "$schema": https://json-schema.org/draft/2020-12/schema
