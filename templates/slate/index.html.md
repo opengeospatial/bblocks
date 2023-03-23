@@ -22,7 +22,6 @@ language_tabs:
 
 toc_footers:
   - Version ${bblock.version}
-  - <a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: ${bblock.maturity.capitalize()}
   - <a href='#'>{bblock.name}</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
@@ -51,6 +50,8 @@ meta:
 ${'#'} Overview
 
 ${bblock.abstract}
+
+[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): ${bblock.maturity.capitalize()}
 
 % if bblock.description:
 ${'#'} Description

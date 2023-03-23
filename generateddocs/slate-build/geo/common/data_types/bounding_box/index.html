@@ -338,7 +338,6 @@
       </ul>
         <ul class="toc-footer">
             <li>Version 1.0.1</li>
-            <li>#<Middleman::Util::EnhancedHash <a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>="Mature"></li>
             <li><a href='#'>{bblock.name}</a></li>
             <li><a href='https://blocks.ogc.org/register.html'>Building Blocks register</a></li>
         </ul>
@@ -348,6 +347,8 @@
       <div class="content">
         <h1 id='overview'>Overview</h1>
 <p>The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.</p>
+
+<p><a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Mature</p>
 <h1 id='description'>Description</h1>
 <p>A bounding box is provided as an array of four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth):</p>
 
@@ -375,7 +376,7 @@
 
 </span></code></pre></div><h2 id='axis-aligned-minimum-bounding-box-of-the-48-contiguous-states-of-the-united-states-of-america-text'>Axis-aligned minimum bounding box of the 48 contiguous states of the United States of America (Text)</h2><div class="highlight"><pre class="highlight plaintext"><code>-124.7844079,24.7433195,-66.9513812,49.3457868
 </code></pre></div><h1 id='schema'>Schema</h1>
-<p><a href="https://avillar.github.io/bblocks/geo/common/data_types/bounding_box/schema.yaml">schema.yaml</a></p>
+<p><a href="https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/bounding_box/schema.yaml">schema.yaml</a></p>
 <h1 id='sources'>Sources</h1>
 <ul>
 <li><a href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4">OGC API - Features, Part 1, 7.13.2: Feature Collections Response</a></li>

@@ -6,7 +6,6 @@ language_tabs:
 
 toc_footers:
   - Version 0.1
-  - <a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Mature
   - <a href='#'>{bblock.name}</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
@@ -23,6 +22,8 @@ meta:
 # Overview
 
 An OGC Collection resource is a JSON object that provides information about and access to a set of geospatial resources, through links to API endpoints and/or files online. It is most commonly used to describe geospatial datasets, but can be used for collections of anything geospatial.
+
+[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
 
 # Description
 
@@ -142,7 +143,7 @@ CRS. Some frequently used coordinate reference systems are:
 ```
 # Schema
 
-[schema.yaml](https://avillar.github.io/bblocks/geo/common/data_types/ogc_collection/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
 # Sources
 
 * [OGC API - Features, Part 1, 7.14.2 Feature collection Response](http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5)

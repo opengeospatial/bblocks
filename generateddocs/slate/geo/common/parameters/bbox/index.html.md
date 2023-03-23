@@ -2,14 +2,13 @@
 title: bbox (Parameter)
 
 language_tabs:
+  - python
   - javascript
   - plaintext
-  - python
   - shell
 
 toc_footers:
   - Version 1.0
-  - <a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Mature
   - <a href='#'>{bblock.name}</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
@@ -26,6 +25,8 @@ meta:
 # Overview
 
 The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).
+
+[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
 
 # Description
 
@@ -72,10 +73,10 @@ fetch(url + `bbox=${bbox.join(',')}`)
 ```
 `bbox=-124.7844079,24.7433195,-66.9513812,49.3457868`
 
-![Bounding box for the continental US states](https://avillar.github.io/bblocks/geo/common/parameters/bbox/assets/example.png)
+![Bounding box for the continental US states](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/assets/example.png)
 # Schema
 
-[schema.yaml](https://avillar.github.io/bblocks/geo/common/parameters/bbox/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml)
 # Sources
 
 * [OGC API - Features, Part 1, 7.15.3: Parameter bbox](https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox)

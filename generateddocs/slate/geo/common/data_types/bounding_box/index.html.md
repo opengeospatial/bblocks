@@ -7,7 +7,6 @@ language_tabs:
 
 toc_footers:
   - Version 1.0.1
-  - <a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Mature
   - <a href='#'>{bblock.name}</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
@@ -24,6 +23,8 @@ meta:
 # Overview
 
 The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.
+
+[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
 
 # Description
 
@@ -62,7 +63,7 @@ The text representation of a bounding box is based on the JSON representation an
 ```
 # Schema
 
-[schema.yaml](https://avillar.github.io/bblocks/geo/common/data_types/bounding_box/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/bounding_box/schema.yaml)
 # Sources
 
 * [OGC API - Features, Part 1, 7.13.2: Feature Collections Response](http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4)
