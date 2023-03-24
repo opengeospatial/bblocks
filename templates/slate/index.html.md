@@ -41,7 +41,7 @@ ${'#'} Examples
 ${'##'} ${example.get('title', f"Example {loop.index + 1}")}
 
     % if example.get('content'):
-${example['content']}
+${example['content'].replace('@@assets@@', assets_rel or '')}
     %endif
     % for snippet in example.get('snippets', []):
 ```${snippet['language']}
