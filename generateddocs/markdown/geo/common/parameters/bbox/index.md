@@ -18,21 +18,21 @@ The `bbox` parameter matches all resources in the collection that are not associ
 
 If a resource has multiple spatial geometry properties, it is the decision of the server whether only a single spatial geometry property is used to determine the spatial extent or all relevant geometries.
 
-
 ## Examples
 
 ### The following bounding box parameter includes the 48 contiguous states of the United States of America.
+`bbox=-124.7844079,24.7433195,-66.9513812,49.3457868`
 
+![Bounding box for the continental US states](@@assets@@/example.png)
 
 ### Using a bounding box parameter in a request
-
-
 #### shell
 ```shell
 curl \
 "https://demo.pygeoapi.io/master/collections/lakes/items?\
 bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"
 ```
+
 #### python
 ```python
 import urllib.parse
@@ -47,6 +47,7 @@ contents = urllib.request.urlopen(url)
 
 print(contents.read())
 ```
+
 #### javascript
 ```javascript
 bbox = [-124.7844079,24.7433195,-66.9513812,49.3457868];
@@ -57,6 +58,7 @@ fetch(url + `bbox=${bbox.join(',')}`)
   .then((response) => response.json())
   .then((json) => console.log(json));
 ```
+
 ## Schema
 
 [schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml)

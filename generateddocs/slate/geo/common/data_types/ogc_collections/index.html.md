@@ -27,7 +27,6 @@ The distribution of a geospatial dataset in an API is organized into one or more
 
 ## Collections example with a single collection
 
-
 ```json
 {
   "links": [
@@ -76,9 +75,15 @@ The distribution of a geospatial dataset in an API is organized into one or more
    ]
 }
 ```
+
+
 ## Collections example with a global list of CRS identifiers
 
+In this example, the "bonn_buildings" collection is offered in all the CRSs specified in the global list plus three other CRSs.
 
+The "tor_buildings" collection is offered in the CRSs specified in the global list.
+
+The "dc_buildings" collection is only offered in the default CRS (i.e., WGS 84 longitude, latitude).
 ```json
 {
   "links": [
@@ -185,6 +190,7 @@ The distribution of a geospatial dataset in an API is organized into one or more
   ]
 }
 ```
+
 # Schema
 
 [schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collections/schema.yaml)

@@ -33,19 +33,21 @@ ${bblock.abstract}
 ${'#'} Description
 
 ${bblock.description.replace('@@assets@@', assets_rel or '')}
-
 % endif
 % if bblock.examples:
 ${'#'} Examples
-
   % for example in bblock.examples:
+
 ${'##'} ${example.get('title', f"Example {loop.index + 1}")}
 
-${example.get(content, '')}
+    % if example.get('content'):
+${example['content']}
+    %endif
     % for snippet in example.get('snippets', []):
 ```${snippet['language']}
 ${snippet['code']}
 ```
+
     % endfor
   % endfor
 % endif

@@ -23,12 +23,9 @@ and Roll (YPR) angles, which expressed as three consecutive rotations of a refer
 coordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (
 rotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The
 unit of measure SHALL be the degree and the angles represented as signed real number values.
-
 ## Examples
 
 ### Example 1
-
-
 #### json
 ```json
 {
@@ -44,9 +41,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   }
 }
 ```
+
+
 ### Example 2
-
-
 #### json
 ```json
 {
@@ -62,6 +59,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   }
 }
 ```
+
 ## Schema
 
 [schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml)

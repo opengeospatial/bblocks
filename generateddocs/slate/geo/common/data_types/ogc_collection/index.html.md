@@ -101,11 +101,9 @@ CRS. Some frequently used coordinate reference systems are:
 
   - <http://www.opengis.net/def/crs/EPSG/0/4258> - ETRS89 latitude,
     longitude
-
 # Examples
 
 ## Collection example
-
 
 ```json
 {
@@ -141,6 +139,7 @@ CRS. Some frequently used coordinate reference systems are:
    ]
 }
 ```
+
 # Schema
 
 [schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
