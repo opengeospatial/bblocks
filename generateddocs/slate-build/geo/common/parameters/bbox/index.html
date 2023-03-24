@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="geo geo_common geo_common_parameters geo_common_parameters_bbox geo_common_parameters_bbox_index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="geo geo_common geo_common_parameters geo_common_parameters_bbox geo_common_parameters_bbox_index" data-languages="[&quot;python&quot;,&quot;javascript&quot;,&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -304,9 +304,9 @@
     <div class="toc-wrapper">
       <img src="../../../../images/logo-1e815a84.png" class="logo" alt="" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="shell">shell</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -323,10 +323,10 @@
             <a href="#examples" class="toc-h1 toc-link" data-title="Examples">Examples</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#using-a-bounding-box-parameter-in-a-request" class="toc-h2 toc-link" data-title="Using a bounding box parameter in a request">Using a bounding box parameter in a request</a>
+                    <a href="#the-following-bounding-box-parameter-includes-the-48-contiguous-states-of-the-united-states-of-america" class="toc-h2 toc-link" data-title="The following bounding box parameter includes the 48 contiguous states of the United States of America.">The following bounding box parameter includes the 48 contiguous states of the United States of America.</a>
                   </li>
                   <li>
-                    <a href="#the-following-bounding-box-parameter-includes-the-48-contiguous-states-of-the-united-states-of-america" class="toc-h2 toc-link" data-title="The following bounding box parameter includes the 48 contiguous states of the United States of America.">The following bounding box parameter includes the 48 contiguous states of the United States of America.</a>
+                    <a href="#using-a-bounding-box-parameter-in-a-request" class="toc-h2 toc-link" data-title="Using a bounding box parameter in a request">Using a bounding box parameter in a request</a>
                   </li>
               </ul>
           </li>
@@ -360,7 +360,7 @@
 <p>The <code>bbox</code> parameter matches all resources in the collection that are not associated with a spatial geometry, too.</p>
 
 <p>If a resource has multiple spatial geometry properties, it is the decision of the server whether only a single spatial geometry property is used to determine the spatial extent or all relevant geometries.</p>
-<h1 id='examples'>Examples</h1><h2 id='using-a-bounding-box-parameter-in-a-request'>Using a bounding box parameter in a request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="se">\</span>
+<h1 id='examples'>Examples</h1><h2 id='the-following-bounding-box-parameter-includes-the-48-contiguous-states-of-the-united-states-of-america'>The following bounding box parameter includes the 48 contiguous states of the United States of America.</h2><h2 id='using-a-bounding-box-parameter-in-a-request'>Using a bounding box parameter in a request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="se">\</span>
 <span class="s2">"https://demo.pygeoapi.io/master/collections/lakes/items?</span><span class="se">\</span><span class="s2">
 bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">urllib.parse</span>
@@ -381,12 +381,8 @@ bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
 <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span> <span class="o">+</span> <span class="s2">`bbox=</span><span class="p">${</span><span class="nx">bbox</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">)}</span><span class="s2">`</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">json</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">));</span>
-</code></pre></div><h2 id='the-following-bounding-box-parameter-includes-the-48-contiguous-states-of-the-united-states-of-america'>The following bounding box parameter includes the 48 contiguous states of the United States of America.</h2>
-<p><code>bbox=-124.7844079,24.7433195,-66.9513812,49.3457868</code></p>
-
-<p><img src="https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/assets/example.png" alt="Bounding box for the continental US states" /></p>
-<h1 id='schema'>Schema</h1>
-<p><a href="https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/schema.yaml">schema.yaml</a></p>
+</code></pre></div><h1 id='schema'>Schema</h1>
+<p><a href="https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml">schema.yaml</a></p>
 <h1 id='sources'>Sources</h1>
 <ul>
 <li><a href="https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox">OGC API - Features, Part 1, 7.15.3: Parameter bbox</a></li>
@@ -395,9 +391,9 @@ bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
                 <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="shell">shell</a>
           </div>
       </div>
     </div>

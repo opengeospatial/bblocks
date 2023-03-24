@@ -18,17 +18,15 @@ ${bblock.description.replace('@@assets@@', assets_rel or '')}
 ${'##'} Examples
 
   % for example in bblock.examples:
-    <% has_language = example.get('language') not in (None, '', '_') %>
-${'###'} ${example.get('title', f"Example {loop.index + 1}")}${f" ({example['language']})" if has_language else ''}
+${'###'} ${example.get('title', f"Example {loop.index + 1}")}
 
-    % if example.get('markdown'):
-${example['content'].replace('@@assets@@', assets_rel or '')}
-    % else:
-```${example['language'] if has_language else ''}
-${example['content']}
+${example.get(content, '')}
+    % for snippet in example.get('snippets', []):
+${'####'} ${snippet['language']}
+```${snippet['language']}
+${snippet['code']}
 ```
-    % endif
-
+    % endfor
   % endfor
 % endif
 % if bblock.schema:

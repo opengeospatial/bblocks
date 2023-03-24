@@ -1,40 +1,36 @@
-- language: _
-  title: The following bounding box parameter includes the 48 contiguous states of the United States of America.
-  markdown: true
+- title: The following bounding box parameter includes the 48 contiguous states of the United States of America.
   content: |-
     `bbox=-124.7844079,24.7433195,-66.9513812,49.3457868`
     
     ![Bounding box for the continental US states](@@assets@@/example.png)
 
-- language: shell
-  title: Using a bounding box parameter in a request
-  content: |-
-    curl \
-    "https://demo.pygeoapi.io/master/collections/lakes/items?\
-    bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"
-
-- language: python
-  title: Using a bounding box parameter in a request
-  content: |-
-    import urllib.parse
-    import urllib.request
-
-    params = {'bbox': '-124.7844079,24.7433195,-66.9513812,49.3457868'}
-
-    url = 'https://demo.pygeoapi.io/master/collections/lakes/items?' \
-        + urllib.parse.urlencode(params)
-
-    contents = urllib.request.urlopen(url)
-
-    print(contents.read())
-
-- language: javascript
-  title: Using a bounding box parameter in a request
-  content: |-
-    bbox = [-124.7844079,24.7433195,-66.9513812,49.3457868];
-
-    url = 'https://demo.pygeoapi.io/master/collections/lakes/items?';
-
-    fetch(url + `bbox=${bbox.join(',')}`)
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+- title: Using a bounding box parameter in a request
+  snippets:
+    - language: shell
+      code: |-
+        curl \
+        "https://demo.pygeoapi.io/master/collections/lakes/items?\
+        bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"
+    - language: python
+      code: |-
+        import urllib.parse
+        import urllib.request
+    
+        params = {'bbox': '-124.7844079,24.7433195,-66.9513812,49.3457868'}
+    
+        url = 'https://demo.pygeoapi.io/master/collections/lakes/items?' \
+            + urllib.parse.urlencode(params)
+    
+        contents = urllib.request.urlopen(url)
+    
+        print(contents.read())
+    - language: javascript
+      code: |-
+        bbox = [-124.7844079,24.7433195,-66.9513812,49.3457868];
+    
+        url = 'https://demo.pygeoapi.io/master/collections/lakes/items?';
+    
+        fetch(url + `bbox=${bbox.join(',')}`)
+          .then((response) => response.json())
+          .then((json) => console.log(json));
+    

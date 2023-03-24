@@ -26,9 +26,10 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ## Examples
 
-    
-### Example 1 (json)
+### Example 1
 
+
+#### json
 ```json
 {
   "position": {
@@ -43,10 +44,10 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   }
 }
 ```
+### Example 2
 
-    
-### Example 2 (json)
 
+#### json
 ```json
 {
   "position": {
@@ -61,10 +62,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   }
 }
 ```
-
 ## Schema
 
-[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/geopose/basic-ypr/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml)
 
 ```yaml
 "$schema": https://json-schema.org/draft/2020-12/schema

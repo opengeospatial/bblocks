@@ -15,8 +15,6 @@ code_clipboard: true
 
 meta:
   - name: OGC Collection (Schema)
-
-
 ---
 
 # Overview
@@ -107,6 +105,8 @@ CRS. Some frequently used coordinate reference systems are:
 # Examples
 
 ## Collection example
+
+
 ```json
 {
    "id": "buildings",
@@ -143,7 +143,7 @@ CRS. Some frequently used coordinate reference systems are:
 ```
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
 # Sources
 
 * [OGC API - Features, Part 1, 7.14.2 Feature collection Response](http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5)

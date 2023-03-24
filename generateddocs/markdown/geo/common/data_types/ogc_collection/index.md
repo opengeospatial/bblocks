@@ -87,9 +87,10 @@ CRS. Some frequently used coordinate reference systems are:
 
 ## Examples
 
-    
-### Collection example (json)
+### Collection example
 
+
+#### json
 ```json
 {
    "id": "buildings",
@@ -124,10 +125,9 @@ CRS. Some frequently used coordinate reference systems are:
    ]
 }
 ```
-
 ## Schema
 
-[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
 
 ```yaml
 type: object

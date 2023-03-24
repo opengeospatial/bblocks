@@ -21,25 +21,19 @@ If a resource has multiple spatial geometry properties, it is the decision of th
 
 ## Examples
 
-    
 ### The following bounding box parameter includes the 48 contiguous states of the United States of America.
 
-`bbox=-124.7844079,24.7433195,-66.9513812,49.3457868`
 
-![Bounding box for the continental US states](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/assets/example.png)
+### Using a bounding box parameter in a request
 
-    
-### Using a bounding box parameter in a request (shell)
 
+#### shell
 ```shell
 curl \
 "https://demo.pygeoapi.io/master/collections/lakes/items?\
 bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"
 ```
-
-    
-### Using a bounding box parameter in a request (python)
-
+#### python
 ```python
 import urllib.parse
 import urllib.request
@@ -53,10 +47,7 @@ contents = urllib.request.urlopen(url)
 
 print(contents.read())
 ```
-
-    
-### Using a bounding box parameter in a request (javascript)
-
+#### javascript
 ```javascript
 bbox = [-124.7844079,24.7433195,-66.9513812,49.3457868];
 
@@ -66,10 +57,9 @@ fetch(url + `bbox=${bbox.join(',')}`)
   .then((response) => response.json())
   .then((json) => console.log(json));
 ```
-
 ## Schema
 
-[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml)
 
 ```yaml
 name: bbox

@@ -2,9 +2,9 @@
 title: bbox (Parameter)
 
 language_tabs:
-  - shell
   - python
   - javascript
+  - shell
 
 toc_footers:
   - Version 1.0
@@ -17,8 +17,6 @@ code_clipboard: true
 
 meta:
   - name: bbox (Parameter)
-
-
 ---
 
 # Overview
@@ -42,7 +40,12 @@ If a resource has multiple spatial geometry properties, it is the decision of th
 
 # Examples
 
+## The following bounding box parameter includes the 48 contiguous states of the United States of America.
+
+
 ## Using a bounding box parameter in a request
+
+
 ```shell
 curl \
 "https://demo.pygeoapi.io/master/collections/lakes/items?\
@@ -70,13 +73,9 @@ fetch(url + `bbox=${bbox.join(',')}`)
   .then((response) => response.json())
   .then((json) => console.log(json));
 ```
-## The following bounding box parameter includes the 48 contiguous states of the United States of America.
-`bbox=-124.7844079,24.7433195,-66.9513812,49.3457868`
-
-![Bounding box for the continental US states](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/assets/example.png)
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml)
 # Sources
 
 * [OGC API - Features, Part 1, 7.15.3: Parameter bbox](https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox)
