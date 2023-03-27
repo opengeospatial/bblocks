@@ -1,8 +1,6 @@
 ---
 title: GeoPose Basic-YPR (Schema)
 
-language_tabs:
-  - json
 
 toc_footers:
   - Version 0.1

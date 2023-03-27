@@ -1,8 +1,6 @@
 ---
 title: OGC Collection (Schema)
 
-language_tabs:
-  - json
 
 toc_footers:
   - Version 0.1

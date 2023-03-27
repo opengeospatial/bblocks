@@ -4,10 +4,12 @@ title: ${bblock.name} (${bblock.itemClass.capitalize()})
 <%
   langs = set(snippet['language'] for example in bblock.examples for snippet in example.get('snippets', []))
 %>
+  % if len(langs) > 1:
 language_tabs:
-  % for lang in langs:
+    % for lang in langs:
   - ${lang}
-  % endfor
+    % endfor
+  % endif
 % endif
 
 toc_footers:
