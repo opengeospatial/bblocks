@@ -2,8 +2,8 @@
 title: Bounding Box (Schema)
 
 language_tabs:
-  - json
   - plaintext
+  - json
 
 toc_footers:
   - Version 1.0.1
@@ -47,18 +47,18 @@ If the vertical axis is included, the third and the sixth number are the bottom 
 
 The text representation of a bounding box is based on the JSON representation and represents the array as comma-separated values.
 
-
 # Examples
 
 ## Axis-aligned minimum bounding box of the 48 contiguous states of the United States of America (JSON)
 
-
 ```json
 [-124.7844079, 24.7433195, -66.9513812, 49.3457868]
 ```
+
 ```plaintext
 -124.7844079,24.7433195,-66.9513812,49.3457868
 ```
+
 # Schema
 
 [schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/bounding_box/schema.yaml)
