@@ -347,7 +347,7 @@
      {
     "itemIdentifier": "r1.geo.coveragejson.resource.domain.multipolygonseries",
     "name": "Polygon",
-    "abstract": "The MultiPolygonSeries object is a type of Coverage Domain, and is a single horizontal polygon with none or several 'holes' with data at multiple times.",
+    "abstract": "The MultiPolygonSeries object is a type of Coverage Domain, and comprises one or more horizontal polygons each with none or several 'holes' with data at multiple times.",
     "status": "Valid",
     "dateTimeAddition": "2023-03-29T20:00:00+00:00",
     "itemClass": "ogc-building-block",
@@ -362,7 +362,7 @@
      {
     "itemIdentifier": "r1.geo.coveragejson.resource.domain.point",
     "name": "Polygon",
-    "abstract": "The Point object is a type of Coverage Domain, and is a single point with data at multiple times.",
+    "abstract": "The Point object is a type of Coverage Domain, and is a single point with data at a single time and single height.",
     "status": "Valid",
     "dateTimeAddition": "2023-03-29T20:00:00+00:00",
     "itemClass": "ogc-building-block",
@@ -392,7 +392,7 @@
        {
     "itemIdentifier": "r1.geo.coveragejson.resource.domain.verticalprofile",
     "name": "Polygon",
-    "abstract": "The VerticalProfile object is a type of Coverage Domain, and is a single point with data at multiple times.",
+    "abstract": "The VerticalProfile object is a type of Coverage Domain, and is a single point with data at multiple heights.",
     "status": "Valid",
     "dateTimeAddition": "2023-03-29T20:00:00+00:00",
     "itemClass": "ogc-building-block",
@@ -407,7 +407,7 @@
        {
     "itemIdentifier": "r1.geo.coveragejson.resource.domain.multipoint",
     "name": "Polygon",
-    "abstract": "The MultiPoint object is a type of Coverage Domain, and is a single point with data at multiple times.",
+    "abstract": "The MultiPoint object is a type of Coverage Domain, and comprises one or many points with data at a single time.",
     "status": "Valid",
     "dateTimeAddition": "2023-03-29T20:00:00+00:00",
     "itemClass": "ogc-building-block",
@@ -420,9 +420,9 @@
     "type": "geo"
   },
        {
-    "itemIdentifier": "r1.geo.coveragejson.resource.domain.multipointseries",
+    "itemIdentifier": "r1.geo.coveragejson.resource.domain.multipointseries", 
     "name": "Polygon",
-    "abstract": "The MultiPointSeries object is a type of Coverage Domain, and is a single point with data at multiple times.",
+    "abstract": "The MultiPointSeries object is a type of Coverage Domain, and  comprises one or many points with data at multiple times.",
     "status": "Valid",
     "dateTimeAddition": "2023-03-29T20:00:00+00:00",
     "itemClass": "ogc-building-block",
@@ -437,7 +437,7 @@
        {
     "itemIdentifier": "r1.geo.coveragejson.resource.domain.trajectory",
     "name": "Polygon",
-    "abstract": "The Trajectory object is a type of Coverage Domain, and is a single point with data at multiple times.",
+    "abstract": "The Trajectory object is a type of Coverage Domain, and may be a single horizontal trajectory with data for each 2D point and time, or a single 3D trajectory with data for each 3D point and time.",
     "status": "Valid",
     "dateTimeAddition": "2023-03-29T20:00:00+00:00",
     "itemClass": "ogc-building-block",
@@ -452,7 +452,7 @@
        {
     "itemIdentifier": "r1.geo.coveragejson.resource.domain.section",
     "name": "Polygon",
-    "abstract": "The Section object is a type of Coverage Domain, and is a single point with data at multiple times.",
+    "abstract": "The Section object is a type of Coverage Domain, and is a single horizontal trajectory with data at multiple heights.",
     "status": "Valid",
     "dateTimeAddition": "2023-03-29T20:00:00+00:00",
     "itemClass": "ogc-building-block",
@@ -467,7 +467,7 @@
        {
     "itemIdentifier": "r1.geo.coveragejson.resource.domain.grid",
     "name": "Polygon",
-    "abstract": "The Grid object is a type of Coverage Domain, and is a single point with data at multiple times.",
+    "abstract": "The Grid object is a type of Coverage Domain, and comprises a horizontal 2D grid of data points, possibly at multiple heights or multiple times comprises one or many points making a 3D or 4D object.",
     "status": "Valid",
     "dateTimeAddition": "2023-03-29T20:00:00+00:00",
     "itemClass": "ogc-building-block",
