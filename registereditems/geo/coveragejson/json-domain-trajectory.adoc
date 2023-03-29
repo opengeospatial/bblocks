@@ -1,0 +1,105 @@
+==== Trajectory
+
+- A domain with Trajectory domain type MUST have the axis `"composite"` and MAY have the axis `"z"` where `"z"` MUST have a single coordinate value only.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y","z"` or `"t","x","y"`, in that order.
+- The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
+
+Domain example:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y","z"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20, 1],
+        ["2008-01-01T04:30:00Z", 2, 21, 3]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Domain example without z:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Domain example with z defined as constant value:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    },
+    "z": { "values": [5] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+[%unnumbered%]
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Trajectory",
+    "axes": {
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["t","x","y","z"],
+        "values": [
+          ["2008-01-01T04:00:00Z", 1, 20, 1],
+          ["2008-01-01T04:30:00Z", 2, 21, 3]
+        ]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}
+```
