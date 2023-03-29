@@ -1,0 +1,64 @@
+==== PolygonSeries
+
+- A domain with PolygonSeries domain type MUST have the axes `"composite"` and `"t"` where `"composite"` MUST have a single Polygon value. Polygons are defined in the Polygon domain type.
+- A domain with PolygonSeries domain type MAY have the axis `"z"` which MUST have a single coordinate value only.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
+
+Domain example:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "PolygonSeries",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+[%unnumbered%]
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "PolygonSeries",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}
+```
