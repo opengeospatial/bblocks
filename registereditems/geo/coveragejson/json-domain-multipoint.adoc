@@ -1,0 +1,83 @@
+==== MultiPoint
+
+- A domain with MultiPoint domain type MUST have the axis `"composite"` and MAY have the axis `"t"` where `"t"` MUST have a single coordinate value only.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`, in that order.
+
+Domain example:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPoint",
+  "axes": {
+    "t": { "values": ["2008-01-01T04:00:00Z"] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y","z"],
+      "values": [
+        [1, 20, 1],
+        [2, 21, 3]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Domain example without z and t:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPoint",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y"],
+      "values": [
+        [1, 20],
+        [2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+[%unnumbered%]
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPoint",
+    "axes": {
+      "t": { "values": ["2008-01-01T04:00:00Z"] },
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["x","y","z"],
+        "values": [
+          [1, 20, 1],
+          [2, 21, 3]
+        ]
+      }
+    }
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}
+```
