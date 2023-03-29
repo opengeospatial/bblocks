@@ -1,0 +1,64 @@
+==== Section
+
+- A domain with Section domain type MUST have the axes `"composite"` and `"z"`.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y"`, in that order.
+- The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
+
+Domain example:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "Section",
+  "axes": {
+    "z": { "values": [10,20,30] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+[%unnumbered%]
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Section",
+    "axes": {
+      "z": { "values": [10,20,30] },
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["t","x","y"],
+        "values": [
+          ["2008-01-01T04:00:00Z", 1, 20],
+          ["2008-01-01T04:30:00Z", 2, 21]
+        ]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["z", "composite"],
+      "shape": [3, 2],
+      "values" : [...]
+    }
+  }
+}
+```
