@@ -1,0 +1,66 @@
+==== MultiPolygonSeries
+
+- A domain with MultiPolygonSeries domain type MUST have the axes `"composite"` and `"t"` where the values of `"composite"` are Polygons. Polygons are defined in the Polygon domain type.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
+- A MultiPolygon domain MAY have the axis `"z"` which MUST have a single coordinate value only.
+
+Domain example:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPolygonSeries",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+        [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z", "2010-01-01T00:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+[%unnumbered%]
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPolygonSeries",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+          [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z", "2010-01-01T00:00:00Z", "2012-01-01T00:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t", "composite"],
+      "shape": [3, 2],
+      "values" : [...]
+    }
+  }
+}
+```
