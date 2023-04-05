@@ -77,7 +77,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/geopose/basic-ypr/schema.yaml)
 # Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)

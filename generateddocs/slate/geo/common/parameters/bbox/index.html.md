@@ -2,9 +2,9 @@
 title: bbox (Parameter)
 
 language_tabs:
+  - shell
   - python
   - javascript
-  - shell
 
 toc_footers:
   - Version 1.0
@@ -43,7 +43,7 @@ If a resource has multiple spatial geometry properties, it is the decision of th
 
 `bbox=-124.7844079,24.7433195,-66.9513812,49.3457868`
 
-![Bounding box for the continental US states](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/assets/example.png)
+![Bounding box for the continental US states](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/assets/example.png)
 
 ## Using a bounding box parameter in a request
 
@@ -79,7 +79,7 @@ fetch(url + `bbox=${bbox.join(',')}`)
 
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml)
+[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/schema.yaml)
 # Sources
 
 * [OGC API - Features, Part 1, 7.15.3: Parameter bbox](https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox)
