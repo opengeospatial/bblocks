@@ -2,10 +2,10 @@
 ==== Overview
 
 MultiPolygon is a coverage domain type. A MultiPolygon can only contain `[x,y]` positions (and not `z` or additional coordinates):
+
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
 - A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
 - A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
-
 - A domain with MultiPolygon domain type MUST have the axis `"composite"` which has a single Polygon value.
 - The axis `"composite"` MUST have the data type `"multipolygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
