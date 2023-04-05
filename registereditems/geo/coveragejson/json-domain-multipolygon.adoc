@@ -1,11 +1,55 @@
-==== MultiPolygon
+=== MultiPolygon
+==== Overview
 
+MultiPolygon is a coverage domain type. A MultiPolygon can only contain `[x,y]` positions (and not `z` or additional coordinates):
+- A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
+- A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
+- A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
+
+- A domain with MultiPolygon domain type MUST have the axis `"composite"` which has a single Polygon value.
+- The axis `"composite"` MUST have the data type `"multipolygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
 
-Domain example:
+This is consistent with the GeoJSON definition of a multipolygon.
 
-[%unnumbered%]
-```json
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.html#multipolygon[OGC CoverageJSON Community Standard, Section 9.10.11] which is maintained by the OGC Coverages Standard Working Group using this https://github.com/opengeospatial/CoverageJSON[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Pre-defined Properties of the MultiPolygon Domain Object 
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.MutliPolygon Domain Object
+|==========================
+|Field Name|Type|Required|Description
+|domainType |String|**Yes**|Always `"MultiPolygon"`
+|axes |String|**Yes**| Always `"composite"`
+|composite |String|**Yes**|Always `"polygon"`
+|coordinates |Array|**Yes**|Always `["x","y"]`
+|values |Array|**Yes**| The coordinate pairs for at least one polygon
+|z |Number|No| An optional vertical coordinate
+|t |String|No| An optional time coordinate in ISO8601 format 
+|==========================
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema TBD
+Currently the schema is https://schemas.opengeospatial.net/covjson/1.0/domainBase.json
+
+==== JSON-LD context TBD 
+E.g. https://schemas.opengeospatial.net/covjson/... TBD
+
+==== Validator TBD
+
+==== Examples
+See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html#polygon[Standard, Clause 9.10.11].
+
+===== Example 1, MultiPolygon Domain - rectangle
+A polygon defined as a rectangle between coordinates `(100.0,0.0)` and `(101.0,1.0)`, at vertical coordinate `2`, and for the time `"2008-01-01T04:00:00Z"`
+----
 {
   "type": "Domain",
   "domainType": "MultiPolygon",
@@ -14,8 +58,7 @@ Domain example:
       "dataType": "polygon",
       "coordinates": ["x","y"],
       "values": [
-        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
-        [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
       ]
     },
     "z": { "values": [2] },
@@ -23,11 +66,9 @@ Domain example:
   },
   "referencing": [...]
 }
-```
-
-Coverage example:
-
-[%unnumbered%]
+----
+===== Example 2, Coverage using a Polygon Domain 
+A coverage of temperature for the domain as in the previous example.
 ```json
 {
   "type" : "Coverage",
@@ -62,3 +103,11 @@ Coverage example:
   }
 }
 ```
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html[Standard].
+
+==== Media type
+application/vnd.cov+json
+
+==== Link relation types
+Link relation types do not seem applicable for a MultiPolygon Object. Possibly `describedby` could be useful.
