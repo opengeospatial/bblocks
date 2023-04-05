@@ -94,8 +94,18 @@ items:
         format: string
     concept:
       description: Link to a conceptual model class for this Building Block, most of the time in the OGC Rainbow.
-      type: string
-      format: uri
+      type: array
+      items:
+        type: object
+        required:
+          - label
+          - link
+        properties:
+          label:
+            type: string
+          link:
+            type: string
+            format: uri
     maturity:
       description: Level of maturity for this Building Block.
       enum:

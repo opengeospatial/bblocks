@@ -1,0 +1,24 @@
+name: Process Building Blocks
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    types: closed
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run postprocessing
+        run: |
+          python -m pip install -U pip
+          pip install -r scripts/requirements.txt
+          python -m scripts.postprocess registerv3.json registereditems/ -s metadata-schema.yaml \
+            -u https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}
+          docker run --rm -v $(pwd)/generateddocs/slate:/srv/slate/source \
+            -v $(pwd)/generateddocs/slate-build:/srv/slate/build slatedocs/slate build
+          

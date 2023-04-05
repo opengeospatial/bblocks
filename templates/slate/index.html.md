@@ -2,7 +2,7 @@
 title: ${bblock.name} (${bblock.itemClass.capitalize()})
 % if bblock.examples:
 <%
-  langs = set(snippet['language'] for example in bblock.examples for snippet in example.get('snippets', []))
+  langs = {snippet['language']: True for example in bblock.examples for snippet in example.get('snippets', [])}
 %>
   % if len(langs) > 1:
 language_tabs:

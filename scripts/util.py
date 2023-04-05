@@ -1,7 +1,8 @@
 import json
 from pathlib import Path
-from typing import Callable, Sequence
-
+import os.path
+from typing import Callable, Sequence, Generator, Any
+import jsonschema
 import yaml
 
 try:
@@ -20,13 +21,29 @@ def load_file(fn):
         return f.read()
 
 
+def get_bblock_identifier(metadata_file: Path, root_path: Path = Path()) -> tuple[str, Path]:
+    rel_parts = Path(os.path.relpath(metadata_file.parent, root_path)).parts[1:]
+    return 'r1.' + '.'.join(rel_parts), Path(*rel_parts)
+
+
 class BuildingBlock:
 
-    def __init__(self, metadata: dict):
-        self.identifier = metadata['itemIdentifier']
-        self.metadata = metadata
-        self.subdirs = Path(*self.identifier.split('.')[1:])
-        fp = Path('registereditems') / self.subdirs
+    def __init__(self, identifier: str, metadata_file: Path,
+                 rel_path: Path,
+                 metadata_schema: Any | None = None,
+                 root_path: Path = Path()):
+        self.identifier = identifier
+        with open(metadata_file) as f:
+            self.metadata = json.load(f)
+
+            if metadata_schema:
+                jsonschema.validate(self.metadata, metadata_schema)
+
+            self.metadata['itemIdentifier'] = identifier
+
+        self.subdirs = rel_path
+
+        fp = metadata_file.parent
         self.files_path = fp
 
         examples_file = fp / 'examples.yaml'
@@ -49,7 +66,7 @@ class BuildingBlock:
             self.schema = None
             self.schema_contents = None
 
-        annotated_path = Path('annotated') / self.subdirs
+        annotated_path = root_path / 'annotated' / self.subdirs
         if annotated_path.is_dir():
             self.annotated_path = annotated_path
             annotated_schema = annotated_path / 'schema.yaml'
@@ -65,29 +82,20 @@ class BuildingBlock:
         return self.metadata.get(item)
 
 
-def load_bblocks(regs: str | Path | Sequence[str | Path],
+def load_bblocks(registered_items_path: Path,
+                 root_path: Path = Path(),
                  filter_ids: str | list[str] | None = None,
-                 callback: Callable[[BuildingBlock], None] = None):
-    if not callback:
-        return
+                 metadata_schema_file: str | Path | None = None) -> Generator[BuildingBlock, None, None]:
 
-    if not isinstance(regs, Sequence) or isinstance(regs, str):
-        regs = [regs]
-    if isinstance(filter_ids, str):
-        filter_ids = [filter_ids]
+    if metadata_schema_file:
+        metadata_schema = load_yaml(metadata_schema_file)
+    else:
+        metadata_schema = None
 
-    for reg in regs:
-        updated_metadata = []
-        if not isinstance(reg, Path):
-            reg = Path(reg)
-        with open(reg) as f:
-            bblocks = json.load(f)
-        for bblock_metadata in bblocks:
-            if filter_ids and not bblock_metadata['itemIdentifier'] in filter_ids:
-                continue
-            bblock = BuildingBlock(bblock_metadata)
-            callback(bblock)
-            updated_metadata.append(bblock.metadata)
-
-        with open(reg, 'w') as f:
-            json.dump(updated_metadata, f, indent=2)
+    for metadata_file in sorted(registered_items_path.glob("**/metadata.json")):
+        bblock_id, bblock_rel_path = get_bblock_identifier(metadata_file, root_path)
+        if not filter_ids or bblock_id in filter_ids:
+            yield BuildingBlock(bblock_id, metadata_file,
+                                metadata_schema=metadata_schema,
+                                rel_path=bblock_rel_path,
+                                root_path=root_path)
