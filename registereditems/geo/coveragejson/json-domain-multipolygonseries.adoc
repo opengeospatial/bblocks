@@ -1,13 +1,57 @@
 ==== MultiPolygonSeries
-
+===== Overview
 - A domain with MultiPolygonSeries domain type MUST have the axes `"composite"` and `"t"` where the values of `"composite"` are Polygons. Polygons are defined in the Polygon domain type.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
-- A MultiPolygon domain MAY have the axis `"z"` which MUST have a single coordinate value only.
+- A MultiPolygonSeries domain MAY have the axis `"z"` which MUST have a single coordinate value only.
 
-Domain example:
+MultiPolygonSeries is a coverage domain type. A MultiPolygonSeries can only contain `[x,y]` positions (and not `z` or additional coordinates):
+- A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
+- A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
 
-[%unnumbered%]
-```json
+- A domain with a MultiPolygonSeries domain type MUST have the axis `"composite"` which has a single Polygon value.
+- The axis `"composite"` MUST have the data type `"multipolygonseries"` and the coordinate identifiers `"x","y"`, in that order.
+- A MultiPolygonSeries domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
+
+This is consistent with the GeoJSON definition of a MultiPolygon.
+
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.html#multipolygonseries[OGC CoverageJSON Community Standard, Section 9.10.12] which is maintained by the OGC Coverages Standard Working Group using this https://github.com/opengeospatial/CoverageJSON[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Pre-defined Properties of the MultiPolygonSeries Domain Object 
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.MultiPolygonSeries Domain Object
+|==========================
+|Field Name|Type|Required|Description
+|domainType |String|**Yes**|Always `"MultiPolygonSeries"`
+|axes |String|**Yes**| Always `"composite"`
+|composite |String|**Yes**|Always `"polygon"`
+|coordinates |Array|**Yes**|Always `["x","y"]`
+|values |Array|**Yes**| The coordinate pairs for at least one polygon
+|z |Number|No| An optional vertical coordinate
+|t |String|No| An optional time coordinate in ISO8601 format 
+|==========================
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema TBD
+Currently the schema is https://schemas.opengeospatial.net/covjson/1.0/domainBase.json
+
+==== JSON-LD context TBD 
+E.g. https://schemas.opengeospatial.net/covjson/... TBD
+
+==== Validator TBD
+
+==== Examples
+See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html#polygon[Standard, Clause 9.10.12].
+
+===== Example 1, MultiPolygonSeries Domain - rectangle
+A polygon defined as a rectangle between coordinates `(100.0,0.0)` and `(101.0,1.0)`, at vertical coordinate `2`, and for the time `"2008-01-01T04:00:00Z"`
+----
 {
   "type": "Domain",
   "domainType": "MultiPolygonSeries",
@@ -25,13 +69,18 @@ Domain example:
   },
   "referencing": [...]
 }
-```
-
-Coverage example:
-
-[%unnumbered%]
-```json
+----
+===== Example 2, Coverage using a Polygonseries Domain 
+A coverage of temperature for the domain as in the previous example.
+----
 {
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPolygonSeries",
+    "axes": {
+      "composite": {
+        "dataType": "{
   "type" : "Coverage",
   "domain" : {
     "type": "Domain",
@@ -63,4 +112,12 @@ Coverage example:
     }
   }
 }
-```
+----
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html[Standard].
+
+==== Media type
+application/vnd.cov+json
+
+==== Link relation types
+Link relation types do not seem applicable for a MultiPolygonSeries Object. Possibly `describedby` could be useful.
