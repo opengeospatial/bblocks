@@ -1,12 +1,53 @@
 ==== MultiPoint
+==== Overview
+MultiPoint is a coverage domain type. A MultiPoint can only contain `[x,y]` positions (and not `z` or additional coordinates):
 
-- A domain with MultiPoint domain type MUST have the axis `"composite"` and MAY have the axis `"t"` where `"t"` MUST have a single coordinate value only.
-- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`, in that order.
+- A domain with MultiPoint domain type MUST have the axes `"x"`, `"y"`.
 
-Domain example:
+- A domain with MultiPoint domain type MAY have the axis `"z"` which MUST have a single coordinate value only.
 
-[%unnumbered%]
-```json
+- A domain with MultiPoint domain type MAY have the axis `"t"` which MUST have a single coordinate value only.
+
+This is consistent with the GeoJSON definition of a point.
+
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.html#multipoint[OGC CoverageJSON Community Standard, Section 9.10.6] which is maintained by the OGC Coverages Standard Working Group using this https://github.com/opengeospatial/CoverageJSON[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Pre-defined Properties of the MultiPoint Domain Object 
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Polygon Domain Object
+|==========================
+|Field Name|Type|Required|Description
+|domainType |String|**Yes**|Always `"MultiPoint"`
+|axes |String|**Yes**| Always `"composite"`
+|composite |String|**Yes**|Always `"point"`
+|coordinates |Array|**Yes**|Always `["x","y"]`
+|values |Array|**Yes**| The coordinate pairs for one point
+|z |Number|No| An optional vertical coordinate
+|t |String|No| An optional time coordinate in ISO8601 format 
+|==========================
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema TBD
+Currently the schema is https://schemas.opengeospatial.net/covjson/1.0/domainBase.json
+
+==== JSON-LD context TBD 
+E.g. https://schemas.opengeospatial.net/covjson/... TBD
+
+==== Validator TBD
+
+==== Examples
+See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html#polygon[Standard, Clause 9.10.6].
+
+===== Example 1, PointSeries Domain - rectangle
+A point defined by the coordinates `(1.0,20.0)`, at vertical coordinate `1`, and for the time `"2008-01-01T04:00:00Z"`
+----
 {
   "type": "Domain",
   "domainType": "MultiPoint",
@@ -23,12 +64,9 @@ Domain example:
   },
   "referencing": [...]
 }
-```
-
-Domain example without z and t:
-
-[%unnumbered%]
-```json
+----
+===== Example 2, Domain example without z and t
+----
 {
   "type": "Domain",
   "domainType": "MultiPoint",
@@ -44,12 +82,8 @@ Domain example without z and t:
   },
   "referencing": [...]
 }
-```
-
-Coverage example:
-
-[%unnumbered%]
-```json
+----
+===== Example 3, Coverage Example
 {
   "type" : "Coverage",
   "domain" : {
@@ -80,4 +114,12 @@ Coverage example:
     }
   }
 }
-```
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html[Standard].
+
+==== Media type
+application/vnd.cov+json
+
+==== Link relation types
+Link relation types do not seem applicable for a PointSeries Object. Possibly `describedby` could be useful.
+
