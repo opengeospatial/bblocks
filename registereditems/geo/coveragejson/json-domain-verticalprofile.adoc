@@ -20,9 +20,7 @@ Stable
 |==========================
 |Field Name|Type|Required|Description
 |domainType |String|**Yes**|Always `"VerticalProfile"`
-|axes |String|**Yes**| Always `"composite"`
-|composite |String|**Yes**|Always `"point"`
-|coordinates |Array|**Yes**|Always `["x","y"]`
+|axes |String|**Yes**| Always `"values"`
 |values |Array|**Yes**| The coordinate pairs for one point
 |z |Number|No| An optional vertical coordinate
 |t |String|No| An optional time coordinate in ISO8601 format 
@@ -41,7 +39,7 @@ E.g. https://schemas.opengeospatial.net/covjson/... TBD
 ==== Validator TBD
 
 ==== Examples
-See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html#polygon[Standard, Clause 9.10.2].
+See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html#verticalprofile[Standard, Clause 9.10.2].
 
 ===== Example 1, PointSeries Domain - rectangle
 A point defined by the coordinates `(1.0,20.0)`, at vertical coordinate `1`, and for the time `"2008-01-01T04:00:00Z"`
