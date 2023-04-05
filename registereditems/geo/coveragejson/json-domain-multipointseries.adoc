@@ -1,12 +1,53 @@
 ==== MultiPointSeries
+==== Overview
+MultiPointSeries is a coverage domain type. A MultiPointies can only contain `[x,y]` positions (and not `z` or additional coordinates):
 
 - A domain with MultiPointSeries domain type MUST have the axes `"composite"` and `"t"`.
+
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`, in that order.
 
-Domain example:
+- A domain with MultiPointSeries domain type MAY have the axis `"z"` which MUST have a single coordinate value only.
 
-[%unnumbered%]
-```json
+This is consistent with the GeoJSON definition of a multipoint.
+
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.html#multipointseries[OGC CoverageJSON Community Standard, Section 9.10.5] which is maintained by the OGC Coverages Standard Working Group using this https://github.com/opengeospatial/CoverageJSON[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Pre-defined Properties of the MultiPointSeries Domain Object 
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Polygon Domain Object
+|==========================
+|Field Name|Type|Required|Description
+|domainType |String|**Yes**|Always `"MultiPointseries"`
+|axes |String|**Yes**| Always `"composite"`
+|composite |String|**Yes**|Always `"point"`
+|coordinates |Array|**Yes**|Always `["x","y"]`
+|values |Array|**Yes**| The coordinate pairs for one point
+|z |Number|No| An optional vertical coordinate
+|t |String|No| An optional time coordinate in ISO8601 format 
+|==========================
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema TBD
+Currently the schema is https://schemas.opengeospatial.net/covjson/1.0/domainBase.json
+
+==== JSON-LD context TBD 
+E.g. https://schemas.opengeospatial.net/covjson/... TBD
+
+==== Validator TBD
+
+==== Examples
+See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html#polygon[Standard, Clause 9.10.5].
+
+===== Example 1, MultiPointSeries Domain - rectangle
+A point defined by the coordinates `(1.0,20.0)`, at vertical coordinate `1`, and for the time `"2008-01-01T04:00:00Z"`
+----
 {
   "type": "Domain",
   "domainType": "MultiPointSeries",
@@ -23,12 +64,9 @@ Domain example:
   },
   "referencing": [...]
 }
-```
-
-Domain example without z:
-
-[%unnumbered%]
-```json
+----
+===== Example 2, MultiPointSeries Domain example without z and t
+----
 {
   "type": "Domain",
   "domainType": "MultiPointSeries",
@@ -45,12 +83,9 @@ Domain example without z:
   },
   "referencing": [...]
 }
-```
-
-Coverage example:
-
-[%unnumbered%]
-```json
+----
+===== Example 3, MultiPointSeries Coverage Example
+----
 {
   "type" : "Coverage",
   "domain" : {
@@ -82,4 +117,13 @@ Coverage example:
     }
   }
 }
-```
+----
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html[Standard].
+
+==== Media type
+application/vnd.cov+json
+
+==== Link relation types
+Link relation types do not seem applicable for a PointSeries Object. Possibly `describedby` could be useful.
+
