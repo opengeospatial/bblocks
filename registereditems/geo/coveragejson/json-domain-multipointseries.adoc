@@ -3,9 +3,7 @@
 MultiPointSeries is a coverage domain type. A MultiPointies can only contain `[x,y]` positions (and not `z` or additional coordinates):
 
 - A domain with MultiPointSeries domain type MUST have the axes `"composite"` and `"t"`.
-
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`, in that order.
-
 - A domain with MultiPointSeries domain type MAY have the axis `"z"` which MUST have a single coordinate value only.
 
 This is consistent with the GeoJSON definition of a multipoint.
