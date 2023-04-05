@@ -1,4 +1,5 @@
 import json
+import sys
 from pathlib import Path
 import os.path
 from typing import Callable, Sequence, Generator, Any
@@ -86,7 +87,6 @@ def load_bblocks(registered_items_path: Path,
                  root_path: Path = Path(),
                  filter_ids: str | list[str] | None = None,
                  metadata_schema_file: str | Path | None = None) -> Generator[BuildingBlock, None, None]:
-
     if metadata_schema_file:
         metadata_schema = load_yaml(metadata_schema_file)
     else:
@@ -95,7 +95,13 @@ def load_bblocks(registered_items_path: Path,
     for metadata_file in sorted(registered_items_path.glob("**/metadata.json")):
         bblock_id, bblock_rel_path = get_bblock_identifier(metadata_file, root_path)
         if not filter_ids or bblock_id in filter_ids:
-            yield BuildingBlock(bblock_id, metadata_file,
-                                metadata_schema=metadata_schema,
-                                rel_path=bblock_rel_path,
-                                root_path=root_path)
+            try:
+                yield BuildingBlock(bblock_id, metadata_file,
+                                    metadata_schema=metadata_schema,
+                                    rel_path=bblock_rel_path,
+                                    root_path=root_path)
+            except Exception as e:
+                print('==== Exception encountered while processing', bblock_id, '====', file=sys.stderr)
+                import traceback
+                traceback.print_exception(e, file=sys.stderr)
+                print('=========', file=sys.stderr)

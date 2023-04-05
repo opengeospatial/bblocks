@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
       - name: Run postprocessing
         run: |
           python -m pip install -U pip
@@ -22,6 +24,7 @@ jobs:
             -u https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}
           docker run --rm -v $(pwd)/generateddocs/slate:/srv/slate/source \
             -v $(pwd)/generateddocs/slate-build:/srv/slate/build slatedocs/slate build
+          python -m ogc.na.ingest_json -t -j --batch registerv3.json
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.1.1
         with:
