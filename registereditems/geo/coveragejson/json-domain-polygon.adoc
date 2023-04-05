@@ -66,7 +66,35 @@ A polygon defined as a rectangle between coordinates `(100.0,0.0)` and `(101.0,1
   "referencing": [...]
 }
 ----
-===== Example 2, Coverage using a Polygon Domain 
+===== Example 2, Polygon with a 'hole' 	
+----
+{
+    "type": "Domain",
+    "domainType": "Polygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+        [
+            [35.0, 10.0],
+            [45.0, 45.0],
+            [15.0, 40.0],
+            [10.0, 20.0],
+            [35.0, 10.0]
+        ],
+        [
+            [20.0, 30.0],
+            [35.0, 35.0],
+            [30.0, 20.0],
+            [20.0, 30.0]
+        ]
+        ]
+        }
+    }
+}
+----
+===== Example 3, Coverage using a Polygon Domain 
 A coverage of temperature for the domain as in the previous example.
 ----
 {
