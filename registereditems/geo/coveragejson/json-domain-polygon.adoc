@@ -1,6 +1,7 @@
-==== Polygon
+=== Polygon
+==== Overview
 
-Polygon is a coverage domain type. They can only contain `[x,y]` positions (and not `z` or additional coordinates):
+Polygon is a coverage domain type. A Polygon can only contain `[x,y]` positions (and not `z` or additional coordinates):
 - A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
 - A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
 
@@ -8,11 +9,46 @@ Polygon is a coverage domain type. They can only contain `[x,y]` positions (and 
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A Polygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
 
-Domain example:
+This is consistent with the GeoJSON definition of a polygon.
 
-[%unnumbered%]
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.html#polygon[OGC CoverageJSON Community Standard, Section 9.10.9] which is maintained by the OGC Coverages Standard Working Group using this https://github.com/opengeospatial/CoverageJSON[OGC GitHub repository].
+
+==== Maturity
+Stable
+
+==== Pre-defined Properties of the Polygon Domain Object 
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Polygon Domain Object
+|==========================
+|Field Name|Type|Required|Description
+|domainType |String|**Yes**|Always `"Polygon"`
+|axes |String|**Yes**| Always `"composite"`
+|composite |String|**Yes**|Always `"polygon"`
+|coordinates |Array|**Yes**|Always `["x","y"]`
+|values |Array|**Yes**| The coordinate pairs for at least one polygon
+|z |Number|No| An optional vertical coordinate
+|t |String|No| An optional time coordinate in ISO8601 format 
+|==========================
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema TBD
+Currently the schema is https://schemas.opengeospatial.net/covjson/... TBD
+
+==== JSON-LD context TBD 
+E.g. https://schemas.opengeospatial.net/covjson/... TBD
+
+==== Validator TBD
+
+==== Examples
+See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html#polygon[Standard, Clause 9.10.9].
+
+===== Example 1, Polygon Domain - rectangle
 A polygon defined as a rectangle between coordinates `(100.0,0.0)` and `(101.0,1.0)`, at vertical coordinate `2`, and for the time `"2008-01-01T04:00:00Z"`
-```json
+----
 {
   "type": "Domain",
   "domainType": "Polygon",
@@ -29,13 +65,10 @@ A polygon defined as a rectangle between coordinates `(100.0,0.0)` and `(101.0,1
   },
   "referencing": [...]
 }
-```
-
-Coverage example:
-
-[%unnumbered%]
+----
+===== Example 2, Coverage using a Polygon Domain 
 A coverage of temperature for the domain as in the previous example.
-```json
+----
 {
   "type" : "Coverage",
   "domain" : {
@@ -65,4 +98,12 @@ A coverage of temperature for the domain as in the previous example.
     }
   }
 }
-```
+----
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html[Standard].
+
+==== Media type
+application/vnd.cov+json
+
+==== Link relation types
+Link relation types do not seem applicable for a Polygon Object. Possibly `describedby` could be useful.
