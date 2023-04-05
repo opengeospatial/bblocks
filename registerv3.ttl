@@ -1,11 +1,13 @@
 @prefix bblocks: <http://example.com/ogc/def/bblocks/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
     rdfs:label "Bounding Box" ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/bounding_box/schema.yaml> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/bounding_box/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -16,11 +18,11 @@ bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
     dct:modified "2023-03-09"^^xsd:date ;
     dct:source [ rdfs:label "OGC API - Features, Part 1, 7.13.2: Feature Collections Response" ;
             rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ] ;
-    rdfs:seeAlso <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/bounding_box/index.md> .
+    rdfs:seeAlso <https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/common/data_types/bounding_box/index.md> .
 
 bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
     rdfs:label "OGC Collection" ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/ogc_collection/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -32,11 +34,11 @@ bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
     dct:source [ rdfs:label "OGC API - Features, Part 1, 7.14.2 Feature collection Response" ;
             rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5> ] ;
     rdfs:seeAlso <https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collection.adoc>,
-        <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md> .
+        <https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md> .
 
 bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
     rdfs:label "OGC Collections" ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collections/schema.yaml> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/ogc_collections/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -48,11 +50,11 @@ bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
     dct:source [ rdfs:label "OGC API - Features, Part 1, 7.13.2: Feature Collections Response" ;
             rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ] ;
     rdfs:seeAlso <https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collections.adoc>,
-        <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md> .
+        <https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md> .
 
 bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
     rdfs:label "bbox" ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -64,11 +66,11 @@ bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
     dct:source [ rdfs:label "OGC API - Features, Part 1, 7.15.3: Parameter bbox" ;
             rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox> ] ;
     rdfs:seeAlso <https://doublebyte1.github.io/slate/>,
-        <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/parameters/bbox/index.md> .
+        <https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/common/parameters/bbox/index.md> .
 
 bblocks:r1.geo.geopose.basic-ypr a bblocks:Schema ;
     rdfs:label "GeoPose Basic-YPR" ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/geopose/basic-ypr/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/proposal> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -79,5 +81,19 @@ bblocks:r1.geo.geopose.basic-ypr a bblocks:Schema ;
     dct:modified "2023-03-15"^^xsd:date ;
     dct:source [ rdfs:label "OGC GeoPose 1.0 Data Exchange Draft Standard" ;
             rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
-    rdfs:seeAlso <https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/geopose/basic-ypr/index.md> .
+    rdfs:seeAlso <https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/geopose/basic-ypr/index.md> .
+
+[] a prov:Activity ;
+    prov:endedAtTime "2023-04-05T15:08:29.449579"^^xsd:dateTime ;
+    prov:startedAtTime "2023-04-05T15:08:29.218952"^^xsd:dateTime ;
+    prov:used [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:0466499857205f6f9669fe97f6ec53aa701ba0b4" ;
+            rdfs:seeAlso <file:///home/runner/work/bblocks/bblocks/registerv3.json> ] ;
+    prov:wasAssociatedWith [ a prov:Agent,
+                schema:SoftwareApplication ;
+            rdfs:label "OGC-NA tools" ;
+            dct:hasVersion "0.1.dev68+gdc92513" ;
+            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] ;
+    prov:wasInformedBy [ dct:identifier "a484c8a3-5dd1-4cd5-9a71-a16f8e8d06a9" ] .
 
