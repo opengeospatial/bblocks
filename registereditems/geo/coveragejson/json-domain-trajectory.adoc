@@ -1,13 +1,51 @@
 ==== Trajectory
+==== Overview
+Trajectory is a coverage domain type.
 
 - A domain with Trajectory domain type MUST have the axis `"composite"` and MAY have the axis `"z"` where `"z"` MUST have a single coordinate value only.
+
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y","z"` or `"t","x","y"`, in that order.
+
 - The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
 
-Domain example:
+==== Source Reference
+It is defined in the https://docs.ogc.org/is/19-086r5/19-086r5.html#trajectory[OGC CoverageJSON Community Standard, Section 9.10.7] which is maintained by the OGC Coverages Standard Working Group using this https://github.com/opengeospatial/CoverageJSON[OGC GitHub repository].
 
-[%unnumbered%]
-```json
+==== Maturity
+Stable
+
+==== Pre-defined Properties of the Traaajectory Domain Object 
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Polygon Domain Object
+|==========================
+|Field Name|Type|Required|Description
+|domainType |String|**Yes**|Always `"Trajectoory"`
+|axes |String|**Yes**| Always `"composite"`
+|composite |String|**Yes**|Always `"point"`
+|coordinates |Array|**Yes**|Always `["x","y"]`
+|values |Array|**Yes**| The coordinate pairs for one point
+|z |Number|No| An optional vertical coordinate
+|t |String|No| An optional time coordinate in ISO8601 format 
+|==========================
+
+==== Model (UML) TBD
+
+==== Model (OWL, or at least a formal and stable mapping of concepts to URIs) TBD
+
+==== JSON schema TBD
+Currently the schema is https://schemas.opengeospatial.net/covjson/1.0/domainBase.json
+
+==== JSON-LD context TBD 
+E.g. https://schemas.opengeospatial.net/covjson/... TBD
+
+==== Validator TBD
+
+==== Examples
+See some Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html#trajectory[Standard, Clause 9.10.7].
+
+===== Example 1, trajectory Domain - rectangle
+A trajectory defined by the coordinates `(1.0,20.0)`, at vertical coordinate `1`, and for the time `"2008-01-01T04:00:00Z"`
+----
 {
   "type": "Domain",
   "domainType": "Trajectory",
@@ -23,12 +61,9 @@ Domain example:
   },
   "referencing": [...]
 }
-```
-
-Domain example without z:
-
-[%unnumbered%]
-```json
+----
+===== Example 2, Trajectory Domain example with z defined as constant value:
+----
 {
   "type": "Domain",
   "domainType": "Trajectory",
@@ -44,34 +79,9 @@ Domain example without z:
   },
   "referencing": [...]
 }
-```
-
-Domain example with z defined as constant value:
-
-[%unnumbered%]
-```json
-{
-  "type": "Domain",
-  "domainType": "Trajectory",
-  "axes": {
-    "composite": {
-      "dataType": "tuple",
-      "coordinates": ["t","x","y"],
-      "values": [
-        ["2008-01-01T04:00:00Z", 1, 20],
-        ["2008-01-01T04:30:00Z", 2, 21]
-      ]
-    },
-    "z": { "values": [5] }
-  },
-  "referencing": [...]
-}
-```
-
-Coverage example:
-
-[%unnumbered%]
-```json
+----
+===== Example 3, Trajectory Coverage Example
+----
 {
   "type" : "Coverage",
   "domain" : {
@@ -102,4 +112,12 @@ Coverage example:
     }
   }
 }
-```
+----
+==== Further guidance
+See the Examples in the https://opengeospatial.github.io/ogcna-auto-review/21-069.html[Standard].
+
+==== Media type
+application/vnd.cov+json
+
+==== Link relation types
+Link relation types do not seem applicable for a PointSeries Object. Possibly `describedby` could be useful.
