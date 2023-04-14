@@ -22,7 +22,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
       }
     ],
     "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.data_types.bounding_box",
@@ -43,7 +43,7 @@
     ],
     "http://example.com/ogc/def/bblocks/hasSchema": [
       {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/bounding_box/schema.yaml"
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/bounding_box/schema.yaml"
       }
     ],
     "http://example.com/ogc/def/bblocks/scope": [
@@ -78,166 +78,6 @@
   },
   {
     "@type": [
-      "http://example.com/ogc/def/bblocks/Parameter"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information)."
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-05-24"
-      }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2022-05-24T13:51:38+00:00"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/parameters/bbox/index.md"
-      },
-      {
-        "@id": "https://doublebyte1.github.io/slate/"
-      }
-    ],
-    "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.parameters.bbox",
-    "http://example.com/ogc/def/bblocks/maturity": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "bbox"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/inRegister": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/hasSchema": [
-      {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/parameters/bbox/schema.yaml"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/scope": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/scope/geo"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-          {
-            "@id": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox"
-          }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-          {
-            "@value": "OGC API - Features, Part 1, 7.15.3: Parameter bbox"
-          }
-        ]
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/status": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/status/valid"
-      }
-    ],
-    "http://purl.org/dc/terms/hasVersion": [
-      {
-        "@value": "1.0"
-      }
-    ]
-  },
-  {
-    "@type": [
-      "http://example.com/ogc/def/bblocks/Schema"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "The distribution of a geospatial dataset in an API is organized into one or more collections of data. How the data is split into collections in a distribution depends on the intended use of the data. Two common approaches for organizing the data are: by semantic type and by spatial clustering. The OGC Collections JSON resource provides information about and access to the data in each collection of the distribution."
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-05-24"
-      }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2022-05-24T11:00:05+00:00"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md"
-      },
-      {
-        "@id": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collections.adoc"
-      }
-    ],
-    "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.data_types.ogc_collections",
-    "http://example.com/ogc/def/bblocks/maturity": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "OGC Collections"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/inRegister": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/hasSchema": [
-      {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collections/schema.yaml"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/scope": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/scope/geo"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-          {
-            "@id": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
-          }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-          {
-            "@value": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response"
-          }
-        ]
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/status": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/status/valid"
-      }
-    ],
-    "http://purl.org/dc/terms/hasVersion": [
-      {
-        "@value": "0.1"
-      }
-    ]
-  },
-  {
-    "@type": [
       "http://example.com/ogc/def/bblocks/Schema"
     ],
     "http://purl.org/dc/terms/description": [
@@ -259,7 +99,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md"
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md"
       },
       {
         "@id": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collection.adoc"
@@ -283,7 +123,7 @@
     ],
     "http://example.com/ogc/def/bblocks/hasSchema": [
       {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/common/data_types/ogc_collection/schema.yaml"
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/ogc_collection/schema.yaml"
       }
     ],
     "http://example.com/ogc/def/bblocks/scope": [
@@ -322,6 +162,166 @@
     ],
     "http://purl.org/dc/terms/description": [
       {
+        "@value": "The distribution of a geospatial dataset in an API is organized into one or more collections of data. How the data is split into collections in a distribution depends on the intended use of the data. Two common approaches for organizing the data are: by semantic type and by spatial clustering. The OGC Collections JSON resource provides information about and access to the data in each collection of the distribution."
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-05-24"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2022-05-24T11:00:05+00:00"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md"
+      },
+      {
+        "@id": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collections.adoc"
+      }
+    ],
+    "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.data_types.ogc_collections",
+    "http://example.com/ogc/def/bblocks/maturity": [
+      {
+        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "OGC Collections"
+      }
+    ],
+    "http://example.com/ogc/def/bblocks/inRegister": [
+      {
+        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
+      }
+    ],
+    "http://example.com/ogc/def/bblocks/hasSchema": [
+      {
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/data_types/ogc_collections/schema.yaml"
+      }
+    ],
+    "http://example.com/ogc/def/bblocks/scope": [
+      {
+        "@id": "http://example.com/ogc/def/bblocks/scope/geo"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+          {
+            "@id": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response"
+          }
+        ]
+      }
+    ],
+    "http://example.com/ogc/def/bblocks/status": [
+      {
+        "@id": "http://example.com/ogc/def/bblocks/status/valid"
+      }
+    ],
+    "http://purl.org/dc/terms/hasVersion": [
+      {
+        "@value": "0.1"
+      }
+    ]
+  },
+  {
+    "@type": [
+      "http://example.com/ogc/def/bblocks/Parameter"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information)."
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2022-05-24"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2022-05-24T13:51:38+00:00"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/common/parameters/bbox/index.md"
+      },
+      {
+        "@id": "https://doublebyte1.github.io/slate/"
+      }
+    ],
+    "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.parameters.bbox",
+    "http://example.com/ogc/def/bblocks/maturity": [
+      {
+        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "bbox"
+      }
+    ],
+    "http://example.com/ogc/def/bblocks/inRegister": [
+      {
+        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
+      }
+    ],
+    "http://example.com/ogc/def/bblocks/hasSchema": [
+      {
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/common/parameters/bbox/schema.yaml"
+      }
+    ],
+    "http://example.com/ogc/def/bblocks/scope": [
+      {
+        "@id": "http://example.com/ogc/def/bblocks/scope/geo"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+          {
+            "@id": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "OGC API - Features, Part 1, 7.15.3: Parameter bbox"
+          }
+        ]
+      }
+    ],
+    "http://example.com/ogc/def/bblocks/status": [
+      {
+        "@id": "http://example.com/ogc/def/bblocks/status/valid"
+      }
+    ],
+    "http://purl.org/dc/terms/hasVersion": [
+      {
+        "@value": "1.0"
+      }
+    ]
+  },
+  {
+    "@type": [
+      "http://example.com/ogc/def/bblocks/Schema"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
         "@value": "Basic GeoPose using yaw, pitch, and roll to specify orientation"
       }
     ],
@@ -339,13 +339,13 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/generateddocs/markdown/geo/geopose/basic-ypr/index.md"
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/generateddocs/markdown/geo/geopose/basic-ypr/index.md"
       }
     ],
     "@id": "http://example.com/ogc/def/bblocks/r1.geo.geopose.basic-ypr",
     "http://example.com/ogc/def/bblocks/maturity": [
       {
-        "@id": "http://example.com/ogc/def/bblocks/maturity/draft"
+        "@id": "http://example.com/ogc/def/bblocks/maturity/proposal"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -360,7 +360,7 @@
     ],
     "http://example.com/ogc/def/bblocks/hasSchema": [
       {
-        "@id": "https://raw.githubusercontent.com/rob-metalinkage/bblocks/v3registry/registereditems/geo/geopose/basic-ypr/schema.yaml"
+        "@id": "https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/geo/geopose/basic-ypr/schema.yaml"
       }
     ],
     "http://example.com/ogc/def/bblocks/scope": [
@@ -390,6 +390,116 @@
     "http://purl.org/dc/terms/hasVersion": [
       {
         "@value": "0.1"
+      }
+    ]
+  },
+  {
+    "@id": "file:///home/runner/work/bblocks/bblocks/registerv3.jsonld",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "application/ld+json"
+      }
+    ],
+    "http://purl.org/dc/terms/hasVersion": [
+      {
+        "@value": "git:0466499857205f6f9669fe97f6ec53aa701ba0b4"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAttributedTo": [
+      {
+        "@id": "_:N3166b3c8c0cf436d9b828a0b10d01376"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "_:N2ad0d696fb7445b5aa7121c021d97329"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2ad0d696fb7445b5aa7121c021d97329",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-04-05T15:08:29.462918"
+      }
+    ],
+    "http://www.w3.org/ns/prov#startedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-04-05T15:08:29.218952"
+      }
+    ],
+    "http://www.w3.org/ns/prov#used": [
+      {
+        "@id": "_:Nea3cf865c9e2490eb8cc2a781955e849"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:N3166b3c8c0cf436d9b828a0b10d01376"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+      {
+        "@id": "_:N693e24edf84e4b44a52965055041617a"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nea3cf865c9e2490eb8cc2a781955e849",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "application/json"
+      }
+    ],
+    "http://purl.org/dc/terms/hasVersion": [
+      {
+        "@value": "git:0466499857205f6f9669fe97f6ec53aa701ba0b4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "file:///home/runner/work/bblocks/bblocks/registerv3.json"
+      }
+    ]
+  },
+  {
+    "@id": "_:N693e24edf84e4b44a52965055041617a",
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "a484c8a3-5dd1-4cd5-9a71-a16f8e8d06a9"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3166b3c8c0cf436d9b828a0b10d01376",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent",
+      "https://schema.org/SoftwareApplication"
+    ],
+    "http://purl.org/dc/terms/hasVersion": [
+      {
+        "@value": "0.1.dev68+gdc92513"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "OGC-NA tools"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://github.com/opengeospatial/ogc-na-tools"
       }
     ]
   }
