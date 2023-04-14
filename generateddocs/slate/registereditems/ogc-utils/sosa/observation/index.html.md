@@ -55,7 +55,7 @@ _:a1 sosa:hasFeatureOfInterest <http://example.com/fois/1> ;
 
 # Schema
 
-[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/ogc-utils/sosa/observation/schema.yaml)
+[schema.yaml](https://avillar.github.io/bblocks/registereditems/ogc-utils/sosa/observation/schema.yaml)
 # Sources
 
 * [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)

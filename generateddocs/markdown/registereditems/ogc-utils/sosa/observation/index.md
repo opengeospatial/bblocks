@@ -38,7 +38,7 @@ _:a1 sosa:hasFeatureOfInterest <http://example.com/fois/1> ;
 
 ## Schema
 
-[schema.yaml](https://raw.githubusercontent.com/avillar/bblocks/master/registereditems/ogc-utils/sosa/observation/schema.yaml)
+[schema.yaml](https://avillar.github.io/bblocks/registereditems/ogc-utils/sosa/observation/schema.yaml)
 
 ```yaml
 "$schema": https://json-schema.org/draft/2020-12/schema
