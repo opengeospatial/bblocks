@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - name: OGC BB postprocess
         uses: avillar/bblocks-postprocess/full@v1
         with:
