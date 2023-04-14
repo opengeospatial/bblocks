@@ -14,19 +14,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: OGC BB postprocess
+        uses: avillar/bblocks-postprocess/full@v1
         with:
-          submodules: 'recursive'
-      - name: Run postprocessing
-        run: |
-          python -m pip install -U pip
-          pip install -r scripts/requirements.txt
-          python -m scripts.postprocess registerv3.json registereditems/ -s metadata-schema.yaml \
-            -u https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}
-          docker run --rm -v $(pwd)/generateddocs/slate:/srv/slate/source \
-            -v $(pwd)/generateddocs/slate-build:/srv/slate/build slatedocs/slate build
-          python -m ogc.na.ingest_json -t -j --batch registerv3.json
+          items_dir: registereditems
+          register_file: register.json
+          generated_docs_path: generateddocs
+          annotated_path: annotated-schemas
+          fail_on_error: 'false'
+          clean: 'true'
       - name: Add & Commit
-        uses: EndBug/add-and-commit@v9.1.1
+        if: ${{ !endsWith(github.repository, '/bblock-template') }}
+        uses: EndBug/add-and-commit@v9
         with:
           message: Building blocks postprocessing
 
