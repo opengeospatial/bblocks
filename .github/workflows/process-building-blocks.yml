@@ -23,6 +23,7 @@ jobs:
           register_file: register.json
           generated_docs_path: generateddocs
           annotated_path: annotated-schemas
+          base_url: https://${{ github.event.repository.owner.login }}.github.io/${{github.event.repository.name}}/
           fail_on_error: 'false'
           clean: 'true'
       - name: Add & Commit
