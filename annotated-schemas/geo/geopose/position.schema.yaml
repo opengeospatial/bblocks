@@ -1,0 +1,17 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: GeoPose position
+type: object
+properties:
+  lat:
+    type: number
+    x-jsonld-id: http://example.com/geopose/lat
+  lon:
+    type: number
+    x-jsonld-id: http://example.com/geopose/lon
+  h:
+    type: number
+    x-jsonld-id: http://example.com/geopose/h
+required:
+- lat
+- lon
+- h
