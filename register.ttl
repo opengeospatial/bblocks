@@ -21,7 +21,6 @@ bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
 
 bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
     rdfs:label "OGC Collection" ;
-    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/context.jsonld> ;
     bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.json>,
         <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
@@ -39,7 +38,6 @@ bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
 
 bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
     rdfs:label "OGC Collections" ;
-    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/context.jsonld> ;
     bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.json>,
         <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
@@ -57,7 +55,6 @@ bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
 
 bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
     rdfs:label "bbox" ;
-    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld> ;
     bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json>,
         <https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
@@ -109,7 +106,6 @@ bblocks:r1.geo.geopose.basic-ypr a bblocks:Schema ;
 
 bblocks:r1.unstable.sosa.observation a bblocks:Schema ;
     rdfs:label "SOSA Observation" ;
-    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/context.jsonld> ;
     bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.json>,
         <https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
@@ -125,14 +121,14 @@ bblocks:r1.unstable.sosa.observation a bblocks:Schema ;
     rdfs:seeAlso <https://avillar.github.io/bblocks/generateddocs/markdown/unstable/sosa/observation/index.md> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-12T11:02:12.063169"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-12T11:02:11.941170"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-12T11:09:48.021104"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-12T11:09:47.870440"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/register.json> ] ;
+            rdfs:seeAlso <file:///github/workspace/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
