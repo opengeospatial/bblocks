@@ -7,11 +7,10 @@
 
 bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
     rdfs:label "Bounding Box" ;
-    bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
-    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
     dct:description "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other." ;
     dct:hasVersion "1.0.1" ;
@@ -22,11 +21,13 @@ bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
 
 bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
     rdfs:label "OGC Collection" ;
-    bblocks:hasSchema <https://avillar.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/schema.yaml> ;
+    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/context.jsonld> ;
+    bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.json>,
+        <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
-    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
     dct:description "An OGC Collection resource is a JSON object that provides information about and access to a set of geospatial resources, through links to API endpoints and/or files online. It is most commonly used to describe geospatial datasets, but can be used for collections of anything geospatial." ;
     dct:hasVersion "0.1" ;
@@ -38,11 +39,13 @@ bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
 
 bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
     rdfs:label "OGC Collections" ;
-    bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml> ;
+    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/context.jsonld> ;
+    bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.json>,
+        <https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
-    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
     dct:created "2022-05-24T11:00:05+00:00"^^xsd:dateTime ;
     dct:description "The distribution of a geospatial dataset in an API is organized into one or more collections of data. How the data is split into collections in a distribution depends on the intended use of the data. Two common approaches for organizing the data are: by semantic type and by spatial clustering. The OGC Collections JSON resource provides information about and access to the data in each collection of the distribution." ;
     dct:hasVersion "0.1" ;
@@ -54,11 +57,13 @@ bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
 
 bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
     rdfs:label "bbox" ;
-    bblocks:hasSchema <https://avillar.github.io/bblocks/registereditems/geo/common/parameters/bbox/schema.yaml> ;
+    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld> ;
+    bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json>,
+        <https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
-    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
     dct:description "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information)." ;
     dct:hasVersion "1.0" ;
@@ -68,13 +73,49 @@ bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
     rdfs:seeAlso <https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md>,
         <https://doublebyte1.github.io/slate/> .
 
+bblocks:r1.geo.geopose.basic-euler a bblocks:Schema ;
+    rdfs:label "GeoPose Basic-Euler" ;
+    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld> ;
+    bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json>,
+        <https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/proposal> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-05-12T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "Basic GeoPose using Euler angle rotations to specify orientation" ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-05-12"^^xsd:date ;
+    dct:source [ rdfs:label "OGC GeoPose 1.0 Data Exchange Draft Standard" ;
+            rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
+    rdfs:seeAlso <https://avillar.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-euler/index.md> .
+
+bblocks:r1.geo.geopose.basic-ypr a bblocks:Schema ;
+    rdfs:label "GeoPose Basic-YPR" ;
+    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld> ;
+    bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json>,
+        <https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/proposal> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-03-15T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "Basic GeoPose using yaw, pitch, and roll to specify orientation" ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-03-12"^^xsd:date ;
+    dct:source [ rdfs:label "OGC GeoPose 1.0 Data Exchange Draft Standard" ;
+            rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
+    rdfs:seeAlso <https://avillar.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-ypr/index.md> .
+
 bblocks:r1.unstable.sosa.observation a bblocks:Schema ;
     rdfs:label "SOSA Observation" ;
-    bblocks:hasSchema <https://avillar.github.io/bblocks/registereditems/unstable/sosa/observation/schema.yaml> ;
+    bblocks:hasJsonLdContext <https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/context.jsonld> ;
+    bblocks:hasSchema <https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.json>,
+        <https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
-    bblocks:status <http://example.com/ogc/def/bblocks/status/valid> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
     dct:description "This building blocks defines an observation according to the SOSA/SSN specification." ;
     dct:hasVersion "1.0" ;
@@ -84,14 +125,14 @@ bblocks:r1.unstable.sosa.observation a bblocks:Schema ;
     rdfs:seeAlso <https://avillar.github.io/bblocks/generateddocs/markdown/unstable/sosa/observation/index.md> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-12T09:53:17.727322"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-12T09:53:17.596191"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-12T09:57:50.245995"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-12T09:57:50.124829"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/register.json> ] ;
+            rdfs:seeAlso <file:///github/workspace/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;

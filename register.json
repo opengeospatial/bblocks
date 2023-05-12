@@ -32,9 +32,7 @@
         "link": ""
       }
     ],
-    "schema": [
-      "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml"
-    ],
+    "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/",
     "documentation": [
       "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
     ]
@@ -59,8 +57,11 @@
     "maturity": "mature",
     "scope": "geo",
     "schema": [
-      "https://avillar.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/schema.yaml"
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.yaml",
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.json"
     ],
+    "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/context.jsonld",
+    "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/",
     "documentation": [
       "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md"
     ]
@@ -85,8 +86,11 @@
       }
     ],
     "schema": [
-      "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml"
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml",
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.json"
     ],
+    "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/context.jsonld",
+    "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/common/data_types/ogc_collections/",
     "documentation": [
       "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md"
     ]
@@ -111,10 +115,69 @@
     "maturity": "mature",
     "scope": "geo",
     "schema": [
-      "https://avillar.github.io/bblocks/registereditems/geo/common/parameters/bbox/schema.yaml"
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json"
     ],
+    "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld",
+    "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
     "documentation": [
       "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md"
+    ]
+  },
+  {
+    "name": "GeoPose Basic-Euler",
+    "abstract": "Basic GeoPose using Euler angle rotations to specify orientation",
+    "status": "valid",
+    "dateTimeAddition": "2023-05-12T00:00:00+00:00",
+    "itemClass": "schema",
+    "register": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2023-05-12",
+    "sources": [
+      {
+        "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
+        "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
+      }
+    ],
+    "maturity": "proposal",
+    "scope": "geo",
+    "schema": [
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml",
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json"
+    ],
+    "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld",
+    "itemIdentifier": "r1.geo.geopose.basic-euler",
+    "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/geopose/basic-euler/",
+    "documentation": [
+      "https://avillar.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-euler/index.md"
+    ]
+  },
+  {
+    "name": "GeoPose Basic-YPR",
+    "abstract": "Basic GeoPose using yaw, pitch, and roll to specify orientation",
+    "status": "valid",
+    "dateTimeAddition": "2023-03-15T00:00:00+00:00",
+    "itemClass": "schema",
+    "register": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2023-03-12",
+    "sources": [
+      {
+        "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
+        "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
+      }
+    ],
+    "maturity": "proposal",
+    "scope": "geo",
+    "schema": [
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml",
+      "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json"
+    ],
+    "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld",
+    "itemIdentifier": "r1.geo.geopose.basic-ypr",
+    "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/geopose/basic-ypr/",
+    "documentation": [
+      "https://avillar.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-ypr/index.md"
     ]
   },
   {
@@ -143,8 +206,11 @@
     ],
     "itemIdentifier": "r1.unstable.sosa.observation",
     "schema": [
-      "https://avillar.github.io/bblocks/registereditems/unstable/sosa/observation/schema.yaml"
+      "https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.yaml",
+      "https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.json"
     ],
+    "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/context.jsonld",
+    "sourceFiles": "https://avillar.github.io/bblocks/registereditems/unstable/sosa/observation/",
     "documentation": [
       "https://avillar.github.io/bblocks/generateddocs/markdown/unstable/sosa/observation/index.md"
     ]

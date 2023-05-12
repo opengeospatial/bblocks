@@ -1,502 +1,301 @@
-[
-  {
-    "@type": [
-      "http://example.com/ogc/def/bblocks/Schema"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API\u2019s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other."
+{
+  "@context": {
+    "bblocks": "http://example.com/ogc/def/bblocks/",
+    "@base": "http://example.com/ogc/def/bblocks/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "itemIdentifier": "@id",
+    "name": "rdfs:label",
+    "abstract": "dct:description",
+    "register": {
+      "@id": "bblocks:inRegister",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://example.com/ogc/def/bblocks/"
       }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2023-03-09"
+    },
+    "status": {
+      "@id": "bblocks:status",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://www.opengis.net/def/status/"
       }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2022-05-24T13:51:38+00:00"
+    },
+    "dateTimeAddition": {
+      "@id": "dct:created",
+      "@type": "xsd:dateTime"
+    },
+    "version": "dct:hasVersion",
+    "dateOfLastChange": {
+      "@id": "dct:modified",
+      "@type": "xsd:date"
+    },
+    "maturity": {
+      "@id": "bblocks:maturity",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://example.com/ogc/def/bblocks/maturity/"
       }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
+    },
+    "scope": {
+      "@id": "bblocks:scope",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://example.com/ogc/def/bblocks/scope/"
       }
-    ],
-    "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.data_types.bounding_box",
-    "http://example.com/ogc/def/bblocks/maturity": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
+    },
+    "sources": {
+      "@id": "dct:source",
+      "@context": {
+        "title": "rdfs:label",
+        "link": {
+          "@id": "rdfs:seeAlso",
+          "@type": "@id"
+        }
       }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Bounding Box"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/inRegister": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/hasSchema": [
-      {
-        "@id": "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/scope": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/scope/geo"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-          {
-            "@id": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
-          }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-          {
-            "@value": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response"
-          }
-        ]
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/status": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/status/valid"
-      }
-    ],
-    "http://purl.org/dc/terms/hasVersion": [
-      {
-        "@value": "1.0.1"
-      }
-    ]
+    },
+    "link": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "schema": {
+      "@id": "bblocks:hasSchema",
+      "@type": "@id"
+    },
+    "ldContext": {
+      "@id": "bblocks:hasJsonLdContext",
+      "@type": "@id"
+    },
+    "documentation": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    }
   },
-  {
-    "@type": [
-      "http://example.com/ogc/def/bblocks/Schema"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "An OGC Collection resource is a JSON object that provides information about and access to a set of geospatial resources, through links to API endpoints and/or files online. It is most commonly used to describe geospatial datasets, but can be used for collections of anything geospatial."
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-05-24"
-      }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2022-05-24T13:51:38+00:00"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md"
-      },
-      {
-        "@id": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collection.adoc"
-      }
-    ],
-    "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.data_types.ogc_collection",
-    "http://example.com/ogc/def/bblocks/maturity": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "OGC Collection"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/inRegister": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/hasSchema": [
-      {
-        "@id": "https://avillar.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/schema.yaml"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/scope": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/scope/geo"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-          {
-            "@id": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5"
-          }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-          {
-            "@value": "OGC API - Features, Part 1, 7.14.2 Feature collection Response"
-          }
-        ]
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/status": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/status/valid"
-      }
-    ],
-    "http://purl.org/dc/terms/hasVersion": [
-      {
-        "@value": "0.1"
-      }
-    ]
-  },
-  {
-    "@type": [
-      "http://example.com/ogc/def/bblocks/Schema"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "The distribution of a geospatial dataset in an API is organized into one or more collections of data. How the data is split into collections in a distribution depends on the intended use of the data. Two common approaches for organizing the data are: by semantic type and by spatial clustering. The OGC Collections JSON resource provides information about and access to the data in each collection of the distribution."
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-05-24"
-      }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2022-05-24T11:00:05+00:00"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md"
-      },
-      {
-        "@id": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collections.adoc"
-      }
-    ],
-    "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.data_types.ogc_collections",
-    "http://example.com/ogc/def/bblocks/maturity": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "OGC Collections"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/inRegister": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/hasSchema": [
-      {
-        "@id": "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/scope": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/scope/geo"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-          {
-            "@id": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
-          }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-          {
-            "@value": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response"
-          }
-        ]
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/status": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/status/valid"
-      }
-    ],
-    "http://purl.org/dc/terms/hasVersion": [
-      {
-        "@value": "0.1"
-      }
-    ]
-  },
-  {
-    "@type": [
-      "http://example.com/ogc/def/bblocks/Parameter"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information)."
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2022-05-24"
-      }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2022-05-24T13:51:38+00:00"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md"
-      },
-      {
-        "@id": "https://doublebyte1.github.io/slate/"
-      }
-    ],
-    "@id": "http://example.com/ogc/def/bblocks/r1.geo.common.parameters.bbox",
-    "http://example.com/ogc/def/bblocks/maturity": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "bbox"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/inRegister": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/hasSchema": [
-      {
-        "@id": "https://avillar.github.io/bblocks/registereditems/geo/common/parameters/bbox/schema.yaml"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/scope": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/scope/geo"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-          {
-            "@id": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox"
-          }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-          {
-            "@value": "OGC API - Features, Part 1, 7.15.3: Parameter bbox"
-          }
-        ]
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/status": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/status/valid"
-      }
-    ],
-    "http://purl.org/dc/terms/hasVersion": [
-      {
-        "@value": "1.0"
-      }
-    ]
-  },
-  {
-    "@type": [
-      "http://example.com/ogc/def/bblocks/Schema"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "This building blocks defines an observation according to the SOSA/SSN specification."
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2023-04-13"
-      }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2023-04-13T00:00:00Z"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://avillar.github.io/bblocks/generateddocs/markdown/unstable/sosa/observation/index.md"
-      }
-    ],
-    "@id": "http://example.com/ogc/def/bblocks/r1.unstable.sosa.observation",
-    "http://example.com/ogc/def/bblocks/maturity": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/maturity/mature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "SOSA Observation"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/inRegister": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/ogc-building-block-register"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/hasSchema": [
-      {
-        "@id": "https://avillar.github.io/bblocks/registereditems/unstable/sosa/observation/schema.yaml"
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/scope": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/scope/unstable"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-          {
-            "@id": "https://www.w3.org/TR/vocab-ssn/"
-          }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-          {
-            "@value": "Semantic Sensor Network Ontology"
-          }
-        ]
-      }
-    ],
-    "http://example.com/ogc/def/bblocks/status": [
-      {
-        "@id": "http://example.com/ogc/def/bblocks/status/valid"
-      }
-    ],
-    "http://purl.org/dc/terms/hasVersion": [
-      {
-        "@value": "1.0"
-      }
-    ]
-  },
-  {
-    "@id": "file:///github/workspace/register.jsonld",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-        "@value": "application/ld+json"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAttributedTo": [
-      {
-        "@id": "_:Nb89ef28d033c4f018fc9dd94d1975268"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-      {
-        "@id": "_:Nd19aafb0c5304dabb7f42b588043c2d3"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd19aafb0c5304dabb7f42b588043c2d3",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2023-05-12T09:53:17.735499"
-      }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-        "@value": "2023-05-12T09:53:17.596191"
-      }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-      {
-        "@id": "_:N8ba84ec05075413cb0f95aecb1632404"
-      },
-      {
-        "@id": "_:N7163413ae81a4ad6988d015db9a54107"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:Nb89ef28d033c4f018fc9dd94d1975268"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8ba84ec05075413cb0f95aecb1632404",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-        "@value": "application/json"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "file:///github/workspace/register.json"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7163413ae81a4ad6988d015db9a54107",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-        "@value": "application/yaml"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "file:///src/ogc/bblocks/register-context.yaml"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb89ef28d033c4f018fc9dd94d1975268",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent",
-      "https://schema.org/SoftwareApplication"
-    ],
-    "http://purl.org/dc/terms/hasVersion": [
-      {
-        "@value": "0.0.0"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "OGC-NA tools"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://github.com/opengeospatial/ogc-na-tools"
-      }
-    ]
-  }
-]
+  "@graph": [
+    {
+      "itemIdentifier": "r1.geo.common.data_types.bounding_box",
+      "name": "Bounding Box",
+      "abstract": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API\u2019s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.",
+      "status": "valid",
+      "dateTimeAddition": "2022-05-24T13:51:38+00:00",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "1.0.1",
+      "dateOfLastChange": "2023-03-09",
+      "sources": [
+        {
+          "title": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response",
+          "link": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
+        }
+      ],
+      "requirementClasses": [
+        "..."
+      ],
+      "seeAlso": [
+        "..."
+      ],
+      "dependsOn": [
+        "..."
+      ],
+      "maturity": "mature",
+      "scope": "geo",
+      "concept": [
+        {
+          "label": "",
+          "link": ""
+        }
+      ],
+      "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/",
+      "documentation": [
+        "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
+      ],
+      "@type": "bblocks:Schema"
+    },
+    {
+      "itemIdentifier": "r1.geo.common.data_types.ogc_collection",
+      "name": "OGC Collection",
+      "abstract": "An OGC Collection resource is a JSON object that provides information about and access to a set of geospatial resources, through links to API endpoints and/or files online. It is most commonly used to describe geospatial datasets, but can be used for collections of anything geospatial.",
+      "status": "valid",
+      "dateTimeAddition": "2022-05-24T13:51:38+00:00",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2022-05-24",
+      "link": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collection.adoc",
+      "sources": [
+        {
+          "title": "OGC API - Features, Part 1, 7.14.2 Feature collection Response",
+          "link": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_5"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "geo",
+      "schema": [
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.yaml",
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.json"
+      ],
+      "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/context.jsonld",
+      "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/",
+      "documentation": [
+        "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md"
+      ],
+      "@type": "bblocks:Schema"
+    },
+    {
+      "itemIdentifier": "r1.geo.common.data_types.ogc_collections",
+      "name": "OGC Collections",
+      "abstract": "The distribution of a geospatial dataset in an API is organized into one or more collections of data. How the data is split into collections in a distribution depends on the intended use of the data. Two common approaches for organizing the data are: by semantic type and by spatial clustering. The OGC Collections JSON resource provides information about and access to the data in each collection of the distribution.",
+      "status": "valid",
+      "dateTimeAddition": "2022-05-24T11:00:05+00:00",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2022-05-24",
+      "link": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collections.adoc",
+      "maturity": "mature",
+      "scope": "geo",
+      "sources": [
+        {
+          "title": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response",
+          "link": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
+        }
+      ],
+      "schema": [
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml",
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.json"
+      ],
+      "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/context.jsonld",
+      "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/common/data_types/ogc_collections/",
+      "documentation": [
+        "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md"
+      ],
+      "@type": "bblocks:Schema"
+    },
+    {
+      "itemIdentifier": "r1.geo.common.parameters.bbox",
+      "name": "bbox",
+      "abstract": "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).",
+      "status": "valid",
+      "dateTimeAddition": "2022-05-24T13:51:38+00:00",
+      "itemClass": "parameter",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2022-05-24",
+      "link": "https://doublebyte1.github.io/slate/",
+      "sources": [
+        {
+          "title": "OGC API - Features, Part 1, 7.15.3: Parameter bbox",
+          "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "geo",
+      "schema": [
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json"
+      ],
+      "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld",
+      "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
+      "documentation": [
+        "https://avillar.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md"
+      ],
+      "@type": "bblocks:Parameter"
+    },
+    {
+      "name": "GeoPose Basic-Euler",
+      "abstract": "Basic GeoPose using Euler angle rotations to specify orientation",
+      "status": "valid",
+      "dateTimeAddition": "2023-05-12T00:00:00+00:00",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2023-05-12",
+      "sources": [
+        {
+          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
+          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
+        }
+      ],
+      "maturity": "proposal",
+      "scope": "geo",
+      "schema": [
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml",
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json"
+      ],
+      "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld",
+      "itemIdentifier": "r1.geo.geopose.basic-euler",
+      "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/geopose/basic-euler/",
+      "documentation": [
+        "https://avillar.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-euler/index.md"
+      ],
+      "@type": "bblocks:Schema"
+    },
+    {
+      "name": "GeoPose Basic-YPR",
+      "abstract": "Basic GeoPose using yaw, pitch, and roll to specify orientation",
+      "status": "valid",
+      "dateTimeAddition": "2023-03-15T00:00:00+00:00",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2023-03-12",
+      "sources": [
+        {
+          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
+          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
+        }
+      ],
+      "maturity": "proposal",
+      "scope": "geo",
+      "schema": [
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml",
+        "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json"
+      ],
+      "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld",
+      "itemIdentifier": "r1.geo.geopose.basic-ypr",
+      "sourceFiles": "https://avillar.github.io/bblocks/registereditems/geo/geopose/basic-ypr/",
+      "documentation": [
+        "https://avillar.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-ypr/index.md"
+      ],
+      "@type": "bblocks:Schema"
+    },
+    {
+      "name": "SOSA Observation",
+      "abstract": "This building blocks defines an observation according to the SOSA/SSN specification.",
+      "status": "valid",
+      "dateTimeAddition": "2023-04-13T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2023-04-13",
+      "sources": [
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "sosa",
+        "ssn",
+        "observations",
+        "o&m",
+        "o&m&s"
+      ],
+      "itemIdentifier": "r1.unstable.sosa.observation",
+      "schema": [
+        "https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.yaml",
+        "https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.json"
+      ],
+      "ldContext": "https://avillar.github.io/bblocks/annotated-schemas/unstable/sosa/observation/context.jsonld",
+      "sourceFiles": "https://avillar.github.io/bblocks/registereditems/unstable/sosa/observation/",
+      "documentation": [
+        "https://avillar.github.io/bblocks/generateddocs/markdown/unstable/sosa/observation/index.md"
+      ],
+      "@type": "bblocks:Schema"
+    }
+  ]
+}
