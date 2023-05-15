@@ -19,10 +19,15 @@ to detail what that property was associated with."
 ### Example of SOSA observation
 #### json
 ```json
-{
-  "hasFeatureOfInterest": "http://example.com/fois/1",
-  "hasSimpleResult": 33,
-  "resultTime": "2022-05-01T22:33:44Z"
+{ 
+  "@id": "_:a1",
+  "type": "Feature",
+  "featureType": "sosa:Observation",
+  "properties": {
+    "hasFeatureOfInterest": "http://example.com/fois/1",
+    "hasSimpleResult": 33,
+    "resultTime": "2022-05-01T22:33:44Z"
+    }
 }
 ```
 
@@ -30,7 +35,8 @@ to detail what that property was associated with."
 ```ttl
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-_:a1 sosa:hasFeatureOfInterest <http://example.com/fois/1> ;
+_:a1 a sosa:Observation ;
+  sosa:hasFeatureOfInterest <http://example.com/fois/1> ;
   sosa:hasSimpleResult 33 ;
   sosa:resultTime "2022-05-01T22:33:44Z"^^xsd:dateTime ;
 .
@@ -38,17 +44,16 @@ _:a1 sosa:hasFeatureOfInterest <http://example.com/fois/1> ;
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/observation/schema.yaml)
+[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/schema.yaml)
 
 ```yaml
 "$schema": https://json-schema.org/draft/2020-12/schema
 description: 'SOSA Observation'
-'@modelReference': ../sosa-ssn.jsonld
+x-jsonld-context: ../../../sosa-ssn.jsonld
 type: object
 properties:
-  hasResult:
-    type: object
-  hasSimpleResult:
+  hasResult: {}
+  hasSimpleResult: {}
   resultTime:
     type: string
     format: date-time
@@ -76,8 +81,11 @@ required:
   - resultTime
   - hasFeatureOfInterest
 oneOf:
-  - hasResult
-  - hasSimpleResult
+  - required:
+      - hasResult
+  - required:
+      - hasSimpleResult
+
 ```
 ## Sources
 

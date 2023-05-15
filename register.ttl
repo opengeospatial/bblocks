@@ -106,10 +106,28 @@ bblocks:r1.geo.geopose.basic-ypr a bblocks:Schema ;
             rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-ypr/index.md> .
 
-bblocks:r1.unstable.sosa.observation a bblocks:Schema ;
+bblocks:r1.unstable.sosa a bblocks:Api ;
+    rdfs:label "Sensor, Observation, Sample, and Actuator (SOSA)" ;
+    bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld> ;
+    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json>,
+        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model" ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2023-04-13"^^xsd:date ;
+    dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
+    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md> .
+
+bblocks:r1.unstable.sosa.features.observation a bblocks:Schema ;
     rdfs:label "SOSA Observation" ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.yaml> ;
+    bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld> ;
+    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json>,
+        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
@@ -120,17 +138,36 @@ bblocks:r1.unstable.sosa.observation a bblocks:Schema ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/observation/index.md> .
+    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md> .
+
+bblocks:r1.unstable.sosa.features.observationCollection a bblocks:Schema ;
+    rdfs:label "SOSA ObservationCollection" ;
+    bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld> ;
+    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json>,
+        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/development> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/experimental> ;
+    dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification." ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2023-04-28"^^xsd:date ;
+    dct:source [ rdfs:label "Extensions to the Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ],
+        [ rdfs:label "Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
+    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observationCollection/index.md> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-15T22:20:07.002270"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-15T22:20:06.878028"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-15T22:28:17.214623"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-15T22:28:17.054352"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            rdfs:seeAlso <file:///github/workspace/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;

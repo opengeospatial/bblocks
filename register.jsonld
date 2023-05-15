@@ -263,6 +263,42 @@
       "@type": "bblocks:Schema"
     },
     {
+      "name": "Sensor, Observation, Sample, and Actuator (SOSA)",
+      "abstract": "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model",
+      "status": "valid",
+      "dateTimeAddition": "2023-04-13T00:00:00Z",
+      "itemClass": "api",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2023-04-13",
+      "sources": [
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "sosa",
+        "ssn",
+        "o&m",
+        "o&m&s"
+      ],
+      "superBBlock": true,
+      "itemIdentifier": "r1.unstable.sosa",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/",
+      "documentation": [
+        "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md"
+      ],
+      "@type": "bblocks:Api"
+    },
+    {
       "name": "SOSA Observation",
       "abstract": "This building blocks defines an observation according to the SOSA/SSN specification.",
       "status": "valid",
@@ -286,14 +322,55 @@
         "o&m",
         "o&m&s"
       ],
-      "itemIdentifier": "r1.unstable.sosa.observation",
+      "itemIdentifier": "r1.unstable.sosa.features.observation",
       "schema": [
-        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.yaml",
-        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.json"
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json"
       ],
-      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/observation/",
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/",
       "documentation": [
-        "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/observation/index.md"
+        "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md"
+      ],
+      "@type": "bblocks:Schema"
+    },
+    {
+      "name": "SOSA ObservationCollection",
+      "abstract": "This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification.",
+      "status": "experimental",
+      "dateTimeAddition": "2023-04-13T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2023-04-28",
+      "sources": [
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        },
+        {
+          "title": "Extensions to the Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn-ext/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "sosa",
+        "ssn",
+        "observations",
+        "o&m",
+        "o&m&s"
+      ],
+      "itemIdentifier": "r1.unstable.sosa.features.observationCollection",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/",
+      "documentation": [
+        "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observationCollection/index.md"
       ],
       "@type": "bblocks:Schema"
     }
