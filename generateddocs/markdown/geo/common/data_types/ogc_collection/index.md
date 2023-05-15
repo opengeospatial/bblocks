@@ -125,7 +125,7 @@ CRS. Some frequently used coordinate reference systems are:
 
 ## Schema
 
-[schema.yaml](https://avillar.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
+[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/schema.yaml)
 
 ```yaml
 type: object
