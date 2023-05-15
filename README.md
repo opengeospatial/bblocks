@@ -12,7 +12,7 @@ Bootstrap page containing an overview of building blocks and a building blocks r
 
 ## License
 
-This code is released under MIT license.
+This code is released under [Apache 2.0](./LICENSE) license.
 
 ## Contributing
 
