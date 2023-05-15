@@ -7,6 +7,8 @@
 
 bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
     rdfs:label "Bounding Box" ;
+    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json>,
+        <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml> ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -121,14 +123,14 @@ bblocks:r1.unstable.sosa.observation a bblocks:Schema ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/observation/index.md> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-15T18:56:16.130193"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-15T18:56:16.006246"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-15T22:20:07.002270"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-15T22:20:06.878028"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/register.json> ] ;
+            rdfs:seeAlso <file:///github/workspace/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
