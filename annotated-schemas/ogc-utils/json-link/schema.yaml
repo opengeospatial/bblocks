@@ -1,0 +1,26 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: JSON Link
+type: object
+required:
+- href
+- rel
+properties:
+  href:
+    type: string
+    format: uri-reference
+    x-jsonld-id: '@id'
+  rel:
+    type: string
+  anchor:
+    type: string
+  type:
+    type: string
+  hreflang:
+    type: string
+  title:
+    type: string
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
+  length:
+    type: integer
+x-jsonld-prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
