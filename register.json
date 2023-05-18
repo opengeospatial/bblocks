@@ -32,13 +32,35 @@
         "link": ""
       }
     ],
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json"
-    ],
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/",
     "documentation": [
       "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
+    ],
+    "validationPassed": true
+  },
+  {
+    "name": "GeoJSON",
+    "abstract": "A GeoJSON object",
+    "status": "valid",
+    "dateTimeAddition": "2023-05-24T14:56:51+00:00",
+    "itemClass": "schema",
+    "register": "ogc-building-block-register",
+    "version": "1.0",
+    "dateOfLastChange": "2023-05-15",
+    "sources": [
+      {
+        "title": "IETF RFC 7946 - The GeoJSON Format",
+        "link": "https://datatracker.ietf.org/doc/html/rfc7946"
+      }
+    ],
+    "schema": "https://geojson.org/schema/Feature.json",
+    "ldContext": "https://geojson.org/geojson-ld/geojson-context.jsonld",
+    "maturity": "mature",
+    "scope": "geo",
+    "itemIdentifier": "r1.geo.common.data_types.geojson",
+    "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/",
+    "documentation": [
+      "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/geojson/index.md"
     ],
     "validationPassed": true
   },
@@ -61,10 +83,6 @@
     ],
     "maturity": "mature",
     "scope": "geo",
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.json"
-    ],
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/",
     "documentation": [
       "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md"
@@ -89,10 +107,6 @@
         "title": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response",
         "link": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
       }
-    ],
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.json"
     ],
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/ogc_collections/",
     "documentation": [
@@ -119,13 +133,39 @@
     ],
     "maturity": "mature",
     "scope": "geo",
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json"
-    ],
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
     "documentation": [
       "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md"
+    ],
+    "validationPassed": true
+  },
+  {
+    "name": "Feature",
+    "abstract": "A feature. Every feature is a sub-resource of an OGC Collection.",
+    "status": "valid",
+    "dateTimeAddition": "2023-05-24T14:56:51+00:00",
+    "itemClass": "schema",
+    "register": "ogc-building-block-register",
+    "version": "1.0",
+    "dateOfLastChange": "2023-05-15",
+    "sources": [
+      {
+        "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
+        "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+      },
+      {
+        "title": "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals",
+        "link": "https://www.iso.org/standard/59164.html"
+      }
+    ],
+    "schema": "https://geojson.org/schema/Feature.json",
+    "ldContext": "https://geojson.org/geojson-ld/geojson-context.jsonld",
+    "maturity": "mature",
+    "scope": "geo",
+    "itemIdentifier": "r1.geo.features.feature",
+    "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/",
+    "documentation": [
+      "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md"
     ],
     "validationPassed": true
   },
@@ -146,11 +186,8 @@
     ],
     "maturity": "proposal",
     "scope": "geo",
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json"
-    ],
-    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld",
+    "schema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Euler.Schema.json",
+    "ldContext": "../context.jsonld",
     "itemIdentifier": "r1.geo.geopose.basic-euler",
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-euler/",
     "documentation": [
@@ -175,11 +212,8 @@
     ],
     "maturity": "proposal",
     "scope": "geo",
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json"
-    ],
-    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld",
+    "schema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json",
+    "ldContext": "../context.jsonld",
     "itemIdentifier": "r1.geo.geopose.basic-ypr",
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-ypr/",
     "documentation": [
@@ -188,38 +222,26 @@
     "validationPassed": true
   },
   {
-    "name": "Sensor, Observation, Sample, and Actuator (SOSA)",
-    "abstract": "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model",
+    "name": "JSON Link",
+    "abstract": "Web linking according to <a href=''></a> is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API\u2019s.",
     "status": "valid",
-    "dateTimeAddition": "2023-04-13T00:00:00Z",
-    "itemClass": "api",
+    "dateTimeAddition": "2022-05-18T15:21:59+00:00",
+    "itemClass": "schema",
     "register": "ogc-building-block-register",
-    "version": "1.0",
-    "dateOfLastChange": "2023-04-13",
+    "version": "0.1",
+    "dateOfLastChange": "2022-05-18",
     "sources": [
       {
-        "title": "Semantic Sensor Network Ontology",
-        "link": "https://www.w3.org/TR/vocab-ssn/"
+        "title": "IETF RFC 8288 - Web Linking",
+        "link": "https://www.rfc-editor.org/rfc/rfc8288.txt"
       }
     ],
     "maturity": "mature",
-    "scope": "unstable",
-    "tags": [
-      "sosa",
-      "ssn",
-      "o&m",
-      "o&m&s"
-    ],
-    "superBBlock": true,
-    "itemIdentifier": "r1.unstable.sosa",
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json"
-    ],
-    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld",
-    "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/",
+    "scope": "ogc-utils",
+    "itemIdentifier": "r1.ogc-utils.json-link",
+    "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/",
     "documentation": [
-      "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md"
+      "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md"
     ],
     "validationPassed": true
   },
@@ -248,11 +270,6 @@
       "o&m&s"
     ],
     "itemIdentifier": "r1.unstable.sosa.features.observation",
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json"
-    ],
-    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld",
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/",
     "documentation": [
       "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md"
@@ -288,15 +305,45 @@
       "o&m&s"
     ],
     "itemIdentifier": "r1.unstable.sosa.features.observationCollection",
-    "schema": [
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
-      "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json"
-    ],
-    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld",
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/",
     "documentation": [
       "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observationCollection/index.md"
     ],
     "validationPassed": false
+  },
+  {
+    "name": "Sensor, Observation, Sample, and Actuator (SOSA)",
+    "abstract": "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model",
+    "status": "valid",
+    "dateTimeAddition": "2023-04-13T00:00:00Z",
+    "itemClass": "api",
+    "register": "ogc-building-block-register",
+    "version": "1.0",
+    "dateOfLastChange": "2023-04-13",
+    "sources": [
+      {
+        "title": "Semantic Sensor Network Ontology",
+        "link": "https://www.w3.org/TR/vocab-ssn/"
+      }
+    ],
+    "maturity": "mature",
+    "scope": "unstable",
+    "tags": [
+      "sosa",
+      "ssn",
+      "o&m",
+      "o&m&s"
+    ],
+    "superBBlock": true,
+    "itemIdentifier": "r1.unstable.sosa",
+    "schema": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json"
+    ],
+    "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/",
+    "documentation": [
+      "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md"
+    ],
+    "validationPassed": true
   }
 ]

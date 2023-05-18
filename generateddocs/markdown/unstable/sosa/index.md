@@ -23,7 +23,7 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Sensor, Observation, Sample, and Actuator (SOSA)
-oneOf:
+anyOf:
 - description: SOSA Observation
   x-jsonld-context: ../../../sosa-ssn.jsonld
   type: object
