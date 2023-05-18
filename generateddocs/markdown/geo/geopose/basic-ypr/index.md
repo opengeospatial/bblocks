@@ -60,6 +60,13 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 ```
 
+## Schema
+
+[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-ypr/schema.yaml)
+
+```yaml
+None
+```
 ## Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)
