@@ -107,6 +107,10 @@
           "link": ""
         }
       ],
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json"
+      ],
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/",
       "documentation": [
         "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
@@ -129,8 +133,11 @@
           "link": "https://datatracker.ietf.org/doc/html/rfc7946"
         }
       ],
-      "schema": "https://geojson.org/schema/Feature.json",
-      "ldContext": "https://geojson.org/geojson-ld/geojson-context.jsonld",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld",
       "maturity": "mature",
       "scope": "geo",
       "itemIdentifier": "r1.geo.common.data_types.geojson",
@@ -160,6 +167,10 @@
       ],
       "maturity": "mature",
       "scope": "geo",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.json"
+      ],
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/ogc_collection/",
       "documentation": [
         "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md"
@@ -185,6 +196,10 @@
           "title": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response",
           "link": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
         }
+      ],
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.json"
       ],
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/ogc_collections/",
       "documentation": [
@@ -212,6 +227,10 @@
       ],
       "maturity": "mature",
       "scope": "geo",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json"
+      ],
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
       "documentation": [
         "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md"
@@ -238,8 +257,11 @@
           "link": "https://www.iso.org/standard/59164.html"
         }
       ],
-      "schema": "https://geojson.org/schema/Feature.json",
-      "ldContext": "https://geojson.org/geojson-ld/geojson-context.jsonld",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
       "maturity": "mature",
       "scope": "geo",
       "itemIdentifier": "r1.geo.features.feature",
@@ -267,8 +289,11 @@
       ],
       "maturity": "proposal",
       "scope": "geo",
-      "schema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Euler.Schema.json",
-      "ldContext": "../context.jsonld",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld",
       "itemIdentifier": "r1.geo.geopose.basic-euler",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-euler/",
       "documentation": [
@@ -294,8 +319,11 @@
       ],
       "maturity": "proposal",
       "scope": "geo",
-      "schema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json",
-      "ldContext": "../context.jsonld",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld",
       "itemIdentifier": "r1.geo.geopose.basic-ypr",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-ypr/",
       "documentation": [
@@ -322,6 +350,11 @@
       "maturity": "mature",
       "scope": "ogc-utils",
       "itemIdentifier": "r1.ogc-utils.json-link",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/",
       "documentation": [
         "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md"
@@ -354,6 +387,11 @@
         "o&m&s"
       ],
       "itemIdentifier": "r1.unstable.sosa.features.observation",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/",
       "documentation": [
         "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md"
@@ -390,6 +428,11 @@
         "o&m&s"
       ],
       "itemIdentifier": "r1.unstable.sosa.features.observationCollection",
+      "schema": [
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
+        "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json"
+      ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/",
       "documentation": [
         "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observationCollection/index.md"
@@ -426,6 +469,7 @@
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml",
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json"
       ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/",
       "documentation": [
         "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md"
