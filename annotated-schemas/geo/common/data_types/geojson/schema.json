@@ -55,21 +55,24 @@
               "type": "string",
               "enum": [
                 "Point"
-              ]
+              ],
+              "x-jsonld-id": "@type"
             },
             "coordinates": {
               "type": "array",
               "minItems": 2,
               "items": {
                 "type": "number"
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
             },
             "bbox": {
               "type": "array",
               "minItems": 4,
               "items": {
                 "type": "number"
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
             }
           }
         },
@@ -85,7 +88,8 @@
               "type": "string",
               "enum": [
                 "LineString"
-              ]
+              ],
+              "x-jsonld-id": "@type"
             },
             "coordinates": {
               "type": "array",
@@ -96,14 +100,16 @@
                 "items": {
                   "type": "number"
                 }
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
             },
             "bbox": {
               "type": "array",
               "minItems": 4,
               "items": {
                 "type": "number"
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
             }
           }
         },
@@ -119,7 +125,8 @@
               "type": "string",
               "enum": [
                 "Polygon"
-              ]
+              ],
+              "x-jsonld-id": "@type"
             },
             "coordinates": {
               "type": "array",
@@ -133,14 +140,16 @@
                     "type": "number"
                   }
                 }
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
             },
             "bbox": {
               "type": "array",
               "minItems": 4,
               "items": {
                 "type": "number"
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
             }
           }
         },
@@ -156,7 +165,8 @@
               "type": "string",
               "enum": [
                 "MultiPoint"
-              ]
+              ],
+              "x-jsonld-id": "@type"
             },
             "coordinates": {
               "type": "array",
@@ -166,14 +176,16 @@
                 "items": {
                   "type": "number"
                 }
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
             },
             "bbox": {
               "type": "array",
               "minItems": 4,
               "items": {
                 "type": "number"
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
             }
           }
         },
@@ -189,7 +201,8 @@
               "type": "string",
               "enum": [
                 "MultiLineString"
-              ]
+              ],
+              "x-jsonld-id": "@type"
             },
             "coordinates": {
               "type": "array",
@@ -203,14 +216,16 @@
                     "type": "number"
                   }
                 }
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
             },
             "bbox": {
               "type": "array",
               "minItems": 4,
               "items": {
                 "type": "number"
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
             }
           }
         },
@@ -226,7 +241,8 @@
               "type": "string",
               "enum": [
                 "MultiPolygon"
-              ]
+              ],
+              "x-jsonld-id": "@type"
             },
             "coordinates": {
               "type": "array",
@@ -243,14 +259,16 @@
                     }
                   }
                 }
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
             },
             "bbox": {
               "type": "array",
               "minItems": 4,
               "items": {
                 "type": "number"
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
             }
           }
         },
@@ -266,7 +284,8 @@
               "type": "string",
               "enum": [
                 "GeometryCollection"
-              ]
+              ],
+              "x-jsonld-id": "@type"
             },
             "geometries": {
               "type": "array",
@@ -284,21 +303,24 @@
                         "type": "string",
                         "enum": [
                           "Point"
-                        ]
+                        ],
+                        "x-jsonld-id": "@type"
                       },
                       "coordinates": {
                         "type": "array",
                         "minItems": 2,
                         "items": {
                           "type": "number"
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
                       },
                       "bbox": {
                         "type": "array",
                         "minItems": 4,
                         "items": {
                           "type": "number"
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
                       }
                     }
                   },
@@ -314,7 +336,8 @@
                         "type": "string",
                         "enum": [
                           "LineString"
-                        ]
+                        ],
+                        "x-jsonld-id": "@type"
                       },
                       "coordinates": {
                         "type": "array",
@@ -325,14 +348,16 @@
                           "items": {
                             "type": "number"
                           }
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
                       },
                       "bbox": {
                         "type": "array",
                         "minItems": 4,
                         "items": {
                           "type": "number"
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
                       }
                     }
                   },
@@ -348,7 +373,8 @@
                         "type": "string",
                         "enum": [
                           "Polygon"
-                        ]
+                        ],
+                        "x-jsonld-id": "@type"
                       },
                       "coordinates": {
                         "type": "array",
@@ -362,14 +388,16 @@
                               "type": "number"
                             }
                           }
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
                       },
                       "bbox": {
                         "type": "array",
                         "minItems": 4,
                         "items": {
                           "type": "number"
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
                       }
                     }
                   },
@@ -385,7 +413,8 @@
                         "type": "string",
                         "enum": [
                           "MultiPoint"
-                        ]
+                        ],
+                        "x-jsonld-id": "@type"
                       },
                       "coordinates": {
                         "type": "array",
@@ -395,14 +424,16 @@
                           "items": {
                             "type": "number"
                           }
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
                       },
                       "bbox": {
                         "type": "array",
                         "minItems": 4,
                         "items": {
                           "type": "number"
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
                       }
                     }
                   },
@@ -418,7 +449,8 @@
                         "type": "string",
                         "enum": [
                           "MultiLineString"
-                        ]
+                        ],
+                        "x-jsonld-id": "@type"
                       },
                       "coordinates": {
                         "type": "array",
@@ -432,14 +464,16 @@
                               "type": "number"
                             }
                           }
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
                       },
                       "bbox": {
                         "type": "array",
                         "minItems": 4,
                         "items": {
                           "type": "number"
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
                       }
                     }
                   },
@@ -455,7 +489,8 @@
                         "type": "string",
                         "enum": [
                           "MultiPolygon"
-                        ]
+                        ],
+                        "x-jsonld-id": "@type"
                       },
                       "coordinates": {
                         "type": "array",
@@ -472,14 +507,16 @@
                               }
                             }
                           }
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
                       },
                       "bbox": {
                         "type": "array",
                         "minItems": 4,
                         "items": {
                           "type": "number"
-                        }
+                        },
+                        "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
                       }
                     }
                   }
@@ -491,7 +528,8 @@
               "minItems": 4,
               "items": {
                 "type": "number"
-              }
+              },
+              "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
             }
           }
         }
