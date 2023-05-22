@@ -15,6 +15,10 @@ This building blocks defines a GeoJSON feature containing a SOSA Observation
   "@id": "_:a1",
   "type": "Feature",
   "featureType": "sosa:Observation",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [43.457475012484124, -3.7684047847661435]
+  },
   "properties": {
     "hasFeatureOfInterest": "http://example.com/fois/1",
     "hasSimpleResult": 33,
@@ -47,7 +51,10 @@ description: SOSA Observation Feature
 type: object
 allOf:
 - $ref: ../../../../geo/features/feature/schema.yaml
-- $ref: ../../properties/observation/schema.yaml
+- type: object
+  properties:
+    properties:
+      $ref: ../../properties/observation/schema.yaml
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn: http://www.w3.org/ns/ssn/

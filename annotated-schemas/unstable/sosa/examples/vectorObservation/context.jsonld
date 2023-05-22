@@ -3,7 +3,14 @@
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "http://www.w3.org/ns/ssn/systems/",
-    "hasResult": "sosa:hasResult",
+    "hasResult": {
+      "@context": {
+        "distance": {
+          "@id": "http://example.com/properties/distance",
+          "@type": "http://www.w3.org/2001/XMLSchema#float"
+        }
+      }
+    },
     "hasSimpleResult": "sosa:hasSimpleResult",
     "resultTime": "sosa:resultTime",
     "phenomenonTime": "sosa:phenomenonTime",
@@ -29,20 +36,6 @@
     "roll": "geopose:roll",
     "lat": "geopose:lat",
     "lon": "geopose:lon",
-    "h": "geopose:h",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "geojson": "https://purl.org/geojson/vocab#",
-    "type": "@type",
-    "id": "@id",
-    "properties": "geojson:properties",
-    "geometry": {
-      "@context": {
-        "type": "@type",
-        "coordinates": "geojson:coordinates"
-      },
-      "@id": "geojson:geometry"
-    },
-    "bbox": "geojson:bbox",
-    "links": "rdfs:seeAlso"
+    "h": "geopose:h"
   }
 }

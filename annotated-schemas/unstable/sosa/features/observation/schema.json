@@ -7,7 +7,12 @@
       "$ref": "../../../../geo/features/feature/schema.json"
     },
     {
-      "$ref": "../../properties/observation/schema.json"
+      "type": "object",
+      "properties": {
+        "properties": {
+          "$ref": "../../properties/observation/schema.json"
+        }
+      }
     }
   ],
   "x-jsonld-prefixes": {

@@ -159,6 +159,40 @@ bblocks:ogc.unstable.sosa a bblocks:Api ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md> .
 
+bblocks:ogc.unstable.sosa.examples.vectorObservation a bblocks:Schema ;
+    rdfs:label "Example SOSA Vector Observation" ;
+    bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/context.jsonld> ;
+    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.json>,
+        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/notAccepted> ;
+    dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "This building block defines an example SOSA Vector Observation" ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2023-05-19"^^xsd:date ;
+    dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
+    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservation/index.md> .
+
+bblocks:ogc.unstable.sosa.examples.vectorObservationFeature a bblocks:Schema ;
+    rdfs:label "Example SOSA Vector Observation Feature" ;
+    bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld> ;
+    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json>,
+        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml> ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/notAccepted> ;
+    dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "This building block defines an example SOSA Observation Feature for a Vector Observation" ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2023-05-19"^^xsd:date ;
+    dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
+    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservationFeature/index.md> .
+
 bblocks:ogc.unstable.sosa.features.observation a bblocks:Schema ;
     rdfs:label "SOSA Observation Feature" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld> ;
@@ -213,8 +247,8 @@ bblocks:ogc.unstable.sosa.properties.observationCollection a bblocks:Schema ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-22T15:35:11.496548"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-22T15:35:11.352320"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-22T20:49:16.105053"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-22T20:49:15.982695"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
             rdfs:seeAlso <file:///github/workspace/register.json> ],
