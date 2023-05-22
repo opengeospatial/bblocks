@@ -5,7 +5,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
+bblocks:ogc.geo.common.data_types.bounding_box a bblocks:Schema ;
     rdfs:label "Bounding Box" ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml> ;
@@ -21,7 +21,7 @@ bblocks:r1.geo.common.data_types.bounding_box a bblocks:Schema ;
             rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md> .
 
-bblocks:r1.geo.common.data_types.geojson a bblocks:Schema ;
+bblocks:ogc.geo.common.data_types.geojson a bblocks:Schema ;
     rdfs:label "GeoJSON" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json>,
@@ -38,7 +38,7 @@ bblocks:r1.geo.common.data_types.geojson a bblocks:Schema ;
             rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc7946> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/geojson/index.md> .
 
-bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
+bblocks:ogc.geo.common.data_types.ogc_collection a bblocks:Schema ;
     rdfs:label "OGC Collection" ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collection/schema.yaml> ;
@@ -55,7 +55,7 @@ bblocks:r1.geo.common.data_types.ogc_collection a bblocks:Schema ;
     rdfs:seeAlso <https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collection.adoc>,
         <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collection/index.md> .
 
-bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
+bblocks:ogc.geo.common.data_types.ogc_collections a bblocks:Schema ;
     rdfs:label "OGC Collections" ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml> ;
@@ -72,7 +72,7 @@ bblocks:r1.geo.common.data_types.ogc_collections a bblocks:Schema ;
     rdfs:seeAlso <https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collections.adoc>,
         <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md> .
 
-bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
+bblocks:ogc.geo.common.parameters.bbox a bblocks:Parameter ;
     rdfs:label "bbox" ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml> ;
@@ -89,7 +89,7 @@ bblocks:r1.geo.common.parameters.bbox a bblocks:Parameter ;
     rdfs:seeAlso <https://doublebyte1.github.io/slate/>,
         <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md> .
 
-bblocks:r1.geo.features.feature a bblocks:Schema ;
+bblocks:ogc.geo.features.feature a bblocks:Schema ;
     rdfs:label "Feature" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json>,
@@ -102,13 +102,13 @@ bblocks:r1.geo.features.feature a bblocks:Schema ;
     dct:description "A feature. Every feature is a sub-resource of an OGC Collection." ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-15"^^xsd:date ;
-    dct:source [ rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" ;
-            rdfs:seeAlso <https://www.iso.org/standard/59164.html> ],
-        [ rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" ;
-            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ] ;
+    dct:source [ rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" ;
+            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ],
+        [ rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" ;
+            rdfs:seeAlso <https://www.iso.org/standard/59164.html> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md> .
 
-bblocks:r1.geo.geopose.basic-euler a bblocks:Schema ;
+bblocks:ogc.geo.geopose.basic-euler a bblocks:Schema ;
     rdfs:label "GeoPose Basic-Euler" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json>,
@@ -125,7 +125,7 @@ bblocks:r1.geo.geopose.basic-euler a bblocks:Schema ;
             rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-euler/index.md> .
 
-bblocks:r1.geo.geopose.basic-ypr a bblocks:Schema ;
+bblocks:ogc.geo.geopose.basic-ypr a bblocks:Schema ;
     rdfs:label "GeoPose Basic-YPR" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json>,
@@ -142,7 +142,7 @@ bblocks:r1.geo.geopose.basic-ypr a bblocks:Schema ;
             rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-ypr/index.md> .
 
-bblocks:r1.ogc-utils.json-link a bblocks:Schema ;
+bblocks:ogc.ogc-utils.json-link a bblocks:Schema ;
     rdfs:label "JSON Link" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json>,
@@ -159,7 +159,7 @@ bblocks:r1.ogc-utils.json-link a bblocks:Schema ;
             rdfs:seeAlso <https://www.rfc-editor.org/rfc/rfc8288.txt> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md> .
 
-bblocks:r1.unstable.sosa a bblocks:Api ;
+bblocks:ogc.unstable.sosa a bblocks:Api ;
     rdfs:label "Sensor, Observation, Sample, and Actuator (SOSA)" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json>,
@@ -176,7 +176,7 @@ bblocks:r1.unstable.sosa a bblocks:Api ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md> .
 
-bblocks:r1.unstable.sosa.features.observation a bblocks:Schema ;
+bblocks:ogc.unstable.sosa.features.observation a bblocks:Schema ;
     rdfs:label "SOSA Observation Feature" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json>,
@@ -193,7 +193,7 @@ bblocks:r1.unstable.sosa.features.observation a bblocks:Schema ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md> .
 
-bblocks:r1.unstable.sosa.properties.observation a bblocks:Schema ;
+bblocks:ogc.unstable.sosa.properties.observation a bblocks:Schema ;
     rdfs:label "SOSA Observation" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.json>,
@@ -203,14 +203,14 @@ bblocks:r1.unstable.sosa.properties.observation a bblocks:Schema ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/valid> ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description "This building blocks defines an observation according to the SOSA/SSN specification." ;
+    dct:description "This building block defines the set of properties for an observation according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature." ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observation/index.md> .
 
-bblocks:r1.unstable.sosa.properties.observationCollection a bblocks:Schema ;
+bblocks:ogc.unstable.sosa.properties.observationCollection a bblocks:Schema ;
     rdfs:label "SOSA ObservationCollection" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.json>,
@@ -230,8 +230,8 @@ bblocks:r1.unstable.sosa.properties.observationCollection a bblocks:Schema ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-19T07:24:16.690842"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-19T07:24:16.566910"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-22T09:13:49.062054"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-22T09:13:48.916363"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
             rdfs:seeAlso <file:///github/workspace/register.json> ],
