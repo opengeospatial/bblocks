@@ -6,3 +6,9 @@ allOf:
         type: array
         items:
           $ref: bblocks://r1.ogc-utils.json-link
+      type:
+        const: Feature
+    required:
+      - type
+      - geometry
+      - properties
