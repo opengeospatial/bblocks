@@ -3,9 +3,6 @@ name: Process Building Blocks
 on:
   push:
     branches: [master]
-  pull_request:
-    types: [closed]
-    branches: [master]
   workflow_dispatch:
 
 jobs:
@@ -28,6 +25,7 @@ jobs:
           base_url: https://${{ github.event.repository.owner.login }}.github.io/${{github.event.repository.name}}/
           fail_on_error: 'false'
           clean: 'true'
+          test_outputs_path: tests
       - name: Add & Commit
         if: ${{ !endsWith(github.repository, '/bblock-template') }}
         uses: EndBug/add-and-commit@v9
