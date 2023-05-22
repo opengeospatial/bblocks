@@ -61,7 +61,7 @@ fetch(url + `bbox=${bbox.join(',')}`)
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/schema.yaml)
+[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml)
 
 ```yaml
 name: bbox

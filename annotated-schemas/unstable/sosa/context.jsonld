@@ -6,31 +6,32 @@
     "id": "@id",
     "properties": "geojson:properties",
     "geometry": {
-      "@id": "geojson:geometry",
       "@context": {
+        "type": "@type",
         "coordinates": "geojson:coordinates"
-      }
+      },
+      "@id": "geojson:geometry"
     },
     "bbox": "geojson:bbox",
     "links": "rdfs:seeAlso",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "http://www.w3.org/ns/ssn/systems/",
-    "hasResult": "http://www.w3.org/ns/sosa/hasResult",
-    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
-    "resultTime": "http://www.w3.org/ns/sosa/resultTime",
-    "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
+    "hasResult": "sosa:hasResult",
+    "hasSimpleResult": "sosa:hasSimpleResult",
+    "resultTime": "sosa:resultTime",
+    "phenomenonTime": "sosa:phenomenonTime",
     "hasFeatureOfInterest": {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "observedProperty": "http://www.w3.org/ns/sosa/observedProperty",
+    "observedProperty": "sosa:observedProperty",
     "usedProcedure": {
-      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@id": "sosa:usedProcedure",
       "@type": "@id"
     },
     "madeBySensor": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@id": "sosa:madeBySensor",
       "@type": "@id"
     }
   }

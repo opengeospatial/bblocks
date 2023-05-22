@@ -39,16 +39,20 @@ _:a1 a geojson:Feature;
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/schema.yaml)
+[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml)
 
 ```yaml
-"$schema": https://json-schema.org/draft/2020-12/schema
-description: 'SOSA Observation Feature'
-x-jsonld-context: ../../../sosa-ssn.jsonld
+$schema: https://json-schema.org/draft/2020-12/schema
+description: SOSA Observation Feature
 type: object
 allOf:
-  - $ref: bblocks://r1.geo.features.feature
-  - $ref: ../../properties/observation/schema.yaml
+- $ref: ../../../../geo/features/feature/schema.yaml
+- $ref: ../../properties/observation/schema.yaml
+x-jsonld-prefixes:
+  sosa: http://www.w3.org/ns/sosa/
+  ssn: http://www.w3.org/ns/ssn/
+  ssn-system: http://www.w3.org/ns/ssn/systems/
+
 ```
 ## Sources
 

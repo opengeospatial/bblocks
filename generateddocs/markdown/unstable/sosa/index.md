@@ -18,7 +18,7 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/schema.yaml)
+[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml)
 
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
@@ -26,41 +26,54 @@ description: Sensor, Observation, Sample, and Actuator (SOSA)
 anyOf:
 - $schema: https://json-schema.org/draft/2020-12/schema
   description: SOSA Observation Feature
-  x-jsonld-context: ../../../sosa-ssn.jsonld
   type: object
   allOf:
-  - $ref: bblocks://r1.geo.features.feature
+  - $ref: ../../geo/features/feature/schema.yaml
   - $ref: properties/observation/schema.yaml
+  x-jsonld-prefixes:
+    sosa: http://www.w3.org/ns/sosa/
+    ssn: http://www.w3.org/ns/ssn/
+    ssn-system: http://www.w3.org/ns/ssn/systems/
 - $schema: https://json-schema.org/draft/2020-12/schema
   description: SOSA Observation
-  x-jsonld-context: ../../../sosa-ssn.jsonld
   type: object
   properties:
-    hasResult: {}
-    hasSimpleResult: {}
+    hasResult:
+      x-jsonld-id: http://www.w3.org/ns/sosa/hasResult
+    hasSimpleResult:
+      x-jsonld-id: http://www.w3.org/ns/sosa/hasSimpleResult
     resultTime:
       type: string
       format: date-time
+      x-jsonld-id: http://www.w3.org/ns/sosa/resultTime
     phenomenonTime:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/phenomenonTime
     hasFeatureOfInterest:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+      x-jsonld-type: '@id'
     observedProperty:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
     usedProcedure:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
+      x-jsonld-type: '@id'
     madeBySensor:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
+      x-jsonld-type: '@id'
   required:
   - resultTime
   - hasFeatureOfInterest
@@ -69,9 +82,12 @@ anyOf:
     - hasResult
   - required:
     - hasSimpleResult
+  x-jsonld-prefixes:
+    sosa: http://www.w3.org/ns/sosa/
+    ssn: http://www.w3.org/ns/ssn/
+    ssn-system: http://www.w3.org/ns/ssn/systems/
 - $schema: https://json-schema.org/draft/2020-12/schema
   description: SOSA ObservationCollection
-  x-jsonld-context: ../../../sosa-ssn.jsonld
   type: object
   properties:
     observations:
@@ -93,6 +109,10 @@ anyOf:
       - hasResult
     - required:
       - hasSimpleResult
+  x-jsonld-prefixes:
+    sosa: http://www.w3.org/ns/sosa/
+    ssn: http://www.w3.org/ns/ssn/
+    ssn-system: http://www.w3.org/ns/ssn/systems/
 
 ```
 ## Sources

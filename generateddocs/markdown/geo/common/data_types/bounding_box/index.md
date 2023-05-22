@@ -44,7 +44,7 @@ The text representation of a bounding box is based on the JSON representation an
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/schema.yaml)
+[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml)
 
 ```yaml
 type: array

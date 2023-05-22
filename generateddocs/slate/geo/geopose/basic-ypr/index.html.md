@@ -55,6 +55,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "roll": 0.0
   }
 }
+
 ```
 
 
@@ -73,6 +74,45 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "roll": 0.0
   }
 }
+
+```
+
+
+## Example 3
+
+```json
+{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.522894747595089,
+    "pitch": -0.4401787262476278,
+    "roll": 0.0
+  }
+}
+
+```
+
+
+## Example 4
+
+```json
+{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.527127708845192,
+    "pitch": -0.44220204512692407,
+    "roll": 0.0
+  }
+}
+
 ```
 
 # Schema

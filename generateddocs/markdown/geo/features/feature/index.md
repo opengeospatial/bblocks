@@ -21,17 +21,26 @@ Each GeoJSON feature includes the following JSON members:
 * `properties`: an object with a member for each feature property.
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/schema.yaml)
+[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml)
 
 ```yaml
 allOf:
-  - $ref: bblocks://r1.geo.common.data_types.geojson
-  - type: object
-    properties:
-      links:
-        type: array
-        items:
-          $ref: bblocks://r1.ogc-utils.json-link
+- $ref: ../../common/data_types/geojson/schema.yaml
+- type: object
+  properties:
+    links:
+      type: array
+      items:
+        $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    type:
+      const: Feature
+  required:
+  - type
+  - geometry
+  - properties
+x-jsonld-prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
 
 ```
 ## Sources

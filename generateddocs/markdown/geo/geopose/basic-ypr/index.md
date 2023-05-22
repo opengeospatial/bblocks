@@ -40,6 +40,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "roll": 0.0
   }
 }
+
 ```
 
 
@@ -58,14 +59,102 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "roll": 0.0
   }
 }
+
+```
+
+
+### Example 3
+#### json
+```json
+{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.522894747595089,
+    "pitch": -0.4401787262476278,
+    "roll": 0.0
+  }
+}
+
+```
+
+
+### Example 4
+#### json
+```json
+{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.527127708845192,
+    "pitch": -0.44220204512692407,
+    "roll": 0.0
+  }
+}
+
 ```
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-ypr/schema.yaml)
+[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml)
 
 ```yaml
-None
+description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'
+definitions:
+  angles:
+    type: object
+    properties:
+      yaw:
+        type: number
+        x-jsonld-id: http://example.com/geopose/yaw
+      pitch:
+        type: number
+        x-jsonld-id: http://example.com/geopose/pitch
+      roll:
+        type: number
+        x-jsonld-id: http://example.com/geopose/roll
+    required:
+    - yaw
+    - pitch
+    - roll
+  Position:
+    type: object
+    properties:
+      lat:
+        type: number
+        x-jsonld-id: http://example.com/geopose/lat
+      lon:
+        type: number
+        x-jsonld-id: http://example.com/geopose/lon
+      h:
+        type: number
+        x-jsonld-id: http://example.com/geopose/h
+    required:
+    - lat
+    - lon
+    - h
+type: object
+properties:
+  position:
+    $ref: '#/definitions/Position'
+    x-jsonld-id: http://example.com/geopose/position
+  angles:
+    $ref: '#/definitions/angles'
+    x-jsonld-id: http://example.com/geopose/angles
+required:
+- position
+- angles
+x-jsonld-prefixes:
+  geopose: http://example.com/geopose/
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+$id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json
+
 ```
 ## Sources
 

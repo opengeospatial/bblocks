@@ -5,10 +5,11 @@
     "id": "@id",
     "properties": "geojson:properties",
     "geometry": {
-      "@id": "geojson:geometry",
       "@context": {
+        "type": "@type",
         "coordinates": "geojson:coordinates"
-      }
+      },
+      "@id": "geojson:geometry"
     },
     "bbox": "geojson:bbox"
   }
