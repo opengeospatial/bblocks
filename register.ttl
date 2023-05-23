@@ -93,10 +93,10 @@ bblocks:ogc.geo.features.feature a bblocks:Schema ;
     dct:description "A feature. Every feature is a sub-resource of an OGC Collection." ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-15"^^xsd:date ;
-    dct:source [ rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" ;
-            rdfs:seeAlso <https://www.iso.org/standard/59164.html> ],
-        [ rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" ;
-            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ] ;
+    dct:source [ rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" ;
+            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ],
+        [ rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" ;
+            rdfs:seeAlso <https://www.iso.org/standard/59164.html> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/feature/index.json>,
         <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md>,
         <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/feature/> .
@@ -287,23 +287,23 @@ bblocks:ogc.unstable.sosa.properties.observationCollection a bblocks:Schema ;
     dct:description "This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification." ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-28"^^xsd:date ;
-    dct:source [ rdfs:label "Extensions to the Semantic Sensor Network Ontology" ;
-            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ],
-        [ rdfs:label "Semantic Sensor Network Ontology" ;
-            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
+    dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ],
+        [ rdfs:label "Extensions to the Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ] ;
     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json>,
         <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md>,
         <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observationCollection/> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-23T10:13:06.740630"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-23T10:13:06.613327"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-23T10:23:29.488125"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-23T10:23:29.363609"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/register.json> ] ;
+            rdfs:seeAlso <file:///github/workspace/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
