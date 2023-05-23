@@ -162,8 +162,7 @@ function LoadProjectsFromJson(projectSettings) {
         // Create p containing description
             var description = document.createElement("a");
             description.classList.add("project-text");
-            var descriptionContent = document.createTextNode(newProject.abstract);
-            description.appendChild(descriptionContent);
+            description.innerHTML=newProject.abstract;
             parent.appendChild(description);
             // Create div containing label badges
             var badgeParent = document.createElement("div");
