@@ -139,7 +139,7 @@ function LoadProjectsFromJson(projectSettings) {
             bigParent.appendChild(parent);
             // Create a containing title
             var title = document.createElement("a");
-            title.href = newProject.link;
+            title.href = newProject.documentation[2];
             title.setAttribute("target", "_blank");
             title.classList.add("project-title");
             var titleContent = document.createTextNode(newProject.name);
@@ -149,14 +149,6 @@ function LoadProjectsFromJson(projectSettings) {
             
             var linksParent = document.createElement("div");
             linksParent.classList.add("proj-small-link-parent");
-
-            var link = document.createElement("a");
-            link.href = newProject.link;
-            link.setAttribute("target", "_blank");
-            link.classList.add("proj-small-link");
-            // var linkContent = document.createTextNode("Details");
-            // link.appendChild(linkContent);
-            linksParent.appendChild(link);
             
             parent.appendChild(linksParent);
         // Create p containing description
