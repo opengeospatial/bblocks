@@ -35,33 +35,26 @@ Collection of one or more observations, whose members share a common value for o
 
 ```json
 { 
-  "@id": "c1",
-  "type": "Feature",
-  "featureType": "sosa:ObservationCollection",
-  "properties": {
-    "hasMember": "_:a1",
-    "observedProperty": "_:p1",
-    "resultTime": "2022-05-01T22:33:44Z"
-  },
+  "hasMember": [
+    "_:a1"
+  ],
+  "observedProperty": "_:p1",
+  "resultTime": "2022-05-01T22:33:44Z"
 }
 ```
 
 ```json
 { 
-  "@id": "c1",
-  "type": "Feature",
-  "featureType": "sosa:ObservationCollection",
-  "properties": {
-    "observedProperty": "p1",
-    "resultTime": "2022-05-01T22:33:44Z",
-    "hasMember": [
-      { 
-        "@id": "a1",
-        "comment": "Example of an inline membership - would entail hasMember relations",
-        "hasFeatureOfInterest": "http://example.com/fois/1",
-      }
-    ]
-  },
+  "observedProperty": "p1",
+  "resultTime": "2022-05-01T22:33:44Z",
+  "hasMember": [
+    { 
+      "@id": "a1",
+      "comment": "Example of an inline membership - would entail hasMember relations",
+      "hasFeatureOfInterest": "http://example.com/fois/1",
+      "hasSimpleResult": 1995.2,
+    }
+  ]
 }
 ```
 
@@ -69,6 +62,7 @@ Collection of one or more observations, whose members share a common value for o
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix eg: <http://example.org/my-feature/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 eg:c1 a sosa:ObservationCollection ;
   sosa:hasMember eg:a1 ;
