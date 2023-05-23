@@ -176,7 +176,7 @@ function LoadProjectsFromJson(projectSettings) {
             //console.log(newProject.status);
             findLabel(newProject.status, newProject, badgeParent);
             findLabel(newProject.maturity, newProject, badgeParent);
-            findLabel(newProject.type, newProject, badgeParent);
+            findLabel(newProject.scope, newProject, badgeParent);
             parent.appendChild(badgeParent);
             // Add project to html
             document.getElementById("projects-parent").appendChild(bigParent);
