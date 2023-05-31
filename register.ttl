@@ -64,10 +64,10 @@ bblocks:ogc.geo.features.feature a bblocks:Schema ;
     dct:description "A feature. Every feature is a sub-resource of an OGC Collection." ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-15"^^xsd:date ;
-    dct:source [ rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" ;
-            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ],
-        [ rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" ;
-            rdfs:seeAlso <https://www.iso.org/standard/59164.html> ] ;
+    dct:source [ rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" ;
+            rdfs:seeAlso <https://www.iso.org/standard/59164.html> ],
+        [ rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" ;
+            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ] ;
     rdfs:seeAlso [ ] .
 
 bblocks:ogc.geo.geopose.basic-euler a bblocks:Schema ;
@@ -100,6 +100,37 @@ bblocks:ogc.geo.geopose.basic-ypr a bblocks:Schema ;
     dct:modified "2023-03-12"^^xsd:date ;
     dct:source [ rdfs:label "OGC GeoPose 1.0 Data Exchange Draft Standard" ;
             rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
+    rdfs:seeAlso [ ] .
+
+bblocks:ogc.geo.json-fg.feature a bblocks:Schema ;
+    rdfs:label "OGC Features and Geometries JSON" ;
+    bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld> ;
+    bblocks:hasSchema [ ] ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/proposal> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-05-31T14:56:51+00:00"^^xsd:dateTime ;
+    dct:description "A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data." ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-05-31"^^xsd:date ;
+    dct:source [ rdfs:label "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report" ;
+            rdfs:seeAlso <http://docs.ogc.org/per/21-017r1.html> ] ;
+    rdfs:seeAlso [ ] .
+
+bblocks:ogc.geo.json-fg.featureCollection a bblocks:Schema ;
+    rdfs:label "OGC Features and Geometries JSON" ;
+    bblocks:hasSchema [ ] ;
+    bblocks:inRegister bblocks:ogc-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/proposal> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-05-31T14:56:51+00:00"^^xsd:dateTime ;
+    dct:description "A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data." ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-05-31"^^xsd:date ;
+    dct:source [ rdfs:label "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report" ;
+            rdfs:seeAlso <http://docs.ogc.org/per/21-017r1.html> ] ;
     rdfs:seeAlso [ ] .
 
 bblocks:ogc.ogc-utils.json-link a bblocks:Schema ;
@@ -194,10 +225,10 @@ bblocks:ogc.unstable.sosa.features.observationCollection a bblocks:Schema ;
     dct:description "This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification." ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-28"^^xsd:date ;
-    dct:source [ rdfs:label "Extensions to the Semantic Sensor Network Ontology" ;
-            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ],
-        [ rdfs:label "Semantic Sensor Network Ontology" ;
-            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
+    dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ],
+        [ rdfs:label "Extensions to the Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ] ;
     rdfs:seeAlso [ ] .
 
 bblocks:ogc.unstable.sosa.properties.observation a bblocks:Schema ;
@@ -235,14 +266,14 @@ bblocks:ogc.unstable.sosa.properties.observationCollection a bblocks:Schema ;
     rdfs:seeAlso [ ] .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-31T10:58:44.721387"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-31T10:58:44.594937"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-31T15:59:26.398886"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-31T15:59:26.270929"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            rdfs:seeAlso <file:///github/workspace/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
