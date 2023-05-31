@@ -39,10 +39,10 @@ $(document).ready(function () {
             .filter((i, e) => $(e).data('group-name') !== groupName)
             .fadeOut(() => {
               groups[groupName].forEach($e => $e.fadeIn());
-              $labelContainer.find('.active').removeClass('active');
-              $this.addClass('active');
-              $labelContainer.addClass('filtered');
             });
+          $labelContainer.find('.active').removeClass('active');
+          $this.addClass('active');
+          $labelContainer.addClass('filtered');
         }
       });
 
