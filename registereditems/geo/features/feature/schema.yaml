@@ -1,11 +1,11 @@
 allOf:
-  - $ref: bblocks://r1.geo.common.data_types.geojson
+  - $ref: bblocks://ogc.geo.common.data_types.geojson
   - type: object
     properties:
       links:
         type: array
         items:
-          $ref: bblocks://r1.ogc-utils.json-link
+          $ref: bblocks://ogc.ogc-utils.json-link
       type:
         const: Feature
     required:
