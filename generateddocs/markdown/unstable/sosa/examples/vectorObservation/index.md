@@ -34,8 +34,6 @@ This building block defines an example SOSA Vector Observation
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.yaml)
-
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Example SOSA Vector Observation
@@ -58,6 +56,12 @@ allOf:
     - hasSimpleResult
 
 ```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.yaml)
+
 ## Sources
 
 * [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)

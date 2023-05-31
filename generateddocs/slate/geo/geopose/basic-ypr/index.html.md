@@ -15,7 +15,8 @@ meta:
   - name: GeoPose Basic-YPR (Schema)
 ---
 
-# Overview
+
+# GeoPose Basic-YPR
 
 Basic GeoPose using yaw, pitch, and roll to specify orientation
 
@@ -115,9 +116,90 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ```
 
-# Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-ypr/schema.yaml)
-# Sources
+# JSON Schema
+
+```yaml--schema
+description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'
+definitions:
+  angles:
+    type: object
+    properties:
+      yaw:
+        type: number
+        x-jsonld-id: http://example.com/geopose/yaw
+      pitch:
+        type: number
+        x-jsonld-id: http://example.com/geopose/pitch
+      roll:
+        type: number
+        x-jsonld-id: http://example.com/geopose/roll
+    required:
+    - yaw
+    - pitch
+    - roll
+  Position:
+    type: object
+    properties:
+      lat:
+        type: number
+        x-jsonld-id: http://example.com/geopose/lat
+      lon:
+        type: number
+        x-jsonld-id: http://example.com/geopose/lon
+      h:
+        type: number
+        x-jsonld-id: http://example.com/geopose/h
+    required:
+    - lat
+    - lon
+    - h
+type: object
+properties:
+  position:
+    $ref: '#/definitions/Position'
+    x-jsonld-id: http://example.com/geopose/position
+  angles:
+    $ref: '#/definitions/angles'
+    x-jsonld-id: http://example.com/geopose/angles
+required:
+- position
+- angles
+x-jsonld-prefixes:
+  geopose: http://example.com/geopose/
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+$id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json
+
+```
+
+Links to the schema:
+
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml" target="_blank">schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json" target="_blank">schema.json</a>
+
+
+# JSON-LD Context
+
+```json--ldContext
+{
+  "@context": {
+    "geopose": "http://example.com/geopose/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "position": "geopose:position",
+    "angles": "geopose:angles",
+    "yaw": "geopose:yaw",
+    "pitch": "geopose:pitch",
+    "roll": "geopose:roll",
+    "lat": "geopose:lat",
+    "lon": "geopose:lon",
+    "h": "geopose:h"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld" target="_blank">context.jsonld</a>
+
+# References
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)

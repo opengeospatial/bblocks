@@ -102,8 +102,6 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml)
-
 ```yaml
 description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'
 definitions:
@@ -156,6 +154,12 @@ x-jsonld-prefixes:
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json
 
 ```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml)
+
 ## Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)

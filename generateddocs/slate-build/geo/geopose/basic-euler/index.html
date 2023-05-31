@@ -287,7 +287,7 @@
     </style>
     <link href="../../../stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
     <link href="../../../stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
-      <script src="../../../javascripts/all-b12a2749.js"></script>
+      <script src="../../../javascripts/all-fea9e21b.js"></script>
 
     <script>
       $(function() { setupCodeCopy(); });
@@ -309,13 +309,16 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#overview" class="toc-h1 toc-link" data-title="Overview">Overview</a>
+            <a href="#geopose-basic-euler" class="toc-h1 toc-link" data-title="GeoPose Basic-Euler">GeoPose Basic-Euler</a>
           </li>
           <li>
-            <a href="#schema" class="toc-h1 toc-link" data-title="Schema">Schema</a>
+            <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
           </li>
           <li>
-            <a href="#sources" class="toc-h1 toc-link" data-title="Sources">Sources</a>
+            <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
+          </li>
+          <li>
+            <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
           </li>
       </ul>
         <ul class="toc-footer">
@@ -327,13 +330,64 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='overview'>Overview</h1>
+        <h1 id='geopose-basic-euler'>GeoPose Basic-Euler</h1>
 <p>Basic GeoPose using Euler angle rotations to specify orientation</p>
 
 <p><a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Proposal</p>
-<h1 id='schema'>Schema</h1>
-<p><a href="https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-euler/schema.yaml">schema.yaml</a></p>
-<h1 id='sources'>Sources</h1>
+<h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Basic-Euler:</span><span class="nv"> </span><span class="s">Basic</span><span class="nv"> </span><span class="s">GeoPose</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">Euler</span><span class="nv"> </span><span class="s">angle</span><span class="nv"> </span><span class="s">rotations</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">orientation'</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+<span class="na">properties</span><span class="pi">:</span>
+  <span class="na">longitude</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">minimum</span><span class="pi">:</span> <span class="s">-180.0</span>
+    <span class="na">maximum</span><span class="pi">:</span> <span class="m">180.0</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2003/01/geo/wgs84_pos#long</span>
+  <span class="na">latitude</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">minimum</span><span class="pi">:</span> <span class="s">-90.0</span>
+    <span class="na">maximum</span><span class="pi">:</span> <span class="m">90.0</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2003/01/geo/wgs84_pos#lat</span>
+  <span class="na">height</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://example.com/geopose/height</span>
+  <span class="na">rotations</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+    <span class="na">items</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">minItems</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">maxItems</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://example.com/geopose/rotations</span>
+<span class="na">required</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">longitude</span>
+<span class="pi">-</span> <span class="s">latitude</span>
+<span class="pi">-</span> <span class="s">height</span>
+<span class="pi">-</span> <span class="s">rotations</span>
+<span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
+  <span class="na">geopose</span><span class="pi">:</span> <span class="s">http://example.com/geopose/</span>
+  <span class="na">geo</span><span class="pi">:</span> <span class="s">http://www.w3.org/2003/01/geo/wgs84_pos#</span>
+<span class="na">$id</span><span class="pi">:</span> <span class="s">https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Euler.Schema.json</span>
+
+</code></pre></div>
+<p>Links to the schema:</p>
+
+<ul>
+<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml" target="_blank">schema.yaml</a></li>
+<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json" target="_blank">schema.json</a></li>
+</ul>
+<h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"geopose"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/geopose/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"geo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2003/01/geo/wgs84_pos#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geo:long"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geo:lat"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geopose:height"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rotations"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geopose:rotations"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld" target="_blank">context.jsonld</a></p>
+<h1 id='references'>References</h1>
 <ul>
 <li><a href="https://docs.ogc.org/dis/21-056r10/21-056r10.html">OGC GeoPose 1.0 Data Exchange Draft Standard</a></li>
 </ul>

@@ -61,8 +61,6 @@ fetch(url + `bbox=${bbox.join(',')}`)
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml)
-
 ```yaml
 name: bbox
 in: query
@@ -80,6 +78,12 @@ schema:
     type: number
 
 ```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml)
+
 ## Sources
 
 * [OGC API - Features, Part 1, 7.15.3: Parameter bbox](https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox)

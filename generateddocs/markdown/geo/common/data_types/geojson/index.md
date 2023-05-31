@@ -21,8 +21,6 @@ Each GeoJSON feature includes the following JSON members:
 * `properties`: an object with a member for each feature property.
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml)
-
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
 $id: https://geojson.org/schema/Feature.json
@@ -403,6 +401,12 @@ x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 
 ```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml)
+
 ## Sources
 
 * [IETF RFC 7946 - The GeoJSON Format](https://datatracker.ietf.org/doc/html/rfc7946)

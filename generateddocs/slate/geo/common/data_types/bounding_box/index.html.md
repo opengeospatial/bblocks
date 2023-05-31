@@ -2,8 +2,8 @@
 title: Bounding Box (Schema)
 
 language_tabs:
-  - json
-  - plaintext
+  - json: JSON
+  - plaintext: Plain text
 
 toc_footers:
   - Version 1.0.1
@@ -18,7 +18,8 @@ meta:
   - name: Bounding Box (Schema)
 ---
 
-# Overview
+
+# Bounding Box
 
 The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.
 
@@ -59,9 +60,26 @@ The text representation of a bounding box is based on the JSON representation an
 -124.7844079,24.7433195,-66.9513812,49.3457868
 ```
 
-# Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/schema.yaml)
-# Sources
+# JSON Schema
+
+```yaml--schema
+type: array
+oneOf:
+- minItems: 4
+  maxItems: 4
+- minItems: 6
+  maxItems: 6
+items:
+  type: number
+
+```
+
+Links to the schema:
+
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml" target="_blank">schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json" target="_blank">schema.json</a>
+
+# References
 
 * [OGC API - Features, Part 1, 7.13.2: Feature Collections Response](http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4)

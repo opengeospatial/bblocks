@@ -44,8 +44,6 @@ The text representation of a bounding box is based on the JSON representation an
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml)
-
 ```yaml
 type: array
 oneOf:
@@ -57,6 +55,12 @@ items:
   type: number
 
 ```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml)
+
 ## Sources
 
 * [OGC API - Features, Part 1, 7.13.2: Feature Collections Response](http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4)

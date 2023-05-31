@@ -18,8 +18,6 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml)
-
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Sensor, Observation, Sample, and Actuator (SOSA)
@@ -181,6 +179,12 @@ anyOf:
     ssn-system: http://www.w3.org/ns/ssn/systems/
 
 ```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml)
+
 ## Sources
 
 * [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)

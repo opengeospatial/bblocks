@@ -287,7 +287,7 @@
     </style>
     <link href="../../../../stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
     <link href="../../../../stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
-      <script src="../../../../javascripts/all-b12a2749.js"></script>
+      <script src="../../../../javascripts/all-fea9e21b.js"></script>
 
     <script>
       $(function() { setupCodeCopy(); });
@@ -305,8 +305,8 @@
       <img src="../../../../images/logo-4d9dfd05.svg" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="python">Python</a>
+              <a href="#" data-language-name="javascript">Javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -314,7 +314,7 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#overview" class="toc-h1 toc-link" data-title="Overview">Overview</a>
+            <a href="#bbox" class="toc-h1 toc-link" data-title="bbox">bbox</a>
           </li>
           <li>
             <a href="#description" class="toc-h1 toc-link" data-title="Description">Description</a>
@@ -331,10 +331,10 @@
               </ul>
           </li>
           <li>
-            <a href="#schema" class="toc-h1 toc-link" data-title="Schema">Schema</a>
+            <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
           </li>
           <li>
-            <a href="#sources" class="toc-h1 toc-link" data-title="Sources">Sources</a>
+            <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
           </li>
       </ul>
         <ul class="toc-footer">
@@ -346,7 +346,7 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='overview'>Overview</h1>
+        <h1 id='bbox'>bbox</h1>
 <p>The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).</p>
 
 <p><a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Mature</p>
@@ -385,9 +385,29 @@ bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
 <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span> <span class="o">+</span> <span class="s2">`bbox=</span><span class="p">${</span><span class="nx">bbox</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">)}</span><span class="s2">`</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">json</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">));</span>
-</code></pre></div><h1 id='schema'>Schema</h1>
-<p><a href="https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/schema.yaml">schema.yaml</a></p>
-<h1 id='sources'>Sources</h1>
+</code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">name</span><span class="pi">:</span> <span class="s">bbox</span>
+<span class="na">in</span><span class="pi">:</span> <span class="s">query</span>
+<span class="na">required</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">style</span><span class="pi">:</span> <span class="s">form</span>
+<span class="na">explode</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">schema</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+  <span class="na">oneOf</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+    <span class="na">maxItems</span><span class="pi">:</span> <span class="m">4</span>
+  <span class="pi">-</span> <span class="na">minItems</span><span class="pi">:</span> <span class="m">6</span>
+    <span class="na">maxItems</span><span class="pi">:</span> <span class="m">6</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+
+</code></pre></div>
+<p>Links to the schema:</p>
+
+<ul>
+<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml" target="_blank">schema.yaml</a></li>
+<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json" target="_blank">schema.json</a></li>
+</ul>
+<h1 id='references'>References</h1>
 <ul>
 <li><a href="https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox">OGC API - Features, Part 1, 7.15.3: Parameter bbox</a></li>
 </ul>
@@ -396,8 +416,8 @@ bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="python">Python</a>
+                <a href="#" data-language-name="javascript">Javascript</a>
           </div>
       </div>
     </div>

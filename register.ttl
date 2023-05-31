@@ -7,8 +7,7 @@
 
 bblocks:ogc.geo.common.data_types.bounding_box a bblocks:Schema ;
     rdfs:label "Bounding Box" ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -19,15 +18,12 @@ bblocks:ogc.geo.common.data_types.bounding_box a bblocks:Schema ;
     dct:modified "2023-03-09"^^xsd:date ;
     dct:source [ rdfs:label "OGC API - Features, Part 1, 7.13.2: Feature Collections Response" ;
             rdfs:seeAlso <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/bounding_box/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/data_types/bounding_box/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.geo.common.data_types.geojson a bblocks:Schema ;
     rdfs:label "GeoJSON" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -38,14 +34,11 @@ bblocks:ogc.geo.common.data_types.geojson a bblocks:Schema ;
     dct:modified "2023-05-15"^^xsd:date ;
     dct:source [ rdfs:label "IETF RFC 7946 - The GeoJSON Format" ;
             rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc7946> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/geojson/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/geojson/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/data_types/geojson/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.geo.common.parameters.bbox a bblocks:Parameter ;
     rdfs:label "bbox" ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -56,16 +49,13 @@ bblocks:ogc.geo.common.parameters.bbox a bblocks:Parameter ;
     dct:modified "2022-05-24"^^xsd:date ;
     dct:source [ rdfs:label "OGC API - Features, Part 1, 7.15.3: Parameter bbox" ;
             rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox> ] ;
-    rdfs:seeAlso <https://doublebyte1.github.io/slate/>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/parameters/bbox/> .
+    rdfs:seeAlso [ ],
+        <https://doublebyte1.github.io/slate/> .
 
 bblocks:ogc.geo.features.feature a bblocks:Schema ;
     rdfs:label "Feature" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -74,19 +64,16 @@ bblocks:ogc.geo.features.feature a bblocks:Schema ;
     dct:description "A feature. Every feature is a sub-resource of an OGC Collection." ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-15"^^xsd:date ;
-    dct:source [ rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" ;
-            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ],
-        [ rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" ;
-            rdfs:seeAlso <https://www.iso.org/standard/59164.html> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/feature/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/feature/> .
+    dct:source [ rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" ;
+            rdfs:seeAlso <https://www.iso.org/standard/59164.html> ],
+        [ rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" ;
+            rdfs:seeAlso <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ] ;
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.geo.geopose.basic-euler a bblocks:Schema ;
     rdfs:label "GeoPose Basic-Euler" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/proposal> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -97,15 +84,12 @@ bblocks:ogc.geo.geopose.basic-euler a bblocks:Schema ;
     dct:modified "2023-05-12"^^xsd:date ;
     dct:source [ rdfs:label "OGC GeoPose 1.0 Data Exchange Draft Standard" ;
             rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-euler/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-euler/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic-euler/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.geo.geopose.basic-ypr a bblocks:Schema ;
     rdfs:label "GeoPose Basic-YPR" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/proposal> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/geo> ;
@@ -116,15 +100,12 @@ bblocks:ogc.geo.geopose.basic-ypr a bblocks:Schema ;
     dct:modified "2023-03-12"^^xsd:date ;
     dct:source [ rdfs:label "OGC GeoPose 1.0 Data Exchange Draft Standard" ;
             rdfs:seeAlso <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-ypr/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-ypr/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic-ypr/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.ogc-utils.json-link a bblocks:Schema ;
     rdfs:label "JSON Link" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/ogc-utils> ;
@@ -135,15 +116,12 @@ bblocks:ogc.ogc-utils.json-link a bblocks:Schema ;
     dct:modified "2022-05-18"^^xsd:date ;
     dct:source [ rdfs:label "IETF RFC 8288 - Web Linking" ;
             rdfs:seeAlso <https://www.rfc-editor.org/rfc/rfc8288.txt> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/json-link/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/ogc-utils/json-link/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.unstable.sosa a bblocks:Api ;
     rdfs:label "Sensor, Observation, Sample, and Actuator (SOSA)" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
@@ -154,15 +132,12 @@ bblocks:ogc.unstable.sosa a bblocks:Api ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.unstable.sosa.examples.vectorObservation a bblocks:Schema ;
     rdfs:label "Example SOSA Vector Observation" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
@@ -173,15 +148,12 @@ bblocks:ogc.unstable.sosa.examples.vectorObservation a bblocks:Schema ;
     dct:modified "2023-05-19"^^xsd:date ;
     dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservation/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservation/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/examples/vectorObservation/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.unstable.sosa.examples.vectorObservationFeature a bblocks:Schema ;
     rdfs:label "Example SOSA Vector Observation Feature" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
@@ -192,15 +164,12 @@ bblocks:ogc.unstable.sosa.examples.vectorObservationFeature a bblocks:Schema ;
     dct:modified "2023-05-19"^^xsd:date ;
     dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservationFeature/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservationFeature/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/examples/vectorObservationFeature/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.unstable.sosa.features.observation a bblocks:Schema ;
     rdfs:label "SOSA Observation Feature" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
@@ -211,15 +180,12 @@ bblocks:ogc.unstable.sosa.features.observation a bblocks:Schema ;
     dct:modified "2023-05-18"^^xsd:date ;
     dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observation/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/features/observation/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.unstable.sosa.features.observationCollection a bblocks:Schema ;
     rdfs:label "SOSA ObservationCollection Feature" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/development> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
@@ -232,15 +198,12 @@ bblocks:ogc.unstable.sosa.features.observationCollection a bblocks:Schema ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ],
         [ rdfs:label "Extensions to the Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observationCollection/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observationCollection/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/features/observationCollection/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.unstable.sosa.properties.observation a bblocks:Schema ;
     rdfs:label "SOSA Observation" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/mature> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
@@ -251,15 +214,12 @@ bblocks:ogc.unstable.sosa.properties.observation a bblocks:Schema ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observation/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observation/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observation/> .
+    rdfs:seeAlso [ ] .
 
 bblocks:ogc.unstable.sosa.properties.observationCollection a bblocks:Schema ;
     rdfs:label "SOSA ObservationCollection" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml> ;
+    bblocks:hasSchema [ ] ;
     bblocks:inRegister bblocks:ogc-building-block-register ;
     bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/development> ;
     bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
@@ -272,19 +232,17 @@ bblocks:ogc.unstable.sosa.properties.observationCollection a bblocks:Schema ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ],
         [ rdfs:label "Extensions to the Semantic Sensor Network Ontology" ;
             rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ] ;
-    rdfs:seeAlso <https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md>,
-        <https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observationCollection/> .
+    rdfs:seeAlso [ ] .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-05-31T10:52:50.890241"^^xsd:dateTime ;
-    prov:startedAtTime "2023-05-31T10:52:50.767167"^^xsd:dateTime ;
+    prov:endedAtTime "2023-05-31T10:55:28.309458"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-31T10:55:28.159492"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            rdfs:seeAlso <file:///github/workspace/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
