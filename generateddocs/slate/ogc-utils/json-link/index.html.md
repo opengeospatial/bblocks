@@ -16,7 +16,7 @@ meta:
 
 # Overview
 
-Web linking according to <a href=''></a> is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API’s.
+Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API’s.
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
 

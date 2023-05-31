@@ -77,7 +77,7 @@
     {
       "itemIdentifier": "ogc.geo.common.data_types.bounding_box",
       "name": "Bounding Box",
-      "abstract": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API\u2019s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is <i>simple</i> in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.",
+      "abstract": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API\u2019s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.",
       "status": "valid",
       "dateTimeAddition": "2022-05-24T13:51:38+00:00",
       "itemClass": "schema",
@@ -107,6 +107,7 @@
           "link": ""
         }
       ],
+      "group": "Common",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml",
         "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json"
@@ -142,6 +143,7 @@
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld",
       "maturity": "mature",
       "scope": "geo",
+      "group": "Common",
       "itemIdentifier": "ogc.geo.common.data_types.geojson",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/",
       "documentation": [
@@ -150,38 +152,6 @@
         "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/data_types/geojson/"
       ],
       "validationPassed": true,
-      "@type": "bblocks:Schema"
-    },
-    {
-      "itemIdentifier": "ogc.geo.common.data_types.ogc_collections",
-      "name": "OGC Collections",
-      "abstract": "The distribution of a geospatial dataset in an API is organized into one or more collections of data. How the data is split into collections in a distribution depends on the intended use of the data. Two common approaches for organizing the data are: by semantic type and by spatial clustering. The OGC Collections JSON resource provides information about and access to the data in each collection of the distribution.",
-      "status": "valid",
-      "dateTimeAddition": "2022-05-24T11:00:05+00:00",
-      "itemClass": "schema",
-      "register": "ogc-building-block-register",
-      "version": "0.1",
-      "dateOfLastChange": "2022-05-24",
-      "link": "https://github.com/opengeospatial/bblocks/blob/master/registereditems/geo/common/json-collections.adoc",
-      "maturity": "mature",
-      "scope": "geo",
-      "sources": [
-        {
-          "title": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response",
-          "link": "http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4"
-        }
-      ],
-      "schema": [
-        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.yaml",
-        "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/ogc_collections/schema.json"
-      ],
-      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/ogc_collections/",
-      "documentation": [
-        "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/ogc_collections/index.md",
-        "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/ogc_collections/index.json",
-        "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/data_types/ogc_collections/"
-      ],
-      "validationPassed": false,
       "@type": "bblocks:Schema"
     },
     {
@@ -203,6 +173,7 @@
       ],
       "maturity": "mature",
       "scope": "geo",
+      "group": "Common",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
         "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json"
@@ -237,6 +208,7 @@
       ],
       "maturity": "mature",
       "scope": "geo",
+      "group": "Common",
       "itemIdentifier": "ogc.geo.features.feature",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
@@ -274,6 +246,7 @@
         "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld",
+      "group": "GeoPose",
       "itemIdentifier": "ogc.geo.geopose.basic-euler",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-euler/",
       "documentation": [
@@ -306,6 +279,7 @@
         "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld",
+      "group": "GeoPose",
       "itemIdentifier": "ogc.geo.geopose.basic-ypr",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-ypr/",
       "documentation": [
@@ -318,7 +292,7 @@
     },
     {
       "name": "JSON Link",
-      "abstract": "Web linking according to <a href=''></a> is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API\u2019s.",
+      "abstract": "Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API\u2019s.",
       "status": "valid",
       "dateTimeAddition": "2022-05-18T15:21:59+00:00",
       "itemClass": "schema",
@@ -376,6 +350,7 @@
         "o&m&s",
         "examples"
       ],
+      "group": "SOSA",
       "itemIdentifier": "ogc.unstable.sosa.examples.vectorObservation",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.yaml",
@@ -419,6 +394,7 @@
         "o&m&s",
         "examples"
       ],
+      "group": "SOSA",
       "itemIdentifier": "ogc.unstable.sosa.examples.vectorObservationFeature",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml",
@@ -461,6 +437,7 @@
         "o&m",
         "o&m&s"
       ],
+      "group": "SOSA",
       "itemIdentifier": "ogc.unstable.sosa.features.observation",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml",
@@ -504,6 +481,7 @@
         "o&m",
         "o&m&s"
       ],
+      "group": "SOSA",
       "itemIdentifier": "ogc.unstable.sosa.features.observationCollection",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
@@ -543,6 +521,7 @@
         "o&m",
         "o&m&s"
       ],
+      "group": "SOSA",
       "itemIdentifier": "ogc.unstable.sosa.properties.observation",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.yaml",
@@ -586,6 +565,7 @@
         "o&m",
         "o&m&s"
       ],
+      "group": "SOSA",
       "itemIdentifier": "ogc.unstable.sosa.properties.observationCollection",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml",
@@ -625,6 +605,7 @@
         "o&m&s"
       ],
       "superBBlock": true,
+      "group": "SOSA",
       "itemIdentifier": "ogc.unstable.sosa",
       "schema": [
         "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml",
