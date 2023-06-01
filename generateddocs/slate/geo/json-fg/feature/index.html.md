@@ -1,9 +1,9 @@
 ---
-title: OGC Features and Geometries JSON (Schema)
+title: JSON-FG Feature (Schema)
 
 toc_footers:
   - Version 0.1
-  - <a href='#'>OGC Features and Geometries JSON</a>
+  - <a href='#'>JSON-FG Feature</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
 search: true
@@ -11,11 +11,11 @@ search: true
 code_clipboard: true
 
 meta:
-  - name: OGC Features and Geometries JSON (Schema)
+  - name: JSON-FG Feature (Schema)
 ---
 
 
-# OGC Features and Geometries JSON
+# JSON-FG Feature
 
 A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 

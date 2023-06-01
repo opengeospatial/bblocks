@@ -73,10 +73,12 @@ eg:p1 a skos:Concept;
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 description: SOSA Observation Feature
-type: object
-properties:
+allOf:
+- $ref: ../../../../geo/json-fg/featureCollection/schema.yaml
+- type: object
   properties:
-    $ref: ../../properties/observationCollection/schema.yaml
+    properties:
+      $ref: ../../properties/observationCollection/schema.yaml
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn: http://www.w3.org/ns/ssn/

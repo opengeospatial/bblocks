@@ -69,7 +69,7 @@ anyOf:
   description: SOSA Observation Feature
   type: object
   allOf:
-  - $ref: ../../geo/features/feature/schema.yaml
+  - $ref: ../../geo/json-fg/feature/schema.yaml
   - type: object
     properties:
       properties:
@@ -80,10 +80,12 @@ anyOf:
     ssn-system: http://www.w3.org/ns/ssn/systems/
 - $schema: https://json-schema.org/draft/2020-12/schema
   description: SOSA Observation Feature
-  type: object
-  properties:
+  allOf:
+  - $ref: ../../geo/json-fg/featureCollection/schema.yaml
+  - type: object
     properties:
-      $ref: properties/observationCollection/schema.yaml
+      properties:
+        $ref: properties/observationCollection/schema.yaml
   x-jsonld-prefixes:
     sosa: http://www.w3.org/ns/sosa/
     ssn: http://www.w3.org/ns/ssn/

@@ -1,4 +1,4 @@
-# OGC Features and Geometries JSON (Schema)
+# JSON-FG Feature (Schema)
 
 *Version 0.1*
 

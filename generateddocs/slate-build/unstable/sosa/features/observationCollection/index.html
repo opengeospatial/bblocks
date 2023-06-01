@@ -395,10 +395,12 @@ eg:p1 a skos:Concept;
 .
 </code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">SOSA Observation Feature</span>
-<span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-<span class="na">properties</span><span class="pi">:</span>
+<span class="na">allOf</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../../../geo/json-fg/featureCollection/schema.yaml</span>
+<span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
   <span class="na">properties</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../properties/observationCollection/schema.yaml</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../properties/observationCollection/schema.yaml</span>
 <span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
   <span class="na">sosa</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/</span>
   <span class="na">ssn</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/ssn/</span>
