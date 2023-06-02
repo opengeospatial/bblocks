@@ -26,7 +26,7 @@ This building block defines the set of properties for an observation according t
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
 
 <aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/master/tests/unstable/sosa/properties/observation/" target="_blank">valid</a></strong>
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observation/" target="_blank">valid</a></strong>
 </aside>
 
 # Description

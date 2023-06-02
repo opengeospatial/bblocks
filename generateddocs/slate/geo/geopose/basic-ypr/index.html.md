@@ -23,7 +23,7 @@ Basic GeoPose using yaw, pitch, and roll to specify orientation
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
 
 <aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/master/tests/geo/geopose/basic-ypr/" target="_blank">valid</a></strong>
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/geopose/basic-ypr/" target="_blank">valid</a></strong>
 </aside>
 
 # Description

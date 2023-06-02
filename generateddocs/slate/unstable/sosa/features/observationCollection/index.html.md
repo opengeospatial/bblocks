@@ -26,7 +26,7 @@ This building blocks defines an ObservationCollection Feature according to the S
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
 
 <aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/master/tests/unstable/sosa/features/observationCollection/" target="_blank">failed</a></strong>
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observationCollection/" target="_blank">failed</a></strong>
 </aside>
 
 # Examples

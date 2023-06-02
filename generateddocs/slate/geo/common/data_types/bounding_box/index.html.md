@@ -26,7 +26,7 @@ The bounding box JSON object describes a simple spatial extent of a resource. Fo
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
 
 <aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/master/tests/geo/common/data_types/bounding_box/" target="_blank">valid</a></strong>
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/" target="_blank">valid</a></strong>
 </aside>
 
 # Description
