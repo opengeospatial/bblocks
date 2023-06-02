@@ -36,7 +36,38 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 ```yaml
 allOf:
 - $ref: ../../features/feature/schema.yaml
-- $ref: https://beta.schemas.opengis.net/json-fg/feature.json
+- type: object
+  required:
+  - type
+  - geometry
+  - properties
+  properties:
+    type:
+      type: string
+      enum:
+      - Feature
+    id:
+      oneOf:
+      - type: number
+      - type: string
+    featureType:
+      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+    links:
+      type: array
+      items:
+        $ref: https://beta.schemas.opengis.net/json-fg/link.json
+    time:
+      $ref: https://beta.schemas.opengis.net/json-fg/time.json
+    coordRefSys:
+      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+    place:
+      $ref: https://beta.schemas.opengis.net/json-fg/place.json
+    geometry:
+      $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
+    properties:
+      oneOf:
+      - type: 'null'
+      - type: object
 
 ```
 

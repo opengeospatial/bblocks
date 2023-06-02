@@ -368,7 +368,38 @@ also be able to parse and understand the additional members.</p>
 <p>JSON Schema is used to formally specify the JSON-FG syntax.</p>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">allOf</span><span class="pi">:</span>
 <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../features/feature/schema.yaml</span>
-<span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/feature.json</span>
+<span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">required</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">type</span>
+  <span class="pi">-</span> <span class="s">geometry</span>
+  <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+      <span class="na">enum</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">Feature</span>
+    <span class="na">id</span><span class="pi">:</span>
+      <span class="na">oneOf</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+      <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+    <span class="na">featureType</span><span class="pi">:</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/featuretype.json</span>
+    <span class="na">links</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+      <span class="na">items</span><span class="pi">:</span>
+        <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/link.json</span>
+    <span class="na">time</span><span class="pi">:</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/time.json</span>
+    <span class="na">coordRefSys</span><span class="pi">:</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/coordrefsys.json</span>
+    <span class="na">place</span><span class="pi">:</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/place.json</span>
+    <span class="na">geometry</span><span class="pi">:</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/geometry.json</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">oneOf</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">null'</span>
+      <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
 
 </code></pre></div>
 <p>Links to the schema:</p>
