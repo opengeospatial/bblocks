@@ -16,11 +16,15 @@ meta:
 ---
 
 
-# Example SOSA Vector Observation Feature
+# Example SOSA Vector Observation Feature `ogc.unstable.sosa.examples.vectorObservationFeature`
 
 This building block defines an example SOSA Observation Feature for a Vector Observation
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/master/tests/unstable/sosa/examples/vectorObservationFeature/" target="_blank">failed</a></strong>
+</aside>
 
 # Examples
 
@@ -71,8 +75,8 @@ allOf:
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json</a>
 
 
 # JSON-LD Context
@@ -137,7 +141,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld</a>
 
 # References
 

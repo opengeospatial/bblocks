@@ -16,11 +16,15 @@ meta:
 ---
 
 
-# GeoPose Basic-YPR
+# GeoPose Basic-YPR `ogc.geo.geopose.basic-ypr`
 
 Basic GeoPose using yaw, pitch, and roll to specify orientation
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
+
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/master/tests/geo/geopose/basic-ypr/" target="_blank">valid</a></strong>
+</aside>
 
 # Description
 
@@ -174,8 +178,8 @@ $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.j
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json</a>
 
 
 # JSON-LD Context
@@ -198,7 +202,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld</a>
 
 # References
 

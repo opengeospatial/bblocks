@@ -1,6 +1,7 @@
+
 # bbox (Parameter)
 
-*Version 1.0*
+`ogc.geo.common.parameters.bbox` *v1.0*
 
 The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).
 

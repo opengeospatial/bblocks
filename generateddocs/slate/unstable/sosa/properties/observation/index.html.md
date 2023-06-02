@@ -19,11 +19,15 @@ meta:
 ---
 
 
-# SOSA Observation
+# SOSA Observation `ogc.unstable.sosa.properties.observation`
 
 This building block defines the set of properties for an observation according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature.
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/master/tests/unstable/sosa/properties/observation/" target="_blank">valid</a></strong>
+</aside>
 
 # Description
 
@@ -113,8 +117,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.json</a>
 
 
 # JSON-LD Context
@@ -147,7 +151,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/context.jsonld</a>
 
 # References
 

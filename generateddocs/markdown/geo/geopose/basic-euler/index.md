@@ -1,6 +1,7 @@
+
 # GeoPose Basic-Euler (Schema)
 
-*Version 0.1*
+`ogc.geo.geopose.basic-euler` *v0.1*
 
 Basic GeoPose using Euler angle rotations to specify orientation
 
@@ -48,6 +49,25 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "geopose": "http://example.com/geopose/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "longitude": "geo:long",
+    "latitude": "geo:lat",
+    "height": "geopose:height",
+    "rotations": "geopose:rotations"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld)
 
 ## Sources
 

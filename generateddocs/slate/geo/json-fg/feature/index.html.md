@@ -15,11 +15,15 @@ meta:
 ---
 
 
-# JSON-FG Feature
+# JSON-FG Feature `ogc.geo.json-fg.feature`
 
 A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 
 # Description
 
@@ -57,8 +61,8 @@ allOf:
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json</a>
 
 
 # JSON-LD Context
@@ -85,7 +89,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld</a>
 
 # References
 

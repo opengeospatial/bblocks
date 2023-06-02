@@ -15,11 +15,15 @@ meta:
 ---
 
 
-# GeoPose Basic-Euler
+# GeoPose Basic-Euler `ogc.geo.geopose.basic-euler`
 
 Basic GeoPose using Euler angle rotations to specify orientation
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 
 
 # JSON Schema
@@ -62,8 +66,8 @@ $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Euler.Schema
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json</a>
 
 
 # JSON-LD Context
@@ -82,7 +86,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld</a>
 
 # References
 

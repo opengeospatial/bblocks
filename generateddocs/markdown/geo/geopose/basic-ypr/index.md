@@ -1,6 +1,7 @@
+
 # GeoPose Basic-YPR (Schema)
 
-*Version 0.1*
+`ogc.geo.geopose.basic-ypr` *v0.1*
 
 Basic GeoPose using yaw, pitch, and roll to specify orientation
 
@@ -159,6 +160,29 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "geopose": "http://example.com/geopose/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "position": "geopose:position",
+    "angles": "geopose:angles",
+    "yaw": "geopose:yaw",
+    "pitch": "geopose:pitch",
+    "roll": "geopose:roll",
+    "lat": "geopose:lat",
+    "lon": "geopose:lon",
+    "h": "geopose:h"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld)
 
 ## Sources
 

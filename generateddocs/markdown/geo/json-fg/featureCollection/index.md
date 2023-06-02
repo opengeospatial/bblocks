@@ -1,6 +1,7 @@
+
 # JSON-FG Feature Collection (Schema)
 
-*Version 0.1*
+`ogc.geo.json-fg.featureCollection` *v0.1*
 
 A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 

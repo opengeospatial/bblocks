@@ -1,6 +1,7 @@
+
 # Feature (Schema)
 
-*Version 1.0*
+`ogc.geo.features.feature` *v1.0*
 
 A feature. Every feature is a sub-resource of an OGC Collection.
 
@@ -46,6 +47,33 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "type": "@type",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "geometry": {
+      "@context": {
+        "type": "@type",
+        "coordinates": "geojson:coordinates"
+      },
+      "@id": "geojson:geometry"
+    },
+    "bbox": "geojson:bbox",
+    "links": "rdfs:seeAlso"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld)
 
 ## Sources
 

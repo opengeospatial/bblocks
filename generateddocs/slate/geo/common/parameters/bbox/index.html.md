@@ -20,11 +20,15 @@ meta:
 ---
 
 
-# bbox
+# bbox `ogc.geo.common.parameters.bbox`
 
 The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 
 # Description
 
@@ -101,8 +105,8 @@ schema:
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json</a>
 
 # References
 

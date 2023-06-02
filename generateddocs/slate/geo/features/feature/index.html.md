@@ -15,11 +15,15 @@ meta:
 ---
 
 
-# Feature
+# Feature `ogc.geo.features.feature`
 
 A feature. Every feature is a sub-resource of an OGC Collection.
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 
 # Description
 
@@ -60,8 +64,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json</a>
 
 
 # JSON-LD Context
@@ -88,7 +92,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld</a>
 
 # References
 
