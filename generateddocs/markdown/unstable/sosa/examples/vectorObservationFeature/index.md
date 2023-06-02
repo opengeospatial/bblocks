@@ -14,12 +14,18 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
 ```json
 {
   "type": "Feature",
-  "geometry": {
-    "type": "Point",
-    "coordinates": [43.457475012484124, -3.7684047847661435]
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [43.46498208387333, -3.803638278687769],
+     [43.457475012484124, -3.7684047847661435]
+          
+    ]
   },
+  "time": null,
+  "place": null,
   "properties": {
-    "hasFeatureOfInterest": "http://example.com/features/33",
+    "hasFeatureOfInterest": "eg:Traverse-P1-P2",
     "resultTime": "2023-05-22T16:41:00+2",
     "hasResult": {
       "pose": {
@@ -33,7 +39,8 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
           "pitch": -0.92,
           "roll": 0.33
         }
-      }
+      },
+      "distance": 9703.3
     }
   }
 }

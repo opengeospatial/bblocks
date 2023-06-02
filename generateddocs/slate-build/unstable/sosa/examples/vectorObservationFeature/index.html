@@ -348,12 +348,18 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 </aside>
 <h1 id='examples'>Examples</h1><h2 id='example-1'>Example 1</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">43.457475012484124</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.7684047847661435</span><span class="p">]</span><span class="w">
+   </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">[</span><span class="mf">43.46498208387333</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.803638278687769</span><span class="p">],</span><span class="w">
+     </span><span class="p">[</span><span class="mf">43.457475012484124</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.7684047847661435</span><span class="p">]</span><span class="w">
+
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/features/33"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eg:Traverse-P1-P2"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-05-22T16:41:00+2"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"pose"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -367,7 +373,8 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
           </span><span class="nl">"pitch"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.92</span><span class="p">,</span><span class="w">
           </span><span class="nl">"roll"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.33</span><span class="w">
         </span><span class="p">}</span><span class="w">
-      </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mf">9703.3</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
