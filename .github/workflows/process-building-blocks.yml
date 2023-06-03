@@ -31,6 +31,19 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: Building blocks postprocessing
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.x
+      - name: Entail, validate and upload BBR
+        env:
+          DB_USERNAME: ${{ secrets.UPLOAD_GRAPH_STORE_USERNAME }}
+          DB_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
+        run: |
+          python -m pip install -U pip
+          python -m pip install ogc-na
+          python -m ogc.na.update_vocabs .catalog.ttl -m register.ttl \
+            --update --graph-store ${{ vars.UPLOAD_GRAPH_STORE_URL }}
 
   deploy-gh-pages:
     needs: build
