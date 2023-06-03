@@ -23,7 +23,7 @@ meta:
 
 This building block defines the set of properties for an observation according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature.
 
-[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
 
 <aside class="success">
 This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observation/" target="_blank">valid</a></strong>
@@ -43,7 +43,7 @@ to detail what that property was associated with."
 
 ```json
 { 
-  "hasFeatureOfInterest": "http://example.com/fois/1",
+  "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
   "hasSimpleResult": 33,
   "resultTime": "2022-05-01T22:33:44Z"
 }
@@ -53,7 +53,7 @@ to detail what that property was associated with."
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 _:a1 a sosa:Observation ;
-  sosa:hasFeatureOfInterest <http://example.com/fois/1> ;
+  sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem> ;
   sosa:hasSimpleResult 33 ;
   sosa:resultTime "2022-05-01T22:33:44Z"^^xsd:dateTime ;
 .

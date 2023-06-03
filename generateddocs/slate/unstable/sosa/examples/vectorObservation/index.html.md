@@ -20,7 +20,7 @@ meta:
 
 This building block defines an example SOSA Vector Observation
 
-[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
 
 <aside class="success">
 This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservation/" target="_blank">valid</a></strong>
@@ -32,7 +32,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 
 ```json
 {
-  "hasFeatureOfInterest": "http://example.com/features/33",
+  "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
   "resultTime": "2023-05-22T16:41:00+2",
   "hasResult": {
     "pose": {
