@@ -63,3 +63,11 @@ You can find the full JSON-LD context here:
 ## Sources
 
 * [IETF RFC 8288 - Web Linking](https://www.rfc-editor.org/rfc/rfc8288.txt)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/bblocks](https://github.com/opengeospatial/bblocks)
+* Path: `registereditems/ogc-utils/json-link`
+
