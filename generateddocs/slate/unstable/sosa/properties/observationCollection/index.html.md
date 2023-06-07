@@ -188,3 +188,4 @@ You can find the full JSON-LD context here:
 
 * [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)
 * [Extensions to the Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn-ext/)
+

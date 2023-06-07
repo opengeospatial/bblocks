@@ -207,3 +207,4 @@ You can find the full JSON-LD context here:
 # References
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)
+

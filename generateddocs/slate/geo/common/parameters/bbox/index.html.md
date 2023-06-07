@@ -111,3 +111,4 @@ Links to the schema:
 # References
 
 * [OGC API - Features, Part 1, 7.15.3: Parameter bbox](https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox)
+

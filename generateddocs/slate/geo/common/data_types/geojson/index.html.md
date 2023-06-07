@@ -455,3 +455,4 @@ You can find the full JSON-LD context here:
 # References
 
 * [IETF RFC 7946 - The GeoJSON Format](https://datatracker.ietf.org/doc/html/rfc7946)
+
