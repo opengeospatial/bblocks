@@ -3,30 +3,23 @@
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "http://www.w3.org/ns/ssn/systems/",
-    "resultTime": "sosa:resultTime",
-    "phenomenonTime": "sosa:phenomenonTime",
+    "resultTime": "http://www.w3.org/ns/sosa/resultTime",
+    "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
     "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "@type": "@id"
     },
-    "observedProperty": "sosa:observedProperty",
+    "observedProperty": "http://www.w3.org/ns/sosa/observedProperty",
     "usedProcedure": {
-      "@id": "sosa:usedProcedure",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
       "@type": "@id"
     },
     "madeBySensor": {
-      "@id": "sosa:madeBySensor",
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
       "@type": "@id"
     },
-    "hasResult": {
-      "@context": {
-        "distance": {
-          "@id": "http://example.com/properties/distance",
-          "@type": "http://www.w3.org/2001/XMLSchema#float"
-        }
-      }
-    },
-    "hasSimpleResult": "sosa:hasSimpleResult",
+    "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
     "isObservedBy": "sosa:isObservedBy",
     "hosts": "sosa:hosts",
     "deployedSystem": "ssn:deployedSystem",
@@ -48,7 +41,7 @@
     "isPropertyOf": "ssn:isPropertyOf",
     "deployedOnPlatform": "ssn:deployedOnPlatform",
     "hasInput": "ssn:hasInput",
-    "hasMember": "sosa:hasMember",
+    "hasMember": "http://www.w3.org/ns/sosa/hasMember",
     "actsOnProperty": "sosa:actsOnProperty",
     "hasSubSystem": "ssn:hasSubSystem",
     "hasSurvivalRange": "ssn-system:hasSurvivalRange",
@@ -81,6 +74,30 @@
     "rotations": "geopose:rotations",
     "latitude": "geo:lat",
     "longitude": "geo:long",
-    "height": "geopose:height"
+    "height": "geopose:height",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "type": "@type",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "geometry": {
+      "@context": {
+        "type": "@type",
+        "coordinates": "geojson:coordinates"
+      },
+      "@id": "geojson:geometry"
+    },
+    "bbox": "geojson:bbox",
+    "Polygon": "geojson:Polygon",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "Point": "geojson:Point",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "features": "geojson:features",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "MultiPoint": "geojson:MultiPoint",
+    "Feature": "geojson:Feature",
+    "links": "rdfs:seeAlso"
   }
 }

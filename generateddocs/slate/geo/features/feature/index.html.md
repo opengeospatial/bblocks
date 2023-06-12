@@ -87,16 +87,16 @@ Links to the schema:
       "@id": "geojson:geometry"
     },
     "bbox": "geojson:bbox",
+    "Polygon": "geojson:Polygon",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "Point": "geojson:Point",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "features": "geojson:features",
+    "GeometryCollection": "geojson:GeometryCollection",
     "MultiPoint": "geojson:MultiPoint",
     "Feature": "geojson:Feature",
-    "LineString": "geojson:LineString",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "Polygon": "geojson:Polygon",
-    "features": "geojson:features",
-    "Point": "geojson:Point",
-    "MultiLineString": "geojson:MultiLineString",
     "links": "rdfs:seeAlso"
   }
 }

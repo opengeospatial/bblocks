@@ -401,16 +401,16 @@ properties:
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 x-jsonld-extra-terms:
+  Polygon: https://purl.org/geojson/vocab#Polygon
+  LineString: https://purl.org/geojson/vocab#LineString
+  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
+  Point: https://purl.org/geojson/vocab#Point
+  FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
+  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
+  features: https://purl.org/geojson/vocab#features
+  GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
   MultiPoint: https://purl.org/geojson/vocab#MultiPoint
   Feature: https://purl.org/geojson/vocab#Feature
-  LineString: https://purl.org/geojson/vocab#LineString
-  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
-  GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
-  FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
-  Polygon: https://purl.org/geojson/vocab#Polygon
-  features: https://purl.org/geojson/vocab#features
-  Point: https://purl.org/geojson/vocab#Point
-  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
 
 ```
 
@@ -437,16 +437,16 @@ Links to the schema:
       "@id": "geojson:geometry"
     },
     "bbox": "geojson:bbox",
-    "MultiPoint": "geojson:MultiPoint",
-    "Feature": "geojson:Feature",
-    "LineString": "geojson:LineString",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "FeatureCollection": "geojson:FeatureCollection",
     "Polygon": "geojson:Polygon",
-    "features": "geojson:features",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
     "Point": "geojson:Point",
-    "MultiLineString": "geojson:MultiLineString"
+    "FeatureCollection": "geojson:FeatureCollection",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "features": "geojson:features",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "MultiPoint": "geojson:MultiPoint",
+    "Feature": "geojson:Feature"
   }
 }
 ```

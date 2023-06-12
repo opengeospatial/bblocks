@@ -174,8 +174,8 @@ x-jsonld-prefixes:
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
 x-jsonld-extra-terms:
   rotations: http://example.com/geopose/rotations
-  longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
   latitude: http://www.w3.org/2003/01/geo/wgs84_pos#lat
+  longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
   height: http://example.com/geopose/height
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json
 
@@ -203,8 +203,8 @@ Links to the schema:
     "lon": "geopose:lon",
     "h": "geopose:h",
     "rotations": "geopose:rotations",
-    "longitude": "geo:long",
     "latitude": "geo:lat",
+    "longitude": "geo:long",
     "height": "geopose:height"
   }
 }
