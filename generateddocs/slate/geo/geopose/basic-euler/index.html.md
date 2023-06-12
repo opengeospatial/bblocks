@@ -61,14 +61,14 @@ x-jsonld-prefixes:
   geopose: http://example.com/geopose/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
 x-jsonld-extra-terms:
-  pitch: http://example.com/geopose/pitch
-  yaw: http://example.com/geopose/yaw
   lat: http://example.com/geopose/lat
-  angles: http://example.com/geopose/angles
   position: http://example.com/geopose/position
   roll: http://example.com/geopose/roll
-  h: http://example.com/geopose/h
+  yaw: http://example.com/geopose/yaw
+  angles: http://example.com/geopose/angles
   lon: http://example.com/geopose/lon
+  pitch: http://example.com/geopose/pitch
+  h: http://example.com/geopose/h
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Euler.Schema.json
 
 ```
@@ -90,14 +90,14 @@ Links to the schema:
     "latitude": "geo:lat",
     "height": "geopose:height",
     "rotations": "geopose:rotations",
-    "pitch": "geopose:pitch",
-    "yaw": "geopose:yaw",
     "lat": "geopose:lat",
-    "angles": "geopose:angles",
     "position": "geopose:position",
     "roll": "geopose:roll",
-    "h": "geopose:h",
-    "lon": "geopose:lon"
+    "yaw": "geopose:yaw",
+    "angles": "geopose:angles",
+    "lon": "geopose:lon",
+    "pitch": "geopose:pitch",
+    "h": "geopose:h"
   }
 }
 ```
