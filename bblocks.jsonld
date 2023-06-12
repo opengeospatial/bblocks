@@ -78,7 +78,7 @@
       "itemIdentifier": "ogc.geo.common.data_types.bounding_box",
       "name": "Bounding Box",
       "abstract": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API\u2019s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.",
-      "status": "valid",
+      "status": "stable",
       "dateTimeAddition": "2022-05-24T13:51:38+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -137,7 +137,7 @@
     {
       "name": "GeoJSON",
       "abstract": "A GeoJSON object",
-      "status": "valid",
+      "status": "stable",
       "dateTimeAddition": "2023-05-24T14:56:51+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -183,7 +183,7 @@
       "itemIdentifier": "ogc.geo.common.parameters.bbox",
       "name": "bbox",
       "abstract": "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).",
-      "status": "valid",
+      "status": "stable",
       "dateTimeAddition": "2022-05-24T13:51:38+00:00",
       "itemClass": "parameter",
       "register": "ogc-building-block-register",
@@ -227,7 +227,7 @@
     {
       "name": "Feature",
       "abstract": "A feature. Every feature is a sub-resource of an OGC Collection.",
-      "status": "valid",
+      "status": "stable",
       "dateTimeAddition": "2023-05-24T14:56:51+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -276,7 +276,7 @@
     {
       "name": "GeoPose Basic-Euler",
       "abstract": "Basic GeoPose using Euler angle rotations to specify orientation",
-      "status": "valid",
+      "status": "stable",
       "dateTimeAddition": "2023-05-12T00:00:00+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -321,7 +321,7 @@
     {
       "name": "GeoPose Basic-YPR",
       "abstract": "Basic GeoPose using yaw, pitch, and roll to specify orientation",
-      "status": "valid",
+      "status": "stable",
       "dateTimeAddition": "2023-03-15T00:00:00+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -367,7 +367,7 @@
     {
       "name": "JSON-FG Feature",
       "abstract": "A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.",
-      "status": "valid",
+      "status": "experimental",
       "dateTimeAddition": "2023-05-31T14:56:51+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -412,7 +412,7 @@
     {
       "name": "JSON-FG Feature Collection",
       "abstract": "A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.",
-      "status": "valid",
+      "status": "experimental",
       "dateTimeAddition": "2023-05-31T14:56:51+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -454,9 +454,57 @@
       ]
     },
     {
+      "name": "My Building Block",
+      "abstract": "This Building Block serves as a template to create new ones",
+      "status": "valid",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2023-04-05",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "Sample source document",
+          "link": "https://example.com/sources/1"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "templates"
+      ],
+      "itemIdentifier": "ogc.incubator.my-building-block",
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/incubator/my-building-block/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/incubator/my-building-block/schema.json"
+      },
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/incubator/my-building-block/context.jsonld",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/incubator/my-building-block/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/incubator/my-building-block/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/incubator/my-building-block/index.md"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/incubator/my-building-block/"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept"
+      ]
+    },
+    {
       "name": "JSON Link",
       "abstract": "Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API\u2019s.",
-      "status": "valid",
+      "status": "stable",
       "dateTimeAddition": "2022-05-18T15:21:59+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -500,7 +548,7 @@
     {
       "name": "Example SOSA Vector Observation",
       "abstract": "This building block defines an example SOSA Vector Observation",
-      "status": "notAccepted",
+      "status": "under-development",
       "dateTimeAddition": "2023-05-19T00:00:00Z",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -557,7 +605,7 @@
     {
       "name": "Example SOSA Vector Observation Feature",
       "abstract": "This building block defines an example SOSA Observation Feature for a Vector Observation",
-      "status": "notAccepted",
+      "status": "under-development",
       "dateTimeAddition": "2023-05-19T00:00:00Z",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -614,7 +662,7 @@
     {
       "name": "SOSA Observation Feature",
       "abstract": "This building blocks defines a GeoJSON feature containing a SOSA Observation",
-      "status": "valid",
+      "status": "under-development",
       "dateTimeAddition": "2023-05-18T00:00:00Z",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -670,7 +718,7 @@
     {
       "name": "SOSA ObservationCollection Feature",
       "abstract": "This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification.",
-      "status": "experimental",
+      "status": "under-development",
       "dateTimeAddition": "2023-04-13T00:00:00Z",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -727,7 +775,7 @@
     {
       "name": "SOSA Observation",
       "abstract": "This building block defines the set of properties for an observation according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature.",
-      "status": "valid",
+      "status": "under-development",
       "dateTimeAddition": "2023-04-13T00:00:00Z",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -780,7 +828,7 @@
     {
       "name": "SOSA ObservationCollection",
       "abstract": "This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification.",
-      "status": "experimental",
+      "status": "under-development",
       "dateTimeAddition": "2023-04-13T00:00:00Z",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -837,7 +885,7 @@
     {
       "name": "Sensor, Observation, Sample, and Actuator (SOSA)",
       "abstract": "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model",
-      "status": "valid",
+      "status": "under-development",
       "dateTimeAddition": "2023-04-13T00:00:00Z",
       "itemClass": "api",
       "register": "ogc-building-block-register",
