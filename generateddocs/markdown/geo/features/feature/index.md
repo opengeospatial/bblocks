@@ -40,6 +40,7 @@ allOf:
   - properties
 x-jsonld-prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
+x-jsonld-extra-terms: {}
 
 ```
 
@@ -67,6 +68,16 @@ Links to the schema:
       "@id": "geojson:geometry"
     },
     "bbox": "geojson:bbox",
+    "MultiPoint": "geojson:MultiPoint",
+    "Feature": "geojson:Feature",
+    "LineString": "geojson:LineString",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "Polygon": "geojson:Polygon",
+    "features": "geojson:features",
+    "Point": "geojson:Point",
+    "MultiLineString": "geojson:MultiLineString",
     "links": "rdfs:seeAlso"
   }
 }

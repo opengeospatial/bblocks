@@ -77,6 +77,7 @@ schema:
     maxItems: 6
   items:
     type: number
+x-jsonld-extra-terms: {}
 
 ```
 

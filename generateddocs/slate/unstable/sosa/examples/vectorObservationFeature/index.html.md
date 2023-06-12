@@ -83,6 +83,7 @@ allOf:
   properties:
     properties:
       $ref: ../vectorObservation/schema.yaml
+x-jsonld-extra-terms: {}
 
 ```
 
@@ -113,6 +114,16 @@ Links to the schema:
       "@id": "geojson:geometry"
     },
     "bbox": "geojson:bbox",
+    "MultiPoint": "geojson:MultiPoint",
+    "Feature": "geojson:Feature",
+    "LineString": "geojson:LineString",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "Polygon": "geojson:Polygon",
+    "features": "geojson:features",
+    "Point": "geojson:Point",
+    "MultiLineString": "geojson:MultiLineString",
     "links": "rdfs:seeAlso",
     "resultTime": "sosa:resultTime",
     "phenomenonTime": "sosa:phenomenonTime",
@@ -139,6 +150,47 @@ Links to the schema:
       }
     },
     "hasSimpleResult": "sosa:hasSimpleResult",
+    "madeByActuator": "sosa:madeByActuator",
+    "isPropertyOf": "ssn:isPropertyOf",
+    "implements": "ssn:implements",
+    "hasSystemProperty": "ssn-system:hasSystemProperty",
+    "madeBySampler": "sosa:madeBySampler",
+    "detects": "ssn:detects",
+    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
+    "Sample": "sosa:Sample",
+    "observes": "sosa:observes",
+    "isActedOnBy": "sosa:isActedOnBy",
+    "madeActuation": "sosa:madeActuation",
+    "hasSubSystem": "ssn:hasSubSystem",
+    "isProxyFor": "ssn:isProxyFor",
+    "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
+    "hasDeployment": "ssn:hasDeployment",
+    "deployedSystem": "ssn:deployedSystem",
+    "qualityOfObservation": "ssn-system:qualityOfObservation",
+    "isResultOf": "sosa:isResultOf",
+    "hasProperty": "ssn:hasProperty",
+    "actsOnProperty": "sosa:actsOnProperty",
+    "madeSampling": "sosa:madeSampling",
+    "inCondition": "ssn-system:inCondition",
+    "hasInput": "ssn:hasInput",
+    "deployedOnPlatform": "ssn:deployedOnPlatform",
+    "forProperty": "ssn:forProperty",
+    "implementedBy": "ssn:implementedBy",
+    "hasOperatingRange": "ssn-system:hasOperatingRange",
+    "madeObservation": "sosa:madeObservation",
+    "wasOriginatedBy": "ssn:wasOriginatedBy",
+    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
+    "inDeployment": "ssn:inDeployment",
+    "hasSample": "sosa:hasSample",
+    "isObservedBy": "sosa:isObservedBy",
+    "isSampleOf": "sosa:isSampleOf",
+    "hosts": "sosa:hosts",
+    "hasOutput": "ssn:hasOutput",
+    "hasSystemCapability": "ssn-system:hasSystemCapability",
+    "Observation": "sosa:Observation",
+    "hasMember": "sosa:hasMember",
+    "isHostedBy": "sosa:isHostedBy",
     "geopose": "http://example.com/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "position": "geopose:position",
@@ -148,7 +200,11 @@ Links to the schema:
     "roll": "geopose:roll",
     "lat": "geopose:lat",
     "lon": "geopose:lon",
-    "h": "geopose:h"
+    "h": "geopose:h",
+    "rotations": "geopose:rotations",
+    "longitude": "geo:long",
+    "latitude": "geo:lat",
+    "height": "geopose:height"
   }
 }
 ```

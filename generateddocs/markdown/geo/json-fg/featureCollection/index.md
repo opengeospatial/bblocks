@@ -64,6 +64,7 @@ properties:
     type: array
     items:
       $ref: feature.json
+x-jsonld-extra-terms: {}
 
 ```
 
