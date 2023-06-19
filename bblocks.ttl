@@ -11,15 +11,15 @@
     rdfs:label "Bounding Box" ;
     dct:abstract "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other." ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            dct:identifier "markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            dct:identifier "json-full" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/bounding_box/index.json" ],
         [ dct:format "text/html" ;
             dct:identifier "slate" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/data_types/bounding_box/" ],
-        [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/bounding_box/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            dct:identifier "markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md" ] ;
     dct:hasVersion "1.0.1" ;
     dct:modified "2023-03-09"^^xsd:date ;
     dct:source <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ;
@@ -60,15 +60,15 @@
     rdfs:label "bbox" ;
     dct:abstract "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information)." ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/parameters/bbox/" ],
+    dct:description [ dct:format "text/markdown" ;
+            dct:identifier "markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md" ],
         [ dct:format "application/json" ;
             dct:identifier "json-full" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox/index.json" ],
-        [ dct:format "text/markdown" ;
-            dct:identifier "markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md" ] ;
+        [ dct:format "text/html" ;
+            dct:identifier "slate" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/parameters/bbox/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2022-05-24"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox> ;
@@ -84,12 +84,12 @@
     rdfs:label "Feature" ;
     dct:abstract "A feature. Every feature is a sub-resource of an OGC Collection." ;
     dct:created "2023-05-24T14:56:51+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/feature/" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md" ],
+        [ dct:format "text/html" ;
+            dct:identifier "slate" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/feature/" ],
         [ dct:format "application/json" ;
             dct:identifier "json-full" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/feature/index.json" ] ;
@@ -110,15 +110,15 @@
     rdfs:label "GeoPose Basic-Euler" ;
     dct:abstract "Basic GeoPose using Euler angle rotations to specify orientation" ;
     dct:created "2023-05-12T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            dct:identifier "json-full" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-euler/index.json" ],
+        [ dct:format "text/html" ;
             dct:identifier "slate" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic-euler/" ],
         [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-euler/index.md" ],
-        [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-euler/index.json" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-euler/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-05-12"^^xsd:date ;
     dct:source <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ;
@@ -138,12 +138,12 @@
     dct:description [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-ypr/index.md" ],
-        [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-ypr/index.json" ],
         [ dct:format "text/html" ;
             dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic-ypr/" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic-ypr/" ],
+        [ dct:format "application/json" ;
+            dct:identifier "json-full" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-ypr/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-03-12"^^xsd:date ;
     dct:source <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ;
@@ -163,12 +163,12 @@
     dct:description [ dct:format "text/html" ;
             dct:identifier "slate" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/feature/" ],
-        [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/feature/index.json" ],
         [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/feature/index.md" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/feature/index.md" ],
+        [ dct:format "application/json" ;
+            dct:identifier "json-full" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/feature/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-05-31"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
@@ -188,12 +188,12 @@
     dct:description [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection/index.md" ],
-        [ dct:format "text/html" ;
-            dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/featureCollection/" ],
         [ dct:format "application/json" ;
             dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection/index.json" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection/index.json" ],
+        [ dct:format "text/html" ;
+            dct:identifier "slate" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/featureCollection/" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-05-31"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
@@ -212,12 +212,12 @@
     dct:description [ dct:format "text/html" ;
             dct:identifier "slate" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/ogc-utils/json-link/" ],
-        [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/json-link/index.json" ],
         [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md" ],
+        [ dct:format "application/json" ;
+            dct:identifier "json-full" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/json-link/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2022-05-18"^^xsd:date ;
     dct:source <https://www.rfc-editor.org/rfc/rfc8288.txt> ;
@@ -229,31 +229,6 @@
     bblocks:scope <file:///github/workspace/ogc-utils> ;
     bblocks:status <file:///github/workspace/stable> .
 
-<file:///github/workspace/ogc.unstable.sosa> a skos:Concept,
-        bblocks:Api ;
-    rdfs:label "Sensor, Observation, Sample, and Actuator (SOSA)" ;
-    dct:abstract "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model" ;
-    dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/index.json" ],
-        [ dct:format "text/markdown" ;
-            dct:identifier "markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md" ],
-        [ dct:format "text/html" ;
-            dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/" ] ;
-    dct:hasVersion "1.0" ;
-    dct:modified "2023-04-13"^^xsd:date ;
-    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld> ;
-    bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json>,
-        <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml> ;
-    bblocks:maturity <file:///github/workspace/development> ;
-    bblocks:scope <file:///github/workspace/unstable> ;
-    bblocks:status <file:///github/workspace/under-development> .
-
 <file:///github/workspace/ogc.unstable.sosa.examples.vectorObservation> a skos:Concept,
         bblocks:Schema ;
     rdfs:label "Example SOSA Vector Observation" ;
@@ -262,12 +237,12 @@
     dct:description [ dct:format "application/json" ;
             dct:identifier "json-full" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservation/index.json" ],
-        [ dct:format "text/html" ;
-            dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/examples/vectorObservation/" ],
         [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservation/index.md" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservation/index.md" ],
+        [ dct:format "text/html" ;
+            dct:identifier "slate" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/examples/vectorObservation/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-19"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -284,15 +259,15 @@
     rdfs:label "Example SOSA Vector Observation Feature" ;
     dct:abstract "This building block defines an example SOSA Observation Feature for a Vector Observation" ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/examples/vectorObservationFeature/" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservationFeature/index.md" ],
         [ dct:format "application/json" ;
             dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservationFeature/index.json" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservationFeature/index.json" ],
+        [ dct:format "text/html" ;
+            dct:identifier "slate" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/examples/vectorObservationFeature/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-19"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -309,15 +284,15 @@
     rdfs:label "SOSA Observation Feature" ;
     dct:abstract "This building blocks defines a GeoJSON feature containing a SOSA Observation" ;
     dct:created "2023-05-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/features/observation/" ],
+    dct:description [ dct:format "application/json" ;
+            dct:identifier "json-full" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observation/index.json" ],
         [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md" ],
-        [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observation/index.json" ] ;
+        [ dct:format "text/html" ;
+            dct:identifier "slate" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/features/observation/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-18"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -334,12 +309,12 @@
     rdfs:label "SOSA ObservationCollection Feature" ;
     dct:abstract "This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification." ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observationCollection/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             dct:identifier "slate" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/features/observationCollection/" ],
+        [ dct:format "application/json" ;
+            dct:identifier "json-full" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observationCollection/index.json" ],
         [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observationCollection/index.md" ] ;
@@ -363,12 +338,12 @@
     dct:description [ dct:format "text/html" ;
             dct:identifier "slate" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observation/" ],
-        [ dct:format "application/json" ;
-            dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observation/index.json" ],
         [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observation/index.md" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observation/index.md" ],
+        [ dct:format "application/json" ;
+            dct:identifier "json-full" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observation/index.json" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -385,15 +360,15 @@
     rdfs:label "SOSA ObservationCollection" ;
     dct:abstract "This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification." ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            dct:identifier "slate" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observationCollection/" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             dct:identifier "markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md" ],
         [ dct:format "application/json" ;
             dct:identifier "json-full" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json" ],
+        [ dct:format "text/html" ;
+            dct:identifier "slate" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observationCollection/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-28"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn-ext/>,
@@ -474,10 +449,6 @@
 
 <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml> dct:format "application/yaml" .
 
-<https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json> dct:format "application/json" .
-
-<https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml> dct:format "application/yaml" .
-
 <https://www.iso.org/standard/59164.html> rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" .
 
 <https://www.rfc-editor.org/rfc/rfc8288.txt> rdfs:label "IETF RFC 8288 - Web Linking" .
@@ -494,14 +465,14 @@
     skos:prefLabel "OGC Building Blocks Register" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-06-12T22:53:45.648428"^^xsd:dateTime ;
-    prov:startedAtTime "2023-06-12T22:53:45.379586"^^xsd:dateTime ;
+    prov:endedAtTime "2023-06-19T14:00:14.247970"^^xsd:dateTime ;
+    prov:startedAtTime "2023-06-19T14:00:13.979882"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            rdfs:seeAlso <file:///github/workspace/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
