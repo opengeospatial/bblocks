@@ -16,4 +16,4 @@ This code is released under [Apache 2.0](./LICENSE) license.
 
 ## Contributing
 
-Pull Requests are welcome, either to add/update building blocks to the register, or to the website itself. It would be appreciated if you created a matching issue, explaining the PR.
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
