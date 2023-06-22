@@ -24,7 +24,7 @@ The process is very similar to using the Building Blocks template repository, be
 
 * The [Building Block structure](https://github.com/opengeospatial/bblock-template/blob/master/README.md#building-block-structure)
   (sources) is the same as in the template.
-* `registereditems` is the sources root directory.
+* The sources root directory is `registereditems/`.
 * There is no need for submodules or `bblock-config.yaml`, which are only relevant with using external repositories.
 
 ## Using the Building Blocks template repository
