@@ -87,7 +87,6 @@ allOf:
       oneOf:
       - type: 'null'
       - type: object
-x-jsonld-extra-terms: {}
 
 ```
 
@@ -115,16 +114,16 @@ Links to the schema:
       "@id": "geojson:geometry"
     },
     "bbox": "geojson:bbox",
-    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
     "MultiLineString": "geojson:MultiLineString",
     "Feature": "geojson:Feature",
+    "LineString": "geojson:LineString",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
     "features": "geojson:features",
     "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
     "MultiPoint": "geojson:MultiPoint",
-    "Polygon": "geojson:Polygon",
-    "LineString": "geojson:LineString",
-    "MultiPolygon": "geojson:MultiPolygon",
     "links": "rdfs:seeAlso"
   }
 }

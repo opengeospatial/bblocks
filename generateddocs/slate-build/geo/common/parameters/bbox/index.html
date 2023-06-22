@@ -362,11 +362,25 @@ This building block is <strong>valid</strong>
 
 <p>The parameter, if provided, selects the resources with a spatial extent that intersects the specified bounding box.</p>
 
-<p>The coordinates of the bounding box are in longitude, latitude and optionally ellipsoidal height unless a different coordinate reference system is specified in the query parameter <code>bbox-crs</code>.</p>
+<p>The coordinates of the bounding box are in longitude, latitude and optionally ellipsoidal height unless a different
+coordinate reference system is specified in the query parameter <code>bbox-crs</code>.</p>
+
+<p>The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a
+vertical axis (height or depth):</p>
+
+<ul>
+<li>Lower left corner, coordinate axis 1</li>
+<li>Lower left corner, coordinate axis 2</li>
+<li>Minimum value, coordinate axis 3 (optional)</li>
+<li>Upper right corner, coordinate axis 1</li>
+<li>Upper right corner, coordinate axis 2</li>
+<li>Maximum value, coordinate axis 3 (optional)</li>
+</ul>
 
 <p>The <code>bbox</code> parameter matches all resources in the collection that are not associated with a spatial geometry, too.</p>
 
-<p>If a resource has multiple spatial geometry properties, it is the decision of the server whether only a single spatial geometry property is used to determine the spatial extent or all relevant geometries.</p>
+<p>If a resource has multiple spatial geometry properties, it is the decision of the server whether only a single spatial
+geometry property is used to determine the spatial extent or all relevant geometries.</p>
 <h1 id='examples'>Examples</h1><h2 id='the-following-bounding-box-parameter-includes-the-48-contiguous-states-of-the-united-states-of-america'>The following bounding box parameter includes the 48 contiguous states of the United States of America.</h2>
 <p><code>bbox=-124.7844079,24.7433195,-66.9513812,49.3457868</code></p>
 
@@ -406,7 +420,6 @@ bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
     <span class="na">maxItems</span><span class="pi">:</span> <span class="m">6</span>
   <span class="na">items</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-<span class="na">x-jsonld-extra-terms</span><span class="pi">:</span> <span class="pi">{}</span>
 
 </code></pre></div>
 <p>Links to the schema:</p>

@@ -55,7 +55,6 @@ properties:
     type: integer
 x-jsonld-prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
-x-jsonld-extra-terms: {}
 
 ```
 
