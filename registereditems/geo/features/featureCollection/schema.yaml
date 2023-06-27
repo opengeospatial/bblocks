@@ -5,7 +5,7 @@ allOf:
       links:
         type: array
         items:
-          $ref: ../../../ogc-utils/schemas/json-link.yaml
+          $ref: bblocks://ogc.ogc-utils.json-link
       timeStamp:
         type: string
         format: date-time
@@ -15,3 +15,5 @@ allOf:
       numberReturned:
         type: integer
         minimum: 0
+      features:
+        $ref: bblocks://ogc.geo.features.feature
