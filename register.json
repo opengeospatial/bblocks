@@ -41,13 +41,13 @@
     "validationPassed": true,
     "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/",
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/bounding_box/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/bounding_box/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -82,13 +82,13 @@
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/",
     "validationPassed": true,
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/geojson/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/geojson/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/geojson/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -123,13 +123,13 @@
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
     "validationPassed": true,
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -160,6 +160,10 @@
     "scope": "geo",
     "group": "Common",
     "itemIdentifier": "ogc.geo.features.feature",
+    "dependsOn": [
+      "ogc.geo.common.data_types.geojson",
+      "ogc.ogc-utils.json-link"
+    ],
     "schema": {
       "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
       "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json"
@@ -168,17 +172,62 @@
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/",
     "validationPassed": true,
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/feature/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md"
       },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/feature/index.json"
+      },
       "slate": {
         "mediatype": "text/html",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/feature/"
+      }
+    }
+  },
+  {
+    "name": "Feature Collection",
+    "abstract": "A collection of features.",
+    "status": "stable",
+    "dateTimeAddition": "2023-06-26T14:56:51+00:00",
+    "itemClass": "schema",
+    "register": "ogc-building-block-register",
+    "version": "1.0",
+    "dateOfLastChange": "2023-06-26",
+    "sources": [
+      {
+        "title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response",
+        "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_5"
+      }
+    ],
+    "maturity": "mature",
+    "scope": "geo",
+    "group": "Common",
+    "itemIdentifier": "ogc.geo.features.featureCollection",
+    "dependsOn": [
+      "ogc.geo.features.feature",
+      "ogc.ogc-utils.json-link"
+    ],
+    "schema": {
+      "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
+      "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json"
+    },
+    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+    "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/",
+    "validationPassed": true,
+    "documentation": {
+      "markdown": {
+        "mediatype": "text/markdown",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/featureCollection/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/featureCollection/index.json"
+      },
+      "slate": {
+        "mediatype": "text/html",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/featureCollection/"
       }
     }
   },
@@ -209,13 +258,13 @@
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic-euler/",
     "validationPassed": true,
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-euler/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-euler/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-euler/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -251,13 +300,13 @@
     "validationPassed": true,
     "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/geopose/basic-ypr/",
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-ypr/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic-ypr/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic-ypr/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -284,6 +333,9 @@
     "scope": "geo",
     "group": "JSON-FG",
     "itemIdentifier": "ogc.geo.json-fg.feature",
+    "dependsOn": [
+      "ogc.geo.features.feature"
+    ],
     "schema": {
       "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml",
       "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json"
@@ -292,13 +344,13 @@
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/",
     "validationPassed": true,
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/feature/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/feature/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/feature/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -321,24 +373,28 @@
         "link": "http://docs.ogc.org/per/21-017r1.html"
       }
     ],
-    "schema": {
-      "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml",
-      "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json"
-    },
     "maturity": "proposal",
     "scope": "geo",
     "group": "JSON-FG",
     "itemIdentifier": "ogc.geo.json-fg.featureCollection",
+    "dependsOn": [
+      "ogc.geo.features.featureCollection"
+    ],
+    "schema": {
+      "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml",
+      "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json"
+    },
+    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/",
     "validationPassed": true,
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -372,13 +428,13 @@
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/",
     "validationPassed": true,
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/json-link/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/json-link/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -404,6 +460,7 @@
     "maturity": "development",
     "scope": "unstable",
     "dependsOn": [
+      "ogc.geo.geopose.basic-ypr",
       "ogc.unstable.sosa.properties.observation"
     ],
     "tags": [
@@ -425,13 +482,13 @@
     "validationPassed": true,
     "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservation/",
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservation/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservation/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservation/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -457,7 +514,9 @@
     "maturity": "development",
     "scope": "unstable",
     "dependsOn": [
-      "ogc.unstable.sosa.properties.observation"
+      "ogc.unstable.sosa.properties.observation",
+      "ogc.unstable.sosa.features.observation",
+      "ogc.unstable.sosa.examples.vectorObservation"
     ],
     "tags": [
       "sosa",
@@ -478,13 +537,13 @@
     "validationPassed": true,
     "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/",
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservationFeature/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/examples/vectorObservationFeature/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/examples/vectorObservationFeature/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -510,7 +569,8 @@
     "maturity": "development",
     "scope": "unstable",
     "dependsOn": [
-      "ogc.unstable.sosa.properties.observation"
+      "ogc.unstable.sosa.properties.observation",
+      "ogc.geo.json-fg.feature"
     ],
     "tags": [
       "sosa",
@@ -530,13 +590,13 @@
     "validationPassed": true,
     "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observation/",
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observation/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observation/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -574,6 +634,10 @@
     ],
     "group": "SOSA",
     "itemIdentifier": "ogc.unstable.sosa.features.observationCollection",
+    "dependsOn": [
+      "ogc.geo.json-fg.featureCollection",
+      "ogc.unstable.sosa.properties.observationCollection"
+    ],
     "schema": {
       "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
       "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json"
@@ -583,13 +647,13 @@
     "validationPassed": false,
     "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observationCollection/",
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observationCollection/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observationCollection/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observationCollection/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -632,13 +696,13 @@
     "validationPassed": true,
     "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observation/",
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observation/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observation/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observation/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -676,6 +740,9 @@
     ],
     "group": "SOSA",
     "itemIdentifier": "ogc.unstable.sosa.properties.observationCollection",
+    "dependsOn": [
+      "ogc.unstable.sosa.properties.observation"
+    ],
     "schema": {
       "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml",
       "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.json"
@@ -685,13 +752,13 @@
     "validationPassed": true,
     "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/",
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json"
       },
       "slate": {
         "mediatype": "text/html",
@@ -733,13 +800,13 @@
     "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/",
     "validationPassed": true,
     "documentation": {
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/index.json"
-      },
       "markdown": {
         "mediatype": "text/markdown",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/index.json"
       },
       "slate": {
         "mediatype": "text/html",

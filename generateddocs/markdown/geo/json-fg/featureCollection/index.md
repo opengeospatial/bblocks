@@ -35,35 +35,28 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 ## Schema
 
 ```yaml
-$schema: https://json-schema.org/draft/2019-09/schema
-$id: https://beta.schemas.opengis.net/json-fg/featurecollection.json
-title: a JSON-FG Feature Collection
-description: This JSON Schema is part of JSON-FG version 0.1.1
-type: object
-required:
-- type
-- features
-properties:
-  type:
-    type: string
-    enum:
-    - FeatureCollection
-  featureType:
-    $ref: featuretype.json
-  geometryDimension:
-    type: integer
-    minimum: 0
-    maximum: 3
-  coordRefSys:
-    $ref: coordrefsys.json
-  links:
-    type: array
-    items:
-      $ref: link.json
-  features:
-    type: array
-    items:
-      $ref: feature.json
+allOf:
+- $schema: https://json-schema.org/draft/2019-09/schema
+  title: a JSON-FG Feature Collection
+  description: This JSON Schema is part of JSON-FG version 0.1.1
+  type: object
+  required:
+  - type
+  - features
+  properties:
+    type:
+      type: string
+      enum:
+      - FeatureCollection
+    featureType:
+      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+    geometryDimension:
+      type: integer
+      minimum: 0
+      maximum: 3
+    coordRefSys:
+      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+- $ref: ../../features/featureCollection/schema.yaml
 
 ```
 
@@ -71,6 +64,43 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "links": "rdfs:seeAlso",
+    "type": "@type",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "geometry": {
+      "@context": {
+        "type": "@type",
+        "coordinates": "geojson:coordinates"
+      },
+      "@id": "geojson:geometry"
+    },
+    "bbox": "geojson:bbox",
+    "MultiPoint": "geojson:MultiPoint",
+    "Polygon": "geojson:Polygon",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "Point": "geojson:Point",
+    "Feature": "geojson:Feature",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "MultiLineString": "geojson:MultiLineString",
+    "LineString": "geojson:LineString",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "features": "geojson:features"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld)
 
 ## Sources
 
