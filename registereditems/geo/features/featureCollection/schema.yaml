@@ -16,4 +16,6 @@ allOf:
         type: integer
         minimum: 0
       features:
-        $ref: bblocks://ogc.geo.features.feature
+        type: array
+        items:
+          $ref: bblocks://ogc.geo.features.feature
