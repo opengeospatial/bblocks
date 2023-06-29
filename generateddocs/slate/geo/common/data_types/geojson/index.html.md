@@ -420,16 +420,16 @@ properties:
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 x-jsonld-extra-terms:
-  MultiPoint: https://purl.org/geojson/vocab#MultiPoint
-  Polygon: https://purl.org/geojson/vocab#Polygon
   GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
+  features: https://purl.org/geojson/vocab#features
+  FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
+  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
+  Polygon: https://purl.org/geojson/vocab#Polygon
+  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
   Point: https://purl.org/geojson/vocab#Point
   Feature: https://purl.org/geojson/vocab#Feature
-  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
-  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
+  MultiPoint: https://purl.org/geojson/vocab#MultiPoint
   LineString: https://purl.org/geojson/vocab#LineString
-  FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
-  features: https://purl.org/geojson/vocab#features
 
 ```
 
@@ -456,16 +456,16 @@ Links to the schema:
       "@id": "geojson:geometry"
     },
     "bbox": "geojson:bbox",
-    "MultiPoint": "geojson:MultiPoint",
-    "Polygon": "geojson:Polygon",
     "GeometryCollection": "geojson:GeometryCollection",
+    "features": "geojson:features",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "MultiLineString": "geojson:MultiLineString",
+    "Polygon": "geojson:Polygon",
+    "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Feature": "geojson:Feature",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "MultiLineString": "geojson:MultiLineString",
-    "LineString": "geojson:LineString",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "features": "geojson:features"
+    "MultiPoint": "geojson:MultiPoint",
+    "LineString": "geojson:LineString"
   }
 }
 ```

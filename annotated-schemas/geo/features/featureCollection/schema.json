@@ -26,7 +26,10 @@
           "minimum": 0
         },
         "features": {
-          "$ref": "../feature/schema.json",
+          "type": "array",
+          "items": {
+            "$ref": "../feature/schema.json"
+          },
           "x-jsonld-id": "https://purl.org/geojson/vocab#features"
         }
       }

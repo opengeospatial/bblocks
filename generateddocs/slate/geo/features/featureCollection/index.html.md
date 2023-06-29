@@ -48,7 +48,9 @@ allOf:
       type: integer
       minimum: 0
     features:
-      $ref: ../feature/schema.yaml
+      type: array
+      items:
+        $ref: ../feature/schema.yaml
       x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
@@ -70,26 +72,6 @@ Links to the schema:
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "geojson": "https://purl.org/geojson/vocab#",
     "links": "rdfs:seeAlso",
-    "type": "@type",
-    "id": "@id",
-    "properties": "geojson:properties",
-    "geometry": {
-      "@context": {
-        "type": "@type",
-        "coordinates": "geojson:coordinates"
-      },
-      "@id": "geojson:geometry"
-    },
-    "bbox": "geojson:bbox",
-    "MultiPoint": "geojson:MultiPoint",
-    "Polygon": "geojson:Polygon",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "Point": "geojson:Point",
-    "Feature": "geojson:Feature",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "MultiLineString": "geojson:MultiLineString",
-    "LineString": "geojson:LineString",
-    "FeatureCollection": "geojson:FeatureCollection",
     "features": "geojson:features"
   }
 }
