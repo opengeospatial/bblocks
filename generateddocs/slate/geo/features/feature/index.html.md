@@ -92,16 +92,16 @@ Links to the schema:
       "@id": "https://purl.org/geojson/vocab#bbox",
       "@container": "@list"
     },
-    "MultiPoint": "geojson:MultiPoint",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "Feature": "geojson:Feature",
-    "Polygon": "geojson:Polygon",
     "features": "geojson:features",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "FeatureCollection": "geojson:FeatureCollection",
     "MultiLineString": "geojson:MultiLineString",
-    "Point": "geojson:Point",
+    "FeatureCollection": "geojson:FeatureCollection",
     "LineString": "geojson:LineString",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Feature": "geojson:Feature",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "MultiPoint": "geojson:MultiPoint",
     "links": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   }
 }

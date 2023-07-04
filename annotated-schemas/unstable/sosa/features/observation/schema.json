@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "SOSA Observation Feature",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../../../geo/json-fg/feature/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "properties": {
+          "$ref": "../../properties/observation/schema.json"
+        }
+      }
+    }
+  ],
+  "x-jsonld-prefixes": {
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "ssn-system": "http://www.w3.org/ns/ssn/systems/"
+  },
+  "x-jsonld-extra-terms": {
+    "deployedOnPlatform": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+    "resultTime": "http://www.w3.org/ns/sosa/resultTime",
+    "isHostedBy": "http://www.w3.org/ns/sosa/isHostedBy",
+    "inDeployment": "http://www.w3.org/ns/ssn/inDeployment",
+    "hasInput": "http://www.w3.org/ns/ssn/hasInput",
+    "madeBySensor": "http://www.w3.org/ns/sosa/madeBySensor",
+    "implementedBy": "http://www.w3.org/ns/ssn/implementedBy",
+    "hosts": "http://www.w3.org/ns/sosa/hosts",
+    "hasOperatingProperty": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+    "features": "http://www.w3.org/ns/sosa/hasMember",
+    "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
+    "hasSurvivalProperty": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+    "observedProperty": "http://www.w3.org/ns/sosa/observedProperty",
+    "detects": "http://www.w3.org/ns/ssn/detects",
+    "madeByActuator": "http://www.w3.org/ns/sosa/madeByActuator",
+    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
+    "hasOperatingRange": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+    "Sample": "http://www.w3.org/ns/sosa/Sample",
+    "wasOriginatedBy": "http://www.w3.org/ns/ssn/wasOriginatedBy",
+    "hasSystemCapability": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+    "Observation": "http://www.w3.org/ns/sosa/Observation",
+    "implements": "http://www.w3.org/ns/ssn/implements",
+    "madeActuation": "http://www.w3.org/ns/sosa/madeActuation",
+    "hasOutput": "http://www.w3.org/ns/ssn/hasOutput",
+    "actsOnProperty": "http://www.w3.org/ns/sosa/actsOnProperty",
+    "isObservedBy": "http://www.w3.org/ns/sosa/isObservedBy",
+    "isSampleOf": "http://www.w3.org/ns/sosa/isSampleOf",
+    "hasFeatureOfInterest": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "hasSystemProperty": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+    "hasMember": "http://www.w3.org/ns/sosa/hasMember",
+    "isActedOnBy": "http://www.w3.org/ns/sosa/isActedOnBy",
+    "isFeatureOfInterestOf": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+    "forProperty": "http://www.w3.org/ns/ssn/forProperty",
+    "hasSurvivalRange": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+    "observes": "http://www.w3.org/ns/sosa/observes",
+    "isProxyFor": "http://www.w3.org/ns/ssn/isProxyFor",
+    "hasDeployment": "http://www.w3.org/ns/ssn/hasDeployment",
+    "qualityOfObservation": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+    "isPropertyOf": "http://www.w3.org/ns/ssn/isPropertyOf",
+    "hasSample": "http://www.w3.org/ns/sosa/hasSample",
+    "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+    "inCondition": "http://www.w3.org/ns/ssn/systems/inCondition",
+    "isResultOf": "http://www.w3.org/ns/sosa/isResultOf",
+    "usedProcedure": "http://www.w3.org/ns/sosa/usedProcedure",
+    "madeSampling": "http://www.w3.org/ns/sosa/madeSampling",
+    "madeBySampler": "http://www.w3.org/ns/sosa/madeBySampler",
+    "hasSubSystem": "http://www.w3.org/ns/ssn/hasSubSystem",
+    "deployedSystem": "http://www.w3.org/ns/ssn/deployedSystem",
+    "madeObservation": "http://www.w3.org/ns/sosa/madeObservation",
+    "hasProperty": "http://www.w3.org/ns/ssn/hasProperty"
+  }
+}
