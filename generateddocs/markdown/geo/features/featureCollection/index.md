@@ -52,8 +52,8 @@ Links to the schema:
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "geojson": "https://purl.org/geojson/vocab#",
-    "links": "rdfs:seeAlso",
-    "features": "geojson:features"
+    "links": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "features": "https://purl.org/geojson/vocab#features"
   }
 }
 ```

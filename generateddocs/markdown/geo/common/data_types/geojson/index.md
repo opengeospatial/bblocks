@@ -67,12 +67,14 @@ properties:
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON LineString
       type: object
       required:
@@ -93,12 +95,14 @@ properties:
             items:
               type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON Polygon
       type: object
       required:
@@ -121,12 +125,14 @@ properties:
               items:
                 type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON MultiPoint
       type: object
       required:
@@ -146,12 +152,14 @@ properties:
             items:
               type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON MultiLineString
       type: object
       required:
@@ -174,12 +182,14 @@ properties:
               items:
                 type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON MultiPolygon
       type: object
       required:
@@ -204,12 +214,14 @@ properties:
                 items:
                   type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON GeometryCollection
       type: object
       required:
@@ -242,12 +254,14 @@ properties:
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON LineString
               type: object
               required:
@@ -268,12 +282,14 @@ properties:
                     items:
                       type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON Polygon
               type: object
               required:
@@ -296,12 +312,14 @@ properties:
                       items:
                         type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON MultiPoint
               type: object
               required:
@@ -321,12 +339,14 @@ properties:
                     items:
                       type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON MultiLineString
               type: object
               required:
@@ -349,12 +369,14 @@ properties:
                       items:
                         type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON MultiPolygon
               type: object
               required:
@@ -379,18 +401,21 @@ properties:
                         items:
                           type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     x-jsonld-id: https://purl.org/geojson/vocab#geometry
   bbox:
     type: array
@@ -398,18 +423,19 @@ properties:
     items:
       type: number
     x-jsonld-id: https://purl.org/geojson/vocab#bbox
+    x-jsonld-container: '@list'
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 x-jsonld-extra-terms:
+  MultiPoint: https://purl.org/geojson/vocab#MultiPoint
   GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
+  Feature: https://purl.org/geojson/vocab#Feature
+  Polygon: https://purl.org/geojson/vocab#Polygon
   features: https://purl.org/geojson/vocab#features
+  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
   MultiLineString: https://purl.org/geojson/vocab#MultiLineString
-  Polygon: https://purl.org/geojson/vocab#Polygon
-  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
   Point: https://purl.org/geojson/vocab#Point
-  Feature: https://purl.org/geojson/vocab#Feature
-  MultiPoint: https://purl.org/geojson/vocab#MultiPoint
   LineString: https://purl.org/geojson/vocab#LineString
 
 ```
@@ -428,24 +454,30 @@ Links to the schema:
     "geojson": "https://purl.org/geojson/vocab#",
     "type": "@type",
     "id": "@id",
-    "properties": "geojson:properties",
+    "properties": "https://purl.org/geojson/vocab#properties",
     "geometry": {
       "@context": {
         "type": "@type",
-        "coordinates": "geojson:coordinates"
+        "coordinates": {
+          "@id": "https://purl.org/geojson/vocab#coordinates",
+          "@container": "@list"
+        }
       },
-      "@id": "geojson:geometry"
+      "@id": "https://purl.org/geojson/vocab#geometry"
     },
-    "bbox": "geojson:bbox",
+    "bbox": {
+      "@id": "https://purl.org/geojson/vocab#bbox",
+      "@container": "@list"
+    },
+    "MultiPoint": "geojson:MultiPoint",
     "GeometryCollection": "geojson:GeometryCollection",
+    "Feature": "geojson:Feature",
+    "Polygon": "geojson:Polygon",
     "features": "geojson:features",
+    "MultiPolygon": "geojson:MultiPolygon",
     "FeatureCollection": "geojson:FeatureCollection",
     "MultiLineString": "geojson:MultiLineString",
-    "Polygon": "geojson:Polygon",
-    "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
-    "Feature": "geojson:Feature",
-    "MultiPoint": "geojson:MultiPoint",
     "LineString": "geojson:LineString"
   }
 }

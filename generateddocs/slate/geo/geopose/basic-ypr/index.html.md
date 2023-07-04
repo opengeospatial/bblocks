@@ -173,10 +173,10 @@ x-jsonld-prefixes:
   geopose: http://example.com/geopose/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
 x-jsonld-extra-terms:
-  height: http://example.com/geopose/height
-  longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
   rotations: http://example.com/geopose/rotations
+  longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
   latitude: http://www.w3.org/2003/01/geo/wgs84_pos#lat
+  height: http://example.com/geopose/height
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json
 
 ```
@@ -194,18 +194,18 @@ Links to the schema:
   "@context": {
     "geopose": "http://example.com/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
-    "position": "geopose:position",
-    "angles": "geopose:angles",
-    "yaw": "geopose:yaw",
-    "pitch": "geopose:pitch",
-    "roll": "geopose:roll",
-    "lat": "geopose:lat",
-    "lon": "geopose:lon",
-    "h": "geopose:h",
-    "height": "geopose:height",
-    "longitude": "geo:long",
+    "position": "http://example.com/geopose/position",
+    "angles": "http://example.com/geopose/angles",
+    "yaw": "http://example.com/geopose/yaw",
+    "pitch": "http://example.com/geopose/pitch",
+    "roll": "http://example.com/geopose/roll",
+    "lat": "http://example.com/geopose/lat",
+    "lon": "http://example.com/geopose/lon",
+    "h": "http://example.com/geopose/h",
     "rotations": "geopose:rotations",
-    "latitude": "geo:lat"
+    "longitude": "geo:long",
+    "latitude": "geo:lat",
+    "height": "geopose:height"
   }
 }
 ```

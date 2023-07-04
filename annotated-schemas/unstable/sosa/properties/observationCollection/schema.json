@@ -45,26 +45,8 @@
       ],
       "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
       "x-jsonld-type": "@id"
-    },
-    "hasMember": {
-      "type": "array",
-      "items": {
-        "oneOf": [
-          {
-            "$ref": "../observation/schema.json"
-          },
-          {
-            "type": "string"
-          }
-        ]
-      },
-      "minItems": 1,
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasMember"
     }
   },
-  "required": [
-    "hasMember"
-  ],
   "not": {
     "anyOf": [
       {
@@ -85,47 +67,49 @@
     "ssn-system": "http://www.w3.org/ns/ssn/systems/"
   },
   "x-jsonld-extra-terms": {
-    "madeObservation": "http://www.w3.org/ns/sosa/madeObservation",
-    "hasResult": "http://www.w3.org/ns/sosa/hasResult",
-    "isHostedBy": "http://www.w3.org/ns/sosa/isHostedBy",
-    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
-    "implements": "http://www.w3.org/ns/ssn/implements",
-    "observes": "http://www.w3.org/ns/sosa/observes",
-    "hasInput": "http://www.w3.org/ns/ssn/hasInput",
-    "hasOperatingRange": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
-    "isProxyFor": "http://www.w3.org/ns/ssn/isProxyFor",
-    "hasOperatingProperty": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
-    "Sample": "http://www.w3.org/ns/sosa/Sample",
     "madeActuation": "http://www.w3.org/ns/sosa/madeActuation",
-    "qualityOfObservation": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
-    "isActedOnBy": "http://www.w3.org/ns/sosa/isActedOnBy",
-    "madeSampling": "http://www.w3.org/ns/sosa/madeSampling",
-    "hasDeployment": "http://www.w3.org/ns/ssn/hasDeployment",
-    "hasSurvivalProperty": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
-    "hasSystemProperty": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
-    "detects": "http://www.w3.org/ns/ssn/detects",
     "hasSystemCapability": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
-    "hasSurvivalRange": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-    "inCondition": "http://www.w3.org/ns/ssn/systems/inCondition",
-    "deployedSystem": "http://www.w3.org/ns/ssn/deployedSystem",
-    "hasSample": "http://www.w3.org/ns/sosa/hasSample",
-    "madeByActuator": "http://www.w3.org/ns/sosa/madeByActuator",
-    "hosts": "http://www.w3.org/ns/sosa/hosts",
     "wasOriginatedBy": "http://www.w3.org/ns/ssn/wasOriginatedBy",
-    "isPropertyOf": "http://www.w3.org/ns/ssn/isPropertyOf",
-    "hasProperty": "http://www.w3.org/ns/ssn/hasProperty",
-    "inDeployment": "http://www.w3.org/ns/ssn/inDeployment",
-    "isResultOf": "http://www.w3.org/ns/sosa/isResultOf",
+    "hasSample": "http://www.w3.org/ns/sosa/hasSample",
     "Observation": "http://www.w3.org/ns/sosa/Observation",
-    "isObservedBy": "http://www.w3.org/ns/sosa/isObservedBy",
+    "isHostedBy": "http://www.w3.org/ns/sosa/isHostedBy",
     "implementedBy": "http://www.w3.org/ns/ssn/implementedBy",
-    "madeBySampler": "http://www.w3.org/ns/sosa/madeBySampler",
-    "deployedOnPlatform": "http://www.w3.org/ns/ssn/deployedOnPlatform",
-    "forProperty": "http://www.w3.org/ns/ssn/forProperty",
-    "isFeatureOfInterestOf": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
     "hasSubSystem": "http://www.w3.org/ns/ssn/hasSubSystem",
-    "isSampleOf": "http://www.w3.org/ns/sosa/isSampleOf",
+    "hasOperatingProperty": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+    "features": "http://www.w3.org/ns/sosa/hasMember",
+    "hasSystemProperty": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+    "hasOperatingRange": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+    "madeObservation": "http://www.w3.org/ns/sosa/madeObservation",
+    "hasSurvivalRange": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+    "inDeployment": "http://www.w3.org/ns/ssn/inDeployment",
+    "deployedOnPlatform": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+    "isObservedBy": "http://www.w3.org/ns/sosa/isObservedBy",
+    "isResultOf": "http://www.w3.org/ns/sosa/isResultOf",
+    "detects": "http://www.w3.org/ns/ssn/detects",
+    "implements": "http://www.w3.org/ns/ssn/implements",
+    "isActedOnBy": "http://www.w3.org/ns/sosa/isActedOnBy",
     "hasOutput": "http://www.w3.org/ns/ssn/hasOutput",
-    "actsOnProperty": "http://www.w3.org/ns/sosa/actsOnProperty"
+    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
+    "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+    "hasSurvivalProperty": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+    "Sample": "http://www.w3.org/ns/sosa/Sample",
+    "actsOnProperty": "http://www.w3.org/ns/sosa/actsOnProperty",
+    "hasInput": "http://www.w3.org/ns/ssn/hasInput",
+    "deployedSystem": "http://www.w3.org/ns/ssn/deployedSystem",
+    "madeBySampler": "http://www.w3.org/ns/sosa/madeBySampler",
+    "hasProperty": "http://www.w3.org/ns/ssn/hasProperty",
+    "isSampleOf": "http://www.w3.org/ns/sosa/isSampleOf",
+    "madeSampling": "http://www.w3.org/ns/sosa/madeSampling",
+    "isPropertyOf": "http://www.w3.org/ns/ssn/isPropertyOf",
+    "forProperty": "http://www.w3.org/ns/ssn/forProperty",
+    "hasDeployment": "http://www.w3.org/ns/ssn/hasDeployment",
+    "isFeatureOfInterestOf": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+    "hosts": "http://www.w3.org/ns/sosa/hosts",
+    "observes": "http://www.w3.org/ns/sosa/observes",
+    "hasMember": "http://www.w3.org/ns/sosa/hasMember",
+    "inCondition": "http://www.w3.org/ns/ssn/systems/inCondition",
+    "isProxyFor": "http://www.w3.org/ns/ssn/isProxyFor",
+    "qualityOfObservation": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+    "madeByActuator": "http://www.w3.org/ns/sosa/madeByActuator"
   }
 }

@@ -71,7 +71,7 @@ Links to the schema:
   "@context": {
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "href": "@id",
-    "title": "rdfs:label"
+    "title": "http://www.w3.org/2000/01/rdf-schema#label"
   }
 }
 ```
