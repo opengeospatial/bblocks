@@ -82,36 +82,40 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "geojson": "https://purl.org/geojson/vocab#",
     "type": "@type",
     "id": "@id",
-    "properties": "https://purl.org/geojson/vocab#properties",
+    "properties": "geojson:properties",
     "geometry": {
+      "@id": "https://purl.org/geojson/vocab#geometry",
       "@context": {
         "type": "@type",
         "coordinates": {
           "@id": "https://purl.org/geojson/vocab#coordinates",
           "@container": "@list"
         }
-      },
-      "@id": "https://purl.org/geojson/vocab#geometry"
+      }
     },
     "bbox": {
       "@id": "https://purl.org/geojson/vocab#bbox",
       "@container": "@list"
     },
-    "features": "geojson:features",
-    "MultiLineString": "geojson:MultiLineString",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "LineString": "geojson:LineString",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Feature": "geojson:Feature",
     "GeometryCollection": "geojson:GeometryCollection",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
+    "LineString": "geojson:LineString",
+    "Feature": "geojson:Feature",
+    "MultiLineString": "geojson:MultiLineString",
     "MultiPoint": "geojson:MultiPoint",
-    "links": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    "features": "geojson:features",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "Polygon": "geojson:Polygon",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "links": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
+    }
   }
 }
 ```

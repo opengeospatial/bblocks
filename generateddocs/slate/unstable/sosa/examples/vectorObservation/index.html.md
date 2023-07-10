@@ -22,8 +22,8 @@ This building block defines an example SOSA Vector Observation
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservation/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservation/" target="_blank">valid</a></strong>
 </aside>
 
 # Examples
@@ -89,16 +89,13 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn": "http://www.w3.org/ns/ssn/",
-    "ssn-system": "http://www.w3.org/ns/ssn/systems/",
-    "resultTime": "http://www.w3.org/ns/sosa/resultTime",
-    "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
+    "resultTime": "sosa:resultTime",
+    "phenomenonTime": "sosa:phenomenonTime",
     "hasFeatureOfInterest": {
       "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "@type": "@id"
     },
-    "observedProperty": "http://www.w3.org/ns/sosa/observedProperty",
+    "observedProperty": "sosa:observedProperty",
     "usedProcedure": {
       "@id": "http://www.w3.org/ns/sosa/usedProcedure",
       "@type": "@id"
@@ -107,71 +104,74 @@ Links to the schema:
       "@id": "http://www.w3.org/ns/sosa/madeBySensor",
       "@type": "@id"
     },
-    "hasResult": {
-      "@context": {
-        "distance": {
-          "@id": "http://example.com/properties/distance",
-          "@type": "http://www.w3.org/2001/XMLSchema#float"
-        }
-      }
-    },
-    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
-    "deployedOnPlatform": "ssn:deployedOnPlatform",
-    "isHostedBy": "sosa:isHostedBy",
-    "inDeployment": "ssn:inDeployment",
-    "hasInput": "ssn:hasInput",
-    "implementedBy": "ssn:implementedBy",
-    "hosts": "sosa:hosts",
-    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
-    "features": "sosa:hasMember",
-    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
-    "detects": "ssn:detects",
-    "madeByActuator": "sosa:madeByActuator",
+    "hasResult": "sosa:hasResult",
+    "hasSimpleResult": "sosa:hasSimpleResult",
     "hasOperatingRange": "ssn-system:hasOperatingRange",
-    "Sample": "sosa:Sample",
-    "wasOriginatedBy": "ssn:wasOriginatedBy",
-    "hasSystemCapability": "ssn-system:hasSystemCapability",
-    "Observation": "sosa:Observation",
-    "implements": "ssn:implements",
-    "madeActuation": "sosa:madeActuation",
-    "hasOutput": "ssn:hasOutput",
-    "actsOnProperty": "sosa:actsOnProperty",
-    "isObservedBy": "sosa:isObservedBy",
-    "isSampleOf": "sosa:isSampleOf",
-    "hasSystemProperty": "ssn-system:hasSystemProperty",
-    "hasMember": "sosa:hasMember",
-    "isActedOnBy": "sosa:isActedOnBy",
     "isFeatureOfInterestOf": "sosa:isFeatureOfInterestOf",
+    "hasProperty": "ssn:hasProperty",
     "forProperty": "ssn:forProperty",
-    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
-    "observes": "sosa:observes",
-    "isProxyFor": "ssn:isProxyFor",
+    "madeBySampler": "sosa:madeBySampler",
     "hasDeployment": "ssn:hasDeployment",
-    "qualityOfObservation": "ssn-system:qualityOfObservation",
-    "isPropertyOf": "ssn:isPropertyOf",
+    "deployedOnPlatform": "ssn:deployedOnPlatform",
+    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
     "hasSample": "sosa:hasSample",
+    "hasInput": "ssn:hasInput",
+    "hasSystemCapability": "ssn-system:hasSystemCapability",
+    "madeObservation": "sosa:madeObservation",
+    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
+    "observes": "sosa:observes",
     "inCondition": "ssn-system:inCondition",
+    "isProxyFor": "ssn:isProxyFor",
+    "isHostedBy": "sosa:isHostedBy",
     "isResultOf": "sosa:isResultOf",
     "madeSampling": "sosa:madeSampling",
-    "madeBySampler": "sosa:madeBySampler",
-    "hasSubSystem": "ssn:hasSubSystem",
     "deployedSystem": "ssn:deployedSystem",
-    "madeObservation": "sosa:madeObservation",
-    "hasProperty": "ssn:hasProperty",
-    "geopose": "http://example.com/geopose/",
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
-    "position": "http://example.com/geopose/position",
-    "angles": "http://example.com/geopose/angles",
-    "yaw": "http://example.com/geopose/yaw",
-    "pitch": "http://example.com/geopose/pitch",
-    "roll": "http://example.com/geopose/roll",
-    "lat": "http://example.com/geopose/lat",
-    "lon": "http://example.com/geopose/lon",
-    "h": "http://example.com/geopose/h",
-    "longitude": "geo:long",
-    "latitude": "geo:lat",
+    "hosts": "sosa:hosts",
+    "hasSystemProperty": "ssn-system:hasSystemProperty",
+    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
+    "isActedOnBy": "sosa:isActedOnBy",
+    "isPropertyOf": "ssn:isPropertyOf",
+    "hasOutput": "ssn:hasOutput",
+    "isObservedBy": "sosa:isObservedBy",
+    "isSampleOf": "sosa:isSampleOf",
+    "qualityOfObservation": "ssn-system:qualityOfObservation",
+    "madeActuation": "sosa:madeActuation",
+    "Observation": "sosa:Observation",
+    "hasMember": "sosa:hasMember",
+    "wasOriginatedBy": "ssn:wasOriginatedBy",
+    "madeByActuator": "sosa:madeByActuator",
+    "inDeployment": "ssn:inDeployment",
+    "detects": "ssn:detects",
+    "actsOnProperty": "sosa:actsOnProperty",
+    "implements": "ssn:implements",
+    "features": "sosa:hasMember",
+    "implementedBy": "ssn:implementedBy",
+    "hasSubSystem": "ssn:hasSubSystem",
+    "Sample": "sosa:Sample",
+    "position": {
+      "@id": "http://example.com/geopose/position",
+      "@context": {
+        "lat": "geopose:lat",
+        "lon": "geopose:lon",
+        "h": "geopose:h"
+      }
+    },
+    "angles": {
+      "@id": "http://example.com/geopose/angles",
+      "@context": {
+        "yaw": "geopose:yaw",
+        "pitch": "geopose:pitch",
+        "roll": "geopose:roll"
+      }
+    },
     "height": "geopose:height",
-    "rotations": "geopose:rotations"
+    "rotations": "geopose:rotations",
+    "latitude": "geo:lat",
+    "longitude": "geo:long",
+    "distance": {
+      "@id": "http://example.com/properties/distance",
+      "@type": "http://www.w3.org/2001/XMLSchema#float"
+    }
   }
 }
 ```

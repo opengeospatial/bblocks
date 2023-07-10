@@ -427,16 +427,16 @@ properties:
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 x-jsonld-extra-terms:
-  features: https://purl.org/geojson/vocab#features
-  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
-  FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
-  LineString: https://purl.org/geojson/vocab#LineString
-  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
-  Feature: https://purl.org/geojson/vocab#Feature
   GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
-  Point: https://purl.org/geojson/vocab#Point
-  Polygon: https://purl.org/geojson/vocab#Polygon
+  LineString: https://purl.org/geojson/vocab#LineString
+  Feature: https://purl.org/geojson/vocab#Feature
+  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
   MultiPoint: https://purl.org/geojson/vocab#MultiPoint
+  features: https://purl.org/geojson/vocab#features
+  FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
+  Polygon: https://purl.org/geojson/vocab#Polygon
+  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
+  Point: https://purl.org/geojson/vocab#Point
 
 ```
 
@@ -451,34 +451,33 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "geojson": "https://purl.org/geojson/vocab#",
     "type": "@type",
     "id": "@id",
-    "properties": "https://purl.org/geojson/vocab#properties",
+    "properties": "geojson:properties",
     "geometry": {
+      "@id": "https://purl.org/geojson/vocab#geometry",
       "@context": {
         "type": "@type",
         "coordinates": {
           "@id": "https://purl.org/geojson/vocab#coordinates",
           "@container": "@list"
         }
-      },
-      "@id": "https://purl.org/geojson/vocab#geometry"
+      }
     },
     "bbox": {
       "@id": "https://purl.org/geojson/vocab#bbox",
       "@container": "@list"
     },
-    "features": "geojson:features",
-    "MultiLineString": "geojson:MultiLineString",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "LineString": "geojson:LineString",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Feature": "geojson:Feature",
     "GeometryCollection": "geojson:GeometryCollection",
-    "Point": "geojson:Point",
+    "LineString": "geojson:LineString",
+    "Feature": "geojson:Feature",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "features": "geojson:features",
+    "FeatureCollection": "geojson:FeatureCollection",
     "Polygon": "geojson:Polygon",
-    "MultiPoint": "geojson:MultiPoint"
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point"
   }
 }
 ```

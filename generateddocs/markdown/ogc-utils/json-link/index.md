@@ -50,9 +50,8 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "href": "@id",
-    "title": "http://www.w3.org/2000/01/rdf-schema#label"
+    "title": "rdfs:label"
   }
 }
 ```
