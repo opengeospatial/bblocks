@@ -57,6 +57,8 @@ allOf:
     coordRefSys:
       $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
 - $ref: ../../features/featureCollection/schema.yaml
+x-jsonld-extra-terms:
+  features: {}
 
 ```
 
@@ -89,25 +91,24 @@ Links to the schema:
           "@context": {
             "type": "@type",
             "coordinates": {
-              "@id": "https://purl.org/geojson/vocab#coordinates",
-              "@container": "@list"
+              "@container": "@list",
+              "@id": "https://purl.org/geojson/vocab#coordinates"
             }
           }
         },
         "bbox": {
-          "@id": "https://purl.org/geojson/vocab#bbox",
-          "@container": "@list"
+          "@container": "@list",
+          "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "Feature": "geojson:Feature",
-        "GeometryCollection": "geojson:GeometryCollection",
         "FeatureCollection": "geojson:FeatureCollection",
-        "MultiPoint": "geojson:MultiPoint",
-        "features": "geojson:features",
-        "Polygon": "geojson:Polygon",
+        "GeometryCollection": "geojson:GeometryCollection",
         "LineString": "geojson:LineString",
+        "MultiLineString": "geojson:MultiLineString",
+        "MultiPoint": "geojson:MultiPoint",
         "MultiPolygon": "geojson:MultiPolygon",
         "Point": "geojson:Point",
-        "MultiLineString": "geojson:MultiLineString",
+        "Polygon": "geojson:Polygon",
         "links": {
           "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "@context": {

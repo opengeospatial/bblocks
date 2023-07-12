@@ -72,6 +72,132 @@ Links to the schema:
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "type": "@type",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "geometry": {
+      "@id": "https://purl.org/geojson/vocab#geometry",
+      "@context": {
+        "type": "@type",
+        "coordinates": {
+          "@container": "@list",
+          "@id": "https://purl.org/geojson/vocab#coordinates"
+        }
+      }
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "https://purl.org/geojson/vocab#bbox"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "links": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
+    },
+    "resultTime": "sosa:resultTime",
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasFeatureOfInterest": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "observedProperty": "sosa:observedProperty",
+    "usedProcedure": {
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "madeBySensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "hasResult": "sosa:hasResult",
+    "hasSimpleResult": "sosa:hasSimpleResult",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "isResultOf": "sosa:isResultOf",
+    "isHostedBy": "sosa:isHostedBy",
+    "isProxyFor": "ssn:isProxyFor",
+    "wasOriginatedBy": "ssn:wasOriginatedBy",
+    "detects": "ssn:detects",
+    "hasProperty": "ssn:hasProperty",
+    "isPropertyOf": "ssn:isPropertyOf",
+    "forProperty": "ssn:forProperty",
+    "implements": "ssn:implements",
+    "implementedBy": "ssn:implementedBy",
+    "hasInput": "ssn:hasInput",
+    "hasOutput": "ssn:hasOutput",
+    "hasSubSystem": "ssn:hasSubSystem",
+    "deployedSystem": "ssn:deployedSystem",
+    "hasDeployment": "ssn:hasDeployment",
+    "deployedOnPlatform": "ssn:deployedOnPlatform",
+    "inDeployment": "ssn:inDeployment",
+    "inCondition": "ssn-system:inCondition",
+    "hasSystemCapability": "ssn-system:hasSystemCapability",
+    "hasSystemProperty": "ssn-system:hasSystemProperty",
+    "hasOperatingRange": "ssn-system:hasOperatingRange",
+    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
+    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
+    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
+    "qualityOfObservation": "ssn-system:qualityOfObservation",
+    "hasMember": "sosa:hasMember",
+    "features": "sosa:hasMember",
+    "position": {
+      "@id": "http://example.com/geopose/position",
+      "@context": {
+        "lat": "geopose:lat",
+        "lon": "geopose:lon",
+        "h": "geopose:h",
+        "position": "geopose:position",
+        "angles": "geopose:angles",
+        "yaw": "geopose:yaw",
+        "pitch": "geopose:pitch",
+        "roll": "geopose:roll"
+      }
+    },
+    "angles": {
+      "@id": "http://example.com/geopose/angles",
+      "@context": {
+        "yaw": "geopose:yaw",
+        "pitch": "geopose:pitch",
+        "roll": "geopose:roll",
+        "position": "geopose:position",
+        "angles": "geopose:angles",
+        "lat": "geopose:lat",
+        "lon": "geopose:lon",
+        "h": "geopose:h"
+      }
+    },
+    "longitude": "geo:long",
+    "latitude": "geo:lat",
+    "height": "geopose:height",
+    "rotations": "geopose:rotations",
+    "distance": {
+      "@id": "http://example.com/properties/distance",
+      "@type": "http://www.w3.org/2001/XMLSchema#float"
+    }
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld)
+
 ## Sources
 
 * [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)

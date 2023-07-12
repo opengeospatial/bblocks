@@ -1,72 +1,3 @@
-
-# Example SOSA Vector Observation (Schema)
-
-`ogc.unstable.sosa.examples.vectorObservation` *v1.0*
-
-This building block defines an example SOSA Vector Observation
-
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
-
-## Examples
-
-### Example 1
-#### json
-```json
-{
-  "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
-  "resultTime": "2023-05-22T16:41:00+2",
-  "hasResult": {
-    "pose": {
-      "position": {
-        "lat": 43.46498208387333,
-        "lon": -3.803638278687769,
-        "h": 0.5
-      },
-      "angles": {
-        "yaw": 5.553,
-        "pitch": -0.92,
-        "roll": 0.33
-      }
-    }
-  }
-}
-
-```
-
-## Schema
-
-```yaml
-$schema: https://json-schema.org/draft/2020-12/schema
-description: Example SOSA Vector Observation
-allOf:
-- $ref: ../../properties/observation/schema.yaml
-- type: object
-  properties:
-    hasResult:
-      properties:
-        pose:
-          $ref: ../../../../geo/geopose/basic-ypr/schema.yaml
-        distance:
-          type: number
-          x-jsonld-id: http://example.com/properties/distance
-          x-jsonld-type: http://www.w3.org/2001/XMLSchema#float
-  required:
-  - hasResult
-  not:
-    required:
-    - hasSimpleResult
-
-```
-
-Links to the schema:
-
-* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.json)
-* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.yaml)
-
-
-# JSON-LD Context
-
-```jsonld
 {
   "@context": {
     "resultTime": "sosa:resultTime",
@@ -114,7 +45,45 @@ Links to the schema:
     "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
     "qualityOfObservation": "ssn-system:qualityOfObservation",
     "hasMember": "sosa:hasMember",
-    "features": "sosa:hasMember",
+    "features": {
+      "@id": "http://www.w3.org/ns/sosa/hasMember",
+      "@context": {
+        "resultTime": "sosa:resultTime",
+        "phenomenonTime": "sosa:phenomenonTime",
+        "observedProperty": "sosa:observedProperty",
+        "hasResult": "sosa:hasResult",
+        "hasSimpleResult": "sosa:hasSimpleResult",
+        "Observation": "sosa:Observation",
+        "Sample": "sosa:Sample",
+        "isResultOf": "sosa:isResultOf",
+        "isHostedBy": "sosa:isHostedBy",
+        "isProxyFor": "ssn:isProxyFor",
+        "wasOriginatedBy": "ssn:wasOriginatedBy",
+        "detects": "ssn:detects",
+        "hasProperty": "ssn:hasProperty",
+        "isPropertyOf": "ssn:isPropertyOf",
+        "forProperty": "ssn:forProperty",
+        "implements": "ssn:implements",
+        "implementedBy": "ssn:implementedBy",
+        "hasInput": "ssn:hasInput",
+        "hasOutput": "ssn:hasOutput",
+        "hasSubSystem": "ssn:hasSubSystem",
+        "deployedSystem": "ssn:deployedSystem",
+        "hasDeployment": "ssn:hasDeployment",
+        "deployedOnPlatform": "ssn:deployedOnPlatform",
+        "inDeployment": "ssn:inDeployment",
+        "inCondition": "ssn-system:inCondition",
+        "hasSystemCapability": "ssn-system:hasSystemCapability",
+        "hasSystemProperty": "ssn-system:hasSystemProperty",
+        "hasOperatingRange": "ssn-system:hasOperatingRange",
+        "hasOperatingProperty": "ssn-system:hasOperatingProperty",
+        "hasSurvivalRange": "ssn-system:hasSurvivalRange",
+        "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
+        "qualityOfObservation": "ssn-system:qualityOfObservation",
+        "hasMember": "sosa:hasMember",
+        "features": "sosa:hasMember"
+      }
+    },
     "position": {
       "@id": "http://example.com/geopose/position",
       "@context": {
@@ -148,22 +117,39 @@ Links to the schema:
     "distance": {
       "@id": "http://example.com/properties/distance",
       "@type": "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "type": "@type",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "geometry": {
+      "@id": "https://purl.org/geojson/vocab#geometry",
+      "@context": {
+        "type": "@type",
+        "coordinates": {
+          "@container": "@list",
+          "@id": "https://purl.org/geojson/vocab#coordinates"
+        }
+      }
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "https://purl.org/geojson/vocab#bbox"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "links": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
     }
   }
 }
-```
-
-You can find the full JSON-LD context here:
-[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/context.jsonld)
-
-## Sources
-
-* [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)
-
-# For developers
-
-The source code for this Building Block can be found in the following repository:
-
-* URL: [https://github.com/opengeospatial/ogcapi-sosa](https://github.com/opengeospatial/ogcapi-sosa)
-* Path: `_sources/examples/vectorObservation`
-

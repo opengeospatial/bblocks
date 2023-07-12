@@ -1,5 +1,51 @@
 {
   "@context": {
+    "links": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
+    },
+    "features": {
+      "@id": "http://www.w3.org/ns/sosa/hasMember",
+      "@context": {
+        "type": "@type",
+        "id": "@id",
+        "properties": "geojson:properties",
+        "geometry": {
+          "@id": "https://purl.org/geojson/vocab#geometry",
+          "@context": {
+            "type": "@type",
+            "coordinates": {
+              "@container": "@list",
+              "@id": "https://purl.org/geojson/vocab#coordinates"
+            }
+          }
+        },
+        "bbox": {
+          "@container": "@list",
+          "@id": "https://purl.org/geojson/vocab#bbox"
+        },
+        "Feature": "geojson:Feature",
+        "FeatureCollection": "geojson:FeatureCollection",
+        "GeometryCollection": "geojson:GeometryCollection",
+        "LineString": "geojson:LineString",
+        "MultiLineString": "geojson:MultiLineString",
+        "MultiPoint": "geojson:MultiPoint",
+        "MultiPolygon": "geojson:MultiPolygon",
+        "Point": "geojson:Point",
+        "Polygon": "geojson:Polygon",
+        "links": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "@context": {
+            "href": "@id",
+            "title": "rdfs:label"
+          }
+        },
+        "features": "sosa:hasMember"
+      }
+    },
     "resultTime": "sosa:resultTime",
     "phenomenonTime": "sosa:phenomenonTime",
     "hasFeatureOfInterest": {
@@ -15,11 +61,11 @@
       "@id": "http://www.w3.org/ns/sosa/madeBySensor",
       "@type": "@id"
     },
-    "hasResult": "sosa:hasResult",
-    "hasSimpleResult": "sosa:hasSimpleResult",
     "Observation": "sosa:Observation",
     "Sample": "sosa:Sample",
+    "hasResult": "sosa:hasResult",
     "isResultOf": "sosa:isResultOf",
+    "hasSimpleResult": "sosa:hasSimpleResult",
     "isHostedBy": "sosa:isHostedBy",
     "isProxyFor": "ssn:isProxyFor",
     "wasOriginatedBy": "ssn:wasOriginatedBy",
@@ -44,7 +90,6 @@
     "hasSurvivalRange": "ssn-system:hasSurvivalRange",
     "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
     "qualityOfObservation": "ssn-system:qualityOfObservation",
-    "hasMember": "sosa:hasMember",
-    "features": "sosa:hasMember"
+    "hasMember": "sosa:hasMember"
   }
 }

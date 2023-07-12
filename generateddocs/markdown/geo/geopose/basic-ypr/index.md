@@ -122,6 +122,16 @@ definitions:
     - yaw
     - pitch
     - roll
+    x-jsonld-extra-terms:
+      position: http://example.com/geopose/position
+      angles: http://example.com/geopose/angles
+      lat: http://example.com/geopose/lat
+      lon: http://example.com/geopose/lon
+      h: http://example.com/geopose/h
+      longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
+      latitude: http://www.w3.org/2003/01/geo/wgs84_pos#lat
+      height: http://example.com/geopose/height
+      rotations: http://example.com/geopose/rotations
   Position:
     type: object
     properties:
@@ -138,6 +148,16 @@ definitions:
     - lat
     - lon
     - h
+    x-jsonld-extra-terms:
+      position: http://example.com/geopose/position
+      angles: http://example.com/geopose/angles
+      yaw: http://example.com/geopose/yaw
+      pitch: http://example.com/geopose/pitch
+      roll: http://example.com/geopose/roll
+      longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
+      latitude: http://www.w3.org/2003/01/geo/wgs84_pos#lat
+      height: http://example.com/geopose/height
+      rotations: http://example.com/geopose/rotations
 type: object
 properties:
   position:
@@ -149,14 +169,14 @@ properties:
 required:
 - position
 - angles
+x-jsonld-extra-terms:
+  longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
+  latitude: http://www.w3.org/2003/01/geo/wgs84_pos#lat
+  height: http://example.com/geopose/height
+  rotations: http://example.com/geopose/rotations
 x-jsonld-prefixes:
   geopose: http://example.com/geopose/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
-x-jsonld-extra-terms:
-  height: http://example.com/geopose/height
-  rotations: http://example.com/geopose/rotations
-  latitude: http://www.w3.org/2003/01/geo/wgs84_pos#lat
-  longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json
 
 ```
@@ -177,7 +197,12 @@ Links to the schema:
       "@context": {
         "lat": "geopose:lat",
         "lon": "geopose:lon",
-        "h": "geopose:h"
+        "h": "geopose:h",
+        "position": "geopose:position",
+        "angles": "geopose:angles",
+        "yaw": "geopose:yaw",
+        "pitch": "geopose:pitch",
+        "roll": "geopose:roll"
       }
     },
     "angles": {
@@ -185,13 +210,18 @@ Links to the schema:
       "@context": {
         "yaw": "geopose:yaw",
         "pitch": "geopose:pitch",
-        "roll": "geopose:roll"
+        "roll": "geopose:roll",
+        "position": "geopose:position",
+        "angles": "geopose:angles",
+        "lat": "geopose:lat",
+        "lon": "geopose:lon",
+        "h": "geopose:h"
       }
     },
-    "height": "geopose:height",
-    "rotations": "geopose:rotations",
+    "longitude": "geo:long",
     "latitude": "geo:lat",
-    "longitude": "geo:long"
+    "height": "geopose:height",
+    "rotations": "geopose:rotations"
   }
 }
 ```
