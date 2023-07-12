@@ -14,11 +14,16 @@ meta:
   - name: Feature (Schema)
 ---
 
-# Overview
+
+# Feature `ogc.geo.features.feature`
 
 A feature. Every feature is a sub-resource of an OGC Collection.
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 
 # Description
 
@@ -33,10 +38,91 @@ Each GeoJSON feature includes the following JSON members:
 * `geometry`: the primary geometry of the feature describing its location as a GeoJSON geometry object. `null`, if the
   feature has no spatial geometry.
 * `properties`: an object with a member for each feature property.
-# Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/schema.yaml)
-# Sources
+# JSON Schema
+
+```yaml--schema
+allOf:
+- $ref: ../../common/data_types/geojson/schema.yaml
+- type: object
+  properties:
+    links:
+      type: array
+      items:
+        $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    type:
+      const: Feature
+  required:
+  - type
+  - geometry
+  - properties
+x-jsonld-prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+
+```
+
+Links to the schema:
+
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json</a>
+
+
+# JSON-LD Context
+
+```json--ldContext
+{
+  "@context": {
+    "type": "@type",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "geometry": {
+      "@id": "https://purl.org/geojson/vocab#geometry",
+      "@context": {
+        "type": "@type",
+        "coordinates": {
+          "@id": "https://purl.org/geojson/vocab#coordinates",
+          "@container": "@list"
+        }
+      }
+    },
+    "bbox": {
+      "@id": "https://purl.org/geojson/vocab#bbox",
+      "@container": "@list"
+    },
+    "FeatureCollection": "geojson:FeatureCollection",
+    "MultiPoint": "geojson:MultiPoint",
+    "LineString": "geojson:LineString",
+    "Feature": "geojson:Feature",
+    "Polygon": "geojson:Polygon",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "features": "geojson:features",
+    "Point": "geojson:Point",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "MultiLineString": "geojson:MultiLineString",
+    "links": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
+    }
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld</a>
+
+# References
 
 * [OGC API - Features, Part 1, 7.16.2: Feature Response](https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7)
 * [ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals](https://www.iso.org/standard/59164.html)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a>
+* Path: `registereditems/geo/features/feature`
+

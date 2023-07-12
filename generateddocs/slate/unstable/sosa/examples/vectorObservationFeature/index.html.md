@@ -15,11 +15,16 @@ meta:
   - name: Example SOSA Vector Observation Feature (Schema)
 ---
 
-# Overview
+
+# Example SOSA Vector Observation Feature `ogc.unstable.sosa.examples.vectorObservationFeature`
 
 This building block defines an example SOSA Observation Feature for a Vector Observation
 
-[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
+
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/" target="_blank">valid</a></strong>
+</aside>
 
 # Examples
 
@@ -27,35 +32,74 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
 
 ```json
 {
-  "type": "Feature",
-  "geometry": {
-    "type": "Point",
-    "coordinates": [43.457475012484124, -3.7684047847661435]
+  "@id": "vector-obs-1",
+  "type":"Feature",
+  "geometry":{
+    "type":"LineString",
+    "coordinates":[
+      [
+        -111.67183507997295,
+        40.056709946862874
+      ],
+      [
+        -111.67183507997295,
+        40.056709946862874
+      ]
+    ]
   },
-  "properties": {
-    "hasFeatureOfInterest": "http://example.com/features/33",
-    "resultTime": "2023-05-22T16:41:00+2",
-    "hasResult": {
-      "pose": {
-        "position": {
-          "lat": 43.46498208387333,
-          "lon": -3.803638278687769,
-          "h": 0.5
+  "time":null,
+  "place":null,
+  "properties":{
+    "hasFeatureOfInterest":"eg:Traverse-P1-P2",
+    "resultTime":"2023-05-22T16:41:00+2",
+    "hasResult":{
+      "pose":{
+        "position":{
+          "lat":-111.67183507997295,
+          "lon":40.056709946862874,
+          "h":0.5
         },
-        "angles": {
-          "yaw": 5.553,
-          "pitch": -0.92,
-          "roll": 0.33
+        "angles":{
+          "yaw":15.35,
+          "pitch":-0.01,
+          "roll":0
         }
-      }
+      },
+      "distance":6889234.2
     }
   }
 }
+
 ```
 
-# Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/schema.yaml)
-# Sources
+# JSON Schema
+
+```yaml--schema
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Example SOSA Vector Observation
+allOf:
+- $ref: ../../features/observation/schema.yaml
+- type: object
+  properties:
+    properties:
+      $ref: ../vectorObservation/schema.yaml
+
+```
+
+Links to the schema:
+
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json</a>
+
+# References
 
 * [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: <a href="https://github.com/opengeospatial/ogcapi-sosa" target="_blank">https://github.com/opengeospatial/ogcapi-sosa</a>
+* Path: `_sources/examples/vectorObservationFeature`
+

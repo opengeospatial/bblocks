@@ -1,14 +1,13 @@
+
 # GeoPose Basic-Euler (Schema)
 
-*Version 0.1*
+`ogc.geo.geopose.basic-euler` *v0.1*
 
 Basic GeoPose using Euler angle rotations to specify orientation
 
 [*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
 
 ## Schema
-
-[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml)
 
 ```yaml
 description: 'Basic-Euler: Basic GeoPose using Euler angle rotations to specify orientation'
@@ -42,9 +41,57 @@ required:
 x-jsonld-prefixes:
   geopose: http://example.com/geopose/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+x-jsonld-extra-terms:
+  angles: http://example.com/geopose/angles
+  h: http://example.com/geopose/h
+  lat: http://example.com/geopose/lat
+  lon: http://example.com/geopose/lon
+  roll: http://example.com/geopose/roll
+  pitch: http://example.com/geopose/pitch
+  position: http://example.com/geopose/position
+  yaw: http://example.com/geopose/yaw
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Euler.Schema.json
 
 ```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "longitude": "geo:long",
+    "latitude": "geo:lat",
+    "height": "geopose:height",
+    "rotations": "geopose:rotations",
+    "angles": "geopose:angles",
+    "h": "geopose:h",
+    "lat": "geopose:lat",
+    "lon": "geopose:lon",
+    "roll": "geopose:roll",
+    "pitch": "geopose:pitch",
+    "position": "geopose:position",
+    "yaw": "geopose:yaw"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld)
+
 ## Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/bblocks](https://github.com/opengeospatial/bblocks)
+* Path: `registereditems/geo/geopose/basic-euler`
+

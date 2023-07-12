@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "links": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
+    },
+    "features": {
+      "@id": "https://purl.org/geojson/vocab#features",
+      "@context": {
+        "type": "@type",
+        "id": "@id",
+        "properties": "geojson:properties",
+        "geometry": {
+          "@id": "https://purl.org/geojson/vocab#geometry",
+          "@context": {
+            "type": "@type",
+            "coordinates": {
+              "@id": "https://purl.org/geojson/vocab#coordinates",
+              "@container": "@list"
+            }
+          }
+        },
+        "bbox": {
+          "@id": "https://purl.org/geojson/vocab#bbox",
+          "@container": "@list"
+        },
+        "FeatureCollection": "geojson:FeatureCollection",
+        "MultiPoint": "geojson:MultiPoint",
+        "LineString": "geojson:LineString",
+        "Feature": "geojson:Feature",
+        "Polygon": "geojson:Polygon",
+        "GeometryCollection": "geojson:GeometryCollection",
+        "features": "geojson:features",
+        "Point": "geojson:Point",
+        "MultiPolygon": "geojson:MultiPolygon",
+        "MultiLineString": "geojson:MultiLineString",
+        "links": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "@context": {
+            "href": "@id",
+            "title": "rdfs:label"
+          }
+        }
+      }
+    }
+  }
+}

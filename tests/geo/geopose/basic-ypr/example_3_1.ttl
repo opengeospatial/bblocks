@@ -1,10 +1,11 @@
-@prefix geopose: <http://example.com/geopose/> .
+@prefix ns1: <geopose:> .
+@prefix ns2: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] geopose:angles [ geopose:pitch -4.401787e-01 ;
-            geopose:roll 0e+00 ;
-            geopose:yaw 5.522895e+00 ] ;
-    geopose:position [ geopose:h 1.15e+01 ;
-            geopose:lat 4.77e+01 ;
-            geopose:lon -1.223e+02 ] .
+[] ns2:angles [ ns1:pitch -4.401787e-01 ;
+            ns1:roll 0e+00 ;
+            ns1:yaw 5.522895e+00 ] ;
+    ns2:position [ ns1:h 1.15e+01 ;
+            ns1:lat 4.77e+01 ;
+            ns1:lon -1.223e+02 ] .
 

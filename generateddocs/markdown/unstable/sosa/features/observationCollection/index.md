@@ -1,6 +1,7 @@
+
 # SOSA ObservationCollection Feature (Schema)
 
-*Version 1.0*
+`ogc.unstable.sosa.features.observationCollection` *v1.0*
 
 This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification.
 
@@ -11,81 +12,155 @@ This building blocks defines an ObservationCollection Feature according to the S
 ### Example of SOSA ObservationCollection
 #### json
 ```json
-{ 
+{
   "@id": "c1",
-  "type": "Feature",
+  "type": "FeatureCollection",
   "featureType": "sosa:ObservationCollection",
   "properties": {
-    "hasMember": [
-      "_:a1"
-    ],
-    "observedProperty": "_:p1",
-    "resultTime": "2022-05-01T22:33:44Z"
+    "observedProperty": "https://dbpedia.org/ontology/population",
+    "resultTime": "1999"
   },
+  "features": [
+    {
+      "@id": "pop1999",
+      "type": "Feature",
+      "geometry": null,
+      "properties": null,
+      "comment": "Example of an inline membership - would entail hasMember relations",
+      "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
+      "hasSimpleResult": 15555.0
+    },
+    {
+      "@id": "pop1999",
+      "type": "Feature",
+      "geometry": null,
+      "properties": null,
+      "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
+      "hasSimpleResult": 3275.0
+    }
+  ]
 }
 ```
 
-#### json
-```json
-{ 
-  "@id": "c1",
-  "type": "Feature",
-  "featureType": "sosa:ObservationCollection",
-  "properties": {
-    "observedProperty": "p1",
-    "resultTime": "2022-05-01T22:33:44Z",
-    "hasMember": [
-      { 
-        "@id": "a1",
-        "comment": "Example of an inline membership - would entail hasMember relations",
-        "hasFeatureOfInterest": "http://example.com/fois/1",
-        "hasSimpleResult": 12
-      }
-    ]
-  },
-}
-```
-
-#### ttl
-```ttl
+#### turtle
+```turtle
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix eg: <http://example.org/my-feature/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 eg:c1 a sosa:ObservationCollection ;
-  sosa:hasMember eg:a1 ;
-  sosa:observedProperty eg:p1 ;
+  sosa:hasMember eg:pop1999, eg:pop2000 ;
+  sosa:observedProperty <http://dbpedia.org/ontology/population> ;
   sosa:resultTime "2022-05-01T22:33:44Z"^^xsd:dateTime ;
 .
 
-eg:a1 a sosa:Observation ;
-  sosa:hasFeatureOfInterest <http://example.com/fois/1> ;
-  sosa:hasSimpleResult 33 ;
+eg:pop1999 a sosa:Observation ;
+  sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem> ;
+  sosa:hasSimpleResult 3275.0 ;
+  sosa:resultTime "1999-01-01"^^xsd:date
 .
-eg:p1 a skos:Concept;
-  skos:prefLabel "Some Observable Property";
+
+ eg:pop2000 a sosa:Observation ;
+  sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem> ;
+  sosa:hasSimpleResult 4372.0 ;
+  sosa:resultTime "2000"^^xsd:gYear
+.
+
+<http://dbpedia.org/ontology/population> a skos:Concept;
+  skos:prefLabel "Population";
 .
 ```
 
 ## Schema
 
-[schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml)
-
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 description: SOSA Observation Feature
-type: object
-properties:
+allOf:
+- $ref: ../../../../geo/json-fg/featureCollection/schema.yaml
+- type: object
   properties:
-    $ref: ../../properties/observationCollection/schema.yaml
+    properties:
+      $ref: ../../properties/observationCollection/schema.yaml
+    features:
+      type: array
+      items:
+        oneOf:
+        - $ref: ../observation/schema.yaml
+        - type: string
+      x-jsonld-id: http://www.w3.org/ns/sosa/hasMember
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn: http://www.w3.org/ns/ssn/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+x-jsonld-extra-terms:
+  isObservedBy: http://www.w3.org/ns/sosa/isObservedBy
+  phenomenonTime: http://www.w3.org/ns/sosa/phenomenonTime
+  detects: http://www.w3.org/ns/ssn/detects
+  resultTime: http://www.w3.org/ns/sosa/resultTime
+  hasSystemProperty: http://www.w3.org/ns/ssn/systems/hasSystemProperty
+  isResultOf: http://www.w3.org/ns/sosa/isResultOf
+  isActedOnBy: http://www.w3.org/ns/sosa/isActedOnBy
+  madeSampling: http://www.w3.org/ns/sosa/madeSampling
+  hasProperty: http://www.w3.org/ns/ssn/hasProperty
+  hasSurvivalProperty: http://www.w3.org/ns/ssn/systems/hasSurvivalProperty
+  madeBySampler: http://www.w3.org/ns/sosa/madeBySampler
+  observedProperty: http://www.w3.org/ns/sosa/observedProperty
+  hasResult: http://www.w3.org/ns/sosa/hasResult
+  madeByActuator: http://www.w3.org/ns/sosa/madeByActuator
+  isSampleOf: http://www.w3.org/ns/sosa/isSampleOf
+  observes: http://www.w3.org/ns/sosa/observes
+  wasOriginatedBy: http://www.w3.org/ns/ssn/wasOriginatedBy
+  hasMember: http://www.w3.org/ns/sosa/hasMember
+  inDeployment: http://www.w3.org/ns/ssn/inDeployment
+  isProxyFor: http://www.w3.org/ns/ssn/isProxyFor
+  deployedSystem: http://www.w3.org/ns/ssn/deployedSystem
+  isPropertyOf: http://www.w3.org/ns/ssn/isPropertyOf
+  qualityOfObservation: http://www.w3.org/ns/ssn/systems/qualityOfObservation
+  hasSimpleResult: http://www.w3.org/ns/sosa/hasSimpleResult
+  hosts: http://www.w3.org/ns/sosa/hosts
+  hasFeatureOfInterest: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+  hasSample: http://www.w3.org/ns/sosa/hasSample
+  implementedBy: http://www.w3.org/ns/ssn/implementedBy
+  hasSystemCapability: http://www.w3.org/ns/ssn/systems/hasSystemCapability
+  inCondition: http://www.w3.org/ns/ssn/systems/inCondition
+  hasOperatingRange: http://www.w3.org/ns/ssn/systems/hasOperatingRange
+  Sample: http://www.w3.org/ns/sosa/Sample
+  hasOperatingProperty: http://www.w3.org/ns/ssn/systems/hasOperatingProperty
+  Observation: http://www.w3.org/ns/sosa/Observation
+  isHostedBy: http://www.w3.org/ns/sosa/isHostedBy
+  actsOnProperty: http://www.w3.org/ns/sosa/actsOnProperty
+  hasOutput: http://www.w3.org/ns/ssn/hasOutput
+  hasSurvivalRange: http://www.w3.org/ns/ssn/systems/hasSurvivalRange
+  usedProcedure: http://www.w3.org/ns/sosa/usedProcedure
+  madeActuation: http://www.w3.org/ns/sosa/madeActuation
+  madeObservation: http://www.w3.org/ns/sosa/madeObservation
+  hasSubSystem: http://www.w3.org/ns/ssn/hasSubSystem
+  implements: http://www.w3.org/ns/ssn/implements
+  deployedOnPlatform: http://www.w3.org/ns/ssn/deployedOnPlatform
+  isFeatureOfInterestOf: http://www.w3.org/ns/sosa/isFeatureOfInterestOf
+  hasDeployment: http://www.w3.org/ns/ssn/hasDeployment
+  forProperty: http://www.w3.org/ns/ssn/forProperty
+  madeBySensor: http://www.w3.org/ns/sosa/madeBySensor
+  hasInput: http://www.w3.org/ns/ssn/hasInput
 
 ```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml)
+
 ## Sources
 
 * [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)
 * [Extensions to the Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn-ext/)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/ogcapi-sosa](https://github.com/opengeospatial/ogcapi-sosa)
+* Path: `_sources/features/observationCollection`
+

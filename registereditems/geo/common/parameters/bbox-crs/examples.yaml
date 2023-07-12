@@ -1,0 +1,20 @@
+- title: Bounding box parameter example
+  content: |
+    The coordinates in the following bounding box are in the coordinate reference system ETRS89 / UTM zone 32N that is used, for example, in Germany.
+  snippets:
+    - language: python
+      code: |
+        import urllib.parse
+        import urllib.request
+    
+        params = {
+          'bbox': '-124.7844079,24.7433195,-66.9513812,49.3457868',
+          'bbox-crs': 'http://www.opengis.net/def/crs/EPSG/0/25832'
+        }
+    
+        url = 'https://demo.pygeoapi.io/master/collections/lakes/items?' \
+            + urllib.parse.urlencode(params)
+    
+        contents = urllib.request.urlopen(url)
+    
+        print(contents.read())
