@@ -6,9 +6,9 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta
-            name="Feature Collection (Schema)"
+            name="JSON-FG Feature Collection (Schema)"
         >
-    <title>Feature Collection (Schema)</title>
+    <title>JSON-FG Feature Collection (Schema)</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="geo geo_features geo_features_featureCollection geo_features_featureCollection_index" data-languages="[]">
+  <body class="geo geo_json-fg geo_json-fg_featureCollection geo_json-fg_featureCollection_index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -309,7 +309,10 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#feature-collection-ogc-geo-features-featurecollection" class="toc-h1 toc-link" data-title="Feature Collection ogc.geo.features.featureCollection">Feature Collection <code>ogc.geo.features.featureCollection</code></a>
+            <a href="#json-fg-feature-collection-ogc-geo-json-fg-featurecollection" class="toc-h1 toc-link" data-title="JSON-FG Feature Collection ogc.geo.json-fg.featureCollection">JSON-FG Feature Collection <code>ogc.geo.json-fg.featureCollection</code></a>
+          </li>
+          <li>
+            <a href="#description" class="toc-h1 toc-link" data-title="Description">Description</a>
           </li>
           <li>
             <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
@@ -325,55 +328,77 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li>Version 1.0</li>
-            <li><a href='#'>Feature Collection</a></li>
+            <li>Version 0.1</li>
+            <li><a href='#'>JSON-FG Feature Collection</a></li>
             <li><a href='https://blocks.ogc.org/register.html'>Building Blocks register</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='feature-collection-ogc-geo-features-featurecollection'>Feature Collection <code>ogc.geo.features.featureCollection</code></h1>
-<p>A collection of features.</p>
+        <h1 id='json-fg-feature-collection-ogc-geo-json-fg-featurecollection'>JSON-FG Feature Collection <code>ogc.geo.json-fg.featureCollection</code></h1>
+<p>A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.</p>
 
-<p><a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Mature</p>
+<p><a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Proposal</p>
 
 <aside class="success">
 This building block is <strong>valid</strong>
 </aside>
+<h1 id='description'>Description</h1>
+<p>OGC Features and Geometries JSON (JSON-FG) extends GeoJSON to support a limited set of additional capabilities that are
+out-of-scope for GeoJSON, but that are essential or important for a variety of use cases involving feature data.
+A <strong>feature collection</strong> contains a set of features from a dataset.</p>
+
+<p>Information that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in
+additional top-level members of GeoJSON objects. The members use keys that do not conflict with GeoJSON including the
+obsolete version that pre-dates the IETF standard. GeoJSON clients will be able to parse and understand all aspects that
+are specified by GeoJSON, JSON-FG clients will also parse and understand the additional capabilities.</p>
+
+<p>This Standard specifies the following minimal extensions to the GeoJSON Standard:</p>
+
+<ul>
+<li>The ability to use Coordinate Reference Systems (CRSs) other than WGS 84;</li>
+<li>The ability to use non-Euclidean metrics, in particular ellipsoidal metrics;</li>
+<li>Support for solids and prisms as geometry types;</li>
+<li>The ability to encode temporal characteristics of a feature; and</li>
+<li>The ability to declare the type and the schema of a feature.</li>
+</ul>
+
+<p>Information that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in
+additional members of the GeoJSON objects. The additional members use keys that do not conflict with GeoJSON. This is so
+existing and future GeoJSON clients will continue to parse and understand GeoJSON content. JSON-FG enabled clients will
+also be able to parse and understand the additional members.</p>
+
+<p>JSON Schema is used to formally specify the JSON-FG syntax.</p>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">allOf</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://geojson.org/schema/FeatureCollection.json</span>
-<span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+<span class="pi">-</span> <span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2019-09/schema</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s">a JSON-FG Feature Collection</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">This JSON Schema is part of JSON-FG version 0.1.1</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">required</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">type</span>
+  <span class="pi">-</span> <span class="s">features</span>
   <span class="na">properties</span><span class="pi">:</span>
-    <span class="na">links</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-      <span class="na">items</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../../ogc-utils/json-link/schema.yaml</span>
-      <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2000/01/rdf-schema#seeAlso</span>
-    <span class="na">timeStamp</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span>
       <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-      <span class="na">format</span><span class="pi">:</span> <span class="s">date-time</span>
-    <span class="na">numberMatched</span><span class="pi">:</span>
+      <span class="na">enum</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">FeatureCollection</span>
+    <span class="na">featureType</span><span class="pi">:</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/featuretype.json</span>
+    <span class="na">geometryDimension</span><span class="pi">:</span>
       <span class="na">type</span><span class="pi">:</span> <span class="s">integer</span>
       <span class="na">minimum</span><span class="pi">:</span> <span class="m">0</span>
-    <span class="na">numberReturned</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span> <span class="s">integer</span>
-      <span class="na">minimum</span><span class="pi">:</span> <span class="m">0</span>
-    <span class="na">features</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-      <span class="na">items</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s">../feature/schema.yaml</span>
-      <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#features</span>
-<span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
-  <span class="na">rdfs</span><span class="pi">:</span> <span class="s">http://www.w3.org/2000/01/rdf-schema#</span>
-  <span class="na">geojson</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#</span>
+      <span class="na">maximum</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">coordRefSys</span><span class="pi">:</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/coordrefsys.json</span>
+<span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../features/featureCollection/schema.yaml</span>
 
 </code></pre></div>
 <p>Links to the schema:</p>
 
 <ul>
-<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml</a></li>
-<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json</a></li>
+<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml</a></li>
+<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json</a></li>
 </ul>
 <h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -427,17 +452,17 @@ This building block is <strong>valid</strong>
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld</a></p>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld</a></p>
 <h1 id='references'>References</h1>
 <ul>
-<li><a href="https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_5">OGC API - Features, Part 1, 7.14.2: Feature Collection Response</a></li>
+<li><a href="http://docs.ogc.org/per/21-017r1.html">OGC Testbed-17: OGC Features and Geometries JSON Engineering Report</a></li>
 </ul>
 <h1 id='for-developers'>For developers</h1>
 <p>The source code for this Building Block can be found in the following repository:</p>
 
 <ul>
 <li>URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a></li>
-<li>Path: <code>registereditems/geo/features/featureCollection</code></li>
+<li>Path: <code>registereditems/geo/json-fg/featureCollection</code></li>
 </ul>
 
       </div>

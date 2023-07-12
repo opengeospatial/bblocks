@@ -446,16 +446,16 @@ properties:
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 x-jsonld-extra-terms:
-  MultiPoint: https://purl.org/geojson/vocab#MultiPoint
-  GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
-  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
-  Feature: https://purl.org/geojson/vocab#Feature
-  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
-  LineString: https://purl.org/geojson/vocab#LineString
-  Polygon: https://purl.org/geojson/vocab#Polygon
-  features: https://purl.org/geojson/vocab#features
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
+  MultiPoint: https://purl.org/geojson/vocab#MultiPoint
+  LineString: https://purl.org/geojson/vocab#LineString
+  Feature: https://purl.org/geojson/vocab#Feature
+  Polygon: https://purl.org/geojson/vocab#Polygon
+  GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
+  features: https://purl.org/geojson/vocab#features
   Point: https://purl.org/geojson/vocab#Point
+  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
+  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
 
 ```
 
@@ -487,16 +487,16 @@ Links to the schema:
       "@id": "https://purl.org/geojson/vocab#bbox",
       "@container": "@list"
     },
-    "MultiPoint": "geojson:MultiPoint",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "MultiLineString": "geojson:MultiLineString",
-    "Feature": "geojson:Feature",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "LineString": "geojson:LineString",
-    "Polygon": "geojson:Polygon",
-    "features": "geojson:features",
     "FeatureCollection": "geojson:FeatureCollection",
-    "Point": "geojson:Point"
+    "MultiPoint": "geojson:MultiPoint",
+    "LineString": "geojson:LineString",
+    "Feature": "geojson:Feature",
+    "Polygon": "geojson:Polygon",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "features": "geojson:features",
+    "Point": "geojson:Point",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "MultiLineString": "geojson:MultiLineString"
   }
 }
 ```
