@@ -30,21 +30,21 @@ $(document).ready(function () {
 
   const loadBBlocks = () => {
     const $wrapper = $('#projects-parent');
-    const groups = {};
+    const scopes = {};
     const $labelContainer = $('#label-container');
     const $hideInvalid = $('input#hide-invalid');
 
     const updateFilters = () => {
-      const groupName = $labelContainer.find('.active').data('group-name');
+      const scopeName = $labelContainer.find('.active').data('scope-name');
       const hideInvalid = $hideInvalid.is(':checked');
       const $projects = $wrapper.find('.project').stop();
-      if (!groupName && !hideInvalid) {
+      if (!scopeName && !hideInvalid) {
         // Show all
         console.log('show all')
         $projects.fadeIn();
       } else {
         const $projectsOn = $projects
-          .filter((i, e) => (!groupName || $(e).data('group-name') === groupName)
+          .filter((i, e) => (!scopeName || $(e).data('scope-name') === scopeName)
                           && (!hideInvalid || $(e).data('bblock-valid')));
         console.log("on:", $projectsOn)
         $projects.not($projectsOn).fadeOut(() => $projectsOn.fadeIn());
@@ -106,22 +106,22 @@ $(document).ready(function () {
           const $labels = $('<div>')
             .addClass('label-container')
             .appendTo($projectBottom);
-          if (bblock.group) {
-            const groupColor = getColor(bblock.group);
+          if (bblock.scope) {
+            const scopeColor = getColor(bblock.scope);
             $('<span>')
-              .addClass('group-name project-label')
+              .addClass('scope-name project-label')
               .css({
-                background: groupColor,
-                color: useWhiteText(groupColor) ? 'white' : null,
+                background: scopeColor,
+                color: useWhiteText(scopeColor) ? 'white' : null,
               })
-              .text(bblock.group)
+              .text(bblock.scope)
               .appendTo($labels);
 
-            if (!groups[bblock.group]) {
-              groups[bblock.group] = [];
+            if (!scopes[bblock.scope]) {
+              scopes[bblock.scope] = [];
             }
-            groups[bblock.group].push($parent);
-            $parent.data('group-name', bblock.group);
+            scopes[bblock.scope].push($parent);
+            $parent.data('scope-name', bblock.scope);
           }
           const valid = validStatuses.includes(bblock.status);
           $('<a>')
@@ -139,16 +139,16 @@ $(document).ready(function () {
           }
         });
 
-        Object.keys(groups).forEach(group => {
+        Object.keys(scopes).forEach(scope => {
           $('<a>')
             .addClass('label-button project-label')
             .css({
-              background: getColor(group),
-              color: useWhiteText(group) ? 'white' : null,
+              background: getColor(scope),
+              color: useWhiteText(scope) ? 'white' : null,
             })
-            .text(group)
+            .text(scope)
             .attr('href', '#')
-            .data('group-name', group)
+            .data('scope-name', scope)
             .appendTo($labelContainer);
         });
       });
