@@ -28,7 +28,7 @@ All the output files will be generated under `build-local`.
       -v "$(pwd)/build-local/generateddocs/slate-build:/srv/slate/build" \
       dockerogc/slate build
     ```
-4. Run a web server locally, on this folder. For instance: `npx http-server -c-1 build-local`
+4. Run a web server locally, on this folder. For instance: `npx http-server`
 5. Access it on a browser: `http://127.0.0.1:8080`.
 
 If you need to rebuild the Register, just run steps 2 and 3.
