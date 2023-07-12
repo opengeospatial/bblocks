@@ -7,7 +7,7 @@ Bootstrap page containing an overview of building blocks and a building blocks r
 ## How to Use
 
 1. Clone the repository.
-2. Run a web server locally, on this folder. For instance: ` npx http-server -c-1`
+2. Run a web server locally, on this folder. For instance: ` npx http-server`
 3. Access it on a browser: `http://127.0.0.1:8080`.
 
 ## License
