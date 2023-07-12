@@ -1,8 +1,9 @@
-# OGC Features and Geometries JSON (Schema)
 
-*Version 0.1*
+# JSON-FG Feature Collection (Schema)
 
-A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
+`ogc.geo.json-fg.featureCollection` *v0.1*
+
+A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 
 [*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
 
@@ -34,35 +35,28 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 ## Schema
 
 ```yaml
-$schema: https://json-schema.org/draft/2019-09/schema
-$id: https://beta.schemas.opengis.net/json-fg/featurecollection.json
-title: a JSON-FG Feature Collection
-description: This JSON Schema is part of JSON-FG version 0.1.1
-type: object
-required:
-- type
-- features
-properties:
-  type:
-    type: string
-    enum:
-    - FeatureCollection
-  featureType:
-    $ref: featuretype.json
-  geometryDimension:
-    type: integer
-    minimum: 0
-    maximum: 3
-  coordRefSys:
-    $ref: coordrefsys.json
-  links:
-    type: array
-    items:
-      $ref: link.json
-  features:
-    type: array
-    items:
-      $ref: feature.json
+allOf:
+- $schema: https://json-schema.org/draft/2019-09/schema
+  title: a JSON-FG Feature Collection
+  description: This JSON Schema is part of JSON-FG version 0.1.1
+  type: object
+  required:
+  - type
+  - features
+  properties:
+    type:
+      type: string
+      enum:
+      - FeatureCollection
+    featureType:
+      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+    geometryDimension:
+      type: integer
+      minimum: 0
+      maximum: 3
+    coordRefSys:
+      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+- $ref: ../../features/featureCollection/schema.yaml
 
 ```
 
@@ -71,6 +65,73 @@ Links to the schema:
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "links": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
+    },
+    "features": {
+      "@id": "https://purl.org/geojson/vocab#features",
+      "@context": {
+        "type": "@type",
+        "id": "@id",
+        "properties": "geojson:properties",
+        "geometry": {
+          "@id": "https://purl.org/geojson/vocab#geometry",
+          "@context": {
+            "type": "@type",
+            "coordinates": {
+              "@id": "https://purl.org/geojson/vocab#coordinates",
+              "@container": "@list"
+            }
+          }
+        },
+        "bbox": {
+          "@id": "https://purl.org/geojson/vocab#bbox",
+          "@container": "@list"
+        },
+        "GeometryCollection": "geojson:GeometryCollection",
+        "LineString": "geojson:LineString",
+        "Feature": "geojson:Feature",
+        "MultiLineString": "geojson:MultiLineString",
+        "MultiPoint": "geojson:MultiPoint",
+        "features": "geojson:features",
+        "FeatureCollection": "geojson:FeatureCollection",
+        "Polygon": "geojson:Polygon",
+        "MultiPolygon": "geojson:MultiPolygon",
+        "Point": "geojson:Point",
+        "links": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "@context": {
+            "href": "@id",
+            "title": "rdfs:label"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld)
+
 ## Sources
 
 * [OGC Testbed-17: OGC Features and Geometries JSON Engineering Report](http://docs.ogc.org/per/21-017r1.html)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/bblocks](https://github.com/opengeospatial/bblocks)
+* Path: `registereditems/geo/json-fg/featureCollection`
+

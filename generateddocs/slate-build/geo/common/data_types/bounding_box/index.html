@@ -285,7 +285,7 @@
   color: #859900;
 }
     </style>
-    <link href="../../../../stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
+    <link href="../../../../stylesheets/screen-e762ca82.css" rel="stylesheet" media="screen" />
     <link href="../../../../stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
       <script src="../../../../javascripts/all-fea9e21b.js"></script>
 
@@ -313,7 +313,7 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#bounding-box" class="toc-h1 toc-link" data-title="Bounding Box">Bounding Box</a>
+            <a href="#bounding-box-ogc-geo-common-data_types-bounding_box" class="toc-h1 toc-link" data-title="Bounding Box ogc.geo.common.data_types.bounding_box">Bounding Box <code>ogc.geo.common.data_types.bounding_box</code></a>
           </li>
           <li>
             <a href="#description" class="toc-h1 toc-link" data-title="Description">Description</a>
@@ -332,6 +332,9 @@
           <li>
             <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
           </li>
+          <li>
+            <a href="#for-developers" class="toc-h1 toc-link" data-title="For developers">For developers</a>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li>Version 1.0.1</li>
@@ -342,10 +345,14 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='bounding-box'>Bounding Box</h1>
+        <h1 id='bounding-box-ogc-geo-common-data_types-bounding_box'>Bounding Box <code>ogc.geo.common.data_types.bounding_box</code></h1>
 <p>The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.</p>
 
 <p><a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Mature</p>
+
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/" target="_blank">valid</a></strong>
+</aside>
 <h1 id='description'>Description</h1>
 <p>A bounding box is provided as an array of four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth):</p>
 
@@ -384,12 +391,19 @@
 <p>Links to the schema:</p>
 
 <ul>
-<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml" target="_blank">schema.yaml</a></li>
-<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json" target="_blank">schema.json</a></li>
+<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml</a></li>
+<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json</a></li>
 </ul>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4">OGC API - Features, Part 1, 7.13.2: Feature Collections Response</a></li>
+</ul>
+<h1 id='for-developers'>For developers</h1>
+<p>The source code for this Building Block can be found in the following repository:</p>
+
+<ul>
+<li>URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a></li>
+<li>Path: <code>registereditems/geo/common/data_types/bounding_box</code></li>
 </ul>
 
       </div>

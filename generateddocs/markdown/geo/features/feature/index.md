@@ -1,6 +1,7 @@
+
 # Feature (Schema)
 
-*Version 1.0*
+`ogc.geo.features.feature` *v1.0*
 
 A feature. Every feature is a sub-resource of an OGC Collection.
 
@@ -47,7 +48,62 @@ Links to the schema:
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "type": "@type",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "geometry": {
+      "@id": "https://purl.org/geojson/vocab#geometry",
+      "@context": {
+        "type": "@type",
+        "coordinates": {
+          "@id": "https://purl.org/geojson/vocab#coordinates",
+          "@container": "@list"
+        }
+      }
+    },
+    "bbox": {
+      "@id": "https://purl.org/geojson/vocab#bbox",
+      "@container": "@list"
+    },
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "Feature": "geojson:Feature",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "features": "geojson:features",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "Polygon": "geojson:Polygon",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "links": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
+    }
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld)
+
 ## Sources
 
 * [OGC API - Features, Part 1, 7.16.2: Feature Response](https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7)
 * [ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals](https://www.iso.org/standard/59164.html)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/bblocks](https://github.com/opengeospatial/bblocks)
+* Path: `registereditems/geo/features/feature`
+

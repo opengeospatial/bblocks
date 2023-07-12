@@ -15,11 +15,15 @@ meta:
 ---
 
 
-# GeoPose Basic-Euler
+# GeoPose Basic-Euler `ogc.geo.geopose.basic-euler`
 
 Basic GeoPose using Euler angle rotations to specify orientation
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 
 
 # JSON Schema
@@ -56,14 +60,23 @@ required:
 x-jsonld-prefixes:
   geopose: http://example.com/geopose/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+x-jsonld-extra-terms:
+  position: http://example.com/geopose/position
+  angles: http://example.com/geopose/angles
+  lon: http://example.com/geopose/lon
+  yaw: http://example.com/geopose/yaw
+  roll: http://example.com/geopose/roll
+  lat: http://example.com/geopose/lat
+  h: http://example.com/geopose/h
+  pitch: http://example.com/geopose/pitch
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Euler.Schema.json
 
 ```
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json</a>
 
 
 # JSON-LD Context
@@ -71,19 +84,33 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "geopose": "http://example.com/geopose/",
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "longitude": "geo:long",
     "latitude": "geo:lat",
     "height": "geopose:height",
-    "rotations": "geopose:rotations"
+    "rotations": "geopose:rotations",
+    "position": "geopose:position",
+    "angles": "geopose:angles",
+    "lon": "geopose:lon",
+    "yaw": "geopose:yaw",
+    "roll": "geopose:roll",
+    "lat": "geopose:lat",
+    "h": "geopose:h",
+    "pitch": "geopose:pitch"
   }
 }
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld</a>
 
 # References
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a>
+* Path: `registereditems/geo/geopose/basic-euler`
+

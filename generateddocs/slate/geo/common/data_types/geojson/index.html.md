@@ -15,11 +15,15 @@ meta:
 ---
 
 
-# GeoJSON
+# GeoJSON `ogc.geo.common.data_types.geojson`
 
 A GeoJSON object
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 
 # Description
 
@@ -82,12 +86,14 @@ properties:
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON LineString
       type: object
       required:
@@ -108,12 +114,14 @@ properties:
             items:
               type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON Polygon
       type: object
       required:
@@ -136,12 +144,14 @@ properties:
               items:
                 type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON MultiPoint
       type: object
       required:
@@ -161,12 +171,14 @@ properties:
             items:
               type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON MultiLineString
       type: object
       required:
@@ -189,12 +201,14 @@ properties:
               items:
                 type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON MultiPolygon
       type: object
       required:
@@ -219,12 +233,14 @@ properties:
                 items:
                   type: number
           x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+          x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     - title: GeoJSON GeometryCollection
       type: object
       required:
@@ -257,12 +273,14 @@ properties:
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON LineString
               type: object
               required:
@@ -283,12 +301,14 @@ properties:
                     items:
                       type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON Polygon
               type: object
               required:
@@ -311,12 +331,14 @@ properties:
                       items:
                         type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON MultiPoint
               type: object
               required:
@@ -336,12 +358,14 @@ properties:
                     items:
                       type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON MultiLineString
               type: object
               required:
@@ -364,12 +388,14 @@ properties:
                       items:
                         type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
             - title: GeoJSON MultiPolygon
               type: object
               required:
@@ -394,18 +420,21 @@ properties:
                         items:
                           type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                  x-jsonld-container: '@list'
                 bbox:
                   type: array
                   minItems: 4
                   items:
                     type: number
                   x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                  x-jsonld-container: '@list'
         bbox:
           type: array
           minItems: 4
           items:
             type: number
           x-jsonld-id: https://purl.org/geojson/vocab#bbox
+          x-jsonld-container: '@list'
     x-jsonld-id: https://purl.org/geojson/vocab#geometry
   bbox:
     type: array
@@ -413,15 +442,27 @@ properties:
     items:
       type: number
     x-jsonld-id: https://purl.org/geojson/vocab#bbox
+    x-jsonld-container: '@list'
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
+x-jsonld-extra-terms:
+  GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
+  LineString: https://purl.org/geojson/vocab#LineString
+  Feature: https://purl.org/geojson/vocab#Feature
+  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
+  MultiPoint: https://purl.org/geojson/vocab#MultiPoint
+  features: https://purl.org/geojson/vocab#features
+  FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
+  Polygon: https://purl.org/geojson/vocab#Polygon
+  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
+  Point: https://purl.org/geojson/vocab#Point
 
 ```
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json</a>
 
 
 # JSON-LD Context
@@ -429,25 +470,48 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "geojson": "https://purl.org/geojson/vocab#",
     "type": "@type",
     "id": "@id",
     "properties": "geojson:properties",
     "geometry": {
+      "@id": "https://purl.org/geojson/vocab#geometry",
       "@context": {
         "type": "@type",
-        "coordinates": "geojson:coordinates"
-      },
-      "@id": "geojson:geometry"
+        "coordinates": {
+          "@id": "https://purl.org/geojson/vocab#coordinates",
+          "@container": "@list"
+        }
+      }
     },
-    "bbox": "geojson:bbox"
+    "bbox": {
+      "@id": "https://purl.org/geojson/vocab#bbox",
+      "@container": "@list"
+    },
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "Feature": "geojson:Feature",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "features": "geojson:features",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "Polygon": "geojson:Polygon",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point"
   }
 }
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld</a>
 
 # References
 
 * [IETF RFC 7946 - The GeoJSON Format](https://datatracker.ietf.org/doc/html/rfc7946)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a>
+* Path: `registereditems/geo/common/data_types/geojson`
+

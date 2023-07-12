@@ -1,6 +1,7 @@
+
 # JSON Link (Schema)
 
-*Version 0.1*
+`ogc.ogc-utils.json-link` *v0.1*
 
 Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API’s.
 
@@ -43,6 +44,29 @@ Links to the schema:
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "href": "@id",
+    "title": "rdfs:label"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld)
+
 ## Sources
 
 * [IETF RFC 8288 - Web Linking](https://www.rfc-editor.org/rfc/rfc8288.txt)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/bblocks](https://github.com/opengeospatial/bblocks)
+* Path: `registereditems/ogc-utils/json-link`
+

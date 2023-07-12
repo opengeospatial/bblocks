@@ -15,11 +15,15 @@ meta:
 ---
 
 
-# JSON Link
+# JSON Link `ogc.ogc-utils.json-link`
 
 Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API’s.
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 
 
 # JSON Schema
@@ -56,8 +60,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml" target="_blank">schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json" target="_blank">schema.json</a>
+* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml</a>
+* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json</a>
 
 
 # JSON-LD Context
@@ -65,7 +69,6 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "href": "@id",
     "title": "rdfs:label"
   }
@@ -73,8 +76,16 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld" target="_blank">context.jsonld</a>
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld</a>
 
 # References
 
 * [IETF RFC 8288 - Web Linking](https://www.rfc-editor.org/rfc/rfc8288.txt)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a>
+* Path: `registereditems/ogc-utils/json-link`
+

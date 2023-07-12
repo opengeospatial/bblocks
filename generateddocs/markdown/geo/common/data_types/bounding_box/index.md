@@ -1,6 +1,7 @@
+
 # Bounding Box (Schema)
 
-*Version 1.0.1*
+`ogc.geo.common.data_types.bounding_box` *v1.0.1*
 
 The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.
 
@@ -64,3 +65,11 @@ Links to the schema:
 ## Sources
 
 * [OGC API - Features, Part 1, 7.13.2: Feature Collections Response](http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/bblocks](https://github.com/opengeospatial/bblocks)
+* Path: `registereditems/geo/common/data_types/bounding_box`
+

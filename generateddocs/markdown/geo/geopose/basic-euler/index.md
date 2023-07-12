@@ -1,6 +1,7 @@
+
 # GeoPose Basic-Euler (Schema)
 
-*Version 0.1*
+`ogc.geo.geopose.basic-euler` *v0.1*
 
 Basic GeoPose using Euler angle rotations to specify orientation
 
@@ -40,6 +41,15 @@ required:
 x-jsonld-prefixes:
   geopose: http://example.com/geopose/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+x-jsonld-extra-terms:
+  position: http://example.com/geopose/position
+  angles: http://example.com/geopose/angles
+  lon: http://example.com/geopose/lon
+  yaw: http://example.com/geopose/yaw
+  roll: http://example.com/geopose/roll
+  lat: http://example.com/geopose/lat
+  h: http://example.com/geopose/h
+  pitch: http://example.com/geopose/pitch
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Euler.Schema.json
 
 ```
@@ -49,6 +59,39 @@ Links to the schema:
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "longitude": "geo:long",
+    "latitude": "geo:lat",
+    "height": "geopose:height",
+    "rotations": "geopose:rotations",
+    "position": "geopose:position",
+    "angles": "geopose:angles",
+    "lon": "geopose:lon",
+    "yaw": "geopose:yaw",
+    "roll": "geopose:roll",
+    "lat": "geopose:lat",
+    "h": "geopose:h",
+    "pitch": "geopose:pitch"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-euler/context.jsonld)
+
 ## Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/bblocks](https://github.com/opengeospatial/bblocks)
+* Path: `registereditems/geo/geopose/basic-euler`
+

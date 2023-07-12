@@ -285,7 +285,7 @@
   color: #859900;
 }
     </style>
-    <link href="../../../../stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
+    <link href="../../../../stylesheets/screen-e762ca82.css" rel="stylesheet" media="screen" />
     <link href="../../../../stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
       <script src="../../../../javascripts/all-fea9e21b.js"></script>
 
@@ -314,7 +314,7 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#bbox" class="toc-h1 toc-link" data-title="bbox">bbox</a>
+            <a href="#bbox-ogc-geo-common-parameters-bbox" class="toc-h1 toc-link" data-title="bbox ogc.geo.common.parameters.bbox">bbox <code>ogc.geo.common.parameters.bbox</code></a>
           </li>
           <li>
             <a href="#description" class="toc-h1 toc-link" data-title="Description">Description</a>
@@ -336,6 +336,9 @@
           <li>
             <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
           </li>
+          <li>
+            <a href="#for-developers" class="toc-h1 toc-link" data-title="For developers">For developers</a>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li>Version 1.0</li>
@@ -346,20 +349,38 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='bbox'>bbox</h1>
+        <h1 id='bbox-ogc-geo-common-parameters-bbox'>bbox <code>ogc.geo.common.parameters.bbox</code></h1>
 <p>The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).</p>
 
 <p><a href="https://github.com/cportele/ogcapi-building-blocks#building-block-maturity">Maturity</a>: Mature</p>
+
+<aside class="success">
+This building block is <strong>valid</strong>
+</aside>
 <h1 id='description'>Description</h1>
 <p><code>bbox</code> is a query parameter that may be applied in GET requests on a collection of resources.</p>
 
 <p>The parameter, if provided, selects the resources with a spatial extent that intersects the specified bounding box.</p>
 
-<p>The coordinates of the bounding box are in longitude, latitude and optionally ellipsoidal height unless a different coordinate reference system is specified in the query parameter <code>bbox-crs</code>.</p>
+<p>The coordinates of the bounding box are in longitude, latitude and optionally ellipsoidal height unless a different
+coordinate reference system is specified in the query parameter <code>bbox-crs</code>.</p>
+
+<p>The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a
+vertical axis (height or depth):</p>
+
+<ul>
+<li>Lower left corner, coordinate axis 1</li>
+<li>Lower left corner, coordinate axis 2</li>
+<li>Minimum value, coordinate axis 3 (optional)</li>
+<li>Upper right corner, coordinate axis 1</li>
+<li>Upper right corner, coordinate axis 2</li>
+<li>Maximum value, coordinate axis 3 (optional)</li>
+</ul>
 
 <p>The <code>bbox</code> parameter matches all resources in the collection that are not associated with a spatial geometry, too.</p>
 
-<p>If a resource has multiple spatial geometry properties, it is the decision of the server whether only a single spatial geometry property is used to determine the spatial extent or all relevant geometries.</p>
+<p>If a resource has multiple spatial geometry properties, it is the decision of the server whether only a single spatial
+geometry property is used to determine the spatial extent or all relevant geometries.</p>
 <h1 id='examples'>Examples</h1><h2 id='the-following-bounding-box-parameter-includes-the-48-contiguous-states-of-the-united-states-of-america'>The following bounding box parameter includes the 48 contiguous states of the United States of America.</h2>
 <p><code>bbox=-124.7844079,24.7433195,-66.9513812,49.3457868</code></p>
 
@@ -404,12 +425,19 @@ bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"</span>
 <p>Links to the schema:</p>
 
 <ul>
-<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml" target="_blank">schema.yaml</a></li>
-<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json" target="_blank">schema.json</a></li>
+<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml</a></li>
+<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json</a></li>
 </ul>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox">OGC API - Features, Part 1, 7.15.3: Parameter bbox</a></li>
+</ul>
+<h1 id='for-developers'>For developers</h1>
+<p>The source code for this Building Block can be found in the following repository:</p>
+
+<ul>
+<li>URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a></li>
+<li>Path: <code>registereditems/geo/common/parameters/bbox</code></li>
 </ul>
 
       </div>

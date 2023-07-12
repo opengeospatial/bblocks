@@ -1,14 +1,24 @@
 {
   "@context": {
-    "geopose": "http://example.com/geopose/",
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
-    "position": "geopose:position",
-    "angles": "geopose:angles",
-    "yaw": "geopose:yaw",
-    "pitch": "geopose:pitch",
-    "roll": "geopose:roll",
-    "lat": "geopose:lat",
-    "lon": "geopose:lon",
-    "h": "geopose:h"
+    "position": {
+      "@id": "http://example.com/geopose/position",
+      "@context": {
+        "lat": "geopose:lat",
+        "lon": "geopose:lon",
+        "h": "geopose:h"
+      }
+    },
+    "angles": {
+      "@id": "http://example.com/geopose/angles",
+      "@context": {
+        "yaw": "geopose:yaw",
+        "pitch": "geopose:pitch",
+        "roll": "geopose:roll"
+      }
+    },
+    "height": "geopose:height",
+    "rotations": "geopose:rotations",
+    "latitude": "geo:lat",
+    "longitude": "geo:long"
   }
 }

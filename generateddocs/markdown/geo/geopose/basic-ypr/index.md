@@ -1,6 +1,7 @@
+
 # GeoPose Basic-YPR (Schema)
 
-*Version 0.1*
+`ogc.geo.geopose.basic-ypr` *v0.1*
 
 Basic GeoPose using yaw, pitch, and roll to specify orientation
 
@@ -151,6 +152,11 @@ required:
 x-jsonld-prefixes:
   geopose: http://example.com/geopose/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+x-jsonld-extra-terms:
+  height: http://example.com/geopose/height
+  rotations: http://example.com/geopose/rotations
+  latitude: http://www.w3.org/2003/01/geo/wgs84_pos#lat
+  longitude: http://www.w3.org/2003/01/geo/wgs84_pos#long
 $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json
 
 ```
@@ -160,6 +166,47 @@ Links to the schema:
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "position": {
+      "@id": "http://example.com/geopose/position",
+      "@context": {
+        "lat": "geopose:lat",
+        "lon": "geopose:lon",
+        "h": "geopose:h"
+      }
+    },
+    "angles": {
+      "@id": "http://example.com/geopose/angles",
+      "@context": {
+        "yaw": "geopose:yaw",
+        "pitch": "geopose:pitch",
+        "roll": "geopose:roll"
+      }
+    },
+    "height": "geopose:height",
+    "rotations": "geopose:rotations",
+    "latitude": "geo:lat",
+    "longitude": "geo:long"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic-ypr/context.jsonld)
+
 ## Sources
 
 * [OGC GeoPose 1.0 Data Exchange Draft Standard](https://docs.ogc.org/dis/21-056r10/21-056r10.html)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/opengeospatial/bblocks](https://github.com/opengeospatial/bblocks)
+* Path: `registereditems/geo/geopose/basic-ypr`
+
