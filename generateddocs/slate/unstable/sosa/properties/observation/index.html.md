@@ -80,6 +80,8 @@ properties:
     type:
     - object
     - string
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+    x-jsonld-type: '@id'
   observedProperty:
     type:
     - object
@@ -89,10 +91,14 @@ properties:
     type:
     - object
     - string
+    x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
+    x-jsonld-type: '@id'
   madeBySensor:
     type:
     - object
     - string
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
+    x-jsonld-type: '@id'
   hasResult:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasResult
   hasSimpleResult:
@@ -113,9 +119,6 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
   madeObservation:
     x-jsonld-id: http://www.w3.org/ns/sosa/madeObservation
-    x-jsonld-type: '@id'
-  madeBySensor:
-    x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
     x-jsonld-type: '@id'
   actsOnProperty:
     x-jsonld-id: http://www.w3.org/ns/sosa/actsOnProperty
@@ -141,16 +144,10 @@ x-jsonld-extra-terms:
   madeBySampler:
     x-jsonld-id: http://www.w3.org/ns/sosa/madeBySampler
     x-jsonld-type: '@id'
-  hasFeatureOfInterest:
-    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
-    x-jsonld-type: '@id'
   isFeatureOfInterestOf:
     x-jsonld-id: http://www.w3.org/ns/sosa/isFeatureOfInterestOf
     x-jsonld-type: '@id'
   isResultOf: http://www.w3.org/ns/sosa/isResultOf
-  usedProcedure:
-    x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
-    x-jsonld-type: '@id'
   hosts:
     x-jsonld-id: http://www.w3.org/ns/sosa/hosts
     x-jsonld-type: '@id'
@@ -200,74 +197,74 @@ Links to the schema:
   "@context": {
     "resultTime": "sosa:resultTime",
     "phenomenonTime": "sosa:phenomenonTime",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
     "observedProperty": "sosa:observedProperty",
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
     "hasResult": "sosa:hasResult",
     "hasSimpleResult": "sosa:hasSimpleResult",
     "Observation": "sosa:Observation",
     "Sample": "sosa:Sample",
     "observes": {
-      "@id": "http://www.w3.org/ns/sosa/observes",
+      "@id": "sosa:observes",
       "@type": "@id"
     },
     "isObservedBy": {
-      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
     "madeObservation": {
-      "@id": "http://www.w3.org/ns/sosa/madeObservation",
-      "@type": "@id"
-    },
-    "madeBySensor": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@id": "sosa:madeObservation",
       "@type": "@id"
     },
     "actsOnProperty": {
-      "@id": "http://www.w3.org/ns/sosa/actsOnProperty",
+      "@id": "sosa:actsOnProperty",
       "@type": "@id"
     },
     "isActedOnBy": {
-      "@id": "http://www.w3.org/ns/sosa/isActedOnBy",
+      "@id": "sosa:isActedOnBy",
       "@type": "@id"
     },
     "madeActuation": {
-      "@id": "http://www.w3.org/ns/sosa/madeActuation",
+      "@id": "sosa:madeActuation",
       "@type": "@id"
     },
     "madeByActuator": {
-      "@id": "http://www.w3.org/ns/sosa/madeByActuator",
+      "@id": "sosa:madeByActuator",
       "@type": "@id"
     },
     "hasSample": {
-      "@id": "http://www.w3.org/ns/sosa/hasSample",
+      "@id": "sosa:hasSample",
       "@type": "@id"
     },
     "isSampleOf": {
-      "@id": "http://www.w3.org/ns/sosa/isSampleOf",
+      "@id": "sosa:isSampleOf",
       "@type": "@id"
     },
     "madeSampling": {
-      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "@id": "sosa:madeSampling",
       "@type": "@id"
     },
     "madeBySampler": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
-      "@type": "@id"
-    },
-    "hasFeatureOfInterest": {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
     "isFeatureOfInterestOf": {
-      "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "@id": "sosa:isFeatureOfInterestOf",
       "@type": "@id"
     },
     "isResultOf": "sosa:isResultOf",
-    "usedProcedure": {
-      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
-      "@type": "@id"
-    },
     "hosts": {
-      "@id": "http://www.w3.org/ns/sosa/hosts",
+      "@id": "sosa:hosts",
       "@type": "@id"
     },
     "isHostedBy": "sosa:isHostedBy",
@@ -286,16 +283,19 @@ Links to the schema:
     "hasDeployment": "ssn:hasDeployment",
     "deployedOnPlatform": "ssn:deployedOnPlatform",
     "inDeployment": "ssn:inDeployment",
-    "inCondition": "ssn-system:inCondition",
-    "hasSystemCapability": "ssn-system:hasSystemCapability",
-    "hasSystemProperty": "ssn-system:hasSystemProperty",
-    "hasOperatingRange": "ssn-system:hasOperatingRange",
-    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
-    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
-    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
-    "qualityOfObservation": "ssn-system:qualityOfObservation",
+    "inCondition": "ssn:systems/inCondition",
+    "hasSystemCapability": "ssn:systems/hasSystemCapability",
+    "hasSystemProperty": "ssn:systems/hasSystemProperty",
+    "hasOperatingRange": "ssn:systems/hasOperatingRange",
+    "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
+    "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
+    "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
+    "qualityOfObservation": "ssn:systems/qualityOfObservation",
     "hasMember": "sosa:hasMember",
-    "features": "sosa:hasMember"
+    "features": "sosa:hasMember",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "ssn-system": "ssn:systems/"
   }
 }
 ```

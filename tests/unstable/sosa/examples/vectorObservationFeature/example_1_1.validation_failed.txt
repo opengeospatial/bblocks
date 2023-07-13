@@ -13,14 +13,7 @@ AttributeError: 'str' object has no attribute 'get'
 Using SHACL files for validation:
  - geometry-coordinates.shacl
 Validation Report
-Conforms: False
-Results (1):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:description Literal("Coordinates are mandatory for geometries") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("GeoJSON coordinates") ; sh:path geojson:coordinates ]
-	Focus Node: [ rdf:type rdfs:Resource ]
-	Result Path: geojson:coordinates
-	Message: Less than 1 values on [ rdf:type rdfs:Resource ]->geojson:coordinates
+Conforms: True
 
 === End SHACL ===
 

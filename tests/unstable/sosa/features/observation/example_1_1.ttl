@@ -1,12 +1,11 @@
-@prefix ns1: <geojson:> .
-@prefix ns2: <sosa:> .
+@prefix ns1: <https://purl.org/geojson/vocab#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <file:///github/workspace/pop1999> a ns1:Feature ;
-    ns1:properties <file:///github/workspace/pop1999> ;
     sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork> ;
-    ns2:hasSimpleResult 1.5555e+04 ;
-    ns2:observedProperty "https://dbpedia.org/ontology/population" ;
-    ns2:resultTime "1999" .
+    sosa:hasSimpleResult 1.5555e+04 ;
+    sosa:observedProperty "https://dbpedia.org/ontology/population" ;
+    sosa:resultTime "1999" ;
+    ns1:properties <file:///github/workspace/pop1999> .
 

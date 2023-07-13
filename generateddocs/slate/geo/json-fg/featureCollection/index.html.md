@@ -93,21 +93,30 @@ Links to the schema:
 {
   "@context": {
     "links": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@id": "rdfs:seeAlso",
       "@context": {
         "href": "@id",
         "title": "rdfs:label"
       }
     },
     "features": {
-      "@id": "https://purl.org/geojson/vocab#features",
+      "@id": "geojson:features",
       "@context": {
         "type": "@type",
         "id": "@id",
         "properties": "geojson:properties",
         "geometry": {
-          "@id": "https://purl.org/geojson/vocab#geometry",
-          "@context": {}
+          "@id": "geojson:geometry",
+          "@context": {
+            "coordinates": {
+              "@container": "@list",
+              "@id": "geojson:coordinates"
+            }
+          }
+        },
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
         },
         "Feature": "geojson:Feature",
         "FeatureCollection": "geojson:FeatureCollection",
@@ -118,20 +127,14 @@ Links to the schema:
         "MultiPolygon": "geojson:MultiPolygon",
         "Point": "geojson:Point",
         "Polygon": "geojson:Polygon",
-        "bbox": {
-          "@container": "@list",
-          "@id": "https://purl.org/geojson/vocab#bbox"
-        },
-        "coordinates": {
-          "@container": "@list",
-          "@id": "https://purl.org/geojson/vocab#coordinates"
-        },
         "features": {
           "@container": "@set",
-          "@id": "https://purl.org/geojson/vocab#features"
+          "@id": "geojson:features"
         }
       }
-    }
+    },
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "geojson": "https://purl.org/geojson/vocab#"
   }
 }
 ```

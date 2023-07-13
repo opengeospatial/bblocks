@@ -191,21 +191,30 @@ Links to the schema:
 {
   "@context": {
     "links": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@id": "rdfs:seeAlso",
       "@context": {
         "href": "@id",
         "title": "rdfs:label"
       }
     },
     "features": {
-      "@id": "http://www.w3.org/ns/sosa/hasMember",
+      "@id": "sosa:hasMember",
       "@context": {
         "type": "@type",
         "id": "@id",
         "properties": "geojson:properties",
         "geometry": {
-          "@id": "https://purl.org/geojson/vocab#geometry",
-          "@context": {}
+          "@id": "geojson:geometry",
+          "@context": {
+            "coordinates": {
+              "@container": "@list",
+              "@id": "geojson:coordinates"
+            }
+          }
+        },
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
         },
         "Feature": "geojson:Feature",
         "FeatureCollection": "geojson:FeatureCollection",
@@ -216,90 +225,82 @@ Links to the schema:
         "MultiPolygon": "geojson:MultiPolygon",
         "Point": "geojson:Point",
         "Polygon": "geojson:Polygon",
-        "bbox": {
-          "@container": "@list",
-          "@id": "https://purl.org/geojson/vocab#bbox"
-        },
-        "coordinates": {
-          "@container": "@list",
-          "@id": "https://purl.org/geojson/vocab#coordinates"
-        },
         "features": {
           "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/hasMember"
+          "@id": "sosa:hasMember"
         }
       }
     },
     "resultTime": "sosa:resultTime",
     "phenomenonTime": "sosa:phenomenonTime",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
     "observedProperty": "sosa:observedProperty",
-    "Observation": "sosa:Observation",
-    "Sample": "sosa:Sample",
-    "observes": {
-      "@id": "http://www.w3.org/ns/sosa/observes",
-      "@type": "@id"
-    },
-    "isObservedBy": {
-      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
-      "@type": "@id"
-    },
-    "madeObservation": {
-      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
       "@type": "@id"
     },
     "madeBySensor": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "observes": {
+      "@id": "sosa:observes",
+      "@type": "@id"
+    },
+    "isObservedBy": {
+      "@id": "sosa:isObservedBy",
+      "@type": "@id"
+    },
+    "madeObservation": {
+      "@id": "sosa:madeObservation",
       "@type": "@id"
     },
     "actsOnProperty": {
-      "@id": "http://www.w3.org/ns/sosa/actsOnProperty",
+      "@id": "sosa:actsOnProperty",
       "@type": "@id"
     },
     "isActedOnBy": {
-      "@id": "http://www.w3.org/ns/sosa/isActedOnBy",
+      "@id": "sosa:isActedOnBy",
       "@type": "@id"
     },
     "madeActuation": {
-      "@id": "http://www.w3.org/ns/sosa/madeActuation",
+      "@id": "sosa:madeActuation",
       "@type": "@id"
     },
     "madeByActuator": {
-      "@id": "http://www.w3.org/ns/sosa/madeByActuator",
+      "@id": "sosa:madeByActuator",
       "@type": "@id"
     },
     "hasSample": {
-      "@id": "http://www.w3.org/ns/sosa/hasSample",
+      "@id": "sosa:hasSample",
       "@type": "@id"
     },
     "isSampleOf": {
-      "@id": "http://www.w3.org/ns/sosa/isSampleOf",
+      "@id": "sosa:isSampleOf",
       "@type": "@id"
     },
     "madeSampling": {
-      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "@id": "sosa:madeSampling",
       "@type": "@id"
     },
     "madeBySampler": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
-      "@type": "@id"
-    },
-    "hasFeatureOfInterest": {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
     "isFeatureOfInterestOf": {
-      "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "@id": "sosa:isFeatureOfInterestOf",
       "@type": "@id"
     },
     "hasResult": "sosa:hasResult",
     "isResultOf": "sosa:isResultOf",
     "hasSimpleResult": "sosa:hasSimpleResult",
-    "usedProcedure": {
-      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
-      "@type": "@id"
-    },
     "hosts": {
-      "@id": "http://www.w3.org/ns/sosa/hosts",
+      "@id": "sosa:hosts",
       "@type": "@id"
     },
     "isHostedBy": "sosa:isHostedBy",
@@ -318,15 +319,20 @@ Links to the schema:
     "hasDeployment": "ssn:hasDeployment",
     "deployedOnPlatform": "ssn:deployedOnPlatform",
     "inDeployment": "ssn:inDeployment",
-    "inCondition": "ssn-system:inCondition",
-    "hasSystemCapability": "ssn-system:hasSystemCapability",
-    "hasSystemProperty": "ssn-system:hasSystemProperty",
-    "hasOperatingRange": "ssn-system:hasOperatingRange",
-    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
-    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
-    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
-    "qualityOfObservation": "ssn-system:qualityOfObservation",
-    "hasMember": "sosa:hasMember"
+    "inCondition": "ssn:systems/inCondition",
+    "hasSystemCapability": "ssn:systems/hasSystemCapability",
+    "hasSystemProperty": "ssn:systems/hasSystemProperty",
+    "hasOperatingRange": "ssn:systems/hasOperatingRange",
+    "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
+    "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
+    "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
+    "qualityOfObservation": "ssn:systems/qualityOfObservation",
+    "hasMember": "sosa:hasMember",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "ssn-system": "ssn:systems/"
   }
 }
 ```

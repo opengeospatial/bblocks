@@ -65,7 +65,7 @@ allOf:
     hasResult:
       properties:
         pose:
-          $ref: ../../../../geo/geopose/basic-ypr/schema.yaml
+          $ref: ../../../../geo/geopose/basic/ypr/schema.yaml
         distance:
           type: number
           x-jsonld-id: http://example.com/properties/distance
@@ -91,74 +91,74 @@ Links to the schema:
   "@context": {
     "resultTime": "sosa:resultTime",
     "phenomenonTime": "sosa:phenomenonTime",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
     "observedProperty": "sosa:observedProperty",
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
     "hasResult": "sosa:hasResult",
     "hasSimpleResult": "sosa:hasSimpleResult",
     "Observation": "sosa:Observation",
     "Sample": "sosa:Sample",
     "observes": {
-      "@id": "http://www.w3.org/ns/sosa/observes",
+      "@id": "sosa:observes",
       "@type": "@id"
     },
     "isObservedBy": {
-      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
     "madeObservation": {
-      "@id": "http://www.w3.org/ns/sosa/madeObservation",
-      "@type": "@id"
-    },
-    "madeBySensor": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@id": "sosa:madeObservation",
       "@type": "@id"
     },
     "actsOnProperty": {
-      "@id": "http://www.w3.org/ns/sosa/actsOnProperty",
+      "@id": "sosa:actsOnProperty",
       "@type": "@id"
     },
     "isActedOnBy": {
-      "@id": "http://www.w3.org/ns/sosa/isActedOnBy",
+      "@id": "sosa:isActedOnBy",
       "@type": "@id"
     },
     "madeActuation": {
-      "@id": "http://www.w3.org/ns/sosa/madeActuation",
+      "@id": "sosa:madeActuation",
       "@type": "@id"
     },
     "madeByActuator": {
-      "@id": "http://www.w3.org/ns/sosa/madeByActuator",
+      "@id": "sosa:madeByActuator",
       "@type": "@id"
     },
     "hasSample": {
-      "@id": "http://www.w3.org/ns/sosa/hasSample",
+      "@id": "sosa:hasSample",
       "@type": "@id"
     },
     "isSampleOf": {
-      "@id": "http://www.w3.org/ns/sosa/isSampleOf",
+      "@id": "sosa:isSampleOf",
       "@type": "@id"
     },
     "madeSampling": {
-      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "@id": "sosa:madeSampling",
       "@type": "@id"
     },
     "madeBySampler": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
-      "@type": "@id"
-    },
-    "hasFeatureOfInterest": {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
     "isFeatureOfInterestOf": {
-      "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "@id": "sosa:isFeatureOfInterestOf",
       "@type": "@id"
     },
     "isResultOf": "sosa:isResultOf",
-    "usedProcedure": {
-      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
-      "@type": "@id"
-    },
     "hosts": {
-      "@id": "http://www.w3.org/ns/sosa/hosts",
+      "@id": "sosa:hosts",
       "@type": "@id"
     },
     "isHostedBy": "sosa:isHostedBy",
@@ -177,50 +177,41 @@ Links to the schema:
     "hasDeployment": "ssn:hasDeployment",
     "deployedOnPlatform": "ssn:deployedOnPlatform",
     "inDeployment": "ssn:inDeployment",
-    "inCondition": "ssn-system:inCondition",
-    "hasSystemCapability": "ssn-system:hasSystemCapability",
-    "hasSystemProperty": "ssn-system:hasSystemProperty",
-    "hasOperatingRange": "ssn-system:hasOperatingRange",
-    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
-    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
-    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
-    "qualityOfObservation": "ssn-system:qualityOfObservation",
+    "inCondition": "ssn:systems/inCondition",
+    "hasSystemCapability": "ssn:systems/hasSystemCapability",
+    "hasSystemProperty": "ssn:systems/hasSystemProperty",
+    "hasOperatingRange": "ssn:systems/hasOperatingRange",
+    "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
+    "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
+    "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
+    "qualityOfObservation": "ssn:systems/qualityOfObservation",
     "hasMember": "sosa:hasMember",
     "features": "sosa:hasMember",
     "position": {
-      "@id": "http://example.com/geopose/position",
+      "@id": "geopose:position",
       "@context": {
-        "lat": "geopose:lat",
-        "lon": "geopose:lon",
-        "h": "geopose:h",
-        "position": "geopose:position",
-        "angles": "geopose:angles",
+        "lat": "geo:lat",
+        "lon": "geo:long",
+        "h": "geopose:h"
+      }
+    },
+    "angles": {
+      "@id": "geopose:angles",
+      "@context": {
         "yaw": "geopose:yaw",
         "pitch": "geopose:pitch",
         "roll": "geopose:roll"
       }
     },
-    "angles": {
-      "@id": "http://example.com/geopose/angles",
-      "@context": {
-        "yaw": "geopose:yaw",
-        "pitch": "geopose:pitch",
-        "roll": "geopose:roll",
-        "position": "geopose:position",
-        "angles": "geopose:angles",
-        "lat": "geopose:lat",
-        "lon": "geopose:lon",
-        "h": "geopose:h"
-      }
-    },
-    "longitude": "geo:long",
-    "latitude": "geo:lat",
-    "height": "geopose:height",
-    "rotations": "geopose:rotations",
     "distance": {
       "@id": "http://example.com/properties/distance",
       "@type": "http://www.w3.org/2001/XMLSchema#float"
-    }
+    },
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "ssn-system": "ssn:systems/",
+    "geopose": "http://example.com/geopose/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
   }
 }
 ```

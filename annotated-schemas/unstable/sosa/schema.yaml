@@ -10,7 +10,7 @@ anyOf:
       hasResult:
         properties:
           pose:
-            $ref: ../../geo/geopose/basic-ypr/schema.yaml
+            $ref: ../../geo/geopose/basic/ypr/schema.yaml
           distance:
             type: number
             x-jsonld-id: http://example.com/properties/distance
@@ -242,6 +242,8 @@ anyOf:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+      x-jsonld-type: '@id'
     observedProperty:
       type:
       - object
@@ -251,10 +253,14 @@ anyOf:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
+      x-jsonld-type: '@id'
     madeBySensor:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
+      x-jsonld-type: '@id'
     hasResult:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasResult
     hasSimpleResult:
@@ -275,9 +281,6 @@ anyOf:
       x-jsonld-type: '@id'
     madeObservation:
       x-jsonld-id: http://www.w3.org/ns/sosa/madeObservation
-      x-jsonld-type: '@id'
-    madeBySensor:
-      x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
       x-jsonld-type: '@id'
     actsOnProperty:
       x-jsonld-id: http://www.w3.org/ns/sosa/actsOnProperty
@@ -303,16 +306,10 @@ anyOf:
     madeBySampler:
       x-jsonld-id: http://www.w3.org/ns/sosa/madeBySampler
       x-jsonld-type: '@id'
-    hasFeatureOfInterest:
-      x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
-      x-jsonld-type: '@id'
     isFeatureOfInterestOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/isFeatureOfInterestOf
       x-jsonld-type: '@id'
     isResultOf: http://www.w3.org/ns/sosa/isResultOf
-    usedProcedure:
-      x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
-      x-jsonld-type: '@id'
     hosts:
       x-jsonld-id: http://www.w3.org/ns/sosa/hosts
       x-jsonld-type: '@id'
@@ -363,6 +360,8 @@ anyOf:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+      x-jsonld-type: '@id'
     observedProperty:
       type:
       - object
@@ -372,10 +371,14 @@ anyOf:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
+      x-jsonld-type: '@id'
     madeBySensor:
       type:
       - object
       - string
+      x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
+      x-jsonld-type: '@id'
   not:
     anyOf:
     - required:
@@ -393,9 +396,6 @@ anyOf:
       x-jsonld-type: '@id'
     madeObservation:
       x-jsonld-id: http://www.w3.org/ns/sosa/madeObservation
-      x-jsonld-type: '@id'
-    madeBySensor:
-      x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
       x-jsonld-type: '@id'
     actsOnProperty:
       x-jsonld-id: http://www.w3.org/ns/sosa/actsOnProperty
@@ -421,18 +421,12 @@ anyOf:
     madeBySampler:
       x-jsonld-id: http://www.w3.org/ns/sosa/madeBySampler
       x-jsonld-type: '@id'
-    hasFeatureOfInterest:
-      x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
-      x-jsonld-type: '@id'
     isFeatureOfInterestOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/isFeatureOfInterestOf
       x-jsonld-type: '@id'
     hasResult: http://www.w3.org/ns/sosa/hasResult
     isResultOf: http://www.w3.org/ns/sosa/isResultOf
     hasSimpleResult: http://www.w3.org/ns/sosa/hasSimpleResult
-    usedProcedure:
-      x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
-      x-jsonld-type: '@id'
     hosts:
       x-jsonld-id: http://www.w3.org/ns/sosa/hosts
       x-jsonld-type: '@id'

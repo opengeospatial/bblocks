@@ -395,6 +395,8 @@ to detail what that property was associated with.&quot;</p>
     <span class="na">type</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">object</span>
     <span class="pi">-</span> <span class="s">string</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/hasFeatureOfInterest</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">observedProperty</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">object</span>
@@ -404,10 +406,14 @@ to detail what that property was associated with.&quot;</p>
     <span class="na">type</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">object</span>
     <span class="pi">-</span> <span class="s">string</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/usedProcedure</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">madeBySensor</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">object</span>
     <span class="pi">-</span> <span class="s">string</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/madeBySensor</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">hasResult</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/hasResult</span>
   <span class="na">hasSimpleResult</span><span class="pi">:</span>
@@ -428,9 +434,6 @@ to detail what that property was associated with.&quot;</p>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">madeObservation</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/madeObservation</span>
-    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-  <span class="na">madeBySensor</span><span class="pi">:</span>
-    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/madeBySensor</span>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">actsOnProperty</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/actsOnProperty</span>
@@ -456,16 +459,10 @@ to detail what that property was associated with.&quot;</p>
   <span class="na">madeBySampler</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/madeBySampler</span>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-  <span class="na">hasFeatureOfInterest</span><span class="pi">:</span>
-    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/hasFeatureOfInterest</span>
-    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">isFeatureOfInterestOf</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/isFeatureOfInterestOf</span>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">isResultOf</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/isResultOf</span>
-  <span class="na">usedProcedure</span><span class="pi">:</span>
-    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/usedProcedure</span>
-    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">hosts</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/hosts</span>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
@@ -511,74 +508,74 @@ to detail what that property was associated with.&quot;</p>
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:resultTime"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:phenomenonTime"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:observedProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"usedProcedure"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:usedProcedure"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"madeBySensor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:madeBySensor"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSimpleResult"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Observation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Sample"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Sample"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"observes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/observes"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:observes"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"isObservedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/isObservedBy"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isObservedBy"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"madeObservation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeObservation"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"madeBySensor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeBySensor"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:madeObservation"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"actsOnProperty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/actsOnProperty"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:actsOnProperty"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"isActedOnBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/isActedOnBy"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isActedOnBy"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"madeActuation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeActuation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:madeActuation"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"madeByActuator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeByActuator"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:madeByActuator"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasSample"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasSample"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSample"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"isSampleOf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/isSampleOf"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isSampleOf"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"madeSampling"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeSampling"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:madeSampling"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"madeBySampler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeBySampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:madeBySampler"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"isFeatureOfInterestOf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/isFeatureOfInterestOf"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isFeatureOfInterestOf"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"isResultOf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isResultOf"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"usedProcedure"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/usedProcedure"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hosts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hosts"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hosts"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"isHostedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isHostedBy"</span><span class="p">,</span><span class="w">
@@ -597,16 +594,19 @@ to detail what that property was associated with.&quot;</p>
     </span><span class="nl">"hasDeployment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:hasDeployment"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"deployedOnPlatform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:deployedOnPlatform"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"inDeployment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:inDeployment"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"inCondition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn-system:inCondition"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"hasSystemCapability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn-system:hasSystemCapability"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"hasSystemProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn-system:hasSystemProperty"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"hasOperatingRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn-system:hasOperatingRange"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"hasOperatingProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn-system:hasOperatingProperty"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"hasSurvivalRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn-system:hasSurvivalRange"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"hasSurvivalProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn-system:hasSurvivalProperty"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"qualityOfObservation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn-system:qualityOfObservation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"inCondition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/inCondition"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasSystemCapability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSystemCapability"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasSystemProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSystemProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasOperatingRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasOperatingRange"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasOperatingProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasOperatingProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasSurvivalRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSurvivalRange"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasSurvivalProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSurvivalProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"qualityOfObservation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/qualityOfObservation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="w">
+    </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sosa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ssn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/ssn/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ssn-system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
