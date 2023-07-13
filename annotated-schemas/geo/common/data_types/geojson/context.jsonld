@@ -5,17 +5,7 @@
     "properties": "geojson:properties",
     "geometry": {
       "@id": "https://purl.org/geojson/vocab#geometry",
-      "@context": {
-        "type": "@type",
-        "coordinates": {
-          "@container": "@list",
-          "@id": "https://purl.org/geojson/vocab#coordinates"
-        }
-      }
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "https://purl.org/geojson/vocab#bbox"
+      "@context": {}
     },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -25,6 +15,18 @@
     "MultiPoint": "geojson:MultiPoint",
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon"
+    "Polygon": "geojson:Polygon",
+    "bbox": {
+      "@container": "@list",
+      "@id": "https://purl.org/geojson/vocab#bbox"
+    },
+    "coordinates": {
+      "@container": "@list",
+      "@id": "https://purl.org/geojson/vocab#coordinates"
+    },
+    "features": {
+      "@container": "@set",
+      "@id": "https://purl.org/geojson/vocab#features"
+    }
   }
 }

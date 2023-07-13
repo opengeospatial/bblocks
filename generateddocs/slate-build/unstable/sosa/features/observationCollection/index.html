@@ -533,17 +533,7 @@ Validation for this building block has <strong><a href="https://github.com/openg
         </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:properties"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#geometry"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#coordinates"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"bbox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#bbox"</span><span class="w">
+          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"Feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Feature"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"FeatureCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:FeatureCollection"</span><span class="p">,</span><span class="w">
@@ -554,36 +544,92 @@ Validation for this building block has <strong><a href="https://github.com/openg
         </span><span class="nl">"MultiPolygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPolygon"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"Point"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Point"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"Polygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Polygon"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#seeAlso"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:label"</span><span class="w">
-          </span><span class="p">}</span><span class="w">
+        </span><span class="nl">"bbox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#bbox"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#coordinates"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasMember"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:resultTime"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:phenomenonTime"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:observedProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Observation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Sample"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Sample"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"observes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/observes"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:observedProperty"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"usedProcedure"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/usedProcedure"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"isObservedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/isObservedBy"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"madeObservation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeObservation"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"madeBySensor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeBySensor"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"Observation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"Sample"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Sample"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"actsOnProperty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/actsOnProperty"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"isActedOnBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/isActedOnBy"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"madeActuation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeActuation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"madeByActuator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeByActuator"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasSample"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasSample"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"isSampleOf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/isSampleOf"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"madeSampling"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeSampling"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"madeBySampler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeBySampler"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"isFeatureOfInterestOf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/isFeatureOfInterestOf"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"isResultOf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isResultOf"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSimpleResult"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"usedProcedure"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/usedProcedure"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hosts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hosts"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"isHostedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isHostedBy"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"isProxyFor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:isProxyFor"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"wasOriginatedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:wasOriginatedBy"</span><span class="p">,</span><span class="w">

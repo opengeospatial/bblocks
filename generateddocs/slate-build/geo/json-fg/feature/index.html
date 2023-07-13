@@ -418,17 +418,7 @@ also be able to parse and understand the additional members.</p>
     </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:properties"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#geometry"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#coordinates"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"bbox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#bbox"</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"Feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Feature"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"FeatureCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:FeatureCollection"</span><span class="p">,</span><span class="w">
@@ -439,6 +429,18 @@ also be able to parse and understand the additional members.</p>
     </span><span class="nl">"MultiPolygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPolygon"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Point"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Point"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Polygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Polygon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bbox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#bbox"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#coordinates"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#features"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#seeAlso"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">

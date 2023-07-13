@@ -80,8 +80,6 @@ properties:
     type:
     - object
     - string
-    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
-    x-jsonld-type: '@id'
   observedProperty:
     type:
     - object
@@ -91,14 +89,10 @@ properties:
     type:
     - object
     - string
-    x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
-    x-jsonld-type: '@id'
   madeBySensor:
     type:
     - object
     - string
-    x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
-    x-jsonld-type: '@id'
   hasResult:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasResult
   hasSimpleResult:
@@ -119,6 +113,9 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
   madeObservation:
     x-jsonld-id: http://www.w3.org/ns/sosa/madeObservation
+    x-jsonld-type: '@id'
+  madeBySensor:
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
     x-jsonld-type: '@id'
   actsOnProperty:
     x-jsonld-id: http://www.w3.org/ns/sosa/actsOnProperty
@@ -144,10 +141,16 @@ x-jsonld-extra-terms:
   madeBySampler:
     x-jsonld-id: http://www.w3.org/ns/sosa/madeBySampler
     x-jsonld-type: '@id'
+  hasFeatureOfInterest:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+    x-jsonld-type: '@id'
   isFeatureOfInterestOf:
     x-jsonld-id: http://www.w3.org/ns/sosa/isFeatureOfInterestOf
     x-jsonld-type: '@id'
   isResultOf: http://www.w3.org/ns/sosa/isResultOf
+  usedProcedure:
+    x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
+    x-jsonld-type: '@id'
   hosts:
     x-jsonld-id: http://www.w3.org/ns/sosa/hosts
     x-jsonld-type: '@id'
@@ -197,24 +200,76 @@ Links to the schema:
   "@context": {
     "resultTime": "sosa:resultTime",
     "phenomenonTime": "sosa:phenomenonTime",
-    "hasFeatureOfInterest": {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "observedProperty": "sosa:observedProperty",
+    "hasResult": "sosa:hasResult",
+    "hasSimpleResult": "sosa:hasSimpleResult",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "observes": {
+      "@id": "http://www.w3.org/ns/sosa/observes",
       "@type": "@id"
     },
-    "observedProperty": "sosa:observedProperty",
-    "usedProcedure": {
-      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+    "isObservedBy": {
+      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "@type": "@id"
+    },
+    "madeObservation": {
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
       "@type": "@id"
     },
     "madeBySensor": {
       "@id": "http://www.w3.org/ns/sosa/madeBySensor",
       "@type": "@id"
     },
-    "hasResult": "sosa:hasResult",
-    "hasSimpleResult": "sosa:hasSimpleResult",
-    "Observation": "sosa:Observation",
-    "Sample": "sosa:Sample",
+    "actsOnProperty": {
+      "@id": "http://www.w3.org/ns/sosa/actsOnProperty",
+      "@type": "@id"
+    },
+    "isActedOnBy": {
+      "@id": "http://www.w3.org/ns/sosa/isActedOnBy",
+      "@type": "@id"
+    },
+    "madeActuation": {
+      "@id": "http://www.w3.org/ns/sosa/madeActuation",
+      "@type": "@id"
+    },
+    "madeByActuator": {
+      "@id": "http://www.w3.org/ns/sosa/madeByActuator",
+      "@type": "@id"
+    },
+    "hasSample": {
+      "@id": "http://www.w3.org/ns/sosa/hasSample",
+      "@type": "@id"
+    },
+    "isSampleOf": {
+      "@id": "http://www.w3.org/ns/sosa/isSampleOf",
+      "@type": "@id"
+    },
+    "madeSampling": {
+      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "@type": "@id"
+    },
+    "madeBySampler": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
+      "@type": "@id"
+    },
+    "hasFeatureOfInterest": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "isFeatureOfInterestOf": {
+      "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "@type": "@id"
+    },
     "isResultOf": "sosa:isResultOf",
+    "usedProcedure": {
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "hosts": {
+      "@id": "http://www.w3.org/ns/sosa/hosts",
+      "@type": "@id"
+    },
     "isHostedBy": "sosa:isHostedBy",
     "isProxyFor": "ssn:isProxyFor",
     "wasOriginatedBy": "ssn:wasOriginatedBy",
