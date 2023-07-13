@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "geopose": "http://example.com/geopose/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "quaternion": {
+      "@id": "geopose:quaternion",
+      "@context": {
+        "x": "geopose:x",
+        "y": "geopose:y",
+        "z": "geopose:z",
+        "w": "geopose:w"
+      }
+    },
+    "position": {
+      "@id": "geopose:position",
+      "@context": {
+        "lat": "geo:lat",
+        "lon": "geo:long",
+        "h": "geopose:h"
+      }
+    }
+  }
+}
