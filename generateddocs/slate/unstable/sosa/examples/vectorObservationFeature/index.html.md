@@ -1,6 +1,10 @@
 ---
 title: Example SOSA Vector Observation Feature (Schema)
 
+language_tabs:
+  - json: JSON
+  - jsonld: JSON-LD
+  - ttl: RDF/Turtle
 
 toc_footers:
   - Version 1.0
@@ -22,8 +26,8 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
 
 [Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/" target="_blank">valid</a></strong>
 </aside>
 
 # Examples
@@ -69,6 +73,65 @@ Validation for this building block has <strong><a href="https://github.com/openg
     }
   }
 }
+
+```
+
+```jsonld
+{
+  "@id": "vector-obs-1",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        -111.67183507997295,
+        40.056709946862874
+      ],
+      [
+        -111.67183507997295,
+        40.056709946862874
+      ]
+    ]
+  },
+  "time": null,
+  "place": null,
+  "properties": {
+    "hasFeatureOfInterest": "eg:Traverse-P1-P2",
+    "resultTime": "2023-05-22T16:41:00+2",
+    "hasResult": {
+      "pose": {
+        "position": {
+          "lat": -111.67183507997295,
+          "lon": 40.056709946862874,
+          "h": 0.5
+        },
+        "angles": {
+          "yaw": 15.35,
+          "pitch": -0.01,
+          "roll": 0
+        }
+      },
+      "distance": 6889234.2
+    }
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld"
+}
+```
+
+```ttl
+@prefix ns1: <http://example.com/properties/> .
+@prefix ns2: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/features/vector-obs-1> a ns2:Feature ;
+    ns2:geometry [ a <http://www.example.com/features/LineString> ;
+            ns2:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.116718e+02 4.005671e+01 ) ) ] ;
+    ns2:properties [ sosa:hasFeatureOfInterest <eg:Traverse-P1-P2> ;
+            sosa:hasResult [ ns1:distance "6889234.2"^^xsd:float ] ;
+            sosa:resultTime "2023-05-22T16:41:00+2" ] .
+
 
 ```
 

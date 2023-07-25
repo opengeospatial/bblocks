@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="geo geo_geopose geo_geopose_basic geo_geopose_basic_ypr geo_geopose_basic_ypr_index" data-languages="[]">
+  <body class="geo geo_geopose geo_geopose_basic geo_geopose_basic_ypr geo_geopose_basic_ypr_index" data-languages="[&quot;json&quot;,&quot;jsonld&quot;,&quot;ttl&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -303,6 +303,11 @@
     </a>
     <div class="toc-wrapper">
       <img src="../../../../images/logo-4d9dfd05.svg" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">JSON</a>
+              <a href="#" data-language-name="jsonld">JSON-LD</a>
+              <a href="#" data-language-name="ttl">RDF/Turtle</a>
+        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -390,7 +395,32 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h2 id='example-2'>Example 2</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.514456741060452,
+    "pitch": -0.43610515937237904,
+    "roll": 0.0
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>@prefix ns1: &lt;http://example.com/geopose/&gt; .
+@prefix ns2: &lt;geo:&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+[] ns1:angles [ ns1:pitch -4.361052e-01 ;
+            ns1:roll 0e+00 ;
+            ns1:yaw 5.514457e+00 ] ;
+    ns1:position [ ns2:lat 4.77e+01 ;
+            ns2:long -1.223e+02 ;
+            ns1:h 1.15e+01 ] .
+
+
+</code></pre></div><h2 id='example-2'>Example 2</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">47.7</span><span class="p">,</span><span class="w">
     </span><span class="nl">"lon"</span><span class="p">:</span><span class="w"> </span><span class="mf">-122.3</span><span class="p">,</span><span class="w">
@@ -403,7 +433,32 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h2 id='example-3'>Example 3</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.518671098486835,
+    "pitch": -0.4381464123477409,
+    "roll": 0.0
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>@prefix ns1: &lt;http://example.com/geopose/&gt; .
+@prefix ns2: &lt;geo:&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+[] ns1:angles [ ns1:pitch -4.381464e-01 ;
+            ns1:roll 0e+00 ;
+            ns1:yaw 5.518671e+00 ] ;
+    ns1:position [ ns2:lat 4.77e+01 ;
+            ns2:long -1.223e+02 ;
+            ns1:h 1.15e+01 ] .
+
+
+</code></pre></div><h2 id='example-3'>Example 3</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">47.7</span><span class="p">,</span><span class="w">
     </span><span class="nl">"lon"</span><span class="p">:</span><span class="w"> </span><span class="mf">-122.3</span><span class="p">,</span><span class="w">
@@ -416,7 +471,32 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h2 id='example-4'>Example 4</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.522894747595089,
+    "pitch": -0.4401787262476278,
+    "roll": 0.0
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>@prefix ns1: &lt;geo:&gt; .
+@prefix ns2: &lt;http://example.com/geopose/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+[] ns2:angles [ ns2:pitch -4.401787e-01 ;
+            ns2:roll 0e+00 ;
+            ns2:yaw 5.522895e+00 ] ;
+    ns2:position [ ns1:lat 4.77e+01 ;
+            ns1:long -1.223e+02 ;
+            ns2:h 1.15e+01 ] .
+
+
+</code></pre></div><h2 id='example-4'>Example 4</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">47.7</span><span class="p">,</span><span class="w">
     </span><span class="nl">"lon"</span><span class="p">:</span><span class="w"> </span><span class="mf">-122.3</span><span class="p">,</span><span class="w">
@@ -429,7 +509,32 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Basic-YPR:</span><span class="nv"> </span><span class="s">Basic</span><span class="nv"> </span><span class="s">GeoPose</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">yaw,</span><span class="nv"> </span><span class="s">pitch,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">roll</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">orientation'</span>
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.527127708845192,
+    "pitch": -0.44220204512692407,
+    "roll": 0.0
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>@prefix ns1: &lt;geo:&gt; .
+@prefix ns2: &lt;http://example.com/geopose/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+[] ns2:angles [ ns2:pitch -4.42202e-01 ;
+            ns2:roll 0e+00 ;
+            ns2:yaw 5.527128e+00 ] ;
+    ns2:position [ ns1:lat 4.77e+01 ;
+            ns1:long -1.223e+02 ;
+            ns2:h 1.15e+01 ] .
+
+
+</code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Basic-YPR:</span><span class="nv"> </span><span class="s">Basic</span><span class="nv"> </span><span class="s">GeoPose</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">yaw,</span><span class="nv"> </span><span class="s">pitch,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">roll</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">orientation'</span>
 <span class="na">definitions</span><span class="pi">:</span>
   <span class="na">angles</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
@@ -525,6 +630,11 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
       </div>
       <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">JSON</a>
+                <a href="#" data-language-name="jsonld">JSON-LD</a>
+                <a href="#" data-language-name="ttl">RDF/Turtle</a>
+          </div>
       </div>
     </div>
   </body>

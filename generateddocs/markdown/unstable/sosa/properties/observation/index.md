@@ -38,6 +38,28 @@ _:a1 a sosa:Observation ;
 .
 ```
 
+#### jsonld
+```jsonld
+{
+  "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
+  "hasSimpleResult": 33,
+  "resultTime": "2022-05-01T22:33:44Z",
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem> ;
+    sosa:hasSimpleResult 33 ;
+    sosa:resultTime "2022-05-01T22:33:44Z" .
+
+
+```
+
 ## Schema
 
 ```yaml

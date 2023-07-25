@@ -44,6 +44,39 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ```
 
+#### jsonld
+```jsonld
+{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.514456741060452,
+    "pitch": -0.43610515937237904,
+    "roll": 0.0
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix ns1: <http://example.com/geopose/> .
+@prefix ns2: <geo:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] ns1:angles [ ns1:pitch -4.361052e-01 ;
+            ns1:roll 0e+00 ;
+            ns1:yaw 5.514457e+00 ] ;
+    ns1:position [ ns2:lat 4.77e+01 ;
+            ns2:long -1.223e+02 ;
+            ns1:h 1.15e+01 ] .
+
+
+```
+
 
 ### Example 2
 #### json
@@ -60,6 +93,39 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "roll": 0.0
   }
 }
+
+```
+
+#### jsonld
+```jsonld
+{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.518671098486835,
+    "pitch": -0.4381464123477409,
+    "roll": 0.0
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix ns1: <http://example.com/geopose/> .
+@prefix ns2: <geo:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] ns1:angles [ ns1:pitch -4.381464e-01 ;
+            ns1:roll 0e+00 ;
+            ns1:yaw 5.518671e+00 ] ;
+    ns1:position [ ns2:lat 4.77e+01 ;
+            ns2:long -1.223e+02 ;
+            ns1:h 1.15e+01 ] .
+
 
 ```
 
@@ -82,6 +148,39 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ```
 
+#### jsonld
+```jsonld
+{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.522894747595089,
+    "pitch": -0.4401787262476278,
+    "roll": 0.0
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix ns1: <geo:> .
+@prefix ns2: <http://example.com/geopose/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] ns2:angles [ ns2:pitch -4.401787e-01 ;
+            ns2:roll 0e+00 ;
+            ns2:yaw 5.522895e+00 ] ;
+    ns2:position [ ns1:lat 4.77e+01 ;
+            ns1:long -1.223e+02 ;
+            ns2:h 1.15e+01 ] .
+
+
+```
+
 
 ### Example 4
 #### json
@@ -98,6 +197,39 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "roll": 0.0
   }
 }
+
+```
+
+#### jsonld
+```jsonld
+{
+  "position": {
+    "lat": 47.7,
+    "lon": -122.3,
+    "h": 11.5
+  },
+  "angles": {
+    "yaw": 5.527127708845192,
+    "pitch": -0.44220204512692407,
+    "roll": 0.0
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix ns1: <geo:> .
+@prefix ns2: <http://example.com/geopose/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] ns2:angles [ ns2:pitch -4.42202e-01 ;
+            ns2:roll 0e+00 ;
+            ns2:yaw 5.527128e+00 ] ;
+    ns2:position [ ns1:lat 4.77e+01 ;
+            ns1:long -1.223e+02 ;
+            ns2:h 1.15e+01 ] .
+
 
 ```
 
