@@ -64,7 +64,8 @@ $(function() {
     activeRainbow = uri;
     $rainbowPopup.html('').addClass('loading');
     showRainbowPopup($this);
-    $.ajax(uri, {
+    var jsonldUrl = 'https://defs.opengis.net/vocprez/object?uri=' + encodeURIComponent(uri) + '&_mediatype=application/ld+json';
+    $.ajax(jsonldUrl, {
         'headers': {
           'Accept': 'application/json',
         },
