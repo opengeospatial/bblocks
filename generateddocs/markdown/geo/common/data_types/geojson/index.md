@@ -5,7 +5,7 @@
 
 A GeoJSON object
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+[*Status*](http://www.opengis.net/def/status): Stable
 
 ## Description
 

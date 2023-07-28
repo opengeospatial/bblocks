@@ -5,7 +5,7 @@
 
 Basic GeoPose using yaw, pitch, and roll to specify orientation
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
+[*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
@@ -63,16 +63,16 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 #### ttl
 ```ttl
-@prefix ns1: <http://example.com/geopose/> .
-@prefix ns2: <geo:> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geopose: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] ns1:angles [ ns1:pitch -4.361052e-01 ;
-            ns1:roll 0e+00 ;
-            ns1:yaw 5.514457e+00 ] ;
-    ns1:position [ ns2:lat 4.77e+01 ;
-            ns2:long -1.223e+02 ;
-            ns1:h 1.15e+01 ] .
+[] geopose:angles [ geopose:pitch -4.361052e-01 ;
+            geopose:roll 0e+00 ;
+            geopose:yaw 5.514457e+00 ] ;
+    geopose:position [ geopose:h 1.15e+01 ;
+            geo1:lat 4.77e+01 ;
+            geo1:long -1.223e+02 ] .
 
 
 ```
@@ -115,16 +115,16 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 #### ttl
 ```ttl
-@prefix ns1: <http://example.com/geopose/> .
-@prefix ns2: <geo:> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geopose: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] ns1:angles [ ns1:pitch -4.381464e-01 ;
-            ns1:roll 0e+00 ;
-            ns1:yaw 5.518671e+00 ] ;
-    ns1:position [ ns2:lat 4.77e+01 ;
-            ns2:long -1.223e+02 ;
-            ns1:h 1.15e+01 ] .
+[] geopose:angles [ geopose:pitch -4.381464e-01 ;
+            geopose:roll 0e+00 ;
+            geopose:yaw 5.518671e+00 ] ;
+    geopose:position [ geopose:h 1.15e+01 ;
+            geo1:lat 4.77e+01 ;
+            geo1:long -1.223e+02 ] .
 
 
 ```
@@ -167,16 +167,16 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 #### ttl
 ```ttl
-@prefix ns1: <geo:> .
-@prefix ns2: <http://example.com/geopose/> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geopose: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] ns2:angles [ ns2:pitch -4.401787e-01 ;
-            ns2:roll 0e+00 ;
-            ns2:yaw 5.522895e+00 ] ;
-    ns2:position [ ns1:lat 4.77e+01 ;
-            ns1:long -1.223e+02 ;
-            ns2:h 1.15e+01 ] .
+[] geopose:angles [ geopose:pitch -4.401787e-01 ;
+            geopose:roll 0e+00 ;
+            geopose:yaw 5.522895e+00 ] ;
+    geopose:position [ geopose:h 1.15e+01 ;
+            geo1:lat 4.77e+01 ;
+            geo1:long -1.223e+02 ] .
 
 
 ```
@@ -219,16 +219,16 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 #### ttl
 ```ttl
-@prefix ns1: <geo:> .
-@prefix ns2: <http://example.com/geopose/> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geopose: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] ns2:angles [ ns2:pitch -4.42202e-01 ;
-            ns2:roll 0e+00 ;
-            ns2:yaw 5.527128e+00 ] ;
-    ns2:position [ ns1:lat 4.77e+01 ;
-            ns1:long -1.223e+02 ;
-            ns2:h 1.15e+01 ] .
+[] geopose:angles [ geopose:pitch -4.42202e-01 ;
+            geopose:roll 0e+00 ;
+            geopose:yaw 5.527128e+00 ] ;
+    geopose:position [ geopose:h 1.15e+01 ;
+            geo1:lat 4.77e+01 ;
+            geo1:long -1.223e+02 ] .
 
 
 ```

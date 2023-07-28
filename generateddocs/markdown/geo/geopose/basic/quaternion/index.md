@@ -5,7 +5,7 @@
 
 Basic GeoPose using quaternion to specify orientation
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
+[*Status*](http://www.opengis.net/def/status): Under development
 
 ## Schema
 

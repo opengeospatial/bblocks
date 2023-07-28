@@ -20,7 +20,10 @@ meta:
 
 The bbox-crs query parameter can be used to assert the coordinate reference system that is used for the coordinate values of the bbox parameter.
 
-[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+<p class="status">
+    <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
+    <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
+</p>
 
 <aside class="success">
 This building block is <strong>valid</strong>

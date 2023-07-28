@@ -19,7 +19,10 @@ meta:
 
 A feature. Every feature is a sub-resource of an OGC Collection.
 
-[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+<p class="status">
+    <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
+    <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
+</p>
 
 <aside class="success">
 This building block is <strong>valid</strong>

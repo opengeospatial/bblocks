@@ -5,7 +5,7 @@
 
 This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification.
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
+[*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 

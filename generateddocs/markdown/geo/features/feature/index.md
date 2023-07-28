@@ -5,7 +5,7 @@
 
 A feature. Every feature is a sub-resource of an OGC Collection.
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+[*Status*](http://www.opengis.net/def/status): Stable
 
 ## Description
 

@@ -19,7 +19,10 @@ meta:
 
 A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 
-[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
+<p class="status">
+    <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
+    <a href="http://www.opengis.net/def/status/experimental" target="_blank" data-rainbow-uri>Experimental</a>
+</p>
 
 <aside class="success">
 This building block is <strong>valid</strong>

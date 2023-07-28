@@ -25,7 +25,10 @@ meta:
 
 This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification.
 
-[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
+<p class="status">
+    <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
+    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+</p>
 
 <aside class="success">
 This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observationCollection/" target="_blank">valid</a></strong>
@@ -132,14 +135,17 @@ eg:pop1999 a sosa:Observation ;
 ```
 
 ```ttl
-@prefix ns1: <geojson:> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <file:///github/workspace/c1> sosa:hasMember <file:///github/workspace/pop1999> .
 
-<file:///github/workspace/pop1999> a ns1:Feature ;
-    ns1:properties [ ],
-        [ ] .
+<file:///github/workspace/pop1999> a geojson:Feature ;
+    geojson:properties [ sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem> ;
+            sosa:hasSimpleResult 3.275e+03 ],
+        [ sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork> ;
+            sosa:hasSimpleResult 1.5555e+04 ] .
 
 
 ```

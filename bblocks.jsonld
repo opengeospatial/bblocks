@@ -25,13 +25,6 @@
       "@id": "dct:modified",
       "@type": "xsd:date"
     },
-    "maturity": {
-      "@id": "bblocks:maturity",
-      "@type": "@id",
-      "@context": {
-        "@base": "http://www.opengis.net/def/bblocks/maturity/"
-      }
-    },
     "scope": {
       "@id": "bblocks:scope",
       "@type": "@id",
@@ -734,9 +727,9 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.examples.vectorObservation"
+        "ogc.unstable.sosa.examples.vectorObservation",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",
@@ -794,8 +787,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
-        "ogc.geo.json-fg.feature"
+        "ogc.geo.json-fg.feature",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",
@@ -866,9 +859,9 @@
       "itemIdentifier": "ogc.unstable.sosa.features.observationCollection",
       "shaclRules": [],
       "dependsOn": [
+        "ogc.geo.json-fg.featureCollection",
         "ogc.unstable.sosa.properties.observationCollection",
-        "ogc.unstable.sosa.features.observation",
-        "ogc.geo.json-fg.featureCollection"
+        "ogc.unstable.sosa.features.observation"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",

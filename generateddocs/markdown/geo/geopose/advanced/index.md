@@ -5,7 +5,7 @@
 
 Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Proposal
+[*Status*](http://www.opengis.net/def/status): Under development
 
 ## Schema
 

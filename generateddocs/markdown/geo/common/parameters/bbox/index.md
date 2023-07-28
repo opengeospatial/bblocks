@@ -5,7 +5,7 @@
 
 The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+[*Status*](http://www.opengis.net/def/status): Stable
 
 ## Description
 

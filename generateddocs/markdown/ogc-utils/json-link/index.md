@@ -5,7 +5,7 @@
 
 Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API’s.
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+[*Status*](http://www.opengis.net/def/status): Stable
 
 ## Schema
 

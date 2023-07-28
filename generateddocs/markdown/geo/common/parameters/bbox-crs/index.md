@@ -5,7 +5,7 @@
 
 The bbox-crs query parameter can be used to assert the coordinate reference system that is used for the coordinate values of the bbox parameter.
 
-[*Maturity*](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Mature
+[*Status*](http://www.opengis.net/def/status): Stable
 
 ## Description
 

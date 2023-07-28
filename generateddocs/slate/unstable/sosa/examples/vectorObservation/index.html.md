@@ -24,7 +24,10 @@ meta:
 
 This building block defines an example SOSA Vector Observation
 
-[Maturity](https://github.com/cportele/ogcapi-building-blocks#building-block-maturity): Development
+<p class="status">
+    <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
+    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+</p>
 
 <aside class="success">
 This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservation/" target="_blank">valid</a></strong>
