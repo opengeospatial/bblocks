@@ -5,7 +5,7 @@
 
 A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 
-[*Status*](http://www.opengis.net/def/status): Experimental
+[*Status*](http://www.opengis.net/def/status): Stable
 
 ## Description
 

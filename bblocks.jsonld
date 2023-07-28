@@ -339,8 +339,8 @@
       "itemIdentifier": "ogc.geo.features.featureCollection",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.geo.features.feature",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.feature"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
@@ -510,7 +510,7 @@
     {
       "name": "JSON-FG Feature",
       "abstract": "A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.",
-      "status": "experimental",
+      "status": "stable",
       "dateTimeAddition": "2023-05-31T14:56:51+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -522,7 +522,6 @@
           "link": "http://docs.ogc.org/per/21-017r1.html"
         }
       ],
-      "maturity": "proposal",
       "scope": "geo",
       "group": "JSON-FG",
       "itemIdentifier": "ogc.geo.json-fg.feature",
@@ -559,7 +558,7 @@
     {
       "name": "JSON-FG Feature Collection",
       "abstract": "A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.",
-      "status": "experimental",
+      "status": "stable",
       "dateTimeAddition": "2023-05-31T14:56:51+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -571,7 +570,6 @@
           "link": "http://docs.ogc.org/per/21-017r1.html"
         }
       ],
-      "maturity": "proposal",
       "scope": "geo",
       "group": "JSON-FG",
       "itemIdentifier": "ogc.geo.json-fg.featureCollection",
@@ -668,8 +666,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.geopose.basic.ypr",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.geo.geopose.basic.ypr"
       ],
       "tags": [
         "sosa",
@@ -727,9 +725,9 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.examples.vectorObservation",
+        "ogc.unstable.sosa.properties.observation",
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.examples.vectorObservation"
       ],
       "tags": [
         "sosa",
@@ -787,8 +785,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.json-fg.feature",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.geo.json-fg.feature"
       ],
       "tags": [
         "sosa",

@@ -21,7 +21,7 @@ A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to suppo
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/experimental" target="_blank" data-rainbow-uri>Experimental</a>
+    <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
 </p>
 
 <aside class="success">
