@@ -23,7 +23,7 @@ All the output files will be generated under `build-local`.
       --test-outputs build-local/tests \
       --base-url https://opengeospatial.github.io/bblocks/ 
     # Build Slate docs
-    docker run --pull=always --rm \
+    docker run --pull=always --rm --user $UID \
       -v "$(pwd)/build-local/generateddocs/slate:/srv/slate/source" \
       -v "$(pwd)/build-local/generateddocs/slate-build:/srv/slate/build" \
       dockerogc/slate build
