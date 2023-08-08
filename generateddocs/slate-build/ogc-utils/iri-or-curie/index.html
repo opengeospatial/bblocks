@@ -285,7 +285,7 @@
   color: #859900;
 }
     </style>
-    <link href="../../stylesheets/screen-78476d1b.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/screen-c95bb399.css" rel="stylesheet" media="screen" />
     <link href="../../stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
       <script src="../../javascripts/all-0c8314cb.js"></script>
 
@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="ogc-utils ogc-utils_iri-or-curie ogc-utils_iri-or-curie_index" data-languages="[]">
+  <body class="ogc-utils ogc-utils_iri-or-curie ogc-utils_iri-or-curie_index" data-languages="[&quot;plaintext&quot;,&quot;json&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -303,6 +303,10 @@
     </a>
     <div class="toc-wrapper">
       <img src="../../images/logo-4d9dfd05.svg" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="plaintext">Plain text</a>
+              <a href="#" data-language-name="json">JSON</a>
+        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -376,12 +380,22 @@ of US-ASCII ASCII characters.</p>
 of scoped names that map to URIs.</p>
 
 <p>The &quot;IRI-or-CURIE&quot; building block defines a data type representing either an IRI or a CURIE (with or without a prefix).</p>
-<h1 id='examples'>Examples</h1><h2 id='example-http-uri'>Example HTTP URI</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"http://www.example.org/roles/myRoles?param=value#fragment"</span><span class="w">
-</span></code></pre></div><h2 id='example-isbn-urn'>Example ISBN URN</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"urn:isbn:9780387359731"</span><span class="w">
-</span></code></pre></div><h2 id='example-dublin-core-curie'>Example Dublin Core CURIE</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"dc:creator"</span><span class="w">
-</span></code></pre></div><h2 id='example-local-part'>Example local part</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"relative-ref"</span><span class="w">
-</span></code></pre></div><h2 id='example-local-part-fragment-only'>Example local part (fragment only)</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"#same-document-ref"</span><span class="w">
-</span></code></pre></div><h2 id='multiple-iris-or-curies'>Multiple IRIs or CURIEs</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<h1 id='examples'>Examples</h1><h2 id='example-http-uri'>Example HTTP URI</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>http://www.example.org/roles/myRoles?param=value#fragment
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"http://www.example.org/roles/myRoles?param=value#fragment"</span><span class="w">
+</span></code></pre></div><h2 id='example-isbn-urn'>Example ISBN URN</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"urn:isbn:9780387359731"</span><span class="w">
+</span></code></pre></div><h2 id='example-dublin-core-curie'>Example Dublin Core CURIE</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>dc:creator
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"dc:creator"</span><span class="w">
+</span></code></pre></div><h2 id='example-local-part'>Example local part</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>relative-ref
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"relative-ref"</span><span class="w">
+</span></code></pre></div><h2 id='example-local-part-fragment-only'>Example local part (fragment only)</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>#same-document-ref
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"#same-document-ref"</span><span class="w">
+</span></code></pre></div><h2 id='multiple-iris-or-curies'>Multiple IRIs or CURIEs</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
+http://www.example.org/roles/myRoles?param=value#fragment
+#same-document-ref
+another-document#ref
+
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="s2">"urn:isbn:9780387359731"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"http://www.example.org/roles/myRoles?param=value#fragment"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"#same-document-ref"</span><span class="p">,</span><span class="w">
@@ -444,6 +458,10 @@ of scoped names that map to URIs.</p>
 
       </div>
       <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="plaintext">Plain text</a>
+                <a href="#" data-language-name="json">JSON</a>
+          </div>
       </div>
     </div>
   </body>

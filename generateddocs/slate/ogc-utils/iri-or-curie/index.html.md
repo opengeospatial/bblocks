@@ -1,6 +1,9 @@
 ---
 title: IRI or CURIE (Datatype)
 
+language_tabs:
+  - plaintext: Plain text
+  - json: JSON
 
 toc_footers:
   - Version 1.0
@@ -43,12 +46,20 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 
 ## Example HTTP URI
 
+```plaintext
+http://www.example.org/roles/myRoles?param=value#fragment
+```
+
 ```json
 "http://www.example.org/roles/myRoles?param=value#fragment"
 ```
 
 
 ## Example ISBN URN
+
+```plaintext
+urn:isbn:9780387359731
+```
 
 ```json
 "urn:isbn:9780387359731"
@@ -57,12 +68,20 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 
 ## Example Dublin Core CURIE
 
+```plaintext
+dc:creator
+```
+
 ```json
 "dc:creator"
 ```
 
 
 ## Example local part
+
+```plaintext
+relative-ref
+```
 
 ```json
 "relative-ref"
@@ -71,12 +90,24 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 
 ## Example local part (fragment only)
 
+```plaintext
+#same-document-ref
+```
+
 ```json
 "#same-document-ref"
 ```
 
 
 ## Multiple IRIs or CURIEs
+
+```plaintext
+urn:isbn:9780387359731
+http://www.example.org/roles/myRoles?param=value#fragment
+#same-document-ref
+another-document#ref
+
+```
 
 ```json
 [

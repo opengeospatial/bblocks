@@ -20,6 +20,11 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 ## Examples
 
 ### Example HTTP URI
+#### plaintext
+```plaintext
+http://www.example.org/roles/myRoles?param=value#fragment
+```
+
 #### json
 ```json
 "http://www.example.org/roles/myRoles?param=value#fragment"
@@ -27,6 +32,11 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 
 
 ### Example ISBN URN
+#### plaintext
+```plaintext
+urn:isbn:9780387359731
+```
+
 #### json
 ```json
 "urn:isbn:9780387359731"
@@ -34,6 +44,11 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 
 
 ### Example Dublin Core CURIE
+#### plaintext
+```plaintext
+dc:creator
+```
+
 #### json
 ```json
 "dc:creator"
@@ -41,6 +56,11 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 
 
 ### Example local part
+#### plaintext
+```plaintext
+relative-ref
+```
+
 #### json
 ```json
 "relative-ref"
@@ -48,6 +68,11 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 
 
 ### Example local part (fragment only)
+#### plaintext
+```plaintext
+#same-document-ref
+```
+
 #### json
 ```json
 "#same-document-ref"
@@ -55,6 +80,15 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 
 
 ### Multiple IRIs or CURIEs
+#### plaintext
+```plaintext
+urn:isbn:9780387359731
+http://www.example.org/roles/myRoles?param=value#fragment
+#same-document-ref
+another-document#ref
+
+```
+
 #### json
 ```json
 [
