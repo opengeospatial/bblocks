@@ -69,7 +69,7 @@ $(document).ready(function () {
 
     $.get("./register.json")
       .then(bblocks => {
-        bblocks.forEach(bblock => {
+        bblocks.sort((a, b) => a.itemIdentifier.localeCompare(b.itemIdentifier)).forEach(bblock => {
           const docLink = bblock.documentation.slate.url;
 
           const $parent = $('<div>')
