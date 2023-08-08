@@ -4,8 +4,6 @@ title: SOSA Observation Feature (Schema)
 language_tabs:
   - json: JSON
   - turtle: RDF/Turtle
-  - jsonld: JSON-LD
-  - ttl: RDF/Turtle
 
 toc_footers:
   - Version 1.0
@@ -27,11 +25,11 @@ This building blocks defines a GeoJSON feature containing a SOSA Observation
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observation/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observation/" target="_blank">failed</a></strong>
 </aside>
 
 # Examples
@@ -66,39 +64,6 @@ _:a1 a geojson:Feature;
     sosa:resultTime "2022-05-01T22:33:44Z"^^xsd:dateTime
   ]
 .
-```
-
-```jsonld
-{
-  "@id": "pop1999",
-  "type": "Feature",
-  "featureType": "sosa:Observation",
-  "geometry": null,
-  "properties": {
-    "observedProperty": "https://dbpedia.org/ontology/population",
-    "resultTime": "1999",
-    "@id": "pop1999",
-    "comment": "Example of an inline membership - would entail hasMember relations",
-    "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
-    "hasSimpleResult": 15555.0
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld"
-}
-```
-
-```ttl
-@prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<file:///github/workspace/pop1999> a geojson:Feature ;
-    sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork> ;
-    sosa:hasSimpleResult 1.5555e+04 ;
-    sosa:observedProperty "https://dbpedia.org/ontology/population" ;
-    sosa:resultTime "1999" ;
-    geojson:properties <file:///github/workspace/pop1999> .
-
-
 ```
 
 
@@ -208,157 +173,6 @@ Links to the schema:
 
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml</a>
 * JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json</a>
-
-
-# JSON-LD Context
-
-```json--ldContext
-{
-  "@context": {
-    "type": "@type",
-    "id": "@id",
-    "properties": "geojson:properties",
-    "geometry": {
-      "@id": "geojson:geometry",
-      "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
-      }
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "features": {
-      "@container": "@set",
-      "@id": "sosa:hasMember"
-    },
-    "links": {
-      "@id": "rdfs:seeAlso",
-      "@context": {
-        "href": "@id",
-        "title": "rdfs:label"
-      }
-    },
-    "resultTime": "sosa:resultTime",
-    "phenomenonTime": "sosa:phenomenonTime",
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
-    "observedProperty": "sosa:observedProperty",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "hasResult": "sosa:hasResult",
-    "hasSimpleResult": "sosa:hasSimpleResult",
-    "Observation": "sosa:Observation",
-    "Sample": "sosa:Sample",
-    "observes": {
-      "@id": "sosa:observes",
-      "@type": "@id"
-    },
-    "isObservedBy": {
-      "@id": "sosa:isObservedBy",
-      "@type": "@id"
-    },
-    "madeObservation": {
-      "@id": "sosa:madeObservation",
-      "@type": "@id"
-    },
-    "actsOnProperty": {
-      "@id": "sosa:actsOnProperty",
-      "@type": "@id"
-    },
-    "isActedOnBy": {
-      "@id": "sosa:isActedOnBy",
-      "@type": "@id"
-    },
-    "madeActuation": {
-      "@id": "sosa:madeActuation",
-      "@type": "@id"
-    },
-    "madeByActuator": {
-      "@id": "sosa:madeByActuator",
-      "@type": "@id"
-    },
-    "hasSample": {
-      "@id": "sosa:hasSample",
-      "@type": "@id"
-    },
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
-      "@type": "@id"
-    },
-    "madeSampling": {
-      "@id": "sosa:madeSampling",
-      "@type": "@id"
-    },
-    "madeBySampler": {
-      "@id": "sosa:madeBySampler",
-      "@type": "@id"
-    },
-    "isFeatureOfInterestOf": {
-      "@id": "sosa:isFeatureOfInterestOf",
-      "@type": "@id"
-    },
-    "isResultOf": "sosa:isResultOf",
-    "hosts": {
-      "@id": "sosa:hosts",
-      "@type": "@id"
-    },
-    "isHostedBy": "sosa:isHostedBy",
-    "isProxyFor": "ssn:isProxyFor",
-    "wasOriginatedBy": "ssn:wasOriginatedBy",
-    "detects": "ssn:detects",
-    "hasProperty": "ssn:hasProperty",
-    "isPropertyOf": "ssn:isPropertyOf",
-    "forProperty": "ssn:forProperty",
-    "implements": "ssn:implements",
-    "implementedBy": "ssn:implementedBy",
-    "hasInput": "ssn:hasInput",
-    "hasOutput": "ssn:hasOutput",
-    "hasSubSystem": "ssn:hasSubSystem",
-    "deployedSystem": "ssn:deployedSystem",
-    "hasDeployment": "ssn:hasDeployment",
-    "deployedOnPlatform": "ssn:deployedOnPlatform",
-    "inDeployment": "ssn:inDeployment",
-    "inCondition": "ssn:systems/inCondition",
-    "hasSystemCapability": "ssn:systems/hasSystemCapability",
-    "hasSystemProperty": "ssn:systems/hasSystemProperty",
-    "hasOperatingRange": "ssn:systems/hasOperatingRange",
-    "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
-    "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
-    "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
-    "qualityOfObservation": "ssn:systems/qualityOfObservation",
-    "hasMember": "sosa:hasMember",
-    "geojson": "https://purl.org/geojson/vocab#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn": "http://www.w3.org/ns/ssn/",
-    "ssn-system": "ssn:systems/"
-  }
-}
-```
-
-You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld</a>
 
 # References
 
