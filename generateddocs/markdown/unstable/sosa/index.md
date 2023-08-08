@@ -54,7 +54,7 @@ anyOf:
   description: SOSA Observation Feature
   type: object
   allOf:
-  - $ref: ../../geo/json-fg/feature/schema.yaml
+  - $ref: ../../geo/json-fg/feature-lenient/schema.yaml
   - type: object
     properties:
       properties:
@@ -149,7 +149,7 @@ anyOf:
 - $schema: https://json-schema.org/draft/2020-12/schema
   description: SOSA Observation Feature
   allOf:
-  - $ref: ../../geo/json-fg/featureCollection/schema.yaml
+  - $ref: ../../geo/json-fg/featureCollection-lenient/schema.yaml
   - type: object
     properties:
       properties:
@@ -489,6 +489,184 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "resultTime": "sosa:resultTime",
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "observedProperty": "sosa:observedProperty",
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "hasResult": "sosa:hasResult",
+    "hasSimpleResult": "sosa:hasSimpleResult",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "observes": {
+      "@id": "sosa:observes",
+      "@type": "@id"
+    },
+    "isObservedBy": {
+      "@id": "sosa:isObservedBy",
+      "@type": "@id"
+    },
+    "madeObservation": {
+      "@id": "sosa:madeObservation",
+      "@type": "@id"
+    },
+    "actsOnProperty": {
+      "@id": "sosa:actsOnProperty",
+      "@type": "@id"
+    },
+    "isActedOnBy": {
+      "@id": "sosa:isActedOnBy",
+      "@type": "@id"
+    },
+    "madeActuation": {
+      "@id": "sosa:madeActuation",
+      "@type": "@id"
+    },
+    "madeByActuator": {
+      "@id": "sosa:madeByActuator",
+      "@type": "@id"
+    },
+    "hasSample": {
+      "@id": "sosa:hasSample",
+      "@type": "@id"
+    },
+    "isSampleOf": {
+      "@id": "sosa:isSampleOf",
+      "@type": "@id"
+    },
+    "madeSampling": {
+      "@id": "sosa:madeSampling",
+      "@type": "@id"
+    },
+    "madeBySampler": {
+      "@id": "sosa:madeBySampler",
+      "@type": "@id"
+    },
+    "isFeatureOfInterestOf": {
+      "@id": "sosa:isFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "isResultOf": "sosa:isResultOf",
+    "hosts": {
+      "@id": "sosa:hosts",
+      "@type": "@id"
+    },
+    "isHostedBy": "sosa:isHostedBy",
+    "isProxyFor": "ssn:isProxyFor",
+    "wasOriginatedBy": "ssn:wasOriginatedBy",
+    "detects": "ssn:detects",
+    "hasProperty": "ssn:hasProperty",
+    "isPropertyOf": "ssn:isPropertyOf",
+    "forProperty": "ssn:forProperty",
+    "implements": "ssn:implements",
+    "implementedBy": "ssn:implementedBy",
+    "hasInput": "ssn:hasInput",
+    "hasOutput": "ssn:hasOutput",
+    "hasSubSystem": "ssn:hasSubSystem",
+    "deployedSystem": "ssn:deployedSystem",
+    "hasDeployment": "ssn:hasDeployment",
+    "deployedOnPlatform": "ssn:deployedOnPlatform",
+    "inDeployment": "ssn:inDeployment",
+    "inCondition": "ssn:systems/inCondition",
+    "hasSystemCapability": "ssn:systems/hasSystemCapability",
+    "hasSystemProperty": "ssn:systems/hasSystemProperty",
+    "hasOperatingRange": "ssn:systems/hasOperatingRange",
+    "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
+    "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
+    "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
+    "qualityOfObservation": "ssn:systems/qualityOfObservation",
+    "hasMember": "sosa:hasMember",
+    "features": {
+      "@id": "sosa:hasMember",
+      "@container": "@set",
+      "@context": {
+        "features": {
+          "@container": "@set",
+          "@id": "sosa:hasMember"
+        }
+      }
+    },
+    "position": {
+      "@id": "geopose:position",
+      "@context": {
+        "lat": "geo:lat",
+        "lon": "geo:long",
+        "h": "geopose:h"
+      }
+    },
+    "angles": {
+      "@id": "geopose:angles",
+      "@context": {
+        "yaw": "geopose:yaw",
+        "pitch": "geopose:pitch",
+        "roll": "geopose:roll"
+      }
+    },
+    "distance": {
+      "@id": "http://example.com/properties/distance",
+      "@type": "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "type": "@type",
+    "id": "@id",
+    "properties": "geojson:properties",
+    "geometry": {
+      "@id": "geojson:geometry",
+      "@context": {}
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "links": {
+      "@id": "rdfs:seeAlso",
+      "@context": {
+        "href": "@id",
+        "title": "rdfs:label"
+      }
+    },
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "ssn-system": "ssn:systems/",
+    "geopose": "http://example.com/geopose/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld)
 
 ## Sources
 

@@ -1,8 +1,26 @@
 === Files ===
 Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
 === End Files ===
 
 === JSON Schema ===
 Validation passed
 === End JSON Schema ===
+
+=== SHACL ===
+Using SHACL files for validation:
+ - unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl
+Validation Report
+Conforms: True
+
+Focus nodes:
+ - Shape <http://example.com/rules#testGeometryCoordinatesIsList>: _:N086265d7507542e5b4978cff0666c00d
+ - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>: <http://www.example.com/features/vector-obs-1>
+ - Shape <http://example.com/rules#testGeometryHasCoordinates>: _:N086265d7507542e5b4978cff0666c00d
+ - Shape _:nea6afb69929447dabc7b731b46e3cb07b3 (path https://purl.org/geojson/vocab#geometry): *none*
+ - Shape _:nea6afb69929447dabc7b731b46e3cb07b1 (path https://purl.org/geojson/vocab#coordinates): *none*
+
+=== End SHACL ===
 
