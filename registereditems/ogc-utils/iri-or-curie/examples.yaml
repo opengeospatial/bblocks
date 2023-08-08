@@ -1,0 +1,36 @@
+- title: Example HTTP URI
+  snippets:
+    - language: json
+      code: '"http://www.example.org/roles/myRoles?param=value#fragment"'
+
+- title: Example ISBN URN
+  snippets:
+    - language: json
+      code: '"urn:isbn:9780387359731"'
+
+- title: Example Dublin Core CURIE
+  snippets:
+    - language: json
+      code: '"dc:creator"'
+
+- title: Example local part
+  snippets:
+    - language: json
+      code: '"relative-ref"'
+
+- title: Example local part (fragment only)
+  snippets:
+    - language: json
+      code: '"#same-document-ref"'
+
+- title: Multiple IRIs or CURIEs
+  snippets:
+    - language: json
+      code: |
+        [
+          "urn:isbn:9780387359731",
+          "http://www.example.org/roles/myRoles?param=value#fragment",
+          "#same-document-ref",
+          "another-document#ref"
+        ]
+      schema-ref: '#/$defs/Multiple'
