@@ -114,6 +114,96 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.geo.common.parameters.bbox",
+      "name": "bbox",
+      "abstract": "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).",
+      "status": "stable",
+      "dateTimeAddition": "2022-05-24T13:51:38+00:00",
+      "itemClass": "parameter",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2022-05-24",
+      "sources": [
+        {
+          "title": "OGC API - Features, Part 1, 7.15.3: Parameter bbox",
+          "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "geo",
+      "group": "Common",
+      "shaclRules": [],
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json"
+      },
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/parameters/bbox/"
+        }
+      },
+      "@type": [
+        "bblocks:Parameter",
+        "skos:Concept"
+      ]
+    },
+    {
+      "name": "bbox-crs",
+      "abstract": "The bbox-crs query parameter can be used to assert the coordinate reference system that is used for the coordinate values of the bbox parameter.",
+      "status": "stable",
+      "dateTimeAddition": "2022-07-05T01:01:01+02:00",
+      "itemClass": "parameter",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2022-07-05",
+      "sources": [
+        {
+          "title": "OGC API - Features, Part 2, 6.3.1: Parameter bbox-crs",
+          "link": "http://www.opengis.net/doc/IS/ogcapi-features-2/1.0#_parameter_bbox_crs"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "geo",
+      "group": "Common",
+      "itemIdentifier": "ogc.geo.common.parameters.bbox-crs",
+      "shaclRules": [],
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json"
+      },
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox-crs/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox-crs/index.md"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/parameters/bbox-crs/"
+        }
+      },
+      "@type": [
+        "bblocks:Parameter",
+        "skos:Concept"
+      ]
+    },
+    {
       "name": "JSON Link",
       "abstract": "Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API\u2019s.",
       "status": "stable",
@@ -155,6 +245,198 @@
       },
       "@type": [
         "bblocks:Schema",
+        "skos:Concept"
+      ]
+    },
+    {
+      "name": "GeoPose Advanced",
+      "abstract": "Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-07-13T00:00:00+00:00",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2023-07-13",
+      "sources": [
+        {
+          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
+          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
+        }
+      ],
+      "maturity": "proposal",
+      "scope": "geo",
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.json"
+      },
+      "group": "GeoPose",
+      "itemIdentifier": "ogc.geo.geopose.advanced",
+      "shaclRules": [],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/context.jsonld",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/advanced/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/advanced/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/advanced/index.md"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/advanced/"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept"
+      ]
+    },
+    {
+      "name": "GeoPose Basic-Quaternion",
+      "abstract": "Basic GeoPose using quaternion to specify orientation",
+      "status": "under-development",
+      "dateTimeAddition": "2023-07-13T00:00:00+00:00",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2023-07-13",
+      "sources": [
+        {
+          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
+          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
+        }
+      ],
+      "maturity": "proposal",
+      "scope": "geo",
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.json"
+      },
+      "group": "GeoPose",
+      "itemIdentifier": "ogc.geo.geopose.basic.quaternion",
+      "shaclRules": [],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/context.jsonld",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/quaternion/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/quaternion/index.md"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic/quaternion/"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept"
+      ]
+    },
+    {
+      "name": "GeoPose Basic-YPR",
+      "abstract": "Basic GeoPose using yaw, pitch, and roll to specify orientation",
+      "status": "under-development",
+      "dateTimeAddition": "2023-03-15T00:00:00+00:00",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2023-07-13",
+      "sources": [
+        {
+          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
+          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
+        }
+      ],
+      "maturity": "proposal",
+      "scope": "geo",
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json"
+      },
+      "group": "GeoPose",
+      "itemIdentifier": "ogc.geo.geopose.basic.ypr",
+      "shaclRules": [],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/geopose/basic/ypr/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/ypr/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/ypr/index.md"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic/ypr/"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept"
+      ]
+    },
+    {
+      "name": "IRI or CURIE",
+      "abstract": "This Building Block defines a data type for a full IRI/URI or a CURIE (with or without a prefix)",
+      "status": "stable",
+      "dateTimeAddition": "2023-08-08T00:00:00+00:00",
+      "itemClass": "datatype",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2023-03-09",
+      "sources": [
+        {
+          "title": "IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax",
+          "link": "https://www.ietf.org/rfc/rfc3986.txt"
+        },
+        {
+          "title": "IETF RFC 3987 - Internationalized Resource Identifiers (IRIs)",
+          "link": "https://www.ietf.org/rfc/rfc3987.txt"
+        },
+        {
+          "title": "CURIE Syntax 1.0",
+          "link": "https://www.w3.org/TR/curie/"
+        }
+      ],
+      "scope": "geo",
+      "group": "Common",
+      "itemIdentifier": "ogc.ogc-utils.iri-or-curie",
+      "shaclRules": [],
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+      },
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/iri-or-curie/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/iri-or-curie/index.md"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/ogc-utils/iri-or-curie/"
+        }
+      },
+      "@type": [
+        "bblocks:Datatype",
         "skos:Concept"
       ]
     },
@@ -205,53 +487,6 @@
         "slate": {
           "mediatype": "text/html",
           "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observation/"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept"
-      ]
-    },
-    {
-      "name": "GeoPose Basic-YPR",
-      "abstract": "Basic GeoPose using yaw, pitch, and roll to specify orientation",
-      "status": "under-development",
-      "dateTimeAddition": "2023-03-15T00:00:00+00:00",
-      "itemClass": "schema",
-      "register": "ogc-building-block-register",
-      "version": "0.1",
-      "dateOfLastChange": "2023-07-13",
-      "sources": [
-        {
-          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
-          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
-        }
-      ],
-      "maturity": "proposal",
-      "scope": "geo",
-      "schema": {
-        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml",
-        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json"
-      },
-      "group": "GeoPose",
-      "itemIdentifier": "ogc.geo.geopose.basic.ypr",
-      "shaclRules": [],
-      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
-      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/geopose/basic/ypr/",
-      "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/ypr/index.json"
-        },
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/ypr/index.md"
-        },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic/ypr/"
         }
       },
       "@type": [
@@ -403,8 +638,8 @@
       "itemIdentifier": "ogc.geo.features.feature",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.geo.common.data_types.geojson",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.common.data_types.geojson"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
@@ -450,8 +685,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
-        "ogc.geo.geopose.basic.ypr"
+        "ogc.geo.geopose.basic.ypr",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",
@@ -713,9 +948,9 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.examples.vectorObservation"
+        "ogc.unstable.sosa.examples.vectorObservation",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",
@@ -787,8 +1022,8 @@
       "itemIdentifier": "ogc.unstable.sosa.features.observationCollection",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observationCollection",
         "ogc.unstable.sosa.features.observation",
+        "ogc.unstable.sosa.properties.observationCollection",
         "ogc.geo.json-fg.featureCollection"
       ],
       "schema": {
@@ -815,6 +1050,59 @@
       },
       "@type": [
         "bblocks:Schema",
+        "skos:Concept"
+      ]
+    },
+    {
+      "name": "Sensor, Observation, Sample, and Actuator (SOSA)",
+      "abstract": "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-13T00:00:00Z",
+      "itemClass": "api",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2023-04-13",
+      "sources": [
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "sosa",
+        "ssn",
+        "o&m",
+        "o&m&s"
+      ],
+      "superBBlock": true,
+      "group": "SOSA",
+      "itemIdentifier": "ogc.unstable.sosa",
+      "shaclRules": [],
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json"
+      },
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld",
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/"
+        }
+      },
+      "@type": [
+        "bblocks:Api",
         "skos:Concept"
       ]
     }
