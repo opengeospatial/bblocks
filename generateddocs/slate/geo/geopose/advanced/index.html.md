@@ -123,7 +123,8 @@ Links to the schema:
       }
     },
     "geopose": "http://example.com/geopose/",
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "@version": 1.1
   }
 }
 ```

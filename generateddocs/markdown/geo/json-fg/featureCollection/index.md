@@ -76,6 +76,25 @@ Links to the schema:
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
+    "geojson": "https://purl.org/geojson/vocab#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld)
+
 ## Sources
 
 * [OGC Testbed-17: OGC Features and Geometries JSON Engineering Report](http://docs.ogc.org/per/21-017r1.html)

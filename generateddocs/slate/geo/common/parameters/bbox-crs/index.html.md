@@ -82,6 +82,20 @@ Links to the schema:
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml</a>
 * JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json</a>
 
+
+# JSON-LD Context
+
+```json--ldContext
+{
+  "@context": {
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/context.jsonld</a>
+
 # References
 
 * [OGC API - Features, Part 2, 6.3.1: Parameter bbox-crs](http://www.opengis.net/doc/IS/ogcapi-features-2/1.0#_parameter_bbox_crs)

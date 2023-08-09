@@ -124,6 +124,20 @@ Links to the schema:
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml</a>
 * JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json</a>
 
+
+# JSON-LD Context
+
+```json--ldContext
+{
+  "@context": {
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld</a>
+
 # References
 
 * [OGC API - Features, Part 1, 7.15.3: Parameter bbox](https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox)

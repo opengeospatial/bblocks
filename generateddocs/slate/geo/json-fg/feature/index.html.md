@@ -127,6 +127,46 @@ Links to the schema:
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml</a>
 * JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json</a>
 
+
+# JSON-LD Context
+
+```json--ldContext
+{
+  "@context": {
+    "type": "@type",
+    "id": "@id",
+    "geometry": "geojson:geometry",
+    "properties": "geojson:properties",
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
+    "geojson": "https://purl.org/geojson/vocab#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld</a>
+
 # References
 
 * [OGC Testbed-17: OGC Features and Geometries JSON Engineering Report](http://docs.ogc.org/per/21-017r1.html)

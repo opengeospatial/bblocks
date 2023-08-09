@@ -137,6 +137,7 @@
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json"
       },
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
       "validationPassed": true,
       "documentation": {
@@ -182,6 +183,7 @@
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json"
       },
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/",
       "validationPassed": true,
       "documentation": {
@@ -410,6 +412,7 @@
       "group": "JSON-FG",
       "itemIdentifier": "ogc.geo.json-fg.feature",
       "shaclRules": [],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/",
       "validationPassed": true,
       "documentation": {
@@ -454,6 +457,7 @@
       "group": "JSON-FG",
       "itemIdentifier": "ogc.geo.json-fg.featureCollection",
       "shaclRules": [],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/",
       "validationPassed": true,
       "documentation": {
@@ -506,6 +510,7 @@
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
       },
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/",
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/",
@@ -681,6 +686,7 @@
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json"
       },
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/",
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/",
@@ -1044,9 +1050,9 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.examples.vectorObservation",
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.unstable.sosa.examples.vectorObservation"
       ],
       "tags": [
         "sosa",

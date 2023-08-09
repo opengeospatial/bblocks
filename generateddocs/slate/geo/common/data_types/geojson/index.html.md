@@ -504,7 +504,8 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "geojson": "https://purl.org/geojson/vocab#"
+    "geojson": "https://purl.org/geojson/vocab#",
+    "@version": 1.1
   }
 }
 ```

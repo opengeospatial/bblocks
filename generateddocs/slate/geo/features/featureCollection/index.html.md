@@ -114,7 +114,8 @@ Links to the schema:
       }
     },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "geojson": "https://purl.org/geojson/vocab#"
+    "geojson": "https://purl.org/geojson/vocab#",
+    "@version": 1.1
   }
 }
 ```

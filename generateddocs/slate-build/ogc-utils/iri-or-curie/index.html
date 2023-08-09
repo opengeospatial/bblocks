@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="ogc-utils ogc-utils_iri-or-curie ogc-utils_iri-or-curie_index" data-languages="[&quot;plaintext&quot;,&quot;json&quot;]">
+  <body class="ogc-utils ogc-utils_iri-or-curie ogc-utils_iri-or-curie_index" data-languages="[&quot;plaintext&quot;,&quot;json&quot;,&quot;jsonld&quot;,&quot;ttl&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -306,6 +306,8 @@
         <div class="lang-selector">
               <a href="#" data-language-name="plaintext">Plain text</a>
               <a href="#" data-language-name="json">JSON</a>
+              <a href="#" data-language-name="jsonld">JSON-LD</a>
+              <a href="#" data-language-name="ttl">RDF/Turtle</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -345,6 +347,9 @@
             <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
           </li>
           <li>
+            <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
+          </li>
+          <li>
             <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
           </li>
           <li>
@@ -382,15 +387,45 @@ of scoped names that map to URIs.</p>
 <p>The &quot;IRI-or-CURIE&quot; building block defines a data type representing either an IRI or a CURIE (with or without a prefix).</p>
 <h1 id='examples'>Examples</h1><h2 id='example-http-uri'>Example HTTP URI</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>http://www.example.org/roles/myRoles?param=value#fragment
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"http://www.example.org/roles/myRoles?param=value#fragment"</span><span class="w">
-</span></code></pre></div><h2 id='example-isbn-urn'>Example ISBN URN</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
+  "@graph": "http://www.example.org/roles/myRoles?param=value#fragment"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+
+</code></pre></div><h2 id='example-isbn-urn'>Example ISBN URN</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"urn:isbn:9780387359731"</span><span class="w">
-</span></code></pre></div><h2 id='example-dublin-core-curie'>Example Dublin Core CURIE</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>dc:creator
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
+  "@graph": "urn:isbn:9780387359731"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+
+</code></pre></div><h2 id='example-dublin-core-curie'>Example Dublin Core CURIE</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>dc:creator
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"dc:creator"</span><span class="w">
-</span></code></pre></div><h2 id='example-local-part'>Example local part</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>relative-ref
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
+  "@graph": "dc:creator"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+
+</code></pre></div><h2 id='example-local-part'>Example local part</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>relative-ref
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"relative-ref"</span><span class="w">
-</span></code></pre></div><h2 id='example-local-part-fragment-only'>Example local part (fragment only)</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>#same-document-ref
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
+  "@graph": "relative-ref"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+
+</code></pre></div><h2 id='example-local-part-fragment-only'>Example local part (fragment only)</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>#same-document-ref
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"#same-document-ref"</span><span class="w">
-</span></code></pre></div><h2 id='multiple-iris-or-curies'>Multiple IRIs or CURIEs</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
+  "@graph": "#same-document-ref"
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+
+</code></pre></div><h2 id='multiple-iris-or-curies'>Multiple IRIs or CURIEs</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
 http://www.example.org/roles/myRoles?param=value#fragment
 #same-document-ref
 another-document#ref
@@ -402,7 +437,18 @@ another-document#ref
   </span><span class="s2">"another-document#ref"</span><span class="w">
 </span><span class="p">]</span><span class="w">
 
-</span></code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
+</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
+  "@graph": [
+    "urn:isbn:9780387359731",
+    "http://www.example.org/roles/myRoles?param=value#fragment",
+    "#same-document-ref",
+    "another-document#ref"
+  ]
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+
+</code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">IRI or CURIE</span>
 <span class="na">$defs</span><span class="pi">:</span>
   <span class="na">IRI</span><span class="pi">:</span>
@@ -442,6 +488,14 @@ another-document#ref
 <li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml</a></li>
 <li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json</a></li>
 </ul>
+<h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld</a></p>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="https://www.ietf.org/rfc/rfc3986.txt">IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax</a></li>
@@ -461,6 +515,8 @@ another-document#ref
           <div class="lang-selector">
                 <a href="#" data-language-name="plaintext">Plain text</a>
                 <a href="#" data-language-name="json">JSON</a>
+                <a href="#" data-language-name="jsonld">JSON-LD</a>
+                <a href="#" data-language-name="ttl">RDF/Turtle</a>
           </div>
       </div>
     </div>

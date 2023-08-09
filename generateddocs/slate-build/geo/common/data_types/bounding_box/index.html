@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="geo geo_common geo_common_data_types geo_common_data_types_bounding_box geo_common_data_types_bounding_box_index" data-languages="[&quot;json&quot;,&quot;plaintext&quot;]">
+  <body class="geo geo_common geo_common_data_types geo_common_data_types_bounding_box geo_common_data_types_bounding_box_index" data-languages="[&quot;json&quot;,&quot;plaintext&quot;,&quot;jsonld&quot;,&quot;ttl&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -306,6 +306,8 @@
         <div class="lang-selector">
               <a href="#" data-language-name="json">JSON</a>
               <a href="#" data-language-name="plaintext">Plain text</a>
+              <a href="#" data-language-name="jsonld">JSON-LD</a>
+              <a href="#" data-language-name="ttl">RDF/Turtle</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -328,6 +330,9 @@
           </li>
           <li>
             <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
+          </li>
+          <li>
+            <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
           </li>
           <li>
             <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
@@ -381,6 +386,17 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 <p>The text representation of a bounding box is based on the JSON representation and represents the array as comma-separated values.</p>
 <h1 id='examples'>Examples</h1><h2 id='axis-aligned-minimum-bounding-box-of-the-48-contiguous-states-of-the-united-states-of-america-json'>Axis-aligned minimum bounding box of the 48 contiguous states of the United States of America (JSON)</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="mf">-124.7844079</span><span class="p">,</span><span class="w"> </span><span class="mf">24.7433195</span><span class="p">,</span><span class="w"> </span><span class="mf">-66.9513812</span><span class="p">,</span><span class="w"> </span><span class="mf">49.3457868</span><span class="p">]</span><span class="w">
 </span></code></pre></div><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>-124.7844079,24.7433195,-66.9513812,49.3457868
+</code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld",
+  "@graph": [
+    -124.7844079,
+    24.7433195,
+    -66.9513812,
+    49.3457868
+  ]
+}
+</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+
 </code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
 <span class="na">oneOf</span><span class="pi">:</span>
 <span class="pi">-</span> <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
@@ -397,6 +413,14 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 <li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml</a></li>
 <li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json</a></li>
 </ul>
+<h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld</a></p>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4">OGC API - Features, Part 1, 7.13.2: Feature Collections Response</a></li>
@@ -414,6 +438,8 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
           <div class="lang-selector">
                 <a href="#" data-language-name="json">JSON</a>
                 <a href="#" data-language-name="plaintext">Plain text</a>
+                <a href="#" data-language-name="jsonld">JSON-LD</a>
+                <a href="#" data-language-name="ttl">RDF/Turtle</a>
           </div>
       </div>
     </div>

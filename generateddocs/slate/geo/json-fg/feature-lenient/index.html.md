@@ -149,7 +149,8 @@ Links to the schema:
       "@id": "geojson:coordinates"
     },
     "geojson": "https://purl.org/geojson/vocab#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "@version": 1.1
   }
 }
 ```
