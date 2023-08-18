@@ -5,7 +5,7 @@ language_tabs:
   - json: JSON
   - plaintext: Plain text
   - jsonld: JSON-LD
-  - ttl: RDF/Turtle
+  - turtle: RDF/Turtle
 
 toc_footers:
   - Version 1.0.1
@@ -61,13 +61,21 @@ The text representation of a bounding box is based on the JSON representation an
 
 ## Axis-aligned minimum bounding box of the 48 contiguous states of the United States of America (JSON)
 
+
 ```json
 [-124.7844079, 24.7433195, -66.9513812, 49.3457868]
 ```
 
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%5B-124.7844079%2C+24.7433195%2C+-66.9513812%2C+49.3457868%5D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
 ```plaintext
 -124.7844079,24.7433195,-66.9513812,49.3457868
 ```
+
 
 ```jsonld
 {
@@ -81,7 +89,13 @@ The text representation of a bounding box is based on the JSON representation an
 }
 ```
 
-```ttl
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fcontext.jsonld%22%2C%0A++%22%40graph%22%3A+%5B%0A++++-124.7844079%2C%0A++++24.7433195%2C%0A++++-66.9513812%2C%0A++++49.3457868%0A++%5D%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+
+
+
+```turtle
 
 
 ```
@@ -101,6 +115,8 @@ items:
 
 ```
 
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=type%3A+array%0AoneOf%3A%0A-+minItems%3A+4%0A++maxItems%3A+4%0A-+minItems%3A+6%0A++maxItems%3A+6%0Aitems%3A%0A++type%3A+number%0A">View on YAML Viewer</a>
+
 Links to the schema:
 
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml</a>
@@ -117,6 +133,8 @@ Links to the schema:
 }
 ```
 
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a>
+
 You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld</a>
 
@@ -129,5 +147,6 @@ You can find the full JSON-LD context here:
 The source code for this Building Block can be found in the following repository:
 
 * URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a>
-* Path: `registereditems/geo/common/data_types/bounding_box`
+* Path:
+<code><a href="https://github.com/opengeospatial/bblocks/blob/HEAD/registereditems/geo/common/data_types/bounding_box" target="_blank">registereditems/geo/common/data_types/bounding_box</a></code>
 

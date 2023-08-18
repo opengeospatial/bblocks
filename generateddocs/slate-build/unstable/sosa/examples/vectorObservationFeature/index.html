@@ -285,7 +285,7 @@
   color: #859900;
 }
     </style>
-    <link href="../../../../stylesheets/screen-c95bb399.css" rel="stylesheet" media="screen" />
+    <link href="../../../../stylesheets/screen-89c74da2.css" rel="stylesheet" media="screen" />
     <link href="../../../../stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
       <script src="../../../../javascripts/all-0c8314cb.js"></script>
 
@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="unstable unstable_sosa unstable_sosa_examples unstable_sosa_examples_vectorObservationFeature unstable_sosa_examples_vectorObservationFeature_index" data-languages="[&quot;json&quot;,&quot;jsonld&quot;,&quot;ttl&quot;]">
+  <body class="unstable unstable_sosa unstable_sosa_examples unstable_sosa_examples_vectorObservationFeature unstable_sosa_examples_vectorObservationFeature_index" data-languages="[&quot;json&quot;,&quot;jsonld&quot;,&quot;turtle&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -306,7 +306,7 @@
         <div class="lang-selector">
               <a href="#" data-language-name="json">JSON</a>
               <a href="#" data-language-name="jsonld">JSON-LD</a>
-              <a href="#" data-language-name="ttl">RDF/Turtle</a>
+              <a href="#" data-language-name="turtle">RDF/Turtle</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -396,60 +396,68 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
-  "@id": "vector-obs-1",
-  "type": "Feature",
-  "geometry": {
-    "type": "LineString",
-    "coordinates": [
-      [
-        -111.67183507997295,
-        40.056709946862874
-      ],
-      [
-        -111.67183507997295,
-        40.056709946862874
-      ]
-    ]
-  },
-  "time": null,
-  "place": null,
-  "properties": {
-    "hasFeatureOfInterest": "eg:Traverse-P1-P2",
-    "resultTime": "2023-05-22T16:41:00+2",
-    "hasResult": {
-      "pose": {
-        "position": {
-          "lat": -111.67183507997295,
-          "lon": 40.056709946862874,
-          "h": 0.5
-        },
-        "angles": {
-          "yaw": 15.35,
-          "pitch": -0.01,
-          "roll": 0
-        }
-      },
-      "distance": 6889234.2
-    }
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld"
-}
-</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>@prefix geojson: &lt;https://purl.org/geojson/vocab#&gt; .
-@prefix ns1: &lt;http://example.com/properties/&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix sosa: &lt;http://www.w3.org/ns/sosa/&gt; .
-@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%7B%0A++%22%40id%22%3A+%22vector-obs-1%22%2C%0A++%22type%22%3A%22Feature%22%2C%0A++%22geometry%22%3A%7B%0A++++%22type%22%3A%22LineString%22%2C%0A++++%22coordinates%22%3A%5B%0A++++++%5B%0A++++++++-111.67183507997295%2C%0A++++++++40.056709946862874%0A++++++%5D%2C%0A++++++%5B%0A++++++++-111.67183507997295%2C%0A++++++++40.056709946862874%0A++++++%5D%0A++++%5D%0A++%7D%2C%0A++%22time%22%3Anull%2C%0A++%22place%22%3Anull%2C%0A++%22properties%22%3A%7B%0A++++%22hasFeatureOfInterest%22%3A%22eg%3ATraverse-P1-P2%22%2C%0A++++%22resultTime%22%3A%222023-05-22T16%3A41%3A00%2B2%22%2C%0A++++%22hasResult%22%3A%7B%0A++++++%22pose%22%3A%7B%0A++++++++%22position%22%3A%7B%0A++++++++++%22lat%22%3A-111.67183507997295%2C%0A++++++++++%22lon%22%3A40.056709946862874%2C%0A++++++++++%22h%22%3A0.5%0A++++++++%7D%2C%0A++++++++%22angles%22%3A%7B%0A++++++++++%22yaw%22%3A15.35%2C%0A++++++++++%22pitch%22%3A-0.01%2C%0A++++++++++%22roll%22%3A0%0A++++++++%7D%0A++++++%7D%2C%0A++++++%22distance%22%3A6889234.2%0A++++%7D%0A++%7D%0A%7D%0A">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vector-obs-1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="mf">-111.67183507997295</span><span class="p">,</span><span class="w">
+        </span><span class="mf">40.056709946862874</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="mf">-111.67183507997295</span><span class="p">,</span><span class="w">
+        </span><span class="mf">40.056709946862874</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eg:Traverse-P1-P2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-05-22T16:41:00+2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"pose"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">-111.67183507997295</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"lon"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.056709946862874</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"h"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"angles"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"yaw"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.35</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"pitch"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.01</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"roll"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mf">6889234.2</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40id%22%3A+%22vector-obs-1%22%2C%0A++%22type%22%3A+%22Feature%22%2C%0A++%22geometry%22%3A+%7B%0A++++%22type%22%3A+%22LineString%22%2C%0A++++%22coordinates%22%3A+%5B%0A++++++%5B%0A++++++++-111.67183507997295%2C%0A++++++++40.056709946862874%0A++++++%5D%2C%0A++++++%5B%0A++++++++-111.67183507997295%2C%0A++++++++40.056709946862874%0A++++++%5D%0A++++%5D%0A++%7D%2C%0A++%22time%22%3A+null%2C%0A++%22place%22%3A+null%2C%0A++%22properties%22%3A+%7B%0A++++%22hasFeatureOfInterest%22%3A+%22eg%3ATraverse-P1-P2%22%2C%0A++++%22resultTime%22%3A+%222023-05-22T16%3A41%3A00%2B2%22%2C%0A++++%22hasResult%22%3A+%7B%0A++++++%22pose%22%3A+%7B%0A++++++++%22position%22%3A+%7B%0A++++++++++%22lat%22%3A+-111.67183507997295%2C%0A++++++++++%22lon%22%3A+40.056709946862874%2C%0A++++++++++%22h%22%3A+0.5%0A++++++++%7D%2C%0A++++++++%22angles%22%3A+%7B%0A++++++++++%22yaw%22%3A+15.35%2C%0A++++++++++%22pitch%22%3A+-0.01%2C%0A++++++++++%22roll%22%3A+0%0A++++++++%7D%0A++++++%7D%2C%0A++++++%22distance%22%3A+6889234.2%0A++++%7D%0A++%7D%2C%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Funstable%2Fsosa%2Fexamples%2FvectorObservationFeature%2Fcontext.jsonld%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">geojson:</span><span class="w"> </span><span class="nl">&lt;https://purl.org/geojson/vocab#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">ns1:</span><span class="w"> </span><span class="nl">&lt;http://example.com/properties/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sosa:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/ns/sosa/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 
-&lt;http://www.example.com/features/vector-obs-1&gt; a geojson:Feature ;
-    sosa:hasFeatureOfInterest &lt;eg:Traverse-P1-P2&gt; ;
-    sosa:hasResult [ ns1:distance "6889234.2"^^xsd:float ] ;
-    sosa:resultTime "2023-05-22T16:41:00+2" ;
-    geojson:geometry [ a geojson:LineString ;
-            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.116718e+02 4.005671e+01 ) ) ] .
+</span><span class="nl">&lt;http://www.example.com/features/vector-obs-1&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Feature</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasFeatureOfInterest</span><span class="w"> </span><span class="nl">&lt;eg:Traverse-P1-P2&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasResult</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">ns1:</span><span class="n">distance</span><span class="w"> </span><span class="s">"6889234.2"</span><span class="p">^^</span><span class="nn">xsd:</span><span class="n">float</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2023-05-22T16:41:00+2"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">LineString</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-1.1</span><span class="mi">16718</span><span class="n">e+02</span><span class="w"> </span><span class="mf">4.0</span><span class="mi">05671</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-1.1</span><span class="mi">16718</span><span class="n">e+02</span><span class="w"> </span><span class="mf">4.0</span><span class="mi">05671</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 
-</code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
+</span></code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">Example SOSA Vector Observation</span>
 <span class="na">allOf</span><span class="pi">:</span>
 <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../features/observation/schema.yaml</span>
@@ -459,6 +467,10 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
       <span class="na">$ref</span><span class="pi">:</span> <span class="s">../vectorObservation/schema.yaml</span>
 
 </code></pre></div>
+<blockquote>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=%24schema%3A+https%3A%2F%2Fjson-schema.org%2Fdraft%2F2020-12%2Fschema%0Adescription%3A+Example+SOSA+Vector+Observation%0AallOf%3A%0A-+%24ref%3A+..%2F..%2Ffeatures%2Fobservation%2Fschema.yaml%0A-+type%3A+object%0A++properties%3A%0A++++properties%3A%0A++++++%24ref%3A+..%2FvectorObservation%2Fschema.yaml%0A">View on YAML Viewer</a></p>
+</blockquote>
+
 <p>Links to the schema:</p>
 
 <ul>
@@ -637,6 +649,10 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
+<blockquote>
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22type%22%3A+%22%40type%22%2C%0A++++%22id%22%3A+%22%40id%22%2C%0A++++%22properties%22%3A+%7B%0A++++++%22%40id%22%3A+%22%40nest%22%2C%0A++++++%22%40context%22%3A+%7B%0A++++++++%22features%22%3A+%22sosa%3AhasMember%22%2C%0A++++++++%22properties%22%3A+%22%40nest%22%0A++++++%7D%0A++++%7D%2C%0A++++%22geometry%22%3A+%7B%0A++++++%22%40id%22%3A+%22geojson%3Ageometry%22%2C%0A++++++%22%40context%22%3A+%7B%7D%0A++++%7D%2C%0A++++%22bbox%22%3A+%7B%0A++++++%22%40container%22%3A+%22%40list%22%2C%0A++++++%22%40id%22%3A+%22geojson%3Abbox%22%0A++++%7D%2C%0A++++%22Feature%22%3A+%22geojson%3AFeature%22%2C%0A++++%22FeatureCollection%22%3A+%22geojson%3AFeatureCollection%22%2C%0A++++%22GeometryCollection%22%3A+%22geojson%3AGeometryCollection%22%2C%0A++++%22LineString%22%3A+%22geojson%3ALineString%22%2C%0A++++%22MultiLineString%22%3A+%22geojson%3AMultiLineString%22%2C%0A++++%22MultiPoint%22%3A+%22geojson%3AMultiPoint%22%2C%0A++++%22MultiPolygon%22%3A+%22geojson%3AMultiPolygon%22%2C%0A++++%22Point%22%3A+%22geojson%3APoint%22%2C%0A++++%22Polygon%22%3A+%22geojson%3APolygon%22%2C%0A++++%22features%22%3A+%7B%0A++++++%22%40container%22%3A+%22%40set%22%2C%0A++++++%22%40id%22%3A+%22sosa%3AhasMember%22%0A++++%7D%2C%0A++++%22links%22%3A+%7B%0A++++++%22%40id%22%3A+%22rdfs%3AseeAlso%22%2C%0A++++++%22%40context%22%3A+%7B%0A++++++++%22href%22%3A+%22%40id%22%2C%0A++++++++%22title%22%3A+%22rdfs%3Alabel%22%0A++++++%7D%0A++++%7D%2C%0A++++%22coordinates%22%3A+%7B%0A++++++%22%40container%22%3A+%22%40list%22%2C%0A++++++%22%40id%22%3A+%22geojson%3Acoordinates%22%0A++++%7D%2C%0A++++%22Observation%22%3A+%22sosa%3AObservation%22%2C%0A++++%22Sample%22%3A+%22sosa%3ASample%22%2C%0A++++%22observedProperty%22%3A+%22sosa%3AobservedProperty%22%2C%0A++++%22phenomenonTime%22%3A+%22sosa%3AphenomenonTime%22%2C%0A++++%22observes%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3Aobserves%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22isObservedBy%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AisObservedBy%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22madeObservation%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AmadeObservation%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22madeBySensor%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AmadeBySensor%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22actsOnProperty%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AactsOnProperty%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22isActedOnBy%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AisActedOnBy%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22madeActuation%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AmadeActuation%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22madeByActuator%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AmadeByActuator%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22hasSample%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AhasSample%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22isSampleOf%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AisSampleOf%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22madeSampling%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AmadeSampling%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22madeBySampler%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AmadeBySampler%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22hasFeatureOfInterest%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AhasFeatureOfInterest%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22isFeatureOfInterestOf%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AisFeatureOfInterestOf%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22hasResult%22%3A+%22sosa%3AhasResult%22%2C%0A++++%22isResultOf%22%3A+%22sosa%3AisResultOf%22%2C%0A++++%22hasSimpleResult%22%3A+%22sosa%3AhasSimpleResult%22%2C%0A++++%22resultTime%22%3A+%22sosa%3AresultTime%22%2C%0A++++%22usedProcedure%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3AusedProcedure%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22hosts%22%3A+%7B%0A++++++%22%40id%22%3A+%22sosa%3Ahosts%22%2C%0A++++++%22%40type%22%3A+%22%40id%22%0A++++%7D%2C%0A++++%22isHostedBy%22%3A+%22sosa%3AisHostedBy%22%2C%0A++++%22isProxyFor%22%3A+%22ssn%3AisProxyFor%22%2C%0A++++%22wasOriginatedBy%22%3A+%22ssn%3AwasOriginatedBy%22%2C%0A++++%22detects%22%3A+%22ssn%3Adetects%22%2C%0A++++%22hasProperty%22%3A+%22ssn%3AhasProperty%22%2C%0A++++%22isPropertyOf%22%3A+%22ssn%3AisPropertyOf%22%2C%0A++++%22forProperty%22%3A+%22ssn%3AforProperty%22%2C%0A++++%22implements%22%3A+%22ssn%3Aimplements%22%2C%0A++++%22implementedBy%22%3A+%22ssn%3AimplementedBy%22%2C%0A++++%22hasInput%22%3A+%22ssn%3AhasInput%22%2C%0A++++%22hasOutput%22%3A+%22ssn%3AhasOutput%22%2C%0A++++%22hasSubSystem%22%3A+%22ssn%3AhasSubSystem%22%2C%0A++++%22deployedSystem%22%3A+%22ssn%3AdeployedSystem%22%2C%0A++++%22hasDeployment%22%3A+%22ssn%3AhasDeployment%22%2C%0A++++%22deployedOnPlatform%22%3A+%22ssn%3AdeployedOnPlatform%22%2C%0A++++%22inDeployment%22%3A+%22ssn%3AinDeployment%22%2C%0A++++%22inCondition%22%3A+%22ssn%3Asystems%2FinCondition%22%2C%0A++++%22hasSystemCapability%22%3A+%22ssn%3Asystems%2FhasSystemCapability%22%2C%0A++++%22hasSystemProperty%22%3A+%22ssn%3Asystems%2FhasSystemProperty%22%2C%0A++++%22hasOperatingRange%22%3A+%22ssn%3Asystems%2FhasOperatingRange%22%2C%0A++++%22hasOperatingProperty%22%3A+%22ssn%3Asystems%2FhasOperatingProperty%22%2C%0A++++%22hasSurvivalRange%22%3A+%22ssn%3Asystems%2FhasSurvivalRange%22%2C%0A++++%22hasSurvivalProperty%22%3A+%22ssn%3Asystems%2FhasSurvivalProperty%22%2C%0A++++%22qualityOfObservation%22%3A+%22ssn%3Asystems%2FqualityOfObservation%22%2C%0A++++%22hasMember%22%3A+%22sosa%3AhasMember%22%2C%0A++++%22featureType%22%3A+%22%40type%22%2C%0A++++%22position%22%3A+%7B%0A++++++%22%40id%22%3A+%22geopose%3Aposition%22%2C%0A++++++%22%40context%22%3A+%7B%0A++++++++%22lat%22%3A+%22geo%3Alat%22%2C%0A++++++++%22lon%22%3A+%22geo%3Along%22%2C%0A++++++++%22h%22%3A+%22geopose%3Ah%22%0A++++++%7D%0A++++%7D%2C%0A++++%22angles%22%3A+%7B%0A++++++%22%40id%22%3A+%22geopose%3Aangles%22%2C%0A++++++%22%40context%22%3A+%7B%0A++++++++%22yaw%22%3A+%22geopose%3Ayaw%22%2C%0A++++++++%22pitch%22%3A+%22geopose%3Apitch%22%2C%0A++++++++%22roll%22%3A+%22geopose%3Aroll%22%0A++++++%7D%0A++++%7D%2C%0A++++%22distance%22%3A+%7B%0A++++++%22%40id%22%3A+%22http%3A%2F%2Fexample.com%2Fproperties%2Fdistance%22%2C%0A++++++%22%40type%22%3A+%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23float%22%0A++++%7D%2C%0A++++%22geojson%22%3A+%22https%3A%2F%2Fpurl.org%2Fgeojson%2Fvocab%23%22%2C%0A++++%22rdfs%22%3A+%22http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%22%2C%0A++++%22sosa%22%3A+%22http%3A%2F%2Fwww.w3.org%2Fns%2Fsosa%2F%22%2C%0A++++%22ssn%22%3A+%22http%3A%2F%2Fwww.w3.org%2Fns%2Fssn%2F%22%2C%0A++++%22ssn-system%22%3A+%22ssn%3Asystems%2F%22%2C%0A++++%22geopose%22%3A+%22http%3A%2F%2Fexample.com%2Fgeopose%2F%22%2C%0A++++%22geo%22%3A+%22http%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%22%2C%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+
 <p>You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld</a></p>
 <h1 id='references'>References</h1>
@@ -648,7 +664,8 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 
 <ul>
 <li>URL: <a href="https://github.com/opengeospatial/ogcapi-sosa" target="_blank">https://github.com/opengeospatial/ogcapi-sosa</a></li>
-<li>Path: <code>_sources/examples/vectorObservationFeature</code></li>
+<li>Path:
+<code><a href="https://github.com/opengeospatial/ogcapi-sosa/blob/HEAD/_sources/examples/vectorObservationFeature" target="_blank">_sources/examples/vectorObservationFeature</a></code></li>
 </ul>
 
       </div>
@@ -656,7 +673,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
           <div class="lang-selector">
                 <a href="#" data-language-name="json">JSON</a>
                 <a href="#" data-language-name="jsonld">JSON-LD</a>
-                <a href="#" data-language-name="ttl">RDF/Turtle</a>
+                <a href="#" data-language-name="turtle">RDF/Turtle</a>
           </div>
       </div>
     </div>

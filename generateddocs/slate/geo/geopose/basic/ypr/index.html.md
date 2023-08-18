@@ -4,7 +4,7 @@ title: GeoPose Basic-YPR (Schema)
 language_tabs:
   - json: JSON
   - jsonld: JSON-LD
-  - ttl: RDF/Turtle
+  - turtle: RDF/Turtle
 
 toc_footers:
   - Version 0.1
@@ -54,6 +54,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ## Example 1
 
+
 ```json
 {
   "position": {
@@ -69,6 +70,12 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 
 ```
+
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%7B%0A++%22position%22%3A+%7B%0A++++%22lat%22%3A+47.7%2C%0A++++%22lon%22%3A+-122.3%2C%0A++++%22h%22%3A+11.5%0A++%7D%2C%0A++%22angles%22%3A+%7B%0A++++%22yaw%22%3A+5.514456741060452%2C%0A++++%22pitch%22%3A+-0.43610515937237904%2C%0A++++%22roll%22%3A+0.0%0A++%7D%0A%7D%0A">View on JSON Viewer</a></p>
+</blockquote>
+
+
 
 ```jsonld
 {
@@ -86,7 +93,13 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 ```
 
-```ttl
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22position%22%3A+%7B%0A++++%22lat%22%3A+47.7%2C%0A++++%22lon%22%3A+-122.3%2C%0A++++%22h%22%3A+11.5%0A++%7D%2C%0A++%22angles%22%3A+%7B%0A++++%22yaw%22%3A+5.514456741060452%2C%0A++++%22pitch%22%3A+-0.43610515937237904%2C%0A++++%22roll%22%3A+0.0%0A++%7D%2C%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fcontext.jsonld%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+
+
+
+```turtle
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix geopose: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -104,6 +117,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ## Example 2
 
+
 ```json
 {
   "position": {
@@ -119,6 +133,12 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 
 ```
+
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%7B%0A++%22position%22%3A+%7B%0A++++%22lat%22%3A+47.7%2C%0A++++%22lon%22%3A+-122.3%2C%0A++++%22h%22%3A+11.5%0A++%7D%2C%0A++%22angles%22%3A+%7B%0A++++%22yaw%22%3A+5.518671098486835%2C%0A++++%22pitch%22%3A+-0.4381464123477409%2C%0A++++%22roll%22%3A+0.0%0A++%7D%0A%7D%0A">View on JSON Viewer</a></p>
+</blockquote>
+
+
 
 ```jsonld
 {
@@ -136,7 +156,13 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 ```
 
-```ttl
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22position%22%3A+%7B%0A++++%22lat%22%3A+47.7%2C%0A++++%22lon%22%3A+-122.3%2C%0A++++%22h%22%3A+11.5%0A++%7D%2C%0A++%22angles%22%3A+%7B%0A++++%22yaw%22%3A+5.518671098486835%2C%0A++++%22pitch%22%3A+-0.4381464123477409%2C%0A++++%22roll%22%3A+0.0%0A++%7D%2C%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fcontext.jsonld%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+
+
+
+```turtle
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix geopose: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -154,6 +180,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ## Example 3
 
+
 ```json
 {
   "position": {
@@ -169,6 +196,12 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 
 ```
+
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%7B%0A++%22position%22%3A+%7B%0A++++%22lat%22%3A+47.7%2C%0A++++%22lon%22%3A+-122.3%2C%0A++++%22h%22%3A+11.5%0A++%7D%2C%0A++%22angles%22%3A+%7B%0A++++%22yaw%22%3A+5.522894747595089%2C%0A++++%22pitch%22%3A+-0.4401787262476278%2C%0A++++%22roll%22%3A+0.0%0A++%7D%0A%7D%0A">View on JSON Viewer</a></p>
+</blockquote>
+
+
 
 ```jsonld
 {
@@ -186,7 +219,13 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 ```
 
-```ttl
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22position%22%3A+%7B%0A++++%22lat%22%3A+47.7%2C%0A++++%22lon%22%3A+-122.3%2C%0A++++%22h%22%3A+11.5%0A++%7D%2C%0A++%22angles%22%3A+%7B%0A++++%22yaw%22%3A+5.522894747595089%2C%0A++++%22pitch%22%3A+-0.4401787262476278%2C%0A++++%22roll%22%3A+0.0%0A++%7D%2C%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fcontext.jsonld%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+
+
+
+```turtle
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix geopose: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -204,6 +243,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 ## Example 4
 
+
 ```json
 {
   "position": {
@@ -219,6 +259,12 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 
 ```
+
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%7B%0A++%22position%22%3A+%7B%0A++++%22lat%22%3A+47.7%2C%0A++++%22lon%22%3A+-122.3%2C%0A++++%22h%22%3A+11.5%0A++%7D%2C%0A++%22angles%22%3A+%7B%0A++++%22yaw%22%3A+5.527127708845192%2C%0A++++%22pitch%22%3A+-0.44220204512692407%2C%0A++++%22roll%22%3A+0.0%0A++%7D%0A%7D%0A">View on JSON Viewer</a></p>
+</blockquote>
+
+
 
 ```jsonld
 {
@@ -236,7 +282,13 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 }
 ```
 
-```ttl
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22position%22%3A+%7B%0A++++%22lat%22%3A+47.7%2C%0A++++%22lon%22%3A+-122.3%2C%0A++++%22h%22%3A+11.5%0A++%7D%2C%0A++%22angles%22%3A+%7B%0A++++%22yaw%22%3A+5.527127708845192%2C%0A++++%22pitch%22%3A+-0.44220204512692407%2C%0A++++%22roll%22%3A+0.0%0A++%7D%2C%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fcontext.jsonld%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+
+
+
+```turtle
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix geopose: <http://example.com/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -307,6 +359,8 @@ $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.j
 
 ```
 
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=description%3A+%27Basic-YPR%3A+Basic+GeoPose+using+yaw%2C+pitch%2C+and+roll+to+specify+orientation%27%0Adefinitions%3A%0A++angles%3A%0A++++type%3A+object%0A++++properties%3A%0A++++++yaw%3A%0A++++++++type%3A+number%0A++++++++x-jsonld-id%3A+http%3A%2F%2Fexample.com%2Fgeopose%2Fyaw%0A++++++pitch%3A%0A++++++++type%3A+number%0A++++++++x-jsonld-id%3A+http%3A%2F%2Fexample.com%2Fgeopose%2Fpitch%0A++++++roll%3A%0A++++++++type%3A+number%0A++++++++x-jsonld-id%3A+http%3A%2F%2Fexample.com%2Fgeopose%2Froll%0A++++required%3A%0A++++-+yaw%0A++++-+pitch%0A++++-+roll%0A++Position%3A%0A++++type%3A+object%0A++++properties%3A%0A++++++lat%3A%0A++++++++type%3A+number%0A++++++++x-jsonld-id%3A+http%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23lat%0A++++++lon%3A%0A++++++++type%3A+number%0A++++++++x-jsonld-id%3A+http%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23long%0A++++++h%3A%0A++++++++type%3A+number%0A++++++++x-jsonld-id%3A+http%3A%2F%2Fexample.com%2Fgeopose%2Fh%0A++++required%3A%0A++++-+lat%0A++++-+lon%0A++++-+h%0Atype%3A+object%0Aproperties%3A%0A++position%3A%0A++++%24ref%3A+%27%23%2Fdefinitions%2FPosition%27%0A++++x-jsonld-id%3A+http%3A%2F%2Fexample.com%2Fgeopose%2Fposition%0A++angles%3A%0A++++%24ref%3A+%27%23%2Fdefinitions%2Fangles%27%0A++++x-jsonld-id%3A+http%3A%2F%2Fexample.com%2Fgeopose%2Fangles%0Arequired%3A%0A-+position%0A-+angles%0Ax-jsonld-prefixes%3A%0A++geopose%3A+http%3A%2F%2Fexample.com%2Fgeopose%2F%0A++geo%3A+http%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%0A%24id%3A+https%3A%2F%2Fschemas.opengis.net%2Fgeopose%2F1.0%2Fschemata%2FGeoPose.Basic.YPR.Schema.json%0A">View on YAML Viewer</a>
+
 Links to the schema:
 
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml</a>
@@ -341,6 +395,8 @@ Links to the schema:
 }
 ```
 
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22position%22%3A+%7B%0A++++++%22%40id%22%3A+%22geopose%3Aposition%22%2C%0A++++++%22%40context%22%3A+%7B%0A++++++++%22lat%22%3A+%22geo%3Alat%22%2C%0A++++++++%22lon%22%3A+%22geo%3Along%22%2C%0A++++++++%22h%22%3A+%22geopose%3Ah%22%0A++++++%7D%0A++++%7D%2C%0A++++%22angles%22%3A+%7B%0A++++++%22%40id%22%3A+%22geopose%3Aangles%22%2C%0A++++++%22%40context%22%3A+%7B%0A++++++++%22yaw%22%3A+%22geopose%3Ayaw%22%2C%0A++++++++%22pitch%22%3A+%22geopose%3Apitch%22%2C%0A++++++++%22roll%22%3A+%22geopose%3Aroll%22%0A++++++%7D%0A++++%7D%2C%0A++++%22geopose%22%3A+%22http%3A%2F%2Fexample.com%2Fgeopose%2F%22%2C%0A++++%22geo%22%3A+%22http%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%22%2C%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a>
+
 You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld</a>
 
@@ -353,5 +409,6 @@ You can find the full JSON-LD context here:
 The source code for this Building Block can be found in the following repository:
 
 * URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a>
-* Path: `registereditems/geo/geopose/basic/ypr`
+* Path:
+<code><a href="https://github.com/opengeospatial/bblocks/blob/HEAD/registereditems/geo/geopose/basic/ypr" target="_blank">registereditems/geo/geopose/basic/ypr</a></code>
 

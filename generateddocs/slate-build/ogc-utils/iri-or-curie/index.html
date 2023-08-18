@@ -285,7 +285,7 @@
   color: #859900;
 }
     </style>
-    <link href="../../stylesheets/screen-c95bb399.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/screen-89c74da2.css" rel="stylesheet" media="screen" />
     <link href="../../stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
       <script src="../../javascripts/all-0c8314cb.js"></script>
 
@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="ogc-utils ogc-utils_iri-or-curie ogc-utils_iri-or-curie_index" data-languages="[&quot;plaintext&quot;,&quot;json&quot;,&quot;jsonld&quot;,&quot;ttl&quot;]">
+  <body class="ogc-utils ogc-utils_iri-or-curie ogc-utils_iri-or-curie_index" data-languages="[&quot;plaintext&quot;,&quot;json&quot;,&quot;jsonld&quot;,&quot;turtle&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -307,7 +307,7 @@
               <a href="#" data-language-name="plaintext">Plain text</a>
               <a href="#" data-language-name="json">JSON</a>
               <a href="#" data-language-name="jsonld">JSON-LD</a>
-              <a href="#" data-language-name="ttl">RDF/Turtle</a>
+              <a href="#" data-language-name="turtle">RDF/Turtle</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -387,45 +387,85 @@ of scoped names that map to URIs.</p>
 <p>The &quot;IRI-or-CURIE&quot; building block defines a data type representing either an IRI or a CURIE (with or without a prefix).</p>
 <h1 id='examples'>Examples</h1><h2 id='example-http-uri'>Example HTTP URI</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>http://www.example.org/roles/myRoles?param=value#fragment
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"http://www.example.org/roles/myRoles?param=value#fragment"</span><span class="w">
-</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "http://www.example.org/roles/myRoles?param=value#fragment"
-}
-</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%22http%3A%2F%2Fwww.example.org%2Froles%2FmyRoles%3Fparam%3Dvalue%23fragment%22">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.example.org/roles/myRoles?param=value#fragment"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fogc-utils%2Firi-or-curie%2Fcontext.jsonld%22%2C%0A++%22%40graph%22%3A+%22http%3A%2F%2Fwww.example.org%2Froles%2FmyRoles%3Fparam%3Dvalue%23fragment%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="w">
 
-</code></pre></div><h2 id='example-isbn-urn'>Example ISBN URN</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
+</span></code></pre></div><h2 id='example-isbn-urn'>Example ISBN URN</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"urn:isbn:9780387359731"</span><span class="w">
-</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "urn:isbn:9780387359731"
-}
-</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%22urn%3Aisbn%3A9780387359731%22">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:isbn:9780387359731"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fogc-utils%2Firi-or-curie%2Fcontext.jsonld%22%2C%0A++%22%40graph%22%3A+%22urn%3Aisbn%3A9780387359731%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="w">
 
-</code></pre></div><h2 id='example-dublin-core-curie'>Example Dublin Core CURIE</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>dc:creator
+</span></code></pre></div><h2 id='example-dublin-core-curie'>Example Dublin Core CURIE</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>dc:creator
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"dc:creator"</span><span class="w">
-</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "dc:creator"
-}
-</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%22dc%3Acreator%22">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dc:creator"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fogc-utils%2Firi-or-curie%2Fcontext.jsonld%22%2C%0A++%22%40graph%22%3A+%22dc%3Acreator%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="w">
 
-</code></pre></div><h2 id='example-local-part'>Example local part</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>relative-ref
+</span></code></pre></div><h2 id='example-local-part'>Example local part</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>relative-ref
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"relative-ref"</span><span class="w">
-</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "relative-ref"
-}
-</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%22relative-ref%22">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="s2">"relative-ref"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fogc-utils%2Firi-or-curie%2Fcontext.jsonld%22%2C%0A++%22%40graph%22%3A+%22relative-ref%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="w">
 
-</code></pre></div><h2 id='example-local-part-fragment-only'>Example local part (fragment only)</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>#same-document-ref
+</span></code></pre></div><h2 id='example-local-part-fragment-only'>Example local part (fragment only)</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>#same-document-ref
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"#same-document-ref"</span><span class="w">
-</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "#same-document-ref"
-}
-</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%22%23same-document-ref%22">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#same-document-ref"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fogc-utils%2Firi-or-curie%2Fcontext.jsonld%22%2C%0A++%22%40graph%22%3A+%22%23same-document-ref%22%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="w">
 
-</code></pre></div><h2 id='multiple-iris-or-curies'>Multiple IRIs or CURIEs</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
+</span></code></pre></div><h2 id='multiple-iris-or-curies'>Multiple IRIs or CURIEs</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>urn:isbn:9780387359731
 http://www.example.org/roles/myRoles?param=value#fragment
 #same-document-ref
 another-document#ref
@@ -437,18 +477,26 @@ another-document#ref
   </span><span class="s2">"another-document#ref"</span><span class="w">
 </span><span class="p">]</span><span class="w">
 
-</span></code></pre></div><div class="highlight"><pre class="highlight jsonld tab-jsonld"><code>{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": [
-    "urn:isbn:9780387359731",
-    "http://www.example.org/roles/myRoles?param=value#fragment",
-    "#same-document-ref",
-    "another-document#ref"
-  ]
-}
-</code></pre></div><div class="highlight"><pre class="highlight ttl tab-ttl"><code>
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%5B%0A++%22urn%3Aisbn%3A9780387359731%22%2C%0A++%22http%3A%2F%2Fwww.example.org%2Froles%2FmyRoles%3Fparam%3Dvalue%23fragment%22%2C%0A++%22%23same-document-ref%22%2C%0A++%22another-document%23ref%22%0A%5D%0A">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"urn:isbn:9780387359731"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"http://www.example.org/roles/myRoles?param=value#fragment"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"#same-document-ref"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"another-document#ref"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fogc-utils%2Firi-or-curie%2Fcontext.jsonld%22%2C%0A++%22%40graph%22%3A+%5B%0A++++%22urn%3Aisbn%3A9780387359731%22%2C%0A++++%22http%3A%2F%2Fwww.example.org%2Froles%2FmyRoles%3Fparam%3Dvalue%23fragment%22%2C%0A++++%22%23same-document-ref%22%2C%0A++++%22another-document%23ref%22%0A++%5D%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="w">
 
-</code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
+</span></code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">IRI or CURIE</span>
 <span class="na">$defs</span><span class="pi">:</span>
   <span class="na">IRI</span><span class="pi">:</span>
@@ -482,6 +530,10 @@ another-document#ref
 <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/Single'</span>
 
 </code></pre></div>
+<blockquote>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=%24schema%3A+https%3A%2F%2Fjson-schema.org%2Fdraft%2F2020-12%2Fschema%0Adescription%3A+IRI+or+CURIE%0A%24defs%3A%0A++IRI%3A%0A++++type%3A+string%0A++++pattern%3A+%5E%5Cw%2B%3A%28%5C%2F%3F%5C%2F%3F%29%5B%5E%5Cs%5D%2B%24%0A++CURIE%3A%0A++++type%3A+string%0A++++pattern%3A+%5E%5BA-Za-z_%5D%5B%5E%5Cs%3A%5D%2A%3A.%2A%24%0A++LocalPart%3A%0A++++type%3A+string%0A++++pattern%3A+%5E%5B%5E%3A%5D%2A%28%5C%3F.%2A%29%3F%28%23.%2A%29%3F%24%0A++Single%3A%0A++++anyOf%3A%0A++++-+%24ref%3A+%27%23%2F%24defs%2FIRI%27%0A++++-+%24ref%3A+%27%23%2F%24defs%2FCURIE%27%0A++++-+%24ref%3A+%27%23%2F%24defs%2FLocalPart%27%0A++Multiple%3A%0A++++oneOf%3A%0A++++-+%24ref%3A+%27%23%2F%24defs%2FSingle%27%0A++++-+type%3A+array%0A++++++items%3A%0A++++++++%24ref%3A+%27%23%2F%24defs%2FSingle%27%0A++MultipleOrObject%3A%0A++++oneOf%3A%0A++++-+%24ref%3A+%27%23%2F%24defs%2FMultiple%27%0A++++-+type%3A+object%0A++MultipleOrObjectOrNull%3A%0A++++oneOf%3A%0A++++-+%24ref%3A+%27%23%2F%24defs%2FMultipleOrObject%27%0A++++-+type%3A+%27null%27%0A%24ref%3A+%27%23%2F%24defs%2FSingle%27%0A">View on YAML Viewer</a></p>
+</blockquote>
+
 <p>Links to the schema:</p>
 
 <ul>
@@ -494,6 +546,10 @@ another-document#ref
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
+<blockquote>
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a></p>
+</blockquote>
+
 <p>You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld</a></p>
 <h1 id='references'>References</h1>
@@ -507,7 +563,8 @@ another-document#ref
 
 <ul>
 <li>URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a></li>
-<li>Path: <code>registereditems/ogc-utils/iri-or-curie</code></li>
+<li>Path:
+<code><a href="https://github.com/opengeospatial/bblocks/blob/HEAD/registereditems/ogc-utils/iri-or-curie" target="_blank">registereditems/ogc-utils/iri-or-curie</a></code></li>
 </ul>
 
       </div>
@@ -516,7 +573,7 @@ another-document#ref
                 <a href="#" data-language-name="plaintext">Plain text</a>
                 <a href="#" data-language-name="json">JSON</a>
                 <a href="#" data-language-name="jsonld">JSON-LD</a>
-                <a href="#" data-language-name="ttl">RDF/Turtle</a>
+                <a href="#" data-language-name="turtle">RDF/Turtle</a>
           </div>
       </div>
     </div>

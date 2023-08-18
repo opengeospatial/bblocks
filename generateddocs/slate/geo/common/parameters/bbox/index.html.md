@@ -68,11 +68,13 @@ geometry property is used to determine the spatial extent or all relevant geomet
 
 ## Using a bounding box parameter in a request
 
+
 ```shell
 curl \
 "https://demo.pygeoapi.io/master/collections/lakes/items?\
 bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"
 ```
+
 
 ```python
 import urllib.parse
@@ -87,6 +89,7 @@ contents = urllib.request.urlopen(url)
 
 print(contents.read())
 ```
+
 
 ```javascript
 bbox = [-124.7844079,24.7433195,-66.9513812,49.3457868];
@@ -119,6 +122,8 @@ schema:
 
 ```
 
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=name%3A+bbox%0Ain%3A+query%0Arequired%3A+false%0Astyle%3A+form%0Aexplode%3A+false%0Aschema%3A%0A++type%3A+array%0A++oneOf%3A%0A++-+minItems%3A+4%0A++++maxItems%3A+4%0A++-+minItems%3A+6%0A++++maxItems%3A+6%0A++items%3A%0A++++type%3A+number%0A">View on YAML Viewer</a>
+
 Links to the schema:
 
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml</a>
@@ -135,6 +140,8 @@ Links to the schema:
 }
 ```
 
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a>
+
 You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld</a>
 
@@ -147,5 +154,6 @@ You can find the full JSON-LD context here:
 The source code for this Building Block can be found in the following repository:
 
 * URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a>
-* Path: `registereditems/geo/common/parameters/bbox`
+* Path:
+<code><a href="https://github.com/opengeospatial/bblocks/blob/HEAD/registereditems/geo/common/parameters/bbox" target="_blank">registereditems/geo/common/parameters/bbox</a></code>
 

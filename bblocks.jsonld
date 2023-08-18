@@ -61,6 +61,10 @@
     },
     "hasConcepts": {
       "@reverse": "skos:inScheme"
+    },
+    "dependsOn": {
+      "@id": "bblocks:dependsOn",
+      "@type": "@id"
     }
   },
   "@id": "https://www.opengis.net/def/bblocks",
@@ -734,8 +738,8 @@
       "itemIdentifier": "ogc.geo.features.feature",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.common.data_types.geojson"
+        "ogc.geo.common.data_types.geojson",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
@@ -781,8 +785,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
-        "ogc.geo.geopose.basic.ypr"
+        "ogc.geo.geopose.basic.ypr",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",
@@ -992,8 +996,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
-        "ogc.geo.json-fg.feature-lenient"
+        "ogc.geo.json-fg.feature-lenient",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",
@@ -1050,9 +1054,9 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.features.observation",
+        "ogc.unstable.sosa.examples.vectorObservation",
         "ogc.unstable.sosa.properties.observation",
-        "ogc.unstable.sosa.examples.vectorObservation"
+        "ogc.unstable.sosa.features.observation"
       ],
       "tags": [
         "sosa",
@@ -1126,8 +1130,8 @@
       "itemIdentifier": "ogc.unstable.sosa.features.observationCollection",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observationCollection",
         "ogc.unstable.sosa.features.observation",
+        "ogc.unstable.sosa.properties.observationCollection",
         "ogc.geo.json-fg.featureCollection-lenient"
       ],
       "schema": {

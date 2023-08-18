@@ -44,6 +44,7 @@ without height and WGS 84 longitude-latitude-height for coordinates with height.
 The coordinates in the following bounding box are in the coordinate reference system ETRS89 / UTM zone 32N that is used, for example, in Germany.
 
 
+
 ```python
 import urllib.parse
 import urllib.request
@@ -77,6 +78,8 @@ explode: false
 
 ```
 
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=name%3A+bbox-crs%0Ain%3A+query%0Arequired%3A+false%0Aschema%3A%0A++type%3A+string%0A++format%3A+uri%0Astyle%3A+form%0Aexplode%3A+false%0A">View on YAML Viewer</a>
+
 Links to the schema:
 
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml</a>
@@ -93,6 +96,8 @@ Links to the schema:
 }
 ```
 
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a>
+
 You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/context.jsonld</a>
 
@@ -105,5 +110,6 @@ You can find the full JSON-LD context here:
 The source code for this Building Block can be found in the following repository:
 
 * URL: <a href="https://github.com/opengeospatial/bblocks" target="_blank">https://github.com/opengeospatial/bblocks</a>
-* Path: `registereditems/geo/common/parameters/bbox-crs`
+* Path:
+<code><a href="https://github.com/opengeospatial/bblocks/blob/HEAD/registereditems/geo/common/parameters/bbox-crs" target="_blank">registereditems/geo/common/parameters/bbox-crs</a></code>
 
