@@ -122,7 +122,7 @@ schema:
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=name%3A+bbox%0Ain%3A+query%0Arequired%3A+false%0Astyle%3A+form%0Aexplode%3A+false%0Aschema%3A%0A++type%3A+array%0A++oneOf%3A%0A++-+minItems%3A+4%0A++++maxItems%3A+4%0A++-+minItems%3A+6%0A++++maxItems%3A+6%0A++items%3A%0A++++type%3A+number%0A">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fparameters%2Fbbox%2Fschema.yaml">View on YAML Viewer</a>
 
 Links to the schema:
 
@@ -140,7 +140,7 @@ Links to the schema:
 }
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fparameters%2Fbbox%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/context.jsonld</a>

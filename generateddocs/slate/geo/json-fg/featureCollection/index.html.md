@@ -93,7 +93,7 @@ x-jsonld-prefixes:
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=%24schema%3A+https%3A%2F%2Fjson-schema.org%2Fdraft%2F2019-09%2Fschema%0A%24id%3A+https%3A%2F%2Fbeta.schemas.opengis.net%2Fjson-fg%2Ffeaturecollection.json%0Atitle%3A+a+JSON-FG+Feature+Collection%0Adescription%3A+This+JSON+Schema+is+part+of+JSON-FG+version+0.1.1%0Atype%3A+object%0Arequired%3A%0A-+type%0A-+features%0Aproperties%3A%0A++type%3A%0A++++type%3A+string%0A++++enum%3A%0A++++-+FeatureCollection%0A++featureType%3A%0A++++%24ref%3A+featuretype.json%0A++geometryDimension%3A%0A++++type%3A+integer%0A++++minimum%3A+0%0A++++maximum%3A+3%0A++coordRefSys%3A%0A++++%24ref%3A+coordrefsys.json%0A++links%3A%0A++++type%3A+array%0A++++items%3A%0A++++++%24ref%3A+link.json%0A++features%3A%0A++++type%3A+array%0A++++items%3A%0A++++++%24ref%3A+feature.json%0A++++x-jsonld-container%3A+%27%40set%27%0A++++x-jsonld-id%3A+https%3A%2F%2Fpurl.org%2Fgeojson%2Fvocab%23features%0Ax-jsonld-prefixes%3A%0A++geojson%3A+https%3A%2F%2Fpurl.org%2Fgeojson%2Fvocab%23%0A">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fschema.yaml">View on YAML Viewer</a>
 
 Links to the schema:
 
@@ -116,7 +116,7 @@ Links to the schema:
 }
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22features%22%3A+%7B%0A++++++%22%40container%22%3A+%22%40set%22%2C%0A++++++%22%40id%22%3A+%22geojson%3Afeatures%22%0A++++%7D%2C%0A++++%22geojson%22%3A+%22https%3A%2F%2Fpurl.org%2Fgeojson%2Fvocab%23%22%2C%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld</a>

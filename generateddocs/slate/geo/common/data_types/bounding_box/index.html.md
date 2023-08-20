@@ -67,7 +67,7 @@ The text representation of a bounding box is based on the JSON representation an
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;data=%5B-124.7844079%2C+24.7433195%2C+-66.9513812%2C+49.3457868%5D">View on JSON Viewer</a></p>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fexample_1_1.json">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -90,7 +90,7 @@ The text representation of a bounding box is based on the JSON representation an
 ```
 
 <blockquote class="lang-specific jsonld">
-<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%22https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fcontext.jsonld%22%2C%0A++%22%40graph%22%3A+%5B%0A++++-124.7844079%2C%0A++++24.7433195%2C%0A++++-66.9513812%2C%0A++++49.3457868%0A++%5D%0A%7D">View on JSON-LD Playground</a></p>
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fexample_1_1.jsonld">View on JSON-LD Playground</a></p>
 </blockquote>
 
 
@@ -115,7 +115,7 @@ items:
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;data=type%3A+array%0AoneOf%3A%0A-+minItems%3A+4%0A++maxItems%3A+4%0A-+minItems%3A+6%0A++maxItems%3A+6%0Aitems%3A%0A++type%3A+number%0A">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fschema.yaml">View on YAML Viewer</a>
 
 Links to the schema:
 
@@ -133,7 +133,7 @@ Links to the schema:
 }
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=%7B%0A++%22%40context%22%3A+%7B%0A++++%22%40version%22%3A+1.1%0A++%7D%0A%7D">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
 <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld</a>
