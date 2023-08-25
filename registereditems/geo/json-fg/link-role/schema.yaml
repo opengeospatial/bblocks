@@ -1,0 +1,15 @@
+description: annotated link with role and conformance
+$defs:
+  coderef:
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
+  coderefs:
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie#/$defs/MultipleOrObjectOrNull
+allOf:
+- $ref: bblocks://ogc.ogc-utils.json-link
+- properties:
+    role:
+      $ref: "#/$defs/coderef"
+    conformsTo:
+      $ref: "#/$defs/coderefs"
+  required:
+  - role

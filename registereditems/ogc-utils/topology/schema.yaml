@@ -1,0 +1,12 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: feature with geometry by reference
+properties:
+  type:
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
+  references:
+    type: array
+    items:
+      $ref: bblocks://ogc.ogc-utils.iri-or-curie
+required:
+  - references
+  - type
