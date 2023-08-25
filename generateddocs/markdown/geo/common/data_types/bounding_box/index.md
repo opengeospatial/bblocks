@@ -43,25 +43,6 @@ The text representation of a bounding box is based on the JSON representation an
 -124.7844079,24.7433195,-66.9513812,49.3457868
 ```
 
-#### jsonld
-```jsonld
-{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld",
-  "@graph": [
-    -124.7844079,
-    24.7433195,
-    -66.9513812,
-    49.3457868
-  ]
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
 ## Schema
 
 ```yaml
@@ -80,20 +61,6 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml)
-
-
-# JSON-LD Context
-
-```jsonld
-{
-  "@context": {
-    "@version": 1.1
-  }
-}
-```
-
-You can find the full JSON-LD context here:
-[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld)
 
 ## Sources
 

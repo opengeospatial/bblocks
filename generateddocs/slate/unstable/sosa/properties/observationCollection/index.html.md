@@ -43,6 +43,7 @@ Collection of one or more observations, whose members share a common value for o
 ## Example of SOSA ObservationCollection
 
 
+
 ```json
 { 
   "hasMember": [
@@ -54,8 +55,9 @@ Collection of one or more observations, whose members share a common value for o
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Fproperties%2FobservationCollection%2Fexample_1_1.json">View on JSON Viewer</a></p>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Fproperties%2FobservationCollection%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
+
 
 
 
@@ -76,6 +78,7 @@ Collection of one or more observations, whose members share a common value for o
 
 
 
+
 ```turtle
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
@@ -88,6 +91,7 @@ Collection of one or more observations, whose members share a common value for o
 
 
 ## Example of SOSA ObservationCollection
+
 
 
 ```json
@@ -107,8 +111,9 @@ Collection of one or more observations, whose members share a common value for o
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Fproperties%2FobservationCollection%2Fexample_2_1.json">View on JSON Viewer</a></p>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Fproperties%2FobservationCollection%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
+
 
 
 
@@ -135,6 +140,7 @@ Collection of one or more observations, whose members share a common value for o
 
 
 
+
 ```turtle
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -152,6 +158,7 @@ Collection of one or more observations, whose members share a common value for o
 
 
 ## Turtle example of SOSA ObservationCollection
+
 
 
 ```turtle
@@ -302,7 +309,7 @@ x-jsonld-prefixes:
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Funstable%2Fsosa%2Fproperties%2FobservationCollection%2Fschema.yaml">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Funstable%2Fsosa%2Fproperties%2FobservationCollection%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
 
 Links to the schema:
 

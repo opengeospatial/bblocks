@@ -1,0 +1,37 @@
+{
+  "description": "annotated link with role and conformance",
+  "$defs": {
+    "coderef": {
+      "$ref": "../../../ogc-utils/iri-or-curie/schema.json"
+    },
+    "coderefs": {
+      "$ref": "../../../ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "../../../ogc-utils/json-link/schema.json"
+    },
+    {
+      "properties": {
+        "role": {
+          "$ref": "#/$defs/coderef",
+          "x-jsonld-id": "http://purl.org/dc/terms/role",
+          "x-jsonld-type": "@id"
+        },
+        "conformsTo": {
+          "$ref": "#/$defs/coderefs",
+          "x-jsonld-id": "http://purl.org/dc/terms/conformsTo",
+          "x-jsonld-type": "@id",
+          "x-jsonld-container": "@nest"
+        }
+      },
+      "required": [
+        "role"
+      ]
+    }
+  ],
+  "x-jsonld-prefixes": {
+    "dct": "http://purl.org/dc/terms/"
+  }
+}

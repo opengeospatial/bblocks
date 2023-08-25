@@ -30,20 +30,6 @@ http://www.example.org/roles/myRoles?param=value#fragment
 "http://www.example.org/roles/myRoles?param=value#fragment"
 ```
 
-#### jsonld
-```jsonld
-{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "http://www.example.org/roles/myRoles?param=value#fragment"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
 
 ### Example ISBN URN
 #### plaintext
@@ -54,20 +40,6 @@ urn:isbn:9780387359731
 #### json
 ```json
 "urn:isbn:9780387359731"
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "urn:isbn:9780387359731"
-}
-```
-
-#### ttl
-```ttl
-
-
 ```
 
 
@@ -82,20 +54,6 @@ dc:creator
 "dc:creator"
 ```
 
-#### jsonld
-```jsonld
-{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "dc:creator"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
 
 ### Example local part
 #### plaintext
@@ -108,20 +66,6 @@ relative-ref
 "relative-ref"
 ```
 
-#### jsonld
-```jsonld
-{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "relative-ref"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
 
 ### Example local part (fragment only)
 #### plaintext
@@ -132,20 +76,6 @@ relative-ref
 #### json
 ```json
 "#same-document-ref"
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": "#same-document-ref"
-}
-```
-
-#### ttl
-```ttl
-
-
 ```
 
 
@@ -167,25 +97,6 @@ another-document#ref
   "#same-document-ref",
   "another-document#ref"
 ]
-
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld",
-  "@graph": [
-    "urn:isbn:9780387359731",
-    "http://www.example.org/roles/myRoles?param=value#fragment",
-    "#same-document-ref",
-    "another-document#ref"
-  ]
-}
-```
-
-#### ttl
-```ttl
-
 
 ```
 
@@ -231,20 +142,6 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json)
 * JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml)
-
-
-# JSON-LD Context
-
-```jsonld
-{
-  "@context": {
-    "@version": 1.1
-  }
-}
-```
-
-You can find the full JSON-LD context here:
-[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/context.jsonld)
 
 ## Sources
 

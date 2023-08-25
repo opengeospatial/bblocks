@@ -55,6 +55,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ## Example 1
 
 
+
 ```json
 {
   "position": {
@@ -72,8 +73,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_1_1.json">View on JSON Viewer</a></p>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
+
 
 
 
@@ -99,6 +101,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 
 
+
 ```turtle
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix geopose: <http://example.com/geopose/> .
@@ -118,6 +121,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ## Example 2
 
 
+
 ```json
 {
   "position": {
@@ -135,8 +139,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_2_1.json">View on JSON Viewer</a></p>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
+
 
 
 
@@ -162,6 +167,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 
 
+
 ```turtle
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix geopose: <http://example.com/geopose/> .
@@ -181,6 +187,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ## Example 3
 
 
+
 ```json
 {
   "position": {
@@ -198,8 +205,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_3_1.json">View on JSON Viewer</a></p>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_3_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
+
 
 
 
@@ -225,6 +233,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 
 
+
 ```turtle
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix geopose: <http://example.com/geopose/> .
@@ -244,6 +253,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ## Example 4
 
 
+
 ```json
 {
   "position": {
@@ -261,8 +271,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_4_1.json">View on JSON Viewer</a></p>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_4_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
+
 
 
 
@@ -285,6 +296,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 <blockquote class="lang-specific jsonld">
 <p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_4_1.jsonld">View on JSON-LD Playground</a></p>
 </blockquote>
+
 
 
 
@@ -359,7 +371,7 @@ $id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.j
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fschema.yaml">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
 
 Links to the schema:
 

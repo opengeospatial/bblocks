@@ -1,0 +1,22 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: feature with geometry by reference
+properties:
+  type:
+    $ref: ../iri-or-curie/schema.yaml
+    x-jsonld-id: '@type'
+  references:
+    type: array
+    items:
+      $ref: ../iri-or-curie/schema.yaml
+    x-jsonld-id: https://purl.org/geojson/vocab#relatedFeatures
+    x-jsonld-type: '@id'
+    x-jsonld-container: '@list'
+required:
+- references
+- type
+x-jsonld-extra-terms:
+  csdm: https://linked.data.gov.au/def/csdm/
+  dct: http://purl.org/dc/terms/
+  LineString: https://purl.org/geojson/vocab#LineString
+x-jsonld-prefixes:
+  geojson: https://purl.org/geojson/vocab#
