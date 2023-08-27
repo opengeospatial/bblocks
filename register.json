@@ -610,8 +610,8 @@
     "itemIdentifier": "ogc.geo.features.feature",
     "shaclRules": [],
     "dependsOn": [
-      "ogc.ogc-utils.json-link",
-      "ogc.geo.common.data_types.geojson"
+      "ogc.geo.common.data_types.geojson",
+      "ogc.ogc-utils.json-link"
     ],
     "schema": {
       "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
@@ -632,6 +632,53 @@
       "slate": {
         "mediatype": "text/html",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/feature/"
+      }
+    }
+  },
+  {
+    "name": "Link with role and target conformance",
+    "abstract": "A JSON-FG compliant web link with mandatory annotation of link role and optional conformance information to describe target resource. Compliant with profile resource descriptor model.",
+    "status": "under-development",
+    "dateTimeAddition": "2023-08-21T00:00:00Z",
+    "itemClass": "schema",
+    "register": "ogc-building-block-register",
+    "version": "0.1",
+    "dateOfLastChange": "2023-08-21",
+    "sources": [],
+    "maturity": "development",
+    "scope": "unstable",
+    "tags": [
+      "json-fg",
+      "link",
+      "profile"
+    ],
+    "itemIdentifier": "ogc.geo.json-fg.link-role",
+    "shaclRules": [],
+    "dependsOn": [
+      "ogc.ogc-utils.iri-or-curie#/$defs/MultipleOrObjectOrNull",
+      "ogc.ogc-utils.iri-or-curie",
+      "ogc.ogc-utils.json-link"
+    ],
+    "schema": {
+      "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml",
+      "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json"
+    },
+    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
+    "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/",
+    "validationPassed": true,
+    "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/link-role/",
+    "documentation": {
+      "markdown": {
+        "mediatype": "text/markdown",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/link-role/index.md"
+      },
+      "json-full": {
+        "mediatype": "application/json",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/link-role/index.json"
+      },
+      "slate": {
+        "mediatype": "text/html",
+        "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/link-role/"
       }
     }
   },
@@ -678,53 +725,6 @@
       "slate": {
         "mediatype": "text/html",
         "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/ogc-utils/topology/"
-      }
-    }
-  },
-  {
-    "name": "Link with role and target conformance",
-    "abstract": "A JSON-FG compliant web link with mandatory annotation of link role and optional conformance information to describe target resource. Compliant with profile resource descriptor model.",
-    "status": "under-development",
-    "dateTimeAddition": "2023-08-21T00:00:00Z",
-    "itemClass": "schema",
-    "register": "ogc-building-block-register",
-    "version": "0.1",
-    "dateOfLastChange": "2023-08-21",
-    "sources": [],
-    "maturity": "development",
-    "scope": "unstable",
-    "tags": [
-      "json-fg",
-      "link",
-      "profile"
-    ],
-    "itemIdentifier": "ogc.geo.json-fg.link-role",
-    "shaclRules": [],
-    "dependsOn": [
-      "ogc.ogc-utils.json-link",
-      "ogc.ogc-utils.iri-or-curie",
-      "ogc.ogc-utils.iri-or-curie#/$defs/MultipleOrObjectOrNull"
-    ],
-    "schema": {
-      "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml",
-      "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json"
-    },
-    "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
-    "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/",
-    "validationPassed": true,
-    "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/link-role/",
-    "documentation": {
-      "markdown": {
-        "mediatype": "text/markdown",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/link-role/index.md"
-      },
-      "json-full": {
-        "mediatype": "application/json",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/link-role/index.json"
-      },
-      "slate": {
-        "mediatype": "text/html",
-        "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/link-role/"
       }
     }
   },
@@ -941,8 +941,8 @@
     "maturity": "development",
     "scope": "unstable",
     "dependsOn": [
-      "ogc.unstable.sosa.properties.observation",
-      "ogc.geo.json-fg.feature-lenient"
+      "ogc.geo.json-fg.feature-lenient",
+      "ogc.unstable.sosa.properties.observation"
     ],
     "tags": [
       "sosa",
@@ -995,9 +995,9 @@
     "maturity": "development",
     "scope": "unstable",
     "dependsOn": [
+      "ogc.unstable.sosa.examples.vectorObservation",
       "ogc.unstable.sosa.properties.observation",
-      "ogc.unstable.sosa.features.observation",
-      "ogc.unstable.sosa.examples.vectorObservation"
+      "ogc.unstable.sosa.features.observation"
     ],
     "tags": [
       "sosa",
@@ -1067,9 +1067,9 @@
     "itemIdentifier": "ogc.unstable.sosa.features.observationCollection",
     "shaclRules": [],
     "dependsOn": [
+      "ogc.geo.json-fg.featureCollection-lenient",
       "ogc.unstable.sosa.properties.observationCollection",
-      "ogc.unstable.sosa.features.observation",
-      "ogc.geo.json-fg.featureCollection-lenient"
+      "ogc.unstable.sosa.features.observation"
     ],
     "schema": {
       "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
