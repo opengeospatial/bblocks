@@ -19,4 +19,14 @@ allOf:
         maximum: 3
       coordRefSys:
         $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+      links:
+        type: array
+        items:
+          allOf:
+            - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+            - $ref: bblocks://ogc.ogc-utils.json-link
+      features:
+        type: array
+        items:
+          $ref: bblocks://ogc.geo.json-fg.feature
   - $ref: bblocks://ogc.geo.features.featureCollection
