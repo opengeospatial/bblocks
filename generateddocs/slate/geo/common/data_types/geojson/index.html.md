@@ -68,7 +68,7 @@ properties:
     oneOf:
     - type: 'null'
     - type: object
-    x-jsonld-id: https://purl.org/geojson/vocab#properties
+    x-jsonld-id: '@nest'
   geometry:
     oneOf:
     - type: 'null'
@@ -479,7 +479,7 @@ Links to the schema:
   "@context": {
     "type": "@type",
     "id": "@id",
-    "properties": "geojson:properties",
+    "properties": "@nest",
     "geometry": {
       "@id": "geojson:geometry",
       "@context": {

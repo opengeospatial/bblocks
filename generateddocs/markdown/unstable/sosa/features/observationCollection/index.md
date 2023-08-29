@@ -5,7 +5,7 @@
 
 This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Invalid
 
 ## Examples
 
@@ -258,25 +258,41 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "links": {
-      "@id": "rdfs:seeAlso",
+    "href": "oa:hasTarget",
+    "rel": {
+      "@id": "http://www.iana.org/assignments/relation",
+      "@type": "@id",
       "@context": {
-        "href": "@id",
-        "title": "rdfs:label"
+        "@base": "http://www.iana.org/assignments/relation/"
       }
     },
+    "type": "dct:type",
+    "hreflang": "dct:language",
+    "title": "rdfs:label",
+    "length": "dct:extent",
     "features": {
+      "@container": "@set",
       "@id": "sosa:hasMember",
       "@context": {
         "type": "@type",
         "id": "@id",
+        "links": {
+          "@id": "rdfs:seeAlso",
+          "@context": {
+            "rel": {
+              "@id": "http://www.iana.org/assignments/relation",
+              "@type": "@id",
+              "@context": {
+                "@base": {
+                  "@id": "http://www.iana.org/assignments/relation/"
+                }
+              }
+            }
+          }
+        },
         "geometry": {
           "@id": "geojson:geometry",
           "@context": {}
-        },
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
         },
         "Feature": "geojson:Feature",
         "FeatureCollection": "geojson:FeatureCollection",
@@ -287,15 +303,23 @@ Links to the schema:
         "MultiPolygon": "geojson:MultiPolygon",
         "Point": "geojson:Point",
         "Polygon": "geojson:Polygon",
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
         },
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
+        },
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
         }
       }
+    },
+    "links": {
+      "@id": "rdfs:seeAlso",
+      "@context": {}
     },
     "properties": {
       "@id": "@nest",
@@ -402,7 +426,9 @@ Links to the schema:
     "qualityOfObservation": "ssn:systems/qualityOfObservation",
     "hasMember": "sosa:hasMember",
     "featureType": "@type",
+    "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "geojson": "https://purl.org/geojson/vocab#",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",

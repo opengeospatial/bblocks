@@ -20,22 +20,30 @@ properties:
   href:
     type: string
     format: uri-reference
-    x-jsonld-id: '@id'
+    x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
   rel:
     type: string
+    x-jsonld-id: http://www.iana.org/assignments/relation
+    x-jsonld-type: '@id'
+    x-jsonld-base: http://www.iana.org/assignments/relation/
   anchor:
     type: string
   type:
     type: string
+    x-jsonld-id: http://purl.org/dc/terms/type
   hreflang:
     type: string
+    x-jsonld-id: http://purl.org/dc/terms/language
   title:
     type: string
     x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
   length:
     type: integer
+    x-jsonld-id: http://purl.org/dc/terms/extent
 x-jsonld-prefixes:
+  oa: http://www.w3.org/ns/oa#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
 
 ```
 
@@ -50,9 +58,21 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "href": "@id",
+    "href": "oa:hasTarget",
+    "rel": {
+      "@id": "http://www.iana.org/assignments/relation",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://www.iana.org/assignments/relation/"
+      }
+    },
+    "type": "dct:type",
+    "hreflang": "dct:language",
     "title": "rdfs:label",
+    "length": "dct:extent",
+    "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
 }

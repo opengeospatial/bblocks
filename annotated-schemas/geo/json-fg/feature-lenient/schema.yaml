@@ -21,7 +21,10 @@ allOf:
     links:
       type: array
       items:
-        $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        allOf:
+        - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        - $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     time:
       $ref: https://beta.schemas.opengis.net/json-fg/time.json
     coordRefSys:
@@ -35,7 +38,7 @@ allOf:
       oneOf:
       - type: 'null'
       - type: object
-      x-jsonld-id: https://purl.org/geojson/vocab#properties
+      x-jsonld-id: '@nest'
 x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
@@ -57,3 +60,4 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#

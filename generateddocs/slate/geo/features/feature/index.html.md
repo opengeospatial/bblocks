@@ -60,6 +60,8 @@ allOf:
   - type
   - geometry
   - properties
+x-jsonld-extra-terms:
+  properties: '@nest'
 x-jsonld-prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
 
@@ -80,7 +82,7 @@ Links to the schema:
   "@context": {
     "type": "@type",
     "id": "@id",
-    "properties": "geojson:properties",
+    "properties": "@nest",
     "geometry": {
       "@id": "geojson:geometry",
       "@context": {
@@ -110,12 +112,24 @@ Links to the schema:
     "links": {
       "@id": "rdfs:seeAlso",
       "@context": {
-        "href": "@id",
-        "title": "rdfs:label"
+        "href": "oa:hasTarget",
+        "rel": {
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id",
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          }
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
       }
     },
     "geojson": "https://purl.org/geojson/vocab#",
+    "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
 }

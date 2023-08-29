@@ -19,10 +19,18 @@ allOf:
       maximum: 3
     coordRefSys:
       $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+    links:
+      type: array
+      items:
+        allOf:
+        - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        - $ref: ../../../ogc-utils/json-link/schema.yaml
+    features:
+      type: array
+      items:
+        $ref: ../feature/schema.yaml
+      x-jsonld-container: '@set'
+      x-jsonld-id: https://purl.org/geojson/vocab#features
 - $ref: ../../features/featureCollection/schema.yaml
-x-jsonld-extra-terms:
-  features:
-    x-jsonld-container: '@set'
-    x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#

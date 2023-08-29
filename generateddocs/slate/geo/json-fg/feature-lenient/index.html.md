@@ -63,7 +63,10 @@ allOf:
     links:
       type: array
       items:
-        $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        allOf:
+        - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        - $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     time:
       $ref: https://beta.schemas.opengis.net/json-fg/time.json
     coordRefSys:
@@ -77,7 +80,7 @@ allOf:
       oneOf:
       - type: 'null'
       - type: object
-      x-jsonld-id: https://purl.org/geojson/vocab#properties
+      x-jsonld-id: '@nest'
 x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
@@ -99,6 +102,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
 
 ```
 
@@ -117,7 +121,7 @@ Links to the schema:
   "@context": {
     "type": "@type",
     "id": "@id",
-    "properties": "geojson:properties",
+    "properties": "@nest",
     "geometry": {
       "@id": "geojson:geometry",
       "@context": {}
@@ -142,8 +146,20 @@ Links to the schema:
     "links": {
       "@id": "rdfs:seeAlso",
       "@context": {
-        "href": "@id",
-        "title": "rdfs:label"
+        "href": "oa:hasTarget",
+        "rel": {
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id",
+          "@context": {
+            "@base": {
+              "@id": "http://www.iana.org/assignments/relation/"
+            }
+          }
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
       }
     },
     "coordinates": {
@@ -151,7 +167,9 @@ Links to the schema:
       "@id": "geojson:coordinates"
     },
     "geojson": "https://purl.org/geojson/vocab#",
+    "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
 }

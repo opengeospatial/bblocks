@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://beta.schemas.opengis.net/json-fg/feature.json",
   "title": "a JSON-FG Feature",
   "description": "This JSON Schema is part of JSON-FG version 0.1.1",
   "type": "object",
@@ -31,25 +30,33 @@
       "x-jsonld-id": "@id"
     },
     "featureType": {
-      "$ref": "featuretype.json"
+      "$ref": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
     },
     "links": {
       "type": "array",
       "items": {
-        "$ref": "link.json"
-      }
+        "allOf": [
+          {
+            "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
+          },
+          {
+            "$ref": "../../../ogc-utils/json-link/schema.json"
+          }
+        ]
+      },
+      "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
     },
     "time": {
-      "$ref": "time.json"
+      "$ref": "https://beta.schemas.opengis.net/json-fg/time.json"
     },
     "coordRefSys": {
-      "$ref": "coordrefsys.json"
+      "$ref": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
     },
     "place": {
-      "$ref": "place.json"
+      "$ref": "https://beta.schemas.opengis.net/json-fg/place.json"
     },
     "geometry": {
-      "$ref": "geometry.json",
+      "$ref": "https://beta.schemas.opengis.net/json-fg/geometry.json",
       "x-jsonld-id": "https://purl.org/geojson/vocab#geometry"
     },
     "properties": {
@@ -61,7 +68,7 @@
           "type": "object"
         }
       ],
-      "x-jsonld-id": "https://purl.org/geojson/vocab#properties"
+      "x-jsonld-id": "@nest"
     }
   },
   "x-jsonld-extra-terms": {
@@ -88,6 +95,7 @@
     }
   },
   "x-jsonld-prefixes": {
-    "geojson": "https://purl.org/geojson/vocab#"
+    "geojson": "https://purl.org/geojson/vocab#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
   }
 }

@@ -1,0 +1,65 @@
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'time' is a required property
+
+Failed validating 'required' in schema['allOf'][0]['allOf'][0]['properties']['features']['items']:
+    {'$schema': 'https://json-schema.org/draft/2019-09/schema',
+     'description': 'This JSON Schema is part of JSON-FG version 0.1.1',
+     'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json'},
+                    'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json'},
+                    'geometry': {'$ref': 'https://beta.schemas.opengis.net/json-fg/geometry.json',
+                                 'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},
+                    'id': {'oneOf': [{'type': 'number'},
+                                     {'type': 'string'}],
+                           'x-jsonld-id': '@id'},
+                    'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},
+                                                  {'$ref': '../../../ogc-utils/json-link/schema.yaml'}]},
+                              'type': 'array',
+                              'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},
+                    'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json'},
+                    'properties': {'oneOf': [{'type': 'null'},
+                                             {'type': 'object'}],
+                                   'x-jsonld-id': '@nest'},
+                    'time': {'$ref': 'https://beta.schemas.opengis.net/json-fg/time.json'},
+                    'type': {'enum': ['Feature'],
+                             'type': 'string',
+                             'x-jsonld-id': '@type'}},
+     'required': ['type', 'time', 'place', 'geometry', 'properties'],
+     'title': 'a JSON-FG Feature',
+     'type': 'object',
+     'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',
+                              'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',
+                              'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',
+                              'LineString': 'https://purl.org/geojson/vocab#LineString',
+                              'MultiLineString': 'https://purl.org/geojson/vocab#MultiLineString',
+                              'MultiPoint': 'https://purl.org/geojson/vocab#MultiPoint',
+                              'MultiPolygon': 'https://purl.org/geojson/vocab#MultiPolygon',
+                              'Point': 'https://purl.org/geojson/vocab#Point',
+                              'Polygon': 'https://purl.org/geojson/vocab#Polygon',
+                              'bbox': {'x-jsonld-container': '@list',
+                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},
+                              'coordinates': {'x-jsonld-container': '@list',
+                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},
+                              'features': {'x-jsonld-container': '@set',
+                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#features'}},
+     'x-jsonld-prefixes': {'geojson': 'https://purl.org/geojson/vocab#',
+                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#'}}
+
+On instance['features'][0]:
+    {'@id': 'pop1999',
+     'geometry': None,
+     'properties': {'comment': 'Example of an inline membership - would '
+                               'entail hasMember relations',
+                    'hasFeatureOfInterest': 'https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork',
+                    'hasSimpleResult': 15555.0},
+     'type': 'Feature'}
+=== End JSON Schema ===
+

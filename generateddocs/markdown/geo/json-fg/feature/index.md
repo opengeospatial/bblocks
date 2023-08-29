@@ -35,7 +35,6 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 
 ```yaml
 $schema: https://json-schema.org/draft/2019-09/schema
-$id: https://beta.schemas.opengis.net/json-fg/feature.json
 title: a JSON-FG Feature
 description: This JSON Schema is part of JSON-FG version 0.1.1
 type: object
@@ -57,25 +56,28 @@ properties:
     - type: string
     x-jsonld-id: '@id'
   featureType:
-    $ref: featuretype.json
+    $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
   links:
     type: array
     items:
-      $ref: link.json
+      allOf:
+      - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+      - $ref: ../../../ogc-utils/json-link/schema.yaml
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
   time:
-    $ref: time.json
+    $ref: https://beta.schemas.opengis.net/json-fg/time.json
   coordRefSys:
-    $ref: coordrefsys.json
+    $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
   place:
-    $ref: place.json
+    $ref: https://beta.schemas.opengis.net/json-fg/place.json
   geometry:
-    $ref: geometry.json
+    $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
     x-jsonld-id: https://purl.org/geojson/vocab#geometry
   properties:
     oneOf:
     - type: 'null'
     - type: object
-    x-jsonld-id: https://purl.org/geojson/vocab#properties
+    x-jsonld-id: '@nest'
 x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
@@ -97,6 +99,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
 
 ```
 
@@ -113,8 +116,25 @@ Links to the schema:
   "@context": {
     "type": "@type",
     "id": "@id",
+    "links": {
+      "@id": "rdfs:seeAlso",
+      "@context": {
+        "href": "oa:hasTarget",
+        "rel": {
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id",
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          }
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      }
+    },
     "geometry": "geojson:geometry",
-    "properties": "geojson:properties",
+    "properties": "@nest",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -136,6 +156,9 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
+    "oa": "http://www.w3.org/ns/oa#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "geojson": "https://purl.org/geojson/vocab#",
     "@version": 1.1
   }

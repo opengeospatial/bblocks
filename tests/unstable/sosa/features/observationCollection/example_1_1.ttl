@@ -1,8 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.example.com/sosa/c1> a sosa:ObservationCollection ;
+    dcterms:type "FeatureCollection" ;
     sosa:hasMember <http://www.example.com/sosa/pop1999> ;
     sosa:observedProperty "https://dbpedia.org/ontology/population" ;
     sosa:resultTime "1999" .

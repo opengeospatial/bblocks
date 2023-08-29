@@ -37,11 +37,19 @@ allOf:
       maximum: 3
     coordRefSys:
       $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+    links:
+      type: array
+      items:
+        allOf:
+        - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        - $ref: ../../../ogc-utils/json-link/schema.yaml
+    features:
+      type: array
+      items:
+        $ref: ../feature/schema.yaml
+      x-jsonld-container: '@set'
+      x-jsonld-id: https://purl.org/geojson/vocab#features
 - $ref: ../../features/featureCollection/schema.yaml
-x-jsonld-extra-terms:
-  features:
-    x-jsonld-container: '@set'
-    x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 
@@ -58,32 +66,43 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "links": {
-      "@id": "rdfs:seeAlso",
+    "href": "oa:hasTarget",
+    "rel": {
+      "@id": "http://www.iana.org/assignments/relation",
+      "@type": "@id",
       "@context": {
-        "href": "@id",
-        "title": "rdfs:label"
+        "@base": "http://www.iana.org/assignments/relation/"
       }
     },
+    "type": "dct:type",
+    "hreflang": "dct:language",
+    "title": "rdfs:label",
+    "length": "dct:extent",
     "features": {
+      "@container": "@set",
       "@id": "geojson:features",
       "@context": {
         "type": "@type",
         "id": "@id",
-        "properties": "geojson:properties",
-        "geometry": {
-          "@id": "geojson:geometry",
+        "links": {
+          "@id": "rdfs:seeAlso",
           "@context": {
-            "coordinates": {
-              "@container": "@list",
-              "@id": "geojson:coordinates"
+            "rel": {
+              "@id": "http://www.iana.org/assignments/relation",
+              "@type": "@id",
+              "@context": {
+                "@base": {
+                  "@id": "http://www.iana.org/assignments/relation/"
+                }
+              }
             }
           }
         },
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
+        "geometry": {
+          "@id": "geojson:geometry",
+          "@context": {}
         },
+        "properties": "@nest",
         "Feature": "geojson:Feature",
         "FeatureCollection": "geojson:FeatureCollection",
         "GeometryCollection": "geojson:GeometryCollection",
@@ -93,13 +112,27 @@ Links to the schema:
         "MultiPolygon": "geojson:MultiPolygon",
         "Point": "geojson:Point",
         "Polygon": "geojson:Polygon",
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
+        },
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        },
         "features": {
           "@container": "@set",
           "@id": "geojson:features"
         }
       }
     },
+    "links": {
+      "@id": "rdfs:seeAlso",
+      "@context": {}
+    },
+    "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "geojson": "https://purl.org/geojson/vocab#",
     "@version": 1.1
   }

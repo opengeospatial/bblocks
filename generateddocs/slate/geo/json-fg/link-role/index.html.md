@@ -81,9 +81,13 @@ See panel to right - note that a more user friendly "collapsable" version is in 
 
 
 ```turtle
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 
-<http://example.org/http/example.org/frog> dcterms:role <http://example.org/animals> .
+[] ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    prof:hasRole <http://example.org/animals> ;
+    oa:hasTarget "http//example.org/frog" .
 
 
 ```
@@ -103,16 +107,16 @@ allOf:
 - properties:
     role:
       $ref: '#/$defs/coderef'
-      x-jsonld-id: http://purl.org/dc/terms/role
+      x-jsonld-id: http://www.w3.org/ns/dx/prof/hasRole
       x-jsonld-type: '@id'
     conformsTo:
       $ref: '#/$defs/coderefs'
       x-jsonld-id: http://purl.org/dc/terms/conformsTo
       x-jsonld-type: '@id'
-      x-jsonld-container: '@nest'
   required:
   - role
 x-jsonld-prefixes:
+  prof: http://www.w3.org/ns/dx/prof/
   dct: http://purl.org/dc/terms/
 
 ```
@@ -130,19 +134,30 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "href": "@id",
+    "href": "oa:hasTarget",
+    "rel": {
+      "@id": "http://www.iana.org/assignments/relation",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://www.iana.org/assignments/relation/"
+      }
+    },
+    "type": "dct:type",
+    "hreflang": "dct:language",
     "title": "rdfs:label",
+    "length": "dct:extent",
     "role": {
-      "@id": "dct:role",
+      "@id": "prof:hasRole",
       "@type": "@id"
     },
     "conformsTo": {
       "@id": "dct:conformsTo",
-      "@type": "@id",
-      "@container": "@nest"
+      "@type": "@id"
     },
+    "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dct": "http://purl.org/dc/terms/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
     "@version": 1.1
   }
 }
