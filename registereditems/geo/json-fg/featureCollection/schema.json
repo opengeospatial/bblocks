@@ -23,13 +23,20 @@
     "links": {
       "type": "array",
       "items": {
-        "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
+        "allOf": [
+          {
+            "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
+          },
+          {
+            "$ref": "bblocks://ogc.ogc-utils.json-link"
+          }
+        ]
       }
     },
     "features": {
       "type": "array",
       "items": {
-        "$ref": "bblock://ogc.geo.json-fg.feature"
+        "$ref": "bblocks://ogc.geo.json-fg.feature"
       }
     }
   }
