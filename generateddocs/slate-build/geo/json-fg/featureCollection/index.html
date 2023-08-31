@@ -374,7 +374,6 @@ also be able to parse and understand the additional members.</p>
 
 <p>JSON Schema is used to formally specify the JSON-FG syntax.</p>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2019-09/schema</span>
-<span class="na">$id</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/featurecollection.json</span>
 <span class="na">title</span><span class="pi">:</span> <span class="s">a JSON-FG Feature Collection</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">This JSON Schema is part of JSON-FG version 0.1.1</span>
 <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
@@ -386,22 +385,26 @@ also be able to parse and understand the additional members.</p>
     <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
     <span class="na">enum</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">FeatureCollection</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
   <span class="na">featureType</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s">featuretype.json</span>
+    <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/featuretype.json</span>
   <span class="na">geometryDimension</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span> <span class="s">integer</span>
     <span class="na">minimum</span><span class="pi">:</span> <span class="m">0</span>
     <span class="na">maximum</span><span class="pi">:</span> <span class="m">3</span>
   <span class="na">coordRefSys</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s">coordrefsys.json</span>
+    <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/coordrefsys.json</span>
   <span class="na">links</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
     <span class="na">items</span><span class="pi">:</span>
-      <span class="na">$ref</span><span class="pi">:</span> <span class="s">link.json</span>
+      <span class="na">allOf</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/link.json</span>
+      <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../../ogc-utils/json-link/schema.yaml</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">rdfs:seeAlso</span>
   <span class="na">features</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
     <span class="na">items</span><span class="pi">:</span>
-      <span class="na">$ref</span><span class="pi">:</span> <span class="s">feature.json</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">../feature/schema.yaml</span>
     <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#features</span>
 <span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
@@ -420,10 +423,74 @@ also be able to parse and understand the additional members.</p>
 </ul>
 <h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:seeAlso"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oa:hasTarget"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.iana.org/assignments/relation"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.iana.org/assignments/relation/"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:type"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hreflang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:language"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:label"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:extent"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:features"</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:features"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:seeAlso"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oa:hasTarget"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.iana.org/assignments/relation"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.iana.org/assignments/relation/"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:type"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"hreflang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:language"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:label"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:extent"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:geometry"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@nest"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Feature"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"FeatureCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:FeatureCollection"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"GeometryCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:GeometryCollection"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"LineString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:LineString"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"MultiLineString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiLineString"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"MultiPoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPoint"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"MultiPolygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPolygon"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Point"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Point"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Polygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Polygon"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"bbox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:bbox"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:coordinates"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:features"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"oa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/oa#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rdfs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"geojson"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
   </span><span class="p">}</span><span class="w">

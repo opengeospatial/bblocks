@@ -14,7 +14,8 @@
           "type": "string",
           "enum": [
             "FeatureCollection"
-          ]
+          ],
+          "x-jsonld-id": "@type"
         },
         "featureType": {
           "$ref": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
@@ -38,7 +39,8 @@
                 "$ref": "../../../ogc-utils/json-link/schema.json"
               }
             ]
-          }
+          },
+          "x-jsonld-id": "rdfs:seeAlso"
         },
         "features": {
           "type": "array",

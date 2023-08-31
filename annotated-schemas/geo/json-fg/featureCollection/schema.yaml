@@ -1,5 +1,4 @@
 $schema: https://json-schema.org/draft/2019-09/schema
-$id: https://beta.schemas.opengis.net/json-fg/featurecollection.json
 title: a JSON-FG Feature Collection
 description: This JSON Schema is part of JSON-FG version 0.1.1
 type: object
@@ -11,22 +10,26 @@ properties:
     type: string
     enum:
     - FeatureCollection
+    x-jsonld-id: '@type'
   featureType:
-    $ref: featuretype.json
+    $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
   geometryDimension:
     type: integer
     minimum: 0
     maximum: 3
   coordRefSys:
-    $ref: coordrefsys.json
+    $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
   links:
     type: array
     items:
-      $ref: link.json
+      allOf:
+      - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+      - $ref: ../../../ogc-utils/json-link/schema.yaml
+    x-jsonld-id: rdfs:seeAlso
   features:
     type: array
     items:
-      $ref: feature.json
+      $ref: ../feature/schema.yaml
     x-jsonld-container: '@set'
     x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:

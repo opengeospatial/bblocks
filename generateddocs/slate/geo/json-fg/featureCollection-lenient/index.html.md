@@ -51,6 +51,7 @@ allOf:
       type: string
       enum:
       - FeatureCollection
+      x-jsonld-id: '@type'
     featureType:
       $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
     geometryDimension:
@@ -65,6 +66,7 @@ allOf:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
         - $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: rdfs:seeAlso
     features:
       type: array
       items:
@@ -90,38 +92,31 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "href": "oa:hasTarget",
-    "rel": {
-      "@id": "http://www.iana.org/assignments/relation",
-      "@type": "@id",
+    "type": "@type",
+    "links": {
+      "@id": "rdfs:seeAlso",
       "@context": {
-        "@base": "http://www.iana.org/assignments/relation/"
+        "href": "oa:hasTarget",
+        "rel": {
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id",
+          "@context": {
+            "@base": {
+              "@id": "http://www.iana.org/assignments/relation/"
+            }
+          }
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
       }
     },
-    "type": "dct:type",
-    "hreflang": "dct:language",
-    "title": "rdfs:label",
-    "length": "dct:extent",
     "features": {
       "@container": "@set",
       "@id": "geojson:features",
       "@context": {
-        "type": "@type",
         "id": "@id",
-        "links": {
-          "@id": "rdfs:seeAlso",
-          "@context": {
-            "rel": {
-              "@id": "http://www.iana.org/assignments/relation",
-              "@type": "@id",
-              "@context": {
-                "@base": {
-                  "@id": "http://www.iana.org/assignments/relation/"
-                }
-              }
-            }
-          }
-        },
         "geometry": {
           "@id": "geojson:geometry",
           "@context": {}
@@ -149,10 +144,6 @@ Links to the schema:
           "@id": "geojson:features"
         }
       }
-    },
-    "links": {
-      "@id": "rdfs:seeAlso",
-      "@context": {}
     },
     "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

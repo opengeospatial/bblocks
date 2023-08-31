@@ -629,7 +629,6 @@ Links to the schema:
       "@id": "sosa:hasMember",
       "@container": "@set",
       "@context": {
-        "type": "@type",
         "features": {
           "@container": "@set",
           "@id": "geojson:features"
@@ -664,13 +663,11 @@ Links to the schema:
       "@id": "http://example.com/properties/distance",
       "@type": "http://www.w3.org/2001/XMLSchema#float"
     },
-    "type": "dct:type",
+    "type": "@type",
     "id": "@id",
     "geometry": {
       "@id": "geojson:geometry",
-      "@context": {
-        "type": "@type"
-      }
+      "@context": {}
     },
     "bbox": {
       "@container": "@list",
@@ -688,6 +685,7 @@ Links to the schema:
     "links": {
       "@id": "rdfs:seeAlso",
       "@context": {
+        "href": "oa:hasTarget",
         "rel": {
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id",
@@ -696,24 +694,17 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation/"
             }
           }
-        }
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
       }
     },
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
     },
-    "href": "oa:hasTarget",
-    "rel": {
-      "@id": "http://www.iana.org/assignments/relation",
-      "@type": "@id",
-      "@context": {
-        "@base": "http://www.iana.org/assignments/relation/"
-      }
-    },
-    "hreflang": "dct:language",
-    "title": "rdfs:label",
-    "length": "dct:extent",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",

@@ -258,38 +258,31 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "href": "oa:hasTarget",
-    "rel": {
-      "@id": "http://www.iana.org/assignments/relation",
-      "@type": "@id",
+    "type": "@type",
+    "links": {
+      "@id": "rdfs:seeAlso",
       "@context": {
-        "@base": "http://www.iana.org/assignments/relation/"
+        "href": "oa:hasTarget",
+        "rel": {
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id",
+          "@context": {
+            "@base": {
+              "@id": "http://www.iana.org/assignments/relation/"
+            }
+          }
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
       }
     },
-    "type": "dct:type",
-    "hreflang": "dct:language",
-    "title": "rdfs:label",
-    "length": "dct:extent",
     "features": {
       "@container": "@set",
       "@id": "sosa:hasMember",
       "@context": {
-        "type": "@type",
         "id": "@id",
-        "links": {
-          "@id": "rdfs:seeAlso",
-          "@context": {
-            "rel": {
-              "@id": "http://www.iana.org/assignments/relation",
-              "@type": "@id",
-              "@context": {
-                "@base": {
-                  "@id": "http://www.iana.org/assignments/relation/"
-                }
-              }
-            }
-          }
-        },
         "geometry": {
           "@id": "geojson:geometry",
           "@context": {}
@@ -316,10 +309,6 @@ Links to the schema:
           "@id": "geojson:features"
         }
       }
-    },
-    "links": {
-      "@id": "rdfs:seeAlso",
-      "@context": {}
     },
     "properties": {
       "@id": "@nest",

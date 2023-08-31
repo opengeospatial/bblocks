@@ -11,6 +11,7 @@ allOf:
       type: string
       enum:
       - FeatureCollection
+      x-jsonld-id: '@type'
     featureType:
       $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
     geometryDimension:
@@ -25,6 +26,7 @@ allOf:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
         - $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: rdfs:seeAlso
     features:
       type: array
       items:
