@@ -220,6 +220,11 @@ Links to the schema:
     "properties": {
       "@id": "@nest",
       "@context": {
+        "resultTime": "sosa:resultTime",
+        "phenomenonTime": "sosa:phenomenonTime",
+        "observedProperty": "sosa:observedProperty",
+        "hasResult": "sosa:hasResult",
+        "hasSimpleResult": "sosa:hasSimpleResult",
         "features": "sosa:hasMember",
         "properties": "@nest"
       }
@@ -253,9 +258,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id",
           "@context": {
-            "@base": {
-              "@id": "http://www.iana.org/assignments/relation/"
-            }
+            "@base": "http://www.iana.org/assignments/relation/"
           }
         },
         "type": "dct:type",

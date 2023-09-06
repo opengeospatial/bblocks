@@ -151,9 +151,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id",
           "@context": {
-            "@base": {
-              "@id": "http://www.iana.org/assignments/relation/"
-            }
+            "@base": "http://www.iana.org/assignments/relation/"
           }
         },
         "type": "dct:type",
