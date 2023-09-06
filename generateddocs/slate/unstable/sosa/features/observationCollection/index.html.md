@@ -26,11 +26,11 @@ This building blocks defines an ObservationCollection Feature according to the S
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
+    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observationCollection/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observationCollection/" target="_blank">valid</a></strong>
 </aside>
 
 # Examples
@@ -325,10 +325,6 @@ Links to the schema:
       "@id": "sosa:hasMember",
       "@context": {
         "id": "@id",
-        "geometry": {
-          "@id": "geojson:geometry",
-          "@context": {}
-        },
         "properties": {
           "@id": "@nest",
           "@context": {
@@ -341,6 +337,14 @@ Links to the schema:
             "properties": "@nest"
           }
         },
+        "geometry": {
+          "@id": "geojson:geometry",
+          "@context": {}
+        },
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
+        },
         "Feature": "geojson:Feature",
         "FeatureCollection": "geojson:FeatureCollection",
         "GeometryCollection": "geojson:GeometryCollection",
@@ -350,17 +354,13 @@ Links to the schema:
         "MultiPolygon": "geojson:MultiPolygon",
         "Point": "geojson:Point",
         "Polygon": "geojson:Polygon",
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
         },
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        },
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
         }
       }
     },

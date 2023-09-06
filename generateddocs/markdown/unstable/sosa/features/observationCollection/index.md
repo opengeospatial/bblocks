@@ -5,7 +5,7 @@
 
 This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification.
 
-[*Status*](http://www.opengis.net/def/status): Invalid
+[*Status*](http://www.opengis.net/def/status): Under development
 
 ## Examples
 
@@ -281,10 +281,6 @@ Links to the schema:
       "@id": "sosa:hasMember",
       "@context": {
         "id": "@id",
-        "geometry": {
-          "@id": "geojson:geometry",
-          "@context": {}
-        },
         "properties": {
           "@id": "@nest",
           "@context": {
@@ -297,6 +293,14 @@ Links to the schema:
             "properties": "@nest"
           }
         },
+        "geometry": {
+          "@id": "geojson:geometry",
+          "@context": {}
+        },
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
+        },
         "Feature": "geojson:Feature",
         "FeatureCollection": "geojson:FeatureCollection",
         "GeometryCollection": "geojson:GeometryCollection",
@@ -306,17 +310,13 @@ Links to the schema:
         "MultiPolygon": "geojson:MultiPolygon",
         "Point": "geojson:Point",
         "Polygon": "geojson:Polygon",
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
         },
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        },
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
         }
       }
     },

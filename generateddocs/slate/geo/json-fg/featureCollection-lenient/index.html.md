@@ -70,7 +70,7 @@ allOf:
     features:
       type: array
       items:
-        $ref: ../feature/schema.yaml
+        $ref: ../feature-lenient/schema.yaml
       x-jsonld-container: '@set'
       x-jsonld-id: https://purl.org/geojson/vocab#features
 - $ref: ../../features/featureCollection/schema.yaml
@@ -115,11 +115,15 @@ Links to the schema:
       "@id": "geojson:features",
       "@context": {
         "id": "@id",
+        "properties": "@nest",
         "geometry": {
           "@id": "geojson:geometry",
           "@context": {}
         },
-        "properties": "@nest",
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
+        },
         "Feature": "geojson:Feature",
         "FeatureCollection": "geojson:FeatureCollection",
         "GeometryCollection": "geojson:GeometryCollection",
@@ -129,17 +133,13 @@ Links to the schema:
         "MultiPolygon": "geojson:MultiPolygon",
         "Point": "geojson:Point",
         "Polygon": "geojson:Polygon",
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
         },
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        },
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
         }
       }
     },
