@@ -35,7 +35,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 
 # Examples
 
-## Example of SOSA observation
+## Example of SOSA observation with simple Result
 
 
 
@@ -96,6 +96,92 @@ _:a1 a geojson:Feature, sosa:Observation ;
 <p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Ffeatures%2Fobservation%2Fexample_1_1.jsonld">View on JSON-LD Playground</a></p>
 </blockquote>
 
+
+
+## Example of SOSA observation with Complex Result
+
+
+
+```json
+{
+  "@context": {
+    "resultschema": "http//example.org/resultchema/",
+    "a": "resultschema:a",
+    "b": "resultschema:b"
+  },
+  "@id": "pop1999",
+  "type": "Feature",
+  "featureType": "sosa:Observation",
+  "geometry": null,
+  "properties": {
+    "observedProperty": "https://dbpedia.org/ontology/population",
+    "resultTime": "1999",
+    "comment": "A complex result example",
+    "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
+    "hasResult": {
+      "a": "r1",
+      "b": "r2"
+    }
+  }
+}
+```
+
+<blockquote class="lang-specific json">
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Ffeatures%2Fobservation%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld",
+    {
+      "resultschema": "http//example.org/resultchema/",
+      "a": "resultschema:a",
+      "b": "resultschema:b"
+    }
+  ],
+  "@id": "pop1999",
+  "type": "Feature",
+  "featureType": "sosa:Observation",
+  "geometry": null,
+  "properties": {
+    "observedProperty": "https://dbpedia.org/ontology/population",
+    "resultTime": "1999",
+    "comment": "A complex result example",
+    "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
+    "hasResult": {
+      "a": "r1",
+      "b": "r2"
+    }
+  }
+}
+```
+
+<blockquote class="lang-specific jsonld">
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Ffeatures%2Fobservation%2Fexample_2_1.jsonld">View on JSON-LD Playground</a></p>
+</blockquote>
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix resultschema: <http//example.org/resultchema/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.com/pop1999> a sosa:Observation,
+        geojson:Feature ;
+    sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork> ;
+    sosa:hasResult [ resultschema:a "r1" ;
+            resultschema:b "r2" ] ;
+    sosa:observedProperty "https://dbpedia.org/ontology/population" ;
+    sosa:resultTime "1999" .
+
+
+```
 
 
 # JSON Schema

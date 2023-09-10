@@ -362,7 +362,6 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FeatureCollection"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:ObservationCollection"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dbpedia.org/ontology/population"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1999"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -371,18 +370,26 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example of an inline membership - would entail hasMember relations"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Simple result case"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dbpedia.org/ontology/population"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="mf">15555.0</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pop1999"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"something"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/someproperty"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="mf">3275.0</span><span class="w">
+        </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"a"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"b"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"b1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rb1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"b2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rb2"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
@@ -422,7 +429,6 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FeatureCollection"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:ObservationCollection"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dbpedia.org/ontology/population"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1999"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -431,18 +437,26 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example of an inline membership - would entail hasMember relations"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Simple result case"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dbpedia.org/ontology/population"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="mf">15555.0</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pop1999"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"something"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/someproperty"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="mf">3275.0</span><span class="w">
+        </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"a"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"b"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"b1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rb1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"b2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rb2"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">

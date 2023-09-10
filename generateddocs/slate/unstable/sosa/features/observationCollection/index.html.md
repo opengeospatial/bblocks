@@ -45,7 +45,6 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
   "type": "FeatureCollection",
   "featureType": "sosa:ObservationCollection",
   "properties": {
-    "observedProperty": "https://dbpedia.org/ontology/population",
     "resultTime": "1999"
   },
   "features": [
@@ -54,18 +53,26 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
       "type": "Feature",
       "geometry": null,
       "properties": {
-        "comment": "Example of an inline membership - would entail hasMember relations",
+        "comment": "Simple result case",
+        "observedProperty": "https://dbpedia.org/ontology/population",
         "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
         "hasSimpleResult": 15555.0
       }
     },
     {
-      "@id": "pop1999",
+      "@id": "something",
       "type": "Feature",
       "geometry": null,
       "properties": {
+        "observedProperty": "https://example.org/someproperty",
         "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
-        "hasSimpleResult": 3275.0
+        "hasResult": {
+          "a": 1,
+          "b": {
+            "b1": "rb1",
+            "b2": "rb2"
+          }
+        }
       }
     }
   ]
@@ -116,7 +123,6 @@ eg:pop1999 a sosa:Observation ;
   "type": "FeatureCollection",
   "featureType": "sosa:ObservationCollection",
   "properties": {
-    "observedProperty": "https://dbpedia.org/ontology/population",
     "resultTime": "1999"
   },
   "features": [
@@ -125,18 +131,26 @@ eg:pop1999 a sosa:Observation ;
       "type": "Feature",
       "geometry": null,
       "properties": {
-        "comment": "Example of an inline membership - would entail hasMember relations",
+        "comment": "Simple result case",
+        "observedProperty": "https://dbpedia.org/ontology/population",
         "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
         "hasSimpleResult": 15555.0
       }
     },
     {
-      "@id": "pop1999",
+      "@id": "something",
       "type": "Feature",
       "geometry": null,
       "properties": {
+        "observedProperty": "https://example.org/someproperty",
         "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
-        "hasSimpleResult": 3275.0
+        "hasResult": {
+          "a": 1,
+          "b": {
+            "b1": "rb1",
+            "b2": "rb2"
+          }
+        }
       }
     }
   ],

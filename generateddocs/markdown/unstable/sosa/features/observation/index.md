@@ -9,7 +9,7 @@ This building blocks defines a GeoJSON feature containing a SOSA Observation
 
 ## Examples
 
-### Example of SOSA observation
+### Example of SOSA observation with simple Result
 #### json
 ```json
 {
@@ -55,6 +55,78 @@ _:a1 a geojson:Feature, sosa:Observation ;
   },
   "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld"
 }
+```
+
+
+### Example of SOSA observation with Complex Result
+#### json
+```json
+{
+  "@context": {
+    "resultschema": "http//example.org/resultchema/",
+    "a": "resultschema:a",
+    "b": "resultschema:b"
+  },
+  "@id": "pop1999",
+  "type": "Feature",
+  "featureType": "sosa:Observation",
+  "geometry": null,
+  "properties": {
+    "observedProperty": "https://dbpedia.org/ontology/population",
+    "resultTime": "1999",
+    "comment": "A complex result example",
+    "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
+    "hasResult": {
+      "a": "r1",
+      "b": "r2"
+    }
+  }
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld",
+    {
+      "resultschema": "http//example.org/resultchema/",
+      "a": "resultschema:a",
+      "b": "resultschema:b"
+    }
+  ],
+  "@id": "pop1999",
+  "type": "Feature",
+  "featureType": "sosa:Observation",
+  "geometry": null,
+  "properties": {
+    "observedProperty": "https://dbpedia.org/ontology/population",
+    "resultTime": "1999",
+    "comment": "A complex result example",
+    "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
+    "hasResult": {
+      "a": "r1",
+      "b": "r2"
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix resultschema: <http//example.org/resultchema/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.com/pop1999> a sosa:Observation,
+        geojson:Feature ;
+    sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork> ;
+    sosa:hasResult [ resultschema:a "r1" ;
+            resultschema:b "r2" ] ;
+    sosa:observedProperty "https://dbpedia.org/ontology/population" ;
+    sosa:resultTime "1999" .
+
+
 ```
 
 ## Schema
