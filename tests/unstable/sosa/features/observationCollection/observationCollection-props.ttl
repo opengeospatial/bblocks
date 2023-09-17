@@ -3,21 +3,20 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.example.com/sosa/c1> a <http://www.example.com/sosa/FeatureCollection>,
+<file:///github/workspace/c1> a <file:///github/workspace/FeatureCollection>,
         sosa:ObservationCollection ;
-    sosa:hasMember <http://www.example.com/sosa/pop1999>,
-        <http://www.example.com/sosa/something> ;
+    sosa:hasMember <file:///github/workspace/pop1999>,
+        <file:///github/workspace/something> ;
+    sosa:observedProperty "https://example.org/someproperty" ;
     sosa:resultTime "1999" .
 
-<http://www.example.com/sosa/pop1999> a geojson:Feature ;
+<file:///github/workspace/pop1999> a geojson:Feature ;
     sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork> ;
-    sosa:hasSimpleResult 1.5555e+04 ;
-    sosa:observedProperty "https://dbpedia.org/ontology/population" .
+    sosa:hasSimpleResult 1.5555e+04 .
 
-<http://www.example.com/sosa/something> a geojson:Feature ;
+<file:///github/workspace/something> a geojson:Feature ;
     sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem> ;
     sosa:hasResult [ resultschema:a 1 ;
             resultschema:b [ resultschema:b1 "rb1" ;
-                    resultschema:b2 "rb2" ] ] ;
-    sosa:observedProperty "https://example.org/someproperty" .
+                    resultschema:b2 "rb2" ] ] .
 

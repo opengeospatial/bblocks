@@ -1,19 +1,23 @@
 {
-  "@context": {
-    "resultschema": "http//example.org/resultchema/",
-    "a": "resultschema:a",
-    "b": {
-      "@id": "resultschema:b",
-      "@context": {
-        "b1": "resultschema:b1",
-        "b2": "resultschema:b2"
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld",
+    {
+      "resultschema": "http//example.org/resultchema/",
+      "a": "resultschema:a",
+      "b": {
+        "@id": "resultschema:b",
+        "@context": {
+          "b1": "resultschema:b1",
+          "b2": "resultschema:b2"
+        }
       }
     }
-  },
+  ],
   "@id": "c1",
   "type": "FeatureCollection",
   "featureType": "sosa:ObservationCollection",
   "properties": {
+    "observedProperty": "https://example.org/someproperty",
     "resultTime": "1999"
   },
   "features": [
@@ -23,7 +27,6 @@
       "geometry": null,
       "properties": {
         "comment": "Simple result case",
-        "observedProperty": "https://dbpedia.org/ontology/population",
         "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
         "hasSimpleResult": 15555.0
       }
@@ -33,7 +36,6 @@
       "type": "Feature",
       "geometry": null,
       "properties": {
-        "observedProperty": "https://example.org/someproperty",
         "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
         "hasResult": {
           "a": 1,

@@ -41,6 +41,17 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 
 ```json
 {
+  "@context": {
+    "resultschema": "http//example.org/resultchema/",
+    "a": "resultschema:a",
+    "b": {
+      "@id": "resultschema:b",
+      "@context": {
+        "b1": "resultschema:b1",
+        "b2": "resultschema:b2"
+      }
+    }
+  },
   "@id": "c1",
   "type": "FeatureCollection",
   "featureType": "sosa:ObservationCollection",
@@ -119,6 +130,20 @@ eg:pop1999 a sosa:Observation ;
 
 ```jsonld
 {
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld",
+    {
+      "resultschema": "http//example.org/resultchema/",
+      "a": "resultschema:a",
+      "b": {
+        "@id": "resultschema:b",
+        "@context": {
+          "b1": "resultschema:b1",
+          "b2": "resultschema:b2"
+        }
+      }
+    }
+  ],
   "@id": "c1",
   "type": "FeatureCollection",
   "featureType": "sosa:ObservationCollection",
@@ -153,8 +178,7 @@ eg:pop1999 a sosa:Observation ;
         }
       }
     }
-  ],
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld"
+  ]
 }
 ```
 
