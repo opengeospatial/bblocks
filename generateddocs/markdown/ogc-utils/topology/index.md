@@ -74,11 +74,11 @@ required:
 - references
 - type
 x-jsonld-extra-terms:
-  csdm: https://linked.data.gov.au/def/csdm/
-  dct: http://purl.org/dc/terms/
   LineString: https://purl.org/geojson/vocab#LineString
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
+  csdm: https://linked.data.gov.au/def/csdm/
+  dct: http://purl.org/dc/terms/
 
 ```
 
@@ -99,10 +99,10 @@ Links to the schema:
       "@type": "@id",
       "@container": "@list"
     },
-    "csdm": "https://linked.data.gov.au/def/csdm/",
-    "dct": "http://purl.org/dc/terms/",
     "LineString": "geojson:LineString",
     "geojson": "https://purl.org/geojson/vocab#",
+    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "dct": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
 }

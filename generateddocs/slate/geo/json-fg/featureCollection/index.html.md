@@ -151,15 +151,6 @@ Links to the schema:
         },
         "geometry": "geojson:geometry",
         "properties": "@nest",
-        "Feature": "geojson:Feature",
-        "FeatureCollection": "geojson:FeatureCollection",
-        "GeometryCollection": "geojson:GeometryCollection",
-        "LineString": "geojson:LineString",
-        "MultiLineString": "geojson:MultiLineString",
-        "MultiPoint": "geojson:MultiPoint",
-        "MultiPolygon": "geojson:MultiPolygon",
-        "Point": "geojson:Point",
-        "Polygon": "geojson:Polygon",
         "bbox": {
           "@container": "@list",
           "@id": "geojson:bbox"
@@ -174,10 +165,27 @@ Links to the schema:
         }
       }
     },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "bbox": {
+      "x-jsonld-container": "@list",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+    },
+    "coordinates": {
+      "x-jsonld-container": "@list",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+    },
+    "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dct": "http://purl.org/dc/terms/",
-    "geojson": "https://purl.org/geojson/vocab#",
     "@version": 1.1
   }
 }

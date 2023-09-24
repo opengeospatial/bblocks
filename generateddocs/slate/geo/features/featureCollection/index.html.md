@@ -96,7 +96,6 @@ Links to the schema:
       "@context": {
         "type": "@type",
         "id": "@id",
-        "properties": "@nest",
         "geometry": {
           "@id": "geojson:geometry",
           "@context": {
@@ -125,10 +124,20 @@ Links to the schema:
         }
       }
     },
-    "oa": "http://www.w3.org/ns/oa#",
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "properties": "@nest",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "dct": "http://purl.org/dc/terms/",
     "geojson": "https://purl.org/geojson/vocab#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "dct": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
 }

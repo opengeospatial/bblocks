@@ -73,7 +73,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -96,7 +98,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific jsonld">
-<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_1_1.jsonld">View on JSON-LD Playground</a></p>
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -116,6 +120,12 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 
 ```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_1_1.ttl">Open in new window</a>
+</blockquote>
+
 
 
 ## Example 2
@@ -139,7 +149,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_2_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -162,7 +174,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific jsonld">
-<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_2_1.jsonld">View on JSON-LD Playground</a></p>
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_2_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_2_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -182,6 +196,12 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 
 ```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_2_1.ttl">Open in new window</a>
+</blockquote>
+
 
 
 ## Example 3
@@ -205,7 +225,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_3_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_3_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_3_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -228,7 +250,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific jsonld">
-<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_3_1.jsonld">View on JSON-LD Playground</a></p>
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_3_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_3_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -248,6 +272,12 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 
 ```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_3_1.ttl">Open in new window</a>
+</blockquote>
+
 
 
 ## Example 4
@@ -271,7 +301,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific json">
-<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_4_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_4_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_4_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -294,7 +326,9 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 ```
 
 <blockquote class="lang-specific jsonld">
-<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_4_1.jsonld">View on JSON-LD Playground</a></p>
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_4_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fexample_4_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -314,6 +348,12 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 
 ```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_4_1.ttl">Open in new window</a>
+</blockquote>
+
 
 
 # JSON Schema
