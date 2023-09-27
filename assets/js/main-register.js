@@ -69,6 +69,9 @@ $(document).ready(function () {
 
     $.get("./register.json")
       .then(bblocks => {
+        if (!Array.isArray(bblocks)) {
+          bblocks = bblocks.bblocks;
+        }
         bblocks.sort((a, b) => a.itemIdentifier.localeCompare(b.itemIdentifier)).forEach(bblock => {
           const docLink = bblock.documentation.slate.url;
 
