@@ -4,6 +4,8 @@ title: IRI or CURIE (Datatype)
 language_tabs:
   - plaintext: Plain text
   - json: JSON
+  - jsonld: JSON-LD
+  - turtle: RDF/Turtle
 
 toc_footers:
   - Version 1.0
@@ -182,6 +184,52 @@ another-document#ref
   <p class="example-links">
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_6_2.json">Open in new window</a>
     <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fogc-utils%2Firi-or-curie%2Fexample_6_2.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+## JSON-LD CURIE example
+
+
+
+```jsonld
+{
+  "@context": {
+    "ex": "http://example.com/",
+    "dct": {
+      "@id": "http://purl.org/dc/terms/",
+    },
+    "dct:conformsTo": {
+      "@type": "@id"
+    }
+  },
+  "@id": "ex:feature1",
+  "dct:conformsTo": "ex:profile2" 
+}
+
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_7_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fogc-utils%2Firi-or-curie%2Fexample_7_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
+
+ex:feature1 dct:conformsTo ex:profile2 .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_7_1.ttl">Open in new window</a>
 </blockquote>
 
 

@@ -5,7 +5,7 @@
 
 This building block defines an example SOSA Observation Feature for a Vector Observation
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Invalid
 
 ## Examples
 
@@ -23,8 +23,8 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
                 40.056709946862874
               ],
               [
-                -111.67183507997295,
-                40.056709946862874
+                -111.71,
+                40.156709946862874
               ]
             ]
           },
@@ -50,6 +50,7 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
             }
           }
         }
+
 ```
 
 #### jsonld
@@ -65,8 +66,8 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
         40.056709946862874
       ],
       [
-        -111.67183507997295,
-        40.056709946862874
+        -111.71,
+        40.156709946862875
       ]
     ]
   },
@@ -106,7 +107,7 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
     sosa:hasResult [ ] ;
     sosa:resultTime "2023-05-22T16:41:00+2" ;
     geojson:geometry [ a geojson:LineString ;
-            geojson:coordinates ( "[-111.67183507997295, 40.056709946862874]" "[-111.67183507997295, 40.056709946862874]" ) ] .
+            geojson:coordinates ( "[-111.67183507997295, 40.056709946862874]" "[-111.71, 40.156709946862875]" ) ] .
 
 
 ```

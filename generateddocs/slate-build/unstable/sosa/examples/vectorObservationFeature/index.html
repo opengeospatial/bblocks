@@ -362,11 +362,11 @@
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/" target="_blank">failed</a></strong>
 </aside>
 <h1 id='examples'>Examples</h1><h2 id='vectorobservation-specialisation-example'>VectorObservation - specialisation example.</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
           </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vector-obs-1"</span><span class="p">,</span><span class="w">
@@ -379,8 +379,8 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
                 </span><span class="mf">40.056709946862874</span><span class="w">
               </span><span class="p">],</span><span class="w">
               </span><span class="p">[</span><span class="w">
-                </span><span class="mf">-111.67183507997295</span><span class="p">,</span><span class="w">
-                </span><span class="mf">40.056709946862874</span><span class="w">
+                </span><span class="mf">-111.71</span><span class="p">,</span><span class="w">
+                </span><span class="mf">40.156709946862874</span><span class="w">
               </span><span class="p">]</span><span class="w">
             </span><span class="p">]</span><span class="w">
           </span><span class="p">},</span><span class="w">
@@ -406,6 +406,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
             </span><span class="p">}</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
+
 </span></code></pre></div>
 <blockquote class="lang-specific json">
   <p class="example-links">
@@ -423,8 +424,8 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
         </span><span class="mf">40.056709946862874</span><span class="w">
       </span><span class="p">],</span><span class="w">
       </span><span class="p">[</span><span class="w">
-        </span><span class="mf">-111.67183507997295</span><span class="p">,</span><span class="w">
-        </span><span class="mf">40.056709946862874</span><span class="w">
+        </span><span class="mf">-111.71</span><span class="p">,</span><span class="w">
+        </span><span class="mf">40.156709946862875</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -466,7 +467,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
     </span><span class="nn">sosa:</span><span class="n">hasResult</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">sosa:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2023-05-22T16:41:00+2"</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">LineString</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"[-111.67183507997295, 40.056709946862874]"</span><span class="w"> </span><span class="s">"[-111.67183507997295, 40.056709946862874]"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
+            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"[-111.67183507997295, 40.056709946862874]"</span><span class="w"> </span><span class="s">"[-111.71, 40.156709946862875]"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 
 </span></code></pre></div>

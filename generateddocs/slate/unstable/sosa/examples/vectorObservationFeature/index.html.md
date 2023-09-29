@@ -26,11 +26,11 @@ This building block defines an example SOSA Observation Feature for a Vector Obs
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/" target="_blank">failed</a></strong>
 </aside>
 
 # Examples
@@ -51,8 +51,8 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
                 40.056709946862874
               ],
               [
-                -111.67183507997295,
-                40.056709946862874
+                -111.71,
+                40.156709946862874
               ]
             ]
           },
@@ -78,6 +78,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
             }
           }
         }
+
 ```
 
 <blockquote class="lang-specific json">
@@ -101,8 +102,8 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
         40.056709946862874
       ],
       [
-        -111.67183507997295,
-        40.056709946862874
+        -111.71,
+        40.156709946862875
       ]
     ]
   },
@@ -150,7 +151,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
     sosa:hasResult [ ] ;
     sosa:resultTime "2023-05-22T16:41:00+2" ;
     geojson:geometry [ a geojson:LineString ;
-            geojson:coordinates ( "[-111.67183507997295, 40.056709946862874]" "[-111.67183507997295, 40.056709946862874]" ) ] .
+            geojson:coordinates ( "[-111.67183507997295, 40.056709946862874]" "[-111.71, 40.156709946862875]" ) ] .
 
 
 ```
