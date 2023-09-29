@@ -50,3 +50,22 @@
           "another-document#ref"
         ]
       schema-ref: '#/$defs/Multiple'
+
+- title: JSON-LD CURIE example
+  snippets:
+    - language: jsonld
+      code: |
+        {
+          "@context": {
+            "ex": "http://example.com/",
+            "dct": {
+              "@id": "http://purl.org/dc/terms/",
+            },
+            "dct:conformsTo": {
+              "@type": "@id"
+            }
+          },
+          "@id": "ex:feature1",
+          "dct:conformsTo": "ex:profile2" 
+        }
+      schema-ref: 'jsonld-example-schema.yaml'
