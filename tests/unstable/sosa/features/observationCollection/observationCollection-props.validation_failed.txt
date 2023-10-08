@@ -11,8 +11,8 @@ Validation passed
 
 === SHACL ===
 Using SHACL files for validation:
- - unstable/sosa/_sources/properties/observationCollection/rules.shacl
  - unstable/sosa/_sources/features/observationCollection/rules.shacl
+ - unstable/sosa/_sources/properties/observationCollection/rules.shacl
 
 ** Validation error **
 Validation Report
@@ -21,25 +21,25 @@ Results (2):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime ) ]
-	Focus Node: <file:///github/workspace/pop1999>
-	Result Path: ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime )
-	Message: Less than 1 values on <file:///github/workspace/pop1999>->( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime )
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime ) ]
 	Focus Node: <file:///github/workspace/something>
 	Result Path: ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime )
 	Message: Less than 1 values on <file:///github/workspace/something>->( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime )
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime ) ]
+	Focus Node: <file:///github/workspace/pop1999>
+	Result Path: ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime )
+	Message: Less than 1 values on <file:///github/workspace/pop1999>->( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime )
 
 Focus nodes:
- - Shape <http://example.com/rules#testRequiredProperties>: <file:///github/workspace/pop1999>,<file:///github/workspace/something>
  - Shape :testInCollectionOrMember-foi: <file:///github/workspace/something>,<file:///github/workspace/pop1999>
  - Shape :testInCollectionOrMember-observedProperty: <file:///github/workspace/something>,<file:///github/workspace/pop1999>
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n0f4cedc0d59241f89bc847aaad832d21b23): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n0f4cedc0d59241f89bc847aaad832d21b14): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n0f4cedc0d59241f89bc847aaad832d21b26): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n0f4cedc0d59241f89bc847aaad832d21b9): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n0f4cedc0d59241f89bc847aaad832d21b4): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>: <file:///github/workspace/something>,<file:///github/workspace/pop1999>
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:ndec1766e83d6436bbeb168b578176146b26): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:ndec1766e83d6436bbeb168b578176146b4): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:ndec1766e83d6436bbeb168b578176146b23): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:ndec1766e83d6436bbeb168b578176146b9): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:ndec1766e83d6436bbeb168b578176146b14): *none*
 
 === End SHACL ===
 

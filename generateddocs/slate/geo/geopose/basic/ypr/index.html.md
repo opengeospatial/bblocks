@@ -356,69 +356,6 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 
 
 
-# JSON Schema
-
-```yaml--schema
-description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'
-definitions:
-  angles:
-    type: object
-    properties:
-      yaw:
-        type: number
-        x-jsonld-id: http://example.com/geopose/yaw
-      pitch:
-        type: number
-        x-jsonld-id: http://example.com/geopose/pitch
-      roll:
-        type: number
-        x-jsonld-id: http://example.com/geopose/roll
-    required:
-    - yaw
-    - pitch
-    - roll
-  Position:
-    type: object
-    properties:
-      lat:
-        type: number
-        x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#lat
-      lon:
-        type: number
-        x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#long
-      h:
-        type: number
-        x-jsonld-id: http://example.com/geopose/h
-    required:
-    - lat
-    - lon
-    - h
-type: object
-properties:
-  position:
-    $ref: '#/definitions/Position'
-    x-jsonld-id: http://example.com/geopose/position
-  angles:
-    $ref: '#/definitions/angles'
-    x-jsonld-id: http://example.com/geopose/angles
-required:
-- position
-- angles
-x-jsonld-prefixes:
-  geopose: http://example.com/geopose/
-  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
-$id: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json
-
-```
-
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fgeopose%2Fbasic%2Fypr%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
-
-Links to the schema:
-
-* YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml</a>
-* JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json</a>
-
-
 # JSON-LD Context
 
 ```json--ldContext
