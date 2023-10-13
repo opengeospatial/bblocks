@@ -10,60 +10,67 @@
     "geometry",
     "properties"
   ],
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "Feature"
-      ]
+  "allOf": [
+    {
+      "$ref": "bblocks://ogc.geo.features.feature"
     },
-    "id": {
-      "oneOf": [
-        {
-          "type": "number"
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
         },
-        {
-          "type": "string"
-        }
-      ]
-    },
-    "featureType": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
-    },
-    "links": {
-      "type": "array",
-      "items": {
-        "allOf": [
-          {
-            "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
-          },
-          {
-            "$ref": "bblocks://ogc.ogc-utils.json-link"
+        "id": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "featureType": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
+              },
+              {
+                "$ref": "bblocks://ogc.ogc-utils.json-link"
+              }
+            ]
           }
-        ]
-      }
-    },
-    "time": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/time.json"
-    },
-    "coordRefSys": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
-    },
-    "place": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/place.json"
-    },
-    "geometry": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/geometry.json"
-    },
-    "properties": {
-      "oneOf": [
-        {
-          "type": "null"
         },
-        {
-          "type": "object"
+        "time": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/time.json"
+        },
+        "coordRefSys": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
+        },
+        "place": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/place.json"
+        },
+        "geometry": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/geometry.json"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object"
+            }
+          ]
         }
-      ]
+      }
     }
-  }
+  ]
 }

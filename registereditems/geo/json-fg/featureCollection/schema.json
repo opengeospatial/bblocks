@@ -3,41 +3,53 @@
   "title": "a JSON-FG Feature Collection",
   "description": "This JSON Schema is part of JSON-FG version 0.1.1",
   "type": "object",
-  "required": ["type", "features"],
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": ["FeatureCollection"]
+  "required": [
+    "type",
+    "features"
+  ],
+  "allOf": [
+    {
+      "$ref": "bblocks://ogc.geo.features.featureCollection"
     },
-    "featureType": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
-    },
-    "geometryDimension": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 3
-    },
-    "coordRefSys": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
-    },
-    "links": {
-      "type": "array",
-      "items": {
-        "allOf": [
-          {
-            "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
-          },
-          {
-            "$ref": "bblocks://ogc.ogc-utils.json-link"
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "FeatureCollection"
+          ]
+        },
+        "featureType": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
+        },
+        "geometryDimension": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "coordRefSys": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
+              },
+              {
+                "$ref": "bblocks://ogc.ogc-utils.json-link"
+              }
+            ]
           }
-        ]
-      }
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "bblocks://ogc.geo.json-fg.feature"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "$ref": "bblocks://ogc.geo.json-fg.feature"
+          }
+        }
       }
     }
-  }
+  ]
 }
