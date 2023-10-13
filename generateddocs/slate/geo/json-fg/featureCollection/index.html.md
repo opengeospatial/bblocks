@@ -1,6 +1,11 @@
 ---
 title: JSON-FG Feature Collection (Schema)
 
+language_tabs:
+  - json: JSON
+  - jsonld: JSON-LD
+  - turtle: RDF/Turtle
+
 toc_footers:
   - Version 0.1
   - <a href='#'>JSON-FG Feature Collection</a>
@@ -21,11 +26,11 @@ A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending G
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
+    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
 </p>
 
-<aside class="success">
-This building block is <strong>valid</strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/featureCollection/" target="_blank">failed</a></strong>
 </aside>
 
 # Description
@@ -53,6 +58,122 @@ existing and future GeoJSON clients will continue to parse and understand GeoJSO
 also be able to parse and understand the additional members.
 
 JSON Schema is used to formally specify the JSON-FG syntax.
+# Examples
+
+## Example
+
+Minimal example of this schema.
+
+NB. uses a local @context in the data example where application specialisations would apply such mappings.
+
+
+
+```json
+{
+  "@context": {
+    "my": "http://my.org/featureTypes/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "name": "skos:prefLabel"
+  },
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "featureType": "my:FeatureType",
+      "geometry": null,
+      "time": null,
+      "coordRefSys": "EPSG",
+      "place": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
+    {
+      "my": "http://my.org/featureTypes/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "name": "skos:prefLabel"
+    }
+  ],
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "featureType": "my:FeatureType",
+      "geometry": null,
+      "time": null,
+      "coordRefSys": "EPSG",
+      "place": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.example.com/features/f1> a geojson:Feature .
+
+[] a geojson:FeatureCollection ;
+    skos:prefLabel "MyFeatureCollection" ;
+    geojson:features <http://www.example.com/features/f1> .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.ttl">Open in new window</a>
+</blockquote>
+
+
 
 # JSON Schema
 

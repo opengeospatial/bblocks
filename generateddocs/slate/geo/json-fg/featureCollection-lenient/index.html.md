@@ -114,24 +114,6 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features",
       "@context": {
-        "id": "@id",
-        "geometry": {
-          "@id": "geojson:geometry",
-          "@context": {}
-        },
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
-        },
-        "Feature": "geojson:Feature",
-        "FeatureCollection": "geojson:FeatureCollection",
-        "GeometryCollection": "geojson:GeometryCollection",
-        "LineString": "geojson:LineString",
-        "MultiLineString": "geojson:MultiLineString",
-        "MultiPoint": "geojson:MultiPoint",
-        "MultiPolygon": "geojson:MultiPolygon",
-        "Point": "geojson:Point",
-        "Polygon": "geojson:Polygon",
         "features": {
           "@container": "@set",
           "@id": "geojson:features"
@@ -142,6 +124,21 @@ Links to the schema:
         }
       }
     },
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@id": "geojson:geometry",
+      "@context": {
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
+      }
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -151,11 +148,6 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "properties": "@nest",
-    "bbox": {
-      "x-jsonld-container": "@list",
-      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
-    },
     "coordinates": {
       "x-jsonld-container": "@list",
       "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"

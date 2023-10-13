@@ -1,6 +1,11 @@
 ---
 title: Feature Collection (Schema)
 
+language_tabs:
+  - json: JSON
+  - jsonld: JSON-LD
+  - turtle: RDF/Turtle
+
 toc_footers:
   - Version 1.0
   - <a href='#'>Feature Collection</a>
@@ -25,8 +30,120 @@ A collection of features.
 </p>
 
 <aside class="success">
-This building block is <strong>valid</strong>
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/featureCollection/" target="_blank">valid</a></strong>
 </aside>
+
+# Examples
+
+## Example
+
+Minimal example of this schema.
+
+NB. uses a local @context in the data example where application specialisations would apply such mappings.
+
+
+
+```json
+{
+  "@context": {
+    "my": "http://my.org/featureTypes/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "name": "skos:prefLabel"
+  },
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Ffeatures%2FfeatureCollection%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+    {
+      "my": "http://my.org/featureTypes/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "name": "skos:prefLabel"
+    }
+  ],
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Ffeatures%2FfeatureCollection%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
+    skos:prefLabel "MyFeatureCollection" ;
+    geojson:features <http://www.example.com/features/f1> .
+
+<http://www.example.com/features/f1> a geojson:Feature ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.ttl">Open in new window</a>
+</blockquote>
+
 
 
 # JSON Schema
@@ -54,10 +171,10 @@ allOf:
       type: array
       items:
         $ref: ../feature/schema.yaml
-      x-jsonld-id: https://purl.org/geojson/vocab#features
+x-jsonld-extra-terms:
+  properties: '@nest'
 x-jsonld-prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
-  geojson: https://purl.org/geojson/vocab#
 
 ```
 
@@ -91,38 +208,21 @@ Links to the schema:
         "length": "dct:extent"
       }
     },
-    "features": {
-      "@id": "geojson:features",
+    "type": "@type",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@id": "geojson:geometry",
       "@context": {
-        "type": "@type",
-        "id": "@id",
-        "geometry": {
-          "@id": "geojson:geometry",
-          "@context": {
-            "coordinates": {
-              "@container": "@list",
-              "@id": "geojson:coordinates"
-            }
-          }
-        },
-        "bbox": {
+        "coordinates": {
           "@container": "@list",
-          "@id": "geojson:bbox"
-        },
-        "Feature": "geojson:Feature",
-        "FeatureCollection": "geojson:FeatureCollection",
-        "GeometryCollection": "geojson:GeometryCollection",
-        "LineString": "geojson:LineString",
-        "MultiLineString": "geojson:MultiLineString",
-        "MultiPoint": "geojson:MultiPoint",
-        "MultiPolygon": "geojson:MultiPolygon",
-        "Point": "geojson:Point",
-        "Polygon": "geojson:Polygon",
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
+          "@id": "geojson:coordinates"
         }
       }
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
     },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -133,11 +233,14 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "properties": "@nest",
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "geojson": "https://purl.org/geojson/vocab#",
     "@version": 1.1
   }
 }

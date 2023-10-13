@@ -1,6 +1,11 @@
 ---
 title: Feature (Schema)
 
+language_tabs:
+  - json: JSON
+  - jsonld: JSON-LD
+  - turtle: RDF/Turtle
+
 toc_footers:
   - Version 1.0
   - <a href='#'>Feature</a>
@@ -25,7 +30,7 @@ A feature. Every feature is a sub-resource of an OGC Collection.
 </p>
 
 <aside class="success">
-This building block is <strong>valid</strong>
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/feature/" target="_blank">valid</a></strong>
 </aside>
 
 # Description
@@ -41,6 +46,87 @@ Each GeoJSON feature includes the following JSON members:
 * `geometry`: the primary geometry of the feature describing its location as a GeoJSON geometry object. `null`, if the
   feature has no spatial geometry.
 * `properties`: an object with a member for each feature property.
+# Examples
+
+## Example
+
+Minimal example of this schema.
+
+NB. uses a local @context in the data example where application specialisations would apply such mappings.
+
+
+
+```json
+{
+  "id": "f1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      174.7501603083,
+      -36.9307359096
+    ]
+  },
+  "properties": {
+    "comment": "An attribute value"
+  }
+}
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Ffeatures%2Ffeature%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "id": "f1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      174.7501603083,
+      -36.9307359096
+    ]
+  },
+  "properties": {
+    "comment": "An attribute value"
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld"
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Ffeatures%2Ffeature%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/features/f1> a geojson:Feature ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.ttl">Open in new window</a>
+</blockquote>
+
+
 
 # JSON Schema
 

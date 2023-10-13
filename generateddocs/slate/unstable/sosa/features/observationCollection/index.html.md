@@ -4,7 +4,6 @@ title: SOSA ObservationCollection Feature (Schema)
 language_tabs:
   - json: JSON
   - turtle: RDF/Turtle
-  - jsonld: JSON-LD
 
 toc_footers:
   - Version 1.0
@@ -26,11 +25,11 @@ This building blocks defines an ObservationCollection Feature according to the S
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
+    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observationCollection/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observationCollection/" target="_blank">valid</a></strong>
 </aside>
 
 # Examples
@@ -108,7 +107,6 @@ Validation for this building block has <strong><a href="https://github.com/openg
 eg:c1 a sosa:ObservationCollection ;
   sosa:hasMember eg:pop1999, eg:pop2000 ;
   sosa:observedProperty <http://dbpedia.org/ontology/population> ;
-  sosa:resultTime "2022-05-01T22:33:44Z"^^xsd:dateTime ;
 .
 
 eg:pop1999 a sosa:Observation ;
@@ -136,69 +134,6 @@ eg:pop1999 a sosa:Observation ;
 
 
 
-```jsonld
-{
-  "@context": [
-    "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld",
-    {
-      "resultschema": "http//example.org/resultchema/",
-      "a": "resultschema:a",
-      "b": {
-        "@id": "resultschema:b",
-        "@context": {
-          "b1": "resultschema:b1",
-          "b2": "resultschema:b2"
-        }
-      }
-    }
-  ],
-  "@id": "c1",
-  "type": "FeatureCollection",
-  "featureType": "sosa:ObservationCollection",
-  "properties": {
-    "resultTime": "1999"
-  },
-  "features": [
-    {
-      "@id": "pop1999",
-      "type": "Feature",
-      "geometry": null,
-      "properties": {
-        "comment": "Simple result case",
-        "observedProperty": "https://dbpedia.org/ontology/population",
-        "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Spanish%20Fork",
-        "hasSimpleResult": 15555.0
-      }
-    },
-    {
-      "@id": "something",
-      "type": "Feature",
-      "geometry": null,
-      "properties": {
-        "observedProperty": "https://example.org/someproperty",
-        "hasFeatureOfInterest": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem",
-        "hasResult": {
-          "a": 1,
-          "b": {
-            "b1": "rb1",
-            "b2": "rb2"
-          }
-        }
-      }
-    }
-  ]
-}
-```
-
-<blockquote class="lang-specific jsonld">
-  <p class="example-links">
-    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/unstable/sosa/features/observationCollection/example_1_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Ffeatures%2FobservationCollection%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
-</blockquote>
-
-
-
-
 ```turtle
 @prefix eg: <http://example.org/my-feature/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -208,8 +143,7 @@ eg:pop1999 a sosa:Observation ;
 eg:c1 a sosa:ObservationCollection ;
     sosa:hasMember eg:pop1999,
         eg:pop2000 ;
-    sosa:observedProperty <http://dbpedia.org/ontology/population> ;
-    sosa:resultTime "2022-05-01T22:33:44+00:00"^^xsd:dateTime .
+    sosa:observedProperty <http://dbpedia.org/ontology/population> .
 
 <http://dbpedia.org/ontology/population> a skos:Concept ;
     skos:prefLabel "Population" .
@@ -256,7 +190,9 @@ allOf:
 x-jsonld-extra-terms:
   Observation: http://www.w3.org/ns/sosa/Observation
   Sample: http://www.w3.org/ns/sosa/Sample
-  observedProperty: http://www.w3.org/ns/sosa/observedProperty
+  observedProperty:
+    x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
+    x-jsonld-type: '@id'
   phenomenonTime: http://www.w3.org/ns/sosa/phenomenonTime
   observes:
     x-jsonld-id: http://www.w3.org/ns/sosa/observes
@@ -350,204 +286,14 @@ Links to the schema:
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml</a>
 * JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json</a>
 
-
-# JSON-LD Context
-
-```json--ldContext
-{
-  "@context": {
-    "type": "@type",
-    "links": {
-      "@id": "rdfs:seeAlso",
-      "@context": {
-        "href": "oa:hasTarget",
-        "rel": {
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id",
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          }
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      }
-    },
-    "features": {
-      "@container": "@set",
-      "@id": "sosa:hasMember",
-      "@context": {
-        "id": "@id",
-        "geometry": {
-          "@id": "geojson:geometry",
-          "@context": {}
-        },
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
-        },
-        "Feature": "geojson:Feature",
-        "FeatureCollection": "geojson:FeatureCollection",
-        "GeometryCollection": "geojson:GeometryCollection",
-        "LineString": "geojson:LineString",
-        "MultiLineString": "geojson:MultiLineString",
-        "MultiPoint": "geojson:MultiPoint",
-        "MultiPolygon": "geojson:MultiPolygon",
-        "Point": "geojson:Point",
-        "Polygon": "geojson:Polygon",
-        "features": {
-          "@container": "@set",
-          "@id": "sosa:hasMember"
-        },
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        },
-        "hasResult": "sosa:hasResult",
-        "hasSimpleResult": "sosa:hasSimpleResult"
-      }
-    },
-    "properties": "@nest",
-    "resultTime": "sosa:resultTime",
-    "phenomenonTime": "sosa:phenomenonTime",
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
-    "observedProperty": "sosa:observedProperty",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "Observation": "sosa:Observation",
-    "Sample": "sosa:Sample",
-    "observes": {
-      "@id": "sosa:observes",
-      "@type": "@id"
-    },
-    "isObservedBy": {
-      "@id": "sosa:isObservedBy",
-      "@type": "@id"
-    },
-    "madeObservation": {
-      "@id": "sosa:madeObservation",
-      "@type": "@id"
-    },
-    "actsOnProperty": {
-      "@id": "sosa:actsOnProperty",
-      "@type": "@id"
-    },
-    "isActedOnBy": {
-      "@id": "sosa:isActedOnBy",
-      "@type": "@id"
-    },
-    "madeActuation": {
-      "@id": "sosa:madeActuation",
-      "@type": "@id"
-    },
-    "madeByActuator": {
-      "@id": "sosa:madeByActuator",
-      "@type": "@id"
-    },
-    "hasSample": {
-      "@id": "sosa:hasSample",
-      "@type": "@id"
-    },
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
-      "@type": "@id"
-    },
-    "madeSampling": {
-      "@id": "sosa:madeSampling",
-      "@type": "@id"
-    },
-    "madeBySampler": {
-      "@id": "sosa:madeBySampler",
-      "@type": "@id"
-    },
-    "isFeatureOfInterestOf": {
-      "@id": "sosa:isFeatureOfInterestOf",
-      "@type": "@id"
-    },
-    "hasResult": "sosa:hasResult",
-    "isResultOf": "sosa:isResultOf",
-    "hasSimpleResult": "sosa:hasSimpleResult",
-    "hosts": {
-      "@id": "sosa:hosts",
-      "@type": "@id"
-    },
-    "isHostedBy": "sosa:isHostedBy",
-    "isProxyFor": "ssn:isProxyFor",
-    "wasOriginatedBy": "ssn:wasOriginatedBy",
-    "detects": "ssn:detects",
-    "hasProperty": "ssn:hasProperty",
-    "isPropertyOf": "ssn:isPropertyOf",
-    "forProperty": "ssn:forProperty",
-    "implements": "ssn:implements",
-    "implementedBy": "ssn:implementedBy",
-    "hasInput": "ssn:hasInput",
-    "hasOutput": "ssn:hasOutput",
-    "hasSubSystem": "ssn:hasSubSystem",
-    "deployedSystem": "ssn:deployedSystem",
-    "hasDeployment": "ssn:hasDeployment",
-    "deployedOnPlatform": "ssn:deployedOnPlatform",
-    "inDeployment": "ssn:inDeployment",
-    "inCondition": "ssn:systems/inCondition",
-    "hasSystemCapability": "ssn:systems/hasSystemCapability",
-    "hasSystemProperty": "ssn:systems/hasSystemProperty",
-    "hasOperatingRange": "ssn:systems/hasOperatingRange",
-    "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
-    "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
-    "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
-    "qualityOfObservation": "ssn:systems/qualityOfObservation",
-    "hasMember": "sosa:hasMember",
-    "featureType": "@type",
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "bbox": {
-      "x-jsonld-container": "@list",
-      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
-    },
-    "coordinates": {
-      "x-jsonld-container": "@list",
-      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
-    },
-    "geojson": "https://purl.org/geojson/vocab#",
-    "oa": "http://www.w3.org/ns/oa#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "dct": "http://purl.org/dc/terms/",
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn": "http://www.w3.org/ns/ssn/",
-    "ssn-system": "ssn:systems/",
-    "@version": 1.1
-  }
-}
-```
-
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Funstable%2Fsosa%2Ffeatures%2FobservationCollection%2Fcontext.jsonld">View on JSON-LD Playground</a>
-
-You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld</a>
-
 # Validation
 
 ## SHACL Shapes
 
 The following SHACL shapes are used for validating this building block:
 
-* [https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl)
+* [https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl)
+* [https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl)
 
 # References
 

@@ -2,6 +2,7 @@
   "imports": [],
   "bblocks": [
     {
+      "itemIdentifier": "ogc.geo.common.data_types.geojson",
       "name": "GeoJSON",
       "abstract": "A GeoJSON object",
       "status": "stable",
@@ -23,7 +24,6 @@
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "itemIdentifier": "ogc.geo.common.data_types.geojson",
       "shaclRules": [],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "itemIdentifier": "ogc.geo.common.parameters.bbox",
+      "itemIdentifier": "r1.geo.common.parameters.bbox",
       "name": "bbox",
       "abstract": "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information).",
       "status": "stable",
@@ -85,6 +85,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.common.parameters.bbox-crs",
       "name": "bbox-crs",
       "abstract": "The bbox-crs query parameter can be used to assert the coordinate reference system that is used for the coordinate values of the bbox parameter.",
       "status": "stable",
@@ -102,7 +103,6 @@
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "itemIdentifier": "ogc.geo.common.parameters.bbox-crs",
       "shaclRules": [],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml",
@@ -126,6 +126,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.ogc-utils.json-link",
       "name": "JSON Link",
       "abstract": "Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API\u2019s.",
       "status": "stable",
@@ -142,7 +143,6 @@
       ],
       "maturity": "mature",
       "scope": "ogc-utils",
-      "itemIdentifier": "ogc.ogc-utils.json-link",
       "shaclRules": [],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
@@ -167,6 +167,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.geopose.advanced",
       "name": "GeoPose Advanced",
       "abstract": "Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.",
       "status": "under-development",
@@ -188,7 +189,6 @@
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.json"
       },
       "group": "GeoPose",
-      "itemIdentifier": "ogc.geo.geopose.advanced",
       "shaclRules": [],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/advanced/",
@@ -209,6 +209,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.geopose.basic.quaternion",
       "name": "GeoPose Basic-Quaternion",
       "abstract": "Basic GeoPose using quaternion to specify orientation",
       "status": "under-development",
@@ -230,7 +231,6 @@
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.json"
       },
       "group": "GeoPose",
-      "itemIdentifier": "ogc.geo.geopose.basic.quaternion",
       "shaclRules": [],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/",
@@ -251,6 +251,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.geopose.basic.ypr",
       "name": "GeoPose Basic-YPR",
       "abstract": "Basic GeoPose using yaw, pitch, and roll to specify orientation",
       "status": "under-development",
@@ -272,7 +273,6 @@
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json"
       },
       "group": "GeoPose",
-      "itemIdentifier": "ogc.geo.geopose.basic.ypr",
       "shaclRules": [],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/",
@@ -294,6 +294,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.ogc-utils.iri-or-curie",
       "name": "IRI or CURIE",
       "abstract": "This Building Block defines a data type for a full IRI/URI or a CURIE (with or without a prefix)",
       "status": "stable",
@@ -318,7 +319,6 @@
       ],
       "scope": "geo",
       "group": "Common",
-      "itemIdentifier": "ogc.ogc-utils.iri-or-curie",
       "shaclRules": [],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml",
@@ -343,6 +343,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.unstable.sosa.properties.observation",
       "name": "SOSA Observation",
       "abstract": "This building block defines the set of properties for an observation according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature.",
       "status": "under-development",
@@ -367,8 +368,9 @@
         "o&m&s"
       ],
       "group": "SOSA",
-      "itemIdentifier": "ogc.unstable.sosa.properties.observation",
-      "shaclRules": [],
+      "shaclRules": [
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+      ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.json"
@@ -393,63 +395,7 @@
       }
     },
     {
-      "name": "SOSA ObservationCollection",
-      "abstract": "This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification.",
-      "status": "invalid",
-      "dateTimeAddition": "2023-04-13T00:00:00Z",
-      "itemClass": "schema",
-      "register": "ogc-building-block-register",
-      "version": "1.0",
-      "dateOfLastChange": "2023-04-28",
-      "sources": [
-        {
-          "title": "Semantic Sensor Network Ontology",
-          "link": "https://www.w3.org/TR/vocab-ssn/"
-        },
-        {
-          "title": "Extensions to the Semantic Sensor Network Ontology",
-          "link": "https://www.w3.org/TR/vocab-ssn-ext/"
-        }
-      ],
-      "maturity": "development",
-      "scope": "unstable",
-      "tags": [
-        "sosa",
-        "ssn",
-        "observations",
-        "o&m",
-        "o&m&s"
-      ],
-      "group": "SOSA",
-      "itemIdentifier": "ogc.unstable.sosa.properties.observationCollection",
-      "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/rules.shacl"
-      ],
-      "schema": {
-        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml",
-        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.json"
-      },
-      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld",
-      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/",
-      "validationPassed": false,
-      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json"
-        },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observationCollection/"
-        }
-      }
-    },
-    {
-      "itemIdentifier": "ogc.geo.common.data_types.bounding_box",
+      "itemIdentifier": "r1.geo.common.data_types.bounding_box",
       "name": "Bounding Box",
       "abstract": "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API\u2019s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other.",
       "status": "stable",
@@ -506,6 +452,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.features.feature",
       "name": "Feature",
       "abstract": "A feature. Every feature is a sub-resource of an OGC Collection.",
       "status": "stable",
@@ -527,11 +474,10 @@
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "itemIdentifier": "ogc.geo.features.feature",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.geo.common.data_types.geojson",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.common.data_types.geojson"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
@@ -540,6 +486,7 @@
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/",
       "validationPassed": true,
+      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/feature/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
@@ -556,6 +503,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.json-fg.feature",
       "name": "JSON-FG Feature",
       "abstract": "A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.",
       "status": "stable",
@@ -572,7 +520,6 @@
       ],
       "scope": "geo",
       "group": "JSON-FG",
-      "itemIdentifier": "ogc.geo.json-fg.feature",
       "shaclRules": [],
       "dependsOn": [
         "ogc.ogc-utils.json-link"
@@ -600,6 +547,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.json-fg.link-role",
       "name": "Link with role and target conformance",
       "abstract": "A JSON-FG compliant web link with mandatory annotation of link role and optional conformance information to describe target resource. Compliant with profile resource descriptor model.",
       "status": "under-development",
@@ -616,11 +564,10 @@
         "link",
         "profile"
       ],
-      "itemIdentifier": "ogc.geo.json-fg.link-role",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml",
@@ -646,6 +593,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.ogc-utils.topology",
       "name": "Geometry using references",
       "abstract": "Demonstration of a schema using coordinates of points, withpout duplication",
       "status": "under-development",
@@ -663,7 +611,6 @@
         "geometry",
         "topology"
       ],
-      "itemIdentifier": "ogc.ogc-utils.topology",
       "shaclRules": [],
       "dependsOn": [
         "ogc.ogc-utils.iri-or-curie"
@@ -692,6 +639,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.unstable.sosa.examples.vectorObservation",
       "name": "Example SOSA Vector Observation",
       "abstract": "This building block defines an example SOSA Vector Observation",
       "status": "under-development",
@@ -709,8 +657,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.geopose.basic.ypr",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.geo.geopose.basic.ypr"
       ],
       "tags": [
         "sosa",
@@ -721,8 +669,9 @@
         "examples"
       ],
       "group": "SOSA",
-      "itemIdentifier": "ogc.unstable.sosa.examples.vectorObservation",
-      "shaclRules": [],
+      "shaclRules": [
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservation/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+      ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.json"
@@ -747,6 +696,66 @@
       }
     },
     {
+      "itemIdentifier": "ogc.unstable.sosa.properties.observationCollection",
+      "name": "SOSA ObservationCollection",
+      "abstract": "This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification.",
+      "status": "invalid",
+      "dateTimeAddition": "2023-04-13T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "1.0",
+      "dateOfLastChange": "2023-04-28",
+      "sources": [
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        },
+        {
+          "title": "Extensions to the Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn-ext/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "sosa",
+        "ssn",
+        "observations",
+        "o&m",
+        "o&m&s"
+      ],
+      "group": "SOSA",
+      "shaclRules": [
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+      ],
+      "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.unstable.sosa.properties.observation"
+      ],
+      "schema": {
+        "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml",
+        "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.json"
+      },
+      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/",
+      "validationPassed": false,
+      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json"
+        },
+        "slate": {
+          "mediatype": "text/html",
+          "url": "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observationCollection/"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.geo.features.featureCollection",
       "name": "Feature Collection",
       "abstract": "A collection of features.",
       "status": "stable",
@@ -761,10 +770,10 @@
           "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_5"
         }
       ],
+      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "itemIdentifier": "ogc.geo.features.featureCollection",
       "shaclRules": [],
       "dependsOn": [
         "ogc.ogc-utils.json-link",
@@ -774,9 +783,9 @@
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json"
       },
-      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/",
       "validationPassed": true,
+      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/featureCollection/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
@@ -793,6 +802,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.json-fg.feature-lenient",
       "name": "JSON-FG Feature - Lenient",
       "abstract": "A OGC Features and Geometries JSON (JSON-FG) Feature that does not require the \"time\" and \"place\" properties.",
       "status": "stable",
@@ -813,7 +823,6 @@
       ],
       "scope": "geo",
       "group": "JSON-FG",
-      "itemIdentifier": "ogc.geo.json-fg.feature-lenient",
       "shaclRules": [],
       "dependsOn": [
         "ogc.ogc-utils.json-link",
@@ -841,9 +850,10 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.json-fg.featureCollection",
       "name": "JSON-FG Feature Collection",
       "abstract": "A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.",
-      "status": "stable",
+      "status": "invalid",
       "dateTimeAddition": "2023-05-31T14:56:51+00:00",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -857,7 +867,6 @@
       ],
       "scope": "geo",
       "group": "JSON-FG",
-      "itemIdentifier": "ogc.geo.json-fg.featureCollection",
       "shaclRules": [],
       "dependsOn": [
         "ogc.geo.json-fg.feature",
@@ -869,7 +878,8 @@
       },
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/",
-      "validationPassed": true,
+      "validationPassed": false,
+      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/featureCollection/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
@@ -886,6 +896,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.geo.json-fg.featureCollection-lenient",
       "name": "JSON-FG Feature Collection - Lenient",
       "abstract": "A collection of lenient OGC Features and Geometries JSON (JSON-FG) Features, that do not require the \"time\" and \"place\" properties",
       "status": "stable",
@@ -906,12 +917,11 @@
       ],
       "scope": "geo",
       "group": "JSON-FG",
-      "itemIdentifier": "ogc.geo.json-fg.featureCollection-lenient",
       "shaclRules": [],
       "dependsOn": [
         "ogc.geo.json-fg.feature-lenient",
-        "ogc.geo.features.featureCollection",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.featureCollection"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
@@ -935,6 +945,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.unstable.sosa.features.observation",
       "name": "SOSA Observation Feature",
       "abstract": "This building blocks defines a GeoJSON feature containing a SOSA Observation",
       "status": "under-development",
@@ -963,8 +974,9 @@
         "o&m&s"
       ],
       "group": "SOSA",
-      "itemIdentifier": "ogc.unstable.sosa.features.observation",
-      "shaclRules": [],
+      "shaclRules": [
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+      ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json"
@@ -989,9 +1001,10 @@
       }
     },
     {
+      "itemIdentifier": "ogc.unstable.sosa.features.observationCollection",
       "name": "SOSA ObservationCollection Feature",
       "abstract": "This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification.",
-      "status": "invalid",
+      "status": "under-development",
       "dateTimeAddition": "2023-04-13T00:00:00Z",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -1017,22 +1030,21 @@
         "o&m&s"
       ],
       "group": "SOSA",
-      "itemIdentifier": "ogc.unstable.sosa.features.observationCollection",
       "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl"
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl",
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
       ],
       "dependsOn": [
-        "ogc.geo.json-fg.featureCollection-lenient",
         "ogc.unstable.sosa.features.observation",
+        "ogc.geo.json-fg.featureCollection-lenient",
         "ogc.unstable.sosa.properties.observationCollection"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json"
       },
-      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/features/observationCollection/",
       "documentation": {
         "markdown": {
@@ -1050,9 +1062,10 @@
       }
     },
     {
+      "itemIdentifier": "ogc.unstable.sosa.examples.vectorObservationFeature",
       "name": "Example SOSA Vector Observation Feature",
       "abstract": "This building block defines an example SOSA Observation Feature for a Vector Observation",
-      "status": "invalid",
+      "status": "under-development",
       "dateTimeAddition": "2023-05-19T00:00:00Z",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -1067,10 +1080,10 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.examples.vectorObservation",
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.properties.observation",
-        "ogc.unstable.sosa.features.observationCollection"
+        "ogc.unstable.sosa.examples.vectorObservation",
+        "ogc.unstable.sosa.features.observationCollection",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",
@@ -1081,17 +1094,17 @@
         "examples"
       ],
       "group": "SOSA",
-      "itemIdentifier": "ogc.unstable.sosa.examples.vectorObservationFeature",
       "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl"
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl",
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
+        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json"
       },
-      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/examples/vectorObservationFeature/",
       "documentation": {
         "markdown": {
@@ -1109,6 +1122,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.unstable.sosa",
       "name": "Sensor, Observation, Sample, and Actuator (SOSA)",
       "abstract": "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model",
       "status": "under-development",
@@ -1133,13 +1147,11 @@
       ],
       "superBBlock": true,
       "group": "SOSA",
-      "itemIdentifier": "ogc.unstable.sosa",
       "shaclRules": [],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json"
       },
-      "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/",
       "validationPassed": true,
       "documentation": {

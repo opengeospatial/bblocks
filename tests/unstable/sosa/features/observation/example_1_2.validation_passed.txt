@@ -1,5 +1,26 @@
+Validation report for ogc.unstable.sosa.features.observation - SOSA Observation Feature
+Generated 2023-10-13T08:37:38.245434+00:00
 === Files ===
 Using example_1_2.ttl from examples
 Output Turtle example_1_2.ttl created
-=== End Files ===
+=== End ValidationReportSection.FILES ===
+
+=== SHACL ===
+Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
+Validation Report
+Conforms: True
+
+Focus nodes:
+ - Shape <http://example.com/rules#testFeatureOfInterest>: _:nab4f31d777044cf28da911956d5d9117b1
+ - Shape <http://example.com/rules#testRequiredTime>: _:nab4f31d777044cf28da911956d5d9117b1
+ - Shape <http://example.com/rules#testResult>: _:nab4f31d777044cf28da911956d5d9117b1
+ - Shape <http://example.com/rules#testObservedProperty>: _:nab4f31d777044cf28da911956d5d9117b1
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nc3c5cb2bb0d34de2ba547c4a925b0e4fb19): *none*
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:nc3c5cb2bb0d34de2ba547c4a925b0e4fb32): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nc3c5cb2bb0d34de2ba547c4a925b0e4fb29): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nc3c5cb2bb0d34de2ba547c4a925b0e4fb5): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nc3c5cb2bb0d34de2ba547c4a925b0e4fb11): *none*
+
+=== End ValidationReportSection.SHACL ===
 

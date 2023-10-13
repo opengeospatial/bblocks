@@ -7,6 +7,93 @@ A collection of features.
 
 [*Status*](http://www.opengis.net/def/status): Stable
 
+## Examples
+
+### Example
+Minimal example of this schema.
+
+NB. uses a local @context in the data example where application specialisations would apply such mappings.
+#### json
+```json
+{
+  "@context": {
+    "my": "http://my.org/featureTypes/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "name": "skos:prefLabel"
+  },
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+    {
+      "my": "http://my.org/featureTypes/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "name": "skos:prefLabel"
+    }
+  ],
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
+    skos:prefLabel "MyFeatureCollection" ;
+    geojson:features <http://www.example.com/features/f1> .
+
+<http://www.example.com/features/f1> a geojson:Feature ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -32,10 +119,10 @@ allOf:
       type: array
       items:
         $ref: ../feature/schema.yaml
-      x-jsonld-id: https://purl.org/geojson/vocab#features
+x-jsonld-extra-terms:
+  properties: '@nest'
 x-jsonld-prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
-  geojson: https://purl.org/geojson/vocab#
 
 ```
 
@@ -67,38 +154,21 @@ Links to the schema:
         "length": "dct:extent"
       }
     },
-    "features": {
-      "@id": "geojson:features",
+    "type": "@type",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@id": "geojson:geometry",
       "@context": {
-        "type": "@type",
-        "id": "@id",
-        "geometry": {
-          "@id": "geojson:geometry",
-          "@context": {
-            "coordinates": {
-              "@container": "@list",
-              "@id": "geojson:coordinates"
-            }
-          }
-        },
-        "bbox": {
+        "coordinates": {
           "@container": "@list",
-          "@id": "geojson:bbox"
-        },
-        "Feature": "geojson:Feature",
-        "FeatureCollection": "geojson:FeatureCollection",
-        "GeometryCollection": "geojson:GeometryCollection",
-        "LineString": "geojson:LineString",
-        "MultiLineString": "geojson:MultiLineString",
-        "MultiPoint": "geojson:MultiPoint",
-        "MultiPolygon": "geojson:MultiPolygon",
-        "Point": "geojson:Point",
-        "Polygon": "geojson:Polygon",
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
+          "@id": "geojson:coordinates"
         }
       }
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
     },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -109,11 +179,14 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "properties": "@nest",
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "geojson": "https://purl.org/geojson/vocab#",
     "@version": 1.1
   }
 }

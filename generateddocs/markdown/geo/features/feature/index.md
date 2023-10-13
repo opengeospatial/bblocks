@@ -20,6 +20,62 @@ Each GeoJSON feature includes the following JSON members:
 * `geometry`: the primary geometry of the feature describing its location as a GeoJSON geometry object. `null`, if the
   feature has no spatial geometry.
 * `properties`: an object with a member for each feature property.
+## Examples
+
+### Example
+Minimal example of this schema.
+
+NB. uses a local @context in the data example where application specialisations would apply such mappings.
+#### json
+```json
+{
+  "id": "f1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      174.7501603083,
+      -36.9307359096
+    ]
+  },
+  "properties": {
+    "comment": "An attribute value"
+  }
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "id": "f1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      174.7501603083,
+      -36.9307359096
+    ]
+  },
+  "properties": {
+    "comment": "An attribute value"
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/features/f1> a geojson:Feature ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .
+
+
+```
+
 ## Schema
 
 ```yaml

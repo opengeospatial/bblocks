@@ -1,0 +1,105 @@
+{
+  "title": "Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection",
+  "bblockId": "ogc.geo.json-fg.featureCollection",
+  "generated": "2023-10-13T08:37:37.320219+00:00",
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "require_fail": false,
+        "filename": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/tests/required-properties-fail.json",
+        "language": "json"
+      },
+      "sections": {
+        "FILES": [
+          {
+            "is_error": false,
+            "message": "Using required-properties-fail.json from test resources"
+          },
+          {
+            "op": "jsonld-uplift",
+            "is_error": false,
+            "message": "JSON-LD context is present - uplifting"
+          },
+          {
+            "op": "jsonld-create",
+            "filename": "required-properties-fail.jsonld",
+            "is_error": false,
+            "message": "Output JSON-LD required-properties-fail.jsonld created"
+          },
+          {
+            "op": "ttl-create",
+            "empty": false,
+            "filename": "required-properties-fail.ttl",
+            "size": 10,
+            "is_error": false,
+            "message": "Output Turtle required-properties-fail.ttl created"
+          }
+        ],
+        "JSON_SCHEMA": [
+          {
+            "op": "validation",
+            "result": false,
+            "exception": "ValidationError",
+            "errorMessage": "'time' is a required property",
+            "is_error": true,
+            "message": "ValidationError: 'time' is a required property\n\nFailed validating 'required' in schema['properties']['features']['items']:\n    {'$schema': 'https://json-schema.org/draft/2019-09/schema',\n     'description': 'This JSON Schema is part of JSON-FG version 0.1.1',\n     'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json'},\n                    'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json'},\n                    'geometry': {'$ref': 'https://beta.schemas.opengis.net/json-fg/geometry.json',\n                                 'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},\n                    'id': {'oneOf': [{'type': 'number'},\n                                     {'type': 'string'}],\n                           'x-jsonld-id': '@id'},\n                    'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},\n                                                  {'$ref': '../../../ogc-utils/json-link/schema.yaml'}]},\n                              'type': 'array',\n                              'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},\n                    'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json'},\n                    'properties': {'oneOf': [{'type': 'null'},\n                                             {'type': 'object'}],\n                                   'x-jsonld-id': '@nest'},\n                    'time': {'$ref': 'https://beta.schemas.opengis.net/json-fg/time.json'},\n                    'type': {'enum': ['Feature'],\n                             'type': 'string',\n                             'x-jsonld-id': '@type'}},\n     'required': ['type', 'time', 'place', 'geometry', 'properties'],\n     'title': 'a JSON-FG Feature',\n     'type': 'object',\n     'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',\n                              'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',\n                              'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',\n                              'LineString': 'https://purl.org/geojson/vocab#LineString',\n                              'MultiLineString': 'https://purl.org/geojson/vocab#MultiLineString',\n                              'MultiPoint': 'https://purl.org/geojson/vocab#MultiPoint',\n                              'MultiPolygon': 'https://purl.org/geojson/vocab#MultiPolygon',\n                              'Point': 'https://purl.org/geojson/vocab#Point',\n                              'Polygon': 'https://purl.org/geojson/vocab#Polygon',\n                              'bbox': {'x-jsonld-container': '@list',\n                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                              'coordinates': {'x-jsonld-container': '@list',\n                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                              'features': {'x-jsonld-container': '@set',\n                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#features'}},\n     'x-jsonld-prefixes': {'geojson': 'https://purl.org/geojson/vocab#',\n                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#'}}\n\nOn instance['features'][0]:\n    {'geometry': {'coordinates': [174.7501603083, -36.9307359096],\n                  'type': 'Point'},\n     'id': 'f1',\n     'properties': {'comment': 'An attribute value'},\n     'type': 'Feature'}"
+          }
+        ],
+        "GENERAL": [
+          {
+            "op": "require-fail",
+            "is_error": true,
+            "message": "Test was expected to fail but it did not."
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "require_fail": false,
+        "filename": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "sections": {
+        "FILES": [
+          {
+            "is_error": false,
+            "message": "Using example_1_1.json from examples"
+          },
+          {
+            "op": "jsonld-uplift",
+            "is_error": false,
+            "message": "JSON-LD context is present - uplifting"
+          },
+          {
+            "op": "jsonld-create",
+            "filename": "example_1_1.jsonld",
+            "is_error": false,
+            "message": "Output JSON-LD example_1_1.jsonld created"
+          },
+          {
+            "op": "ttl-create",
+            "empty": false,
+            "filename": "example_1_1.ttl",
+            "size": 4,
+            "is_error": false,
+            "message": "Output Turtle example_1_1.ttl created"
+          }
+        ],
+        "JSON_SCHEMA": [
+          {
+            "op": "validation",
+            "result": true,
+            "is_error": false,
+            "message": "Validation passed"
+          }
+        ]
+      }
+    }
+  ],
+  "globalErrors": {}
+}

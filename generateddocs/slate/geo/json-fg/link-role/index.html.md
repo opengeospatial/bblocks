@@ -111,7 +111,7 @@ $defs:
   coderef:
     $ref: ../../../ogc-utils/iri-or-curie/schema.yaml
   coderefs:
-    $ref: ../../../ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull
+    $ref: ../../../ogc-utils/iri-or-curie/schema.yaml
 allOf:
 - $ref: ../../../ogc-utils/json-link/schema.yaml
 - properties:

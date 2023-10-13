@@ -1,48 +1,104 @@
+Validation report for ogc.unstable.sosa.properties.observationCollection - SOSA ObservationCollection
+Generated 2023-10-13T08:37:35.147635+00:00
 === Files ===
 Using example_1_1.json from examples
-JSON-LD context is present - uplifting
-Output JSON-LD example_1_1.jsonld created
-Output Turtle example_1_1.ttl created
-=== End Files ===
+=== End ValidationReportSection.FILES ===
 
-=== JSON Schema ===
-Validation passed
-=== End JSON Schema ===
-
-=== SHACL ===
-Using SHACL files for validation:
- - unstable/sosa/_sources/properties/observationCollection/rules.shacl
+=== Unknown errors ===
 
 ** Validation error **
-Validation Report
-Conforms: False
-Results (3):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime ) ]
-	Focus Node: Literal("_:a1")
-	Result Path: ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime )
-	Message: Less than 1 values on Literal("_:a1")->( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] sosa:phenomenonTime )
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
-	Focus Node: Literal("_:a1")
-	Result Path: ( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
-	Message: Less than 1 values on Literal("_:a1")->( [ sh:zeroOrMorePath [ sh:inversePath sosa:hasMember ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ] ]
-	Focus Node: Literal("_:a1")
-	Result Path: [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
-	Message: Less than 1 values on Literal("_:a1")->[ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
+Traceback (most recent call last):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 909, in resolve_from_url
+    document = self.store[url]
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_utils.py", line 28, in __getitem__
+    return self.store[self.normalize(uri)]
+,KeyError: 'file:///github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'
+,
+During handling of the above exception, another exception occurred:
 
-Focus nodes:
- - Shape <http://example.com/rules#testRequiredProperties>: _:a1
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5042962c056346edaaf5b4fd80db43b7b4): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5042962c056346edaaf5b4fd80db43b7b9): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5042962c056346edaaf5b4fd80db43b7b26): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5042962c056346edaaf5b4fd80db43b7b23): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5042962c056346edaaf5b4fd80db43b7b14): *none*
+,Traceback (most recent call last):
+,  File "/usr/local/lib/python3.10/urllib/request.py", line 1505, in open_local_file
+    stats = os.stat(localfile)
+,FileNotFoundError: [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'
+,
+During handling of the above exception, another exception occurred:
 
-=== End SHACL ===
+,Traceback (most recent call last):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 912, in resolve_from_url
+    document = self.resolve_remote(url)
+,  File "/src/ogc/bblocks/validate.py", line 732, in resolve_remote
+    with urlopen(uri) as url:
+,  File "/usr/local/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+,  File "/usr/local/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+,  File "/usr/local/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+,  File "/usr/local/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+,  File "/usr/local/lib/python3.10/urllib/request.py", line 1483, in file_open
+    return self.open_local_file(req)
+,  File "/usr/local/lib/python3.10/urllib/request.py", line 1522, in open_local_file
+    raise URLError(exp)
+,urllib.error.URLError: <urlopen error [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'>
+,
+During handling of the above exception, another exception occurred:
+
+,Traceback (most recent call last):
+,  File "/src/ogc/bblocks/validate.py", line 406, in validate_inner
+    validate_json(json_doc, schema_validator)
+,  File "/src/ogc/bblocks/validate.py", line 755, in validate_json
+    error = jsonschema.exceptions.best_match(validator.iter_errors(instance))
+,  File "/venv/lib/python3.10/site-packages/jsonschema/exceptions.py", line 384, in best_match
+    best = next(errors, None)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 362, in allOf
+    yield from validator.descend(instance, subschema, schema_path=index)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 298, in ref
+    yield from validator.descend(instance, resolved)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 332, in properties
+    yield from validator.descend(
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 76, in items
+    yield from validator.descend(
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 368, in anyOf
+    errs = list(validator.descend(instance, subschema, schema_path=index))
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 294, in ref
+    scope, resolved = validator.resolver.resolve(ref)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 898, in resolve
+    return url, self._remote_cache(url)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 914, in resolve_from_url
+    raise exceptions.RefResolutionError(exc)
+,jsonschema.exceptions.RefResolutionError: <urlopen error [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'>
+,
+During handling of the above exception, another exception occurred:
+
+,Traceback (most recent call last):
+,  File "/src/ogc/bblocks/validate.py", line 531, in _validate_resource
+    validate_inner()
+,  File "/src/ogc/bblocks/validate.py", line 426, in validate_inner
+    'errorMessage': e.message,
+,AttributeError: 'RefResolutionError' object has no attribute 'message'
+
+=== End ValidationReportSection.UNKNOWN ===
 

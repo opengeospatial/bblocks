@@ -1,0 +1,29 @@
+Validation report for ogc.unstable.sosa.features.observationCollection - SOSA ObservationCollection Feature
+Generated 2023-10-13T08:37:39.365133+00:00
+=== Files ===
+Using example_1_2.ttl from examples
+Output Turtle example_1_2.ttl created
+=== End ValidationReportSection.FILES ===
+
+=== SHACL ===
+Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
+Validation Report
+Conforms: True
+
+Focus nodes:
+ - Shape :testInCollectionOrMember-observedProperty: eg:pop1999,eg:pop2000
+ - Shape <http://example.com/rules#testRequiredTime>: eg:pop1999,eg:pop2000
+ - Shape <http://example.com/rules#testResult>: eg:pop1999,eg:pop2000
+ - Shape :testInCollectionOrMember-foi: eg:pop1999,eg:pop2000
+ - Shape <http://example.com/rules#testFeatureOfInterest>: eg:pop1999,eg:pop2000
+ - Shape <http://example.com/rules#testObservedProperty>: eg:pop1999,eg:pop2000
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:ncfee27b02d7143adbbb57c2e1355a71db11): *none*
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:ncfee27b02d7143adbbb57c2e1355a71db32): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:ncfee27b02d7143adbbb57c2e1355a71db29): *none*
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:ncfee27b02d7143adbbb57c2e1355a71db19): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:ncfee27b02d7143adbbb57c2e1355a71db5): *none*
+
+=== End ValidationReportSection.SHACL ===
+

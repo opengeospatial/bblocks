@@ -5,7 +5,7 @@
 
 A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data.
 
-[*Status*](http://www.opengis.net/def/status): Stable
+[*Status*](http://www.opengis.net/def/status): Invalid
 
 ## Description
 
@@ -32,6 +32,97 @@ existing and future GeoJSON clients will continue to parse and understand GeoJSO
 also be able to parse and understand the additional members.
 
 JSON Schema is used to formally specify the JSON-FG syntax.
+## Examples
+
+### Example
+Minimal example of this schema.
+
+NB. uses a local @context in the data example where application specialisations would apply such mappings.
+#### json
+```json
+{
+  "@context": {
+    "my": "http://my.org/featureTypes/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "name": "skos:prefLabel"
+  },
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "featureType": "my:FeatureType",
+      "geometry": null,
+      "time": null,
+      "coordRefSys": "EPSG",
+      "place": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
+    {
+      "my": "http://my.org/featureTypes/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "name": "skos:prefLabel"
+    }
+  ],
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "featureType": "my:FeatureType",
+      "geometry": null,
+      "time": null,
+      "coordRefSys": "EPSG",
+      "place": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.example.com/features/f1> a geojson:Feature .
+
+[] a geojson:FeatureCollection ;
+    skos:prefLabel "MyFeatureCollection" ;
+    geojson:features <http://www.example.com/features/f1> .
+
+
+```
+
 ## Schema
 
 ```yaml

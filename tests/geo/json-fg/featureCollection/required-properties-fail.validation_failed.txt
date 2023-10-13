@@ -1,0 +1,71 @@
+Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection
+Generated 2023-10-13T08:37:36.142856+00:00
+=== General ===
+
+** Validation error **
+Test was expected to fail but it did not.
+=== End ValidationReportSection.GENERAL ===
+
+=== Files ===
+Using required-properties-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD required-properties-fail.jsonld created
+Output Turtle required-properties-fail.ttl created
+=== End ValidationReportSection.FILES ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'time' is a required property
+
+Failed validating 'required' in schema['properties']['features']['items']:
+    {'$schema': 'https://json-schema.org/draft/2019-09/schema',
+     'description': 'This JSON Schema is part of JSON-FG version 0.1.1',
+     'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json'},
+                    'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json'},
+                    'geometry': {'$ref': 'https://beta.schemas.opengis.net/json-fg/geometry.json',
+                                 'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},
+                    'id': {'oneOf': [{'type': 'number'},
+                                     {'type': 'string'}],
+                           'x-jsonld-id': '@id'},
+                    'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},
+                                                  {'$ref': '../../../ogc-utils/json-link/schema.yaml'}]},
+                              'type': 'array',
+                              'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},
+                    'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json'},
+                    'properties': {'oneOf': [{'type': 'null'},
+                                             {'type': 'object'}],
+                                   'x-jsonld-id': '@nest'},
+                    'time': {'$ref': 'https://beta.schemas.opengis.net/json-fg/time.json'},
+                    'type': {'enum': ['Feature'],
+                             'type': 'string',
+                             'x-jsonld-id': '@type'}},
+     'required': ['type', 'time', 'place', 'geometry', 'properties'],
+     'title': 'a JSON-FG Feature',
+     'type': 'object',
+     'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',
+                              'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',
+                              'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',
+                              'LineString': 'https://purl.org/geojson/vocab#LineString',
+                              'MultiLineString': 'https://purl.org/geojson/vocab#MultiLineString',
+                              'MultiPoint': 'https://purl.org/geojson/vocab#MultiPoint',
+                              'MultiPolygon': 'https://purl.org/geojson/vocab#MultiPolygon',
+                              'Point': 'https://purl.org/geojson/vocab#Point',
+                              'Polygon': 'https://purl.org/geojson/vocab#Polygon',
+                              'bbox': {'x-jsonld-container': '@list',
+                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},
+                              'coordinates': {'x-jsonld-container': '@list',
+                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},
+                              'features': {'x-jsonld-container': '@set',
+                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#features'}},
+     'x-jsonld-prefixes': {'geojson': 'https://purl.org/geojson/vocab#',
+                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#'}}
+
+On instance['features'][0]:
+    {'geometry': {'coordinates': [174.7501603083, -36.9307359096],
+                  'type': 'Point'},
+     'id': 'f1',
+     'properties': {'comment': 'An attribute value'},
+     'type': 'Feature'}
+=== End ValidationReportSection.JSON_SCHEMA ===
+

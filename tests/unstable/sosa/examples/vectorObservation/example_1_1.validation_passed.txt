@@ -1,11 +1,32 @@
+Validation report for ogc.unstable.sosa.examples.vectorObservation - Example SOSA Vector Observation
+Generated 2023-10-13T08:37:35.125923+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
 Output JSON-LD example_1_1.jsonld created
 Output Turtle example_1_1.ttl created
-=== End Files ===
+=== End ValidationReportSection.FILES ===
 
 === JSON Schema ===
 Validation passed
-=== End JSON Schema ===
+=== End ValidationReportSection.JSON_SCHEMA ===
+
+=== SHACL ===
+Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
+Validation Report
+Conforms: True
+
+Focus nodes:
+ - Shape <http://example.com/rules#testFeatureOfInterest>: *none*
+ - Shape <http://example.com/rules#testRequiredTime>: *none*
+ - Shape <http://example.com/rules#testResult>: *none*
+ - Shape <http://example.com/rules#testObservedProperty>: *none*
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n8c885c9bf89944638eed28808244311fb19): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n8c885c9bf89944638eed28808244311fb5): *none*
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:n8c885c9bf89944638eed28808244311fb32): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n8c885c9bf89944638eed28808244311fb11): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n8c885c9bf89944638eed28808244311fb29): *none*
+
+=== End ValidationReportSection.SHACL ===
 
