@@ -26,11 +26,11 @@ A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending G
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
+    <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
 </p>
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/featureCollection/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/featureCollection/" target="_blank">valid</a></strong>
 </aside>
 
 # Description

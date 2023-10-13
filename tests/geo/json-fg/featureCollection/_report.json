@@ -1,12 +1,13 @@
 {
   "title": "Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection",
+  "bblockName": "JSON-FG Feature Collection",
   "bblockId": "ogc.geo.json-fg.featureCollection",
-  "generated": "2023-10-13T09:49:16.233495+00:00",
+  "generated": "2023-10-13T10:07:09.757348+00:00",
   "items": [
     {
       "source": {
         "type": "TEST_RESOURCE",
-        "require_fail": false,
+        "requireFail": true,
         "filename": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/tests/required-properties-fail.json",
         "language": "json"
       },
@@ -49,8 +50,8 @@
         "GENERAL": [
           {
             "op": "require-fail",
-            "is_error": true,
-            "message": "Test was expected to fail but it did not."
+            "is_error": false,
+            "message": "Test was expected to fail and it did."
           }
         ]
       }
@@ -58,7 +59,7 @@
     {
       "source": {
         "type": "EXAMPLE",
-        "require_fail": false,
+        "requireFail": false,
         "filename": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
