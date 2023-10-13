@@ -1,5 +1,5 @@
 Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection
-Generated 2023-10-13T08:37:36.142856+00:00
+Generated 2023-10-13T09:49:15.168500+00:00
 === General ===
 
 ** Validation error **
@@ -18,28 +18,29 @@ Output Turtle required-properties-fail.ttl created
 ** Validation error **
 ValidationError: 'time' is a required property
 
-Failed validating 'required' in schema['properties']['features']['items']:
+Failed validating 'required' in schema['allOf'][1]['properties']['features']['items']:
     {'$schema': 'https://json-schema.org/draft/2019-09/schema',
+     'allOf': [{'$ref': '../../features/feature/schema.yaml'},
+               {'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json'},
+                               'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json'},
+                               'geometry': {'$ref': 'https://beta.schemas.opengis.net/json-fg/geometry.json',
+                                            'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},
+                               'id': {'oneOf': [{'type': 'number'},
+                                                {'type': 'string'}],
+                                      'x-jsonld-id': '@id'},
+                               'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},
+                                                             {'$ref': '../../../ogc-utils/json-link/schema.yaml'}]},
+                                         'type': 'array',
+                                         'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},
+                               'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json'},
+                               'properties': {'oneOf': [{'type': 'null'},
+                                                        {'type': 'object'}],
+                                              'x-jsonld-id': '@nest'},
+                               'time': {'$ref': 'https://beta.schemas.opengis.net/json-fg/time.json'},
+                               'type': {'enum': ['Feature'],
+                                        'type': 'string',
+                                        'x-jsonld-id': '@type'}}}],
      'description': 'This JSON Schema is part of JSON-FG version 0.1.1',
-     'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json'},
-                    'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json'},
-                    'geometry': {'$ref': 'https://beta.schemas.opengis.net/json-fg/geometry.json',
-                                 'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},
-                    'id': {'oneOf': [{'type': 'number'},
-                                     {'type': 'string'}],
-                           'x-jsonld-id': '@id'},
-                    'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},
-                                                  {'$ref': '../../../ogc-utils/json-link/schema.yaml'}]},
-                              'type': 'array',
-                              'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},
-                    'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json'},
-                    'properties': {'oneOf': [{'type': 'null'},
-                                             {'type': 'object'}],
-                                   'x-jsonld-id': '@nest'},
-                    'time': {'$ref': 'https://beta.schemas.opengis.net/json-fg/time.json'},
-                    'type': {'enum': ['Feature'],
-                             'type': 'string',
-                             'x-jsonld-id': '@type'}},
      'required': ['type', 'time', 'place', 'geometry', 'properties'],
      'title': 'a JSON-FG Feature',
      'type': 'object',

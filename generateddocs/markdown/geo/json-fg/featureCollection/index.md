@@ -114,11 +114,11 @@ NB. uses a local @context in the data example where application specialisations 
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://www.example.com/features/f1> a geojson:Feature .
-
-[] a geojson:FeatureCollection ;
+<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
     skos:prefLabel "MyFeatureCollection" ;
     geojson:features <http://www.example.com/features/f1> .
+
+<http://www.example.com/features/f1> a geojson:Feature .
 
 
 ```
@@ -133,33 +133,35 @@ type: object
 required:
 - type
 - features
-properties:
-  type:
-    type: string
-    enum:
-    - FeatureCollection
-    x-jsonld-id: '@type'
-  featureType:
-    $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
-  geometryDimension:
-    type: integer
-    minimum: 0
-    maximum: 3
-  coordRefSys:
-    $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
-  links:
-    type: array
-    items:
-      allOf:
-      - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-      - $ref: ../../../ogc-utils/json-link/schema.yaml
-    x-jsonld-id: rdfs:seeAlso
-  features:
-    type: array
-    items:
-      $ref: ../feature/schema.yaml
-    x-jsonld-container: '@set'
-    x-jsonld-id: https://purl.org/geojson/vocab#features
+allOf:
+- $ref: ../../features/featureCollection/schema.yaml
+- properties:
+    type:
+      type: string
+      enum:
+      - FeatureCollection
+      x-jsonld-id: '@type'
+    featureType:
+      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+    geometryDimension:
+      type: integer
+      minimum: 0
+      maximum: 3
+    coordRefSys:
+      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+    links:
+      type: array
+      items:
+        allOf:
+        - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        - $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: rdfs:seeAlso
+    features:
+      type: array
+      items:
+        $ref: ../feature/schema.yaml
+      x-jsonld-container: '@set'
+      x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 
@@ -176,7 +178,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "type": "@type",
     "links": {
       "@id": "rdfs:seeAlso",
       "@context": {
@@ -194,11 +195,43 @@ Links to the schema:
         "length": "dct:extent"
       }
     },
+    "type": "@type",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@id": "geojson:geometry",
+      "@context": {
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
+      }
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
     "features": {
       "@container": "@set",
       "@id": "geojson:features",
       "@context": {
-        "id": "@id",
+        "geometry": {
+          "@id": "geojson:geometry",
+          "@context": {}
+        },
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
+        },
         "links": {
           "@id": "rdfs:seeAlso",
           "@context": {
@@ -216,43 +249,20 @@ Links to the schema:
             "length": "dct:extent"
           }
         },
-        "geometry": "geojson:geometry",
-        "properties": "@nest",
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
-        },
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        },
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
         }
       }
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "bbox": {
-      "x-jsonld-container": "@list",
-      "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
     },
     "coordinates": {
       "x-jsonld-container": "@list",
       "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
     },
-    "geojson": "https://purl.org/geojson/vocab#",
-    "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "geojson": "https://purl.org/geojson/vocab#",
     "@version": 1.1
   }
 }

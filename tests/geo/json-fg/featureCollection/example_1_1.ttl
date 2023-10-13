@@ -1,9 +1,9 @@
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://www.example.com/features/f1> a geojson:Feature .
-
-[] a geojson:FeatureCollection ;
+<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
     skos:prefLabel "MyFeatureCollection" ;
     geojson:features <http://www.example.com/features/f1> .
+
+<http://www.example.com/features/f1> a geojson:Feature .
 

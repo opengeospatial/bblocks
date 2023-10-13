@@ -5,32 +5,34 @@ type: object
 required:
 - type
 - features
-properties:
-  type:
-    type: string
-    enum:
-    - FeatureCollection
-    x-jsonld-id: '@type'
-  featureType:
-    $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
-  geometryDimension:
-    type: integer
-    minimum: 0
-    maximum: 3
-  coordRefSys:
-    $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
-  links:
-    type: array
-    items:
-      allOf:
-      - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-      - $ref: ../../../ogc-utils/json-link/schema.yaml
-    x-jsonld-id: rdfs:seeAlso
-  features:
-    type: array
-    items:
-      $ref: ../feature/schema.yaml
-    x-jsonld-container: '@set'
-    x-jsonld-id: https://purl.org/geojson/vocab#features
+allOf:
+- $ref: ../../features/featureCollection/schema.yaml
+- properties:
+    type:
+      type: string
+      enum:
+      - FeatureCollection
+      x-jsonld-id: '@type'
+    featureType:
+      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+    geometryDimension:
+      type: integer
+      minimum: 0
+      maximum: 3
+    coordRefSys:
+      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+    links:
+      type: array
+      items:
+        allOf:
+        - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        - $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: rdfs:seeAlso
+    features:
+      type: array
+      items:
+        $ref: ../feature/schema.yaml
+      x-jsonld-container: '@set'
+      x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#

@@ -8,40 +8,42 @@ required:
 - place
 - geometry
 - properties
-properties:
-  type:
-    type: string
-    enum:
-    - Feature
-    x-jsonld-id: '@type'
-  id:
-    oneOf:
-    - type: number
-    - type: string
-    x-jsonld-id: '@id'
-  featureType:
-    $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
-  links:
-    type: array
-    items:
-      allOf:
-      - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-      - $ref: ../../../ogc-utils/json-link/schema.yaml
-    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
-  time:
-    $ref: https://beta.schemas.opengis.net/json-fg/time.json
-  coordRefSys:
-    $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
-  place:
-    $ref: https://beta.schemas.opengis.net/json-fg/place.json
-  geometry:
-    $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
-    x-jsonld-id: https://purl.org/geojson/vocab#geometry
-  properties:
-    oneOf:
-    - type: 'null'
-    - type: object
-    x-jsonld-id: '@nest'
+allOf:
+- $ref: ../../features/feature/schema.yaml
+- properties:
+    type:
+      type: string
+      enum:
+      - Feature
+      x-jsonld-id: '@type'
+    id:
+      oneOf:
+      - type: number
+      - type: string
+      x-jsonld-id: '@id'
+    featureType:
+      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+    links:
+      type: array
+      items:
+        allOf:
+        - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        - $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    time:
+      $ref: https://beta.schemas.opengis.net/json-fg/time.json
+    coordRefSys:
+      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+    place:
+      $ref: https://beta.schemas.opengis.net/json-fg/place.json
+    geometry:
+      $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
+      x-jsonld-id: https://purl.org/geojson/vocab#geometry
+    properties:
+      oneOf:
+      - type: 'null'
+      - type: object
+      x-jsonld-id: '@nest'
 x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection

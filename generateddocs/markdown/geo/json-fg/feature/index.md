@@ -44,40 +44,42 @@ required:
 - place
 - geometry
 - properties
-properties:
-  type:
-    type: string
-    enum:
-    - Feature
-    x-jsonld-id: '@type'
-  id:
-    oneOf:
-    - type: number
-    - type: string
-    x-jsonld-id: '@id'
-  featureType:
-    $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
-  links:
-    type: array
-    items:
-      allOf:
-      - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-      - $ref: ../../../ogc-utils/json-link/schema.yaml
-    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
-  time:
-    $ref: https://beta.schemas.opengis.net/json-fg/time.json
-  coordRefSys:
-    $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
-  place:
-    $ref: https://beta.schemas.opengis.net/json-fg/place.json
-  geometry:
-    $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
-    x-jsonld-id: https://purl.org/geojson/vocab#geometry
-  properties:
-    oneOf:
-    - type: 'null'
-    - type: object
-    x-jsonld-id: '@nest'
+allOf:
+- $ref: ../../features/feature/schema.yaml
+- properties:
+    type:
+      type: string
+      enum:
+      - Feature
+      x-jsonld-id: '@type'
+    id:
+      oneOf:
+      - type: number
+      - type: string
+      x-jsonld-id: '@id'
+    featureType:
+      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+    links:
+      type: array
+      items:
+        allOf:
+        - $ref: https://beta.schemas.opengis.net/json-fg/link.json
+        - $ref: ../../../ogc-utils/json-link/schema.yaml
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    time:
+      $ref: https://beta.schemas.opengis.net/json-fg/time.json
+    coordRefSys:
+      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+    place:
+      $ref: https://beta.schemas.opengis.net/json-fg/place.json
+    geometry:
+      $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
+      x-jsonld-id: https://purl.org/geojson/vocab#geometry
+    properties:
+      oneOf:
+      - type: 'null'
+      - type: object
+      x-jsonld-id: '@nest'
 x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
@@ -116,6 +118,28 @@ Links to the schema:
   "@context": {
     "type": "@type",
     "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@id": "geojson:geometry",
+      "@context": {}
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
     "links": {
       "@id": "rdfs:seeAlso",
       "@context": {
@@ -133,28 +157,9 @@ Links to the schema:
         "length": "dct:extent"
       }
     },
-    "geometry": "geojson:geometry",
-    "properties": "@nest",
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
-    },
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
     },
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

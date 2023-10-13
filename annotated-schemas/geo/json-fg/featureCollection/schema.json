@@ -7,48 +7,55 @@
     "type",
     "features"
   ],
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ],
-      "x-jsonld-id": "@type"
+  "allOf": [
+    {
+      "$ref": "../../features/featureCollection/schema.json"
     },
-    "featureType": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
-    },
-    "geometryDimension": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 3
-    },
-    "coordRefSys": {
-      "$ref": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
-    },
-    "links": {
-      "type": "array",
-      "items": {
-        "allOf": [
-          {
-            "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "FeatureCollection"
+          ],
+          "x-jsonld-id": "@type"
+        },
+        "featureType": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
+        },
+        "geometryDimension": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "coordRefSys": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "https://beta.schemas.opengis.net/json-fg/link.json"
+              },
+              {
+                "$ref": "../../../ogc-utils/json-link/schema.json"
+              }
+            ]
           },
-          {
-            "$ref": "../../../ogc-utils/json-link/schema.json"
-          }
-        ]
-      },
-      "x-jsonld-id": "rdfs:seeAlso"
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "../feature/schema.json"
-      },
-      "x-jsonld-container": "@set",
-      "x-jsonld-id": "https://purl.org/geojson/vocab#features"
+          "x-jsonld-id": "rdfs:seeAlso"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "$ref": "../feature/schema.json"
+          },
+          "x-jsonld-container": "@set",
+          "x-jsonld-id": "https://purl.org/geojson/vocab#features"
+        }
+      }
     }
-  },
+  ],
   "x-jsonld-prefixes": {
     "geojson": "https://purl.org/geojson/vocab#"
   }
