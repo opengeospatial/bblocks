@@ -17,10 +17,6 @@ All the output files will be generated under `build-local`.
    docker run --pull=always --rm --workdir /workspace -v $(pwd):/workspace --user $UID \
       ghcr.io/opengeospatial/bblocks-postprocess  --clean true \
       --items-dir registereditems/ \
-      --generated-docs-path build-local/generateddocs \
-      --annotated-path build-local/annotated-schemas \
-      --register-file build-local/register.json \
-      --test-outputs build-local/tests \
       --base-url https://opengeospatial.github.io/bblocks/ 
     # Build Slate docs
     docker run --pull=always --rm --user $UID \
