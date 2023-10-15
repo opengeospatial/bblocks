@@ -1,5 +1,5 @@
 Validation report for ogc.unstable.sosa.features.observationCollection - SOSA ObservationCollection Feature
-Generated 2023-10-13T10:07:11.449799+00:00
+Generated 2023-10-15T04:06:28.595105+00:00
 === Files ===
 Using example_1_2.ttl from examples
 Output Turtle example_1_2.ttl created
@@ -7,23 +7,23 @@ Output Turtle example_1_2.ttl created
 
 === SHACL ===
 Using SHACL files for validation:
- - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
  - registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
 Validation Report
 Conforms: True
 
 Focus nodes:
- - Shape :testInCollectionOrMember-foi: eg:pop1999,eg:pop2000
- - Shape :testInCollectionOrMember-observedProperty: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testFeatureOfInterest>: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testObservedProperty>: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testRequiredTime>: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testResult>: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n820a7bcc6d7f440ca35421b62a944a93b5): *none*
- - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n820a7bcc6d7f440ca35421b62a944a93b29): *none*
- - Shape <http://example.com/rules#testResult>/sh:property (path _:n820a7bcc6d7f440ca35421b62a944a93b32): *none*
- - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n820a7bcc6d7f440ca35421b62a944a93b19): *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n820a7bcc6d7f440ca35421b62a944a93b11): *none*
+ - Shape <http://example.com/rules#testRequiredTime>: eg:pop2000,eg:pop1999
+ - Shape :testInCollectionOrMember-observedProperty: eg:pop2000,eg:pop1999
+ - Shape :testInCollectionOrMember-foi: eg:pop2000,eg:pop1999
+ - Shape <http://example.com/rules#testFeatureOfInterest>: eg:pop2000,eg:pop1999
+ - Shape <http://example.com/rules#testResult>: eg:pop2000,eg:pop1999
+ - Shape <http://example.com/rules#testObservedProperty>: eg:pop2000,eg:pop1999
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n0cf659ea2b48405dac613309474c994ab19): *none*
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:n0cf659ea2b48405dac613309474c994ab32): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n0cf659ea2b48405dac613309474c994ab5): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n0cf659ea2b48405dac613309474c994ab11): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n0cf659ea2b48405dac613309474c994ab29): *none*
 
 === End ValidationReportSection.SHACL ===
 
