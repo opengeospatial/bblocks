@@ -191,34 +191,34 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
+    "properties": "@nest",
     "links": {
-      "@id": "rdfs:seeAlso",
       "@context": {
         "href": "oa:hasTarget",
         "rel": {
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id",
           "@context": {
             "@base": "http://www.iana.org/assignments/relation/"
-          }
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
         },
         "type": "dct:type",
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
-      }
+      },
+      "@id": "rdfs:seeAlso"
     },
     "type": "@type",
     "id": "@id",
-    "properties": "@nest",
     "geometry": {
-      "@id": "geojson:geometry",
       "@context": {
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
         }
-      }
+      },
+      "@id": "geojson:geometry"
     },
     "bbox": {
       "@container": "@list",

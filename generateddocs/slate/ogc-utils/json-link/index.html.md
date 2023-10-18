@@ -84,11 +84,11 @@ Links to the schema:
   "@context": {
     "href": "oa:hasTarget",
     "rel": {
-      "@id": "http://www.iana.org/assignments/relation",
-      "@type": "@id",
       "@context": {
         "@base": "http://www.iana.org/assignments/relation/"
-      }
+      },
+      "@id": "http://www.iana.org/assignments/relation",
+      "@type": "@id"
     },
     "type": "dct:type",
     "hreflang": "dct:language",

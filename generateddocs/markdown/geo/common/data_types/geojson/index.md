@@ -457,13 +457,13 @@ Links to the schema:
     "id": "@id",
     "properties": "@nest",
     "geometry": {
-      "@id": "geojson:geometry",
       "@context": {
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
         }
-      }
+      },
+      "@id": "geojson:geometry"
     },
     "bbox": {
       "@container": "@list",

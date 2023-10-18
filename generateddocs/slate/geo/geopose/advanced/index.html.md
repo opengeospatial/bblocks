@@ -35,13 +35,13 @@ This building block is <strong>valid</strong>
 {
   "@context": {
     "quaternion": {
-      "@id": "geopose:quaternion",
       "@context": {
         "x": "geopose:x",
         "y": "geopose:y",
         "z": "geopose:z",
         "w": "geopose:w"
-      }
+      },
+      "@id": "geopose:quaternion"
     },
     "position": {
       "@id": "geopose:position",

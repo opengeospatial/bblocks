@@ -300,20 +300,20 @@ Links to the schema:
 {
   "@context": {
     "position": {
-      "@id": "geopose:position",
       "@context": {
         "lat": "geo:lat",
         "lon": "geo:long",
         "h": "geopose:h"
-      }
+      },
+      "@id": "geopose:position"
     },
     "angles": {
-      "@id": "geopose:angles",
       "@context": {
         "yaw": "geopose:yaw",
         "pitch": "geopose:pitch",
         "roll": "geopose:roll"
-      }
+      },
+      "@id": "geopose:angles"
     },
     "geopose": "http://example.com/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",

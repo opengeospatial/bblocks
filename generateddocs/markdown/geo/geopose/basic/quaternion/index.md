@@ -78,21 +78,21 @@ Links to the schema:
 {
   "@context": {
     "position": {
-      "@id": "geopose:position",
       "@context": {
         "lat": "geo:lat",
         "lon": "geo:long",
         "h": "geopose:h"
-      }
+      },
+      "@id": "geopose:position"
     },
     "quaternion": {
-      "@id": "geopose:quaternion",
       "@context": {
         "x": "geopose:x",
         "y": "geopose:y",
         "z": "geopose:z",
         "w": "geopose:w"
-      }
+      },
+      "@id": "geopose:quaternion"
     },
     "geopose": "http://example.com/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",

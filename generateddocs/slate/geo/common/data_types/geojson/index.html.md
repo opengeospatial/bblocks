@@ -51,13 +51,13 @@ Each GeoJSON feature includes the following JSON members:
     "id": "@id",
     "properties": "@nest",
     "geometry": {
-      "@id": "geojson:geometry",
       "@context": {
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
         }
-      }
+      },
+      "@id": "geojson:geometry"
     },
     "bbox": {
       "@container": "@list",

@@ -2,32 +2,8 @@
   "title": "Validation report for ogc.unstable.sosa.features.observationCollection - SOSA ObservationCollection Feature",
   "bblockName": "SOSA ObservationCollection Feature",
   "bblockId": "ogc.unstable.sosa.features.observationCollection",
-  "generated": "2023-10-15T04:06:28.595231+00:00",
+  "generated": "2023-10-18T17:36:32.341052+00:00",
   "items": [
-    {
-      "source": {
-        "type": "TEST_RESOURCE",
-        "requireFail": false,
-        "filename": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/tests/observationCollection-props.json",
-        "language": "json"
-      },
-      "sections": {
-        "FILES": [
-          {
-            "is_error": false,
-            "message": "Using observationCollection-props.json from test resources"
-          }
-        ],
-        "JSON_SCHEMA": [
-          {
-            "op": "validation",
-            "result": true,
-            "is_error": false,
-            "message": "Validation passed"
-          }
-        ]
-      }
-    },
     {
       "source": {
         "type": "TEST_RESOURCE",
@@ -55,6 +31,30 @@
             "op": "require-fail",
             "is_error": true,
             "message": "Test was expected to fail but it did not."
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/tests/observationCollection-props.json",
+        "language": "json"
+      },
+      "sections": {
+        "FILES": [
+          {
+            "is_error": false,
+            "message": "Using observationCollection-props.json from test resources"
+          }
+        ],
+        "JSON_SCHEMA": [
+          {
+            "op": "validation",
+            "result": true,
+            "is_error": false,
+            "message": "Validation passed"
           }
         ]
       }
@@ -113,11 +113,11 @@
           {
             "op": "shacl-files",
             "files": [
-              "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl",
-              "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+              "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
+              "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl"
             ],
             "is_error": false,
-            "message": "Using SHACL files for validation:\n - registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl\n - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+            "message": "Using SHACL files for validation:\n - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl\n - registereditems/unstable/sosa/_sources/features/observationCollection/rules.shacl"
           },
           {
             "op": "shacl-report",
@@ -129,63 +129,63 @@
             "focusNodes": {
               "<http://example.com/rules#testRequiredTime>": {
                 "nodes": [
-                  "eg:pop2000",
-                  "eg:pop1999"
-                ]
-              },
-              ":testInCollectionOrMember-observedProperty": {
-                "nodes": [
-                  "eg:pop2000",
-                  "eg:pop1999"
-                ]
-              },
-              ":testInCollectionOrMember-foi": {
-                "nodes": [
-                  "eg:pop2000",
-                  "eg:pop1999"
-                ]
-              },
-              "<http://example.com/rules#testFeatureOfInterest>": {
-                "nodes": [
-                  "eg:pop2000",
-                  "eg:pop1999"
+                  "eg:pop1999",
+                  "eg:pop2000"
                 ]
               },
               "<http://example.com/rules#testResult>": {
                 "nodes": [
-                  "eg:pop2000",
-                  "eg:pop1999"
+                  "eg:pop1999",
+                  "eg:pop2000"
+                ]
+              },
+              "<http://example.com/rules#testFeatureOfInterest>": {
+                "nodes": [
+                  "eg:pop1999",
+                  "eg:pop2000"
+                ]
+              },
+              ":testInCollectionOrMember-foi": {
+                "nodes": [
+                  "eg:pop1999",
+                  "eg:pop2000"
                 ]
               },
               "<http://example.com/rules#testObservedProperty>": {
                 "nodes": [
-                  "eg:pop2000",
-                  "eg:pop1999"
+                  "eg:pop1999",
+                  "eg:pop2000"
                 ]
               },
-              "<http://example.com/rules#testObservedProperty>/sh:property": {
-                "nodes": [],
-                "path": "_:n0cf659ea2b48405dac613309474c994ab19"
-              },
-              "<http://example.com/rules#testResult>/sh:property": {
-                "nodes": [],
-                "path": "_:n0cf659ea2b48405dac613309474c994ab32"
+              ":testInCollectionOrMember-observedProperty": {
+                "nodes": [
+                  "eg:pop1999",
+                  "eg:pop2000"
+                ]
               },
               "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
                 "nodes": [],
-                "path": "_:n0cf659ea2b48405dac613309474c994ab5"
+                "path": "_:n58617148a9b64d679e6b0e700075df2fb5"
+              },
+              "<http://example.com/rules#testObservedProperty>/sh:property": {
+                "nodes": [],
+                "path": "_:n58617148a9b64d679e6b0e700075df2fb19"
               },
               "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
                 "nodes": [],
-                "path": "_:n0cf659ea2b48405dac613309474c994ab11"
+                "path": "_:n58617148a9b64d679e6b0e700075df2fb11"
               },
               "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
                 "nodes": [],
-                "path": "_:n0cf659ea2b48405dac613309474c994ab29"
+                "path": "_:n58617148a9b64d679e6b0e700075df2fb29"
+              },
+              "<http://example.com/rules#testResult>/sh:property": {
+                "nodes": [],
+                "path": "_:n58617148a9b64d679e6b0e700075df2fb32"
               }
             },
             "is_error": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: eg:pop2000,eg:pop1999\n - Shape :testInCollectionOrMember-observedProperty: eg:pop2000,eg:pop1999\n - Shape :testInCollectionOrMember-foi: eg:pop2000,eg:pop1999\n - Shape <http://example.com/rules#testFeatureOfInterest>: eg:pop2000,eg:pop1999\n - Shape <http://example.com/rules#testResult>: eg:pop2000,eg:pop1999\n - Shape <http://example.com/rules#testObservedProperty>: eg:pop2000,eg:pop1999\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n0cf659ea2b48405dac613309474c994ab19): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n0cf659ea2b48405dac613309474c994ab32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n0cf659ea2b48405dac613309474c994ab5): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n0cf659ea2b48405dac613309474c994ab11): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n0cf659ea2b48405dac613309474c994ab29): *none*\n"
+            "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: eg:pop1999,eg:pop2000\n - Shape <http://example.com/rules#testResult>: eg:pop1999,eg:pop2000\n - Shape <http://example.com/rules#testFeatureOfInterest>: eg:pop1999,eg:pop2000\n - Shape :testInCollectionOrMember-foi: eg:pop1999,eg:pop2000\n - Shape <http://example.com/rules#testObservedProperty>: eg:pop1999,eg:pop2000\n - Shape :testInCollectionOrMember-observedProperty: eg:pop1999,eg:pop2000\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n58617148a9b64d679e6b0e700075df2fb5): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n58617148a9b64d679e6b0e700075df2fb19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n58617148a9b64d679e6b0e700075df2fb11): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n58617148a9b64d679e6b0e700075df2fb29): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n58617148a9b64d679e6b0e700075df2fb32): *none*\n"
           }
         ]
       }

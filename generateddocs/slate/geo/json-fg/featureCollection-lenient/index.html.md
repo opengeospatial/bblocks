@@ -90,81 +90,13 @@ Links to the schema:
 # JSON-LD Context
 
 ```json--ldContext
-{
-  "@context": {
-    "type": "@type",
-    "links": {
-      "@id": "rdfs:seeAlso",
-      "@context": {
-        "href": "oa:hasTarget",
-        "rel": {
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id",
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          }
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      }
-    },
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features",
-      "@context": {
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
-        },
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
-      }
-    },
-    "id": "@id",
-    "properties": "@nest",
-    "geometry": {
-      "@id": "geojson:geometry",
-      "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
-      }
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "coordinates": {
-      "x-jsonld-container": "@list",
-      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
-    },
-    "geojson": "https://purl.org/geojson/vocab#",
-    "oa": "http://www.w3.org/ns/oa#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "dct": "http://purl.org/dc/terms/",
-    "@version": 1.1
-  }
-}
+None
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fjson-fg%2FfeatureCollection-lenient%2Fcontext.jsonld">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=..%2FfeatureCollection%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld</a>
+<a href="../featureCollection/context.jsonld" target="_blank">../featureCollection/context.jsonld</a>
 
 # References
 

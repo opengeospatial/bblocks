@@ -166,17 +166,34 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
+    "properties": "@nest",
+    "links": {
+      "@context": {
+        "href": "oa:hasTarget",
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
     "type": "@type",
     "id": "@id",
-    "properties": "@nest",
     "geometry": {
-      "@id": "geojson:geometry",
       "@context": {
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
         }
-      }
+      },
+      "@id": "geojson:geometry"
     },
     "bbox": {
       "@container": "@list",
@@ -195,25 +212,8 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "links": {
-      "@id": "rdfs:seeAlso",
-      "@context": {
-        "href": "oa:hasTarget",
-        "rel": {
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id",
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          }
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      }
-    },
-    "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
     "@version": 1.1
