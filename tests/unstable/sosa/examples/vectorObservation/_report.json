@@ -2,7 +2,8 @@
   "title": "Validation report for ogc.unstable.sosa.examples.vectorObservation - Example SOSA Vector Observation",
   "bblockName": "Example SOSA Vector Observation",
   "bblockId": "ogc.unstable.sosa.examples.vectorObservation",
-  "generated": "2023-10-18T17:36:29.585879+00:00",
+  "generated": "2023-10-19T13:25:40.202261+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -13,21 +14,22 @@
         "snippetIndex": 1,
         "language": "json"
       },
+      "result": true,
       "sections": {
         "FILES": [
           {
-            "is_error": false,
+            "isError": false,
             "message": "Using example_1_1.json from examples"
           },
           {
             "op": "jsonld-uplift",
-            "is_error": false,
+            "isError": false,
             "message": "JSON-LD context is present - uplifting"
           },
           {
             "op": "jsonld-create",
             "filename": "example_1_1.jsonld",
-            "is_error": false,
+            "isError": false,
             "message": "Output JSON-LD example_1_1.jsonld created"
           },
           {
@@ -35,7 +37,7 @@
             "empty": false,
             "filename": "example_1_1.ttl",
             "size": 3,
-            "is_error": false,
+            "isError": false,
             "message": "Output Turtle example_1_1.ttl created"
           }
         ],
@@ -43,7 +45,7 @@
           {
             "op": "validation",
             "result": true,
-            "is_error": false,
+            "isError": false,
             "message": "Validation passed"
           }
         ],
@@ -53,21 +55,21 @@
             "files": [
               "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
             ],
-            "is_error": false,
+            "isError": false,
             "message": "Using SHACL files for validation:\n - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
           },
           {
             "op": "shacl-report",
             "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-            "is_error": false,
+            "isError": false,
             "message": "Validation Report\nConforms: True\n"
           },
           {
             "focusNodes": {
-              "<http://example.com/rules#testRequiredTime>": {
+              "<http://example.com/rules#testResult>": {
                 "nodes": []
               },
-              "<http://example.com/rules#testResult>": {
+              "<http://example.com/rules#testRequiredTime>": {
                 "nodes": []
               },
               "<http://example.com/rules#testObservedProperty>": {
@@ -76,33 +78,38 @@
               "<http://example.com/rules#testFeatureOfInterest>": {
                 "nodes": []
               },
-              "<http://example.com/rules#testResult>/sh:property": {
-                "nodes": [],
-                "path": "_:n9218ede9c9de41d8893c92a66aa02f21b32"
-              },
               "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
                 "nodes": [],
-                "path": "_:n9218ede9c9de41d8893c92a66aa02f21b29"
+                "path": "_:n44f88f38ec244360a3d68bc222ac052cb29"
               },
               "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
                 "nodes": [],
-                "path": "_:n9218ede9c9de41d8893c92a66aa02f21b5"
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
-                "nodes": [],
-                "path": "_:n9218ede9c9de41d8893c92a66aa02f21b11"
+                "path": "_:n44f88f38ec244360a3d68bc222ac052cb5"
               },
               "<http://example.com/rules#testObservedProperty>/sh:property": {
                 "nodes": [],
-                "path": "_:n9218ede9c9de41d8893c92a66aa02f21b19"
+                "path": "_:n44f88f38ec244360a3d68bc222ac052cb19"
+              },
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+                "nodes": [],
+                "path": "_:n44f88f38ec244360a3d68bc222ac052cb11"
+              },
+              "<http://example.com/rules#testResult>/sh:property": {
+                "nodes": [],
+                "path": "_:n44f88f38ec244360a3d68bc222ac052cb32"
               }
             },
-            "is_error": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: *none*\n - Shape <http://example.com/rules#testResult>: *none*\n - Shape <http://example.com/rules#testObservedProperty>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>: *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n9218ede9c9de41d8893c92a66aa02f21b32): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n9218ede9c9de41d8893c92a66aa02f21b29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n9218ede9c9de41d8893c92a66aa02f21b5): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n9218ede9c9de41d8893c92a66aa02f21b11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n9218ede9c9de41d8893c92a66aa02f21b19): *none*\n"
+            "isError": false,
+            "message": "Focus nodes:\n - Shape <http://example.com/rules#testResult>: *none*\n - Shape <http://example.com/rules#testRequiredTime>: *none*\n - Shape <http://example.com/rules#testObservedProperty>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n44f88f38ec244360a3d68bc222ac052cb29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n44f88f38ec244360a3d68bc222ac052cb5): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n44f88f38ec244360a3d68bc222ac052cb19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n44f88f38ec244360a3d68bc222ac052cb11): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n44f88f38ec244360a3d68bc222ac052cb32): *none*\n"
           }
         ]
       }
     }
   ],
-  "globalErrors": {}
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  }
 }

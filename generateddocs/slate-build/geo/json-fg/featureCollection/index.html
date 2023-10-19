@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="geo geo_json-fg geo_json-fg_featureCollection geo_json-fg_featureCollection_index" data-languages="[]">
+  <body class="geo geo_json-fg geo_json-fg_featureCollection geo_json-fg_featureCollection_index" data-languages="[&quot;json&quot;,&quot;jsonld&quot;,&quot;turtle&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -303,6 +303,11 @@
     </a>
     <div class="toc-wrapper">
       <img src="../../../images/logo-4d9dfd05.svg" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">JSON</a>
+              <a href="#" data-language-name="jsonld">JSON-LD</a>
+              <a href="#" data-language-name="turtle">RDF/Turtle</a>
+        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -324,6 +329,9 @@
           </li>
           <li>
             <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
+          </li>
+          <li>
+            <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
           </li>
           <li>
             <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
@@ -418,6 +426,60 @@ also be able to parse and understand the additional members.</p>
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.json">Open in new window</a>
     <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld"</span><span class="p">,</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"my"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://my.org/featureTypes/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"skos"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"skos:prefLabel"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MyFeatureCollection"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MyFeatureCollection"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FeatureCollection"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my:FeatureType"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"coordRefSys"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EPSG"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mf">174.7501603083</span><span class="p">,</span><span class="w">
+          </span><span class="mf">-36.9307359096</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An attribute value"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">geojson:</span><span class="w"> </span><span class="nl">&lt;https://purl.org/geojson/vocab#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://www.example.com/features/MyFeatureCollection&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">FeatureCollection</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">skos:</span><span class="n">prefLabel</span><span class="w"> </span><span class="s">"MyFeatureCollection"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">geojson:</span><span class="n">features</span><span class="w"> </span><span class="nl">&lt;http://www.example.com/features/f1&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://www.example.com/features/f1&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Feature</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+
+</span></code></pre></div>
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.ttl">Open in new window</a>
+</blockquote>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2019-09/schema</span>
 <span class="na">title</span><span class="pi">:</span> <span class="s">a JSON-FG Feature Collection</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">This JSON Schema is part of JSON-FG version 0.1.1</span>
@@ -468,6 +530,78 @@ also be able to parse and understand the additional members.</p>
 <li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml</a></li>
 <li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json</a></li>
 </ul>
+<h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oa:hasTarget"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.iana.org/assignments/relation/"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.iana.org/assignments/relation"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:type"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hreflang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:language"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:label"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:extent"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:seeAlso"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:coordinates"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:features"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@nest"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:coordinates"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:geometry"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"bbox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:bbox"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"Feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Feature"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"FeatureCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:FeatureCollection"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"GeometryCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:GeometryCollection"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"LineString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:LineString"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MultiLineString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiLineString"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MultiPoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPoint"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MultiPolygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPolygon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Point"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Point"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Polygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Polygon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"x-jsonld-container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"x-jsonld-id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#coordinates"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"geojson"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rdfs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"oa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/oa#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fcontext.jsonld">View on JSON-LD Playground</a></p>
+</blockquote>
+
+<p>You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld</a></p>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="http://docs.ogc.org/per/21-017r1.html">OGC Testbed-17: OGC Features and Geometries JSON Engineering Report</a></li>
@@ -483,6 +617,11 @@ also be able to parse and understand the additional members.</p>
 
       </div>
       <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">JSON</a>
+                <a href="#" data-language-name="jsonld">JSON-LD</a>
+                <a href="#" data-language-name="turtle">RDF/Turtle</a>
+          </div>
       </div>
     </div>
   </body>

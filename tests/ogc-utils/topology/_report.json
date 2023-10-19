@@ -2,7 +2,8 @@
   "title": "Validation report for ogc.ogc-utils.topology - Geometry using references",
   "bblockName": "Geometry using references",
   "bblockId": "ogc.ogc-utils.topology",
-  "generated": "2023-10-18T17:36:29.356589+00:00",
+  "generated": "2023-10-19T13:25:39.955731+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -13,21 +14,22 @@
         "snippetIndex": 1,
         "language": "json"
       },
+      "result": true,
       "sections": {
         "FILES": [
           {
-            "is_error": false,
+            "isError": false,
             "message": "Using example_1_1.json from examples"
           },
           {
             "op": "jsonld-uplift",
-            "is_error": false,
+            "isError": false,
             "message": "JSON-LD context is present - uplifting"
           },
           {
             "op": "jsonld-create",
             "filename": "example_1_1.jsonld",
-            "is_error": false,
+            "isError": false,
             "message": "Output JSON-LD example_1_1.jsonld created"
           },
           {
@@ -35,7 +37,7 @@
             "empty": false,
             "filename": "example_1_1.ttl",
             "size": 6,
-            "is_error": false,
+            "isError": false,
             "message": "Output Turtle example_1_1.ttl created"
           }
         ],
@@ -43,12 +45,17 @@
           {
             "op": "validation",
             "result": true,
-            "is_error": false,
+            "isError": false,
             "message": "Validation passed"
           }
         ]
       }
     }
   ],
-  "globalErrors": {}
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  }
 }

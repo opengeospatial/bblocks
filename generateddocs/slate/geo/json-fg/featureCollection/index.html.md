@@ -1,6 +1,10 @@
 ---
 title: JSON-FG Feature Collection (Schema)
 
+language_tabs:
+  - json: JSON
+  - jsonld: JSON-LD
+  - turtle: RDF/Turtle
 
 toc_footers:
   - Version 0.1
@@ -105,6 +109,72 @@ NB. uses a local @context in the data example where application specialisations 
 
 
 
+
+```jsonld
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
+    {
+      "my": "http://my.org/featureTypes/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "name": "skos:prefLabel"
+    }
+  ],
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "featureType": "my:FeatureType",
+      "geometry": null,
+      "time": null,
+      "coordRefSys": "EPSG",
+      "place": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
+    skos:prefLabel "MyFeatureCollection" ;
+    geojson:features <http://www.example.com/features/f1> .
+
+<http://www.example.com/features/f1> a geojson:Feature .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.ttl">Open in new window</a>
+</blockquote>
+
+
+
 # JSON Schema
 
 ```yaml--schema
@@ -155,6 +225,82 @@ Links to the schema:
 
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml</a>
 * JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json</a>
+
+
+# JSON-LD Context
+
+```json--ldContext
+{
+  "@context": {
+    "type": "@type",
+    "links": {
+      "@context": {
+        "href": "oa:hasTarget",
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "features": {
+      "@context": {
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
+      },
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
+    "properties": "@nest",
+    "id": "@id",
+    "geometry": {
+      "@context": {
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
+      },
+      "@id": "geojson:geometry"
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "coordinates": {
+      "x-jsonld-container": "@list",
+      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+    },
+    "geojson": "https://purl.org/geojson/vocab#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "dct": "http://purl.org/dc/terms/",
+    "@version": 1.1
+  }
+}
+```
+
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fcontext.jsonld">View on JSON-LD Playground</a>
+
+You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld</a>
 
 # References
 

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
+    {
+      "my": "http://my.org/featureTypes/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "name": "skos:prefLabel"
+    }
+  ],
+  "id": "MyFeatureCollection",
+  "name": "MyFeatureCollection",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "f1",
+      "type": "Feature",
+      "featureType": "my:FeatureType",
+      "geometry": null,
+      "time": null,
+      "coordRefSys": "EPSG",
+      "place": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "comment": "An attribute value"
+      }
+    }
+  ]
+}
