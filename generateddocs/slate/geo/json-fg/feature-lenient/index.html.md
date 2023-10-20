@@ -159,10 +159,7 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "geometry": {
-      "@context": {},
-      "@id": "geojson:geometry"
-    },
+    "geometry": "geojson:geometry",
     "properties": "@nest",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

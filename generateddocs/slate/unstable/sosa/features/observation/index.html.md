@@ -426,7 +426,10 @@ Links to the schema:
     "hasMember": "sosa:hasMember",
     "features": "sosa:hasMember",
     "featureType": "@type",
-    "properties": "@nest",
+    "properties": {
+      "@context": {},
+      "@id": "@nest"
+    },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -463,10 +466,7 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "geometry": {
-      "@context": {},
-      "@id": "geojson:geometry"
-    },
+    "geometry": "geojson:geometry",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",
