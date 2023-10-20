@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.unstable.sosa.properties.observationCollection - SOSA ObservationCollection",
   "bblockName": "SOSA ObservationCollection",
   "bblockId": "ogc.unstable.sosa.properties.observationCollection",
-  "generated": "2023-10-20T13:25:30.284258+00:00",
+  "generated": "2023-10-20T14:49:13.656258+00:00",
   "result": false,
   "items": [
     {
@@ -94,16 +94,6 @@
           },
           {
             "focusNodes": {
-              "<http://example.com/rules#testResult>": {
-                "nodes": [
-                  "eg:a1"
-                ]
-              },
-              "<http://example.com/rules#testFeatureOfInterest>": {
-                "nodes": [
-                  "eg:a1"
-                ]
-              },
               "<http://example.com/rules#testObservedProperty>": {
                 "nodes": [
                   "eg:a1"
@@ -114,29 +104,39 @@
                   "eg:a1"
                 ]
               },
-              "<http://example.com/rules#testResult>/sh:property": {
-                "nodes": [],
-                "path": "_:n453db585492846bba63a11a69398b446b32"
+              "<http://example.com/rules#testResult>": {
+                "nodes": [
+                  "eg:a1"
+                ]
               },
-              "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
-                "nodes": [],
-                "path": "_:n453db585492846bba63a11a69398b446b29"
-              },
-              "<http://example.com/rules#testObservedProperty>/sh:property": {
-                "nodes": [],
-                "path": "_:n453db585492846bba63a11a69398b446b19"
+              "<http://example.com/rules#testFeatureOfInterest>": {
+                "nodes": [
+                  "eg:a1"
+                ]
               },
               "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
                 "nodes": [],
-                "path": "_:n453db585492846bba63a11a69398b446b5"
+                "path": "_:n70bb99d3785d434fab2f811ce03b1bc4b5"
+              },
+              "<http://example.com/rules#testResult>/sh:property": {
+                "nodes": [],
+                "path": "_:n70bb99d3785d434fab2f811ce03b1bc4b32"
               },
               "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
                 "nodes": [],
-                "path": "_:n453db585492846bba63a11a69398b446b11"
+                "path": "_:n70bb99d3785d434fab2f811ce03b1bc4b11"
+              },
+              "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
+                "nodes": [],
+                "path": "_:n70bb99d3785d434fab2f811ce03b1bc4b29"
+              },
+              "<http://example.com/rules#testObservedProperty>/sh:property": {
+                "nodes": [],
+                "path": "_:n70bb99d3785d434fab2f811ce03b1bc4b19"
               }
             },
             "isError": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testResult>: eg:a1\n - Shape <http://example.com/rules#testFeatureOfInterest>: eg:a1\n - Shape <http://example.com/rules#testObservedProperty>: eg:a1\n - Shape <http://example.com/rules#testRequiredTime>: eg:a1\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n453db585492846bba63a11a69398b446b32): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n453db585492846bba63a11a69398b446b29): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n453db585492846bba63a11a69398b446b19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n453db585492846bba63a11a69398b446b5): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n453db585492846bba63a11a69398b446b11): *none*\n"
+            "message": "Focus nodes:\n - Shape <http://example.com/rules#testObservedProperty>: eg:a1\n - Shape <http://example.com/rules#testRequiredTime>: eg:a1\n - Shape <http://example.com/rules#testResult>: eg:a1\n - Shape <http://example.com/rules#testFeatureOfInterest>: eg:a1\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n70bb99d3785d434fab2f811ce03b1bc4b5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n70bb99d3785d434fab2f811ce03b1bc4b32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n70bb99d3785d434fab2f811ce03b1bc4b11): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n70bb99d3785d434fab2f811ce03b1bc4b29): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n70bb99d3785d434fab2f811ce03b1bc4b19): *none*\n"
           }
         ]
       }
@@ -146,7 +146,7 @@
     "UNKNOWN": {
       "exception": "AttributeError",
       "isError": true,
-      "message": "Traceback (most recent call last):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 909, in resolve_from_url\n    document = self.store[url]\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_utils.py\", line 28, in __getitem__\n    return self.store[self.normalize(uri)]\n,KeyError: 'file:///github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 1505, in open_local_file\n    stats = os.stat(localfile)\n,FileNotFoundError: [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 912, in resolve_from_url\n    document = self.resolve_remote(url)\n,  File \"/src/ogc/bblocks/validate.py\", line 801, in resolve_remote\n    with urlopen(uri) as url:\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 519, in open\n    response = self._open(req, data)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 536, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 1483, in file_open\n    return self.open_local_file(req)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 1522, in open_local_file\n    raise URLError(exp)\n,urllib.error.URLError: <urlopen error [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'>\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 475, in validate_inner\n    validate_json(json_doc, schema_validator)\n,  File \"/src/ogc/bblocks/validate.py\", line 824, in validate_json\n    error = jsonschema.exceptions.best_match(validator.iter_errors(instance))\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/exceptions.py\", line 384, in best_match\n    best = next(errors, None)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 362, in allOf\n    yield from validator.descend(instance, subschema, schema_path=index)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 298, in ref\n    yield from validator.descend(instance, resolved)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 332, in properties\n    yield from validator.descend(\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 76, in items\n    yield from validator.descend(\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 368, in anyOf\n    errs = list(validator.descend(instance, subschema, schema_path=index))\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 294, in ref\n    scope, resolved = validator.resolver.resolve(ref)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 898, in resolve\n    return url, self._remote_cache(url)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 914, in resolve_from_url\n    raise exceptions.RefResolutionError(exc)\n,jsonschema.exceptions.RefResolutionError: <urlopen error [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'>\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 600, in _validate_resource\n    validate_inner()\n,  File \"/src/ogc/bblocks/validate.py\", line 495, in validate_inner\n    'errorMessage': e.message,\n,AttributeError: 'RefResolutionError' object has no attribute 'message'\n"
+      "message": "Traceback (most recent call last):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 909, in resolve_from_url\n    document = self.store[url]\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_utils.py\", line 28, in __getitem__\n    return self.store[self.normalize(uri)]\n,KeyError: 'file:///github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 1505, in open_local_file\n    stats = os.stat(localfile)\n,FileNotFoundError: [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 912, in resolve_from_url\n    document = self.resolve_remote(url)\n,  File \"/src/ogc/bblocks/validate.py\", line 804, in resolve_remote\n    with urlopen(uri) as url:\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 519, in open\n    response = self._open(req, data)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 536, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 1483, in file_open\n    return self.open_local_file(req)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 1522, in open_local_file\n    raise URLError(exp)\n,urllib.error.URLError: <urlopen error [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'>\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 476, in validate_inner\n    validate_json(json_doc, schema_validator)\n,  File \"/src/ogc/bblocks/validate.py\", line 827, in validate_json\n    error = jsonschema.exceptions.best_match(validator.iter_errors(instance))\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/exceptions.py\", line 384, in best_match\n    best = next(errors, None)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 362, in allOf\n    yield from validator.descend(instance, subschema, schema_path=index)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 298, in ref\n    yield from validator.descend(instance, resolved)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 332, in properties\n    yield from validator.descend(\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 76, in items\n    yield from validator.descend(\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 368, in anyOf\n    errs = list(validator.descend(instance, subschema, schema_path=index))\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 294, in ref\n    scope, resolved = validator.resolver.resolve(ref)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 898, in resolve\n    return url, self._remote_cache(url)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 914, in resolve_from_url\n    raise exceptions.RefResolutionError(exc)\n,jsonschema.exceptions.RefResolutionError: <urlopen error [Errno 2] No such file or directory: '/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml'>\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 601, in _validate_resource\n    validate_inner()\n,  File \"/src/ogc/bblocks/validate.py\", line 496, in validate_inner\n    'errorMessage': e.message,\n,AttributeError: 'RefResolutionError' object has no attribute 'message'\n"
     }
   },
   "counts": {
