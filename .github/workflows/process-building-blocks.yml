@@ -43,7 +43,7 @@ jobs:
           DB_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
         run: |
           python -m pip install -U pip
-          python -m pip install ogc-na
+          python -m pip install ogc-na setuptools
           python -m ogc.na.update_vocabs .catalog.ttl -m bblocks.ttl \
             --update --graph-store ${{ vars.UPLOAD_GRAPH_STORE_URL }}
 
