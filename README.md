@@ -4,6 +4,9 @@ Bootstrap page containing an overview of building blocks and a building blocks r
 
 [See it live here](https://blocks.ogc.org/)
 
+## Validation Reports
+[Summary](https://opengeospatial.github.io/bblocks/tests/report.html)
+
 ## Local build/test
 
 You need a functioning Docker environment to build the Building Blocks Register locally. 
