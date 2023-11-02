@@ -1,0 +1,21 @@
+description: Example SOSA Observation Specialisation - a vector bearing and distance
+$defs:
+  VectorObservation:
+    allOf:
+    - $ref: https://opengeospatial.github.io/features/observation/schema.yaml
+    - type: object
+      properties:
+        properties:
+          $ref: https://opengeospatial.github.io/vectorObservation/schema.yaml
+  VectorObservationCollection:
+    allOf:
+    - $ref: https://opengeospatial.github.io/features/observationCollection/schema.yaml
+    - type: object
+      properties:
+        features:
+          type: array
+          items:
+            $ref: https://opengeospatial.github.io/bblocks/#/$defs/VectorObservation
+anyOf:
+- $ref: https://opengeospatial.github.io/bblocks/#/$defs/VectorObservation
+- $ref: https://opengeospatial.github.io/bblocks/#/$defs/VectorObservationCollection

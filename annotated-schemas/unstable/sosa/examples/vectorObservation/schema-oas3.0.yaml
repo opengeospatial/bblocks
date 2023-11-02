@@ -1,0 +1,16 @@
+description: Example SOSA Vector Observation
+allOf:
+- $ref: https://opengeospatial.github.io/properties/observation/schema.yaml
+- type: object
+  properties:
+    hasResult:
+      properties:
+        pose:
+          $ref: https://opengeospatial.github.io/geo/geopose/basic/ypr/schema.yaml
+        distance:
+          type: number
+  required:
+  - hasResult
+  not:
+    required:
+    - hasSimpleResult

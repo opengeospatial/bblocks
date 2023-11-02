@@ -1,0 +1,27 @@
+{
+  "description": "feature with geometry by reference",
+  "properties": {
+    "type": {},
+    "references": {
+      "type": "array",
+      "items": {
+        "$ref": "https://opengeospatial.github.io/iri-or-curie/schema.yaml"
+      },
+      "x-jsonld-id": "https://purl.org/geojson/vocab#relatedFeatures",
+      "x-jsonld-type": "@id",
+      "x-jsonld-container": "@list"
+    }
+  },
+  "required": [
+    "references",
+    "type"
+  ],
+  "x-jsonld-extra-terms": {
+    "LineString": "https://purl.org/geojson/vocab#LineString"
+  },
+  "x-jsonld-prefixes": {
+    "geojson": "https://purl.org/geojson/vocab#",
+    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "dct": "http://purl.org/dc/terms/"
+  }
+}

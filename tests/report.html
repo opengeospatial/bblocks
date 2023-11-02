@@ -5,20 +5,30 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Building Blocks validation report</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <style>
             .entry-message {
                 white-space: pre-wrap;
-                font-size: 90%;
+                font-size: 80%;
+                line-height: 1.1;
+            }
+            *[data-bs-toggle] .caret {
+                display: inline-block;
+                transform: rotate(90deg);
+                transition: transform 0.25s;
+            }
+            *[data-bs-toggle].collapsed .caret {
+                transform: rotate(0deg);
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2023-10-29T04:06:25.523492+00:00</small>
-                <p class="summary fw-semibold text-danger">
-                    Number of passing building blocks: 23 / 24 (95.83%)
+            <small class="datetime">Generated at 2023-11-02T15:44:52.423289+00:00</small>
+                <p class="summary fw-semibold text-success">
+                    Number of passing building blocks: 24 / 24 (100%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -166,73 +176,109 @@
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-1"
+                                                            aria-expanded="false" aria-controls="uid-1"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-1">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-2"
+                                                            aria-expanded="false" aria-controls="uid-2"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/example_2_1.json" target="_blank">example_2_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-2">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-3"
+                                                            aria-expanded="false" aria-controls="uid-3"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/example_3_1.json" target="_blank">example_3_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_3_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_3_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_3_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-3">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_3_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_3_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_3_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-4"
+                                                            aria-expanded="false" aria-controls="uid-4"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/example_4_1.json" target="_blank">example_4_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_4_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_4_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_4_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-4">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_4_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_4_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_4_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -260,109 +306,172 @@
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-5"
+                                                            aria-expanded="false" aria-controls="uid-5"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/example_1_2.json" target="_blank">example_1_2.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_2.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-5">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_2.json from examples</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-6"
+                                                            aria-expanded="false" aria-controls="uid-6"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/example_2_2.json" target="_blank">example_2_2.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_2_2.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-6">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_2_2.json from examples</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-7"
+                                                            aria-expanded="false" aria-controls="uid-7"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/example_3_2.json" target="_blank">example_3_2.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_3_2.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-7">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_3_2.json from examples</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-8"
+                                                            aria-expanded="false" aria-controls="uid-8"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/example_4_2.json" target="_blank">example_4_2.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_4_2.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-8">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_4_2.json from examples</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-9"
+                                                            aria-expanded="false" aria-controls="uid-9"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/example_5_2.json" target="_blank">example_5_2.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_5_2.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-9">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_5_2.json from examples</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-10"
+                                                            aria-expanded="false" aria-controls="uid-10"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/example_6_2.json" target="_blank">example_6_2.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_6_2.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Using the following JSON Schema: #/$defs/Multiple</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-10">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_6_2.json from examples</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Using the following JSON Schema: #/$defs/Multiple</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-11"
+                                                            aria-expanded="false" aria-controls="uid-11"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/example_7_1.jsonld" target="_blank">example_7_1.jsonld</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_7_1.jsonld from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_7_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Using the following JSON Schema: jsonld-example-schema.yaml</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-11">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_7_1.jsonld from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_7_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Using the following JSON Schema: jsonld-example-schema.yaml</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -390,132 +499,168 @@
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-12"
+                                                            aria-expanded="false" aria-controls="uid-12"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/tests/test1.jsonld" target="_blank">test1.jsonld</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using test1.jsonld from test resources</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle test1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-12">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using test1.jsonld from test resources</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle test1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
  - Shape &lt;http://example.com/rules#testResult&gt;: *none*
  - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb19): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n9c2348a7f037496e895d9611a40b083bb5): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb29): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n9c2348a7f037496e895d9611a40b083bb11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n1bcd070f9cde4efa976797e0912d9306b11): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n1bcd070f9cde4efa976797e0912d9306b5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b29): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b32): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-13"
+                                                            aria-expanded="false" aria-controls="uid-13"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-13">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
  - Shape &lt;http://example.com/rules#testResult&gt;: *none*
  - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb19): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n9c2348a7f037496e895d9611a40b083bb5): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb29): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n9c2348a7f037496e895d9611a40b083bb11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n1bcd070f9cde4efa976797e0912d9306b11): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n1bcd070f9cde4efa976797e0912d9306b5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b29): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b32): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-14"
+                                                            aria-expanded="false" aria-controls="uid-14"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/example_1_2.ttl" target="_blank">example_1_2.ttl</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_2.ttl from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_2.ttl created</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-14">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_2.ttl from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_2.ttl created</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: _:n8db7cc8b2cbf46beb2ffcf9e9662ff60b1
- - Shape &lt;http://example.com/rules#testResult&gt;: _:n8db7cc8b2cbf46beb2ffcf9e9662ff60b1
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: _:n8db7cc8b2cbf46beb2ffcf9e9662ff60b1
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;: _:n8db7cc8b2cbf46beb2ffcf9e9662ff60b1
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb19): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n9c2348a7f037496e895d9611a40b083bb5): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb29): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n9c2348a7f037496e895d9611a40b083bb11): *none*
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testResult&gt;: _:n0c3cb298e26449338c48db7a745d8f21b1
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: _:n0c3cb298e26449338c48db7a745d8f21b1
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: _:n0c3cb298e26449338c48db7a745d8f21b1
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: _:n0c3cb298e26449338c48db7a745d8f21b1
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n1bcd070f9cde4efa976797e0912d9306b11): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n1bcd070f9cde4efa976797e0912d9306b5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b29): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b32): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-15"
+                                                            aria-expanded="false" aria-controls="uid-15"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/example_2_1.json" target="_blank">example_2_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-15">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
  - Shape &lt;http://example.com/rules#testResult&gt;: *none*
  - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb19): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n9c2348a7f037496e895d9611a40b083bb5): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n9c2348a7f037496e895d9611a40b083bb29): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n9c2348a7f037496e895d9611a40b083bb11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n1bcd070f9cde4efa976797e0912d9306b11): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n1bcd070f9cde4efa976797e0912d9306b5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b29): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n1bcd070f9cde4efa976797e0912d9306b32): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -543,16 +688,25 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-16"
+                                                            aria-expanded="false" aria-controls="uid-16"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-16">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -580,19 +734,28 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-17"
+                                                            aria-expanded="false" aria-controls="uid-17"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-17">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -620,19 +783,28 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-18"
+                                                            aria-expanded="false" aria-controls="uid-18"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-18">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -660,19 +832,28 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-19"
+                                                            aria-expanded="false" aria-controls="uid-19"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-19">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -700,35 +881,44 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-20"
+                                                            aria-expanded="false" aria-controls="uid-20"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservation/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-20">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
  - Shape &lt;http://example.com/rules#testResult&gt;: *none*
  - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:ndb7f8c60461e4e61824f7c8ec1458a55b5): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:ndb7f8c60461e4e61824f7c8ec1458a55b11): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:ndb7f8c60461e4e61824f7c8ec1458a55b32): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:ndb7f8c60461e4e61824f7c8ec1458a55b29): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:ndb7f8c60461e4e61824f7c8ec1458a55b19): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n3cb54b7808ea47dfbafe2da7550dd015b32): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n3cb54b7808ea47dfbafe2da7550dd015b11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n3cb54b7808ea47dfbafe2da7550dd015b5): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n3cb54b7808ea47dfbafe2da7550dd015b19): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n3cb54b7808ea47dfbafe2da7550dd015b29): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -737,185 +927,146 @@ Conforms: True
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.unstable.sosa.properties.observationCollection" id="bblock-14">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-14">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-14">
                                     <div class="flex-fill">
                                         SOSA ObservationCollection
                                         <small class="ms-2 bblock-id">ogc.unstable.sosa.properties.observationCollection</small>
                                     </div>
 
-                                    <span class="badge text-bg-danger me-2">
-                                            Failed
-                                            (66.67%)
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100%)
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse show" id="bblock-collapse-14">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-14">
                                 <div class="accordion-body">
-                                        <p class="summary fw-semibold text-danger">
-                                            Test passed: 2 / 3
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 3 / 3
                                         </p>
-                                        <div class="card mb-2 global-validation-item validation-item">
-                                            <div class="card-body">
-                                                <div class="card-title">
-                                                    Building block global validation errors
-                                                    <div class="float-end">
-                                                        <span class="badge text-bg-danger me-2">Failed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text text-danger">
-                                                        <div class="font-monospace entry-message section-unknown">Traceback (most recent call last):
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 909, in resolve_from_url
-    document = self.store[url]
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/_utils.py&quot;, line 28, in __getitem__
-    return self.store[self.normalize(uri)]
-,KeyError: &#x27;file:///github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml&#x27;
-,
-During handling of the above exception, another exception occurred:
-
-,Traceback (most recent call last):
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 1505, in open_local_file
-    stats = os.stat(localfile)
-,FileNotFoundError: [Errno 2] No such file or directory: &#x27;/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml&#x27;
-,
-During handling of the above exception, another exception occurred:
-
-,Traceback (most recent call last):
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 912, in resolve_from_url
-    document = self.resolve_remote(url)
-,  File &quot;/src/ogc/bblocks/validate.py&quot;, line 804, in resolve_remote
-    with urlopen(uri) as url:
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 216, in urlopen
-    return opener.open(url, data, timeout)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 519, in open
-    response = self._open(req, data)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 536, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 496, in _call_chain
-    result = func(*args)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 1483, in file_open
-    return self.open_local_file(req)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 1522, in open_local_file
-    raise URLError(exp)
-,urllib.error.URLError: &lt;urlopen error [Errno 2] No such file or directory: &#x27;/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml&#x27;&gt;
-,
-During handling of the above exception, another exception occurred:
-
-,Traceback (most recent call last):
-,  File &quot;/src/ogc/bblocks/validate.py&quot;, line 476, in validate_inner
-    validate_json(json_doc, schema_validator)
-,  File &quot;/src/ogc/bblocks/validate.py&quot;, line 827, in validate_json
-    error = jsonschema.exceptions.best_match(validator.iter_errors(instance))
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/exceptions.py&quot;, line 384, in best_match
-    best = next(errors, None)
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 288, in iter_errors
-    for error in errors:
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/_validators.py&quot;, line 362, in allOf
-    yield from validator.descend(instance, subschema, schema_path=index)
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 305, in descend
-    for error in self.evolve(schema=schema).iter_errors(instance):
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 288, in iter_errors
-    for error in errors:
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/_validators.py&quot;, line 298, in ref
-    yield from validator.descend(instance, resolved)
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 305, in descend
-    for error in self.evolve(schema=schema).iter_errors(instance):
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 288, in iter_errors
-    for error in errors:
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/_validators.py&quot;, line 332, in properties
-    yield from validator.descend(
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 305, in descend
-    for error in self.evolve(schema=schema).iter_errors(instance):
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 288, in iter_errors
-    for error in errors:
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/_validators.py&quot;, line 76, in items
-    yield from validator.descend(
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 305, in descend
-    for error in self.evolve(schema=schema).iter_errors(instance):
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 288, in iter_errors
-    for error in errors:
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/_validators.py&quot;, line 368, in anyOf
-    errs = list(validator.descend(instance, subschema, schema_path=index))
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 305, in descend
-    for error in self.evolve(schema=schema).iter_errors(instance):
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 288, in iter_errors
-    for error in errors:
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/_validators.py&quot;, line 294, in ref
-    scope, resolved = validator.resolver.resolve(ref)
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 898, in resolve
-    return url, self._remote_cache(url)
-,  File &quot;/venv/lib/python3.10/site-packages/jsonschema/validators.py&quot;, line 914, in resolve_from_url
-    raise exceptions.RefResolutionError(exc)
-,jsonschema.exceptions.RefResolutionError: &lt;urlopen error [Errno 2] No such file or directory: &#x27;/github/workspace/registereditems/unstable/ogc-utils/iri-or-curie/schema.yaml&#x27;&gt;
-,
-During handling of the above exception, another exception occurred:
-
-,Traceback (most recent call last):
-,  File &quot;/src/ogc/bblocks/validate.py&quot;, line 601, in _validate_resource
-    validate_inner()
-,  File &quot;/src/ogc/bblocks/validate.py&quot;, line 496, in validate_inner
-    &#x27;errorMessage&#x27;: e.message,
-,AttributeError: &#x27;RefResolutionError&#x27; object has no attribute &#x27;message&#x27;
-</div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-21"
+                                                            aria-expanded="false" aria-controls="uid-21"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
-                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                            <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-21">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
+</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testResult&gt;: *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b29): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n93c7b914b74543948fba8a5a1216e828b11): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b19): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b32): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n93c7b914b74543948fba8a5a1216e828b5): *none*
+</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-22"
+                                                            aria-expanded="false" aria-controls="uid-22"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/example_2_1.json" target="_blank">example_2_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-22">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
+</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://example.com/a1&gt;
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://example.com/a1&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://example.com/a1&gt;
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://example.com/a1&gt;
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b29): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n93c7b914b74543948fba8a5a1216e828b11): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b19): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b32): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n93c7b914b74543948fba8a5a1216e828b5): *none*
+</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-23"
+                                                            aria-expanded="false" aria-controls="uid-23"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/example_3_1.ttl" target="_blank">example_3_1.ttl</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_3_1.ttl from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_3_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-23">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_3_1.ttl from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_3_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: eg:a1
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
  - Shape &lt;http://example.com/rules#testResult&gt;: eg:a1
  - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: eg:a1
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: eg:a1
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: eg:a1
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n522a3d19c4aa48a2a659241d06521c3fb32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n522a3d19c4aa48a2a659241d06521c3fb5): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n522a3d19c4aa48a2a659241d06521c3fb29): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n522a3d19c4aa48a2a659241d06521c3fb11): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n522a3d19c4aa48a2a659241d06521c3fb19): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b29): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n93c7b914b74543948fba8a5a1216e828b11): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b19): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n93c7b914b74543948fba8a5a1216e828b32): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n93c7b914b74543948fba8a5a1216e828b5): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -943,19 +1094,28 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-24"
+                                                            aria-expanded="false" aria-controls="uid-24"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-24">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1023,7 +1183,14 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item require-fail">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-25"
+                                                            aria-expanded="false" aria-controls="uid-25"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/tests/required-properties-fail.json" target="_blank">required-properties-fail.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                         <span class="badge text-bg-info">Requires fail</span>
@@ -1031,12 +1198,13 @@ Conforms: True
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using required-properties-fail.json from test resources</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD required-properties-fail.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle required-properties-fail.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;time&#x27; is a required property
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-25">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using required-properties-fail.json from test resources</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD required-properties-fail.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle required-properties-fail.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;time&#x27; is a required property
 
 Failed validating &#x27;required&#x27; in schema[&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;features&#x27;][&#x27;items&#x27;]:
     {&#x27;$schema&#x27;: &#x27;https://json-schema.org/draft/2019-09/schema&#x27;,
@@ -1088,25 +1256,35 @@ On instance[&#x27;features&#x27;][0]:
      &#x27;id&#x27;: &#x27;f1&#x27;,
      &#x27;properties&#x27;: {&#x27;comment&#x27;: &#x27;An attribute value&#x27;},
      &#x27;type&#x27;: &#x27;Feature&#x27;}</div>
-                                                            <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                                <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-26"
+                                                            aria-expanded="false" aria-controls="uid-26"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-26">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1154,100 +1332,127 @@ On instance[&#x27;features&#x27;][0]:
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-27"
+                                                            aria-expanded="false" aria-controls="uid-27"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-27">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://example.com/pop1999&gt;
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
  - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://example.com/pop1999&gt;
  - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://example.com/pop1999&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://example.com/pop1999&gt;
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://example.com/pop1999&gt;
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n00b53ad0d3164f759dc7fccf4fa22217b11): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b29): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b19): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n00b53ad0d3164f759dc7fccf4fa22217b5): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n9739e96fc31e4843942c7c66ca4de089b5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b29): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b32): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n9739e96fc31e4843942c7c66ca4de089b11): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-28"
+                                                            aria-expanded="false" aria-controls="uid-28"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/example_1_2.ttl" target="_blank">example_1_2.ttl</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_2.ttl from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_2.ttl created</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-28">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_2.ttl from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_2.ttl created</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: _:n796d230707f6429eb8f7757eac43583db1
- - Shape &lt;http://example.com/rules#testResult&gt;: _:n796d230707f6429eb8f7757eac43583db1
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: _:n796d230707f6429eb8f7757eac43583db1
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;: _:n796d230707f6429eb8f7757eac43583db1
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n00b53ad0d3164f759dc7fccf4fa22217b11): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b29): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b19): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n00b53ad0d3164f759dc7fccf4fa22217b5): *none*
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testResult&gt;: _:n8b0087a2792440019d731d11e188fbdab1
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: _:n8b0087a2792440019d731d11e188fbdab1
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: _:n8b0087a2792440019d731d11e188fbdab1
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: _:n8b0087a2792440019d731d11e188fbdab1
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n9739e96fc31e4843942c7c66ca4de089b5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b29): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b32): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n9739e96fc31e4843942c7c66ca4de089b11): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-29"
+                                                            aria-expanded="false" aria-controls="uid-29"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observation/example_2_1.json" target="_blank">example_2_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                            <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-29">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://example.com/pop1999&gt;
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
  - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://example.com/pop1999&gt;
  - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://example.com/pop1999&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://example.com/pop1999&gt;
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://example.com/pop1999&gt;
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n00b53ad0d3164f759dc7fccf4fa22217b11): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b29): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n00b53ad0d3164f759dc7fccf4fa22217b19): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n00b53ad0d3164f759dc7fccf4fa22217b5): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n9739e96fc31e4843942c7c66ca4de089b5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b29): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b32): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n9739e96fc31e4843942c7c66ca4de089b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n9739e96fc31e4843942c7c66ca4de089b11): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1275,22 +1480,57 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-30"
+                                                            aria-expanded="false" aria-controls="uid-30"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/tests/observationCollection-props.json" target="_blank">observationCollection-props.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using observationCollection-props.json from test resources</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-30">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using observationCollection-props.json from test resources</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD observationCollection-props.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle observationCollection-props.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
+</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testResult&gt;: *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb29): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb19): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb32): *none*
+</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item require-fail">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-31"
+                                                            aria-expanded="false" aria-controls="uid-31"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/tests/observationCollection-props-fail.json" target="_blank">observationCollection-props-fail.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                         <span class="badge text-bg-info">Requires fail</span>
@@ -1298,56 +1538,114 @@ Conforms: True
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using observationCollection-props-fail.json from test resources</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                            <div class="font-monospace entry-message section-general text-danger">Test was expected to fail but it did not.</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-31">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using observationCollection-props-fail.json from test resources</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD observationCollection-props-fail.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle observationCollection-props-fail.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
+</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testResult&gt;: *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb29): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb19): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb32): *none*
+</div>
+                                                                <div class="font-monospace entry-message section-general text-danger">Test was expected to fail but it did not.</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-32"
+                                                            aria-expanded="false" aria-controls="uid-32"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-32">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
+</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testResult&gt;: *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb29): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb19): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb32): *none*
+</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-33"
+                                                            aria-expanded="false" aria-controls="uid-33"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/features/observationCollection/example_1_2.ttl" target="_blank">example_1_2.ttl</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_2.ttl from examples</div>
-                                                            <div class="font-monospace entry-message section-files ">Output Turtle example_1_2.ttl created</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-33">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_2.ttl from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_2.ttl created</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
-                                                            <div class="font-monospace entry-message section-shacl ">Validation Report
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
 Conforms: True
 </div>
-                                                            <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: eg:pop1999,eg:pop2000
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
  - Shape &lt;http://example.com/rules#testResult&gt;: eg:pop1999,eg:pop2000
  - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: eg:pop1999,eg:pop2000
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: eg:pop1999,eg:pop2000
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: eg:pop1999,eg:pop2000
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n4056367e45214c6e8bc075717457d1ccb11): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n4056367e45214c6e8bc075717457d1ccb29): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n4056367e45214c6e8bc075717457d1ccb19): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n4056367e45214c6e8bc075717457d1ccb32): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n4056367e45214c6e8bc075717457d1ccb5): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb5): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb29): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb19): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb32): *none*
 </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1375,31 +1673,99 @@ Conforms: True
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-34"
+                                                            aria-expanded="false" aria-controls="uid-34"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-34">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
+</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testGeometryHasCoordinates&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+ - Shape &lt;http://example.com/rules#testGeometryCoordinatesIsList&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;: *none*
+ - Shape &lt;http://example.com/rules#testVectorObservationFeatureHasOneGeometry&gt;: &lt;http://example.com/features/vector-obs-1&gt;
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n5d312d79d3a1486ab8555b513a5268efb32): *none*
+ - Shape &lt;http://example.com/rules#testGeometryHasCoordinates&gt;/sh:property (path geojson:coordinates): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n5d312d79d3a1486ab8555b513a5268efb11): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n5d312d79d3a1486ab8555b513a5268efb29): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n5d312d79d3a1486ab8555b513a5268efb5): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n5d312d79d3a1486ab8555b513a5268efb19): *none*
+ - Shape &lt;http://example.com/rules#testVectorObservationFeatureHasOneGeometry&gt;/sh:property (path geojson:geometry): *none*
+</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
-                                                <div class="card-title">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-35"
+                                                            aria-expanded="false" aria-controls="uid-35"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
                                                     <a href="https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/example_2_1.json" target="_blank">example_2_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text">
-                                                            <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
-                                                            <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-35">
+                                                    <div class="validation-text-inner">
+                                                                <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
+                                                                <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
+                                                                <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
+                                                                <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
+</div>
+                                                                <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testGeometryHasCoordinates&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: *none*
+ - Shape &lt;http://example.com/rules#testGeometryCoordinatesIsList&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;: *none*
+ - Shape &lt;http://example.com/rules#testVectorObservationFeatureHasOneGeometry&gt;: &lt;http://example.com/features/vector-obs-1&gt;
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n5d312d79d3a1486ab8555b513a5268efb32): *none*
+ - Shape &lt;http://example.com/rules#testGeometryHasCoordinates&gt;/sh:property (path geojson:coordinates): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n5d312d79d3a1486ab8555b513a5268efb11): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n5d312d79d3a1486ab8555b513a5268efb29): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n5d312d79d3a1486ab8555b513a5268efb5): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n5d312d79d3a1486ab8555b513a5268efb19): *none*
+ - Shape &lt;http://example.com/rules#testVectorObservationFeatureHasOneGeometry&gt;/sh:property (path geojson:geometry): *none*
+</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1432,7 +1798,6 @@ Conforms: True
         <script type="text/javascript">
             window.addEventListener('load', () => {
                 const accordionEntries = [...document.querySelectorAll('#bblock-reports .accordion-collapse')];
-                console.log(accordionEntries);
                 document.querySelector('#expand-collapse').addEventListener('click', ev => {
                     ev.preventDefault();
                     if (ev.target.matches('.expand-all')) {

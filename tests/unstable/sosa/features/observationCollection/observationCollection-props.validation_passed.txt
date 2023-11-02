@@ -1,10 +1,32 @@
 Validation report for ogc.unstable.sosa.features.observationCollection - SOSA ObservationCollection Feature
-Generated 2023-10-29T04:06:23.689099+00:00
+Generated 2023-11-02T15:44:50.410947+00:00
 === Files ===
 Using observationCollection-props.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD observationCollection-props.jsonld created
+Output Turtle observationCollection-props.ttl created
 === End Files ===
 
 === JSON Schema ===
 Validation passed
 === End JSON Schema ===
+
+=== SHACL ===
+Using SHACL files for validation:
+ - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
+Validation Report
+Conforms: True
+
+Focus nodes:
+ - Shape <http://example.com/rules#testResult>: *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>: *none*
+ - Shape <http://example.com/rules#testRequiredTime>: *none*
+ - Shape <http://example.com/rules#testObservedProperty>: *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb11): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n4121b18e3ce34869a810cc084193f6deb5): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb29): *none*
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb19): *none*
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:n4121b18e3ce34869a810cc084193f6deb32): *none*
+
+=== End SHACL ===
 

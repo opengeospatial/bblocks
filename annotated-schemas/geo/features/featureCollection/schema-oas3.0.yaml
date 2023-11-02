@@ -1,0 +1,26 @@
+allOf:
+- $ref: https://geojson.org/schema/FeatureCollection.json
+- type: object
+  properties:
+    links:
+      type: array
+      items:
+        $ref: https://opengeospatial.github.io/ogc-utils/json-link/schema.yaml
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    timeStamp:
+      type: string
+      format: date-time
+    numberMatched:
+      type: integer
+      minimum: 0
+    numberReturned:
+      type: integer
+      minimum: 0
+    features:
+      type: array
+      items:
+        $ref: https://opengeospatial.github.io/feature/schema.yaml
+x-jsonld-extra-terms:
+  properties: '@nest'
+x-jsonld-prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#

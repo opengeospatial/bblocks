@@ -1,0 +1,19 @@
+allOf:
+- $ref: https://opengeospatial.github.io/common/data_types/geojson/schema.yaml
+- type: object
+  properties:
+    links:
+      type: array
+      items:
+        $ref: https://opengeospatial.github.io/ogc-utils/json-link/schema.yaml
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    type:
+      const: Feature
+  required:
+  - type
+  - geometry
+  - properties
+x-jsonld-extra-terms:
+  properties: '@nest'
+x-jsonld-prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#

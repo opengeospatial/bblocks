@@ -1,0 +1,16 @@
+description: annotated link with role and conformance
+$defs:
+  coderef:
+    $ref: https://opengeospatial.github.io/ogc-utils/iri-or-curie/schema.yaml
+  coderefs:
+    $ref: https://opengeospatial.github.io/ogc-utils/iri-or-curie/schema.yaml
+allOf:
+- $ref: https://opengeospatial.github.io/ogc-utils/json-link/schema.yaml
+- properties:
+    role: {}
+    conformsTo: {}
+  required:
+  - role
+x-jsonld-prefixes:
+  prof: http://www.w3.org/ns/dx/prof/
+  dct: http://purl.org/dc/terms/
