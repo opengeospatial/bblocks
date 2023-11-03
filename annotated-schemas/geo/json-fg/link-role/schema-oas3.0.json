@@ -1,29 +1,90 @@
 {
-  "description": "annotated link with role and conformance",
   "$defs": {
-    "coderef": {
-      "$ref": "https://opengeospatial.github.io/ogc-utils/iri-or-curie/schema.yaml"
+    "b1c3b86ea6d0442b2da4dccb07c21c167111fd76": {
+      "description": "annotated link with role and conformance",
+      "$defs": {
+        "coderef": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/$defs/00913d8150286b9c011ab5874a0621d3c9961414"
+        },
+        "coderefs": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/$defs/00913d8150286b9c011ab5874a0621d3c9961414"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/$defs/8b90711441130791a64b322d6318e2ad95f66dde"
+        },
+        {
+          "properties": {
+            "role": {},
+            "conformsTo": {}
+          },
+          "required": [
+            "role"
+          ]
+        }
+      ],
+      "x-jsonld-prefixes": {
+        "prof": "http://www.w3.org/ns/dx/prof/",
+        "dct": "http://purl.org/dc/terms/"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/"
     },
-    "coderefs": {
-      "$ref": "https://opengeospatial.github.io/ogc-utils/iri-or-curie/schema.yaml"
+    "00913d8150286b9c011ab5874a0621d3c9961414": {
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/ogc-utils/iri-or-curie/schema.json"
+    },
+    "8b90711441130791a64b322d6318e2ad95f66dde": {
+      "description": "JSON Link",
+      "type": "object",
+      "required": [
+        "href",
+        "rel"
+      ],
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri-reference",
+          "x-jsonld-id": "http://www.w3.org/ns/oa#hasTarget"
+        },
+        "rel": {
+          "type": "string",
+          "x-jsonld-id": "http://www.iana.org/assignments/relation",
+          "x-jsonld-type": "@id",
+          "x-jsonld-base": "http://www.iana.org/assignments/relation/"
+        },
+        "anchor": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "x-jsonld-id": "http://purl.org/dc/terms/type"
+        },
+        "hreflang": {
+          "type": "string",
+          "x-jsonld-id": "http://purl.org/dc/terms/language"
+        },
+        "title": {
+          "type": "string",
+          "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "length": {
+          "type": "integer",
+          "x-jsonld-id": "http://purl.org/dc/terms/extent"
+        }
+      },
+      "x-jsonld-prefixes": {
+        "oa": "http://www.w3.org/ns/oa#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dct": "http://purl.org/dc/terms/"
+      },
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/ogc-utils/json-link/schema.json"
     }
   },
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/ogc-utils/json-link/schema.yaml"
-    },
-    {
-      "properties": {
-        "role": {},
-        "conformsTo": {}
-      },
-      "required": [
-        "role"
-      ]
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/$defs/b1c3b86ea6d0442b2da4dccb07c21c167111fd76"
     }
-  ],
-  "x-jsonld-prefixes": {
-    "prof": "http://www.w3.org/ns/dx/prof/",
-    "dct": "http://purl.org/dc/terms/"
-  }
+  ]
 }

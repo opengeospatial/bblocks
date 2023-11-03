@@ -1,67 +1,138 @@
 {
-  "description": "Basic-Quaternion: Basic GeoPose using quaternion to specify orientation",
-  "definitions": {
-    "Position": {
-      "type": "object",
-      "properties": {
-        "lat": {
-          "type": "number",
-          "x-jsonld-id": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+  "$defs": {
+    "2b5560c2afc346038246b8301afae5bb30791c4a": {
+      "description": "Basic-Quaternion: Basic GeoPose using quaternion to specify orientation",
+      "definitions": {
+        "Position": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "number",
+              "x-jsonld-id": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+            },
+            "lon": {
+              "type": "number",
+              "x-jsonld-id": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+            },
+            "h": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/h"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "h"
+          ]
         },
-        "lon": {
-          "type": "number",
-          "x-jsonld-id": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
-        },
-        "h": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/h"
+        "Quaternion": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/x"
+            },
+            "y": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/y"
+            },
+            "z": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/z"
+            },
+            "w": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/w"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z",
+            "w"
+          ]
         }
       },
+      "type": "object",
+      "properties": {
+        "position": {},
+        "quaternion": {}
+      },
       "required": [
-        "lat",
-        "lon",
-        "h"
-      ]
+        "position",
+        "quaternion"
+      ],
+      "x-jsonld-prefixes": {
+        "geopose": "http://example.com/geopose/",
+        "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+      },
+      "x-schema-source": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Quaternion.Schema.json"
     },
-    "Quaternion": {
+    "d6efeddd31437414d5d6ad1a90908a75197ca41a": {
+      "description": "Basic-Quaternion: Basic GeoPose using quaternion to specify orientation",
+      "definitions": {
+        "Position": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lon": {
+              "type": "number"
+            },
+            "h": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lon",
+            "h"
+          ]
+        },
+        "Quaternion": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            },
+            "w": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z",
+            "w"
+          ]
+        }
+      },
       "type": "object",
       "properties": {
-        "x": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/x"
+        "position": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/$defs/d6efeddd31437414d5d6ad1a90908a75197ca41a/definitions/Position"
         },
-        "y": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/y"
-        },
-        "z": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/z"
-        },
-        "w": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/w"
+        "quaternion": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/$defs/d6efeddd31437414d5d6ad1a90908a75197ca41a/definitions/Quaternion"
         }
       },
       "required": [
-        "x",
-        "y",
-        "z",
-        "w"
-      ]
+        "position",
+        "quaternion"
+      ],
+      "x-schema-source": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Quaternion.Schema.json"
     }
   },
-  "type": "object",
-  "properties": {
-    "position": {},
-    "quaternion": {}
-  },
-  "required": [
-    "position",
-    "quaternion"
-  ],
-  "x-jsonld-prefixes": {
-    "geopose": "http://example.com/geopose/",
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
-  }
+  "allOf": [
+    {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/$defs/2b5560c2afc346038246b8301afae5bb30791c4a"
+    }
+  ]
 }

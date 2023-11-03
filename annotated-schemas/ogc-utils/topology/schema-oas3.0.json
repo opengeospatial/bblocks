@@ -1,27 +1,42 @@
 {
-  "description": "feature with geometry by reference",
-  "properties": {
-    "type": {},
-    "references": {
-      "type": "array",
-      "items": {
-        "$ref": "https://opengeospatial.github.io/iri-or-curie/schema.yaml"
+  "$defs": {
+    "1f3306d89e2ce14066c7c85b0f4302745464aaec": {
+      "description": "feature with geometry by reference",
+      "properties": {
+        "type": {},
+        "references": {
+          "type": "array",
+          "items": {
+            "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/$defs/00913d8150286b9c011ab5874a0621d3c9961414"
+          },
+          "x-jsonld-id": "https://purl.org/geojson/vocab#relatedFeatures",
+          "x-jsonld-type": "@id",
+          "x-jsonld-container": "@list"
+        }
       },
-      "x-jsonld-id": "https://purl.org/geojson/vocab#relatedFeatures",
-      "x-jsonld-type": "@id",
-      "x-jsonld-container": "@list"
+      "required": [
+        "references",
+        "type"
+      ],
+      "x-jsonld-extra-terms": {
+        "LineString": "https://purl.org/geojson/vocab#LineString"
+      },
+      "x-jsonld-prefixes": {
+        "geojson": "https://purl.org/geojson/vocab#",
+        "csdm": "https://linked.data.gov.au/def/csdm/",
+        "dct": "http://purl.org/dc/terms/"
+      },
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/"
+    },
+    "00913d8150286b9c011ab5874a0621d3c9961414": {
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/iri-or-curie/schema.json"
     }
   },
-  "required": [
-    "references",
-    "type"
-  ],
-  "x-jsonld-extra-terms": {
-    "LineString": "https://purl.org/geojson/vocab#LineString"
-  },
-  "x-jsonld-prefixes": {
-    "geojson": "https://purl.org/geojson/vocab#",
-    "csdm": "https://linked.data.gov.au/def/csdm/",
-    "dct": "http://purl.org/dc/terms/"
-  }
+  "allOf": [
+    {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/$defs/1f3306d89e2ce14066c7c85b0f4302745464aaec"
+    }
+  ]
 }

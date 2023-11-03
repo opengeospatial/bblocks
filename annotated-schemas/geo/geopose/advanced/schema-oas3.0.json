@@ -1,79 +1,153 @@
 {
-  "description": "Advanced: Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.",
-  "definitions": {
-    "FrameSpecification": {
+  "$defs": {
+    "0680b23887ba990fb64ee09c572c282ab1bcbfb1": {
+      "description": "Advanced: Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.",
+      "definitions": {
+        "FrameSpecification": {
+          "type": "object",
+          "properties": {
+            "authority": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "parameters": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "authority",
+            "id",
+            "parameters"
+          ]
+        },
+        "Quaternion": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/x"
+            },
+            "y": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/y"
+            },
+            "z": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/z"
+            },
+            "w": {
+              "type": "number",
+              "x-jsonld-id": "http://example.com/geopose/w"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z",
+            "w"
+          ]
+        }
+      },
       "type": "object",
       "properties": {
-        "authority": {
-          "type": "string"
+        "frameSpecification": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/$defs/0ba97f1dee199bb32b75139d41e2ecd451305cf6/definitions/FrameSpecification"
         },
-        "id": {
-          "type": "string"
-        },
-        "parameters": {
-          "type": "string"
+        "quaternion": {},
+        "validTime": {
+          "type": "integer"
         }
       },
       "required": [
-        "authority",
-        "id",
-        "parameters"
-      ]
+        "frameSpecification",
+        "quaternion"
+      ],
+      "x-jsonld-extra-terms": {
+        "position": {
+          "x-jsonld-id": "http://example.com/geopose/position",
+          "x-jsonld-context": {
+            "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+            "lon": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+            "h": "http://example.com/geopose/h"
+          }
+        }
+      },
+      "x-jsonld-prefixes": {
+        "geopose": "http://example.com/geopose/",
+        "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+      },
+      "x-schema-source": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Advanced.Schema.json"
     },
-    "Quaternion": {
+    "0ba97f1dee199bb32b75139d41e2ecd451305cf6": {
+      "description": "Advanced: Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.",
+      "definitions": {
+        "FrameSpecification": {
+          "type": "object",
+          "properties": {
+            "authority": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "parameters": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "authority",
+            "id",
+            "parameters"
+          ]
+        },
+        "Quaternion": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            },
+            "w": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z",
+            "w"
+          ]
+        }
+      },
       "type": "object",
       "properties": {
-        "x": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/x"
+        "frameSpecification": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/$defs/0ba97f1dee199bb32b75139d41e2ecd451305cf6/definitions/FrameSpecification"
         },
-        "y": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/y"
+        "quaternion": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/$defs/0ba97f1dee199bb32b75139d41e2ecd451305cf6/definitions/Quaternion"
         },
-        "z": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/z"
-        },
-        "w": {
-          "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/w"
+        "validTime": {
+          "type": "integer"
         }
       },
       "required": [
-        "x",
-        "y",
-        "z",
-        "w"
-      ]
+        "frameSpecification",
+        "quaternion"
+      ],
+      "x-schema-source": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Advanced.Schema.json"
     }
   },
-  "type": "object",
-  "properties": {
-    "frameSpecification": {
-      "$ref": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Advanced.Schema.json#/definitions/FrameSpecification"
-    },
-    "quaternion": {},
-    "validTime": {
-      "type": "integer"
+  "allOf": [
+    {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/$defs/0680b23887ba990fb64ee09c572c282ab1bcbfb1"
     }
-  },
-  "required": [
-    "frameSpecification",
-    "quaternion"
-  ],
-  "x-jsonld-extra-terms": {
-    "position": {
-      "x-jsonld-id": "http://example.com/geopose/position",
-      "x-jsonld-context": {
-        "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
-        "lon": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
-        "h": "http://example.com/geopose/h"
-      }
-    }
-  },
-  "x-jsonld-prefixes": {
-    "geopose": "http://example.com/geopose/",
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
-  }
+  ]
 }

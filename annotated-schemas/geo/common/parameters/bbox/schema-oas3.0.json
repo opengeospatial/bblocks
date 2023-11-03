@@ -1,23 +1,33 @@
 {
-  "name": "bbox",
-  "in": "query",
-  "required": false,
-  "style": "form",
-  "explode": false,
-  "schema": {
-    "type": "array",
-    "oneOf": [
-      {
-        "minItems": 4,
-        "maxItems": 4
+  "$defs": {
+    "98a7ca2b97422a2519bc4eaf41cae13774058f36": {
+      "name": "bbox",
+      "in": "query",
+      "required": false,
+      "style": "form",
+      "explode": false,
+      "schema": {
+        "type": "array",
+        "oneOf": [
+          {
+            "minItems": 4,
+            "maxItems": 4
+          },
+          {
+            "minItems": 6,
+            "maxItems": 6
+          }
+        ],
+        "items": {
+          "type": "number"
+        }
       },
-      {
-        "minItems": 6,
-        "maxItems": 6
-      }
-    ],
-    "items": {
-      "type": "number"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/"
     }
-  }
+  },
+  "allOf": [
+    {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema-oas3.0.json#/$defs/98a7ca2b97422a2519bc4eaf41cae13774058f36"
+    }
+  ]
 }

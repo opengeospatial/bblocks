@@ -1,14 +1,19 @@
-name: bbox
-in: query
-required: false
-style: form
-explode: false
-schema:
-  type: array
-  oneOf:
-  - minItems: 4
-    maxItems: 4
-  - minItems: 6
-    maxItems: 6
-  items:
-    type: number
+$defs:
+  c04a0259f9a8830113cd289a36b6c28e8e49a599:
+    name: bbox
+    in: query
+    required: false
+    style: form
+    explode: false
+    schema:
+      type: array
+      oneOf:
+      - minItems: 4
+        maxItems: 4
+      - minItems: 6
+        maxItems: 6
+      items:
+        type: number
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/
+allOf:
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema-oas3.0.yaml#/$defs/c04a0259f9a8830113cd289a36b6c28e8e49a599

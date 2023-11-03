@@ -1,8 +1,13 @@
-type: array
-oneOf:
-- minItems: 4
-  maxItems: 4
-- minItems: 6
-  maxItems: 6
-items:
-  type: number
+$defs:
+  73a758f8187839858a0fde3dca8f52fd885d10b9:
+    type: array
+    oneOf:
+    - minItems: 4
+      maxItems: 4
+    - minItems: 6
+      maxItems: 6
+    items:
+      type: number
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/
+allOf:
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema-oas3.0.yaml#/$defs/73a758f8187839858a0fde3dca8f52fd885d10b9

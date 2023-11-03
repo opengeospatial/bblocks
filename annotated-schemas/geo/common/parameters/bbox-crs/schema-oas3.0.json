@@ -1,11 +1,21 @@
 {
-  "name": "bbox-crs",
-  "in": "query",
-  "required": false,
-  "schema": {
-    "type": "string",
-    "format": "uri"
+  "$defs": {
+    "1e5614700b12d7228ba4bc21138e8433b2c5f58d": {
+      "name": "bbox-crs",
+      "in": "query",
+      "required": false,
+      "schema": {
+        "type": "string",
+        "format": "uri"
+      },
+      "style": "form",
+      "explode": false,
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/"
+    }
   },
-  "style": "form",
-  "explode": false
+  "allOf": [
+    {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema-oas3.0.json#/$defs/1e5614700b12d7228ba4bc21138e8433b2c5f58d"
+    }
+  ]
 }

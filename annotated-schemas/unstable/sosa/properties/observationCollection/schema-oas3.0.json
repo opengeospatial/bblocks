@@ -1,7 +1,242 @@
 {
-  "description": "SOSA ObservationCollection",
   "$defs": {
-    "collection": {
+    "45098c987e69167d1695fb1ebce1ebbb9784ed65": {
+      "description": "SOSA ObservationCollection",
+      "$defs": {
+        "collection": {
+          "type": "object",
+          "properties": {
+            "resultTime": {
+              "type": "string",
+              "format": "date-time",
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/resultTime"
+            },
+            "phenomenonTime": {
+              "type": [
+                "object",
+                "string"
+              ],
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
+              "oneOf": {
+                "oneOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "hasFeatureOfInterest": {
+              "type": [
+                "object",
+                "string"
+              ],
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+              "x-jsonld-type": "@id",
+              "oneOf": {
+                "oneOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "observedProperty": {
+              "type": [
+                "object",
+                "string"
+              ],
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
+              "x-jsonld-type": "@id",
+              "oneOf": {
+                "oneOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "usedProcedure": {
+              "type": [
+                "object",
+                "string"
+              ],
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
+              "x-jsonld-type": "@id",
+              "oneOf": {
+                "oneOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "madeBySensor": {
+              "type": [
+                "object",
+                "string"
+              ],
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
+              "x-jsonld-type": "@id",
+              "oneOf": {
+                "oneOf": [
+                  {
+                    "type": "object"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "hasMember": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/45098c987e69167d1695fb1ebce1ebbb9784ed65/$defs/collection"
+                  },
+                  {
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/c3c0f83a2f271fa8fd42fe2926899a406652151c"
+                  },
+                  {
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/00913d8150286b9c011ab5874a0621d3c9961414"
+                  }
+                ]
+              },
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/hasMember"
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/45098c987e69167d1695fb1ebce1ebbb9784ed65/$defs/collection"
+        },
+        {
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "hasResult"
+                ]
+              },
+              {
+                "required": [
+                  "hasSimpleResult"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "x-jsonld-extra-terms": {
+        "Observation": "http://www.w3.org/ns/sosa/Observation",
+        "Sample": "http://www.w3.org/ns/sosa/Sample",
+        "observes": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/observes",
+          "x-jsonld-type": "@id"
+        },
+        "isObservedBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isObservedBy",
+          "x-jsonld-type": "@id"
+        },
+        "madeObservation": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeObservation",
+          "x-jsonld-type": "@id"
+        },
+        "actsOnProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/actsOnProperty",
+          "x-jsonld-type": "@id"
+        },
+        "isActedOnBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isActedOnBy",
+          "x-jsonld-type": "@id"
+        },
+        "madeActuation": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeActuation",
+          "x-jsonld-type": "@id"
+        },
+        "madeByActuator": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeByActuator",
+          "x-jsonld-type": "@id"
+        },
+        "hasSample": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
+          "x-jsonld-type": "@id"
+        },
+        "isSampleOf": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isSampleOf",
+          "x-jsonld-type": "@id"
+        },
+        "madeSampling": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeSampling",
+          "x-jsonld-type": "@id"
+        },
+        "madeBySampler": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySampler",
+          "x-jsonld-type": "@id"
+        },
+        "isFeatureOfInterestOf": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+          "x-jsonld-type": "@id"
+        },
+        "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+        "isResultOf": "http://www.w3.org/ns/sosa/isResultOf",
+        "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
+        "hosts": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hosts",
+          "x-jsonld-type": "@id"
+        },
+        "isHostedBy": "http://www.w3.org/ns/sosa/isHostedBy",
+        "isProxyFor": "http://www.w3.org/ns/ssn/isProxyFor",
+        "wasOriginatedBy": "http://www.w3.org/ns/ssn/wasOriginatedBy",
+        "detects": "http://www.w3.org/ns/ssn/detects",
+        "hasProperty": "http://www.w3.org/ns/ssn/hasProperty",
+        "isPropertyOf": "http://www.w3.org/ns/ssn/isPropertyOf",
+        "forProperty": "http://www.w3.org/ns/ssn/forProperty",
+        "implements": "http://www.w3.org/ns/ssn/implements",
+        "implementedBy": "http://www.w3.org/ns/ssn/implementedBy",
+        "hasInput": "http://www.w3.org/ns/ssn/hasInput",
+        "hasOutput": "http://www.w3.org/ns/ssn/hasOutput",
+        "hasSubSystem": "http://www.w3.org/ns/ssn/hasSubSystem",
+        "deployedSystem": "http://www.w3.org/ns/ssn/deployedSystem",
+        "hasDeployment": "http://www.w3.org/ns/ssn/hasDeployment",
+        "deployedOnPlatform": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+        "inDeployment": "http://www.w3.org/ns/ssn/inDeployment",
+        "inCondition": "http://www.w3.org/ns/ssn/systems/inCondition",
+        "hasSystemCapability": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+        "hasSystemProperty": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+        "hasOperatingRange": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+        "hasOperatingProperty": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+        "hasSurvivalRange": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+        "hasSurvivalProperty": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+        "qualityOfObservation": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+        "features": "http://www.w3.org/ns/sosa/hasMember",
+        "properties": "@nest",
+        "featureType": "@type"
+      },
+      "x-jsonld-prefixes": {
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "ssn": "http://www.w3.org/ns/ssn/",
+        "ssn-system": "http://www.w3.org/ns/ssn/systems/"
+      },
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/"
+    },
+    "c3c0f83a2f271fa8fd42fe2926899a406652151c": {
+      "description": "SOSA Observation",
       "type": "object",
       "properties": {
         "resultTime": {
@@ -14,7 +249,17 @@
             "object",
             "string"
           ],
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime"
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
+          "oneOf": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
         },
         "hasFeatureOfInterest": {
           "type": [
@@ -22,7 +267,17 @@
             "string"
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-          "x-jsonld-type": "@id"
+          "x-jsonld-type": "@id",
+          "oneOf": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
         },
         "observedProperty": {
           "type": [
@@ -30,7 +285,17 @@
             "string"
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
-          "x-jsonld-type": "@id"
+          "x-jsonld-type": "@id",
+          "oneOf": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
         },
         "usedProcedure": {
           "type": [
@@ -38,7 +303,17 @@
             "string"
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
-          "x-jsonld-type": "@id"
+          "x-jsonld-type": "@id",
+          "oneOf": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
         },
         "madeBySensor": {
           "type": [
@@ -46,138 +321,138 @@
             "string"
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
-          "x-jsonld-type": "@id"
-        },
-        "hasMember": {
-          "type": "array",
-          "items": {
-            "anyOf": [
+          "x-jsonld-type": "@id",
+          "oneOf": {
+            "oneOf": [
               {
-                "$ref": "https://opengeospatial.github.io/bblocks/#/$defs/collection"
+                "type": "object"
               },
               {
-                "$ref": "https://opengeospatial.github.io/observation/schema.yaml"
-              },
-              {
-                "$ref": "https://opengeospatial.github.io/ogc-utils/iri-or-curie/schema.yaml"
+                "type": "string"
               }
             ]
-          },
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasMember"
+          }
+        },
+        "hasResult": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult"
+        },
+        "hasSimpleResult": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSimpleResult"
         }
-      }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "hasResult"
+          ]
+        },
+        {
+          "required": [
+            "hasSimpleResult"
+          ]
+        }
+      ],
+      "x-jsonld-extra-terms": {
+        "Observation": "http://www.w3.org/ns/sosa/Observation",
+        "Sample": "http://www.w3.org/ns/sosa/Sample",
+        "observes": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/observes",
+          "x-jsonld-type": "@id"
+        },
+        "isObservedBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isObservedBy",
+          "x-jsonld-type": "@id"
+        },
+        "madeObservation": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeObservation",
+          "x-jsonld-type": "@id"
+        },
+        "actsOnProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/actsOnProperty",
+          "x-jsonld-type": "@id"
+        },
+        "isActedOnBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isActedOnBy",
+          "x-jsonld-type": "@id"
+        },
+        "madeActuation": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeActuation",
+          "x-jsonld-type": "@id"
+        },
+        "madeByActuator": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeByActuator",
+          "x-jsonld-type": "@id"
+        },
+        "hasSample": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
+          "x-jsonld-type": "@id"
+        },
+        "isSampleOf": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isSampleOf",
+          "x-jsonld-type": "@id"
+        },
+        "madeSampling": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeSampling",
+          "x-jsonld-type": "@id"
+        },
+        "madeBySampler": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySampler",
+          "x-jsonld-type": "@id"
+        },
+        "isFeatureOfInterestOf": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+          "x-jsonld-type": "@id"
+        },
+        "isResultOf": "http://www.w3.org/ns/sosa/isResultOf",
+        "hosts": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hosts",
+          "x-jsonld-type": "@id"
+        },
+        "isHostedBy": "http://www.w3.org/ns/sosa/isHostedBy",
+        "isProxyFor": "http://www.w3.org/ns/ssn/isProxyFor",
+        "wasOriginatedBy": "http://www.w3.org/ns/ssn/wasOriginatedBy",
+        "detects": "http://www.w3.org/ns/ssn/detects",
+        "hasProperty": "http://www.w3.org/ns/ssn/hasProperty",
+        "isPropertyOf": "http://www.w3.org/ns/ssn/isPropertyOf",
+        "forProperty": "http://www.w3.org/ns/ssn/forProperty",
+        "implements": "http://www.w3.org/ns/ssn/implements",
+        "implementedBy": "http://www.w3.org/ns/ssn/implementedBy",
+        "hasInput": "http://www.w3.org/ns/ssn/hasInput",
+        "hasOutput": "http://www.w3.org/ns/ssn/hasOutput",
+        "hasSubSystem": "http://www.w3.org/ns/ssn/hasSubSystem",
+        "deployedSystem": "http://www.w3.org/ns/ssn/deployedSystem",
+        "hasDeployment": "http://www.w3.org/ns/ssn/hasDeployment",
+        "deployedOnPlatform": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+        "inDeployment": "http://www.w3.org/ns/ssn/inDeployment",
+        "inCondition": "http://www.w3.org/ns/ssn/systems/inCondition",
+        "hasSystemCapability": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+        "hasSystemProperty": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+        "hasOperatingRange": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+        "hasOperatingProperty": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+        "hasSurvivalRange": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+        "hasSurvivalProperty": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+        "qualityOfObservation": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+        "hasMember": "http://www.w3.org/ns/sosa/hasMember",
+        "features": "http://www.w3.org/ns/sosa/hasMember",
+        "properties": "@nest",
+        "featureType": "@type"
+      },
+      "x-jsonld-prefixes": {
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "ssn": "http://www.w3.org/ns/ssn/",
+        "ssn-system": "http://www.w3.org/ns/ssn/systems/"
+      },
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.json"
+    },
+    "00913d8150286b9c011ab5874a0621d3c9961414": {
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/ogc-utils/iri-or-curie/schema.json"
     }
   },
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/#/$defs/collection"
-    },
-    {
-      "not": {
-        "anyOf": [
-          {
-            "required": [
-              "hasResult"
-            ]
-          },
-          {
-            "required": [
-              "hasSimpleResult"
-            ]
-          }
-        ]
-      }
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/45098c987e69167d1695fb1ebce1ebbb9784ed65"
     }
-  ],
-  "x-jsonld-extra-terms": {
-    "Observation": "http://www.w3.org/ns/sosa/Observation",
-    "Sample": "http://www.w3.org/ns/sosa/Sample",
-    "observes": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/observes",
-      "x-jsonld-type": "@id"
-    },
-    "isObservedBy": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/isObservedBy",
-      "x-jsonld-type": "@id"
-    },
-    "madeObservation": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeObservation",
-      "x-jsonld-type": "@id"
-    },
-    "actsOnProperty": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/actsOnProperty",
-      "x-jsonld-type": "@id"
-    },
-    "isActedOnBy": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/isActedOnBy",
-      "x-jsonld-type": "@id"
-    },
-    "madeActuation": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeActuation",
-      "x-jsonld-type": "@id"
-    },
-    "madeByActuator": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeByActuator",
-      "x-jsonld-type": "@id"
-    },
-    "hasSample": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
-      "x-jsonld-type": "@id"
-    },
-    "isSampleOf": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/isSampleOf",
-      "x-jsonld-type": "@id"
-    },
-    "madeSampling": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeSampling",
-      "x-jsonld-type": "@id"
-    },
-    "madeBySampler": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySampler",
-      "x-jsonld-type": "@id"
-    },
-    "isFeatureOfInterestOf": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
-      "x-jsonld-type": "@id"
-    },
-    "hasResult": "http://www.w3.org/ns/sosa/hasResult",
-    "isResultOf": "http://www.w3.org/ns/sosa/isResultOf",
-    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
-    "hosts": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/hosts",
-      "x-jsonld-type": "@id"
-    },
-    "isHostedBy": "http://www.w3.org/ns/sosa/isHostedBy",
-    "isProxyFor": "http://www.w3.org/ns/ssn/isProxyFor",
-    "wasOriginatedBy": "http://www.w3.org/ns/ssn/wasOriginatedBy",
-    "detects": "http://www.w3.org/ns/ssn/detects",
-    "hasProperty": "http://www.w3.org/ns/ssn/hasProperty",
-    "isPropertyOf": "http://www.w3.org/ns/ssn/isPropertyOf",
-    "forProperty": "http://www.w3.org/ns/ssn/forProperty",
-    "implements": "http://www.w3.org/ns/ssn/implements",
-    "implementedBy": "http://www.w3.org/ns/ssn/implementedBy",
-    "hasInput": "http://www.w3.org/ns/ssn/hasInput",
-    "hasOutput": "http://www.w3.org/ns/ssn/hasOutput",
-    "hasSubSystem": "http://www.w3.org/ns/ssn/hasSubSystem",
-    "deployedSystem": "http://www.w3.org/ns/ssn/deployedSystem",
-    "hasDeployment": "http://www.w3.org/ns/ssn/hasDeployment",
-    "deployedOnPlatform": "http://www.w3.org/ns/ssn/deployedOnPlatform",
-    "inDeployment": "http://www.w3.org/ns/ssn/inDeployment",
-    "inCondition": "http://www.w3.org/ns/ssn/systems/inCondition",
-    "hasSystemCapability": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
-    "hasSystemProperty": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
-    "hasOperatingRange": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
-    "hasOperatingProperty": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
-    "hasSurvivalRange": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-    "hasSurvivalProperty": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
-    "qualityOfObservation": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
-    "features": "http://www.w3.org/ns/sosa/hasMember",
-    "properties": "@nest",
-    "featureType": "@type"
-  },
-  "x-jsonld-prefixes": {
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn": "http://www.w3.org/ns/ssn/",
-    "ssn-system": "http://www.w3.org/ns/ssn/systems/"
-  }
+  ]
 }

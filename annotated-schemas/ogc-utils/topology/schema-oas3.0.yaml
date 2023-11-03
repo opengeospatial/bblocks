@@ -1,19 +1,28 @@
-description: feature with geometry by reference
-properties:
-  type: {}
-  references:
-    type: array
-    items:
-      $ref: https://opengeospatial.github.io/iri-or-curie/schema.yaml
-    x-jsonld-id: https://purl.org/geojson/vocab#relatedFeatures
-    x-jsonld-type: '@id'
-    x-jsonld-container: '@list'
-required:
-- references
-- type
-x-jsonld-extra-terms:
-  LineString: https://purl.org/geojson/vocab#LineString
-x-jsonld-prefixes:
-  geojson: https://purl.org/geojson/vocab#
-  csdm: https://linked.data.gov.au/def/csdm/
-  dct: http://purl.org/dc/terms/
+$defs:
+  b14f2eace08c7a9c96925ccedcf8d2f0e385b6ae:
+    description: feature with geometry by reference
+    properties:
+      type: {}
+      references:
+        type: array
+        items:
+          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.yaml#/$defs/19f3ac31c7be0acd52e7f8ca219dab3259fe6c6b
+        x-jsonld-id: https://purl.org/geojson/vocab#relatedFeatures
+        x-jsonld-type: '@id'
+        x-jsonld-container: '@list'
+    required:
+    - references
+    - type
+    x-jsonld-extra-terms:
+      LineString: https://purl.org/geojson/vocab#LineString
+    x-jsonld-prefixes:
+      geojson: https://purl.org/geojson/vocab#
+      csdm: https://linked.data.gov.au/def/csdm/
+      dct: http://purl.org/dc/terms/
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/
+  19f3ac31c7be0acd52e7f8ca219dab3259fe6c6b:
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/iri-or-curie/schema.yaml
+allOf:
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.yaml#/$defs/b14f2eace08c7a9c96925ccedcf8d2f0e385b6ae

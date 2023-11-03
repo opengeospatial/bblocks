@@ -1,26 +1,856 @@
+$defs:
+  87bc89545ac002bbbb0dbc747efa3ee967eb601f:
+    allOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/c91e52f769a91e546450bef84f1dac326f3acb5e
+    - type: object
+      properties:
+        links:
+          type: array
+          items:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/cd14a85209fd518659f8fb08008d89c0369d5e18
+          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+        timeStamp:
+          type: string
+          format: date-time
+        numberMatched:
+          type: integer
+          minimum: 0
+        numberReturned:
+          type: integer
+          minimum: 0
+        features:
+          type: array
+          items:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/e625fdf2b49fb9e9402240a7e39960ab0ba54d23
+    x-jsonld-extra-terms:
+      properties: '@nest'
+    x-jsonld-prefixes:
+      rdfs: http://www.w3.org/2000/01/rdf-schema#
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/
+  c91e52f769a91e546450bef84f1dac326f3acb5e:
+    title: GeoJSON FeatureCollection
+    type: object
+    required:
+    - type
+    - features
+    properties:
+      type:
+        type: string
+        enum:
+        - FeatureCollection
+      features:
+        type: array
+        items:
+          title: GeoJSON Feature
+          type: object
+          required:
+          - type
+          - properties
+          - geometry
+          properties:
+            type:
+              type: string
+              enum:
+              - Feature
+            id:
+              oneOf:
+              - type: number
+              - type: string
+            properties:
+              oneOf:
+              - nullable: true
+              - type: object
+            geometry:
+              oneOf:
+              - nullable: true
+              - title: GeoJSON Point
+                type: object
+                required:
+                - type
+                - coordinates
+                properties:
+                  type:
+                    type: string
+                    enum:
+                    - Point
+                  coordinates:
+                    type: array
+                    minItems: 2
+                    items:
+                      type: number
+                  bbox:
+                    type: array
+                    minItems: 4
+                    items:
+                      type: number
+              - title: GeoJSON LineString
+                type: object
+                required:
+                - type
+                - coordinates
+                properties:
+                  type:
+                    type: string
+                    enum:
+                    - LineString
+                  coordinates:
+                    type: array
+                    minItems: 2
+                    items:
+                      type: array
+                      minItems: 2
+                      items:
+                        type: number
+                  bbox:
+                    type: array
+                    minItems: 4
+                    items:
+                      type: number
+              - title: GeoJSON Polygon
+                type: object
+                required:
+                - type
+                - coordinates
+                properties:
+                  type:
+                    type: string
+                    enum:
+                    - Polygon
+                  coordinates:
+                    type: array
+                    items:
+                      type: array
+                      minItems: 4
+                      items:
+                        type: array
+                        minItems: 2
+                        items:
+                          type: number
+                  bbox:
+                    type: array
+                    minItems: 4
+                    items:
+                      type: number
+              - title: GeoJSON MultiPoint
+                type: object
+                required:
+                - type
+                - coordinates
+                properties:
+                  type:
+                    type: string
+                    enum:
+                    - MultiPoint
+                  coordinates:
+                    type: array
+                    items:
+                      type: array
+                      minItems: 2
+                      items:
+                        type: number
+                  bbox:
+                    type: array
+                    minItems: 4
+                    items:
+                      type: number
+              - title: GeoJSON MultiLineString
+                type: object
+                required:
+                - type
+                - coordinates
+                properties:
+                  type:
+                    type: string
+                    enum:
+                    - MultiLineString
+                  coordinates:
+                    type: array
+                    items:
+                      type: array
+                      minItems: 2
+                      items:
+                        type: array
+                        minItems: 2
+                        items:
+                          type: number
+                  bbox:
+                    type: array
+                    minItems: 4
+                    items:
+                      type: number
+              - title: GeoJSON MultiPolygon
+                type: object
+                required:
+                - type
+                - coordinates
+                properties:
+                  type:
+                    type: string
+                    enum:
+                    - MultiPolygon
+                  coordinates:
+                    type: array
+                    items:
+                      type: array
+                      items:
+                        type: array
+                        minItems: 4
+                        items:
+                          type: array
+                          minItems: 2
+                          items:
+                            type: number
+                  bbox:
+                    type: array
+                    minItems: 4
+                    items:
+                      type: number
+              - title: GeoJSON GeometryCollection
+                type: object
+                required:
+                - type
+                - geometries
+                properties:
+                  type:
+                    type: string
+                    enum:
+                    - GeometryCollection
+                  geometries:
+                    type: array
+                    items:
+                      oneOf:
+                      - title: GeoJSON Point
+                        type: object
+                        required:
+                        - type
+                        - coordinates
+                        properties:
+                          type:
+                            type: string
+                            enum:
+                            - Point
+                          coordinates:
+                            type: array
+                            minItems: 2
+                            items:
+                              type: number
+                          bbox:
+                            type: array
+                            minItems: 4
+                            items:
+                              type: number
+                      - title: GeoJSON LineString
+                        type: object
+                        required:
+                        - type
+                        - coordinates
+                        properties:
+                          type:
+                            type: string
+                            enum:
+                            - LineString
+                          coordinates:
+                            type: array
+                            minItems: 2
+                            items:
+                              type: array
+                              minItems: 2
+                              items:
+                                type: number
+                          bbox:
+                            type: array
+                            minItems: 4
+                            items:
+                              type: number
+                      - title: GeoJSON Polygon
+                        type: object
+                        required:
+                        - type
+                        - coordinates
+                        properties:
+                          type:
+                            type: string
+                            enum:
+                            - Polygon
+                          coordinates:
+                            type: array
+                            items:
+                              type: array
+                              minItems: 4
+                              items:
+                                type: array
+                                minItems: 2
+                                items:
+                                  type: number
+                          bbox:
+                            type: array
+                            minItems: 4
+                            items:
+                              type: number
+                      - title: GeoJSON MultiPoint
+                        type: object
+                        required:
+                        - type
+                        - coordinates
+                        properties:
+                          type:
+                            type: string
+                            enum:
+                            - MultiPoint
+                          coordinates:
+                            type: array
+                            items:
+                              type: array
+                              minItems: 2
+                              items:
+                                type: number
+                          bbox:
+                            type: array
+                            minItems: 4
+                            items:
+                              type: number
+                      - title: GeoJSON MultiLineString
+                        type: object
+                        required:
+                        - type
+                        - coordinates
+                        properties:
+                          type:
+                            type: string
+                            enum:
+                            - MultiLineString
+                          coordinates:
+                            type: array
+                            items:
+                              type: array
+                              minItems: 2
+                              items:
+                                type: array
+                                minItems: 2
+                                items:
+                                  type: number
+                          bbox:
+                            type: array
+                            minItems: 4
+                            items:
+                              type: number
+                      - title: GeoJSON MultiPolygon
+                        type: object
+                        required:
+                        - type
+                        - coordinates
+                        properties:
+                          type:
+                            type: string
+                            enum:
+                            - MultiPolygon
+                          coordinates:
+                            type: array
+                            items:
+                              type: array
+                              items:
+                                type: array
+                                minItems: 4
+                                items:
+                                  type: array
+                                  minItems: 2
+                                  items:
+                                    type: number
+                          bbox:
+                            type: array
+                            minItems: 4
+                            items:
+                              type: number
+                  bbox:
+                    type: array
+                    minItems: 4
+                    items:
+                      type: number
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+      bbox:
+        type: array
+        minItems: 4
+        items:
+          type: number
+    x-schema-version: http://json-schema.org/draft-07/schema#
+    x-schema-source: https://geojson.org/schema/FeatureCollection.json
+  cd14a85209fd518659f8fb08008d89c0369d5e18:
+    description: JSON Link
+    type: object
+    required:
+    - href
+    - rel
+    properties:
+      href:
+        type: string
+        format: uri-reference
+        x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
+      rel:
+        type: string
+        x-jsonld-id: http://www.iana.org/assignments/relation
+        x-jsonld-type: '@id'
+        x-jsonld-base: http://www.iana.org/assignments/relation/
+      anchor:
+        type: string
+      type:
+        type: string
+        x-jsonld-id: http://purl.org/dc/terms/type
+      hreflang:
+        type: string
+        x-jsonld-id: http://purl.org/dc/terms/language
+      title:
+        type: string
+        x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
+      length:
+        type: integer
+        x-jsonld-id: http://purl.org/dc/terms/extent
+    x-jsonld-prefixes:
+      oa: http://www.w3.org/ns/oa#
+      rdfs: http://www.w3.org/2000/01/rdf-schema#
+      dct: http://purl.org/dc/terms/
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
+    x-schema-source: https://opengeospatial.github.io/bblocks/ogc-utils/json-link/schema.yaml
+  e625fdf2b49fb9e9402240a7e39960ab0ba54d23:
+    allOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/a7d0b06f951490137dddd1728209076989443796
+    - type: object
+      properties:
+        links:
+          type: array
+          items:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/cd14a85209fd518659f8fb08008d89c0369d5e18
+          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+        type:
+          const: Feature
+      required:
+      - type
+      - geometry
+      - properties
+    x-jsonld-extra-terms:
+      properties: '@nest'
+    x-jsonld-prefixes:
+      rdfs: http://www.w3.org/2000/01/rdf-schema#
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/feature/schema.yaml
+  a7d0b06f951490137dddd1728209076989443796:
+    title: GeoJSON Feature
+    type: object
+    required:
+    - type
+    - properties
+    - geometry
+    properties:
+      type:
+        type: string
+        enum:
+        - Feature
+        x-jsonld-id: '@type'
+      id:
+        oneOf:
+        - type: number
+        - type: string
+        x-jsonld-id: '@id'
+      properties:
+        oneOf:
+        - nullable: true
+        - type: object
+        x-jsonld-id: '@nest'
+      geometry:
+        oneOf:
+        - nullable: true
+        - title: GeoJSON Point
+          type: object
+          required:
+          - type
+          - coordinates
+          properties:
+            type:
+              type: string
+              enum:
+              - Point
+              x-jsonld-id: '@type'
+            coordinates:
+              type: array
+              minItems: 2
+              items:
+                type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#bbox
+        - title: GeoJSON LineString
+          type: object
+          required:
+          - type
+          - coordinates
+          properties:
+            type:
+              type: string
+              enum:
+              - LineString
+              x-jsonld-id: '@type'
+            coordinates:
+              type: array
+              minItems: 2
+              items:
+                type: array
+                minItems: 2
+                items:
+                  type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#bbox
+        - title: GeoJSON Polygon
+          type: object
+          required:
+          - type
+          - coordinates
+          properties:
+            type:
+              type: string
+              enum:
+              - Polygon
+              x-jsonld-id: '@type'
+            coordinates:
+              type: array
+              items:
+                type: array
+                minItems: 4
+                items:
+                  type: array
+                  minItems: 2
+                  items:
+                    type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#bbox
+        - title: GeoJSON MultiPoint
+          type: object
+          required:
+          - type
+          - coordinates
+          properties:
+            type:
+              type: string
+              enum:
+              - MultiPoint
+              x-jsonld-id: '@type'
+            coordinates:
+              type: array
+              items:
+                type: array
+                minItems: 2
+                items:
+                  type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#bbox
+        - title: GeoJSON MultiLineString
+          type: object
+          required:
+          - type
+          - coordinates
+          properties:
+            type:
+              type: string
+              enum:
+              - MultiLineString
+              x-jsonld-id: '@type'
+            coordinates:
+              type: array
+              items:
+                type: array
+                minItems: 2
+                items:
+                  type: array
+                  minItems: 2
+                  items:
+                    type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#bbox
+        - title: GeoJSON MultiPolygon
+          type: object
+          required:
+          - type
+          - coordinates
+          properties:
+            type:
+              type: string
+              enum:
+              - MultiPolygon
+              x-jsonld-id: '@type'
+            coordinates:
+              type: array
+              items:
+                type: array
+                items:
+                  type: array
+                  minItems: 4
+                  items:
+                    type: array
+                    minItems: 2
+                    items:
+                      type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#bbox
+        - title: GeoJSON GeometryCollection
+          type: object
+          required:
+          - type
+          - geometries
+          properties:
+            type:
+              type: string
+              enum:
+              - GeometryCollection
+              x-jsonld-id: '@type'
+            geometries:
+              type: array
+              items:
+                oneOf:
+                - title: GeoJSON Point
+                  type: object
+                  required:
+                  - type
+                  - coordinates
+                  properties:
+                    type:
+                      type: string
+                      enum:
+                      - Point
+                      x-jsonld-id: '@type'
+                    coordinates:
+                      type: array
+                      minItems: 2
+                      items:
+                        type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                    bbox:
+                      type: array
+                      minItems: 4
+                      items:
+                        type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                - title: GeoJSON LineString
+                  type: object
+                  required:
+                  - type
+                  - coordinates
+                  properties:
+                    type:
+                      type: string
+                      enum:
+                      - LineString
+                      x-jsonld-id: '@type'
+                    coordinates:
+                      type: array
+                      minItems: 2
+                      items:
+                        type: array
+                        minItems: 2
+                        items:
+                          type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                    bbox:
+                      type: array
+                      minItems: 4
+                      items:
+                        type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                - title: GeoJSON Polygon
+                  type: object
+                  required:
+                  - type
+                  - coordinates
+                  properties:
+                    type:
+                      type: string
+                      enum:
+                      - Polygon
+                      x-jsonld-id: '@type'
+                    coordinates:
+                      type: array
+                      items:
+                        type: array
+                        minItems: 4
+                        items:
+                          type: array
+                          minItems: 2
+                          items:
+                            type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                    bbox:
+                      type: array
+                      minItems: 4
+                      items:
+                        type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                - title: GeoJSON MultiPoint
+                  type: object
+                  required:
+                  - type
+                  - coordinates
+                  properties:
+                    type:
+                      type: string
+                      enum:
+                      - MultiPoint
+                      x-jsonld-id: '@type'
+                    coordinates:
+                      type: array
+                      items:
+                        type: array
+                        minItems: 2
+                        items:
+                          type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                    bbox:
+                      type: array
+                      minItems: 4
+                      items:
+                        type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                - title: GeoJSON MultiLineString
+                  type: object
+                  required:
+                  - type
+                  - coordinates
+                  properties:
+                    type:
+                      type: string
+                      enum:
+                      - MultiLineString
+                      x-jsonld-id: '@type'
+                    coordinates:
+                      type: array
+                      items:
+                        type: array
+                        minItems: 2
+                        items:
+                          type: array
+                          minItems: 2
+                          items:
+                            type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                    bbox:
+                      type: array
+                      minItems: 4
+                      items:
+                        type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#bbox
+                - title: GeoJSON MultiPolygon
+                  type: object
+                  required:
+                  - type
+                  - coordinates
+                  properties:
+                    type:
+                      type: string
+                      enum:
+                      - MultiPolygon
+                      x-jsonld-id: '@type'
+                    coordinates:
+                      type: array
+                      items:
+                        type: array
+                        items:
+                          type: array
+                          minItems: 4
+                          items:
+                            type: array
+                            minItems: 2
+                            items:
+                              type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+                    bbox:
+                      type: array
+                      minItems: 4
+                      items:
+                        type: number
+                      x-jsonld-container: '@list'
+                      x-jsonld-id: https://purl.org/geojson/vocab#bbox
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+              x-jsonld-container: '@list'
+              x-jsonld-id: https://purl.org/geojson/vocab#bbox
+        x-jsonld-id: https://purl.org/geojson/vocab#geometry
+      bbox:
+        type: array
+        minItems: 4
+        items:
+          type: number
+        x-jsonld-container: '@list'
+        x-jsonld-id: https://purl.org/geojson/vocab#bbox
+    x-jsonld-extra-terms:
+      Feature: https://purl.org/geojson/vocab#Feature
+      FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
+      GeometryCollection: https://purl.org/geojson/vocab#GeometryCollection
+      LineString: https://purl.org/geojson/vocab#LineString
+      MultiLineString: https://purl.org/geojson/vocab#MultiLineString
+      MultiPoint: https://purl.org/geojson/vocab#MultiPoint
+      MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
+      Point: https://purl.org/geojson/vocab#Point
+      Polygon: https://purl.org/geojson/vocab#Polygon
+      features:
+        x-jsonld-container: '@set'
+        x-jsonld-id: https://purl.org/geojson/vocab#features
+    x-jsonld-prefixes:
+      geojson: https://purl.org/geojson/vocab#
+    x-schema-version: http://json-schema.org/draft-07/schema#
+    x-schema-source: https://geojson.org/schema/Feature.json
 allOf:
-- $ref: https://geojson.org/schema/FeatureCollection.json
-- type: object
-  properties:
-    links:
-      type: array
-      items:
-        $ref: https://opengeospatial.github.io/ogc-utils/json-link/schema.yaml
-      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
-    timeStamp:
-      type: string
-      format: date-time
-    numberMatched:
-      type: integer
-      minimum: 0
-    numberReturned:
-      type: integer
-      minimum: 0
-    features:
-      type: array
-      items:
-        $ref: https://opengeospatial.github.io/feature/schema.yaml
-x-jsonld-extra-terms:
-  properties: '@nest'
-x-jsonld-prefixes:
-  rdfs: http://www.w3.org/2000/01/rdf-schema#
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/87bc89545ac002bbbb0dbc747efa3ee967eb601f

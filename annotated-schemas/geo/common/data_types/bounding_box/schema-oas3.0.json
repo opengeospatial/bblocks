@@ -1,16 +1,26 @@
 {
-  "type": "array",
-  "oneOf": [
-    {
-      "minItems": 4,
-      "maxItems": 4
-    },
-    {
-      "minItems": 6,
-      "maxItems": 6
+  "$defs": {
+    "c61b6578a6c01ad076d850997fd310ca751beac5": {
+      "type": "array",
+      "oneOf": [
+        {
+          "minItems": 4,
+          "maxItems": 4
+        },
+        {
+          "minItems": 6,
+          "maxItems": 6
+        }
+      ],
+      "items": {
+        "type": "number"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/"
     }
-  ],
-  "items": {
-    "type": "number"
-  }
+  },
+  "allOf": [
+    {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema-oas3.0.json#/$defs/c61b6578a6c01ad076d850997fd310ca751beac5"
+    }
+  ]
 }
