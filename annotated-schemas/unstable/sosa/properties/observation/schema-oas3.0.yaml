@@ -12,8 +12,8 @@ $defs:
         - object
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/phenomenonTime
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       hasFeatureOfInterest:
@@ -22,8 +22,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       observedProperty:
@@ -32,8 +32,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       usedProcedure:
@@ -42,8 +42,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       madeBySensor:
@@ -52,8 +52,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       hasResult:
@@ -141,6 +141,6 @@ $defs:
       ssn: http://www.w3.org/ns/ssn/
       ssn-system: http://www.w3.org/ns/ssn/systems/
     x-schema-version: https://json-schema.org/draft/2020-12/schema
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema-oas3.0.yaml
 allOf:
 - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema-oas3.0.yaml#/$defs/55da1c3d3dd4ca17e9fe31f3bf4b9af6f07ef0e4

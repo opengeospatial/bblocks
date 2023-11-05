@@ -26,7 +26,7 @@ $defs:
       properties: '@nest'
     x-jsonld-prefixes:
       rdfs: http://www.w3.org/2000/01/rdf-schema#
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml
   c91e52f769a91e546450bef84f1dac326f3acb5e:
     title: GeoJSON FeatureCollection
     type: object
@@ -58,11 +58,10 @@ $defs:
               - type: string
             properties:
               oneOf:
-              - nullable: true
               - type: object
+              nullable: true
             geometry:
               oneOf:
-              - nullable: true
               - title: GeoJSON Point
                 type: object
                 required:
@@ -366,6 +365,7 @@ $defs:
                     minItems: 4
                     items:
                       type: number
+              nullable: true
             bbox:
               type: array
               minItems: 4
@@ -455,12 +455,11 @@ $defs:
         x-jsonld-id: '@id'
       properties:
         oneOf:
-        - nullable: true
         - type: object
         x-jsonld-id: '@nest'
+        nullable: true
       geometry:
         oneOf:
-        - nullable: true
         - title: GeoJSON Point
           type: object
           required:
@@ -828,6 +827,7 @@ $defs:
               x-jsonld-container: '@list'
               x-jsonld-id: https://purl.org/geojson/vocab#bbox
         x-jsonld-id: https://purl.org/geojson/vocab#geometry
+        nullable: true
       bbox:
         type: array
         minItems: 4

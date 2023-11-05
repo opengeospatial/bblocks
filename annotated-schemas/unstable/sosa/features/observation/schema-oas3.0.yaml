@@ -98,7 +98,7 @@ $defs:
       ssn: http://www.w3.org/ns/ssn/
       ssn-system: http://www.w3.org/ns/ssn/systems/
     x-schema-version: https://json-schema.org/draft/2020-12/schema
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml
   8386e0458ea0017d43da80c88f7ee447fb6e55c6:
     allOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e625fdf2b49fb9e9402240a7e39960ab0ba54d23
@@ -136,9 +136,9 @@ $defs:
         geometry: {}
         properties:
           oneOf:
-          - nullable: true
           - type: object
           x-jsonld-id: '@nest'
+          nullable: true
     x-jsonld-extra-terms:
       Feature: https://purl.org/geojson/vocab#Feature
       FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
@@ -175,8 +175,8 @@ $defs:
         - object
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/phenomenonTime
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       hasFeatureOfInterest:
@@ -185,8 +185,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       observedProperty:
@@ -195,8 +195,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       usedProcedure:
@@ -205,8 +205,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       madeBySensor:
@@ -215,8 +215,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       hasResult:
@@ -401,7 +401,6 @@ $defs:
     title: the time member
     description: This JSON Schema is part of JSON-FG version 0.1.1
     oneOf:
-    - nullable: true
     - type: object
       properties:
         date:
@@ -428,6 +427,7 @@ $defs:
           - type: string
             enum:
             - ..
+    nullable: true
     x-schema-version: https://json-schema.org/draft/2019-09/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/time.json
   f07afb90a82f7d8db5783178eb11a65871d4466a:
@@ -478,7 +478,6 @@ $defs:
     title: the place member
     description: This JSON Schema is part of JSON-FG version 0.1.1
     oneOf:
-    - nullable: true
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Point
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/MultiPoint
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/LineString
@@ -490,13 +489,13 @@ $defs:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Prism
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/MultiPrism
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/CustomGeometry
+    nullable: true
     x-schema-version: https://json-schema.org/draft/2019-09/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/place.json
   47ee3442629631c44da5a44e1f4c6507dd0112f2:
     title: the geometry member
     description: This JSON Schema is part of JSON-FG version 0.1.1
     oneOf:
-    - nullable: true
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Point
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/MultiPoint
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/LineString
@@ -504,6 +503,7 @@ $defs:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Polygon
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/MultiPolygon
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/GeometryCollection
+    nullable: true
     x-schema-version: https://json-schema.org/draft/2019-09/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/geometry.json
   a7d0b06f951490137dddd1728209076989443796:
@@ -526,12 +526,11 @@ $defs:
         x-jsonld-id: '@id'
       properties:
         oneOf:
-        - nullable: true
         - type: object
         x-jsonld-id: '@nest'
+        nullable: true
       geometry:
         oneOf:
-        - nullable: true
         - title: GeoJSON Point
           type: object
           required:
@@ -899,6 +898,7 @@ $defs:
               x-jsonld-container: '@list'
               x-jsonld-id: https://purl.org/geojson/vocab#bbox
         x-jsonld-id: https://purl.org/geojson/vocab#geometry
+        nullable: true
       bbox:
         type: array
         minItems: 4

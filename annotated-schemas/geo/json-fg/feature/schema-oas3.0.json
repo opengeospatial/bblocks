@@ -65,13 +65,11 @@
             "properties": {
               "oneOf": [
                 {
-                  "nullable": true
-                },
-                {
                   "type": "object"
                 }
               ],
-              "x-jsonld-id": "@nest"
+              "x-jsonld-id": "@nest",
+              "nullable": true
             }
           }
         }
@@ -104,7 +102,7 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
       },
       "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema-oas3.0.json"
     },
     "7a0b7ef040dd317afc3d50e16b50f50264d0ca1b": {
       "allOf": [
@@ -244,9 +242,6 @@
       "description": "This JSON Schema is part of JSON-FG version 0.1.1",
       "oneOf": [
         {
-          "nullable": true
-        },
-        {
           "type": "object",
           "properties": {
             "date": {
@@ -292,6 +287,7 @@
           }
         }
       },
+      "nullable": true,
       "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/time.json"
     },
@@ -374,9 +370,6 @@
       "description": "This JSON Schema is part of JSON-FG version 0.1.1",
       "oneOf": [
         {
-          "nullable": true
-        },
-        {
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema-oas3.0.json#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Point"
         },
         {
@@ -410,6 +403,7 @@
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema-oas3.0.json#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/CustomGeometry"
         }
       ],
+      "nullable": true,
       "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/place.json"
     },
@@ -417,9 +411,6 @@
       "title": "the geometry member",
       "description": "This JSON Schema is part of JSON-FG version 0.1.1",
       "oneOf": [
-        {
-          "nullable": true
-        },
         {
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema-oas3.0.json#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Point"
         },
@@ -442,6 +433,7 @@
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema-oas3.0.json#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/GeometryCollection"
         }
       ],
+      "nullable": true,
       "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry.json"
     },
@@ -475,19 +467,14 @@
         "properties": {
           "oneOf": [
             {
-              "nullable": true
-            },
-            {
               "type": "object"
             }
           ],
-          "x-jsonld-id": "@nest"
+          "x-jsonld-id": "@nest",
+          "nullable": true
         },
         "geometry": {
           "oneOf": [
-            {
-              "nullable": true
-            },
             {
               "title": "GeoJSON Point",
               "type": "object",
@@ -1004,7 +991,8 @@
               }
             }
           ],
-          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry"
+          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+          "nullable": true
         },
         "bbox": {
           "type": "array",

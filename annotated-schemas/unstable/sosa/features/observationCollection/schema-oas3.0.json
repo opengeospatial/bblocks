@@ -136,7 +136,7 @@
         "ssn-system": "http://www.w3.org/ns/ssn/systems/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema-oas3.0.json"
     },
     "5870e898d91b12725ded88cb3403c2961ed489e9": {
       "allOf": [
@@ -217,8 +217,8 @@
                 "string"
               ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
-              "oneOf": {
-                "oneOf": [
+              "anyOf": {
+                "anyOf": [
                   {
                     "type": "object"
                   },
@@ -235,8 +235,8 @@
               ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
               "x-jsonld-type": "@id",
-              "oneOf": {
-                "oneOf": [
+              "anyOf": {
+                "anyOf": [
                   {
                     "type": "object"
                   },
@@ -253,8 +253,8 @@
               ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
               "x-jsonld-type": "@id",
-              "oneOf": {
-                "oneOf": [
+              "anyOf": {
+                "anyOf": [
                   {
                     "type": "object"
                   },
@@ -271,8 +271,8 @@
               ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
               "x-jsonld-type": "@id",
-              "oneOf": {
-                "oneOf": [
+              "anyOf": {
+                "anyOf": [
                   {
                     "type": "object"
                   },
@@ -289,8 +289,8 @@
               ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
               "x-jsonld-type": "@id",
-              "oneOf": {
-                "oneOf": [
+              "anyOf": {
+                "anyOf": [
                   {
                     "type": "object"
                   },
@@ -795,13 +795,11 @@
             "properties": {
               "oneOf": [
                 {
-                  "nullable": true
-                },
-                {
                   "type": "object"
                 }
               ],
-              "x-jsonld-id": "@nest"
+              "x-jsonld-id": "@nest",
+              "nullable": true
             }
           }
         }
@@ -894,8 +892,8 @@
             "string"
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
-          "oneOf": {
-            "oneOf": [
+          "anyOf": {
+            "anyOf": [
               {
                 "type": "object"
               },
@@ -912,8 +910,8 @@
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
           "x-jsonld-type": "@id",
-          "oneOf": {
-            "oneOf": [
+          "anyOf": {
+            "anyOf": [
               {
                 "type": "object"
               },
@@ -930,8 +928,8 @@
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
           "x-jsonld-type": "@id",
-          "oneOf": {
-            "oneOf": [
+          "anyOf": {
+            "anyOf": [
               {
                 "type": "object"
               },
@@ -948,8 +946,8 @@
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
           "x-jsonld-type": "@id",
-          "oneOf": {
-            "oneOf": [
+          "anyOf": {
+            "anyOf": [
               {
                 "type": "object"
               },
@@ -966,8 +964,8 @@
           ],
           "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
           "x-jsonld-type": "@id",
-          "oneOf": {
-            "oneOf": [
+          "anyOf": {
+            "anyOf": [
               {
                 "type": "object"
               },
@@ -1132,9 +1130,6 @@
       "description": "This JSON Schema is part of JSON-FG version 0.1.1",
       "oneOf": [
         {
-          "nullable": true
-        },
-        {
           "type": "object",
           "properties": {
             "date": {
@@ -1180,6 +1175,7 @@
           }
         }
       },
+      "nullable": true,
       "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/time.json"
     },
@@ -1187,9 +1183,6 @@
       "title": "the place member",
       "description": "This JSON Schema is part of JSON-FG version 0.1.1",
       "oneOf": [
-        {
-          "nullable": true
-        },
         {
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema-oas3.0.json#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Point"
         },
@@ -1224,6 +1217,7 @@
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema-oas3.0.json#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/CustomGeometry"
         }
       ],
+      "nullable": true,
       "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/place.json"
     },
@@ -1231,9 +1225,6 @@
       "title": "the geometry member",
       "description": "This JSON Schema is part of JSON-FG version 0.1.1",
       "oneOf": [
-        {
-          "nullable": true
-        },
         {
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema-oas3.0.json#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Point"
         },
@@ -1256,6 +1247,7 @@
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema-oas3.0.json#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/GeometryCollection"
         }
       ],
+      "nullable": true,
       "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry.json"
     },
@@ -1303,18 +1295,13 @@
               "properties": {
                 "oneOf": [
                   {
-                    "nullable": true
-                  },
-                  {
                     "type": "object"
                   }
-                ]
+                ],
+                "nullable": true
               },
               "geometry": {
                 "oneOf": [
-                  {
-                    "nullable": true
-                  },
                   {
                     "title": "GeoJSON Point",
                     "type": "object",
@@ -1767,7 +1754,8 @@
                       }
                     }
                   }
-                ]
+                ],
+                "nullable": true
               },
               "bbox": {
                 "type": "array",
@@ -1820,19 +1808,14 @@
         "properties": {
           "oneOf": [
             {
-              "nullable": true
-            },
-            {
               "type": "object"
             }
           ],
-          "x-jsonld-id": "@nest"
+          "x-jsonld-id": "@nest",
+          "nullable": true
         },
         "geometry": {
           "oneOf": [
-            {
-              "nullable": true
-            },
             {
               "title": "GeoJSON Point",
               "type": "object",
@@ -2349,7 +2332,8 @@
               }
             }
           ],
-          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry"
+          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+          "nullable": true
         },
         "bbox": {
           "type": "array",

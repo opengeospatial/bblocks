@@ -38,7 +38,7 @@ $defs:
     x-jsonld-prefixes:
       geojson: https://purl.org/geojson/vocab#
     x-schema-version: https://json-schema.org/draft/2019-09/schema
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml
   87bc89545ac002bbbb0dbc747efa3ee967eb601f:
     allOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/c91e52f769a91e546450bef84f1dac326f3acb5e
@@ -223,9 +223,9 @@ $defs:
         geometry: {}
         properties:
           oneOf:
-          - nullable: true
           - type: object
           x-jsonld-id: '@nest'
+          nullable: true
     x-jsonld-extra-terms:
       Feature: https://purl.org/geojson/vocab#Feature
       FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
@@ -281,11 +281,10 @@ $defs:
               - type: string
             properties:
               oneOf:
-              - nullable: true
               - type: object
+              nullable: true
             geometry:
               oneOf:
-              - nullable: true
               - title: GeoJSON Point
                 type: object
                 required:
@@ -589,6 +588,7 @@ $defs:
                     minItems: 4
                     items:
                       type: number
+              nullable: true
             bbox:
               type: array
               minItems: 4
@@ -626,7 +626,6 @@ $defs:
     title: the time member
     description: This JSON Schema is part of JSON-FG version 0.1.1
     oneOf:
-    - nullable: true
     - type: object
       properties:
         date:
@@ -653,13 +652,13 @@ $defs:
           - type: string
             enum:
             - ..
+    nullable: true
     x-schema-version: https://json-schema.org/draft/2019-09/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/time.json
   02ad29c2bcb6a89f82b2e52d706294f1d816d186:
     title: the place member
     description: This JSON Schema is part of JSON-FG version 0.1.1
     oneOf:
-    - nullable: true
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Point
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/MultiPoint
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/LineString
@@ -671,13 +670,13 @@ $defs:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Prism
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/MultiPrism
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/CustomGeometry
+    nullable: true
     x-schema-version: https://json-schema.org/draft/2019-09/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/place.json
   47ee3442629631c44da5a44e1f4c6507dd0112f2:
     title: the geometry member
     description: This JSON Schema is part of JSON-FG version 0.1.1
     oneOf:
-    - nullable: true
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Point
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/MultiPoint
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/LineString
@@ -685,6 +684,7 @@ $defs:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/Polygon
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/MultiPolygon
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.yaml#/$defs/e0360137ccef1a906d983cd65b9ffbffd218e8a9/$defs/GeometryCollection
+    nullable: true
     x-schema-version: https://json-schema.org/draft/2019-09/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/geometry.json
   a7d0b06f951490137dddd1728209076989443796:
@@ -707,12 +707,11 @@ $defs:
         x-jsonld-id: '@id'
       properties:
         oneOf:
-        - nullable: true
         - type: object
         x-jsonld-id: '@nest'
+        nullable: true
       geometry:
         oneOf:
-        - nullable: true
         - title: GeoJSON Point
           type: object
           required:
@@ -1080,6 +1079,7 @@ $defs:
               x-jsonld-container: '@list'
               x-jsonld-id: https://purl.org/geojson/vocab#bbox
         x-jsonld-id: https://purl.org/geojson/vocab#geometry
+        nullable: true
       bbox:
         type: array
         minItems: 4

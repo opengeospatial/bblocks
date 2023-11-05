@@ -17,7 +17,7 @@ $defs:
         required:
         - hasSimpleResult
     x-schema-version: https://json-schema.org/draft/2020-12/schema
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema-oas3.0.yaml
   55da1c3d3dd4ca17e9fe31f3bf4b9af6f07ef0e4:
     description: SOSA Observation
     type: object
@@ -31,8 +31,8 @@ $defs:
         - object
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/phenomenonTime
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       hasFeatureOfInterest:
@@ -41,8 +41,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       observedProperty:
@@ -51,8 +51,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       usedProcedure:
@@ -61,8 +61,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       madeBySensor:
@@ -71,8 +71,8 @@ $defs:
         - string
         x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
         x-jsonld-type: '@id'
-        oneOf:
-          oneOf:
+        anyOf:
+          anyOf:
           - type: object
           - type: string
       hasResult:

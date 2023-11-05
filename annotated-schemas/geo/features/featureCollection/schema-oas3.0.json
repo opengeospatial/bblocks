@@ -42,7 +42,7 @@
       "x-jsonld-prefixes": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
       },
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.json"
     },
     "c91e52f769a91e546450bef84f1dac326f3acb5e": {
       "title": "GeoJSON FeatureCollection",
@@ -88,18 +88,13 @@
               "properties": {
                 "oneOf": [
                   {
-                    "nullable": true
-                  },
-                  {
                     "type": "object"
                   }
-                ]
+                ],
+                "nullable": true
               },
               "geometry": {
                 "oneOf": [
-                  {
-                    "nullable": true
-                  },
                   {
                     "title": "GeoJSON Point",
                     "type": "object",
@@ -552,7 +547,8 @@
                       }
                     }
                   }
-                ]
+                ],
+                "nullable": true
               },
               "bbox": {
                 "type": "array",
@@ -686,19 +682,14 @@
         "properties": {
           "oneOf": [
             {
-              "nullable": true
-            },
-            {
               "type": "object"
             }
           ],
-          "x-jsonld-id": "@nest"
+          "x-jsonld-id": "@nest",
+          "nullable": true
         },
         "geometry": {
           "oneOf": [
-            {
-              "nullable": true
-            },
             {
               "title": "GeoJSON Point",
               "type": "object",
@@ -1215,7 +1206,8 @@
               }
             }
           ],
-          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry"
+          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+          "nullable": true
         },
         "bbox": {
           "type": "array",

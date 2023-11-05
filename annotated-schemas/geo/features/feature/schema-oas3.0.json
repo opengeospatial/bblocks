@@ -32,7 +32,7 @@
       "x-jsonld-prefixes": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
       },
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json"
     },
     "fff4dd8e07d1b3ec2ce532c53cf2f00a49c6afc6": {
       "title": "GeoJSON Feature",
@@ -64,19 +64,14 @@
         "properties": {
           "oneOf": [
             {
-              "nullable": true
-            },
-            {
               "type": "object"
             }
           ],
-          "x-jsonld-id": "@nest"
+          "x-jsonld-id": "@nest",
+          "nullable": true
         },
         "geometry": {
           "oneOf": [
-            {
-              "nullable": true
-            },
             {
               "title": "GeoJSON Point",
               "type": "object",
@@ -593,7 +588,8 @@
               }
             }
           ],
-          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry"
+          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+          "nullable": true
         },
         "bbox": {
           "type": "array",

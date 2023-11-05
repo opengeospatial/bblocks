@@ -19,12 +19,11 @@ $defs:
         x-jsonld-id: '@id'
       properties:
         oneOf:
-        - nullable: true
         - type: object
         x-jsonld-id: '@nest'
+        nullable: true
       geometry:
         oneOf:
-        - nullable: true
         - title: GeoJSON Point
           type: object
           required:
@@ -392,6 +391,7 @@ $defs:
               x-jsonld-container: '@list'
               x-jsonld-id: https://purl.org/geojson/vocab#bbox
         x-jsonld-id: https://purl.org/geojson/vocab#geometry
+        nullable: true
       bbox:
         type: array
         minItems: 4
@@ -415,6 +415,6 @@ $defs:
     x-jsonld-prefixes:
       geojson: https://purl.org/geojson/vocab#
     x-schema-version: http://json-schema.org/draft-07/schema#
-    x-schema-source: https://geojson.org/schema/Feature.json
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema-oas3.0.yaml
 allOf:
 - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema-oas3.0.yaml#/$defs/a7d0b06f951490137dddd1728209076989443796
