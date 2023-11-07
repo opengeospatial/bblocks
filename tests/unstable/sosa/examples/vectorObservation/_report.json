@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.unstable.sosa.examples.vectorObservation - Example SOSA Vector Observation",
   "bblockName": "Example SOSA Vector Observation",
   "bblockId": "ogc.unstable.sosa.examples.vectorObservation",
-  "generated": "2023-11-05T04:06:21.128822+00:00",
+  "generated": "2023-11-07T09:17:39.887114+00:00",
   "result": true,
   "items": [
     {
@@ -53,10 +53,10 @@
           {
             "op": "shacl-files",
             "files": [
-              "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+              "https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
             ],
             "isError": false,
-            "message": "Using SHACL files for validation:\n - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+            "message": "Using SHACL files for validation:\n - /github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
           },
           {
             "op": "shacl-report",
@@ -66,41 +66,41 @@
           },
           {
             "focusNodes": {
-              "<http://example.com/rules#testRequiredTime>": {
-                "nodes": []
-              },
-              "<http://example.com/rules#testObservedProperty>": {
+              "<http://example.com/rules#testResult>": {
                 "nodes": []
               },
               "<http://example.com/rules#testFeatureOfInterest>": {
                 "nodes": []
               },
-              "<http://example.com/rules#testResult>": {
+              "<http://example.com/rules#testObservedProperty>": {
                 "nodes": []
               },
-              "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
-                "nodes": [],
-                "path": "_:nb5dd46a20e9f426daa867873e9d8038cb29"
-              },
-              "<http://example.com/rules#testResult>/sh:property": {
-                "nodes": [],
-                "path": "_:nb5dd46a20e9f426daa867873e9d8038cb32"
+              "<http://example.com/rules#testRequiredTime>": {
+                "nodes": []
               },
               "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
                 "nodes": [],
-                "path": "_:nb5dd46a20e9f426daa867873e9d8038cb5"
+                "path": "_:n3d341092e4a747dea410a90b9d32d147b5"
               },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+              "<http://example.com/rules#testResult>/sh:property": {
                 "nodes": [],
-                "path": "_:nb5dd46a20e9f426daa867873e9d8038cb11"
+                "path": "_:n3d341092e4a747dea410a90b9d32d147b32"
               },
               "<http://example.com/rules#testObservedProperty>/sh:property": {
                 "nodes": [],
-                "path": "_:nb5dd46a20e9f426daa867873e9d8038cb19"
+                "path": "_:n3d341092e4a747dea410a90b9d32d147b19"
+              },
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+                "nodes": [],
+                "path": "_:n3d341092e4a747dea410a90b9d32d147b11"
+              },
+              "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
+                "nodes": [],
+                "path": "_:n3d341092e4a747dea410a90b9d32d147b29"
               }
             },
             "isError": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: *none*\n - Shape <http://example.com/rules#testObservedProperty>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>: *none*\n - Shape <http://example.com/rules#testResult>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nb5dd46a20e9f426daa867873e9d8038cb29): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:nb5dd46a20e9f426daa867873e9d8038cb32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nb5dd46a20e9f426daa867873e9d8038cb5): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nb5dd46a20e9f426daa867873e9d8038cb11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nb5dd46a20e9f426daa867873e9d8038cb19): *none*\n"
+            "message": "Focus nodes:\n - Shape <http://example.com/rules#testResult>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>: *none*\n - Shape <http://example.com/rules#testObservedProperty>: *none*\n - Shape <http://example.com/rules#testRequiredTime>: *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n3d341092e4a747dea410a90b9d32d147b5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n3d341092e4a747dea410a90b9d32d147b32): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n3d341092e4a747dea410a90b9d32d147b19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n3d341092e4a747dea410a90b9d32d147b11): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n3d341092e4a747dea410a90b9d32d147b29): *none*\n"
           }
         ]
       }

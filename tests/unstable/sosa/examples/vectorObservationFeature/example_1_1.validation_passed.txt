@@ -1,5 +1,5 @@
 Validation report for ogc.unstable.sosa.examples.vectorObservationFeature - Example SOSA Vector Observation Feature
-Generated 2023-11-05T04:06:24.810719+00:00
+Generated 2023-11-07T09:17:41.294499+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -13,26 +13,26 @@ Validation passed
 
 === SHACL ===
 Using SHACL files for validation:
- - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
- - registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl
+ - /github/workspace/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl
+ - /github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
 Validation Report
 Conforms: True
 
 Focus nodes:
- - Shape <http://example.com/rules#testResult>: *none*
- - Shape <http://example.com/rules#testObservedProperty>: *none*
- - Shape <http://example.com/rules#testGeometryHasCoordinates>: <http://example.com/features/vector-obs-1>/geojson:geometry
- - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>: <http://example.com/features/vector-obs-1>
- - Shape <http://example.com/rules#testRequiredTime>: *none*
- - Shape <http://example.com/rules#testGeometryCoordinatesIsList>: <http://example.com/features/vector-obs-1>/geojson:geometry
  - Shape <http://example.com/rules#testFeatureOfInterest>: *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nf9d0b6008d6e491687ebdc7747835400b5): *none*
+ - Shape <http://example.com/rules#testObservedProperty>: *none*
+ - Shape <http://example.com/rules#testGeometryCoordinatesIsList>: <http://example.com/features/vector-obs-1>/geojson:geometry
+ - Shape <http://example.com/rules#testRequiredTime>: *none*
+ - Shape <http://example.com/rules#testResult>: *none*
+ - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>: <http://example.com/features/vector-obs-1>
+ - Shape <http://example.com/rules#testGeometryHasCoordinates>: <http://example.com/features/vector-obs-1>/geojson:geometry
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nd348856412b74a4a8fb4615cb64f36e5b11): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nd348856412b74a4a8fb4615cb64f36e5b29): *none*
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nd348856412b74a4a8fb4615cb64f36e5b19): *none*
  - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>/sh:property (path geojson:geometry): *none*
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:nd348856412b74a4a8fb4615cb64f36e5b32): *none*
  - Shape <http://example.com/rules#testGeometryHasCoordinates>/sh:property (path geojson:coordinates): *none*
- - Shape <http://example.com/rules#testResult>/sh:property (path _:nf9d0b6008d6e491687ebdc7747835400b32): *none*
- - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nf9d0b6008d6e491687ebdc7747835400b19): *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nf9d0b6008d6e491687ebdc7747835400b11): *none*
- - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nf9d0b6008d6e491687ebdc7747835400b29): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nd348856412b74a4a8fb4615cb64f36e5b5): *none*
 
 === End SHACL ===
 

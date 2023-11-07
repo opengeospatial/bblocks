@@ -540,9 +540,10 @@ You can find the full JSON-LD context here:
 
 ## SHACL Shapes
 
-The following SHACL shapes are used for validating this building block:
+The following sets of SHACL shapes are used for validating this building block:
 
-* [https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl)
+* SOSA Observation <small><code>ogc.unstable.sosa.properties.observation</code></small>
+  * [https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl)
 
 # References
 

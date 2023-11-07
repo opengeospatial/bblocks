@@ -94,7 +94,7 @@
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "shaclRules": [],
+      "shaclRules": {},
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/",
       "validationPassed": true,
@@ -136,7 +136,7 @@
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "shaclRules": [],
+      "shaclRules": {},
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json"
@@ -181,7 +181,7 @@
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "shaclRules": [],
+      "shaclRules": {},
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json"
@@ -225,7 +225,7 @@
       ],
       "maturity": "mature",
       "scope": "ogc-utils",
-      "shaclRules": [],
+      "shaclRules": {},
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json"
@@ -275,7 +275,7 @@
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.json"
       },
       "group": "GeoPose",
-      "shaclRules": [],
+      "shaclRules": {},
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/advanced/",
       "validationPassed": true,
@@ -321,7 +321,7 @@
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.json"
       },
       "group": "GeoPose",
-      "shaclRules": [],
+      "shaclRules": {},
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/",
       "validationPassed": true,
@@ -367,7 +367,7 @@
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json"
       },
       "group": "GeoPose",
-      "shaclRules": [],
+      "shaclRules": {},
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/",
       "validationPassed": true,
@@ -417,7 +417,7 @@
       ],
       "scope": "geo",
       "group": "Common",
-      "shaclRules": [],
+      "shaclRules": {},
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
@@ -470,9 +470,11 @@
         "o&m&s"
       ],
       "group": "SOSA",
-      "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
-      ],
+      "shaclRules": {
+        "ogc.unstable.sosa.properties.observation": [
+          "https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+        ]
+      },
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.json"
@@ -534,7 +536,7 @@
         }
       ],
       "group": "Common",
-      "shaclRules": [],
+      "shaclRules": {},
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json"
@@ -584,10 +586,10 @@
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "shaclRules": [],
+      "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.common.data_types.geojson"
+        "ogc.geo.common.data_types.geojson",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
@@ -634,10 +636,10 @@
         "link",
         "profile"
       ],
-      "shaclRules": [],
+      "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml",
@@ -685,7 +687,7 @@
         "geometry",
         "topology"
       ],
-      "shaclRules": [],
+      "shaclRules": {},
       "dependsOn": [
         "ogc.ogc-utils.iri-or-curie"
       ],
@@ -747,9 +749,11 @@
         "examples"
       ],
       "group": "SOSA",
-      "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
-      ],
+      "shaclRules": {
+        "ogc.unstable.sosa.properties.observation": [
+          "https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+        ]
+      },
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservation/schema.json"
@@ -807,9 +811,11 @@
         "o&m&s"
       ],
       "group": "SOSA",
-      "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
-      ],
+      "shaclRules": {
+        "ogc.unstable.sosa.properties.observation": [
+          "https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+        ]
+      },
       "dependsOn": [
         "ogc.ogc-utils.iri-or-curie",
         "ogc.unstable.sosa.properties.observation"
@@ -861,10 +867,10 @@
       "maturity": "mature",
       "scope": "geo",
       "group": "Common",
-      "shaclRules": [],
+      "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
@@ -910,10 +916,10 @@
       ],
       "scope": "geo",
       "group": "JSON-FG",
-      "shaclRules": [],
+      "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml",
@@ -963,10 +969,10 @@
       ],
       "scope": "geo",
       "group": "JSON-FG",
-      "shaclRules": [],
+      "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml",
@@ -1011,11 +1017,11 @@
       ],
       "scope": "geo",
       "group": "JSON-FG",
-      "shaclRules": [],
+      "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.features.featureCollection",
         "ogc.geo.json-fg.feature",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.featureCollection"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml",
@@ -1066,11 +1072,11 @@
       ],
       "scope": "geo",
       "group": "JSON-FG",
-      "shaclRules": [],
+      "shaclRules": {},
       "dependsOn": [
+        "ogc.geo.features.featureCollection",
         "ogc.ogc-utils.json-link",
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.geo.features.featureCollection"
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
@@ -1116,8 +1122,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "tags": [
         "sosa",
@@ -1127,9 +1133,11 @@
         "o&m&s"
       ],
       "group": "SOSA",
-      "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
-      ],
+      "shaclRules": {
+        "ogc.unstable.sosa.properties.observation": [
+          "https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+        ]
+      },
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json"
@@ -1187,9 +1195,11 @@
         "o&m&s"
       ],
       "group": "SOSA",
-      "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
-      ],
+      "shaclRules": {
+        "ogc.unstable.sosa.properties.observation": [
+          "https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+        ]
+      },
       "dependsOn": [
         "ogc.unstable.sosa.features.observation",
         "ogc.unstable.sosa.properties.observationCollection",
@@ -1242,9 +1252,9 @@
       "scope": "unstable",
       "dependsOn": [
         "ogc.unstable.sosa.features.observation",
+        "ogc.unstable.sosa.properties.observation",
         "ogc.unstable.sosa.examples.vectorObservation",
-        "ogc.unstable.sosa.features.observationCollection",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.features.observationCollection"
       ],
       "tags": [
         "sosa",
@@ -1255,10 +1265,14 @@
         "examples"
       ],
       "group": "SOSA",
-      "shaclRules": [
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
-        "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl"
-      ],
+      "shaclRules": {
+        "ogc.unstable.sosa.examples.vectorObservationFeature": [
+          "https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl"
+        ],
+        "ogc.unstable.sosa.properties.observation": [
+          "https://opengeospatial.github.io/github/workspace/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl"
+        ]
+      },
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/examples/vectorObservationFeature/schema.json"
@@ -1312,7 +1326,7 @@
       ],
       "superBBlock": true,
       "group": "SOSA",
-      "shaclRules": [],
+      "shaclRules": {},
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml",
         "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json"
