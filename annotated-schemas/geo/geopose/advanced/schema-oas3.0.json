@@ -1,6 +1,6 @@
 {
-  "$defs": {
-    "0680b23887ba990fb64ee09c572c282ab1bcbfb1": {
+  "x-defs": {
+    "ogc.geo.geopose.advanced": {
       "description": "Advanced: Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.",
       "definitions": {
         "FrameSpecification": {
@@ -53,7 +53,7 @@
       "type": "object",
       "properties": {
         "frameSpecification": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/$defs/0ba97f1dee199bb32b75139d41e2ecd451305cf6/definitions/FrameSpecification"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Advanced.Schema.json/definitions/FrameSpecification"
         },
         "quaternion": {},
         "validTime": {
@@ -80,7 +80,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json"
     },
-    "0ba97f1dee199bb32b75139d41e2ecd451305cf6": {
+    "schemas.opengis.net_geopose_1.0_schemata_GeoPose.Advanced.Schema.json": {
       "description": "Advanced: Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.",
       "definitions": {
         "FrameSpecification": {
@@ -129,10 +129,10 @@
       "type": "object",
       "properties": {
         "frameSpecification": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/$defs/0ba97f1dee199bb32b75139d41e2ecd451305cf6/definitions/FrameSpecification"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Advanced.Schema.json/definitions/FrameSpecification"
         },
         "quaternion": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/$defs/0ba97f1dee199bb32b75139d41e2ecd451305cf6/definitions/Quaternion"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Advanced.Schema.json/definitions/Quaternion"
         },
         "validTime": {
           "type": "integer"
@@ -147,7 +147,7 @@
   },
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/$defs/0680b23887ba990fb64ee09c572c282ab1bcbfb1"
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.json#/x-defs/ogc.geo.geopose.advanced"
     }
   ]
 }

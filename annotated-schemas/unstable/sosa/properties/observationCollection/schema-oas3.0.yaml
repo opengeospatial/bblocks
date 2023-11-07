@@ -1,5 +1,5 @@
-$defs:
-  740b02ef97599fe3ec43e87d13b702074a78452b:
+x-defs:
+  ogc.unstable.sosa.properties.observationCollection:
     description: SOSA ObservationCollection
     $defs:
       collection:
@@ -62,12 +62,12 @@ $defs:
             type: array
             items:
               anyOf:
-              - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/$defs/740b02ef97599fe3ec43e87d13b702074a78452b/$defs/collection
-              - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/$defs/55da1c3d3dd4ca17e9fe31f3bf4b9af6f07ef0e4
-              - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/$defs/19f3ac31c7be0acd52e7f8ca219dab3259fe6c6b
+              - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/x-defs/ogc.unstable.sosa.properties.observationCollection/$defs/collection
+              - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/x-defs/ogc.unstable.sosa.properties.observation
+              - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie
             x-jsonld-id: http://www.w3.org/ns/sosa/hasMember
     allOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/$defs/740b02ef97599fe3ec43e87d13b702074a78452b/$defs/collection
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/x-defs/ogc.unstable.sosa.properties.observationCollection/$defs/collection
     - not:
         anyOf:
         - required:
@@ -152,7 +152,7 @@ $defs:
       ssn-system: http://www.w3.org/ns/ssn/systems/
     x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml
-  55da1c3d3dd4ca17e9fe31f3bf4b9af6f07ef0e4:
+  ogc.unstable.sosa.properties.observation:
     description: SOSA Observation
     type: object
     properties:
@@ -295,8 +295,8 @@ $defs:
       ssn-system: http://www.w3.org/ns/ssn/systems/
     x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.yaml
-  19f3ac31c7be0acd52e7f8ca219dab3259fe6c6b:
+  ogc.ogc-utils.iri-or-curie:
     x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://opengeospatial.github.io/bblocks/ogc-utils/iri-or-curie/schema.yaml
 allOf:
-- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/$defs/740b02ef97599fe3ec43e87d13b702074a78452b
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.yaml#/x-defs/ogc.unstable.sosa.properties.observationCollection

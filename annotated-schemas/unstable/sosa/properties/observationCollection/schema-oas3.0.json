@@ -1,6 +1,6 @@
 {
-  "$defs": {
-    "45098c987e69167d1695fb1ebce1ebbb9784ed65": {
+  "x-defs": {
+    "ogc.unstable.sosa.properties.observationCollection": {
       "description": "SOSA ObservationCollection",
       "$defs": {
         "collection": {
@@ -105,13 +105,13 @@
               "items": {
                 "anyOf": [
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/45098c987e69167d1695fb1ebce1ebbb9784ed65/$defs/collection"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/x-defs/ogc.unstable.sosa.properties.observationCollection/$defs/collection"
                   },
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/c3c0f83a2f271fa8fd42fe2926899a406652151c"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/x-defs/ogc.unstable.sosa.properties.observation"
                   },
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/00913d8150286b9c011ab5874a0621d3c9961414"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
                   }
                 ]
               },
@@ -122,7 +122,7 @@
       },
       "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/45098c987e69167d1695fb1ebce1ebbb9784ed65/$defs/collection"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/x-defs/ogc.unstable.sosa.properties.observationCollection/$defs/collection"
         },
         {
           "not": {
@@ -235,7 +235,7 @@
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json"
     },
-    "c3c0f83a2f271fa8fd42fe2926899a406652151c": {
+    "ogc.unstable.sosa.properties.observation": {
       "description": "SOSA Observation",
       "type": "object",
       "properties": {
@@ -445,14 +445,14 @@
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/observation/schema.json"
     },
-    "00913d8150286b9c011ab5874a0621d3c9961414": {
+    "ogc.ogc-utils.iri-or-curie": {
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://opengeospatial.github.io/bblocks/ogc-utils/iri-or-curie/schema.json"
     }
   },
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/$defs/45098c987e69167d1695fb1ebce1ebbb9784ed65"
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema-oas3.0.json#/x-defs/ogc.unstable.sosa.properties.observationCollection"
     }
   ]
 }

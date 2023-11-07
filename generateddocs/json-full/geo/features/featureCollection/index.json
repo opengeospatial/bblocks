@@ -1,2 +1,63 @@
 
-{"itemIdentifier": "ogc.geo.features.featureCollection", "name": "Feature Collection", "abstract": "A collection of features.", "status": "stable", "dateTimeAddition": "2023-06-26T14:56:51+00:00", "itemClass": "schema", "register": "ogc-building-block-register", "version": "1.0", "dateOfLastChange": "2023-06-26", "sources": [{"title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response", "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_5"}], "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld", "maturity": "mature", "scope": "geo", "group": "Common", "shaclRules": {}, "dependsOn": ["ogc.ogc-utils.json-link", "ogc.geo.features.feature"], "schema": {"application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml", "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json"}, "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/", "validationPassed": true, "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/featureCollection/", "examples": [{"title": "Example", "content": "Minimal example of this schema.\n\nNB. uses a local @context in the data example where application specialisations would apply such mappings.", "snippets": [{"language": "json", "ref": "example.json", "base-uri": "http://www.example.com/features/", "code": "{\n  \"@context\": {\n    \"my\": \"http://my.org/featureTypes/\",\n    \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n    \"name\": \"skos:prefLabel\"\n  },\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}", "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.json"}, {"language": "jsonld", "code": "{\n  \"@context\": [\n    \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld\",\n    {\n      \"my\": \"http://my.org/featureTypes/\",\n      \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n      \"name\": \"skos:prefLabel\"\n    }\n  ],\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}", "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.jsonld"}, {"language": "ttl", "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;\n    skos:prefLabel \"MyFeatureCollection\" ;\n    geojson:features <http://www.example.com/features/f1> .\n\n<http://www.example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .\n\n", "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.ttl"}]}], "annotatedSchema": "allOf:\n- $ref: https://geojson.org/schema/FeatureCollection.json\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: ../../../ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    timeStamp:\n      type: string\n      format: date-time\n    numberMatched:\n      type: integer\n      minimum: 0\n    numberReturned:\n      type: integer\n      minimum: 0\n    features:\n      type: array\n      items:\n        $ref: ../feature/schema.yaml\nx-jsonld-extra-terms:\n  properties: '@nest'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n", "gitRepository": "https://github.com/opengeospatial/bblocks", "gitPath": "registereditems/geo/features/featureCollection"}
+
+{
+  "itemIdentifier": "ogc.geo.features.featureCollection",
+  "name": "Feature Collection",
+  "abstract": "A collection of features.",
+  "status": "stable",
+  "dateTimeAddition": "2023-06-26T14:56:51+00:00",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "1.0",
+  "dateOfLastChange": "2023-06-26",
+  "sources": [
+    {
+      "title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response",
+      "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_5"
+    }
+  ],
+  "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+  "maturity": "mature",
+  "scope": "geo",
+  "group": "Common",
+  "shaclRules": {},
+  "dependsOn": [
+    "ogc.geo.features.feature",
+    "ogc.ogc-utils.json-link"
+  ],
+  "schema": {
+    "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
+    "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json"
+  },
+  "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/featureCollection/",
+  "examples": [
+    {
+      "title": "Example",
+      "content": "Minimal example of this schema.\n\nNB. uses a local @context in the data example where application specialisations would apply such mappings.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "example.json",
+          "base-uri": "http://www.example.com/features/",
+          "code": "{\n  \"@context\": {\n    \"my\": \"http://my.org/featureTypes/\",\n    \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n    \"name\": \"skos:prefLabel\"\n  },\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": [\n    \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld\",\n    {\n      \"my\": \"http://my.org/featureTypes/\",\n      \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n      \"name\": \"skos:prefLabel\"\n    }\n  ],\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;\n    skos:prefLabel \"MyFeatureCollection\" ;\n    geojson:features <http://www.example.com/features/f1> .\n\n<http://www.example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .\n\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "allOf:\n- $ref: https://geojson.org/schema/FeatureCollection.json\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: ../../../ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    timeStamp:\n      type: string\n      format: date-time\n    numberMatched:\n      type: integer\n      minimum: 0\n    numberReturned:\n      type: integer\n      minimum: 0\n    features:\n      type: array\n      items:\n        $ref: ../feature/schema.yaml\nx-jsonld-extra-terms:\n  properties: '@nest'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n",
+  "gitRepository": "https://github.com/opengeospatial/bblocks",
+  "gitPath": "registereditems/geo/features/featureCollection"
+}

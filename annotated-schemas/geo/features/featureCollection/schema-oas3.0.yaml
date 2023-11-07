@@ -1,13 +1,13 @@
-$defs:
-  87bc89545ac002bbbb0dbc747efa3ee967eb601f:
+x-defs:
+  ogc.geo.features.featureCollection:
     allOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/c91e52f769a91e546450bef84f1dac326f3acb5e
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/geojson.org_schema_FeatureCollection.json
     - type: object
       properties:
         links:
           type: array
           items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/cd14a85209fd518659f8fb08008d89c0369d5e18
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
           x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
         timeStamp:
           type: string
@@ -21,13 +21,13 @@ $defs:
         features:
           type: array
           items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/e625fdf2b49fb9e9402240a7e39960ab0ba54d23
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.geo.features.feature
     x-jsonld-extra-terms:
       properties: '@nest'
     x-jsonld-prefixes:
       rdfs: http://www.w3.org/2000/01/rdf-schema#
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml
-  c91e52f769a91e546450bef84f1dac326f3acb5e:
+  geojson.org_schema_FeatureCollection.json:
     title: GeoJSON FeatureCollection
     type: object
     required:
@@ -378,7 +378,7 @@ $defs:
           type: number
     x-schema-version: http://json-schema.org/draft-07/schema#
     x-schema-source: https://geojson.org/schema/FeatureCollection.json
-  cd14a85209fd518659f8fb08008d89c0369d5e18:
+  ogc.ogc-utils.json-link:
     description: JSON Link
     type: object
     required:
@@ -414,15 +414,15 @@ $defs:
       dct: http://purl.org/dc/terms/
     x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://opengeospatial.github.io/bblocks/ogc-utils/json-link/schema.yaml
-  e625fdf2b49fb9e9402240a7e39960ab0ba54d23:
+  ogc.geo.features.feature:
     allOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/a7d0b06f951490137dddd1728209076989443796
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.geo.common.data_types.geojson
     - type: object
       properties:
         links:
           type: array
           items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/cd14a85209fd518659f8fb08008d89c0369d5e18
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
           x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
         type:
           const: Feature
@@ -435,7 +435,7 @@ $defs:
     x-jsonld-prefixes:
       rdfs: http://www.w3.org/2000/01/rdf-schema#
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/feature/schema.yaml
-  a7d0b06f951490137dddd1728209076989443796:
+  ogc.geo.common.data_types.geojson:
     title: GeoJSON Feature
     type: object
     required:
@@ -853,4 +853,4 @@ $defs:
     x-schema-version: http://json-schema.org/draft-07/schema#
     x-schema-source: https://geojson.org/schema/Feature.json
 allOf:
-- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/$defs/87bc89545ac002bbbb0dbc747efa3ee967eb601f
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.geo.features.featureCollection

@@ -1,6 +1,6 @@
 {
-  "$defs": {
-    "55253c29f90c75eb7d66304526a4fb2289b40223": {
+  "x-defs": {
+    "ogc.geo.geopose.basic.ypr": {
       "description": "Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation",
       "definitions": {
         "angles": {
@@ -63,7 +63,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema-oas3.0.json"
     },
-    "f08124ee1e911e959545d91e581cf8f5d56b11f9": {
+    "schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.YPR.Schema.json": {
       "description": "Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation",
       "definitions": {
         "angles": {
@@ -108,10 +108,10 @@
       "type": "object",
       "properties": {
         "position": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema-oas3.0.json#/$defs/f08124ee1e911e959545d91e581cf8f5d56b11f9/definitions/Position"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.YPR.Schema.json/definitions/Position"
         },
         "angles": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema-oas3.0.json#/$defs/f08124ee1e911e959545d91e581cf8f5d56b11f9/definitions/angles"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.YPR.Schema.json/definitions/angles"
         }
       },
       "required": [
@@ -123,7 +123,7 @@
   },
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema-oas3.0.json#/$defs/55253c29f90c75eb7d66304526a4fb2289b40223"
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema-oas3.0.json#/x-defs/ogc.geo.geopose.basic.ypr"
     }
   ]
 }

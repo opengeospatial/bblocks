@@ -1,5 +1,5 @@
-$defs:
-  e1205dcef7b83c23d1a90dc02f8fca78a2c98881:
+x-defs:
+  ogc.geo.geopose.basic.quaternion:
     description: 'Basic-Quaternion: Basic GeoPose using quaternion to specify orientation'
     definitions:
       Position:
@@ -49,7 +49,7 @@ $defs:
       geopose: http://example.com/geopose/
       geo: http://www.w3.org/2003/01/geo/wgs84_pos#
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.yaml
-  d6efeddd31437414d5d6ad1a90908a75197ca41a:
+  schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json:
     description: 'Basic-Quaternion: Basic GeoPose using quaternion to specify orientation'
     definitions:
       Position:
@@ -84,12 +84,12 @@ $defs:
     type: object
     properties:
       position:
-        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.yaml#/$defs/d6efeddd31437414d5d6ad1a90908a75197ca41a/definitions/Position
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.yaml#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json/definitions/Position
       quaternion:
-        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.yaml#/$defs/d6efeddd31437414d5d6ad1a90908a75197ca41a/definitions/Quaternion
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.yaml#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json/definitions/Quaternion
     required:
     - position
     - quaternion
     x-schema-source: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Quaternion.Schema.json
 allOf:
-- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.yaml#/$defs/e1205dcef7b83c23d1a90dc02f8fca78a2c98881
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.yaml#/x-defs/ogc.geo.geopose.basic.quaternion

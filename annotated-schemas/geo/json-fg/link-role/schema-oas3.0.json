@@ -1,18 +1,18 @@
 {
-  "$defs": {
-    "b1c3b86ea6d0442b2da4dccb07c21c167111fd76": {
+  "x-defs": {
+    "ogc.geo.json-fg.link-role": {
       "description": "annotated link with role and conformance",
       "$defs": {
         "coderef": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/$defs/00913d8150286b9c011ab5874a0621d3c9961414"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
         },
         "coderefs": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/$defs/00913d8150286b9c011ab5874a0621d3c9961414"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
         }
       },
       "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/$defs/8b90711441130791a64b322d6318e2ad95f66dde"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
         },
         {
           "properties": {
@@ -30,11 +30,11 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json"
     },
-    "00913d8150286b9c011ab5874a0621d3c9961414": {
+    "ogc.ogc-utils.iri-or-curie": {
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://opengeospatial.github.io/bblocks/ogc-utils/iri-or-curie/schema.json"
     },
-    "8b90711441130791a64b322d6318e2ad95f66dde": {
+    "ogc.ogc-utils.json-link": {
       "description": "JSON Link",
       "type": "object",
       "required": [
@@ -84,7 +84,7 @@
   },
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/$defs/b1c3b86ea6d0442b2da4dccb07c21c167111fd76"
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.link-role"
     }
   ]
 }

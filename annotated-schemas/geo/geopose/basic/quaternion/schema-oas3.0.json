@@ -1,6 +1,6 @@
 {
-  "$defs": {
-    "2b5560c2afc346038246b8301afae5bb30791c4a": {
+  "x-defs": {
+    "ogc.geo.geopose.basic.quaternion": {
       "description": "Basic-Quaternion: Basic GeoPose using quaternion to specify orientation",
       "definitions": {
         "Position": {
@@ -68,7 +68,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json"
     },
-    "d6efeddd31437414d5d6ad1a90908a75197ca41a": {
+    "schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json": {
       "description": "Basic-Quaternion: Basic GeoPose using quaternion to specify orientation",
       "definitions": {
         "Position": {
@@ -117,10 +117,10 @@
       "type": "object",
       "properties": {
         "position": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/$defs/d6efeddd31437414d5d6ad1a90908a75197ca41a/definitions/Position"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json/definitions/Position"
         },
         "quaternion": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/$defs/d6efeddd31437414d5d6ad1a90908a75197ca41a/definitions/Quaternion"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json/definitions/Quaternion"
         }
       },
       "required": [
@@ -132,7 +132,7 @@
   },
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/$defs/2b5560c2afc346038246b8301afae5bb30791c4a"
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/x-defs/ogc.geo.geopose.basic.quaternion"
     }
   ]
 }
