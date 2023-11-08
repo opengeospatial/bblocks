@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.unstable.sosa.examples.vectorObservationFeature - Example SOSA Vector Observation Feature",
   "bblockName": "Example SOSA Vector Observation Feature",
   "bblockId": "ogc.unstable.sosa.examples.vectorObservationFeature",
-  "generated": "2023-11-07T14:48:15.329993+00:00",
+  "generated": "2023-11-08T13:06:24.266420+00:00",
   "result": true,
   "items": [
     {
@@ -67,7 +67,26 @@
           },
           {
             "focusNodes": {
+              "<http://example.com/rules#testGeometryCoordinatesIsList>": {
+                "nodes": [
+                  "<http://example.com/features/vector-obs-1>/geojson:geometry"
+                ]
+              },
+              "<http://example.com/rules#testResult>": {
+                "nodes": []
+              },
+              "<http://example.com/rules#testObservedProperty>": {
+                "nodes": []
+              },
               "<http://example.com/rules#testRequiredTime>": {
+                "nodes": []
+              },
+              "<http://example.com/rules#testGeometryHasCoordinates>": {
+                "nodes": [
+                  "<http://example.com/features/vector-obs-1>/geojson:geometry"
+                ]
+              },
+              "<http://example.com/rules#testFeatureOfInterest>": {
                 "nodes": []
               },
               "<http://example.com/rules#testVectorObservationFeatureHasOneGeometry>": {
@@ -75,56 +94,37 @@
                   "<http://example.com/features/vector-obs-1>"
                 ]
               },
-              "<http://example.com/rules#testGeometryCoordinatesIsList>": {
-                "nodes": [
-                  "<http://example.com/features/vector-obs-1>/geojson:geometry"
-                ]
-              },
-              "<http://example.com/rules#testGeometryHasCoordinates>": {
-                "nodes": [
-                  "<http://example.com/features/vector-obs-1>/geojson:geometry"
-                ]
-              },
-              "<http://example.com/rules#testObservedProperty>": {
-                "nodes": []
-              },
-              "<http://example.com/rules#testResult>": {
-                "nodes": []
-              },
-              "<http://example.com/rules#testFeatureOfInterest>": {
-                "nodes": []
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
+                "nodes": [],
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b5"
               },
               "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
                 "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b29"
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
-                "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b5"
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b29"
               },
               "<http://example.com/rules#testResult>/sh:property": {
                 "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b32"
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b32"
               },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+              "<http://example.com/rules#testGeometryHasCoordinates>/sh:property": {
                 "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b11"
+                "path": "geojson:coordinates"
               },
               "<http://example.com/rules#testObservedProperty>/sh:property": {
                 "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b19"
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b19"
               },
               "<http://example.com/rules#testVectorObservationFeatureHasOneGeometry>/sh:property": {
                 "nodes": [],
                 "path": "geojson:geometry"
               },
-              "<http://example.com/rules#testGeometryHasCoordinates>/sh:property": {
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
                 "nodes": [],
-                "path": "geojson:coordinates"
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b11"
               }
             },
             "isError": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: *none*\n - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>: <http://example.com/features/vector-obs-1>\n - Shape <http://example.com/rules#testGeometryCoordinatesIsList>: <http://example.com/features/vector-obs-1>/geojson:geometry\n - Shape <http://example.com/rules#testGeometryHasCoordinates>: <http://example.com/features/vector-obs-1>/geojson:geometry\n - Shape <http://example.com/rules#testObservedProperty>: *none*\n - Shape <http://example.com/rules#testResult>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nc124ba063c93412688205dd07ddcbb53b29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nc124ba063c93412688205dd07ddcbb53b5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:nc124ba063c93412688205dd07ddcbb53b32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nc124ba063c93412688205dd07ddcbb53b11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nc124ba063c93412688205dd07ddcbb53b19): *none*\n - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>/sh:property (path geojson:geometry): *none*\n - Shape <http://example.com/rules#testGeometryHasCoordinates>/sh:property (path geojson:coordinates): *none*\n"
+            "message": "Focus nodes:\n - Shape <http://example.com/rules#testGeometryCoordinatesIsList>: <http://example.com/features/vector-obs-1>/geojson:geometry\n - Shape <http://example.com/rules#testResult>: *none*\n - Shape <http://example.com/rules#testObservedProperty>: *none*\n - Shape <http://example.com/rules#testRequiredTime>: *none*\n - Shape <http://example.com/rules#testGeometryHasCoordinates>: <http://example.com/features/vector-obs-1>/geojson:geometry\n - Shape <http://example.com/rules#testFeatureOfInterest>: *none*\n - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>: <http://example.com/features/vector-obs-1>\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n1ebf9a62480544e689d3a4993609f9c0b5): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n1ebf9a62480544e689d3a4993609f9c0b29): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n1ebf9a62480544e689d3a4993609f9c0b32): *none*\n - Shape <http://example.com/rules#testGeometryHasCoordinates>/sh:property (path geojson:coordinates): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n1ebf9a62480544e689d3a4993609f9c0b19): *none*\n - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>/sh:property (path geojson:geometry): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n1ebf9a62480544e689d3a4993609f9c0b11): *none*\n"
           }
         ]
       }
@@ -191,7 +191,26 @@
           },
           {
             "focusNodes": {
+              "<http://example.com/rules#testGeometryCoordinatesIsList>": {
+                "nodes": [
+                  "<http://example.com/features/vector-obs-1>/geojson:geometry"
+                ]
+              },
+              "<http://example.com/rules#testResult>": {
+                "nodes": []
+              },
+              "<http://example.com/rules#testObservedProperty>": {
+                "nodes": []
+              },
               "<http://example.com/rules#testRequiredTime>": {
+                "nodes": []
+              },
+              "<http://example.com/rules#testGeometryHasCoordinates>": {
+                "nodes": [
+                  "<http://example.com/features/vector-obs-1>/geojson:geometry"
+                ]
+              },
+              "<http://example.com/rules#testFeatureOfInterest>": {
                 "nodes": []
               },
               "<http://example.com/rules#testVectorObservationFeatureHasOneGeometry>": {
@@ -199,56 +218,37 @@
                   "<http://example.com/features/vector-obs-1>"
                 ]
               },
-              "<http://example.com/rules#testGeometryCoordinatesIsList>": {
-                "nodes": [
-                  "<http://example.com/features/vector-obs-1>/geojson:geometry"
-                ]
-              },
-              "<http://example.com/rules#testGeometryHasCoordinates>": {
-                "nodes": [
-                  "<http://example.com/features/vector-obs-1>/geojson:geometry"
-                ]
-              },
-              "<http://example.com/rules#testObservedProperty>": {
-                "nodes": []
-              },
-              "<http://example.com/rules#testResult>": {
-                "nodes": []
-              },
-              "<http://example.com/rules#testFeatureOfInterest>": {
-                "nodes": []
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
+                "nodes": [],
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b5"
               },
               "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
                 "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b29"
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
-                "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b5"
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b29"
               },
               "<http://example.com/rules#testResult>/sh:property": {
                 "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b32"
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b32"
               },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+              "<http://example.com/rules#testGeometryHasCoordinates>/sh:property": {
                 "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b11"
+                "path": "geojson:coordinates"
               },
               "<http://example.com/rules#testObservedProperty>/sh:property": {
                 "nodes": [],
-                "path": "_:nc124ba063c93412688205dd07ddcbb53b19"
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b19"
               },
               "<http://example.com/rules#testVectorObservationFeatureHasOneGeometry>/sh:property": {
                 "nodes": [],
                 "path": "geojson:geometry"
               },
-              "<http://example.com/rules#testGeometryHasCoordinates>/sh:property": {
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
                 "nodes": [],
-                "path": "geojson:coordinates"
+                "path": "_:n1ebf9a62480544e689d3a4993609f9c0b11"
               }
             },
             "isError": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: *none*\n - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>: <http://example.com/features/vector-obs-1>\n - Shape <http://example.com/rules#testGeometryCoordinatesIsList>: <http://example.com/features/vector-obs-1>/geojson:geometry\n - Shape <http://example.com/rules#testGeometryHasCoordinates>: <http://example.com/features/vector-obs-1>/geojson:geometry\n - Shape <http://example.com/rules#testObservedProperty>: *none*\n - Shape <http://example.com/rules#testResult>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>: *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nc124ba063c93412688205dd07ddcbb53b29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nc124ba063c93412688205dd07ddcbb53b5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:nc124ba063c93412688205dd07ddcbb53b32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nc124ba063c93412688205dd07ddcbb53b11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nc124ba063c93412688205dd07ddcbb53b19): *none*\n - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>/sh:property (path geojson:geometry): *none*\n - Shape <http://example.com/rules#testGeometryHasCoordinates>/sh:property (path geojson:coordinates): *none*\n"
+            "message": "Focus nodes:\n - Shape <http://example.com/rules#testGeometryCoordinatesIsList>: <http://example.com/features/vector-obs-1>/geojson:geometry\n - Shape <http://example.com/rules#testResult>: *none*\n - Shape <http://example.com/rules#testObservedProperty>: *none*\n - Shape <http://example.com/rules#testRequiredTime>: *none*\n - Shape <http://example.com/rules#testGeometryHasCoordinates>: <http://example.com/features/vector-obs-1>/geojson:geometry\n - Shape <http://example.com/rules#testFeatureOfInterest>: *none*\n - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>: <http://example.com/features/vector-obs-1>\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n1ebf9a62480544e689d3a4993609f9c0b5): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n1ebf9a62480544e689d3a4993609f9c0b29): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n1ebf9a62480544e689d3a4993609f9c0b32): *none*\n - Shape <http://example.com/rules#testGeometryHasCoordinates>/sh:property (path geojson:coordinates): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n1ebf9a62480544e689d3a4993609f9c0b19): *none*\n - Shape <http://example.com/rules#testVectorObservationFeatureHasOneGeometry>/sh:property (path geojson:geometry): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n1ebf9a62480544e689d3a4993609f9c0b11): *none*\n"
           }
         ]
       }

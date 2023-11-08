@@ -1,5 +1,5 @@
 Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection
-Generated 2023-11-07T14:48:10.650739+00:00
+Generated 2023-11-08T13:06:20.172375+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -20,7 +20,8 @@ Failed validating 'required' in schema['allOf'][1]['properties']['features']['it
     {'$schema': 'https://json-schema.org/draft/2019-09/schema',
      'allOf': [{'$ref': '../../features/feature/schema.yaml'},
                {'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json'},
-                               'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json'},
+                               'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json',
+                                               'x-jsonld-id': '@type'},
                                'geometry': {'$ref': 'https://beta.schemas.opengis.net/json-fg/geometry.json',
                                             'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},
                                'id': {'oneOf': [{'type': 'number'},

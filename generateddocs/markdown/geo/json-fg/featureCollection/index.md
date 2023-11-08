@@ -112,13 +112,15 @@ NB. uses a local @context in the data example where application specialisations 
 #### ttl
 ```ttl
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix my: <http://my.org/featureTypes/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
     skos:prefLabel "MyFeatureCollection" ;
     geojson:features <http://www.example.com/features/f1> .
 
-<http://www.example.com/features/f1> a geojson:Feature .
+<http://www.example.com/features/f1> a my:FeatureType,
+        geojson:Feature .
 
 
 ```
@@ -143,6 +145,7 @@ allOf:
       x-jsonld-id: '@type'
     featureType:
       $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+      x-jsonld-id: https://purl.org/geojson/vocab#collectionFeatureType
     geometryDimension:
       type: integer
       minimum: 0
@@ -179,6 +182,7 @@ Links to the schema:
 {
   "@context": {
     "type": "@type",
+    "featureType": "geojson:collectionFeatureType",
     "links": {
       "@context": {
         "href": "oa:hasTarget",
@@ -198,10 +202,7 @@ Links to the schema:
     },
     "features": {
       "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
+        "featureType": "@type"
       },
       "@container": "@set",
       "@id": "geojson:features"
@@ -209,12 +210,7 @@ Links to the schema:
     "properties": "@nest",
     "id": "@id",
     "geometry": {
-      "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
-      },
+      "@context": {},
       "@id": "geojson:geometry"
     },
     "bbox": {
@@ -231,8 +227,8 @@ Links to the schema:
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
     "coordinates": {
-      "x-jsonld-container": "@list",
-      "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+      "@container": "@list",
+      "@id": "geojson:coordinates"
     },
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

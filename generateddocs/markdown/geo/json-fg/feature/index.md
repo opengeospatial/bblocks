@@ -59,6 +59,7 @@ allOf:
       x-jsonld-id: '@id'
     featureType:
       $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json
+      x-jsonld-id: '@type'
     links:
       type: array
       items:
@@ -139,6 +140,7 @@ Links to the schema:
     },
     "type": "@type",
     "id": "@id",
+    "featureType": "@type",
     "links": {
       "@context": {
         "href": "oa:hasTarget",
