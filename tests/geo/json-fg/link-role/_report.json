@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.geo.json-fg.link-role - Link with role and target conformance",
   "bblockName": "Link with role and target conformance",
   "bblockId": "ogc.geo.json-fg.link-role",
-  "generated": "2023-11-08T13:06:19.062715+00:00",
+  "generated": "2023-11-12T04:06:45.840387+00:00",
   "result": true,
   "items": [
     {
@@ -15,41 +15,74 @@
         "language": "json"
       },
       "result": true,
-      "sections": {
-        "FILES": [
-          {
-            "isError": false,
-            "message": "Using example_1_1.json from examples"
-          },
-          {
-            "op": "jsonld-uplift",
-            "isError": false,
-            "message": "JSON-LD context is present - uplifting"
-          },
-          {
-            "op": "jsonld-create",
-            "filename": "example_1_1.jsonld",
-            "isError": false,
-            "message": "Output JSON-LD example_1_1.jsonld created"
-          },
-          {
-            "op": "ttl-create",
-            "empty": false,
-            "filename": "example_1_1.ttl",
-            "size": 3,
-            "isError": false,
-            "message": "Output Turtle example_1_1.ttl created"
-          }
-        ],
-        "JSON_SCHEMA": [
-          {
-            "op": "validation",
-            "result": true,
-            "isError": false,
-            "message": "Validation passed"
-          }
-        ]
-      }
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": []
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 3,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "JSON_LD",
+          "title": "JSON-LD",
+          "entries": []
+        },
+        {
+          "name": "TURTLE",
+          "title": "Turtle",
+          "entries": []
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": []
+        },
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": []
+        }
+      ]
     }
   ],
   "globalErrors": {},
