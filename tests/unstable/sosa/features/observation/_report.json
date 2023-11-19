@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.unstable.sosa.features.observation - SOSA Observation Feature",
   "bblockName": "SOSA Observation Feature",
   "bblockId": "ogc.unstable.sosa.features.observation",
-  "generated": "2023-11-12T04:06:49.325753+00:00",
+  "generated": "2023-11-19T04:06:23.993310+00:00",
   "result": true,
   "items": [
     {
@@ -92,6 +92,11 @@
             },
             {
               "focusNodes": {
+                "<http://example.com/rules#testObservedProperty>": {
+                  "nodes": [
+                    "<http://example.com/pop1999>"
+                  ]
+                },
                 "<http://example.com/rules#testRequiredTime>": {
                   "nodes": [
                     "<http://example.com/pop1999>"
@@ -102,39 +107,34 @@
                     "<http://example.com/pop1999>"
                   ]
                 },
-                "<http://example.com/rules#testObservedProperty>": {
-                  "nodes": [
-                    "<http://example.com/pop1999>"
-                  ]
-                },
                 "<http://example.com/rules#testResult>": {
                   "nodes": [
                     "<http://example.com/pop1999>"
                   ]
                 },
-                "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
+                "<http://example.com/rules#testResult>/sh:property": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab29"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b32"
                 },
                 "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab5"
-                },
-                "<http://example.com/rules#testResult>/sh:property": {
-                  "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab32"
-                },
-                "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab11"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b5"
                 },
                 "<http://example.com/rules#testObservedProperty>/sh:property": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab19"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b19"
+                },
+                "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
+                  "nodes": [],
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b29"
+                },
+                "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": [],
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b11"
                 }
               },
               "isError": false,
-              "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testObservedProperty>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testResult>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n20a5775c28dd47cfab17b7063cb615eab5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n20a5775c28dd47cfab17b7063cb615eab11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab19): *none*\n"
+              "message": "Focus nodes:\n - Shape <http://example.com/rules#testObservedProperty>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testRequiredTime>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testResult>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testResult>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nac4157c62ce34b76831a70cbed572520b5): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b19): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nac4157c62ce34b76831a70cbed572520b11): *none*\n"
             }
           ]
         },
@@ -214,49 +214,49 @@
             },
             {
               "focusNodes": {
+                "<http://example.com/rules#testObservedProperty>": {
+                  "nodes": [
+                    "_:nfc6e0d8b83f049019286ad9c6da029c6b1"
+                  ]
+                },
                 "<http://example.com/rules#testRequiredTime>": {
                   "nodes": [
-                    "_:n41e508b74b1c438e98a5302395956447b1"
+                    "_:nfc6e0d8b83f049019286ad9c6da029c6b1"
                   ]
                 },
                 "<http://example.com/rules#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:n41e508b74b1c438e98a5302395956447b1"
-                  ]
-                },
-                "<http://example.com/rules#testObservedProperty>": {
-                  "nodes": [
-                    "_:n41e508b74b1c438e98a5302395956447b1"
+                    "_:nfc6e0d8b83f049019286ad9c6da029c6b1"
                   ]
                 },
                 "<http://example.com/rules#testResult>": {
                   "nodes": [
-                    "_:n41e508b74b1c438e98a5302395956447b1"
+                    "_:nfc6e0d8b83f049019286ad9c6da029c6b1"
                   ]
-                },
-                "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
-                  "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab29"
-                },
-                "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
-                  "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab5"
                 },
                 "<http://example.com/rules#testResult>/sh:property": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab32"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b32"
                 },
-                "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+                "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab11"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b5"
                 },
                 "<http://example.com/rules#testObservedProperty>/sh:property": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab19"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b19"
+                },
+                "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
+                  "nodes": [],
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b29"
+                },
+                "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": [],
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b11"
                 }
               },
               "isError": false,
-              "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: _:n41e508b74b1c438e98a5302395956447b1\n - Shape <http://example.com/rules#testFeatureOfInterest>: _:n41e508b74b1c438e98a5302395956447b1\n - Shape <http://example.com/rules#testObservedProperty>: _:n41e508b74b1c438e98a5302395956447b1\n - Shape <http://example.com/rules#testResult>: _:n41e508b74b1c438e98a5302395956447b1\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n20a5775c28dd47cfab17b7063cb615eab5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n20a5775c28dd47cfab17b7063cb615eab11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab19): *none*\n"
+              "message": "Focus nodes:\n - Shape <http://example.com/rules#testObservedProperty>: _:nfc6e0d8b83f049019286ad9c6da029c6b1\n - Shape <http://example.com/rules#testRequiredTime>: _:nfc6e0d8b83f049019286ad9c6da029c6b1\n - Shape <http://example.com/rules#testFeatureOfInterest>: _:nfc6e0d8b83f049019286ad9c6da029c6b1\n - Shape <http://example.com/rules#testResult>: _:nfc6e0d8b83f049019286ad9c6da029c6b1\n - Shape <http://example.com/rules#testResult>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nac4157c62ce34b76831a70cbed572520b5): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b19): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nac4157c62ce34b76831a70cbed572520b11): *none*\n"
             }
           ]
         },
@@ -354,6 +354,11 @@
             },
             {
               "focusNodes": {
+                "<http://example.com/rules#testObservedProperty>": {
+                  "nodes": [
+                    "<http://example.com/pop1999>"
+                  ]
+                },
                 "<http://example.com/rules#testRequiredTime>": {
                   "nodes": [
                     "<http://example.com/pop1999>"
@@ -364,39 +369,34 @@
                     "<http://example.com/pop1999>"
                   ]
                 },
-                "<http://example.com/rules#testObservedProperty>": {
-                  "nodes": [
-                    "<http://example.com/pop1999>"
-                  ]
-                },
                 "<http://example.com/rules#testResult>": {
                   "nodes": [
                     "<http://example.com/pop1999>"
                   ]
                 },
-                "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
+                "<http://example.com/rules#testResult>/sh:property": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab29"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b32"
                 },
                 "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab5"
-                },
-                "<http://example.com/rules#testResult>/sh:property": {
-                  "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab32"
-                },
-                "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab11"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b5"
                 },
                 "<http://example.com/rules#testObservedProperty>/sh:property": {
                   "nodes": [],
-                  "path": "_:n20a5775c28dd47cfab17b7063cb615eab19"
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b19"
+                },
+                "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
+                  "nodes": [],
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b29"
+                },
+                "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": [],
+                  "path": "_:nac4157c62ce34b76831a70cbed572520b11"
                 }
               },
               "isError": false,
-              "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testObservedProperty>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testResult>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n20a5775c28dd47cfab17b7063cb615eab5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n20a5775c28dd47cfab17b7063cb615eab11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n20a5775c28dd47cfab17b7063cb615eab19): *none*\n"
+              "message": "Focus nodes:\n - Shape <http://example.com/rules#testObservedProperty>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testRequiredTime>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testResult>: <http://example.com/pop1999>\n - Shape <http://example.com/rules#testResult>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b32): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nac4157c62ce34b76831a70cbed572520b5): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b19): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nac4157c62ce34b76831a70cbed572520b29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nac4157c62ce34b76831a70cbed572520b11): *none*\n"
             }
           ]
         },
