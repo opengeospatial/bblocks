@@ -1,26 +1,22 @@
 Validation report for ogc.unstable.sosa.features.observationCollection - SOSA ObservationCollection Feature
-Generated 2023-11-26T04:06:34.870464+00:00
+Generated 2023-12-03T04:06:27.327569+00:00
 === Files ===
 Using example_1_2.ttl from examples
 Output Turtle example_1_2.ttl created
 === End Files ===
 
 === SHACL ===
-Using SHACL files for validation:
- - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
-Validation Report
-Conforms: True
-
-Focus nodes:
- - Shape <http://example.com/rules#testResult>: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testFeatureOfInterest>: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testRequiredTime>: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testObservedProperty>: eg:pop1999,eg:pop2000
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n91e2f0d2229a4ae2b78bcebd798aae23b11): *none*
- - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n91e2f0d2229a4ae2b78bcebd798aae23b29): *none*
- - Shape <http://example.com/rules#testResult>/sh:property (path _:n91e2f0d2229a4ae2b78bcebd798aae23b32): *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n91e2f0d2229a4ae2b78bcebd798aae23b5): *none*
- - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n91e2f0d2229a4ae2b78bcebd798aae23b19): *none*
+Validation result for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: eg:pop2000,eg:pop1999
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: eg:pop2000,eg:pop1999
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: eg:pop2000,eg:pop1999
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: eg:pop2000/sosa:hasSimpleResult,eg:pop1999/sosa:hasSimpleResult
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: eg:pop2000,eg:pop1999
 
 === End SHACL ===
 

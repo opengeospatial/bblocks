@@ -144,14 +144,6 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "role": {
-      "@id": "prof:hasRole",
-      "@type": "@id"
-    },
-    "conformsTo": {
-      "@id": "dct:conformsTo",
-      "@type": "@id"
-    },
     "href": "oa:hasTarget",
     "rel": {
       "@context": {
@@ -164,6 +156,14 @@ Links to the schema:
     "hreflang": "dct:language",
     "title": "rdfs:label",
     "length": "dct:extent",
+    "role": {
+      "@id": "prof:hasRole",
+      "@type": "@id"
+    },
+    "conformsTo": {
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
     "prof": "http://www.w3.org/ns/dx/prof/",
     "dct": "http://purl.org/dc/terms/",
     "oa": "http://www.w3.org/ns/oa#",

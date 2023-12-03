@@ -162,6 +162,7 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
+    "properties": "@nest",
     "type": "@type",
     "id": "@id",
     "featureType": "@type",
@@ -183,7 +184,6 @@ Links to the schema:
       "@id": "rdfs:seeAlso"
     },
     "geometry": "geojson:geometry",
-    "properties": "@nest",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",

@@ -1,5 +1,5 @@
 Validation report for ogc.unstable.sosa.examples.vectorObservation - Example SOSA Vector Observation
-Generated 2023-11-26T04:06:32.115519+00:00
+Generated 2023-12-03T04:06:25.954454+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -12,21 +12,17 @@ Validation passed
 === End JSON Schema ===
 
 === SHACL ===
-Using SHACL files for validation:
- - registereditems/unstable/sosa/_sources/properties/observation/rules.shacl
-Validation Report
-Conforms: True
-
-Focus nodes:
- - Shape <http://example.com/rules#testResult>: *none*
- - Shape <http://example.com/rules#testFeatureOfInterest>: *none*
- - Shape <http://example.com/rules#testRequiredTime>: *none*
- - Shape <http://example.com/rules#testObservedProperty>: *none*
- - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nfbcd896d81dd4a6187380ea8c96c8b41b29): *none*
- - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nfbcd896d81dd4a6187380ea8c96c8b41b19): *none*
- - Shape <http://example.com/rules#testResult>/sh:property (path _:nfbcd896d81dd4a6187380ea8c96c8b41b32): *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nfbcd896d81dd4a6187380ea8c96c8b41b5): *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nfbcd896d81dd4a6187380ea8c96c8b41b11): *none*
+Validation result for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N34ed5d013de14d46aeeed4624f5ce8a7
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N34ed5d013de14d46aeeed4624f5ce8a7
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N34ed5d013de14d46aeeed4624f5ce8a7
 
 === End SHACL ===
 

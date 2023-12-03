@@ -167,23 +167,6 @@ Links to the schema:
 {
   "@context": {
     "properties": "@nest",
-    "links": {
-      "@context": {
-        "href": "oa:hasTarget",
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
-    },
     "type": "@type",
     "id": "@id",
     "geometry": {
@@ -211,6 +194,23 @@ Links to the schema:
     "features": {
       "@container": "@set",
       "@id": "geojson:features"
+    },
+    "links": {
+      "@context": {
+        "href": "oa:hasTarget",
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
     },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "geojson": "https://purl.org/geojson/vocab#",

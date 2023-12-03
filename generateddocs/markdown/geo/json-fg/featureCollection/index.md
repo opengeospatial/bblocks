@@ -181,6 +181,7 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "properties": "@nest",
     "type": "@type",
     "featureType": "geojson:collectionFeatureType",
     "links": {
@@ -207,7 +208,6 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "properties": "@nest",
     "id": "@id",
     "geometry": {
       "@context": {},
