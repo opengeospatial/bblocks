@@ -42,6 +42,7 @@ properties:
   href:
     type: string
     format: uri-reference
+    x-jsonld-type: '@id'
     x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
   rel:
     type: string
@@ -82,7 +83,10 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "href": "oa:hasTarget",
+    "href": {
+      "@type": "@id",
+      "@id": "oa:hasTarget"
+    },
     "rel": {
       "@context": {
         "@base": "http://www.iana.org/assignments/relation/"

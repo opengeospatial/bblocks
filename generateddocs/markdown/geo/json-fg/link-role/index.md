@@ -46,7 +46,7 @@ See panel to right - note that a more user friendly "collapsable" version is in 
 
 [] ns1:relation <http://www.iana.org/assignments/relation/related> ;
     prof:hasRole <http://example.org/animals> ;
-    oa:hasTarget "http//example.org/frog" .
+    oa:hasTarget <http://example.org/http/example.org/frog> .
 
 
 ```
@@ -90,7 +90,10 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "href": "oa:hasTarget",
+    "href": {
+      "@type": "@id",
+      "@id": "oa:hasTarget"
+    },
     "rel": {
       "@context": {
         "@base": "http://www.iana.org/assignments/relation/"
