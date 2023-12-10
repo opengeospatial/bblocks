@@ -786,16 +786,31 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "Observation": "sosa:Observation",
-    "Sample": "sosa:Sample",
-    "System": "sosa:System",
-    "Platform": "sosa:Platform",
+    "resultTime": "sosa:resultTime",
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
     "observedProperty": {
       "@id": "sosa:observedProperty",
       "@type": "@id"
     },
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "hasResult": "sosa:hasResult",
+    "hasSimpleResult": "sosa:hasSimpleResult",
+    "Observation": "sosa:Observation",
+    "Sample": "sosa:Sample",
+    "System": "sosa:System",
+    "Platform": "sosa:Platform",
     "id": "@id",
-    "phenomenonTime": "sosa:phenomenonTime",
     "observes": {
       "@id": "sosa:observes",
       "@type": "@id"
@@ -806,10 +821,6 @@ Links to the schema:
     },
     "madeObservation": {
       "@id": "sosa:madeObservation",
-      "@type": "@id"
-    },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
       "@type": "@id"
     },
     "actsOnProperty": {
@@ -844,22 +855,11 @@ Links to the schema:
       "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
     "isFeatureOfInterestOf": {
       "@id": "sosa:isFeatureOfInterestOf",
       "@type": "@id"
     },
-    "hasResult": "sosa:hasResult",
     "isResultOf": "sosa:isResultOf",
-    "hasSimpleResult": "sosa:hasSimpleResult",
-    "resultTime": "sosa:resultTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    },
     "hosts": {
       "@id": "sosa:hosts",
       "@type": "@id",
@@ -896,19 +896,48 @@ Links to the schema:
     "qualityOfObservation": "ssn-system:qualityOfObservation",
     "hasMember": {
       "@context": {
-        "features": "sosa:hasMember"
+        "featureType": "@type"
       },
       "@id": "sosa:hasMember"
     },
     "features": {
       "@context": {
-        "features": "sosa:hasMember"
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
+        },
+        "featureType": "@type"
       },
-      "@id": "geojson:features",
-      "@container": "@set"
+      "@container": "@set",
+      "@id": "sosa:hasMember"
     },
-    "featureType": "@type",
     "properties": "@nest",
+    "featureType": "geojson:collectionFeatureType",
+    "position": {
+      "@context": {
+        "lat": "geo:lat",
+        "lon": "geo:long",
+        "h": "geopose:h"
+      },
+      "@id": "geopose:position"
+    },
+    "angles": {
+      "@context": {
+        "yaw": "geopose:yaw",
+        "pitch": "geopose:pitch",
+        "roll": "geopose:roll"
+      },
+      "@id": "geopose:angles"
+    },
+    "type": "@type",
+    "geometry": {
+      "@context": {},
+      "@id": "geojson:geometry"
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -918,15 +947,6 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "type": "@type",
     "links": {
       "@context": {
         "href": {
@@ -947,30 +967,17 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "geometry": "geojson:geometry",
-    "position": {
-      "@context": {
-        "lat": "geo:lat",
-        "lon": "geo:long",
-        "h": "geopose:h"
-      },
-      "@id": "geopose:position"
-    },
-    "angles": {
-      "@context": {
-        "yaw": "geopose:yaw",
-        "pitch": "geopose:pitch",
-        "roll": "geopose:roll"
-      },
-      "@id": "geopose:angles"
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
     },
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
-    "geojson": "https://purl.org/geojson/vocab#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "geopose": "http://example.com/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
     "@version": 1.1

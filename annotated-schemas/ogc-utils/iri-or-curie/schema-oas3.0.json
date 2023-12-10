@@ -1,6 +1,66 @@
 {
   "x-defs": {
     "ogc.ogc-utils.iri-or-curie": {
+      "description": "IRI or CURIE",
+      "$defs": {
+        "IRI": {
+          "type": "string",
+          "pattern": "^\\w+:(\\/?\\/?)[^\\s]+$"
+        },
+        "CURIE": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][^\\s:]*:.*$"
+        },
+        "LocalPart": {
+          "type": "string",
+          "pattern": "^[^:]*(\\?.*)?(#.*)?$"
+        },
+        "Single": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IRI"
+            },
+            {
+              "$ref": "#/$defs/CURIE"
+            },
+            {
+              "$ref": "#/$defs/LocalPart"
+            }
+          ]
+        },
+        "Multiple": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Single"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Single"
+              }
+            }
+          ]
+        },
+        "MultipleOrObject": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Multiple"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "MultipleOrObjectOrNull": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MultipleOrObject"
+            }
+          ],
+          "nullable": true
+        }
+      },
+      "$ref": "#/$defs/Single",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json"
     }

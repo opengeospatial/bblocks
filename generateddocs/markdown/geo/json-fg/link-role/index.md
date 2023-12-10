@@ -113,10 +113,10 @@ Links to the schema:
       "@id": "dct:conformsTo",
       "@type": "@id"
     },
-    "prof": "http://www.w3.org/ns/dx/prof/",
-    "dct": "http://purl.org/dc/terms/",
     "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
     "@version": 1.1
   }
 }

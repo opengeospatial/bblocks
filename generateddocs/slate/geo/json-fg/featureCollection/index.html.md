@@ -235,9 +235,6 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "properties": "@nest",
-    "type": "@type",
-    "featureType": "geojson:collectionFeatureType",
     "links": {
       "@context": {
         "href": {
@@ -258,14 +255,9 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "features": {
-      "@context": {
-        "featureType": "@type"
-      },
-      "@container": "@set",
-      "@id": "geojson:features"
-    },
+    "type": "@type",
     "id": "@id",
+    "properties": "@nest",
     "geometry": {
       "@context": {},
       "@id": "geojson:geometry"
@@ -283,14 +275,42 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features",
+      "@context": {
+        "links": {
+          "@context": {
+            "href": {
+              "@type": "@id",
+              "@id": "oa:hasTarget"
+            },
+            "rel": {
+              "@context": {
+                "@base": "http://www.iana.org/assignments/relation/"
+              },
+              "@id": "http://www.iana.org/assignments/relation",
+              "@type": "@id"
+            },
+            "type": "dct:type",
+            "hreflang": "dct:language",
+            "title": "rdfs:label",
+            "length": "dct:extent"
+          },
+          "@id": "rdfs:seeAlso"
+        },
+        "featureType": "@type"
+      }
+    },
+    "featureType": "geojson:collectionFeatureType",
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
     },
-    "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "geojson": "https://purl.org/geojson/vocab#",
     "@version": 1.1
   }
 }

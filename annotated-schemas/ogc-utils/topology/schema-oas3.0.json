@@ -3,11 +3,14 @@
     "ogc.ogc-utils.topology": {
       "description": "feature with geometry by reference",
       "properties": {
-        "type": {},
+        "type": {
+          "$ref": "../iri-or-curie/schema.json",
+          "x-jsonld-id": "@type"
+        },
         "references": {
           "type": "array",
           "items": {
-            "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+            "$ref": "../iri-or-curie/schema.json"
           },
           "x-jsonld-id": "https://purl.org/geojson/vocab#relatedFeatures",
           "x-jsonld-type": "@id",
@@ -28,10 +31,6 @@
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json"
-    },
-    "ogc.ogc-utils.iri-or-curie": {
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/iri-or-curie/schema.json"
     }
   },
   "allOf": [

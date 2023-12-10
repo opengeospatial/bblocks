@@ -137,7 +137,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "properties": "@nest",
     "links": {
       "@context": {
         "href": {
@@ -160,6 +159,7 @@ Links to the schema:
     },
     "type": "@type",
     "id": "@id",
+    "properties": "@nest",
     "geometry": {
       "@context": {
         "coordinates": {

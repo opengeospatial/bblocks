@@ -191,7 +191,6 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "properties": "@nest",
     "links": {
       "@context": {
         "href": {
@@ -214,6 +213,7 @@ Links to the schema:
     },
     "type": "@type",
     "id": "@id",
+    "properties": "@nest",
     "geometry": {
       "@context": {
         "coordinates": {
