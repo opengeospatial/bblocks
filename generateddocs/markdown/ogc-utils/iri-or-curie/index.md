@@ -138,13 +138,13 @@ description: IRI or CURIE
 $defs:
   IRI:
     type: string
-    pattern: ^\w+:(\/?\/?)[^\s]+$
+    pattern: ^\w+:/*([^:<>{}|\\^`"\s/]+[^<>{}|\\^`"\s]*(:[^:<>{}|\\^`"\s]+)?)?$
   CURIE:
     type: string
-    pattern: ^[A-Za-z_][^\s:]*:.*$
+    pattern: ^[A-Za-z_][^\s:/]*:[^:<>{}|\\^`"\s]*(\?[^<>{}|\\^`" ]*)?(#[^<>{}|\\^`"\s]*)?$
   LocalPart:
     type: string
-    pattern: ^[^:<>\{\}\|\\\^`" ]*(\?[^<>\{\}\|\\\^`" ]*)?(#[^<>\{\}\|\\\^`" ]*)?$
+    pattern: ^[^:<>{}|\\^`"\s]*(\?[^<>{}|\\^`"\s]*)?(#[^<>{}|\\^`"\s]*)?$
   Single:
     anyOf:
     - $ref: '#/$defs/IRI'

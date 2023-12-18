@@ -588,8 +588,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.common.data_types.geojson"
+        "ogc.geo.common.data_types.geojson",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
@@ -874,8 +874,8 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml",
@@ -926,8 +926,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
@@ -975,8 +975,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml",
@@ -1028,8 +1028,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml",
@@ -1084,8 +1084,8 @@
       "group": "SOSA",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.properties.sensor"
+        "ogc.unstable.sosa.properties.sensor",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema.yaml",
@@ -1134,9 +1134,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
+        "ogc.geo.json-fg.feature",
         "ogc.geo.features.featureCollection",
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.json-fg.feature"
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml",
@@ -1190,8 +1190,8 @@
       "shaclRules": {},
       "dependsOn": [
         "ogc.geo.features.featureCollection",
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.json-fg.feature-lenient"
+        "ogc.geo.json-fg.feature-lenient",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
@@ -1316,9 +1316,9 @@
         ]
       },
       "dependsOn": [
-        "ogc.unstable.sosa.features.observation",
+        "ogc.geo.json-fg.featureCollection-lenient",
         "ogc.unstable.sosa.properties.observationCollection",
-        "ogc.geo.json-fg.featureCollection-lenient"
+        "ogc.unstable.sosa.features.observation"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
@@ -1366,10 +1366,10 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
+        "ogc.unstable.sosa.examples.vectorObservation",
         "ogc.unstable.sosa.features.observationCollection",
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.properties.observation",
-        "ogc.unstable.sosa.examples.vectorObservation"
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",

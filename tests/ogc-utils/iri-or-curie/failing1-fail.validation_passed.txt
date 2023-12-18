@@ -1,0 +1,24 @@
+Validation report for ogc.ogc-utils.iri-or-curie - IRI or CURIE
+Generated 2023-12-18T12:29:15.530898+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using failing1-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: ' ' is not valid under any of the given schemas
+
+Failed validating 'anyOf' in schema:
+    {'anyOf': [{'$ref': '#/$defs/IRI'},
+               {'$ref': '#/$defs/CURIE'},
+               {'$ref': '#/$defs/LocalPart'}]}
+
+On instance:
+    ' '
+=== End JSON Schema ===
+
