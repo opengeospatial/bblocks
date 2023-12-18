@@ -26,9 +26,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2023-12-17T04:06:37.560289+00:00</small>
-                <p class="summary fw-semibold text-success">
-                    Number of passing building blocks: 26 / 26 (100%)
+            <small class="datetime">Generated at 2023-12-18T11:27:53.019508+00:00</small>
+                <p class="summary fw-semibold text-danger">
+                    Number of passing building blocks: 25 / 26 (96.15%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -502,22 +502,22 @@
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.unstable.sosa.properties.observation" id="bblock-8">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-8">
+                                <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-8">
                                     <div class="flex-fill">
                                         SOSA Observation
                                         <small class="ms-2 bblock-id">ogc.unstable.sosa.properties.observation</small>
                                     </div>
 
-                                    <span class="badge text-bg-success me-2">
-                                            Passed
-                                            (100% passed)
+                                    <span class="badge text-bg-danger me-2">
+                                            Tests Failed
+                                            (83.33% passed)
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-8">
+                            <div class="accordion-collapse collapse show" id="bblock-collapse-8">
                                 <div class="accordion-body">
-                                        <p class="summary fw-semibold text-success">
-                                            Test passed: 6 / 6
+                                        <p class="summary fw-semibold text-danger">
+                                            Test passed: 5 / 6
                                         </p>
                                         <div class="card mb-2 validation-item require-fail">
                                             <div class="card-body">
@@ -558,12 +558,12 @@
   	Message: sosa:hasSimpleResult is a simple Literal
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:Nc37d8ce89d4941e8b7fa4d29c9582d84
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: _:N8c7784fc15304953872bd478ef13269d
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:Nc37d8ce89d4941e8b7fa4d29c9582d84
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:N1555879381c846ad96f555a3347fdc1b
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:N1555879381c846ad96f555a3347fdc1b
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: _:Nc15bde3ac8434a3a8564c056572a3076
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:Nc37d8ce89d4941e8b7fa4d29c9582d84
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:N1555879381c846ad96f555a3347fdc1b
 </div>
                                                     </div>
                                                 </div>
@@ -583,7 +583,7 @@
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                         <span class="badge text-bg-info">Requires fail</span>
                                                     <div class="float-end">
-                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-13">
@@ -601,12 +601,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:N5cb0a48b21134f7199d5ddfe01230d7e
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:N5cb0a48b21134f7199d5ddfe01230d7e
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: frogginess
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:N5cb0a48b21134f7199d5ddfe01230d7e
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:N8e887db98cef4a28bdbb339c008cd90c
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:N8e887db98cef4a28bdbb339c008cd90c
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:N8e887db98cef4a28bdbb339c008cd90c
 </div>
                                                     </div>
                                                 </div>
@@ -651,12 +651,12 @@
   	Message: Less than 1 values on [ sosa:hasFeatureOfInterest [ ] ; sosa:hasResult [ ] ; sosa:madeBySensor Literal(&quot;ea est culpa esse&quot;) ; sosa:resultTime Literal(&quot;2016-05-04T02:27:02.0Z&quot;) ]-&gt;( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath &lt;http://recursion.too.deep&gt; ] ] ] sosa:observedProperty )
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:Ne76c19dc0db44e99ad7defde8319c766
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:Ne76c19dc0db44e99ad7defde8319c766
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:Ne76c19dc0db44e99ad7defde8319c766
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:N380adda4053642c9ad94396ab1dc3cc9
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:N380adda4053642c9ad94396ab1dc3cc9
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:N380adda4053642c9ad94396ab1dc3cc9
 </div>
                                                     </div>
                                                 </div>
@@ -693,12 +693,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:Nfb904cb57f9049b9bd903adffde48193
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:Nfb904cb57f9049b9bd903adffde48193
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: 33
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:Nfb904cb57f9049b9bd903adffde48193
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:Nb95c38534ffe47b8a715344e82d62306
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:Nb95c38534ffe47b8a715344e82d62306
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:Nb95c38534ffe47b8a715344e82d62306
 </div>
                                                     </div>
                                                 </div>
@@ -731,12 +731,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:n52b8079ce0dd49b5b37c30999335aad0b1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: _:n52b8079ce0dd49b5b37c30999335aad0b1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:n52b8079ce0dd49b5b37c30999335aad0b1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: 33
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:n52b8079ce0dd49b5b37c30999335aad0b1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: _:n635bbf1a41c1416fb5250353d8dff822b1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:n635bbf1a41c1416fb5250353d8dff822b1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:n635bbf1a41c1416fb5250353d8dff822b1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:n635bbf1a41c1416fb5250353d8dff822b1
 </div>
                                                     </div>
                                                 </div>
@@ -773,12 +773,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:Nb7a17727ea734701a4266242992d4eba
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:Nb7a17727ea734701a4266242992d4eba
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:Nb7a17727ea734701a4266242992d4eba
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:N142e0712c11a4108ab021b41eaed0c54
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:N142e0712c11a4108ab021b41eaed0c54
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:N142e0712c11a4108ab021b41eaed0c54
 </div>
                                                     </div>
                                                 </div>
@@ -1118,12 +1118,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:N9f624c9f0517499c946a720c35941429
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:N9f624c9f0517499c946a720c35941429
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:N9f624c9f0517499c946a720c35941429
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:N693497bcd06240c0a9be8145c37aad75
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:N693497bcd06240c0a9be8145c37aad75
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:N693497bcd06240c0a9be8145c37aad75
 </div>
                                                     </div>
                                                 </div>
@@ -1182,12 +1182,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -1224,12 +1224,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/a1&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://example.com/a1&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/a1&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: &lt;http://example.com/a1&gt;/sosa:hasSimpleResult
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://example.com/a1&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/a1&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://example.com/a1&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/a1&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -1262,12 +1262,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: eg:a1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: eg:a1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: eg:a1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: eg:a1/sosa:hasSimpleResult
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: eg:a1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: eg:a1
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: eg:a1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: eg:a1
 </div>
                                                     </div>
                                                 </div>
@@ -1623,12 +1623,12 @@ On instance[&#x27;features&#x27;][0]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://example.com/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: &lt;http://example.com/pop1999&gt;/sosa:hasSimpleResult
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://example.com/pop1999&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/pop1999&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://example.com/pop1999&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/pop1999&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -1661,12 +1661,12 @@ On instance[&#x27;features&#x27;][0]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:n28fc74276ba6412cb8e0053d1b26414db1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: _:n28fc74276ba6412cb8e0053d1b26414db1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:n28fc74276ba6412cb8e0053d1b26414db1
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: 33
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:n28fc74276ba6412cb8e0053d1b26414db1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: _:n58951cb399b240d99b763afcf609a823b1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: _:n58951cb399b240d99b763afcf609a823b1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: _:n58951cb399b240d99b763afcf609a823b1
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: _:n58951cb399b240d99b763afcf609a823b1
 </div>
                                                     </div>
                                                 </div>
@@ -1703,12 +1703,12 @@ On instance[&#x27;features&#x27;][0]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://example.com/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://example.com/pop1999&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/pop1999&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://example.com/pop1999&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/pop1999&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -1767,12 +1767,12 @@ On instance[&#x27;features&#x27;][0]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;file:///github/workspace/pop1999&gt;,&lt;file:///github/workspace/something&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;file:///github/workspace/pop1999&gt;,&lt;file:///github/workspace/something&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: &lt;file:///github/workspace/pop1999&gt;/sosa:hasSimpleResult
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;file:///github/workspace/pop1999&gt;,&lt;file:///github/workspace/something&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;file:///github/workspace/pop1999&gt;,&lt;file:///github/workspace/something&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;file:///github/workspace/pop1999&gt;,&lt;file:///github/workspace/something&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -1819,12 +1819,12 @@ On instance[&#x27;features&#x27;][0]:
   	Message: Less than 1 values on &lt;file:///github/workspace/pop1999&gt;-&gt;( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath &lt;http://recursion.too.deep&gt; ] ] ] sosa:observedProperty )
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;file:///github/workspace/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;file:///github/workspace/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: &lt;file:///github/workspace/pop1999&gt;/sosa:hasSimpleResult
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;file:///github/workspace/pop1999&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;file:///github/workspace/pop1999&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;file:///github/workspace/pop1999&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -1861,12 +1861,12 @@ On instance[&#x27;features&#x27;][0]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://www.example.com/sosa/something&gt;,&lt;http://www.example.com/sosa/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://www.example.com/sosa/something&gt;,&lt;http://www.example.com/sosa/pop1999&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: &lt;http://www.example.com/sosa/pop1999&gt;/sosa:hasSimpleResult
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://www.example.com/sosa/something&gt;,&lt;http://www.example.com/sosa/pop1999&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://www.example.com/sosa/something&gt;,&lt;http://www.example.com/sosa/pop1999&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://www.example.com/sosa/something&gt;,&lt;http://www.example.com/sosa/pop1999&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -1899,12 +1899,12 @@ On instance[&#x27;features&#x27;][0]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: eg:pop2000,eg:pop1999
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: eg:pop2000,eg:pop1999
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: eg:pop2000,eg:pop1999
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: eg:pop1999/sosa:hasSimpleResult,eg:pop2000/sosa:hasSimpleResult
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: eg:pop1999,eg:pop2000
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: eg:pop1999,eg:pop2000
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: eg:pop1999,eg:pop2000
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: eg:pop2000/sosa:hasSimpleResult,eg:pop1999/sosa:hasSimpleResult
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: eg:pop2000,eg:pop1999
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: eg:pop1999,eg:pop2000
 </div>
                                                     </div>
                                                 </div>
@@ -1964,20 +1964,20 @@ On instance[&#x27;features&#x27;][0]:
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl:
  - Shape &lt;http://example.com/rules#testVectorObservationFeatureHasOneGeometry&gt;: &lt;http://example.com/features/vector-obs-1&gt;
- - Shape &lt;http://example.com/rules#testGeometryHasCoordinates&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
  - Shape &lt;http://example.com/rules#testGeometryCoordinatesIsList&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
+ - Shape &lt;http://example.com/rules#testGeometryHasCoordinates&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/features/vector-obs-1&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/features/vector-obs-1&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/features/vector-obs-1&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://example.com/features/vector-obs-1&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/features/vector-obs-1&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -2015,20 +2015,20 @@ On instance[&#x27;features&#x27;][0]:
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/examples/vectorObservationFeature/rules.shacl:
  - Shape &lt;http://example.com/rules#testVectorObservationFeatureHasOneGeometry&gt;: &lt;http://example.com/features/vector-obs-1&gt;
- - Shape &lt;http://example.com/rules#testGeometryHasCoordinates&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
  - Shape &lt;http://example.com/rules#testGeometryCoordinatesIsList&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
+ - Shape &lt;http://example.com/rules#testGeometryHasCoordinates&gt;: &lt;http://example.com/features/vector-obs-1&gt;/geojson:geometry
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/features/vector-obs-1&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/features/vector-obs-1&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://example.com/features/vector-obs-1&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://example.com/features/vector-obs-1&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://example.com/features/vector-obs-1&gt;
 </div>
                                                     </div>
                                                 </div>

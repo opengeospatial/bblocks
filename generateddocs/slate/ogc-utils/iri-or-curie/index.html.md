@@ -248,7 +248,7 @@ $defs:
     pattern: ^[A-Za-z_][^\s:]*:.*$
   LocalPart:
     type: string
-    pattern: ^[^:]*(\?.*)?(#.*)?$
+    pattern: ^[^:<>\{\}\|\\\^`" ]*(\?[^<>\{\}\|\\\^`" ]*)?(#[^<>\{\}\|\\\^`" ]*)?$
   Single:
     anyOf:
     - $ref: '#/$defs/IRI'

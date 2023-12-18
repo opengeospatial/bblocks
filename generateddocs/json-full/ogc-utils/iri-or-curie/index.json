@@ -138,7 +138,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: IRI or CURIE\n$defs:\n  IRI:\n    type: string\n    pattern: ^\\w+:(\\/?\\/?)[^\\s]+$\n  CURIE:\n    type: string\n    pattern: ^[A-Za-z_][^\\s:]*:.*$\n  LocalPart:\n    type: string\n    pattern: ^[^:]*(\\?.*)?(#.*)?$\n  Single:\n    anyOf:\n    - $ref: '#/$defs/IRI'\n    - $ref: '#/$defs/CURIE'\n    - $ref: '#/$defs/LocalPart'\n  Multiple:\n    oneOf:\n    - $ref: '#/$defs/Single'\n    - type: array\n      items:\n        $ref: '#/$defs/Single'\n  MultipleOrObject:\n    oneOf:\n    - $ref: '#/$defs/Multiple'\n    - type: object\n  MultipleOrObjectOrNull:\n    oneOf:\n    - $ref: '#/$defs/MultipleOrObject'\n    - type: 'null'\n$ref: '#/$defs/Single'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: IRI or CURIE\n$defs:\n  IRI:\n    type: string\n    pattern: ^\\w+:(\\/?\\/?)[^\\s]+$\n  CURIE:\n    type: string\n    pattern: ^[A-Za-z_][^\\s:]*:.*$\n  LocalPart:\n    type: string\n    pattern: ^[^:<>\\{\\}\\|\\\\\\^`\" ]*(\\?[^<>\\{\\}\\|\\\\\\^`\" ]*)?(#[^<>\\{\\}\\|\\\\\\^`\" ]*)?$\n  Single:\n    anyOf:\n    - $ref: '#/$defs/IRI'\n    - $ref: '#/$defs/CURIE'\n    - $ref: '#/$defs/LocalPart'\n  Multiple:\n    oneOf:\n    - $ref: '#/$defs/Single'\n    - type: array\n      items:\n        $ref: '#/$defs/Single'\n  MultipleOrObject:\n    oneOf:\n    - $ref: '#/$defs/Multiple'\n    - type: object\n  MultipleOrObjectOrNull:\n    oneOf:\n    - $ref: '#/$defs/MultipleOrObject'\n    - type: 'null'\n$ref: '#/$defs/Single'\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/ogc-utils/iri-or-curie"
 }
