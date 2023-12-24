@@ -50,10 +50,6 @@ Each GeoJSON feature includes the following JSON members:
 
 ## Example
 
-Minimal example of this schema.
-
-NB. uses a local @context in the data example where application specialisations would apply such mappings.
-
 
 
 ```json
@@ -126,6 +122,10 @@ NB. uses a local @context in the data example where application specialisations 
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.ttl">Open in new window</a>
 </blockquote>
 
+
+Minimal example of this schema.
+
+NB. uses a local @context in the data example where application specialisations would apply such mappings.
 
 
 # JSON Schema

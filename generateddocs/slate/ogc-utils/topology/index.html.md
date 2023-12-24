@@ -46,8 +46,6 @@ This is a generalisation of the TopoJSON concept using inline data, and not limi
 
 ## Example Topology object
 
-See panel to right - note that a more user friendly "collapsable" version is in development. 
-
 
 
 ```json
@@ -104,6 +102,8 @@ See panel to right - note that a more user friendly "collapsable" version is in 
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/topology/example_1_1.ttl">Open in new window</a>
 </blockquote>
 
+
+See panel to right - note that a more user friendly "collapsable" version is in development. 
 
 
 # JSON Schema

@@ -41,9 +41,6 @@ without height and WGS 84 longitude-latitude-height for coordinates with height.
 
 ## Bounding box parameter example
 
-The coordinates in the following bounding box are in the coordinate reference system ETRS89 / UTM zone 32N that is used, for example, in Germany.
-
-
 
 
 ```python
@@ -63,6 +60,9 @@ contents = urllib.request.urlopen(url)
 print(contents.read())
 
 ```
+
+The coordinates in the following bounding box are in the coordinate reference system ETRS89 / UTM zone 32N that is used, for example, in Germany.
+
 
 
 # JSON Schema

@@ -37,8 +37,6 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 
 ## Example Topology object
 
-See panel to right - note that a more user friendly "collapsable" version is in development. 
-
 
 
 ```json
@@ -101,6 +99,8 @@ See panel to right - note that a more user friendly "collapsable" version is in 
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/link-role/example_1_1.ttl">Open in new window</a>
 </blockquote>
 
+
+See panel to right - note that a more user friendly "collapsable" version is in development. 
 
 
 # JSON Schema

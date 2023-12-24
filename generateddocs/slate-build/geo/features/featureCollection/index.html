@@ -357,11 +357,7 @@
 <aside class="success">
 This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/featureCollection/" target="_blank">valid</a></strong>
 </aside>
-<h1 id='examples'>Examples</h1><h2 id='example'>Example</h2>
-<p>Minimal example of this schema.</p>
-
-<p>NB. uses a local @context in the data example where application specialisations would apply such mappings.</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h1 id='examples'>Examples</h1><h2 id='example'>Example</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"my"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://my.org/featureTypes/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"skos"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#"</span><span class="p">,</span><span class="w">
@@ -447,6 +443,10 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
   <p class="example-links">
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.ttl">Open in new window</a>
 </blockquote>
+
+<p>Minimal example of this schema.</p>
+
+<p>NB. uses a local @context in the data example where application specialisations would apply such mappings.</p>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">allOf</span><span class="pi">:</span>
 <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://geojson.org/schema/FeatureCollection.json</span>
 <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
