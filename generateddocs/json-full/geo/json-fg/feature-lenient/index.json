@@ -24,13 +24,14 @@
   "group": "JSON-FG",
   "shaclRules": {},
   "dependsOn": [
-    "ogc.ogc-utils.json-link",
-    "ogc.geo.features.feature"
+    "ogc.geo.features.feature",
+    "ogc.ogc-utils.json-link"
   ],
   "schema": {
     "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml",
     "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json"
   },
+  "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/context.jsonld",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature-lenient/",
   "validationPassed": true,
   "description": "OGC Features and Geometries JSON (JSON-FG) extends GeoJSON to support a limited set of additional capabilities that are\nout-of-scope for GeoJSON, but that are essential or important for a variety of use cases involving feature data.\n\nThis Building Block extends the standard JSON-FG one by removing the requirement to provide values for the \n\"time\" and \"place\" properties.\n",
