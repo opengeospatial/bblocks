@@ -7,12 +7,13 @@ on:
   schedule:
     - cron: 0 4 * * 0
 
+env:
+  SPARQL_USERNAME: ${{ secrets.UPLOAD_GRAPH_STORE_USERNAME }}
+  SPARQL_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
+
 jobs:
   validate-and-process:
     uses: opengeospatial/bblocks-postprocess/.github/workflows/validate-and-process.yml@master
-    env:
-      SPARQL_USERNAME: ${{ secrets.UPLOAD_GRAPH_STORE_USERNAME }}
-      SPARQL_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
     with:
       items_dir: registereditems
       register_file: register.json
