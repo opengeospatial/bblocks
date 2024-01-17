@@ -1,5 +1,5 @@
 Validation report for ogc.unstable.sosa.properties.observation - SOSA Observation
-Generated 2024-01-17T15:41:34.247060+00:00
+Generated 2024-01-17T15:47:34.781509+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -28,12 +28,12 @@ Validation result for registereditems/unstable/sosa/_sources/properties/observat
   	Message: More than 1 values on [ sosa:hasFeatureOfInterest [ ] ; sosa:hasResult [ ns1:a Literal("-8150858", datatype=xsd:integer) ; ns1:b Literal("false" = False, datatype=xsd:boolean) ] ; sosa:hasSimpleResult Literal("frogginess") ; sosa:madeBySensor Literal("ea est culpa esse") ; sosa:observedProperty Literal("something") ; sosa:resultTime Literal("2016-05-04T02:27:02.0Z") ]->[ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
   
 Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N96140c4a58c44481a3d1f869505e7119
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N96140c4a58c44481a3d1f869505e7119
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N96140c4a58c44481a3d1f869505e7119
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N96140c4a58c44481a3d1f869505e7119
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: frogginess
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N5e81d9c2022f4b7eaf6025b338c7820a
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N5e81d9c2022f4b7eaf6025b338c7820a
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N5e81d9c2022f4b7eaf6025b338c7820a
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N5e81d9c2022f4b7eaf6025b338c7820a
 
 === End SHACL ===
 
