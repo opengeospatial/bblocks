@@ -8,45 +8,17 @@ on:
     - cron: 0 4 * * 0
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - name: Update submodules
-        run: git submodule update --recursive --remote
-      - name: OGC BB postprocess
-        uses: opengeospatial/bblocks-postprocess/full@v1
-        with:
-          items_dir: registereditems
-          register_file: register.json
-          generated_docs_path: generateddocs
-          annotated_path: annotated-schemas
-          base_url: https://${{ github.event.repository.owner.login }}.github.io/${{github.event.repository.name}}/
-          fail_on_error: 'false'
-          clean: 'true'
-          test_outputs_path: tests
-      - name: Add & Commit
-        if: ${{ !endsWith(github.repository, '/bblock-template') }}
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: Building blocks postprocessing
-      - name: Setup Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.x
-      - name: Entail, validate and upload BBR
-        env:
-          DB_USERNAME: ${{ secrets.UPLOAD_GRAPH_STORE_USERNAME }}
-          DB_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
-        run: |
-          python -m pip install -U pip
-          python -m pip install ogc-na setuptools
-          python -m ogc.na.update_vocabs .catalog.ttl -m bblocks.ttl \
-            --update --graph-store ${{ vars.UPLOAD_GRAPH_STORE_URL }}
-
-  deploy-gh-pages:
-    needs: build
-    uses: ./.github/workflows/deploy-gh-pages.yml
+  validate-and-process:
+    uses: opengeospatial/bblocks-postprocess/.github/workflows/validate-and-process.yml@master
+    env:
+      SPARQL_USERNAME: ${{ secrets.UPLOAD_GRAPH_STORE_USERNAME }}
+      SPARQL_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
+    with:
+      items_dir: registereditems
+      register_file: register.json
+      generated_docs_path: generateddocs
+      annotated_path: annotated-schemas
+      fail_on_error: 'false'
+      clean: 'true'
+      test_outputs_path: tests
+      viewer_path: ./register/
