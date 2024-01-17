@@ -796,8 +796,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.features.feature",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.feature"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
@@ -957,8 +957,8 @@
       "group": "SOSA",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.properties.sensor"
+        "ogc.unstable.sosa.properties.sensor",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema.yaml",
@@ -1007,9 +1007,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.json-fg.feature",
         "ogc.ogc-utils.json-link",
-        "ogc.geo.features.featureCollection"
+        "ogc.geo.features.featureCollection",
+        "ogc.geo.json-fg.feature"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
       "schema": {
@@ -1112,8 +1112,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "tags": [
         "sosa",
@@ -1191,9 +1191,9 @@
         ]
       },
       "dependsOn": [
+        "ogc.geo.json-fg.featureCollection-lenient",
         "ogc.unstable.sosa.properties.observationCollection",
-        "ogc.unstable.sosa.features.observation",
-        "ogc.geo.json-fg.featureCollection-lenient"
+        "ogc.unstable.sosa.features.observation"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
@@ -1279,5 +1279,6 @@
   "baseURL": "https://opengeospatial.github.io/bblocks/",
   "viewerURL": "https://opengeospatial.github.io/bblocks/register/",
   "validationReport": "https://opengeospatial.github.io/bblocks/tests/report.html",
-  "name": "OGC Main"
+  "name": "OGC Main",
+  "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query"
 }

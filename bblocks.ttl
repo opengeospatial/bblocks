@@ -1,4 +1,5 @@
 @prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -6,283 +7,322 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bblocks:ogc.geo.common.data_types.bounding_box a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.common.data_types.bounding_box> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Bounding Box" ;
     dct:abstract "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other." ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/data_types/bounding_box/" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/bounding_box/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/bounding_box/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/data_types/bounding_box/" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.data_types.bounding_box" ] ;
     dct:hasVersion "1.0.1" ;
     dct:modified "2023-03-09"^^xsd:date ;
     dct:source <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.geo.common.parameters.bbox a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.common.parameters.bbox> a skos:Concept,
+        dcat:Dataset,
         bblocks:Parameter ;
     rdfs:label "bbox" ;
     dct:abstract "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information)." ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.parameters.bbox" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.parameters.bbox" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/parameters/bbox/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2022-05-24"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.geo.common.parameters.bbox-crs a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.common.parameters.bbox-crs> a skos:Concept,
+        dcat:Dataset,
         bblocks:Parameter ;
     rdfs:label "bbox-crs" ;
     dct:abstract "The bbox-crs query parameter can be used to assert the coordinate reference system that is used for the coordinate values of the bbox parameter." ;
     dct:created "2022-07-05T01:01:01+02:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/parameters/bbox-crs/" ],
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.parameters.bbox-crs" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox-crs/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.parameters.bbox-crs" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox-crs/index.json" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox-crs/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/parameters/bbox-crs/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2022-07-05"^^xsd:date ;
     dct:source <http://www.opengis.net/doc/IS/ogcapi-features-2/1.0#_parameter_bbox_crs> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.geo.geopose.advanced a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.geopose.advanced> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "GeoPose Advanced" ;
     dct:abstract "Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time." ;
     dct:created "2023-07-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/advanced/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/advanced/" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.advanced" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/advanced/index.md" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/advanced/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/advanced/" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/advanced/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-07-13"^^xsd:date ;
     dct:source <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/advanced/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.geo.geopose.basic.quaternion a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.geopose.basic.quaternion> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "GeoPose Basic-Quaternion" ;
     dct:abstract "Basic GeoPose using quaternion to specify orientation" ;
     dct:created "2023-07-13T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/quaternion/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/quaternion/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.basic.quaternion" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic/quaternion/" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/quaternion/index.json" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic/quaternion/" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-07-13"^^xsd:date ;
     dct:source <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.geo.geopose.basic.ypr a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.geopose.basic.ypr> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "GeoPose Basic-YPR" ;
     dct:abstract "Basic GeoPose using yaw, pitch, and roll to specify orientation" ;
     dct:created "2023-03-15T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/ypr/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/ypr/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.basic.ypr" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/ypr/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/geopose/basic/ypr/" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-07-13"^^xsd:date ;
     dct:source <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.geo.json-fg.featureCollection a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.json-fg.featureCollection> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "JSON-FG Feature Collection" ;
     dct:abstract "A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data." ;
     dct:created "2023-05-31T14:56:51+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.featureCollection" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/featureCollection/" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.featureCollection" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-05-31"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.geo.features.featureCollection,
-        bblocks:ogc.geo.json-fg.feature,
-        bblocks:ogc.ogc-utils.json-link ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.geo.features.featureCollection>,
+        <https://opengeospatial.github.io/ogc.geo.json-fg.feature>,
+        <https://opengeospatial.github.io/ogc.ogc-utils.json-link> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.geo.json-fg.link-role a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.json-fg.link-role> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Link with role and target conformance" ;
     dct:abstract "A JSON-FG compliant web link with mandatory annotation of link role and optional conformance information to describe target resource. Compliant with profile resource descriptor model." ;
     dct:created "2023-08-21T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/link-role/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.link-role" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/link-role/" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/link-role/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/link-role/" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.link-role" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/link-role/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-08-21"^^xsd:date ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.ogc-utils.iri-or-curie,
-        bblocks:ogc.ogc-utils.json-link ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "json-fg",
+        "link",
+        "profile" ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.ogc-utils.iri-or-curie>,
+        <https://opengeospatial.github.io/ogc.ogc-utils.json-link> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.ogc-utils.topology a skos:Concept,
+<https://opengeospatial.github.io/ogc.ogc-utils.topology> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Geometry using references" ;
     dct:abstract "Demonstration of a schema using coordinates of points, withpout duplication" ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/topology/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/ogc-utils/topology/" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.ogc-utils.topology" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/topology/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/topology/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/ogc-utils/topology/" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/topology/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-05-24"^^xsd:date ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.ogc-utils.iri-or-curie ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "3D",
+        "geometry",
+        "topology" ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.ogc-utils.iri-or-curie> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.unstable.sosa a skos:Concept,
+<https://opengeospatial.github.io/ogc.unstable.sosa> a skos:Concept,
+        dcat:Dataset,
         bblocks:Api ;
     rdfs:label "Sensor, Observation, Sample, and Actuator (SOSA)" ;
     dct:abstract "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model" ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/index.md" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "sosa",
+        "ssn" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/schema.yaml> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.unstable.sosa.features.observationCollection a skos:Concept,
+<https://opengeospatial.github.io/ogc.unstable.sosa.features.observationCollection> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "SOSA ObservationCollection Feature" ;
     dct:abstract "This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification." ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/features/observationCollection/" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observationCollection/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.features.observationCollection" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observationCollection/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.features.observationCollection" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/features/observationCollection/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-28"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn-ext/>,
         <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.geo.json-fg.featureCollection-lenient,
-        bblocks:ogc.unstable.sosa.features.observation,
-        bblocks:ogc.unstable.sosa.properties.observationCollection ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "observations",
+        "sosa",
+        "ssn" ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.geo.json-fg.featureCollection-lenient>,
+        <https://opengeospatial.github.io/ogc.unstable.sosa.features.observation>,
+        <https://opengeospatial.github.io/ogc.unstable.sosa.properties.observationCollection> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml> ;
+    bblocks:hasShaclRule <https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.unstable.sosa.properties.platform a skos:Concept,
+<https://opengeospatial.github.io/ogc.unstable.sosa.properties.platform> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "SOSA Platform" ;
     dct:abstract "This building block defines the set of properties for an observation Platform according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature." ;
     dct:created "2023-12-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.properties.platform" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/platform/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/platform/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/platform/" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.properties.platform" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/platform/" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/platform/index.json" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.ogc-utils.iri-or-curie,
-        bblocks:ogc.unstable.sosa.properties.sensor ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "observations",
+        "sosa",
+        "ssn" ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.ogc-utils.iri-or-curie>,
+        <https://opengeospatial.github.io/ogc.unstable.sosa.properties.sensor> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema.yaml> ;
@@ -301,21 +341,16 @@ bblocks:ogc.unstable.sosa.properties.platform a skos:Concept,
 
 <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" .
 
-<https://www.ietf.org/rfc/rfc3986.txt> rdfs:label "IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax" .
-
-<https://www.ietf.org/rfc/rfc3987.txt> rdfs:label "IETF RFC 3987 - Internationalized Resource Identifiers (IRIs)" .
-
-<https://www.iso.org/standard/59164.html> rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" .
-
-bblocks:ogc.geo.common.data_types.geojson a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.common.data_types.geojson> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "GeoJSON" ;
     dct:abstract "A GeoJSON object" ;
     dct:created "2023-05-24T14:56:51+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/geojson/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/common/data_types/geojson/" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/geojson/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.data_types.geojson" ],
         [ dct:format "application/json" ;
@@ -323,137 +358,168 @@ bblocks:ogc.geo.common.data_types.geojson a skos:Concept,
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-15"^^xsd:date ;
     dct:source <https://datatracker.ietf.org/doc/html/rfc7946> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.geo.json-fg.feature a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.json-fg.feature> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "JSON-FG Feature" ;
     dct:abstract "A OGC Features and Geometries JSON (JSON-FG) Feature, extending GeoJSON to support a limited set of additional capabilities that are out-of-scope for GeoJSON, but that are important for a variety of use cases involving feature data." ;
     dct:created "2023-05-31T14:56:51+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.feature" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/feature/" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/feature/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/feature/" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/feature/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-05-31"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.geo.features.feature,
-        bblocks:ogc.ogc-utils.json-link ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.geo.features.feature>,
+        <https://opengeospatial.github.io/ogc.ogc-utils.json-link> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.geo.json-fg.featureCollection-lenient a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.json-fg.featureCollection-lenient> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "JSON-FG Feature Collection - Lenient" ;
     dct:abstract "A collection of lenient OGC Features and Geometries JSON (JSON-FG) Features, that do not require the \"time\" and \"place\" properties" ;
     dct:created "2023-08-08T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection-lenient/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/featureCollection-lenient/" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection-lenient/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.featureCollection-lenient" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.featureCollection-lenient" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection-lenient/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-08-08"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.geo.features.featureCollection,
-        bblocks:ogc.geo.json-fg.feature-lenient,
-        bblocks:ogc.ogc-utils.json-link ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.geo.features.featureCollection>,
+        <https://opengeospatial.github.io/ogc.geo.json-fg.feature-lenient>,
+        <https://opengeospatial.github.io/ogc.ogc-utils.json-link> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.unstable.sosa.features.observation a skos:Concept,
+<https://opengeospatial.github.io/ogc.unstable.sosa.features.observation> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "SOSA Observation Feature" ;
     dct:abstract "This building blocks defines a GeoJSON feature containing a SOSA Observation" ;
     dct:created "2023-05-18T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.features.observation" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/features/observation/" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/features/observation/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observation/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.features.observation" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/features/observation/index.json" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-18"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.geo.json-fg.feature-lenient,
-        bblocks:ogc.unstable.sosa.properties.observation ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "observations",
+        "sosa",
+        "ssn" ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.geo.json-fg.feature-lenient>,
+        <https://opengeospatial.github.io/ogc.unstable.sosa.properties.observation> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observation/schema.yaml> ;
+    bblocks:hasShaclRule <https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.unstable.sosa.properties.observationCollection a skos:Concept,
+<https://opengeospatial.github.io/ogc.unstable.sosa.properties.observationCollection> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "SOSA ObservationCollection" ;
     dct:abstract "This building block defines an ObservationCollection according to the SOSA/SSN v1.1 specification. It defines a set of logical rules regarding presence of mandatory properties anywhere within a potentially nested collection hierarchy. (implemented in SHACL, exploiting the semantic mapping to SOSA)" ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observationCollection/" ],
-        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.properties.observationCollection" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observationCollection/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observationCollection/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observationCollection/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-28"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.ogc-utils.iri-or-curie,
-        bblocks:ogc.unstable.sosa.properties.observation ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "ISO19156",
+        "OMS",
+        "o&m",
+        "observations",
+        "sosa" ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.ogc-utils.iri-or-curie>,
+        <https://opengeospatial.github.io/ogc.unstable.sosa.properties.observation> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml> ;
+    bblocks:hasShaclRule <https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-bblocks:ogc.unstable.sosa.properties.sensor a skos:Concept,
+<https://opengeospatial.github.io/ogc.unstable.sosa.properties.sensor> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "SOSA Sensor" ;
     dct:abstract "An identifiable entity that can generate Observations pertaining to an ObservableProperty by implementing an ObservingProcedure. Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms." ;
     dct:created "2023-12-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.properties.sensor" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/sensor/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/sensor/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/sensor/" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/sensor/index.json" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.properties.sensor" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/sensor/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.ogc-utils.iri-or-curie ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "observations",
+        "sosa",
+        "ssn" ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.ogc-utils.iri-or-curie> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/sensor/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/sensor/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/sensor/schema.yaml> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://www.ietf.org/rfc/rfc3986.txt> rdfs:label "IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax" .
+
+<https://www.ietf.org/rfc/rfc3987.txt> rdfs:label "IETF RFC 3987 - Internationalized Resource Identifiers (IRIs)" .
+
+<https://www.iso.org/standard/59164.html> rdfs:label "ISO 19101-1:2014 - Geographic information - Reference model - Part 1: Fundamentals" .
 
 <https://www.rfc-editor.org/rfc/rfc8288.txt> rdfs:label "IETF RFC 8288 - Web Linking" .
 
@@ -461,164 +527,183 @@ bblocks:ogc.unstable.sosa.properties.sensor a skos:Concept,
 
 <https://www.w3.org/TR/vocab-ssn-ext/> rdfs:label "Extensions to the Semantic Sensor Network Ontology" .
 
-bblocks:ogc.geo.features.featureCollection a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.features.featureCollection> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Feature Collection" ;
     dct:abstract "A collection of features." ;
     dct:created "2023-06-26T14:56:51+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/featureCollection/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/featureCollection/" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/featureCollection/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.features.featureCollection" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.features.featureCollection" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/featureCollection/index.json" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-06-26"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_5> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.geo.features.feature,
-        bblocks:ogc.ogc-utils.json-link ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.geo.features.feature>,
+        <https://opengeospatial.github.io/ogc.ogc-utils.json-link> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.geo.json-fg.feature-lenient a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.json-fg.feature-lenient> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "JSON-FG Feature - Lenient" ;
     dct:abstract "A OGC Features and Geometries JSON (JSON-FG) Feature that does not require the \"time\" and \"place\" properties." ;
     dct:created "2023-08-08T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/feature-lenient/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/feature-lenient/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.feature-lenient" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/feature-lenient/" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/json-fg/feature-lenient/" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/feature-lenient/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/feature-lenient/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-08-08"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.geo.features.feature,
-        bblocks:ogc.ogc-utils.json-link ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.geo.features.feature>,
+        <https://opengeospatial.github.io/ogc.ogc-utils.json-link> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.unstable.sosa.properties.observation a skos:Concept,
+<https://opengeospatial.github.io/ogc.unstable.sosa.properties.observation> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "SOSA Observation" ;
     dct:abstract "This building block defines the set of properties for an observation according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature." ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observation/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observation/" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observation/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.unstable.sosa.properties.observation" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/unstable/sosa/properties/observation/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/unstable/sosa/properties/observation/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/unstable/sosa/properties/observation/" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-04-13"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "observations",
+        "sosa",
+        "ssn" ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observation/schema.yaml> ;
+    bblocks:hasShaclRule <https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observation/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://docs.ogc.org/dis/21-056r10/21-056r10.html> rdfs:label "OGC GeoPose 1.0 Data Exchange Draft Standard" .
 
-bblocks:ogc.geo.features.feature a skos:Concept,
+<https://opengeospatial.github.io/ogc.geo.features.feature> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Feature" ;
     dct:abstract "A feature. Every feature is a sub-resource of an OGC Collection." ;
     dct:created "2023-05-24T14:56:51+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/geo/features/feature/" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.features.feature" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.features.feature" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/feature/index.json" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-15"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7>,
         <https://www.iso.org/standard/59164.html> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
-    bblocks:dependsOn bblocks:ogc.geo.common.data_types.geojson,
-        bblocks:ogc.ogc-utils.json-link ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
+    bblocks:dependsOn <https://opengeospatial.github.io/ogc.geo.common.data_types.geojson>,
+        <https://opengeospatial.github.io/ogc.ogc-utils.json-link> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
 <http://docs.ogc.org/per/21-017r1.html> rdfs:label "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report" .
 
-bblocks:ogc.ogc-utils.iri-or-curie a skos:Concept,
+<https://opengeospatial.github.io/ogc.ogc-utils.iri-or-curie> a skos:Concept,
+        dcat:Dataset,
         bblocks:Datatype ;
     rdfs:label "IRI or CURIE" ;
     dct:abstract "This Building Block defines a data type for a full IRI/URI or a CURIE (with or without a prefix)" ;
     dct:created "2023-08-08T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.ogc-utils.iri-or-curie" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/iri-or-curie/index.md" ],
-        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/ogc-utils/iri-or-curie/" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.ogc-utils.iri-or-curie" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/iri-or-curie/index.json" ] ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/iri-or-curie/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/iri-or-curie/index.md" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-03-09"^^xsd:date ;
     dct:source <https://www.ietf.org/rfc/rfc3986.txt>,
         <https://www.ietf.org/rfc/rfc3987.txt>,
         <https://www.w3.org/TR/curie/> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
-bblocks:ogc.ogc-utils.json-link a skos:Concept,
+<https://opengeospatial.github.io/ogc.ogc-utils.json-link> a skos:Concept,
+        dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "JSON Link" ;
     dct:abstract "Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API’s." ;
     dct:created "2022-05-18T15:21:59+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/register/bblock/ogc.ogc-utils.json-link" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/slate-build/ogc-utils/json-link/" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/json-link/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2022-05-18"^^xsd:date ;
     dct:source <https://www.rfc-editor.org/rfc/rfc8288.txt> ;
-    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     bblocks:hasJsonLdContext <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld> ;
     bblocks:hasSchema <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json>,
         <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/ogc-utils> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
 <https://www.w3.org/TR/vocab-ssn/> rdfs:label "Semantic Sensor Network Ontology" .
 
-<https://www.opengis.net/def/bblocks> a skos:ConceptScheme ;
-    skos:prefLabel "OGC Building Blocks Register" .
+<https://opengeospatial.github.io/bblocks/> a skos:ConceptScheme,
+        dcat:Catalog ;
+    rdfs:label "OGC Main" ;
+    skos:prefLabel "OGC Main" ;
+    bblocks:hasValidationReport <https://opengeospatial.github.io/bblocks/tests/report.html> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-01-17T15:53:51.208874"^^xsd:dateTime ;
-    prov:startedAtTime "2024-01-17T15:53:51.119997"^^xsd:dateTime ;
+    prov:endedAtTime "2024-01-17T19:01:33.097813"^^xsd:dateTime ;
+    prov:startedAtTime "2024-01-17T19:01:33.005021"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
             rdfs:seeAlso <https://opengeospatial.github.io/bblocks/register.json> ],

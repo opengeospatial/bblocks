@@ -1,75 +1,114 @@
 {
-  "@context": {
-    "bblocks": "https://www.opengis.net/def/bblocks/",
-    "@base": "https://www.opengis.net/def/bblocks/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "dct": "http://purl.org/dc/terms/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "itemIdentifier": "@id",
-    "name": "rdfs:label",
-    "abstract": "dct:abstract",
-    "status": {
-      "@id": "bblocks:status",
-      "@type": "@id",
-      "@context": {
-        "@base": "http://www.opengis.net/def/status/"
+  "@context": [
+    {
+      "@base": "https://opengeospatial.github.io/bblocks"
+    },
+    {
+      "bblocks": "https://www.opengis.net/def/bblocks/",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "dct": "http://purl.org/dc/terms/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "prof": "http://www.w3.org/ns/dx/prof/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "itemIdentifier": "@id",
+      "baseURL": "@id",
+      "name": "rdfs:label",
+      "abstract": "dct:abstract",
+      "description": "dct:description",
+      "status": {
+        "@id": "bblocks:status",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://www.opengis.net/def/status/"
+        }
+      },
+      "dateTimeAddition": {
+        "@id": "dct:created",
+        "@type": "xsd:dateTime"
+      },
+      "version": "dct:hasVersion",
+      "dateOfLastChange": {
+        "@id": "dct:modified",
+        "@type": "xsd:date"
+      },
+      "scope": {
+        "@id": "bblocks:scope",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://www.opengis.net/def/bblocks/scope/"
+        }
+      },
+      "sources": {
+        "@id": "dct:source",
+        "@context": {
+          "title": "rdfs:label",
+          "link": "@id"
+        }
+      },
+      "schema": {
+        "@id": "bblocks:hasSchema",
+        "@type": "@id",
+        "@container": "@index",
+        "@index": "dct:format"
+      },
+      "ldContext": {
+        "@id": "bblocks:hasJsonLdContext",
+        "@type": "@id"
+      },
+      "sourceLdContext": {
+        "@id": "bblocks:hasSourceJsonLdContext",
+        "@type": "@id"
+      },
+      "documentation": {
+        "@id": "dct:description",
+        "@type": "@id",
+        "@container": "@index",
+        "@index": "dct:identifier",
+        "@context": {
+          "mediatype": "dct:format",
+          "url": "rdfs:isDefinedBy"
+        }
+      },
+      "hasConcepts": {
+        "@reverse": "skos:inScheme"
+      },
+      "dependsOn": {
+        "@id": "bblocks:dependsOn",
+        "@type": "@id"
+      },
+      "profileOf": {
+        "@id": "prof:isProfileOf",
+        "@type": "@id"
+      },
+      "tags": "dcat:keyword",
+      "shaclRules": {
+        "@id": "bblocks:hasShaclRule",
+        "@type": "@id",
+        "@container": "@index",
+        "@index": "rdfs:seeAlso"
+      },
+      "validationReport": {
+        "@id": "bblocks:hasValidationReport",
+        "@type": "@id"
+      },
+      "imports": {
+        "@id": "bblocks:imports",
+        "@type": "@id"
       }
-    },
-    "dateTimeAddition": {
-      "@id": "dct:created",
-      "@type": "xsd:dateTime"
-    },
-    "version": "dct:hasVersion",
-    "dateOfLastChange": {
-      "@id": "dct:modified",
-      "@type": "xsd:date"
-    },
-    "scope": {
-      "@id": "bblocks:scope",
-      "@type": "@id",
-      "@context": {
-        "@base": "http://www.opengis.net/def/bblocks/scope/"
-      }
-    },
-    "sources": {
-      "@id": "dct:source",
-      "@context": {
-        "title": "rdfs:label",
-        "link": "@id"
-      }
-    },
-    "schema": {
-      "@id": "bblocks:hasSchema",
-      "@type": "@id",
-      "@container": "@index",
-      "@index": "dct:format"
-    },
-    "ldContext": {
-      "@id": "bblocks:hasJsonLdContext",
-      "@type": "@id"
-    },
-    "documentation": {
-      "@id": "dct:description",
-      "@type": "@id",
-      "@container": "@index",
-      "@index": "dct:identifier",
-      "@context": {
-        "mediatype": "dct:format",
-        "url": "rdfs:isDefinedBy"
-      }
-    },
-    "hasConcepts": {
-      "@reverse": "skos:inScheme"
-    },
-    "dependsOn": {
-      "@id": "bblocks:dependsOn",
-      "@type": "@id"
     }
-  },
-  "@id": "https://www.opengis.net/def/bblocks",
-  "@type": "skos:ConceptScheme",
-  "skos:prefLabel": "OGC Building Blocks Register",
+  ],
+  "imports": [],
+  "baseURL": "https://opengeospatial.github.io/bblocks/",
+  "viewerURL": "https://opengeospatial.github.io/bblocks/register/",
+  "validationReport": "https://opengeospatial.github.io/bblocks/tests/report.html",
+  "name": "OGC Main",
+  "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
+  "@type": [
+    "skos:ConceptScheme",
+    "dcat:Catalog"
+  ],
+  "skos:prefLabel": "OGC Main",
   "hasConcepts": [
     {
       "itemIdentifier": "ogc.geo.common.data_types.bounding_box",
@@ -130,7 +169,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -181,7 +221,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -230,7 +271,8 @@
       },
       "@type": [
         "bblocks:Parameter",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -279,7 +321,8 @@
       },
       "@type": [
         "bblocks:Parameter",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -329,7 +372,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -380,7 +424,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -431,7 +476,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -483,7 +529,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -540,7 +587,8 @@
       },
       "@type": [
         "bblocks:Datatype",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -603,7 +651,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -663,7 +712,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -718,7 +768,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -773,7 +824,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -834,7 +886,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -901,7 +954,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -926,8 +980,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.features.feature",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.feature"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
@@ -957,7 +1011,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -1011,7 +1066,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -1068,7 +1124,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -1099,8 +1156,8 @@
       "group": "SOSA",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.properties.sensor"
+        "ogc.unstable.sosa.properties.sensor",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema.yaml",
@@ -1130,7 +1187,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -1153,9 +1211,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.json-fg.feature",
         "ogc.ogc-utils.json-link",
-        "ogc.geo.features.featureCollection"
+        "ogc.geo.features.featureCollection",
+        "ogc.geo.json-fg.feature"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
       "schema": {
@@ -1186,7 +1244,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -1244,7 +1303,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -1266,8 +1326,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "tags": [
         "sosa",
@@ -1310,7 +1370,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -1349,9 +1410,9 @@
         ]
       },
       "dependsOn": [
+        "ogc.geo.json-fg.featureCollection-lenient",
         "ogc.unstable.sosa.properties.observationCollection",
-        "ogc.unstable.sosa.features.observation",
-        "ogc.geo.json-fg.featureCollection-lenient"
+        "ogc.unstable.sosa.features.observation"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
@@ -1381,7 +1442,8 @@
       },
       "@type": [
         "bblocks:Schema",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     },
     {
@@ -1438,7 +1500,8 @@
       },
       "@type": [
         "bblocks:Api",
-        "skos:Concept"
+        "skos:Concept",
+        "dcat:Dataset"
       ]
     }
   ]
