@@ -19,5 +19,6 @@ jobs:
       clean: 'true'
       test_outputs_path: tests
       viewer_path: ./register/
+    secrets:
       sparql_username: ${{ secrets.UPLOAD_GRAPH_STORE_USERNAME }}
       sparql_password: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
