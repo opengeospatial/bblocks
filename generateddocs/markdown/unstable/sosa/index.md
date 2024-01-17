@@ -24,45 +24,6 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: Sensor, Observation, Sample, and Actuator (SOSA)
 anyOf:
 - $schema: https://json-schema.org/draft/2020-12/schema
-  description: Example SOSA Vector Observation
-  allOf:
-  - $ref: properties/observation/schema.yaml
-  - type: object
-    properties:
-      hasResult:
-        properties:
-          pose:
-            $ref: ../../geo/geopose/basic/ypr/schema.yaml
-          distance:
-            type: number
-    required:
-    - hasResult
-    not:
-      required:
-      - hasSimpleResult
-- $schema: https://json-schema.org/draft/2020-12/schema
-  description: Example SOSA Observation Specialisation - a vector bearing and distance
-  $defs:
-    VectorObservation:
-      allOf:
-      - $ref: features/observation/schema.yaml
-      - type: object
-        properties:
-          properties:
-            $ref: examples/vectorObservation/schema.yaml
-    VectorObservationCollection:
-      allOf:
-      - $ref: features/observationCollection/schema.yaml
-      - type: object
-        properties:
-          features:
-            type: array
-            items:
-              $ref: examples/vectorObservationFeature/schema.yaml/#/$defs/VectorObservation
-  anyOf:
-  - $ref: examples/vectorObservationFeature/schema.yaml/#/$defs/VectorObservation
-  - $ref: examples/vectorObservationFeature/schema.yaml/#/$defs/VectorObservationCollection
-- $schema: https://json-schema.org/draft/2020-12/schema
   description: SOSA Observation Feature
   type: object
   allOf:
@@ -108,7 +69,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/Property
       x-jsonld-type: '@id'
     'Procedure ':
-      x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+      x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
       x-jsonld-type: '@id'
     Result:
       x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -168,6 +129,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
       x-jsonld-type: '@id'
     hasResult: http://www.w3.org/ns/sosa/hasResult
+    hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
     hasSample:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
       x-jsonld-type: '@id'
@@ -401,7 +363,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/Property
       x-jsonld-type: '@id'
     'Procedure ':
-      x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+      x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
       x-jsonld-type: '@id'
     Result:
       x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -458,6 +420,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
       x-jsonld-type: '@id'
     hasResult: http://www.w3.org/ns/sosa/hasResult
+    hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
     hasSample:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
       x-jsonld-type: '@id'
@@ -721,7 +684,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/Property
       x-jsonld-type: '@id'
     'Procedure ':
-      x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+      x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
       x-jsonld-type: '@id'
     Result:
       x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -777,6 +740,7 @@ anyOf:
     hasProperty:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
       x-jsonld-type: '@id'
+    hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
     hasSample:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
       x-jsonld-type: '@id'
@@ -1037,7 +1001,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/Property
       x-jsonld-type: '@id'
     'Procedure ':
-      x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+      x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
       x-jsonld-type: '@id'
     Result:
       x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -1091,6 +1055,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
       x-jsonld-type: '@id'
     hasResult: http://www.w3.org/ns/sosa/hasResult
+    hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
     hasSample:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
       x-jsonld-type: '@id'
@@ -1314,7 +1279,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/Property
       x-jsonld-type: '@id'
     'Procedure ':
-      x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+      x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
       x-jsonld-type: '@id'
     Result:
       x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -1374,6 +1339,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
       x-jsonld-type: '@id'
     hasResult: http://www.w3.org/ns/sosa/hasResult
+    hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
     hasSample:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
       x-jsonld-type: '@id'
@@ -1601,7 +1567,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/Property
       x-jsonld-type: '@id'
     'Procedure ':
-      x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+      x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
       x-jsonld-type: '@id'
     Result:
       x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -1661,6 +1627,7 @@ anyOf:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
       x-jsonld-type: '@id'
     hasResult: http://www.w3.org/ns/sosa/hasResult
+    hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
     hasSample:
       x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
       x-jsonld-type: '@id'
@@ -1856,6 +1823,63 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "type": "@type",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@context": {},
+      "@id": "geojson:geometry"
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "features": {
+      "@container": "@set",
+      "@id": "sosa:hasMember",
+      "@context": {
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
+        },
+        "featureType": "@type"
+      },
+      "@type": "@id"
+    },
+    "links": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "featureType": "geojson:collectionFeatureType",
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
     "resultTime": "sosa:resultTime",
     "phenomenonTime": {
       "@id": "sosa:phenomenonTime",
@@ -1879,7 +1903,6 @@ Links to the schema:
     },
     "hasResult": "sosa:hasResult",
     "hasSimpleResult": "sosa:hasSimpleResult",
-    "id": "@id",
     "ActuatableProperty": {
       "@id": "sosa:ActuatableProperty",
       "@type": "@id"
@@ -1925,7 +1948,7 @@ Links to the schema:
       "@type": "@id"
     },
     "Procedure ": {
-      "@id": "sosa:Procedure ",
+      "@id": "sosa:Procedure",
       "@type": "@id"
     },
     "Result": {
@@ -1972,18 +1995,6 @@ Links to the schema:
       "@id": "sosa:detects",
       "@type": "@id"
     },
-    "features": {
-      "@id": "sosa:hasMember",
-      "@type": "@id",
-      "@context": {
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
-        },
-        "featureType": "@type"
-      },
-      "@container": "@set"
-    },
     "forProperty": {
       "@id": "sosa:forProperty",
       "@type": "@id"
@@ -2011,6 +2022,7 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResultQuality": "sosa:hasResultQuality",
     "hasSample": {
       "@id": "sosa:hasSample",
       "@type": "@id"
@@ -2226,75 +2238,13 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
-    "properties": "@nest",
-    "featureType": "geojson:collectionFeatureType",
-    "position": {
-      "@context": {
-        "lat": "geo:lat",
-        "lon": "geo:long",
-        "h": "geopose:h"
-      },
-      "@id": "geopose:position"
-    },
-    "angles": {
-      "@context": {
-        "yaw": "geopose:yaw",
-        "pitch": "geopose:pitch",
-        "roll": "geopose:roll"
-      },
-      "@id": "geopose:angles"
-    },
-    "type": "@type",
-    "geometry": {
-      "@context": {},
-      "@id": "geojson:geometry"
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "links": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn-system": "ssn:systems/",
-    "ssn": "http://www.w3.org/ns/ssn/",
-    "geopose": "http://example.com/geopose/",
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn-system": "ssn:systems/",
+    "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }
 }

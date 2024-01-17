@@ -4,85 +4,6 @@
   "anyOf": [
     {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
-      "description": "Example SOSA Vector Observation",
-      "allOf": [
-        {
-          "$ref": "properties/observation/schema.yaml"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "hasResult": {
-              "properties": {
-                "pose": {
-                  "$ref": "../../geo/geopose/basic/ypr/schema.yaml"
-                },
-                "distance": {
-                  "type": "number"
-                }
-              }
-            }
-          },
-          "required": [
-            "hasResult"
-          ],
-          "not": {
-            "required": [
-              "hasSimpleResult"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
-      "description": "Example SOSA Observation Specialisation - a vector bearing and distance",
-      "$defs": {
-        "VectorObservation": {
-          "allOf": [
-            {
-              "$ref": "features/observation/schema.yaml"
-            },
-            {
-              "type": "object",
-              "properties": {
-                "properties": {
-                  "$ref": "examples/vectorObservation/schema.yaml"
-                }
-              }
-            }
-          ]
-        },
-        "VectorObservationCollection": {
-          "allOf": [
-            {
-              "$ref": "features/observationCollection/schema.yaml"
-            },
-            {
-              "type": "object",
-              "properties": {
-                "features": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "examples/vectorObservationFeature/schema.yaml/#/$defs/VectorObservation"
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      "anyOf": [
-        {
-          "$ref": "examples/vectorObservationFeature/schema.yaml/#/$defs/VectorObservation"
-        },
-        {
-          "$ref": "examples/vectorObservationFeature/schema.yaml/#/$defs/VectorObservationCollection"
-        }
-      ]
-    },
-    {
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
       "description": "SOSA Observation Feature",
       "type": "object",
       "allOf": [
@@ -146,7 +67,7 @@
           "x-jsonld-type": "@id"
         },
         "Procedure ": {
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure ",
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure",
           "x-jsonld-type": "@id"
         },
         "Result": {
@@ -226,6 +147,7 @@
           "x-jsonld-type": "@id"
         },
         "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+        "hasResultQuality": "http://www.w3.org/ns/sosa/hasResultQuality",
         "hasSample": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
           "x-jsonld-type": "@id"
@@ -545,7 +467,7 @@
           "x-jsonld-type": "@id"
         },
         "Procedure ": {
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure ",
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure",
           "x-jsonld-type": "@id"
         },
         "Result": {
@@ -621,6 +543,7 @@
           "x-jsonld-type": "@id"
         },
         "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+        "hasResultQuality": "http://www.w3.org/ns/sosa/hasResultQuality",
         "hasSample": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
           "x-jsonld-type": "@id"
@@ -977,7 +900,7 @@
           "x-jsonld-type": "@id"
         },
         "Procedure ": {
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure ",
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure",
           "x-jsonld-type": "@id"
         },
         "Result": {
@@ -1052,6 +975,7 @@
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasProperty",
           "x-jsonld-type": "@id"
         },
+        "hasResultQuality": "http://www.w3.org/ns/sosa/hasResultQuality",
         "hasSample": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
           "x-jsonld-type": "@id"
@@ -1416,7 +1340,7 @@
           "x-jsonld-type": "@id"
         },
         "Procedure ": {
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure ",
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure",
           "x-jsonld-type": "@id"
         },
         "Result": {
@@ -1488,6 +1412,7 @@
           "x-jsonld-type": "@id"
         },
         "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+        "hasResultQuality": "http://www.w3.org/ns/sosa/hasResultQuality",
         "hasSample": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
           "x-jsonld-type": "@id"
@@ -1797,7 +1722,7 @@
           "x-jsonld-type": "@id"
         },
         "Procedure ": {
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure ",
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure",
           "x-jsonld-type": "@id"
         },
         "Result": {
@@ -1877,6 +1802,7 @@
           "x-jsonld-type": "@id"
         },
         "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+        "hasResultQuality": "http://www.w3.org/ns/sosa/hasResultQuality",
         "hasSample": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
           "x-jsonld-type": "@id"
@@ -2188,7 +2114,7 @@
           "x-jsonld-type": "@id"
         },
         "Procedure ": {
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure ",
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure",
           "x-jsonld-type": "@id"
         },
         "Result": {
@@ -2268,6 +2194,7 @@
           "x-jsonld-type": "@id"
         },
         "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+        "hasResultQuality": "http://www.w3.org/ns/sosa/hasResultQuality",
         "hasSample": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
           "x-jsonld-type": "@id"

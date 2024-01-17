@@ -22,7 +22,7 @@ meta:
 
 # SOSA ObservationCollection `ogc.unstable.sosa.properties.observationCollection`
 
-This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification.
+This building block defines an ObservationCollection according to the SOSA/SSN v1.1 specification. It defines a set of logical rules regarding presence of mandatory properties anywhere within a potentially nested collection hierarchy. (implemented in SHACL, exploiting the semantic mapping to SOSA)
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
@@ -309,7 +309,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/Property
     x-jsonld-type: '@id'
   'Procedure ':
-    x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+    x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
     x-jsonld-type: '@id'
   Result:
     x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -363,6 +363,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
     x-jsonld-type: '@id'
   hasResult: http://www.w3.org/ns/sosa/hasResult
+  hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
   hasSample:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
     x-jsonld-type: '@id'
@@ -619,7 +620,7 @@ Links to the schema:
       "@type": "@id"
     },
     "Procedure ": {
-      "@id": "sosa:Procedure ",
+      "@id": "sosa:Procedure",
       "@type": "@id"
     },
     "Result": {
@@ -691,6 +692,7 @@ Links to the schema:
       "@type": "@id"
     },
     "hasResult": "sosa:hasResult",
+    "hasResultQuality": "sosa:hasResultQuality",
     "hasSample": {
       "@id": "sosa:hasSample",
       "@type": "@id"
@@ -933,7 +935,6 @@ The following sets of SHACL shapes are used for validating this building block:
 # References
 
 * [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/)
-* [Extensions to the Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn-ext/)
 
 # For developers
 

@@ -29,8 +29,8 @@ This building block defines the set of properties for an observation according t
     <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observation/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observation/" target="_blank">valid</a></strong>
 </aside>
 
 # Description
@@ -285,7 +285,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/Property
     x-jsonld-type: '@id'
   'Procedure ':
-    x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+    x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
     x-jsonld-type: '@id'
   Result:
     x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -341,6 +341,7 @@ x-jsonld-extra-terms:
   hasProperty:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
     x-jsonld-type: '@id'
+  hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
   hasSample:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
     x-jsonld-type: '@id'
@@ -593,7 +594,7 @@ Links to the schema:
       "@type": "@id"
     },
     "Procedure ": {
-      "@id": "sosa:Procedure ",
+      "@id": "sosa:Procedure",
       "@type": "@id"
     },
     "Result": {
@@ -668,6 +669,7 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResultQuality": "sosa:hasResultQuality",
     "hasSample": {
       "@id": "sosa:hasSample",
       "@type": "@id"

@@ -369,7 +369,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='sosa-observationcollection-ogc-unstable-sosa-properties-observationcollection'>SOSA ObservationCollection <code>ogc.unstable.sosa.properties.observationCollection</code></h1>
-<p>This building blocks defines an ObservationCollection according to the SOSA/SSN v1.1 specification.</p>
+<p>This building block defines an ObservationCollection according to the SOSA/SSN v1.1 specification. It defines a set of logical rules regarding presence of mandatory properties anywhere within a potentially nested collection hierarchy. (implemented in SHACL, exploiting the semantic mapping to SOSA)</p>
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
@@ -596,7 +596,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/Property</span>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="s1">'</span><span class="s">Procedure</span><span class="nv"> </span><span class="s">'</span><span class="err">:</span>
-    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">http://www.w3.org/ns/sosa/Procedure</span><span class="nv"> </span><span class="s">'</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/Procedure</span>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">Result</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/Result</span>
@@ -650,6 +650,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/hasProperty</span>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">hasResult</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/hasResult</span>
+  <span class="na">hasResultQuality</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/hasResultQuality</span>
   <span class="na">hasSample</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/sosa/hasSample</span>
     <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
@@ -904,7 +905,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"Procedure "</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Procedure "</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Procedure"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"Result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -976,6 +977,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasResultQuality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResultQuality"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hasSample"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSample"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
@@ -1219,7 +1221,6 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="https://www.w3.org/TR/vocab-ssn/">Semantic Sensor Network Ontology</a></li>
-<li><a href="https://www.w3.org/TR/vocab-ssn-ext/">Extensions to the Semantic Sensor Network Ontology</a></li>
 </ul>
 <h1 id='for-developers'>For developers</h1>
 <p>The source code for this Building Block can be found in the following repository:</p>

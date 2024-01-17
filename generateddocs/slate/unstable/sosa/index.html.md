@@ -44,6 +44,63 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
 ```json--ldContext
 {
   "@context": {
+    "type": "@type",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@context": {},
+      "@id": "geojson:geometry"
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "features": {
+      "@container": "@set",
+      "@id": "sosa:hasMember",
+      "@context": {
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
+        },
+        "featureType": "@type"
+      },
+      "@type": "@id"
+    },
+    "links": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "featureType": "geojson:collectionFeatureType",
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
     "resultTime": "sosa:resultTime",
     "phenomenonTime": {
       "@id": "sosa:phenomenonTime",
@@ -67,7 +124,6 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
     },
     "hasResult": "sosa:hasResult",
     "hasSimpleResult": "sosa:hasSimpleResult",
-    "id": "@id",
     "ActuatableProperty": {
       "@id": "sosa:ActuatableProperty",
       "@type": "@id"
@@ -113,7 +169,7 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
       "@type": "@id"
     },
     "Procedure ": {
-      "@id": "sosa:Procedure ",
+      "@id": "sosa:Procedure",
       "@type": "@id"
     },
     "Result": {
@@ -160,18 +216,6 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
       "@id": "sosa:detects",
       "@type": "@id"
     },
-    "features": {
-      "@id": "sosa:hasMember",
-      "@type": "@id",
-      "@context": {
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
-        },
-        "featureType": "@type"
-      },
-      "@container": "@set"
-    },
     "forProperty": {
       "@id": "sosa:forProperty",
       "@type": "@id"
@@ -199,6 +243,7 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResultQuality": "sosa:hasResultQuality",
     "hasSample": {
       "@id": "sosa:hasSample",
       "@type": "@id"
@@ -414,75 +459,13 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
-    "properties": "@nest",
-    "featureType": "geojson:collectionFeatureType",
-    "position": {
-      "@context": {
-        "lat": "geo:lat",
-        "lon": "geo:long",
-        "h": "geopose:h"
-      },
-      "@id": "geopose:position"
-    },
-    "angles": {
-      "@context": {
-        "yaw": "geopose:yaw",
-        "pitch": "geopose:pitch",
-        "roll": "geopose:roll"
-      },
-      "@id": "geopose:angles"
-    },
-    "type": "@type",
-    "geometry": {
-      "@context": {},
-      "@id": "geojson:geometry"
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "links": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn-system": "ssn:systems/",
-    "ssn": "http://www.w3.org/ns/ssn/",
-    "geopose": "http://example.com/geopose/",
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn-system": "ssn:systems/",
+    "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }
 }

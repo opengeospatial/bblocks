@@ -203,7 +203,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/Property
     x-jsonld-type: '@id'
   'Procedure ':
-    x-jsonld-id: 'http://www.w3.org/ns/sosa/Procedure '
+    x-jsonld-id: http://www.w3.org/ns/sosa/Procedure
     x-jsonld-type: '@id'
   Result:
     x-jsonld-id: http://www.w3.org/ns/sosa/Result
@@ -259,6 +259,7 @@ x-jsonld-extra-terms:
   hasProperty:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
     x-jsonld-type: '@id'
+  hasResultQuality: http://www.w3.org/ns/sosa/hasResultQuality
   hasSample:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasSample
     x-jsonld-type: '@id'
@@ -509,7 +510,7 @@ Links to the schema:
       "@type": "@id"
     },
     "Procedure ": {
-      "@id": "sosa:Procedure ",
+      "@id": "sosa:Procedure",
       "@type": "@id"
     },
     "Result": {
@@ -584,6 +585,7 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResultQuality": "sosa:hasResultQuality",
     "hasSample": {
       "@id": "sosa:hasSample",
       "@type": "@id"
