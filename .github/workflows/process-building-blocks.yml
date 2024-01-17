@@ -7,10 +7,6 @@ on:
   schedule:
     - cron: 0 4 * * 0
 
-env:
-  SPARQL_USERNAME: ${{ secrets.UPLOAD_GRAPH_STORE_USERNAME }}
-  SPARQL_PASSWORD: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
-
 jobs:
   validate-and-process:
     uses: opengeospatial/bblocks-postprocess/.github/workflows/validate-and-process.yml@master
@@ -23,3 +19,5 @@ jobs:
       clean: 'true'
       test_outputs_path: tests
       viewer_path: ./register/
+      sparql_username: ${{ secrets.UPLOAD_GRAPH_STORE_USERNAME }}
+      sparql_password: ${{ secrets.UPLOAD_GRAPH_STORE_PASSWORD }}
