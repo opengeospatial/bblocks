@@ -5,7 +5,6 @@ language_tabs:
   - plaintext: Plain text
   - json: JSON
   - jsonld: JSON-LD
-  - turtle: RDF/Turtle
 
 toc_footers:
   - Version 1.0
@@ -30,8 +29,8 @@ This Building Block defines a data type for a full IRI/URI or a CURIE (with or w
     <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/" target="_blank">failed</a></strong>
 </aside>
 
 # Description
@@ -213,23 +212,6 @@ another-document#ref
   <p class="example-links">
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_7_1.jsonld">Open in new window</a>
     <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fogc-utils%2Firi-or-curie%2Fexample_7_1.jsonld">View on JSON-LD Playground</a>
-</blockquote>
-
-
-
-
-```turtle
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix ex: <http://example.com/> .
-
-ex:feature1 dct:conformsTo ex:profile2 .
-
-
-```
-
-<blockquote class="lang-specific turtle">
-  <p class="example-links">
-    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_7_1.ttl">Open in new window</a>
 </blockquote>
 
 

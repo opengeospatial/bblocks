@@ -32,7 +32,7 @@
     "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
   },
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/",
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/",
   "description": "A Uniform Resource Identifier (URI) is defined in [RFC3986](https://www.ietf.org/rfc/rfc3986.txt) as a\nsequence of characters chosen from a limited subset of the repertoire\nof US-ASCII ASCII characters.\n\nA CURIE (\"Compact URI\") is a data type whose purpose is specifically to allow for the definition\nof scoped names that map to URIs.\n\nThe \"IRI-or-CURIE\" building block defines a data type representing either an IRI or a CURIE (with or without a prefix).",
   "examples": [
@@ -129,11 +129,6 @@
           "code": "{\n  \"@context\": {\n    \"ex\": \"http://example.com/\",\n    \"dct\": {\n      \"@id\": \"http://purl.org/dc/terms/\",\n    },\n    \"dct:conformsTo\": {\n      \"@type\": \"@id\"\n    }\n  },\n  \"@id\": \"ex:feature1\",\n  \"dct:conformsTo\": \"ex:profile2\" \n}\n",
           "schema-ref": "jsonld-example-schema.yaml",
           "url": "https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_7_1.jsonld"
-        },
-        {
-          "language": "ttl",
-          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix ex: <http://example.com/> .\n\nex:feature1 dct:conformsTo ex:profile2 .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_7_1.ttl"
         }
       ]
     }

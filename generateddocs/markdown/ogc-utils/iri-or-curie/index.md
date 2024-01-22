@@ -120,16 +120,6 @@ another-document#ref
 
 ```
 
-#### ttl
-```ttl
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix ex: <http://example.com/> .
-
-ex:feature1 dct:conformsTo ex:profile2 .
-
-
-```
-
 ## Schema
 
 ```yaml
