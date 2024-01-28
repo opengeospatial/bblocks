@@ -98,12 +98,19 @@
       }
     }
   ],
-  "imports": [],
+  "name": "OGC Main",
+  "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"e58076a8273c5138f354282957e1d3aebdd678fb",
+      "shortCommitId": "\"e58076",
+      "date": "2024-01-26T12:35:18+00:00\""
+    }
+  },
   "baseURL": "https://opengeospatial.github.io/bblocks/",
   "viewerURL": "https://opengeospatial.github.io/bblocks/register/",
   "validationReport": "https://opengeospatial.github.io/bblocks/tests/report.html",
-  "name": "OGC Main",
-  "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
+  "imports": [],
   "@type": [
     "skos:ConceptScheme",
     "dcat:Catalog"
@@ -680,8 +687,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.common.data_types.geojson",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.common.data_types.geojson"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
       "schema": {
@@ -923,8 +930,8 @@
         ]
       },
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml",
@@ -980,8 +987,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.features.feature",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.feature"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
@@ -1156,8 +1163,8 @@
       "group": "SOSA",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.unstable.sosa.properties.sensor",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.unstable.sosa.properties.sensor"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema.yaml",
@@ -1211,9 +1218,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
+        "ogc.ogc-utils.json-link",
         "ogc.geo.features.featureCollection",
-        "ogc.geo.json-fg.feature",
-        "ogc.ogc-utils.json-link"
+        "ogc.geo.json-fg.feature"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
       "schema": {
@@ -1272,9 +1279,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
+        "ogc.ogc-utils.json-link",
         "ogc.geo.features.featureCollection",
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.ogc-utils.json-link"
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
@@ -1326,8 +1333,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
-        "ogc.geo.json-fg.feature-lenient"
+        "ogc.geo.json-fg.feature-lenient",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "tags": [
         "sosa",
@@ -1410,9 +1417,9 @@
         ]
       },
       "dependsOn": [
-        "ogc.geo.json-fg.featureCollection-lenient",
+        "ogc.unstable.sosa.properties.observationCollection",
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.properties.observationCollection"
+        "ogc.geo.json-fg.featureCollection-lenient"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
