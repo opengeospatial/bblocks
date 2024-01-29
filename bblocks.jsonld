@@ -100,11 +100,12 @@
   ],
   "name": "OGC Main",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
+  "modified": "2024-01-29T16:56:14.553959",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"e58076a8273c5138f354282957e1d3aebdd678fb",
-      "shortCommitId": "\"e58076",
-      "date": "2024-01-26T12:35:18+00:00\""
+      "commitId": "\"653f14f3ea710a0cc2f67c56f66291689ddc6981",
+      "shortCommitId": "\"653f14",
+      "date": "2024-01-29T16:53:09+00:00\""
     }
   },
   "baseURL": "https://opengeospatial.github.io/bblocks/",
@@ -687,8 +688,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.common.data_types.geojson"
+        "ogc.geo.common.data_types.geojson",
+        "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
       "schema": {
@@ -743,8 +744,8 @@
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
       "schema": {
@@ -987,8 +988,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
@@ -1042,8 +1043,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.features.feature",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.feature"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
       "schema": {
@@ -1101,8 +1102,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.features.feature",
-        "ogc.ogc-utils.json-link"
+        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.feature"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml",
@@ -1218,9 +1219,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
+        "ogc.geo.json-fg.feature",
         "ogc.geo.features.featureCollection",
-        "ogc.geo.json-fg.feature"
+        "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
       "schema": {
@@ -1279,9 +1280,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
+        "ogc.geo.json-fg.feature-lenient",
         "ogc.geo.features.featureCollection",
-        "ogc.geo.json-fg.feature-lenient"
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
@@ -1417,8 +1418,8 @@
         ]
       },
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observationCollection",
         "ogc.unstable.sosa.features.observation",
+        "ogc.unstable.sosa.properties.observationCollection",
         "ogc.geo.json-fg.featureCollection-lenient"
       ],
       "schema": {
