@@ -100,12 +100,12 @@
   ],
   "name": "OGC Main",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2024-01-29T17:26:45.791833",
+  "modified": "2024-01-29T17:30:52.508571",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"0a951229162ed662a6fdf3023a45a92902c2c162",
-      "shortCommitId": "\"0a9512",
-      "date": "2024-01-29T17:23:46+00:00\""
+      "commitId": "\"d96eb2d4a786e6840aa03210fe5b1034f9cf0ab1",
+      "shortCommitId": "\"d96eb2",
+      "date": "2024-01-29T17:29:08+00:00\""
     }
   },
   "baseURL": "https://opengeospatial.github.io/bblocks/",
@@ -931,8 +931,8 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/schema.yaml",
@@ -1164,8 +1164,8 @@
       "group": "SOSA",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.properties.sensor"
+        "ogc.unstable.sosa.properties.sensor",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema.yaml",
@@ -1219,8 +1219,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.json-fg.feature",
         "ogc.ogc-utils.json-link",
+        "ogc.geo.json-fg.feature",
         "ogc.geo.features.featureCollection"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
@@ -1280,9 +1280,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.json-fg.feature-lenient",
         "ogc.ogc-utils.json-link",
-        "ogc.geo.features.featureCollection"
+        "ogc.geo.features.featureCollection",
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
@@ -1334,8 +1334,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.unstable.sosa.properties.observation"
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "tags": [
         "sosa",
@@ -1418,8 +1418,8 @@
         ]
       },
       "dependsOn": [
-        "ogc.unstable.sosa.features.observation",
         "ogc.unstable.sosa.properties.observationCollection",
+        "ogc.unstable.sosa.features.observation",
         "ogc.geo.json-fg.featureCollection-lenient"
       ],
       "schema": {

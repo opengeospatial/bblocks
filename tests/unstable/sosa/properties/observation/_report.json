@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.unstable.sosa.properties.observation - SOSA Observation",
   "bblockName": "SOSA Observation",
   "bblockId": "ogc.unstable.sosa.properties.observation",
-  "generated": "2024-01-29T17:26:53.772254+00:00",
+  "generated": "2024-01-29T17:31:00.278281+00:00",
   "result": false,
   "items": [
     {
@@ -72,44 +72,44 @@
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:N6a9df79776634e71982e1c290544ba08 ;\n            sh:resultMessage \"sosa:hasSimpleResult is a simple Literal\" ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral> ;\n            sh:value _:N6a9df79776634e71982e1c290544ba08 ] .\n\n",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:Ne07b24e96521497aa5f4be8475627e2a ;\n            sh:resultMessage \"sosa:hasSimpleResult is a simple Literal\" ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral> ;\n            sh:value _:Ne07b24e96521497aa5f4be8475627e2a ] .\n\n",
               "isError": true,
               "message": "Validation result for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>\n  \tFocus Node: [ ]\n  \tValue Node: [ ]\n  \tMessage: sosa:hasSimpleResult is a simple Literal\n  "
             },
             {
               "shaclFile": "registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                  "nodes": [
+                    "_:N53e06de4970044648612302a03b9fdd6"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "_:N53e06de4970044648612302a03b9fdd6"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": [
+                    "_:Ne07b24e96521497aa5f4be8475627e2a"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                  "nodes": [
+                    "_:N53e06de4970044648612302a03b9fdd6"
+                  ]
+                },
                 "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testResult>": {
                   "nodes": [
-                    "_:Nd9faecf2448e4e6693568be029cbd309"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "_:Nd9faecf2448e4e6693568be029cbd309"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": [
-                    "_:N6a9df79776634e71982e1c290544ba08"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                  "nodes": [
-                    "_:Nd9faecf2448e4e6693568be029cbd309"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
-                  "nodes": [
-                    "_:Nd9faecf2448e4e6693568be029cbd309"
+                    "_:N53e06de4970044648612302a03b9fdd6"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Nd9faecf2448e4e6693568be029cbd309\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Nd9faecf2448e4e6693568be029cbd309\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: _:N6a9df79776634e71982e1c290544ba08\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Nd9faecf2448e4e6693568be029cbd309\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Nd9faecf2448e4e6693568be029cbd309\n"
+              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N53e06de4970044648612302a03b9fdd6\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N53e06de4970044648612302a03b9fdd6\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: _:Ne07b24e96521497aa5f4be8475627e2a\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N53e06de4970044648612302a03b9fdd6\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N53e06de4970044648612302a03b9fdd6\n"
             }
           ]
         },
@@ -194,35 +194,35 @@
             {
               "shaclFile": "registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:N9e87c9cde33b4f94a246dc4d37c0d60c"
+                    "_:N782ef22fcee74ac19b5fe32c6c06953f"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
                   "nodes": [
-                    "_:N9e87c9cde33b4f94a246dc4d37c0d60c"
+                    "_:N782ef22fcee74ac19b5fe32c6c06953f"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                   "nodes": []
                 },
-                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                  "nodes": [
-                    "_:N9e87c9cde33b4f94a246dc4d37c0d60c"
-                  ]
-                },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:N9e87c9cde33b4f94a246dc4d37c0d60c"
+                    "_:N782ef22fcee74ac19b5fe32c6c06953f"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:N782ef22fcee74ac19b5fe32c6c06953f"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N9e87c9cde33b4f94a246dc4d37c0d60c\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N9e87c9cde33b4f94a246dc4d37c0d60c\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N9e87c9cde33b4f94a246dc4d37c0d60c\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N9e87c9cde33b4f94a246dc4d37c0d60c\n"
+              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N782ef22fcee74ac19b5fe32c6c06953f\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N782ef22fcee74ac19b5fe32c6c06953f\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N782ef22fcee74ac19b5fe32c6c06953f\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N782ef22fcee74ac19b5fe32c6c06953f\n"
             }
           ]
         },
@@ -307,17 +307,14 @@
             {
               "shaclFile": "registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:N92fe63bf879b4659b2444877564d7b33"
+                    "_:Nbb72361ac1994f999a3407d333b05959"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
                   "nodes": [
-                    "_:N92fe63bf879b4659b2444877564d7b33"
+                    "_:Nbb72361ac1994f999a3407d333b05959"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -325,19 +322,22 @@
                     "frogginess"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                  "nodes": [
-                    "_:N92fe63bf879b4659b2444877564d7b33"
-                  ]
-                },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:N92fe63bf879b4659b2444877564d7b33"
+                    "_:Nbb72361ac1994f999a3407d333b05959"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:Nbb72361ac1994f999a3407d333b05959"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N92fe63bf879b4659b2444877564d7b33\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N92fe63bf879b4659b2444877564d7b33\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: frogginess\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N92fe63bf879b4659b2444877564d7b33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N92fe63bf879b4659b2444877564d7b33\n"
+              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Nbb72361ac1994f999a3407d333b05959\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Nbb72361ac1994f999a3407d333b05959\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: frogginess\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Nbb72361ac1994f999a3407d333b05959\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Nbb72361ac1994f999a3407d333b05959\n"
             }
           ]
         },
@@ -429,17 +429,14 @@
             {
               "shaclFile": "registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:N896e5373d9444a968af404194a00d227"
+                    "_:N7f4cbb281212431487a8743d27eaed45"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
                   "nodes": [
-                    "_:N896e5373d9444a968af404194a00d227"
+                    "_:N7f4cbb281212431487a8743d27eaed45"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -447,19 +444,22 @@
                     "33"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                  "nodes": [
-                    "_:N896e5373d9444a968af404194a00d227"
-                  ]
-                },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:N896e5373d9444a968af404194a00d227"
+                    "_:N7f4cbb281212431487a8743d27eaed45"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:N7f4cbb281212431487a8743d27eaed45"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N896e5373d9444a968af404194a00d227\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N896e5373d9444a968af404194a00d227\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N896e5373d9444a968af404194a00d227\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N896e5373d9444a968af404194a00d227\n"
+              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N7f4cbb281212431487a8743d27eaed45\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N7f4cbb281212431487a8743d27eaed45\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N7f4cbb281212431487a8743d27eaed45\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N7f4cbb281212431487a8743d27eaed45\n"
             }
           ]
         },
@@ -533,17 +533,14 @@
             {
               "shaclFile": "registereditems/unstable/sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:n3f0a27ac5ca94e40b57798e8b7610ebab1"
+                    "_:n4bb13b5ddbbe48c491cbd1a2222448f3b1"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
                   "nodes": [
-                    "_:n3f0a27ac5ca94e40b57798e8b7610ebab1"
+                    "_:n4bb13b5ddbbe48c491cbd1a2222448f3b1"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -551,19 +548,22 @@
                     "33"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                  "nodes": [
-                    "_:n3f0a27ac5ca94e40b57798e8b7610ebab1"
-                  ]
-                },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:n3f0a27ac5ca94e40b57798e8b7610ebab1"
+                    "_:n4bb13b5ddbbe48c491cbd1a2222448f3b1"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:n4bb13b5ddbbe48c491cbd1a2222448f3b1"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:n3f0a27ac5ca94e40b57798e8b7610ebab1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:n3f0a27ac5ca94e40b57798e8b7610ebab1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:n3f0a27ac5ca94e40b57798e8b7610ebab1\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:n3f0a27ac5ca94e40b57798e8b7610ebab1\n"
+              "message": "Focus nodes for registereditems/unstable/sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:n4bb13b5ddbbe48c491cbd1a2222448f3b1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:n4bb13b5ddbbe48c491cbd1a2222448f3b1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:n4bb13b5ddbbe48c491cbd1a2222448f3b1\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:n4bb13b5ddbbe48c491cbd1a2222448f3b1\n"
             }
           ]
         },
