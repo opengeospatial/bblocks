@@ -281,8 +281,7 @@ TBD: Convenience API paths may be defined to support traversal of relationships 
     "hosts": {
       "@id": "sosa:hosts",
       "@type": "@id",
-      "@container": "@set",
-      "@context": {}
+      "@container": "@set"
     },
     "implementedBy": {
       "@id": "sosa:implementedBy",

@@ -1308,9 +1308,6 @@ anyOf:
               anyOf:
               - $ref: properties/platform/schema.yaml/#/$definitions/Platform
               - $ref: properties/sensor/schema.yaml#/$definitions/Sensor
-            x-jsonld-id: http://www.w3.org/ns/sosa/hosts
-            x-jsonld-type: '@id'
-            x-jsonld-container: '@set'
   allOf:
   - $ref: properties/platform/schema.yaml/#/$definitions/Platform
   x-jsonld-extra-terms:
@@ -1615,7 +1612,6 @@ anyOf:
         properties:
           id:
             $ref: ../../ogc-utils/iri-or-curie/schema.yaml
-            x-jsonld-id: '@id'
           name:
             type: string
   allOf:
@@ -2166,8 +2162,7 @@ Links to the schema:
     "hosts": {
       "@id": "sosa:hosts",
       "@type": "@id",
-      "@container": "@set",
-      "@context": {}
+      "@container": "@set"
     },
     "implementedBy": {
       "@id": "sosa:implementedBy",

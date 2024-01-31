@@ -22,10 +22,7 @@
                         "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema-oas3.0.json#/x-defs/ogc.unstable.sosa.properties.sensor/$definitions/Sensor"
                       }
                     ]
-                  },
-                  "x-jsonld-id": "http://www.w3.org/ns/sosa/hosts",
-                  "x-jsonld-type": "@id",
-                  "x-jsonld-container": "@set"
+                  }
                 }
               }
             }
@@ -443,7 +440,9 @@
             {
               "type": "object",
               "properties": {
-                "id": {},
+                "id": {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+                },
                 "name": {
                   "type": "string"
                 }

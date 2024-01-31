@@ -414,7 +414,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 </blockquote>
 <div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sosa:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/ns/sosa/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 
-</span><span class="nl">&lt;eg:sensor1&gt;</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">sensorKind</span><span class="w"> </span><span class="s">"eg:gnss-pair"</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="p">[]</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">sensorKind</span><span class="w"> </span><span class="s">"eg:gnss-pair"</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 
 </span></code></pre></div>
@@ -500,19 +500,15 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 <div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">ns1:</span><span class="w"> </span><span class="nl">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 </span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sosa:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/ns/sosa/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 
-</span><span class="nl">&lt;eg:gnss-pair-1&gt;</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">hasSubSystem</span><span class="w"> </span><span class="nl">&lt;eg:785439870523&gt;</span><span class="p">,</span><span class="w">
-        </span><span class="nl">&lt;eg:785439870524&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span><span class="p">[]</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">hasSubSystem</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nl">&lt;eg.purpose&gt;</span><span class="w"> </span><span class="s">"eg:rover"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ns1:</span><span class="n">sensorscalibrationDate</span><span class="w"> </span><span class="s">"2022-09-14T15:35:05"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ns1:</span><span class="n">sensorsdescription</span><span class="w"> </span><span class="s">"Leica Viva GS10"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">sosa:</span><span class="n">sensorKind</span><span class="w"> </span><span class="s">"eg:gnss"</span><span class="w"> </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w"> </span><span class="nl">&lt;eg.purpose&gt;</span><span class="w"> </span><span class="s">"eg:base"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ns1:</span><span class="n">sensorscalibrationDate</span><span class="w"> </span><span class="s">"2022-09-14T15:32:45"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ns1:</span><span class="n">sensorsdescription</span><span class="w"> </span><span class="s">"Leica Viva GS10"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">sosa:</span><span class="n">sensorKind</span><span class="w"> </span><span class="s">"eg:gnss"</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">sosa:</span><span class="n">sensorKind</span><span class="w"> </span><span class="s">"eg:gnss-pair"</span><span class="w"> </span><span class="p">.</span><span class="w">
-
-</span><span class="nl">&lt;eg:785439870523&gt;</span><span class="w"> </span><span class="nl">&lt;eg.purpose&gt;</span><span class="w"> </span><span class="s">"eg:base"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">ns1:</span><span class="n">sensorscalibrationDate</span><span class="w"> </span><span class="s">"2022-09-14T15:32:45"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">ns1:</span><span class="n">sensorsdescription</span><span class="w"> </span><span class="s">"Leica Viva GS10"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa:</span><span class="n">sensorKind</span><span class="w"> </span><span class="s">"eg:gnss"</span><span class="w"> </span><span class="p">.</span><span class="w">
-
-</span><span class="nl">&lt;eg:785439870524&gt;</span><span class="w"> </span><span class="nl">&lt;eg.purpose&gt;</span><span class="w"> </span><span class="s">"eg:rover"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">ns1:</span><span class="n">sensorscalibrationDate</span><span class="w"> </span><span class="s">"2022-09-14T15:35:05"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">ns1:</span><span class="n">sensorsdescription</span><span class="w"> </span><span class="s">"Leica Viva GS10"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa:</span><span class="n">sensorKind</span><span class="w"> </span><span class="s">"eg:gnss"</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 
 </span></code></pre></div>
@@ -530,7 +526,6 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
       <span class="na">properties</span><span class="pi">:</span>
         <span class="na">id</span><span class="pi">:</span>
           <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../../../ogc-utils/iri-or-curie/schema.yaml</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
         <span class="na">name</span><span class="pi">:</span>
           <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
 <span class="na">allOf</span><span class="pi">:</span>
@@ -844,7 +839,6 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 </ul>
 <h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@nest"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ActuatableProperty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">

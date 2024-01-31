@@ -13,9 +13,6 @@ x-defs:
                 anyOf:
                 - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema-oas3.0.yaml#/x-defs/ogc.unstable.sosa.properties.platform/$definitions/Platform
                 - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema-oas3.0.yaml#/x-defs/ogc.unstable.sosa.properties.sensor/$definitions/Sensor
-              x-jsonld-id: http://www.w3.org/ns/sosa/hosts
-              x-jsonld-type: '@id'
-              x-jsonld-container: '@set'
     allOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema-oas3.0.yaml#/x-defs/ogc.unstable.sosa.properties.platform/$definitions/Platform
     x-jsonld-extra-terms:
@@ -323,7 +320,8 @@ x-defs:
         - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie
         - type: object
           properties:
-            id: {}
+            id:
+              $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/platform/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie
             name:
               type: string
     allOf:

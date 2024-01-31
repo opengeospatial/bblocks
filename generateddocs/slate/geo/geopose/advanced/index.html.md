@@ -34,15 +34,7 @@ This building block is <strong>valid</strong>
 ```json--ldContext
 {
   "@context": {
-    "quaternion": {
-      "@context": {
-        "x": "geopose:x",
-        "y": "geopose:y",
-        "z": "geopose:z",
-        "w": "geopose:w"
-      },
-      "@id": "geopose:quaternion"
-    },
+    "quaternion": "geopose:quaternion",
     "position": {
       "@id": "geopose:position",
       "@context": {
