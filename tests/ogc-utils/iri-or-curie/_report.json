@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.ogc-utils.iri-or-curie - IRI or CURIE",
   "bblockName": "IRI or CURIE",
   "bblockId": "ogc.ogc-utils.iri-or-curie",
-  "generated": "2024-02-02T09:08:08.649171+00:00",
-  "result": false,
+  "generated": "2024-02-02T09:56:39.626233+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -5341,7 +5341,7 @@
         "snippetIndex": 1,
         "language": "jsonld"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "GENERAL",
@@ -5351,18 +5351,35 @@
         {
           "name": "FILES",
           "title": "Files",
-          "entries": []
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_7_1.jsonld from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_7_1.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle example_7_1.ttl created"
+            }
+          ]
         },
         {
           "name": "JSON_SCHEMA",
           "title": "JSON Schema",
           "entries": [
             {
-              "exception": "JSONDecodeError",
-              "line": 6,
-              "col": 5,
-              "isError": true,
-              "message": "Error parsing JSON example: Expecting property name enclosed in double quotes: line 6 column 5 (char 110) on or near line 6 column 5"
+              "filename": "jsonld-example-schema.yaml",
+              "isError": false,
+              "message": "Using the following JSON Schema: jsonld-example-schema.yaml"
+            },
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
             }
           ]
         },
@@ -5392,7 +5409,7 @@
   "globalErrors": {},
   "counts": {
     "total": 92,
-    "passed": 91,
-    "failed": 1
+    "passed": 92,
+    "failed": 0
   }
 }
