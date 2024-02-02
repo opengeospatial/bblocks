@@ -2,12 +2,12 @@
   "name": "OGC Main",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of building blocks managed by the OGC community, including published standards,  \n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2024-01-31T11:28:28.804019",
+  "modified": "2024-02-02T09:08:01.953358",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"fd0465021c0dc5467a837bcb68da167e551b7bfd",
-      "shortCommitId": "\"fd0465",
-      "date": "2024-01-31T10:28:24+00:00\""
+      "commitId": "\"6d3d51441589a152d708ec06fa334afd9fbc9d4e",
+      "shortCommitId": "\"6d3d51",
+      "date": "2024-02-02T09:05:22+00:00\""
     }
   },
   "gitRepository": "https://github.com/opengeospatial/bblocks",
@@ -470,7 +470,7 @@
         }
       ],
       "maturity": "development",
-      "scope": "unstable",
+      "scope": "development",
       "tags": [
         "sosa",
         "ssn",
@@ -537,8 +537,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.common.data_types.geojson"
+        "ogc.geo.common.data_types.geojson",
+        "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
       "schema": {
@@ -687,7 +687,7 @@
         }
       ],
       "maturity": "development",
-      "scope": "unstable",
+      "scope": "development",
       "tags": [
         "sosa",
         "ssn",
@@ -745,7 +745,7 @@
         }
       ],
       "maturity": "development",
-      "scope": "unstable",
+      "scope": "development",
       "tags": [
         "sosa",
         "observations",
@@ -769,7 +769,7 @@
       },
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/",
       "documentation": {
         "markdown": {
@@ -812,8 +812,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
@@ -862,8 +862,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
       "schema": {
@@ -916,8 +916,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml",
@@ -962,7 +962,7 @@
         }
       ],
       "maturity": "development",
-      "scope": "unstable",
+      "scope": "development",
       "tags": [
         "sosa",
         "ssn",
@@ -1023,8 +1023,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
         "ogc.geo.json-fg.feature",
+        "ogc.ogc-utils.json-link",
         "ogc.geo.features.featureCollection"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
@@ -1079,8 +1079,8 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
         "ogc.geo.json-fg.feature-lenient",
+        "ogc.ogc-utils.json-link",
         "ogc.geo.features.featureCollection"
       ],
       "schema": {
@@ -1126,8 +1126,9 @@
         }
       ],
       "maturity": "development",
-      "scope": "unstable",
+      "scope": "development",
       "dependsOn": [
+        "ogc.sosa.properties.observation",
         "ogc.unstable.sosa.properties.observation",
         "ogc.geo.json-fg.feature-lenient"
       ],
@@ -1192,7 +1193,7 @@
         }
       ],
       "maturity": "development",
-      "scope": "unstable",
+      "scope": "development",
       "tags": [
         "sosa",
         "ssn",
@@ -1207,9 +1208,9 @@
         ]
       },
       "dependsOn": [
-        "ogc.unstable.sosa.features.observation",
+        "ogc.geo.json-fg.featureCollection-lenient",
         "ogc.unstable.sosa.properties.observationCollection",
-        "ogc.geo.json-fg.featureCollection-lenient"
+        "ogc.unstable.sosa.features.observation"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/features/observationCollection/schema.yaml",
@@ -1255,7 +1256,7 @@
         }
       ],
       "maturity": "development",
-      "scope": "unstable",
+      "scope": "development",
       "tags": [
         "sosa",
         "ssn",

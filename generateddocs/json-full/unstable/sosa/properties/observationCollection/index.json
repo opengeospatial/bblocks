@@ -18,7 +18,7 @@
     }
   ],
   "maturity": "development",
-  "scope": "unstable",
+  "scope": "development",
   "tags": [
     "sosa",
     "observations",
@@ -42,28 +42,27 @@
   },
   "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/unstable/sosa/_sources/properties/observationCollection/",
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/",
   "description": "## SOSA ObservationCollection\n\nCollection of one or more observations, whose members share a common value for one or more properties.",
   "examples": [
     {
-      "title": "Example of SOSA ObservationCollection",
-      "comment": "This class is a target for the SOSA v 1.1 update.",
+      "title": "Test remote fail-test",
       "snippets": [
         {
           "language": "json",
-          "code": "{ \n  \"hasMember\": [\n    \"_:a1\"\n  ],\n  \"observedProperty\": \"_:p1\",\n  \"resultTime\": \"2022-05-01T22:33:44Z\"\n}",
-          "base-uri": "http://example.com/",
+          "ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-sosa/master/_sources/properties/observation/tests/non-simpleresult-fail.jsonld",
+          "code": "{\n  \"@context\": {\n    \"hasResult\": \"http://www.w3.org/ns/sosa/hasResult\",\n    \"hasSimpleResult\": \"http://www.w3.org/ns/sosa/hasSimpleResult\",\n    \"resultTime\": \"http://www.w3.org/ns/sosa/resultTime\",\n    \"phenomenonTime\": \"http://www.w3.org/ns/sosa/phenomenonTime\",\n    \"hasFeatureOfInterest\": \"http://www.w3.org/ns/sosa/hasFeatureOfInterest\",\n    \"observedProperty\": \"http://www.w3.org/ns/sosa/observedProperty\",\n    \"usedProcedure\": \"http://www.w3.org/ns/sosa/usedProcedure\",\n    \"madeBySensor\": \"http://www.w3.org/ns/sosa/madeBySensor\"\n  },\n  \"resultTime\": \"2016-05-04T02:27:02.0Z\",\n  \"hasFeatureOfInterest\": {\n    \"id\": \"http://something.org/1\"\n  },\n  \"observedProperty\": \"something\",\n  \"hasSimpleResult\": {\n    \"irure31\": -8150858,\n    \"quis70f\": false,\n    \"quisc\": \"nulla Duis do ullamco\"\n  }\n}",
           "url": "https://opengeospatial.github.io/bblocks/tests/unstable/sosa/properties/observationCollection/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"hasMember\": [\n    \"_:a1\"\n  ],\n  \"observedProperty\": \"_:p1\",\n  \"resultTime\": \"2022-05-01T22:33:44Z\",\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld\"\n}",
+          "code": "{\n  \"@context\": [\n    \"https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld\",\n    {\n      \"hasResult\": \"http://www.w3.org/ns/sosa/hasResult\",\n      \"hasSimpleResult\": \"http://www.w3.org/ns/sosa/hasSimpleResult\",\n      \"resultTime\": \"http://www.w3.org/ns/sosa/resultTime\",\n      \"phenomenonTime\": \"http://www.w3.org/ns/sosa/phenomenonTime\",\n      \"hasFeatureOfInterest\": \"http://www.w3.org/ns/sosa/hasFeatureOfInterest\",\n      \"observedProperty\": \"http://www.w3.org/ns/sosa/observedProperty\",\n      \"usedProcedure\": \"http://www.w3.org/ns/sosa/usedProcedure\",\n      \"madeBySensor\": \"http://www.w3.org/ns/sosa/madeBySensor\"\n    }\n  ],\n  \"resultTime\": \"2016-05-04T02:27:02.0Z\",\n  \"hasFeatureOfInterest\": {\n    \"id\": \"http://something.org/1\"\n  },\n  \"observedProperty\": \"something\",\n  \"hasSimpleResult\": {\n    \"irure31\": -8150858,\n    \"quis70f\": false,\n    \"quisc\": \"nulla Duis do ullamco\"\n  }\n}",
           "url": "https://opengeospatial.github.io/bblocks/tests/unstable/sosa/properties/observationCollection/example_1_1.jsonld"
         },
         {
           "language": "ttl",
-          "code": "@prefix sosa: <http://www.w3.org/ns/sosa/> .\n\n[] sosa:hasMember [ ] ;\n    sosa:observedProperty [ ] ;\n    sosa:resultTime \"2022-05-01T22:33:44Z\" .\n\n",
+          "code": "@prefix sosa: <http://www.w3.org/ns/sosa/> .\n\n[] sosa:hasFeatureOfInterest <http://something.org/1> ;\n    sosa:hasSimpleResult [ ] ;\n    sosa:observedProperty \"something\" ;\n    sosa:resultTime \"2016-05-04T02:27:02.0Z\" .\n\n",
           "url": "https://opengeospatial.github.io/bblocks/tests/unstable/sosa/properties/observationCollection/example_1_1.ttl"
         }
       ]

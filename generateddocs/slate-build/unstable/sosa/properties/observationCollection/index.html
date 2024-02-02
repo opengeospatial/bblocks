@@ -328,10 +328,10 @@
             <a href="#examples" class="toc-h1 toc-link" data-title="Examples">Examples</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#example-of-sosa-observationcollection" class="toc-h2 toc-link" data-title="Example of SOSA ObservationCollection">Example of SOSA ObservationCollection</a>
+                    <a href="#test-remote-fail-test" class="toc-h2 toc-link" data-title="Test remote fail-test">Test remote fail-test</a>
                   </li>
                   <li>
-                    <a href="#example-of-sosa-observationcollection-2" class="toc-h2 toc-link" data-title="Example of SOSA ObservationCollection">Example of SOSA ObservationCollection</a>
+                    <a href="#example-of-sosa-observationcollection" class="toc-h2 toc-link" data-title="Example of SOSA ObservationCollection">Example of SOSA ObservationCollection</a>
                   </li>
                   <li>
                     <a href="#turtle-example-of-sosa-observationcollection" class="toc-h2 toc-link" data-title="Turtle example of SOSA ObservationCollection">Turtle example of SOSA ObservationCollection</a>
@@ -376,17 +376,32 @@
     <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/" target="_blank">failed</a></strong>
 </aside>
 <h1 id='description'>Description</h1><h2 id='sosa-observationcollection'>SOSA ObservationCollection</h2>
 <p>Collection of one or more observations, whose members share a common value for one or more properties.</p>
-<h1 id='examples'>Examples</h1><h2 id='example-of-sosa-observationcollection'>Example of SOSA ObservationCollection</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
-  </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"_:a1"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_:p1"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-01T22:33:44Z"</span><span class="w">
+<h1 id='examples'>Examples</h1><h2 id='test-remote-fail-test'>Test remote fail-test</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasResult"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasSimpleResult"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/resultTime"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/phenomenonTime"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/observedProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"usedProcedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/usedProcedure"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"madeBySensor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeBySensor"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-04T02:27:02.0Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://something.org/1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"something"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"irure31"</span><span class="p">:</span><span class="w"> </span><span class="mi">-8150858</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"quis70f"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"quisc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nulla Duis do ullamco"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote class="lang-specific json">
@@ -395,12 +410,29 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
     <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Funstable%2Fsosa%2Fproperties%2FobservationCollection%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"_:a1"</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld"</span><span class="p">,</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasResult"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasSimpleResult"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/resultTime"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/phenomenonTime"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/observedProperty"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"usedProcedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/usedProcedure"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"madeBySensor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/madeBySensor"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_:p1"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-01T22:33:44Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld"</span><span class="w">
+  </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-04T02:27:02.0Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://something.org/1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"something"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"irure31"</span><span class="p">:</span><span class="w"> </span><span class="mi">-8150858</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"quis70f"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"quisc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nulla Duis do ullamco"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote class="lang-specific jsonld">
@@ -410,9 +442,10 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 </blockquote>
 <div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sosa:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/ns/sosa/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 
-</span><span class="p">[]</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">hasMember</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa:</span><span class="n">observedProperty</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2022-05-01T22:33:44Z"</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="p">[]</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">hasFeatureOfInterest</span><span class="w"> </span><span class="nl">&lt;http://something.org/1&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasSimpleResult</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">observedProperty</span><span class="w"> </span><span class="s">"something"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2016-05-04T02:27:02.0Z"</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 
 </span></code></pre></div>
@@ -420,7 +453,7 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
   <p class="example-links">
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/unstable/sosa/properties/observationCollection/example_1_1.ttl">Open in new window</a>
 </blockquote>
-<h2 id='example-of-sosa-observationcollection-2'>Example of SOSA ObservationCollection</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
+<h2 id='example-of-sosa-observationcollection'>Example of SOSA ObservationCollection</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
   </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p1"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-01T22:33:44Z"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">

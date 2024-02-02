@@ -29,8 +29,8 @@ This building block defines an ObservationCollection according to the SOSA/SSN v
     <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/unstable/sosa/properties/observationCollection/" target="_blank">failed</a></strong>
 </aside>
 
 # Description
@@ -40,17 +40,32 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 Collection of one or more observations, whose members share a common value for one or more properties.
 # Examples
 
-## Example of SOSA ObservationCollection
+## Test remote fail-test
 
 
 
 ```json
-{ 
-  "hasMember": [
-    "_:a1"
-  ],
-  "observedProperty": "_:p1",
-  "resultTime": "2022-05-01T22:33:44Z"
+{
+  "@context": {
+    "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
+    "resultTime": "http://www.w3.org/ns/sosa/resultTime",
+    "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
+    "hasFeatureOfInterest": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "observedProperty": "http://www.w3.org/ns/sosa/observedProperty",
+    "usedProcedure": "http://www.w3.org/ns/sosa/usedProcedure",
+    "madeBySensor": "http://www.w3.org/ns/sosa/madeBySensor"
+  },
+  "resultTime": "2016-05-04T02:27:02.0Z",
+  "hasFeatureOfInterest": {
+    "id": "http://something.org/1"
+  },
+  "observedProperty": "something",
+  "hasSimpleResult": {
+    "irure31": -8150858,
+    "quis70f": false,
+    "quisc": "nulla Duis do ullamco"
+  }
 }
 ```
 
@@ -65,12 +80,29 @@ Collection of one or more observations, whose members share a common value for o
 
 ```jsonld
 {
-  "hasMember": [
-    "_:a1"
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld",
+    {
+      "hasResult": "http://www.w3.org/ns/sosa/hasResult",
+      "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
+      "resultTime": "http://www.w3.org/ns/sosa/resultTime",
+      "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "hasFeatureOfInterest": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "observedProperty": "http://www.w3.org/ns/sosa/observedProperty",
+      "usedProcedure": "http://www.w3.org/ns/sosa/usedProcedure",
+      "madeBySensor": "http://www.w3.org/ns/sosa/madeBySensor"
+    }
   ],
-  "observedProperty": "_:p1",
-  "resultTime": "2022-05-01T22:33:44Z",
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/unstable/sosa/properties/observationCollection/context.jsonld"
+  "resultTime": "2016-05-04T02:27:02.0Z",
+  "hasFeatureOfInterest": {
+    "id": "http://something.org/1"
+  },
+  "observedProperty": "something",
+  "hasSimpleResult": {
+    "irure31": -8150858,
+    "quis70f": false,
+    "quisc": "nulla Duis do ullamco"
+  }
 }
 ```
 
@@ -86,9 +118,10 @@ Collection of one or more observations, whose members share a common value for o
 ```turtle
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-[] sosa:hasMember [ ] ;
-    sosa:observedProperty [ ] ;
-    sosa:resultTime "2022-05-01T22:33:44Z" .
+[] sosa:hasFeatureOfInterest <http://something.org/1> ;
+    sosa:hasSimpleResult [ ] ;
+    sosa:observedProperty "something" ;
+    sosa:resultTime "2016-05-04T02:27:02.0Z" .
 
 
 ```
