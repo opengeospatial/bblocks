@@ -2,6 +2,8 @@ allOf:
   - $ref: bblocks://ogc.geo.common.data_types.geojson
   - type: object
     properties:
+      bbox:
+        $ref: bblocks://ogc.geo.common.data_types.bounding_box
       links:
         type: array
         items:
