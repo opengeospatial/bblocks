@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.geo.common.data_types.bounding_box - Bounding Box",
   "bblockName": "Bounding Box",
   "bblockId": "ogc.geo.common.data_types.bounding_box",
-  "generated": "2024-02-02T09:56:39.533124+00:00",
-  "result": true,
+  "generated": "2024-02-03T23:04:50.356832+00:00",
+  "result": false,
   "items": [
     {
       "source": {
@@ -14,7 +14,7 @@
         "snippetIndex": 1,
         "language": "json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "GENERAL",
@@ -28,6 +28,25 @@
             {
               "isError": false,
               "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_1_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_1_1.ttl created"
             }
           ]
         },
@@ -69,7 +88,7 @@
   "globalErrors": {},
   "counts": {
     "total": 1,
-    "passed": 1,
-    "failed": 0
+    "passed": 0,
+    "failed": 1
   }
 }

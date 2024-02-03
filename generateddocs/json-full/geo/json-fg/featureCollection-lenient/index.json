@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2024-02-02",
+  "dateOfLastChange": "2024-02-03",
   "sources": [
     {
       "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -25,14 +25,15 @@
   "shaclRules": {},
   "dependsOn": [
     "ogc.geo.features.featureCollection",
-    "ogc.geo.json-fg.feature-lenient",
-    "ogc.ogc-utils.json-link"
+    "ogc.ogc-utils.json-link",
+    "ogc.geo.json-fg.feature-lenient"
   ],
   "schema": {
     "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
     "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json"
   },
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/context.jsonld",
+  "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection-lenient/schema.yaml",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection-lenient/",
   "validationPassed": true,
   "description": "OGC Features and Geometries JSON (JSON-FG) extends GeoJSON to support a limited set of additional capabilities that are\nout-of-scope for GeoJSON, but that are essential or important for a variety of use cases involving feature data.\nA **lenient** feature collection contains a set of **lenient** features from a dataset (features that do not\nneed to provide values for their `place` or `time` properties).",

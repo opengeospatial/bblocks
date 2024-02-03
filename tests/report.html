@@ -26,9 +26,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2024-02-02T09:56:41.786624+00:00</small>
-                <p class="summary fw-semibold text-success">
-                    Number of passing building blocks: 17 / 17 (100%)
+            <small class="datetime">Generated at 2024-02-03T23:04:51.708396+00:00</small>
+                <p class="summary fw-semibold text-danger">
+                    Number of passing building blocks: 16 / 17 (94.12%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -37,22 +37,22 @@
                 <div class="accordion mt-2" id="bblock-reports">
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.data_types.bounding_box" id="bblock-0">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-0">
+                                <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-0">
                                     <div class="flex-fill">
                                         Bounding Box
                                         <small class="ms-2 bblock-id">ogc.geo.common.data_types.bounding_box</small>
                                     </div>
 
-                                    <span class="badge text-bg-success me-2">
-                                            Passed
-                                            (100% passed)
+                                    <span class="badge text-bg-danger me-2">
+                                            Tests Failed
+                                            (0% passed)
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-0">
+                            <div class="accordion-collapse collapse show" id="bblock-collapse-0">
                                 <div class="accordion-body">
-                                        <p class="summary fw-semibold text-success">
-                                            Test passed: 1 / 1
+                                        <p class="summary fw-semibold text-danger">
+                                            Test passed: 0 / 1
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
@@ -67,13 +67,16 @@
                                                     <a href="https://opengeospatial.github.io/bblocks/tests/geo/common/data_types/bounding_box/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
-                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-1">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files text-danger">**Empty** output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>

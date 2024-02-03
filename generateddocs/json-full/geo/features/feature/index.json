@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2024-02-02",
+  "dateOfLastChange": "2024-02-03",
   "sources": [
     {
       "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
@@ -25,8 +25,9 @@
   "group": "Common",
   "shaclRules": {},
   "dependsOn": [
-    "ogc.ogc-utils.json-link",
-    "ogc.geo.common.data_types.geojson"
+    "ogc.geo.common.data_types.bounding_box",
+    "ogc.geo.common.data_types.geojson",
+    "ogc.ogc-utils.json-link"
   ],
   "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
   "schema": {
@@ -34,6 +35,7 @@
     "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json"
   },
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/context.jsonld",
+  "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/schema.yaml",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/",
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/feature/",
@@ -63,7 +65,7 @@
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: ../../common/data_types/geojson/schema.yaml\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: ../../../ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    type:\n      const: Feature\n  required:\n  - type\n  - geometry\n  - properties\nx-jsonld-extra-terms:\n  properties: '@nest'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n",
+  "annotatedSchema": "allOf:\n- $ref: ../../common/data_types/geojson/schema.yaml\n- type: object\n  properties:\n    bbox:\n      $ref: ../../common/data_types/bounding_box/schema.yaml\n    links:\n      type: array\n      items:\n        $ref: ../../../ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    type:\n      const: Feature\n  required:\n  - type\n  - geometry\n  - properties\nx-jsonld-extra-terms:\n  properties: '@nest'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/features/feature"
 }

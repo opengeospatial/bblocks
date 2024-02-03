@@ -4,6 +4,7 @@ title: Bounding Box (Schema)
 language_tabs:
   - json: JSON
   - plaintext: Plain text
+  - jsonld: JSON-LD
 
 toc_footers:
   - Version 1.0.1
@@ -28,8 +29,8 @@ The bounding box JSON object describes a simple spatial extent of a resource. Fo
     <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/" target="_blank">failed</a></strong>
 </aside>
 
 # Description
@@ -79,6 +80,28 @@ The text representation of a bounding box is based on the JSON representation an
 ```
 
 
+
+```jsonld
+{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld",
+  "@graph": [
+    -124.7844079,
+    24.7433195,
+    -66.9513812,
+    49.3457868
+  ]
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/common/data_types/bounding_box/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
 # JSON Schema
 
 ```yaml--schema
@@ -90,6 +113,10 @@ oneOf:
   maxItems: 6
 items:
   type: number
+x-jsonld-extra-terms:
+  bbox:
+    x-jsonld-container: '@list'
+    x-jsonld-id: geojson:bbox
 
 ```
 
@@ -99,6 +126,26 @@ Links to the schema:
 
 * YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml</a>
 * JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json</a>
+
+
+# JSON-LD Context
+
+```json--ldContext
+{
+  "@context": {
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "@version": 1.1
+  }
+}
+```
+
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fcontext.jsonld">View on JSON-LD Playground</a>
+
+You can find the full JSON-LD context here:
+<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld</a>
 
 # References
 

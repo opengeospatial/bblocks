@@ -135,6 +135,8 @@ allOf:
 - $ref: ../../common/data_types/geojson/schema.yaml
 - type: object
   properties:
+    bbox:
+      $ref: ../../common/data_types/bounding_box/schema.yaml
     links:
       type: array
       items:

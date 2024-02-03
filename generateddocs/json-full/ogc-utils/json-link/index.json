@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2024-02-02",
+  "dateOfLastChange": "2024-02-03",
   "sources": [
     {
       "title": "IETF RFC 8288 - Web Linking",
@@ -25,6 +25,7 @@
     "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json"
   },
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/context.jsonld",
+  "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/schema.yaml",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/",
   "validationPassed": true,
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: JSON Link\ntype: object\nrequired:\n- href\n- rel\nproperties:\n  href:\n    type: string\n    format: uri-reference\n    x-jsonld-type: '@id'\n    x-jsonld-id: http://www.w3.org/ns/oa#hasTarget\n  rel:\n    type: string\n    x-jsonld-id: http://www.iana.org/assignments/relation\n    x-jsonld-type: '@id'\n    x-jsonld-base: http://www.iana.org/assignments/relation/\n  anchor:\n    type: string\n  type:\n    type: string\n    x-jsonld-id: http://purl.org/dc/terms/type\n  hreflang:\n    type: string\n    x-jsonld-id: http://purl.org/dc/terms/language\n  title:\n    type: string\n    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\n  length:\n    type: integer\n    x-jsonld-id: http://purl.org/dc/terms/extent\nx-jsonld-prefixes:\n  oa: http://www.w3.org/ns/oa#\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  dct: http://purl.org/dc/terms/\n",
