@@ -2,7 +2,7 @@
   "name": "OGC Main",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of building blocks managed by the OGC community, including published standards,  \n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2024-02-03T23:04:43.171743",
+  "modified": "2024-02-04T04:06:25.360822",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"d3ca95c6a06a13ca49593aac13774e5db6835687",
@@ -485,8 +485,8 @@
       "group": "Common",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.common.data_types.bounding_box",
         "ogc.geo.common.data_types.geojson",
+        "ogc.geo.common.data_types.bounding_box",
         "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
@@ -857,9 +857,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
+        "ogc.geo.json-fg.feature-lenient",
         "ogc.geo.features.featureCollection",
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.json-fg.feature-lenient"
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
