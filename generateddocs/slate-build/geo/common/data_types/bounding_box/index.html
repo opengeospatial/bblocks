@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="geo geo_common geo_common_data_types geo_common_data_types_bounding_box geo_common_data_types_bounding_box_index" data-languages="[&quot;json&quot;,&quot;plaintext&quot;,&quot;jsonld&quot;]">
+  <body class="geo geo_common geo_common_data_types geo_common_data_types_bounding_box geo_common_data_types_bounding_box_index" data-languages="[&quot;json&quot;,&quot;plaintext&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -306,7 +306,6 @@
         <div class="lang-selector">
               <a href="#" data-language-name="json">JSON</a>
               <a href="#" data-language-name="plaintext">Plain text</a>
-              <a href="#" data-language-name="jsonld">JSON-LD</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -329,9 +328,6 @@
           </li>
           <li>
             <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
-          </li>
-          <li>
-            <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
           </li>
           <li>
             <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
@@ -357,8 +353,8 @@
     <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
 </p>
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/" target="_blank">valid</a></strong>
 </aside>
 <h1 id='description'>Description</h1>
 <p>A bounding box is provided as an array of four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth):</p>
@@ -391,22 +387,7 @@ Validation for this building block has <strong><a href="https://github.com/openg
     <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 <div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>-124.7844079,24.7433195,-66.9513812,49.3457868
-</code></pre></div><div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="mf">-124.7844079</span><span class="p">,</span><span class="w">
-    </span><span class="mf">24.7433195</span><span class="p">,</span><span class="w">
-    </span><span class="mf">-66.9513812</span><span class="p">,</span><span class="w">
-    </span><span class="mf">49.3457868</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<blockquote class="lang-specific jsonld">
-  <p class="example-links">
-    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/common/data_types/bounding_box/example_1_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
-</blockquote>
-<h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+</code></pre></div><h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
 <span class="na">oneOf</span><span class="pi">:</span>
 <span class="pi">-</span> <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
   <span class="na">maxItems</span><span class="pi">:</span> <span class="m">4</span>
@@ -414,10 +395,6 @@ Validation for this building block has <strong><a href="https://github.com/openg
   <span class="na">maxItems</span><span class="pi">:</span> <span class="m">6</span>
 <span class="na">items</span><span class="pi">:</span>
   <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-<span class="na">x-jsonld-extra-terms</span><span class="pi">:</span>
-  <span class="na">bbox</span><span class="pi">:</span>
-    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
-    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">geojson:bbox</span>
 
 </code></pre></div>
 <blockquote>
@@ -430,22 +407,6 @@ Validation for this building block has <strong><a href="https://github.com/openg
 <li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml</a></li>
 <li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json</a></li>
 </ul>
-<h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"bbox"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:bbox"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<blockquote>
-<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fdata_types%2Fbounding_box%2Fcontext.jsonld">View on JSON-LD Playground</a></p>
-</blockquote>
-
-<p>You can find the full JSON-LD context here:
-<a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/context.jsonld</a></p>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4">OGC API - Features, Part 1, 7.13.2: Feature Collections Response</a></li>
@@ -464,7 +425,6 @@ Validation for this building block has <strong><a href="https://github.com/openg
           <div class="lang-selector">
                 <a href="#" data-language-name="json">JSON</a>
                 <a href="#" data-language-name="plaintext">Plain text</a>
-                <a href="#" data-language-name="jsonld">JSON-LD</a>
           </div>
       </div>
     </div>
