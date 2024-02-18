@@ -104,7 +104,7 @@ allOf:
     links:
       type: array
       items:
-        $ref: ../../../ogc-utils/json-link/schema.yaml
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     timeStamp:
       type: string
@@ -118,7 +118,7 @@ allOf:
     features:
       type: array
       items:
-        $ref: ../feature/schema.yaml
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
 x-jsonld-extra-terms:
   properties: '@nest'
 x-jsonld-prefixes:

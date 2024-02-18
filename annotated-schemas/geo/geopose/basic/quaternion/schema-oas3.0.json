@@ -60,67 +60,6 @@
         "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json"
-    },
-    "schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json": {
-      "description": "Basic-Quaternion: Basic GeoPose using quaternion to specify orientation",
-      "definitions": {
-        "Position": {
-          "type": "object",
-          "properties": {
-            "lat": {
-              "type": "number"
-            },
-            "lon": {
-              "type": "number"
-            },
-            "h": {
-              "type": "number"
-            }
-          },
-          "required": [
-            "lat",
-            "lon",
-            "h"
-          ]
-        },
-        "Quaternion": {
-          "type": "object",
-          "properties": {
-            "x": {
-              "type": "number"
-            },
-            "y": {
-              "type": "number"
-            },
-            "z": {
-              "type": "number"
-            },
-            "w": {
-              "type": "number"
-            }
-          },
-          "required": [
-            "x",
-            "y",
-            "z",
-            "w"
-          ]
-        }
-      },
-      "type": "object",
-      "properties": {
-        "position": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json/definitions/Position"
-        },
-        "quaternion": {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema-oas3.0.json#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Basic.Quaternion.Schema.json/definitions/Quaternion"
-        }
-      },
-      "required": [
-        "position",
-        "quaternion"
-      ],
-      "x-schema-source": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Quaternion.Schema.json"
     }
   },
   "allOf": [

@@ -132,15 +132,15 @@ NB. uses a local @context in the data example where application specialisations 
 
 ```yaml--schema
 allOf:
-- $ref: ../../common/data_types/geojson/schema.yaml
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
 - type: object
   properties:
     bbox:
-      $ref: ../../common/data_types/bounding_box/schema.yaml
+      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml
     links:
       type: array
       items:
-        $ref: ../../../ogc-utils/json-link/schema.yaml
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     type:
       const: Feature

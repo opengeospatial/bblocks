@@ -404,11 +404,11 @@ This building block is <strong><a href="https://github.com/opengeospatial/bblock
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">description</span><span class="pi">:</span> <span class="s">annotated link with role and conformance</span>
 <span class="na">$defs</span><span class="pi">:</span>
   <span class="na">coderef</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../../ogc-utils/iri-or-curie/schema.yaml</span>
+    <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml</span>
   <span class="na">coderefs</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../../ogc-utils/iri-or-curie/schema.yaml</span>
+    <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull</span>
 <span class="na">allOf</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../../../ogc-utils/json-link/schema.yaml</span>
+<span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml</span>
 <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
     <span class="na">role</span><span class="pi">:</span>
       <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/coderef'</span>

@@ -25,15 +25,15 @@ x-defs:
           items:
             allOf:
             - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_link.json
-            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml
           x-jsonld-id: rdfs:seeAlso
         features:
           type: array
           items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.geo.json-fg.feature-lenient
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_json-fg_feature-lenient_schema.yaml
           x-jsonld-container: '@set'
           x-jsonld-id: https://purl.org/geojson/vocab#features
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.geo.features.featureCollection
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_features_featureCollection_schema.yaml
     x-jsonld-prefixes:
       geojson: https://purl.org/geojson/vocab#
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml
@@ -116,7 +116,7 @@ x-defs:
         type: string
     x-schema-version: https://json-schema.org/draft/2019-09/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/link.json
-  ogc.ogc-utils.json-link:
+  opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml:
     description: JSON Link
     type: object
     required:
@@ -152,10 +152,10 @@ x-defs:
       rdfs: http://www.w3.org/2000/01/rdf-schema#
       dct: http://purl.org/dc/terms/
     x-schema-version: https://json-schema.org/draft/2020-12/schema
-    x-schema-source: https://opengeospatial.github.io/bblocks/ogc-utils/json-link/schema.yaml
-  ogc.geo.json-fg.feature-lenient:
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+  opengeospatial.github.io_bblocks_annotated-schemas_geo_json-fg_feature-lenient_schema.yaml:
     allOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.geo.features.feature
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_features_feature_schema.yaml
     - type: object
       required:
       - type
@@ -178,7 +178,7 @@ x-defs:
           items:
             allOf:
             - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_link.json
-            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml
           x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
         time:
           $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_time.json
@@ -214,8 +214,8 @@ x-defs:
     x-jsonld-prefixes:
       geojson: https://purl.org/geojson/vocab#
       rdfs: http://www.w3.org/2000/01/rdf-schema#
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/feature-lenient/schema.yaml
-  ogc.geo.features.featureCollection:
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+  opengeospatial.github.io_bblocks_annotated-schemas_geo_features_featureCollection_schema.yaml:
     allOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/geojson.org_schema_FeatureCollection.json
     - type: object
@@ -223,7 +223,7 @@ x-defs:
         links:
           type: array
           items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml
           x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
         timeStamp:
           type: string
@@ -237,23 +237,23 @@ x-defs:
         features:
           type: array
           items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.geo.features.feature
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_features_feature_schema.yaml
     x-jsonld-extra-terms:
       properties: '@nest'
     x-jsonld-prefixes:
       rdfs: http://www.w3.org/2000/01/rdf-schema#
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/features/featureCollection/schema.yaml
-  ogc.geo.features.feature:
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+  opengeospatial.github.io_bblocks_annotated-schemas_geo_features_feature_schema.yaml:
     allOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.geo.common.data_types.geojson
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.yaml
     - type: object
       properties:
         bbox:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.geo.common.data_types.bounding_box
+          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_bounding_box_schema.yaml
         links:
           type: array
           items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml
           x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
         type:
           const: Feature
@@ -265,7 +265,7 @@ x-defs:
       properties: '@nest'
     x-jsonld-prefixes:
       rdfs: http://www.w3.org/2000/01/rdf-schema#
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/features/feature/schema.yaml
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
   beta.schemas.opengis.net_json-fg_time.json:
     title: the time member
     description: This JSON Schema is part of JSON-FG version 0.1.1
@@ -682,7 +682,7 @@ x-defs:
           type: number
     x-schema-version: http://json-schema.org/draft-07/schema#
     x-schema-source: https://geojson.org/schema/FeatureCollection.json
-  ogc.geo.common.data_types.geojson:
+  opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.yaml:
     title: GeoJSON Feature
     type: object
     required:
@@ -1099,7 +1099,7 @@ x-defs:
       geojson: https://purl.org/geojson/vocab#
     x-schema-version: http://json-schema.org/draft-07/schema#
     x-schema-source: https://geojson.org/schema/Feature.json
-  ogc.geo.common.data_types.bounding_box:
+  opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_bounding_box_schema.yaml:
     type: array
     oneOf:
     - minItems: 4
@@ -1108,7 +1108,7 @@ x-defs:
       maxItems: 6
     items:
       type: number
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/common/data_types/bounding_box/schema.yaml
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml
   beta.schemas.opengis.net_json-fg_geometry-objects.json:
     title: the geometry objects
     description: This JSON Schema is part of JSON-FG version 0.1.1

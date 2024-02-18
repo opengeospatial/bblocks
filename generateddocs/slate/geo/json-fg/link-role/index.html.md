@@ -109,11 +109,11 @@ See panel to right - note that a more user friendly "collapsable" version is in 
 description: annotated link with role and conformance
 $defs:
   coderef:
-    $ref: ../../../ogc-utils/iri-or-curie/schema.yaml
+    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
   coderefs:
-    $ref: ../../../ogc-utils/iri-or-curie/schema.yaml
+    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull
 allOf:
-- $ref: ../../../ogc-utils/json-link/schema.yaml
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
 - properties:
     role:
       $ref: '#/$defs/coderef'

@@ -315,6 +315,9 @@
             <a href="#description" class="toc-h1 toc-link" data-title="Description">Description</a>
           </li>
           <li>
+            <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
+          </li>
+          <li>
             <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
           </li>
           <li>
@@ -357,6 +360,434 @@ be used for the data.</p>
 <li><code>geometry</code>: the primary geometry of the feature describing its location as a GeoJSON geometry object. <code>null</code>, if the
 feature has no spatial geometry.</li>
 <li><code>properties</code>: an object with a member for each feature property.</li>
+</ul>
+<h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">http://json-schema.org/draft-07/schema#</span>
+<span class="na">$id</span><span class="pi">:</span> <span class="s">https://geojson.org/schema/Feature.json</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON Feature</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+<span class="na">required</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">type</span>
+<span class="pi">-</span> <span class="s">properties</span>
+<span class="pi">-</span> <span class="s">geometry</span>
+<span class="na">properties</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+    <span class="na">enum</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">Feature</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+  <span class="na">id</span><span class="pi">:</span>
+    <span class="na">oneOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">oneOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">null'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@nest'</span>
+  <span class="na">geometry</span><span class="pi">:</span>
+    <span class="na">oneOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">null'</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON Point</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">type</span>
+      <span class="pi">-</span> <span class="s">coordinates</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">enum</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">Point</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="na">coordinates</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+        <span class="na">bbox</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON LineString</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">type</span>
+      <span class="pi">-</span> <span class="s">coordinates</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">enum</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">LineString</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="na">coordinates</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+        <span class="na">bbox</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON Polygon</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">type</span>
+      <span class="pi">-</span> <span class="s">coordinates</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">enum</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">Polygon</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="na">coordinates</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+        <span class="na">bbox</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON MultiPoint</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">type</span>
+      <span class="pi">-</span> <span class="s">coordinates</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">enum</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">MultiPoint</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="na">coordinates</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+        <span class="na">bbox</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON MultiLineString</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">type</span>
+      <span class="pi">-</span> <span class="s">coordinates</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">enum</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">MultiLineString</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="na">coordinates</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+        <span class="na">bbox</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON MultiPolygon</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">type</span>
+      <span class="pi">-</span> <span class="s">coordinates</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">enum</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">MultiPolygon</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="na">coordinates</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                <span class="na">items</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+        <span class="na">bbox</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON GeometryCollection</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">type</span>
+      <span class="pi">-</span> <span class="s">geometries</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">enum</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">GeometryCollection</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="na">geometries</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">oneOf</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON Point</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+              <span class="na">required</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s">type</span>
+              <span class="pi">-</span> <span class="s">coordinates</span>
+              <span class="na">properties</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                  <span class="na">enum</span><span class="pi">:</span>
+                  <span class="pi">-</span> <span class="s">Point</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+                <span class="na">coordinates</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+                <span class="na">bbox</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+            <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON LineString</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+              <span class="na">required</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s">type</span>
+              <span class="pi">-</span> <span class="s">coordinates</span>
+              <span class="na">properties</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                  <span class="na">enum</span><span class="pi">:</span>
+                  <span class="pi">-</span> <span class="s">LineString</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+                <span class="na">coordinates</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                    <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                    <span class="na">items</span><span class="pi">:</span>
+                      <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+                <span class="na">bbox</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+            <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON Polygon</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+              <span class="na">required</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s">type</span>
+              <span class="pi">-</span> <span class="s">coordinates</span>
+              <span class="na">properties</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                  <span class="na">enum</span><span class="pi">:</span>
+                  <span class="pi">-</span> <span class="s">Polygon</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+                <span class="na">coordinates</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                    <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+                    <span class="na">items</span><span class="pi">:</span>
+                      <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                      <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                      <span class="na">items</span><span class="pi">:</span>
+                        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+                <span class="na">bbox</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+            <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON MultiPoint</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+              <span class="na">required</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s">type</span>
+              <span class="pi">-</span> <span class="s">coordinates</span>
+              <span class="na">properties</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                  <span class="na">enum</span><span class="pi">:</span>
+                  <span class="pi">-</span> <span class="s">MultiPoint</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+                <span class="na">coordinates</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                    <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                    <span class="na">items</span><span class="pi">:</span>
+                      <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+                <span class="na">bbox</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+            <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON MultiLineString</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+              <span class="na">required</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s">type</span>
+              <span class="pi">-</span> <span class="s">coordinates</span>
+              <span class="na">properties</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                  <span class="na">enum</span><span class="pi">:</span>
+                  <span class="pi">-</span> <span class="s">MultiLineString</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+                <span class="na">coordinates</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                    <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                    <span class="na">items</span><span class="pi">:</span>
+                      <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                      <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                      <span class="na">items</span><span class="pi">:</span>
+                        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+                <span class="na">bbox</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+            <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">GeoJSON MultiPolygon</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+              <span class="na">required</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s">type</span>
+              <span class="pi">-</span> <span class="s">coordinates</span>
+              <span class="na">properties</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                  <span class="na">enum</span><span class="pi">:</span>
+                  <span class="pi">-</span> <span class="s">MultiPolygon</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+                <span class="na">coordinates</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                    <span class="na">items</span><span class="pi">:</span>
+                      <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                      <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+                      <span class="na">items</span><span class="pi">:</span>
+                        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                        <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
+                        <span class="na">items</span><span class="pi">:</span>
+                          <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#coordinates</span>
+                <span class="na">bbox</span><span class="pi">:</span>
+                  <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+                  <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+                  <span class="na">items</span><span class="pi">:</span>
+                    <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+                  <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+                  <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+        <span class="na">bbox</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+          <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+          <span class="na">items</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#geometry</span>
+  <span class="na">bbox</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+    <span class="na">minItems</span><span class="pi">:</span> <span class="m">4</span>
+    <span class="na">items</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
+<span class="na">x-jsonld-extra-terms</span><span class="pi">:</span>
+  <span class="na">Feature</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#Feature</span>
+  <span class="na">FeatureCollection</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#FeatureCollection</span>
+  <span class="na">GeometryCollection</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#GeometryCollection</span>
+  <span class="na">LineString</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#LineString</span>
+  <span class="na">MultiLineString</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#MultiLineString</span>
+  <span class="na">MultiPoint</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#MultiPoint</span>
+  <span class="na">MultiPolygon</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#MultiPolygon</span>
+  <span class="na">Point</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#Point</span>
+  <span class="na">Polygon</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#Polygon</span>
+  <span class="na">features</span><span class="pi">:</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#features</span>
+<span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
+  <span class="na">geojson</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#</span>
+
+</code></pre></div>
+<blockquote>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fcommon%2Fdata_types%2Fgeojson%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a></p>
+</blockquote>
+
+<p>Links to the schema:</p>
+
+<ul>
+<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml</a></li>
+<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json</a></li>
 </ul>
 <h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">

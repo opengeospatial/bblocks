@@ -2,12 +2,12 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: feature with geometry by reference
 properties:
   type:
-    $ref: ../iri-or-curie/schema.yaml
+    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
     x-jsonld-id: '@type'
   references:
     type: array
     items:
-      $ref: ../iri-or-curie/schema.yaml
+      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
     x-jsonld-id: https://purl.org/geojson/vocab#relatedFeatures
     x-jsonld-type: '@id'
     x-jsonld-container: '@list'

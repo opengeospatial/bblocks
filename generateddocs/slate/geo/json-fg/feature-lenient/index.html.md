@@ -41,7 +41,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 
 ```yaml--schema
 allOf:
-- $ref: ../../features/feature/schema.yaml
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
 - type: object
   required:
   - type
@@ -66,7 +66,7 @@ allOf:
       items:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-        - $ref: ../../../ogc-utils/json-link/schema.yaml
+        - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     time:
       $ref: https://beta.schemas.opengis.net/json-fg/time.json

@@ -58,7 +58,7 @@
       ]
     }
   ],
-  "annotatedSchema": "description: annotated link with role and conformance\n$defs:\n  coderef:\n    $ref: ../../../ogc-utils/iri-or-curie/schema.yaml\n  coderefs:\n    $ref: ../../../ogc-utils/iri-or-curie/schema.yaml\nallOf:\n- $ref: ../../../ogc-utils/json-link/schema.yaml\n- properties:\n    role:\n      $ref: '#/$defs/coderef'\n      x-jsonld-id: http://www.w3.org/ns/dx/prof/hasRole\n      x-jsonld-type: '@id'\n    conformsTo:\n      $ref: '#/$defs/coderefs'\n      x-jsonld-id: http://purl.org/dc/terms/conformsTo\n      x-jsonld-type: '@id'\n  required:\n  - role\nx-jsonld-prefixes:\n  prof: http://www.w3.org/ns/dx/prof/\n  dct: http://purl.org/dc/terms/\n",
+  "annotatedSchema": "description: annotated link with role and conformance\n$defs:\n  coderef:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n  coderefs:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull\nallOf:\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml\n- properties:\n    role:\n      $ref: '#/$defs/coderef'\n      x-jsonld-id: http://www.w3.org/ns/dx/prof/hasRole\n      x-jsonld-type: '@id'\n    conformsTo:\n      $ref: '#/$defs/coderefs'\n      x-jsonld-id: http://purl.org/dc/terms/conformsTo\n      x-jsonld-type: '@id'\n  required:\n  - role\nx-jsonld-prefixes:\n  prof: http://www.w3.org/ns/dx/prof/\n  dct: http://purl.org/dc/terms/\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/json-fg/link-role"
 }

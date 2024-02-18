@@ -44,15 +44,15 @@ allOf:
       items:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-        - $ref: ../../../ogc-utils/json-link/schema.yaml
+        - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: rdfs:seeAlso
     features:
       type: array
       items:
-        $ref: ../feature-lenient/schema.yaml
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
       x-jsonld-container: '@set'
       x-jsonld-id: https://purl.org/geojson/vocab#features
-- $ref: ../../features/featureCollection/schema.yaml
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 

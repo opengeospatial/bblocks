@@ -1,5 +1,5 @@
 Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection
-Generated 2024-02-15T19:51:04.020757+00:00
+Generated 2024-02-18T04:06:41.988363+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -18,7 +18,7 @@ ValidationError: 'time' is a required property
 
 Failed validating 'required' in schema['allOf'][1]['properties']['features']['items']:
     {'$schema': 'https://json-schema.org/draft/2019-09/schema',
-     'allOf': [{'$ref': '../../features/feature/schema.yaml'},
+     'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml'},
                {'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json'},
                                'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json',
                                                'x-jsonld-id': '@type'},
@@ -28,7 +28,7 @@ Failed validating 'required' in schema['allOf'][1]['properties']['features']['it
                                                 {'type': 'string'}],
                                       'x-jsonld-id': '@id'},
                                'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},
-                                                             {'$ref': '../../../ogc-utils/json-link/schema.yaml'}]},
+                                                             {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml'}]},
                                          'type': 'array',
                                          'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},
                                'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json'},

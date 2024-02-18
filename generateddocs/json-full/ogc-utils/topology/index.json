@@ -59,7 +59,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: feature with geometry by reference\nproperties:\n  type:\n    $ref: ../iri-or-curie/schema.yaml\n    x-jsonld-id: '@type'\n  references:\n    type: array\n    items:\n      $ref: ../iri-or-curie/schema.yaml\n    x-jsonld-id: https://purl.org/geojson/vocab#relatedFeatures\n    x-jsonld-type: '@id'\n    x-jsonld-container: '@list'\nrequired:\n- references\n- type\nx-jsonld-extra-terms:\n  LineString: https://purl.org/geojson/vocab#LineString\nx-jsonld-prefixes:\n  geojson: https://purl.org/geojson/vocab#\n  csdm: https://linked.data.gov.au/def/csdm/\n  dct: http://purl.org/dc/terms/\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: feature with geometry by reference\nproperties:\n  type:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    x-jsonld-id: '@type'\n  references:\n    type: array\n    items:\n      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    x-jsonld-id: https://purl.org/geojson/vocab#relatedFeatures\n    x-jsonld-type: '@id'\n    x-jsonld-container: '@list'\nrequired:\n- references\n- type\nx-jsonld-extra-terms:\n  LineString: https://purl.org/geojson/vocab#LineString\nx-jsonld-prefixes:\n  geojson: https://purl.org/geojson/vocab#\n  csdm: https://linked.data.gov.au/def/csdm/\n  dct: http://purl.org/dc/terms/\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/ogc-utils/topology"
 }

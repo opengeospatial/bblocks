@@ -35,7 +35,7 @@ x-defs:
     type: object
     properties:
       frameSpecification:
-        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Advanced.Schema.json/definitions/FrameSpecification
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/ogc.geo.geopose.advanced/definitions/FrameSpecification
       quaternion: {}
       validTime:
         type: integer
@@ -53,50 +53,5 @@ x-defs:
       geopose: http://example.com/geopose/
       geo: http://www.w3.org/2003/01/geo/wgs84_pos#
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml
-  schemas.opengis.net_geopose_1.0_schemata_GeoPose.Advanced.Schema.json:
-    description: 'Advanced: Advanced GeoPose allowing flexible outer frame specification,
-      quaternion orientation, and valid time.'
-    definitions:
-      FrameSpecification:
-        type: object
-        properties:
-          authority:
-            type: string
-          id:
-            type: string
-          parameters:
-            type: string
-        required:
-        - authority
-        - id
-        - parameters
-      Quaternion:
-        type: object
-        properties:
-          x:
-            type: number
-          y:
-            type: number
-          z:
-            type: number
-          w:
-            type: number
-        required:
-        - x
-        - y
-        - z
-        - w
-    type: object
-    properties:
-      frameSpecification:
-        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Advanced.Schema.json/definitions/FrameSpecification
-      quaternion:
-        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/schemas.opengis.net_geopose_1.0_schemata_GeoPose.Advanced.Schema.json/definitions/Quaternion
-      validTime:
-        type: integer
-    required:
-    - frameSpecification
-    - quaternion
-    x-schema-source: https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Advanced.Schema.json
 allOf:
 - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/ogc.geo.geopose.advanced

@@ -312,6 +312,9 @@
             <a href="#geopose-basic-quaternion-ogc-geo-geopose-basic-quaternion" class="toc-h1 toc-link" data-title="GeoPose Basic-Quaternion ogc.geo.geopose.basic.quaternion">GeoPose Basic-Quaternion <code>ogc.geo.geopose.basic.quaternion</code></a>
           </li>
           <li>
+            <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
+          </li>
+          <li>
             <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
           </li>
           <li>
@@ -341,6 +344,63 @@
 <aside class="success">
 This building block is <strong>valid</strong>
 </aside>
+<h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Basic-Quaternion:</span><span class="nv"> </span><span class="s">Basic</span><span class="nv"> </span><span class="s">GeoPose</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">quaternion</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">orientation'</span>
+<span class="na">definitions</span><span class="pi">:</span>
+  <span class="na">Position</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">lat</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+      <span class="na">lon</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+      <span class="na">h</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">lat</span>
+    <span class="pi">-</span> <span class="s">lon</span>
+    <span class="pi">-</span> <span class="s">h</span>
+  <span class="na">Quaternion</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">x</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+      <span class="na">y</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+      <span class="na">z</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+      <span class="na">w</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">x</span>
+    <span class="pi">-</span> <span class="s">y</span>
+    <span class="pi">-</span> <span class="s">z</span>
+    <span class="pi">-</span> <span class="s">w</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+<span class="na">properties</span><span class="pi">:</span>
+  <span class="na">position</span><span class="pi">:</span>
+    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/Position'</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://example.com/geopose/position</span>
+  <span class="na">quaternion</span><span class="pi">:</span>
+    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/Quaternion'</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://example.com/geopose/quaternion</span>
+<span class="na">required</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">position</span>
+<span class="pi">-</span> <span class="s">quaternion</span>
+<span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
+  <span class="na">geopose</span><span class="pi">:</span> <span class="s">http://example.com/geopose/</span>
+  <span class="na">geo</span><span class="pi">:</span> <span class="s">http://www.w3.org/2003/01/geo/wgs84_pos#</span>
+
+</code></pre></div>
+<blockquote>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Fannotated-schemas%2Fgeo%2Fgeopose%2Fbasic%2Fquaternion%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a></p>
+</blockquote>
+
+<p>Links to the schema:</p>
+
+<ul>
+<li>YAML version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.yaml" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.yaml</a></li>
+<li>JSON version: <a href="https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.json" target="_blank">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.json</a></li>
+</ul>
 <h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geopose:position"</span><span class="p">,</span><span class="w">
