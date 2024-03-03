@@ -11,6 +11,7 @@
       "xsd": "http://www.w3.org/2001/XMLSchema#",
       "prof": "http://www.w3.org/ns/dx/prof/",
       "dcat": "http://www.w3.org/ns/dcat#",
+      "modspec": "http://www.opengis.net/def/ont/modspec/",
       "itemIdentifier": "@id",
       "baseURL": "@id",
       "name": "rdfs:label",
@@ -95,18 +96,22 @@
       "imports": {
         "@id": "bblocks:imports",
         "@type": "@id"
+      },
+      "conformanceClasses": {
+        "@id": "modspec:class",
+        "@type": "@id"
       }
     }
   ],
-  "name": "OGC Main",
+  "name": "Building Blocks - OGC Main",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of building blocks managed by the OGC community through a variety of processes:\n\n- formal standards publication processes the Standards Working Groups\n- agreements with other standards bodies (eg. ISO)\n- community hosted examples of re-use (profiles and extensions of OGC standards)\n- informal \"incubator\" processes where more than one project needs a solution, and appropriate SWG scope is yet to be determined\n\n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n\n\nNotes:\n\n1. Policies are in preparation for naming and governance of these sub-registers, and this is subject to change pending adoption of such policies.\n1. Building Block identification will be designed to support transition between governance domains without change using symbolic references.\n1. A formal definition of Building Blocks and the level of \"granularity\" they represent with respect to the OGC Modular Specification is TBD.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2024-02-25T04:06:38.564558",
+  "modified": "2024-03-03T04:06:24.713454",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"511c71377d2cb8187d14b5ba55aea1eb84c03d40",
-      "shortCommitId": "\"511c71",
-      "date": "2024-02-19T19:40:19+00:00\""
+      "commitId": "\"3ab474f97c60e5422b1204350317b546bf781d3d",
+      "shortCommitId": "\"3ab474",
+      "date": "2024-02-28T09:41:23+00:00\""
     }
   },
   "gitRepository": "https://github.com/opengeospatial/bblocks",
@@ -119,7 +124,7 @@
     "skos:ConceptScheme",
     "dcat:Catalog"
   ],
-  "skos:prefLabel": "OGC Main",
+  "skos:prefLabel": "Building Blocks - OGC Main",
   "hasConcepts": [
     {
       "itemIdentifier": "ogc.geo.common.data_types.bounding_box",
@@ -130,7 +135,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response",
@@ -194,7 +199,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "IETF RFC 7946 - The GeoJSON Format",
@@ -247,7 +252,7 @@
       "itemClass": "parameter",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.15.3: Parameter bbox",
@@ -298,7 +303,7 @@
       "itemClass": "parameter",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC API - Features, Part 2, 6.3.1: Parameter bbox-crs",
@@ -349,7 +354,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "IETF RFC 8288 - Web Linking",
@@ -401,7 +406,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
@@ -454,7 +459,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
@@ -507,7 +512,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
@@ -561,7 +566,7 @@
       "itemClass": "datatype",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax",
@@ -620,7 +625,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
@@ -683,7 +688,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [],
       "maturity": "development",
       "scope": "unstable",
@@ -694,8 +699,8 @@
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
       "schema": {
@@ -740,7 +745,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [],
       "maturity": "development",
@@ -797,7 +802,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response",
@@ -855,7 +860,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -911,7 +916,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -970,7 +975,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1028,7 +1033,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-20",
+      "dateOfLastChange": "2024-02-25",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
