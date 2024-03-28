@@ -86,17 +86,19 @@ x-defs:
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
   beta.schemas.opengis.net_json-fg_featuretype.json:
     title: the featureType member
-    description: This JSON Schema is part of JSON-FG version 0.1.1
+    description: This JSON Schema is part of JSON-FG version 0.2.2
     oneOf:
     - type: string
     - type: array
       items:
         type: string
-    x-schema-version: https://json-schema.org/draft/2019-09/schema
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/featuretype.json
   beta.schemas.opengis.net_json-fg_link.json:
-    title: the Link object
-    description: This JSON Schema is part of JSON-FG version 0.1.1
+    title: a Link object
+    description: Since JSON-FG 0.2 this schema is no longer part of JSON-FG. The file
+      is still published as an informative schema in case any other schema includes
+      a reference. All references to this schema should be changed.
     type: object
     required:
     - href
@@ -117,7 +119,7 @@ x-defs:
         type: string
       length:
         type: string
-    x-schema-version: https://json-schema.org/draft/2019-09/schema
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/link.json
   opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml:
     description: JSON Link
@@ -158,7 +160,7 @@ x-defs:
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
   beta.schemas.opengis.net_json-fg_time.json:
     title: the time member
-    description: This JSON Schema is part of JSON-FG version 0.1.1
+    description: This JSON Schema is part of JSON-FG version 0.2.2
     oneOf:
     - type: object
       properties:
@@ -187,16 +189,17 @@ x-defs:
             enum:
             - ..
     nullable: true
-    x-schema-version: https://json-schema.org/draft/2019-09/schema
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/time.json
   beta.schemas.opengis.net_json-fg_coordrefsys.json:
     title: the coordRefSys member
-    description: This JSON Schema is part of JSON-FG version 0.1.1
+    description: This JSON Schema is part of JSON-FG version 0.2.2
     oneOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys
     - type: array
       items:
         $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys
+      minItems: 2
     $defs:
       single-refsys:
         oneOf:
@@ -205,7 +208,7 @@ x-defs:
         - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-custom
       refsys-simpleref:
         type: string
-        format: uri
+        description: The value is either a URI or a CURIE.
       refsys-byref:
         type: object
         required:
@@ -218,7 +221,7 @@ x-defs:
             - Reference
           href:
             type: string
-            format: uri
+            description: The value is either a URI or a CURIE.
           epoch:
             type: number
       refsys-custom:
@@ -231,11 +234,11 @@ x-defs:
             not:
               enum:
               - Reference
-    x-schema-version: https://json-schema.org/draft/2019-09/schema
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
   beta.schemas.opengis.net_json-fg_place.json:
     title: the place member
-    description: This JSON Schema is part of JSON-FG version 0.1.1
+    description: This JSON Schema is part of JSON-FG version 0.2.2
     oneOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint
@@ -249,11 +252,11 @@ x-defs:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPrism
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/CustomGeometry
     nullable: true
-    x-schema-version: https://json-schema.org/draft/2019-09/schema
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/place.json
   beta.schemas.opengis.net_json-fg_geometry.json:
     title: the geometry member
-    description: This JSON Schema is part of JSON-FG version 0.1.1
+    description: This JSON Schema is part of JSON-FG version 0.2.2
     oneOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint
@@ -263,7 +266,7 @@ x-defs:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/GeometryCollection
     nullable: true
-    x-schema-version: https://json-schema.org/draft/2019-09/schema
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/geometry.json
   opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.yaml:
     title: GeoJSON Feature
@@ -694,7 +697,7 @@ x-defs:
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml
   beta.schemas.opengis.net_json-fg_geometry-objects.json:
     title: the geometry objects
-    description: This JSON Schema is part of JSON-FG version 0.1.1
+    description: This JSON Schema is part of JSON-FG version 0.2.2
     $defs:
       CustomGeometry:
         title: A custom geometry object
@@ -718,7 +721,7 @@ x-defs:
               - MultiPrism
               - GeometryCollection
       Point:
-        title: GeoJSON Point
+        title: GeoJSON Point with additional 'coordRefSys' member
         type: object
         required:
         - type
@@ -728,12 +731,14 @@ x-defs:
             type: string
             enum:
             - Point
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           coordinates:
             $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position
           bbox:
             $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox
       LineString:
-        title: GeoJSON LineString
+        title: GeoJSON LineString with additional 'coordRefSys' member
         type: object
         required:
         - type
@@ -743,6 +748,8 @@ x-defs:
             type: string
             enum:
             - LineString
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           coordinates:
             type: array
             minItems: 2
@@ -751,7 +758,7 @@ x-defs:
           bbox:
             $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox
       Polygon:
-        title: GeoJSON Polygon
+        title: GeoJSON Polygon with additional 'coordRefSys' member
         type: object
         required:
         - type
@@ -761,6 +768,8 @@ x-defs:
             type: string
             enum:
             - Polygon
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           coordinates:
             type: array
             items:
@@ -771,7 +780,7 @@ x-defs:
           bbox:
             $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox
       MultiPoint:
-        title: GeoJSON MultiPoint
+        title: GeoJSON MultiPoint with additional 'coordRefSys' member
         type: object
         required:
         - type
@@ -781,6 +790,8 @@ x-defs:
             type: string
             enum:
             - MultiPoint
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           coordinates:
             type: array
             items:
@@ -788,7 +799,7 @@ x-defs:
           bbox:
             $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox
       MultiLineString:
-        title: GeoJSON MultiLineString
+        title: GeoJSON MultiLineString with additional 'coordRefSys' member
         type: object
         required:
         - type
@@ -798,6 +809,8 @@ x-defs:
             type: string
             enum:
             - MultiLineString
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           coordinates:
             type: array
             items:
@@ -808,7 +821,7 @@ x-defs:
           bbox:
             $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox
       MultiPolygon:
-        title: GeoJSON MultiPolygon
+        title: GeoJSON MultiPolygon with additional 'coordRefSys' member
         type: object
         required:
         - type
@@ -818,6 +831,8 @@ x-defs:
             type: string
             enum:
             - MultiPolygon
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           coordinates:
             type: array
             items:
@@ -840,6 +855,8 @@ x-defs:
             type: string
             enum:
             - Polyhedron
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           coordinates:
             type: array
             minItems: 1
@@ -867,6 +884,8 @@ x-defs:
             type: string
             enum:
             - MultiPolyhedron
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           coordinates:
             type: array
             items:
@@ -897,6 +916,8 @@ x-defs:
             type: string
             enum:
             - Prism
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           base:
             oneOf:
             - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point
@@ -922,6 +943,8 @@ x-defs:
             type: string
             enum:
             - MultiPrism
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           prisms:
             type: array
             items:
@@ -929,7 +952,7 @@ x-defs:
           bbox:
             $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d
       GeometryCollection:
-        title: GeoJSON GeometryCollection
+        title: GeoJSON GeometryCollection with additional 'coordRefSys' member
         type: object
         required:
         - type
@@ -939,6 +962,8 @@ x-defs:
             type: string
             enum:
             - GeometryCollection
+          coordRefSys:
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json
           geometries:
             type: array
             items:
@@ -979,7 +1004,7 @@ x-defs:
         maxItems: 6
         items:
           type: number
-    x-schema-version: https://json-schema.org/draft/2019-09/schema
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://beta.schemas.opengis.net/json-fg/geometry-objects.json
 allOf:
 - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema-oas3.0.yaml#/x-defs/ogc.geo.json-fg.feature-lenient
