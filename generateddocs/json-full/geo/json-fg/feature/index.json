@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2024-04-07",
+  "dateOfLastChange": "2024-04-14",
   "sources": [
     {
       "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -20,16 +20,16 @@
   "group": "JSON-FG",
   "shaclRules": {},
   "dependsOn": [
-    "ogc.geo.features.feature",
-    "ogc.ogc-utils.json-link"
+    "ogc.ogc-utils.json-link",
+    "ogc.geo.features.feature"
   ],
   "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
   "schema": {
     "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml",
     "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json"
   },
-  "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/context.jsonld",
   "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/schema.json",
+  "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/context.jsonld",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/",
   "validationPassed": true,
   "description": "OGC Features and Geometries JSON (JSON-FG) extends GeoJSON to support a limited set of additional capabilities that are\nout-of-scope for GeoJSON, but that are essential or important for a variety of use cases involving feature data.\n\nInformation that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in\nadditional top-level members of GeoJSON objects. The members use keys that do not conflict with GeoJSON including the\nobsolete version that pre-dates the IETF standard. GeoJSON clients will be able to parse and understand all aspects that\nare specified by GeoJSON, JSON-FG clients will also parse and understand the additional capabilities.\n\nThis Standard specifies the following minimal extensions to the GeoJSON Standard:\n\n* The ability to use Coordinate Reference Systems (CRSs) other than WGS 84;\n* The ability to use non-Euclidean metrics, in particular ellipsoidal metrics;\n* Support for solids and prisms as geometry types;\n* The ability to encode temporal characteristics of a feature; and\n* The ability to declare the type and the schema of a feature.\n\nInformation that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in\nadditional members of the GeoJSON objects. The additional members use keys that do not conflict with GeoJSON. This is so\nexisting and future GeoJSON clients will continue to parse and understand GeoJSON content. JSON-FG enabled clients will\nalso be able to parse and understand the additional members.\n\nJSON Schema is used to formally specify the JSON-FG syntax.",
