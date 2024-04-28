@@ -1,5 +1,5 @@
 x-defs:
-  ogc.geo.geopose.advanced:
+  _github_workspace_annotated-schemas_geo_geopose_advanced_schema.yaml:
     description: 'Advanced: Advanced GeoPose allowing flexible outer frame specification,
       quaternion orientation, and valid time.'
     definitions:
@@ -35,7 +35,7 @@ x-defs:
     type: object
     properties:
       frameSpecification:
-        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/ogc.geo.geopose.advanced/definitions/FrameSpecification
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/_github_workspace_annotated-schemas_geo_geopose_advanced_schema.yaml/definitions/FrameSpecification
       quaternion: {}
       validTime:
         type: integer
@@ -54,4 +54,4 @@ x-defs:
       geo: http://www.w3.org/2003/01/geo/wgs84_pos#
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml
 allOf:
-- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/ogc.geo.geopose.advanced
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema-oas3.0.yaml#/x-defs/_github_workspace_annotated-schemas_geo_geopose_advanced_schema.yaml
