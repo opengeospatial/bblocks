@@ -22,12 +22,36 @@
             *[data-bs-toggle].collapsed .caret {
                 transform: rotate(0deg);
             }
+            .highlighted {
+                animation: highlight-border 3500ms ease-out;
+            }
+            .highlighted h2 button {
+                animation: highlight 3500ms ease-out;
+            }
+            @keyframes highlight {
+                0% {
+                    background: #ffff90;
+                }
+                100% {
+                    background: var(--bs-accordion-active-bg);
+                }
+            }
+            @keyframes highlight-border {
+                0% {
+                    border-color: red;
+                    border-width: 2px;
+                }
+                100% {
+                    border-color: var(--bs-accordion-border-color);
+                    border-width: var(--bs-accordion-border-width);
+                }
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2024-05-01T12:19:57.042163+00:00</small>
+            <small class="datetime">Generated at 2024-05-05T04:07:30.898723+00:00</small>
                 <p class="summary fw-semibold text-success">
                     Number of passing building blocks: 17 / 17 (100%)
                 </p>
@@ -36,9 +60,11 @@
                 <a href="#" class="collapse-all">Collapse all</a>
             </div>
                 <div class="accordion mt-2" id="bblock-reports">
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.data_types.bounding_box" id="bblock-0">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.data_types.bounding_box" id="bblock-ogc.geo.common.data_types.bounding_box">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-0">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.common\.data_types\.bounding_box">
                                     <div class="flex-fill">
                                         Bounding Box
                                         <small class="ms-2 bblock-id">ogc.geo.common.data_types.bounding_box</small>
@@ -50,7 +76,7 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-0">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.common.data_types.bounding_box">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
@@ -84,9 +110,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.data_types.geojson" id="bblock-1">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.data_types.geojson" id="bblock-ogc.geo.common.data_types.geojson">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-1">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.common\.data_types\.geojson">
                                     <div class="flex-fill">
                                         GeoJSON
                                         <small class="ms-2 bblock-id">ogc.geo.common.data_types.geojson</small>
@@ -98,15 +126,17 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-1">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.common.data_types.geojson">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.parameters.bbox" id="bblock-2">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.parameters.bbox" id="bblock-ogc.geo.common.parameters.bbox">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-2">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.common\.parameters\.bbox">
                                     <div class="flex-fill">
                                         bbox
                                         <small class="ms-2 bblock-id">ogc.geo.common.parameters.bbox</small>
@@ -118,15 +148,17 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-2">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.common.parameters.bbox">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.parameters.bbox-crs" id="bblock-3">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.common.parameters.bbox-crs" id="bblock-ogc.geo.common.parameters.bbox-crs">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-3">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.common\.parameters\.bbox-crs">
                                     <div class="flex-fill">
                                         bbox-crs
                                         <small class="ms-2 bblock-id">ogc.geo.common.parameters.bbox-crs</small>
@@ -138,15 +170,17 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-3">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.common.parameters.bbox-crs">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ogc-utils.json-link" id="bblock-4">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ogc-utils.json-link" id="bblock-ogc.ogc-utils.json-link">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-4">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ogc-utils\.json-link">
                                     <div class="flex-fill">
                                         JSON Link
                                         <small class="ms-2 bblock-id">ogc.ogc-utils.json-link</small>
@@ -158,15 +192,17 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-4">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ogc-utils.json-link">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.geopose.advanced" id="bblock-5">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.geopose.advanced" id="bblock-ogc.geo.geopose.advanced">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-5">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.geopose\.advanced">
                                     <div class="flex-fill">
                                         GeoPose Advanced
                                         <small class="ms-2 bblock-id">ogc.geo.geopose.advanced</small>
@@ -178,15 +214,17 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-5">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.geopose.advanced">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.geopose.basic.quaternion" id="bblock-6">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.geopose.basic.quaternion" id="bblock-ogc.geo.geopose.basic.quaternion">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-6">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.geopose\.basic\.quaternion">
                                     <div class="flex-fill">
                                         GeoPose Basic-Quaternion
                                         <small class="ms-2 bblock-id">ogc.geo.geopose.basic.quaternion</small>
@@ -198,15 +236,17 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-6">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.geopose.basic.quaternion">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.geopose.basic.ypr" id="bblock-7">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.geopose.basic.ypr" id="bblock-ogc.geo.geopose.basic.ypr">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-7">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.geopose\.basic\.ypr">
                                     <div class="flex-fill">
                                         GeoPose Basic-YPR
                                         <small class="ms-2 bblock-id">ogc.geo.geopose.basic.ypr</small>
@@ -218,7 +258,7 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-7">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.geopose.basic.ypr">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 4 / 4
@@ -342,9 +382,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ogc-utils.iri-or-curie" id="bblock-8">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ogc-utils.iri-or-curie" id="bblock-ogc.ogc-utils.iri-or-curie">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-8">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ogc-utils\.iri-or-curie">
                                     <div class="flex-fill">
                                         IRI or CURIE
                                         <small class="ms-2 bblock-id">ogc.ogc-utils.iri-or-curie</small>
@@ -356,7 +398,7 @@
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-8">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ogc-utils.iri-or-curie">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 92 / 92
@@ -2803,9 +2845,11 @@ On instance:
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.features.feature" id="bblock-9">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.features.feature" id="bblock-ogc.geo.features.feature">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-9">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.features\.feature">
                                     <div class="flex-fill">
                                         Feature
                                         <small class="ms-2 bblock-id">ogc.geo.features.feature</small>
@@ -2817,7 +2861,7 @@ On instance:
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-9">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.features.feature">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
@@ -2854,9 +2898,11 @@ On instance:
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.link-role" id="bblock-10">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.link-role" id="bblock-ogc.geo.json-fg.link-role">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-10">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.json-fg\.link-role">
                                     <div class="flex-fill">
                                         Link with role and target conformance
                                         <small class="ms-2 bblock-id">ogc.geo.json-fg.link-role</small>
@@ -2868,7 +2914,7 @@ On instance:
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-10">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.json-fg.link-role">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
@@ -2905,9 +2951,11 @@ On instance:
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ogc-utils.topology" id="bblock-11">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ogc-utils.topology" id="bblock-ogc.ogc-utils.topology">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-11">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ogc-utils\.topology">
                                     <div class="flex-fill">
                                         Geometry using references
                                         <small class="ms-2 bblock-id">ogc.ogc-utils.topology</small>
@@ -2919,7 +2967,7 @@ On instance:
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-11">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ogc-utils.topology">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
@@ -2956,9 +3004,11 @@ On instance:
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.features.featureCollection" id="bblock-12">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.features.featureCollection" id="bblock-ogc.geo.features.featureCollection">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-12">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.features\.featureCollection">
                                     <div class="flex-fill">
                                         Feature Collection
                                         <small class="ms-2 bblock-id">ogc.geo.features.featureCollection</small>
@@ -2970,7 +3020,7 @@ On instance:
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-12">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.features.featureCollection">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
@@ -3007,9 +3057,11 @@ On instance:
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.feature" id="bblock-13">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.feature" id="bblock-ogc.geo.json-fg.feature">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-13">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.json-fg\.feature">
                                     <div class="flex-fill">
                                         JSON-FG Feature
                                         <small class="ms-2 bblock-id">ogc.geo.json-fg.feature</small>
@@ -3021,15 +3073,17 @@ On instance:
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-13">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.json-fg.feature">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.feature-lenient" id="bblock-14">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.feature-lenient" id="bblock-ogc.geo.json-fg.feature-lenient">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-14">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.json-fg\.feature-lenient">
                                     <div class="flex-fill">
                                         JSON-FG Feature - Lenient
                                         <small class="ms-2 bblock-id">ogc.geo.json-fg.feature-lenient</small>
@@ -3041,15 +3095,17 @@ On instance:
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-14">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.json-fg.feature-lenient">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.featureCollection" id="bblock-15">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.featureCollection" id="bblock-ogc.geo.json-fg.featureCollection">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-15">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.json-fg\.featureCollection">
                                     <div class="flex-fill">
                                         JSON-FG Feature Collection
                                         <small class="ms-2 bblock-id">ogc.geo.json-fg.featureCollection</small>
@@ -3061,7 +3117,7 @@ On instance:
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-15">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.json-fg.featureCollection">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 2 / 2
@@ -3182,9 +3238,11 @@ On instance[&#x27;features&#x27;][0]:
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.featureCollection-lenient" id="bblock-16">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.geo.json-fg.featureCollection-lenient" id="bblock-ogc.geo.json-fg.featureCollection-lenient">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-16">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.geo\.json-fg\.featureCollection-lenient">
                                     <div class="flex-fill">
                                         JSON-FG Feature Collection - Lenient
                                         <small class="ms-2 bblock-id">ogc.geo.json-fg.featureCollection-lenient</small>
@@ -3196,7 +3254,7 @@ On instance[&#x27;features&#x27;][0]:
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-16">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.json-fg.featureCollection-lenient">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
@@ -3216,6 +3274,13 @@ On instance[&#x27;features&#x27;][0]:
                         accordionEntries.forEach(e => e.classList.remove('show'));
                     }
                 });
+                if (location.hash.startsWith('#bblock-')) {
+                    const highlight = document.querySelector(location.hash.replaceAll('.', '\\.'));
+                    if (highlight) {
+                        highlight.querySelector('.accordion-collapse').classList.add('show');
+                        highlight.classList.add('highlighted');
+                    }
+                }
             });
         </script>
     </body>
