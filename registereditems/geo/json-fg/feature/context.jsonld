@@ -3,6 +3,8 @@
     "@version": 1.1,
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
+    "owlTime": "http://www.w3.org/2006/time#",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -29,6 +31,11 @@
     "properties": "@nest",
     "type": "@type",
     "links": "rdfs:seeAlso",
-    "featureType": "@type"
+    "featureType": "@type",
+    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+    "place": "dct:spatial",
+    "time": {
+      "@id": "dct:time"
+    }
   }
 }

@@ -1,0 +1,45 @@
+- title: Sample date (May 13th, 2024)
+  snippets:
+    - language: json
+      code: |
+        { 
+          "date": "2024-05-13"
+        }
+
+- title: 'Sample timestamp (May 13th, 2024, at 19:15:16 UTC)'
+  snippets:
+    - language: json
+      code: |
+        { 
+          "timestamp": "2024-05-13T19:15:16Z"
+        }
+
+- title: 'Sample timestamp with milliseconds'
+  snippets:
+    - language: json
+      code: |
+        { 
+          "timestamp": "2024-05-13T19:15:16.987Z"
+        }
+
+- title: "Interval between two dates"
+  snippets:
+    - language: json
+      code: |
+        { 
+          "interval": [
+            "2024-05-13", 
+            "2024-05-16"
+          ]
+        }
+
+- title: "Open-ended interval (no end timestamp)"
+  snippets:
+    - language: json
+      code: |
+        { 
+          "interval": [
+            "2024-05-13T19:15:16Z",
+            ".."
+          ]
+        }
