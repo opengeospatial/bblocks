@@ -629,9 +629,29 @@ also be able to parse and understand the additional members.</p>
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:collectionFeatureType"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Polyhedron"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Polyhedron"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MultiPolyhedron"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPolyhedron"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Prism"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Prism"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismBase"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismLower"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"upper"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismUpper"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"MultiPrism"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPrism"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"prisms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prisms"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:coordinates"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"geometries"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:geometry"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"rdfs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"oa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/oa#"</span><span class="p">,</span><span class="w">

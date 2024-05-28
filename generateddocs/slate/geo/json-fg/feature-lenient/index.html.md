@@ -95,6 +95,18 @@ x-jsonld-extra-terms:
   MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
   Point: https://purl.org/geojson/vocab#Point
   Polygon: https://purl.org/geojson/vocab#Polygon
+  Polyhedron: https://purl.org/geojson/vocab#Polyhedron
+  MultiPolyhedron: https://purl.org/geojson/vocab#MultiPolyhedron
+  Prism:
+    x-jsonld-id: https://purl.org/geojson/vocab#Prism
+    x-jsonld-context:
+      base: https://purl.org/geojson/vocab#prismBase
+      lower: https://purl.org/geojson/vocab#prismLower
+      upper: https://purl.org/geojson/vocab#prismUpper
+  MultiPrism:
+    x-jsonld-id: https://purl.org/geojson/vocab#MultiPrism
+    x-jsonld-context:
+      prisms: https://purl.org/geojson/vocab#prisms
   bbox:
     x-jsonld-container: '@list'
     x-jsonld-id: https://purl.org/geojson/vocab#bbox
@@ -104,6 +116,9 @@ x-jsonld-extra-terms:
   features:
     x-jsonld-container: '@set'
     x-jsonld-id: https://purl.org/geojson/vocab#features
+  geometries:
+    x-jsonld-id: https://purl.org/geojson/vocab#geometry
+    x-jsonld-container: '@list'
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
@@ -189,9 +204,29 @@ Links to the schema:
     },
     "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
     "place": "dct:spatial",
+    "Polyhedron": "geojson:Polyhedron",
+    "MultiPolyhedron": "geojson:MultiPolyhedron",
+    "Prism": {
+      "@id": "geojson:Prism",
+      "@context": {
+        "base": "geojson:prismBase",
+        "lower": "geojson:prismLower",
+        "upper": "geojson:prismUpper"
+      }
+    },
+    "MultiPrism": {
+      "@id": "geojson:MultiPrism",
+      "@context": {
+        "prisms": "geojson:prisms"
+      }
+    },
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
+    },
+    "geometries": {
+      "@id": "geojson:geometry",
+      "@container": "@list"
     },
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

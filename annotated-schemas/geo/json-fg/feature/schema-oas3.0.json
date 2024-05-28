@@ -76,6 +76,22 @@
         "MultiPolygon": "https://purl.org/geojson/vocab#MultiPolygon",
         "Point": "https://purl.org/geojson/vocab#Point",
         "Polygon": "https://purl.org/geojson/vocab#Polygon",
+        "Polyhedron": "https://purl.org/geojson/vocab#Polyhedron",
+        "MultiPolyhedron": "https://purl.org/geojson/vocab#MultiPolyhedron",
+        "Prism": {
+          "x-jsonld-id": "https://purl.org/geojson/vocab#Prism",
+          "x-jsonld-context": {
+            "base": "https://purl.org/geojson/vocab#prismBase",
+            "lower": "https://purl.org/geojson/vocab#prismLower",
+            "upper": "https://purl.org/geojson/vocab#prismUpper"
+          }
+        },
+        "MultiPrism": {
+          "x-jsonld-id": "https://purl.org/geojson/vocab#MultiPrism",
+          "x-jsonld-context": {
+            "prisms": "https://purl.org/geojson/vocab#prisms"
+          }
+        },
         "bbox": {
           "x-jsonld-container": "@list",
           "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
@@ -87,6 +103,10 @@
         "features": {
           "x-jsonld-container": "@set",
           "x-jsonld-id": "https://purl.org/geojson/vocab#features"
+        },
+        "geometries": {
+          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+          "x-jsonld-container": "@list"
         }
       },
       "x-jsonld-prefixes": {

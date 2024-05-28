@@ -408,6 +408,18 @@ out-of-scope for GeoJSON, but that are essential or important for a variety of u
   <span class="na">MultiPolygon</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#MultiPolygon</span>
   <span class="na">Point</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#Point</span>
   <span class="na">Polygon</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#Polygon</span>
+  <span class="na">Polyhedron</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#Polyhedron</span>
+  <span class="na">MultiPolyhedron</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#MultiPolyhedron</span>
+  <span class="na">Prism</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#Prism</span>
+    <span class="na">x-jsonld-context</span><span class="pi">:</span>
+      <span class="na">base</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#prismBase</span>
+      <span class="na">lower</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#prismLower</span>
+      <span class="na">upper</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#prismUpper</span>
+  <span class="na">MultiPrism</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#MultiPrism</span>
+    <span class="na">x-jsonld-context</span><span class="pi">:</span>
+      <span class="na">prisms</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#prisms</span>
   <span class="na">bbox</span><span class="pi">:</span>
     <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#bbox</span>
@@ -417,6 +429,9 @@ out-of-scope for GeoJSON, but that are essential or important for a variety of u
   <span class="na">features</span><span class="pi">:</span>
     <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#features</span>
+  <span class="na">geometries</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#geometry</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
 <span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
   <span class="na">geojson</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#</span>
   <span class="na">rdfs</span><span class="pi">:</span> <span class="s">http://www.w3.org/2000/01/rdf-schema#</span>
@@ -500,9 +515,29 @@ out-of-scope for GeoJSON, but that are essential or important for a variety of u
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"coordRefSys"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:spatial"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Polyhedron"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Polyhedron"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MultiPolyhedron"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPolyhedron"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Prism"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Prism"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismBase"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismLower"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"upper"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismUpper"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"MultiPrism"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPrism"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"prisms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prisms"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:coordinates"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"geometries"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:geometry"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"geojson"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"rdfs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span><span class="p">,</span><span class="w">
