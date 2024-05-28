@@ -112,12 +112,7 @@ Links to the schema:
           "@id": "dct:time"
         },
         "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-        "place": {
-          "@context": {
-            "@base": "https://purl.org/geojson/vocab#"
-          },
-          "@id": "dct:spatial"
-        }
+        "place": "dct:spatial"
       },
       "@container": "@set",
       "@id": "geojson:features"

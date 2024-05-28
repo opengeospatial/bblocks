@@ -55,7 +55,6 @@ allOf:
     place:
       $ref: https://beta.schemas.opengis.net/json-fg/place.json
       x-jsonld-id: http://purl.org/dc/terms/spatial
-      x-jsonld-base: https://purl.org/geojson/vocab#
     geometry:
       $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
       x-jsonld-id: https://purl.org/geojson/vocab#geometry
@@ -180,12 +179,7 @@ Links to the schema:
       "@id": "dct:time"
     },
     "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-    "place": {
-      "@context": {
-        "@base": "https://purl.org/geojson/vocab#"
-      },
-      "@id": "dct:spatial"
-    },
+    "place": "dct:spatial",
     "Polyhedron": "geojson:Polyhedron",
     "MultiPolyhedron": "geojson:MultiPolyhedron",
     "Prism": {
