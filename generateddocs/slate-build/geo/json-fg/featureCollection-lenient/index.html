@@ -448,7 +448,12 @@ need to provide values for their <code>place</code> or <code>time</code> propert
           </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:time"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"coordRefSys"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:spatial"</span><span class="w">
+        </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:spatial"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:features"</span><span class="w">

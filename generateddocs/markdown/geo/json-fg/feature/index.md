@@ -415,8 +415,8 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.opengis.net/def/glossary/term/> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -428,12 +428,12 @@ JSON Schema is used to formally specify the JSON-FG syntax.
     dcterms:spatial [ a geojson:Polyhedron ;
             geojson:coordinates ( ( ( ( ( 4.798167e+05 5.705862e+06 100 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798167e+05 5.705862e+06 100 ) ) ) ( ( ( 4.798167e+05 5.705862e+06 110 ) ( 4.798242e+05 5.705854e+06 110 ) ( 4.798297e+05 5.705859e+06 120 ) ( 4.798222e+05 5.705867e+06 120 ) ( 4.798167e+05 5.705862e+06 110 ) ) ) ( ( ( 4.798167e+05 5.705862e+06 110 ) ( 4.798167e+05 5.705862e+06 100 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798242e+05 5.705854e+06 110 ) ( 4.798167e+05 5.705862e+06 110 ) ) ) ( ( ( 4.798242e+05 5.705854e+06 110 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798297e+05 5.705859e+06 120 ) ( 4.798242e+05 5.705854e+06 110 ) ) ) ( ( ( 4.798297e+05 5.705859e+06 120 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798222e+05 5.705867e+06 120 ) ( 4.798297e+05 5.705859e+06 120 ) ) ) ( ( ( 4.798222e+05 5.705867e+06 120 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798167e+05 5.705862e+06 100 ) ( 4.798167e+05 5.705862e+06 110 ) ( 4.798222e+05 5.705867e+06 120 ) ) ) ) ) ] ;
     dcterms:time [ time:hasTime ( "2014-04-24T10:50:18Z" ".." ) ] ;
-    ns2:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
     rdfs:seeAlso [ rdfs:label "Cadastral parcel 313 in district Wünnenberg (016)" ;
-            ns1:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
+            ns2:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
             oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ],
         [ rdfs:label "This feature is of type 'building'" ;
-            ns1:relation <http://www.iana.org/assignments/relation/type> ;
+            ns2:relation <http://www.iana.org/assignments/relation/type> ;
             oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ] ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 8.709205e+00 5.150353e+01 100 ) ( 8.709313e+00 5.150346e+01 100 ) ( 8.709392e+00 5.15035e+01 100 ) ( 8.709284e+00 5.150357e+01 100 ) ( 8.709205e+00 5.150353e+01 100 ) ) ) ] .
@@ -543,6 +543,93 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 
 ```
 
+
+### Feature with a custom geometry (Arc)
+This feature follows
+[the Arc extension](https://github.com/opengeospatial/ogc-feat-geo-json/blob/main/core/examples/extensions/arc.json)
+for the `place` property.
+
+#### json
+```json
+{
+  "type": "Feature",
+  "id": "my-space-station",
+  "conformsTo": [
+    "[ogc-json-fg-1-0.2:core]",
+    "[ogc-json-fg-1-0.2:3d]"
+  ],
+  "featureType": "space-station",
+  "time": {
+    "interval": [
+      "2024-05-28T10:33:24Z",
+      ".."
+    ]
+  },
+  "geometry": null,
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+  "place": {
+    "type": "Arc",
+    "coordinates": [
+      81220.15,
+      455113.71,
+      44143.21
+    ]
+  },
+  "properties": null
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "type": "Feature",
+  "id": "my-space-station",
+  "conformsTo": [
+    "[ogc-json-fg-1-0.2:core]",
+    "[ogc-json-fg-1-0.2:3d]"
+  ],
+  "featureType": "space-station",
+  "time": {
+    "interval": [
+      "2024-05-28T10:33:24Z",
+      ".."
+    ]
+  },
+  "geometry": null,
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+  "place": {
+    "type": "Arc",
+    "coordinates": [
+      81220.15,
+      455113.71,
+      44143.21
+    ]
+  },
+  "properties": null,
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/json-fg/my-space-station> a <https://example.com/json-fg/space-station>,
+        geojson:Feature ;
+    dcterms:spatial [ a <https://purl.org/geojson/Arc> ;
+            geojson:coordinates ( 8.122015e+04 4.551137e+05 4.414321e+04 ) ] ;
+    dcterms:time [ time:hasTime ( "2024-05-28T10:33:24Z" ".." ) ] ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/7415" .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -588,6 +675,7 @@ allOf:
     place:
       $ref: https://beta.schemas.opengis.net/json-fg/place.json
       x-jsonld-id: http://purl.org/dc/terms/spatial
+      x-jsonld-base: https://purl.org/geojson/vocab#
     geometry:
       $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
       x-jsonld-id: https://purl.org/geojson/vocab#geometry
@@ -712,7 +800,12 @@ Links to the schema:
       "@id": "dct:time"
     },
     "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-    "place": "dct:spatial",
+    "place": {
+      "@context": {
+        "@base": "https://purl.org/geojson/vocab#"
+      },
+      "@id": "dct:spatial"
+    },
     "Polyhedron": "geojson:Polyhedron",
     "MultiPolyhedron": "geojson:MultiPolyhedron",
     "Prism": {
