@@ -111,16 +111,23 @@ NB. uses a local @context in the data example where application specialisations 
 
 #### ttl
 ```ttl
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix my: <http://my.org/featureTypes/> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
     skos:prefLabel "MyFeatureCollection" ;
     geojson:features <http://www.example.com/features/f1> .
 
 <http://www.example.com/features/f1> a my:FeatureType,
-        geojson:Feature .
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] ;
+    ns1:CoordinateReferenceSystemCRS "EPSG" .
 
 
 ```
@@ -245,7 +252,26 @@ Links to the schema:
           },
           "@id": "rdfs:seeAlso"
         },
-        "featureType": "@type"
+        "featureType": "@type",
+        "time": {
+          "@context": {
+            "date": {
+              "@id": "owlTime:hasTime",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            },
+            "timestamp": {
+              "@id": "owlTime:hasTime",
+              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "interval": {
+              "@id": "owlTime:hasTime",
+              "@container": "@list"
+            }
+          },
+          "@id": "dct:time"
+        },
+        "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+        "place": "dct:spatial"
       }
     },
     "featureType": "geojson:collectionFeatureType",
@@ -257,6 +283,9 @@ Links to the schema:
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
     "geojson": "https://purl.org/geojson/vocab#",
+    "owlTime": "http://www.w3.org/2006/time#",
+    "time": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "@version": 1.1
   }
 }

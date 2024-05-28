@@ -100,36 +100,6 @@ another-document#ref
 
 ```
 
-
-### JSON-LD CURIE example
-#### jsonld
-```jsonld
-{
-  "@context": {
-    "ex": "http://example.com/",
-    "dct": {
-      "@id": "http://purl.org/dc/terms/"
-    },
-    "dct:conformsTo": {
-      "@type": "@id"
-    }
-  },
-  "@id": "ex:feature1",
-  "dct:conformsTo": "ex:profile2" 
-}
-
-```
-
-#### ttl
-```ttl
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix ex: <http://example.com/> .
-
-ex:feature1 dct:conformsTo ex:profile2 .
-
-
-```
-
 ## Schema
 
 ```yaml

@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<https://example.com/json-fg/fence.1> a <https://example.com/json-fg/fence>,
+        geojson:Feature ;
+    dcterms:spatial [ a <https://example.com/json-fg/Prism> ] ;
+    dcterms:time [ time:hasTime ( "2022-07-12T16:55:18Z" ".." ) ] ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/7415" .
+

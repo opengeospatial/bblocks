@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="ogc-utils ogc-utils_iri-or-curie ogc-utils_iri-or-curie_index" data-languages="[&quot;plaintext&quot;,&quot;json&quot;,&quot;jsonld&quot;,&quot;turtle&quot;]">
+  <body class="ogc-utils ogc-utils_iri-or-curie ogc-utils_iri-or-curie_index" data-languages="[&quot;plaintext&quot;,&quot;json&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -306,8 +306,6 @@
         <div class="lang-selector">
               <a href="#" data-language-name="plaintext">Plain text</a>
               <a href="#" data-language-name="json">JSON</a>
-              <a href="#" data-language-name="jsonld">JSON-LD</a>
-              <a href="#" data-language-name="turtle">RDF/Turtle</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -340,9 +338,6 @@
                   </li>
                   <li>
                     <a href="#multiple-iris-or-curies" class="toc-h2 toc-link" data-title="Multiple IRIs or CURIEs">Multiple IRIs or CURIEs</a>
-                  </li>
-                  <li>
-                    <a href="#json-ld-curie-example" class="toc-h2 toc-link" data-title="JSON-LD CURIE example">JSON-LD CURIE example</a>
                   </li>
               </ul>
           </li>
@@ -443,37 +438,6 @@ another-document#ref
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_6_2.json">Open in new window</a>
     <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fogc-utils%2Firi-or-curie%2Fexample_6_2.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
-<h2 id='json-ld-curie-example'>JSON-LD CURIE example</h2><div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"ex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dct"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"dct:conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ex:feature1"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dct:conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ex:profile2"</span><span class="w"> 
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div>
-<blockquote class="lang-specific jsonld">
-  <p class="example-links">
-    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_7_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fogc-utils%2Firi-or-curie%2Fexample_7_1.jsonld">View on JSON-LD Playground</a>
-</blockquote>
-<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">dct:</span><span class="w"> </span><span class="nl">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
-</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nl">&lt;http://example.com/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
-
-</span><span class="nn">ex:</span><span class="n">feature1</span><span class="w"> </span><span class="nn">dct:</span><span class="n">conformsTo</span><span class="w"> </span><span class="nn">ex:</span><span class="n">profile2</span><span class="w"> </span><span class="p">.</span><span class="w">
-
-
-</span></code></pre></div>
-<blockquote class="lang-specific turtle">
-  <p class="example-links">
-    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_7_1.ttl">Open in new window</a>
-</blockquote>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">IRI or CURIE</span>
 <span class="na">$defs</span><span class="pi">:</span>
@@ -538,8 +502,6 @@ another-document#ref
           <div class="lang-selector">
                 <a href="#" data-language-name="plaintext">Plain text</a>
                 <a href="#" data-language-name="json">JSON</a>
-                <a href="#" data-language-name="jsonld">JSON-LD</a>
-                <a href="#" data-language-name="turtle">RDF/Turtle</a>
           </div>
       </div>
     </div>

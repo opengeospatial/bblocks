@@ -461,16 +461,23 @@ also be able to parse and understand the additional members.</p>
     <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.jsonld">Open in new window</a>
     <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2FfeatureCollection%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
-<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">geojson:</span><span class="w"> </span><span class="nl">&lt;https://purl.org/geojson/vocab#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nl">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">geojson:</span><span class="w"> </span><span class="nl">&lt;https://purl.org/geojson/vocab#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 </span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">my:</span><span class="w"> </span><span class="nl">&lt;http://my.org/featureTypes/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">ns1:</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/def/glossary/term/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 </span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 </span><span class="nl">&lt;http://www.example.com/features/MyFeatureCollection&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">FeatureCollection</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">skos:</span><span class="n">prefLabel</span><span class="w"> </span><span class="s">"MyFeatureCollection"</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">geojson:</span><span class="n">features</span><span class="w"> </span><span class="nl">&lt;http://www.example.com/features/f1&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 </span><span class="nl">&lt;http://www.example.com/features/f1&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">my:</span><span class="n">FeatureType,
-</span><span class="w">        </span><span class="nn">geojson:</span><span class="n">Feature</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="w">        </span><span class="nn">geojson:</span><span class="n">Feature</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">dcterms:</span><span class="n">spatial</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Point</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.7</span><span class="mi">47502</span><span class="n">e+02</span><span class="w"> </span><span class="mf">-3.6</span><span class="mi">93074</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">ns1:</span><span class="n">CoordinateReferenceSystemCRS</span><span class="w"> </span><span class="s">"EPSG"</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 
 </span></code></pre></div>
@@ -599,7 +606,26 @@ also be able to parse and understand the additional members.</p>
           </span><span class="p">},</span><span class="w">
           </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:seeAlso"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="w">
+        </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#date"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#dateTime"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:time"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"coordRefSys"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:spatial"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:collectionFeatureType"</span><span class="p">,</span><span class="w">
@@ -611,6 +637,9 @@ also be able to parse and understand the additional members.</p>
     </span><span class="nl">"oa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/oa#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"geojson"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"owlTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2006/time#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2006/time#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"xsd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">

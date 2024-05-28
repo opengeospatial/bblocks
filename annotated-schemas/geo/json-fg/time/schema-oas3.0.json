@@ -1,0 +1,113 @@
+{
+  "x-defs": {
+    "_github_workspace_annotated-schemas_geo_json-fg_time_schema.json": {
+      "title": "the time member",
+      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "date": {},
+            "timestamp": {},
+            "interval": {}
+          }
+        }
+      ],
+      "$defs": {
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "timestamp": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+        },
+        "interval": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
+              },
+              {
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  ".."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "x-jsonld-prefixes": {
+        "time": "http://www.w3.org/2006/time#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+      },
+      "nullable": true,
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema-oas3.0.json"
+    },
+    "beta.schemas.opengis.net_json-fg_time.json": {
+      "title": "the time member",
+      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "date": {},
+            "timestamp": {},
+            "interval": {}
+          }
+        }
+      ],
+      "$defs": {
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "timestamp": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+        },
+        "interval": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
+              },
+              {
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  ".."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "x-jsonld-prefixes": {
+        "time": "http://www.w3.org/2006/time#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+      },
+      "nullable": true,
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/time.json"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema-oas3.0.json#/x-defs/_github_workspace_annotated-schemas_geo_json-fg_time_schema.json"
+    }
+  ]
+}

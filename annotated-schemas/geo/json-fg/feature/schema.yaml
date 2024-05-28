@@ -32,11 +32,14 @@ allOf:
         - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     time:
-      $ref: https://beta.schemas.opengis.net/json-fg/time.json
+      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+      x-jsonld-id: http://purl.org/dc/terms/time
     coordRefSys:
       $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+      x-jsonld-id: http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
     place:
       $ref: https://beta.schemas.opengis.net/json-fg/place.json
+      x-jsonld-id: http://purl.org/dc/terms/spatial
     geometry:
       $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
       x-jsonld-id: https://purl.org/geojson/vocab#geometry
@@ -67,3 +70,5 @@ x-jsonld-extra-terms:
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
+  owlTime: http://www.w3.org/2006/time#

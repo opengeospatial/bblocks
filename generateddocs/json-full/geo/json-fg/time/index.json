@@ -1,0 +1,136 @@
+
+
+{
+  "itemIdentifier": "ogc.geo.json-fg.time",
+  "name": "JSON-FG time member",
+  "status": "stable",
+  "dateTimeAddition": "2024-05-28T09:45:00+00:00",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.2.2",
+  "dateOfLastChange": "2024-05-28",
+  "schema": {
+    "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml",
+    "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json"
+  },
+  "sources": [
+    {
+      "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
+      "link": "http://docs.ogc.org/per/21-017r1.html"
+    }
+  ],
+  "scope": "geo",
+  "group": "JSON-FG",
+  "shaclRules": {},
+  "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "sourceSchema": "https://beta.schemas.opengis.net/json-fg/time.json",
+  "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/time/context.jsonld",
+  "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/time/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/time/",
+  "examples": [
+    {
+      "title": "Sample date (May 13th, 2024)",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{ \n  \"date\": \"2024-05-13\"\n}\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"date\": \"2024-05-13\",\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\"\n}",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix time: <http://www.w3.org/2006/time#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] time:hasTime \"2024-05-13\"^^xsd:date .\n\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_1_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Sample timestamp (May 13th, 2024, at 19:15:16 UTC)",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{ \n  \"timestamp\": \"2024-05-13T19:15:16Z\"\n}\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"timestamp\": \"2024-05-13T19:15:16Z\",\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\"\n}",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix time: <http://www.w3.org/2006/time#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] time:hasTime \"2024-05-13T19:15:16+00:00\"^^xsd:dateTime .\n\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_2_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Sample timestamp with milliseconds",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{ \n  \"timestamp\": \"2024-05-13T19:15:16.987Z\"\n}\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"timestamp\": \"2024-05-13T19:15:16.987Z\",\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\"\n}",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix time: <http://www.w3.org/2006/time#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] time:hasTime \"2024-05-13T19:15:16.987000+00:00\"^^xsd:dateTime .\n\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_3_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Interval between two dates",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{ \n  \"interval\": [\n    \"2024-05-13\", \n    \"2024-05-16\"\n  ]\n}\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_4_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"interval\": [\n    \"2024-05-13\",\n    \"2024-05-16\"\n  ],\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\"\n}",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_4_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix time: <http://www.w3.org/2006/time#> .\n\n[] time:hasTime ( \"2024-05-13\" \"2024-05-16\" ) .\n\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_4_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Open-ended interval (no end timestamp)",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{ \n  \"interval\": [\n    \"2024-05-13T19:15:16Z\",\n    \"..\"\n  ]\n}\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_5_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"interval\": [\n    \"2024-05-13T19:15:16Z\",\n    \"..\"\n  ],\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\"\n}",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_5_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix time: <http://www.w3.org/2006/time#> .\n\n[] time:hasTime ( \"2024-05-13T19:15:16Z\" \"..\" ) .\n\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_5_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://beta.schemas.opengis.net/json-fg/time.json\ntitle: the time member\ndescription: This JSON Schema is part of JSON-FG version 0.2.2\noneOf:\n- type: 'null'\n- type: object\n  properties:\n    date:\n      $ref: '#/$defs/date'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-type: http://www.w3.org/2001/XMLSchema#date\n    timestamp:\n      $ref: '#/$defs/timestamp'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n    interval:\n      $ref: '#/$defs/interval'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-container: '@list'\n$defs:\n  date:\n    type: string\n    pattern: ^\\d{4}-\\d{2}-\\d{2}$\n  timestamp:\n    type: string\n    pattern: ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$\n  interval:\n    type: array\n    minItems: 2\n    maxItems: 2\n    items:\n      oneOf:\n      - $ref: '#/$defs/date'\n      - $ref: '#/$defs/timestamp'\n      - type: string\n        enum:\n        - ..\nx-jsonld-prefixes:\n  time: http://www.w3.org/2006/time#\n  xsd: http://www.w3.org/2001/XMLSchema#\n",
+  "gitRepository": "https://github.com/opengeospatial/bblocks",
+  "gitPath": "registereditems/geo/json-fg/time"
+}

@@ -69,11 +69,14 @@ allOf:
         - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     time:
-      $ref: https://beta.schemas.opengis.net/json-fg/time.json
+      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+      x-jsonld-id: http://purl.org/dc/terms/time
     coordRefSys:
       $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+      x-jsonld-id: http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
     place:
       $ref: https://beta.schemas.opengis.net/json-fg/place.json
+      x-jsonld-id: http://purl.org/dc/terms/spatial
     geometry:
       $ref: https://beta.schemas.opengis.net/json-fg/geometry.json
       x-jsonld-id: https://purl.org/geojson/vocab#geometry
@@ -104,6 +107,8 @@ x-jsonld-extra-terms:
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
+  owlTime: http://www.w3.org/2006/time#
 
 ```
 
@@ -165,6 +170,25 @@ Links to the schema:
       "@id": "rdfs:seeAlso"
     },
     "featureType": "@type",
+    "time": {
+      "@context": {
+        "date": {
+          "@id": "owlTime:hasTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "timestamp": {
+          "@id": "owlTime:hasTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "interval": {
+          "@id": "owlTime:hasTime",
+          "@container": "@list"
+        }
+      },
+      "@id": "dct:time"
+    },
+    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+    "place": "dct:spatial",
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
@@ -173,6 +197,8 @@ Links to the schema:
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "owlTime": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "@version": 1.1
   }
 }

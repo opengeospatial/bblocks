@@ -382,11 +382,14 @@ out-of-scope for GeoJSON, but that are essential or important for a variety of u
         <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml</span>
       <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2000/01/rdf-schema#seeAlso</span>
     <span class="na">time</span><span class="pi">:</span>
-      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/time.json</span>
+      <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml</span>
+      <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/time</span>
     <span class="na">coordRefSys</span><span class="pi">:</span>
       <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/coordrefsys.json</span>
+      <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS</span>
     <span class="na">place</span><span class="pi">:</span>
       <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/place.json</span>
+      <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/spatial</span>
     <span class="na">geometry</span><span class="pi">:</span>
       <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://beta.schemas.opengis.net/json-fg/geometry.json</span>
       <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#geometry</span>
@@ -417,6 +420,8 @@ out-of-scope for GeoJSON, but that are essential or important for a variety of u
 <span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
   <span class="na">geojson</span><span class="pi">:</span> <span class="s">https://purl.org/geojson/vocab#</span>
   <span class="na">rdfs</span><span class="pi">:</span> <span class="s">http://www.w3.org/2000/01/rdf-schema#</span>
+  <span class="na">dct</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/</span>
+  <span class="na">owlTime</span><span class="pi">:</span> <span class="s">http://www.w3.org/2006/time#</span>
 
 </code></pre></div>
 <blockquote>
@@ -476,6 +481,25 @@ out-of-scope for GeoJSON, but that are essential or important for a variety of u
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:seeAlso"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#date"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#dateTime"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:time"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"coordRefSys"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:spatial"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:coordinates"</span><span class="w">
@@ -484,6 +508,8 @@ out-of-scope for GeoJSON, but that are essential or important for a variety of u
     </span><span class="nl">"rdfs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"oa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/oa#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"owlTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2006/time#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"xsd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
