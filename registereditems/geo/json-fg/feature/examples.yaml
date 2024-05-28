@@ -9,3 +9,13 @@
     - language: json
       ref: https://github.com/opengeospatial/ogc-feat-geo-json/raw/main/core/examples/fence.json
       base-uri: https://example.com/json-fg/
+
+- title: Feature with a custom geometry (Arc)
+  content: |
+    This feature follows
+    [the Arc extension](https://github.com/opengeospatial/ogc-feat-geo-json/blob/main/core/examples/extensions/arc.json)
+    for the `place` property.
+  snippets:
+    - language: json
+      base-uri: "https://example.com/json-fg/"
+      ref: examples/custom-geometry.json

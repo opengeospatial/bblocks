@@ -53,7 +53,13 @@
     "links": "rdfs:seeAlso",
     "featureType": "@type",
     "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-    "place": "dct:spatial",
+    "place": {
+      "@id": "dct:spatial",
+      "@context": {
+        "@base": "https://purl.org/geojson/vocab#",
+        "type": "@type"
+      }
+    },
     "time": {
       "@id": "dct:time"
     }
