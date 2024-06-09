@@ -1,43 +1,6 @@
 {
   "x-defs": {
-    "_github_workspace_annotated-schemas_geo_features_feature_schema.json": {
-      "allOf": [
-        {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.json"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_bounding_box_schema.json"
-            },
-            "links": {
-              "type": "array",
-              "items": {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.json"
-              },
-              "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
-            },
-            "type": {
-              "const": "Feature"
-            }
-          },
-          "required": [
-            "type",
-            "geometry",
-            "properties"
-          ]
-        }
-      ],
-      "x-jsonld-extra-terms": {
-        "properties": "@nest"
-      },
-      "x-jsonld-prefixes": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-      },
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json"
-    },
-    "opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.json": {
+    "ogc.geo.common.data_types.geojson": {
       "title": "GeoJSON Feature",
       "type": "object",
       "required": [
@@ -622,10 +585,11 @@
       "x-jsonld-prefixes": {
         "geojson": "https://purl.org/geojson/vocab#"
       },
-      "x-schema-version": "http://json-schema.org/draft-07/schema#",
-      "x-schema-source": "https://geojson.org/schema/Feature.json"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json",
+      "x-schema-id": "https://geojson.org/schema/Feature.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema#"
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_bounding_box_schema.json": {
+    "ogc.geo.common.data_types.bounding_box": {
       "type": "array",
       "oneOf": [
         {
@@ -642,7 +606,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json"
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.json": {
+    "ogc.ogc-utils.json-link": {
       "description": "JSON Link",
       "type": "object",
       "required": [
@@ -687,13 +651,44 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "http://purl.org/dc/terms/"
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     }
   },
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json#/x-defs/_github_workspace_annotated-schemas_geo_features_feature_schema.json"
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.geojson"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "bbox": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.bounding_box"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
+          },
+          "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+        },
+        "type": {
+          "enum": [
+            "Feature"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ]
     }
-  ]
+  ],
+  "x-jsonld-extra-terms": {
+    "properties": "@nest"
+  },
+  "x-jsonld-prefixes": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  }
 }

@@ -1,70 +1,9 @@
 {
   "x-defs": {
-    "_github_workspace_annotated-schemas_geo_json-fg_featureCollection_schema.json": {
-      "title": "a JSON-FG Feature Collection",
-      "description": "This JSON Schema is part of JSON-FG version 0.1.1",
-      "type": "object",
-      "required": [
-        "type",
-        "features"
-      ],
+    "ogc.geo.features.featureCollection": {
       "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_features_featureCollection_schema.json"
-        },
-        {
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "FeatureCollection"
-              ],
-              "x-jsonld-id": "@type"
-            },
-            "featureType": {},
-            "geometryDimension": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 3
-            },
-            "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
-            },
-            "links": {
-              "type": "array",
-              "items": {
-                "allOf": [
-                  {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_link.json"
-                  },
-                  {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.json"
-                  }
-                ]
-              },
-              "x-jsonld-id": "rdfs:seeAlso"
-            },
-            "features": {
-              "type": "array",
-              "items": {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_json-fg_feature_schema.json"
-              },
-              "x-jsonld-container": "@set",
-              "x-jsonld-id": "https://purl.org/geojson/vocab#features"
-            }
-          }
-        }
-      ],
-      "x-jsonld-prefixes": {
-        "geojson": "https://purl.org/geojson/vocab#"
-      },
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json"
-    },
-    "opengeospatial.github.io_bblocks_annotated-schemas_geo_features_featureCollection_schema.json": {
-      "allOf": [
-        {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geojson.org_schema_FeatureCollection.json"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/FeatureCollection"
         },
         {
           "type": "object",
@@ -72,7 +11,7 @@
             "links": {
               "type": "array",
               "items": {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml"
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link_1"
               },
               "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
             },
@@ -91,7 +30,7 @@
             "features": {
               "type": "array",
               "items": {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_features_feature_schema.yaml"
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.features.feature"
               }
             }
           }
@@ -105,7 +44,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json"
     },
-    "beta.schemas.opengis.net_json-fg_featuretype.json": {
+    "featuretype": {
       "title": "the featureType member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
@@ -119,20 +58,21 @@
           }
         }
       ],
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/featuretype.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/featuretype.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "beta.schemas.opengis.net_json-fg_coordrefsys.json": {
+    "coordrefsys": {
       "title": "the coordRefSys member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys/$defs/single-refsys"
         },
         {
           "type": "array",
           "items": {
-            "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
+            "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys/$defs/single-refsys"
           },
           "minItems": 2
         }
@@ -141,13 +81,13 @@
         "single-refsys": {
           "oneOf": [
             {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-simpleref"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys/$defs/refsys-simpleref"
             },
             {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-byref"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys/$defs/refsys-byref"
             },
             {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-custom"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys/$defs/refsys-custom"
             }
           ]
         },
@@ -194,10 +134,11 @@
           }
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "beta.schemas.opengis.net_json-fg_link.json": {
+    "link": {
       "title": "a Link object",
       "description": "Since JSON-FG 0.2 this schema is no longer part of JSON-FG. The file is still published as an informative schema in case any other schema includes a reference. All references to this schema should be changed.",
       "type": "object",
@@ -229,10 +170,11 @@
           "type": "string"
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/link.json"
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/link.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/link.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.json": {
+    "ogc.ogc-utils.json-link": {
       "description": "JSON Link",
       "type": "object",
       "required": [
@@ -277,10 +219,10 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "http://purl.org/dc/terms/"
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_geo_json-fg_feature_schema.json": {
+    "ogc.geo.json-fg.feature": {
       "title": "a JSON-FG Feature",
       "description": "This JSON Schema is part of JSON-FG version 0.1.1",
       "type": "object",
@@ -293,7 +235,7 @@
       ],
       "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_features_feature_schema.yaml"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.features.feature"
         },
         {
           "properties": {
@@ -315,25 +257,60 @@
               ],
               "x-jsonld-id": "@id"
             },
-            "featureType": {},
+            "featureType": {
+              "x-jsonld-id": "@type",
+              "allOf": [
+                {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/featuretype"
+                }
+              ]
+            },
             "links": {
               "type": "array",
               "items": {
                 "allOf": [
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_link.json"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/link"
                   },
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link_1"
                   }
                 ]
               },
               "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
             },
-            "time": {},
-            "coordRefSys": {},
-            "place": {},
-            "geometry": {},
+            "time": {
+              "x-jsonld-id": "http://purl.org/dc/terms/time",
+              "allOf": [
+                {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time"
+                }
+              ]
+            },
+            "coordRefSys": {
+              "x-jsonld-id": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+              "allOf": [
+                {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
+                }
+              ]
+            },
+            "place": {
+              "x-jsonld-id": "http://purl.org/dc/terms/spatial",
+              "allOf": [
+                {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/place"
+                }
+              ]
+            },
+            "geometry": {
+              "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+              "allOf": [
+                {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry"
+                }
+              ]
+            },
             "properties": {
               "oneOf": [
                 {
@@ -395,10 +372,10 @@
         "dct": "http://purl.org/dc/terms/",
         "owlTime": "http://www.w3.org/2006/time#"
       },
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2019-09/schema"
     },
-    "geojson.org_schema_FeatureCollection.json": {
+    "FeatureCollection": {
       "title": "GeoJSON FeatureCollection",
       "type": "object",
       "required": [
@@ -922,10 +899,11 @@
           }
         }
       },
-      "x-schema-version": "http://json-schema.org/draft-07/schema#",
-      "x-schema-source": "https://geojson.org/schema/FeatureCollection.json"
+      "x-schema-source": "https://geojson.org/schema/FeatureCollection.json",
+      "x-schema-id": "https://geojson.org/schema/FeatureCollection.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema#"
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml": {
+    "ogc.ogc-utils.json-link_1": {
       "description": "JSON Link",
       "type": "object",
       "required": [
@@ -970,29 +948,31 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "http://purl.org/dc/terms/"
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_geo_features_feature_schema.yaml": {
+    "ogc.geo.features.feature": {
       "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.yaml"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.geojson"
         },
         {
           "type": "object",
           "properties": {
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_bounding_box_schema.yaml"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.bounding_box"
             },
             "links": {
               "type": "array",
               "items": {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml"
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link_1"
               },
               "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
             },
             "type": {
-              "const": "Feature"
+              "enum": [
+                "Feature"
+              ]
             }
           },
           "required": [
@@ -1010,16 +990,40 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml"
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_geo_json-fg_time_schema.yaml": {
+    "ogc.geo.json-fg.time": {
       "title": "the time member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
           "type": "object",
           "properties": {
-            "date": {},
-            "timestamp": {},
-            "interval": {}
+            "date": {
+              "x-jsonld-id": "http://www.w3.org/2006/time#hasTime",
+              "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#date",
+              "allOf": [
+                {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/date"
+                }
+              ]
+            },
+            "timestamp": {
+              "x-jsonld-id": "http://www.w3.org/2006/time#hasTime",
+              "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "allOf": [
+                {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/timestamp"
+                }
+              ]
+            },
+            "interval": {
+              "x-jsonld-id": "http://www.w3.org/2006/time#hasTime",
+              "x-jsonld-container": "@list",
+              "allOf": [
+                {
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/interval"
+                }
+              ]
+            }
           }
         }
       ],
@@ -1039,10 +1043,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/date"
               },
               {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/timestamp"
               },
               {
                 "type": "string",
@@ -1058,83 +1062,86 @@
         "time": "http://www.w3.org/2006/time#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
       },
-      "nullable": true,
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/time.json",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/time.json"
+      "nullable": true
     },
-    "beta.schemas.opengis.net_json-fg_place.json": {
+    "place": {
       "title": "the place member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Point"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPoint"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/LineString"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiLineString"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polygon"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolygon"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polyhedron"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polyhedron"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolyhedron"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolyhedron"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Prism"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Prism"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPrism"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPrism"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/CustomGeometry"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/CustomGeometry"
         }
       ],
-      "nullable": true,
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/place.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/place.json",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/place.json"
+      "nullable": true
     },
-    "beta.schemas.opengis.net_json-fg_geometry.json": {
+    "geometry": {
       "title": "the geometry member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Point"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPoint"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/LineString"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiLineString"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polygon"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolygon"
         },
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/GeometryCollection"
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/GeometryCollection"
         }
       ],
-      "nullable": true,
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/geometry.json",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry.json"
+      "nullable": true
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.yaml": {
+    "ogc.geo.common.data_types.geojson": {
       "title": "GeoJSON Feature",
       "type": "object",
       "required": [
@@ -1719,10 +1726,11 @@
       "x-jsonld-prefixes": {
         "geojson": "https://purl.org/geojson/vocab#"
       },
-      "x-schema-version": "http://json-schema.org/draft-07/schema#",
-      "x-schema-source": "https://geojson.org/schema/Feature.json"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+      "x-schema-id": "https://geojson.org/schema/Feature.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema#"
     },
-    "opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_bounding_box_schema.yaml": {
+    "ogc.geo.common.data_types.bounding_box": {
       "type": "array",
       "oneOf": [
         {
@@ -1739,59 +1747,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml"
     },
-    "beta.schemas.opengis.net_json-fg_time.json": {
-      "title": "the time member",
-      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
-      "oneOf": [
-        {
-          "type": "object",
-          "properties": {
-            "date": {},
-            "timestamp": {},
-            "interval": {}
-          }
-        }
-      ],
-      "$defs": {
-        "date": {
-          "type": "string",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-        },
-        "timestamp": {
-          "type": "string",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
-        },
-        "interval": {
-          "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
-              },
-              {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
-              },
-              {
-                "type": "string",
-                "enum": [
-                  ".."
-                ]
-              }
-            ]
-          }
-        }
-      },
-      "x-jsonld-prefixes": {
-        "time": "http://www.w3.org/2006/time#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-      },
-      "nullable": true,
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/time.json"
-    },
-    "beta.schemas.opengis.net_json-fg_geometry-objects.json": {
+    "geometry-objects": {
       "title": "the geometry objects",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "$defs": {
@@ -1837,13 +1793,13 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -1862,17 +1818,17 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
               "minItems": 2,
               "items": {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -1891,7 +1847,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -1899,12 +1855,12 @@
                 "type": "array",
                 "minItems": 4,
                 "items": {
-                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
                 }
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -1923,16 +1879,16 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
               "items": {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -1951,7 +1907,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -1959,12 +1915,12 @@
                 "type": "array",
                 "minItems": 2,
                 "items": {
-                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
                 }
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -1983,7 +1939,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -1993,13 +1949,13 @@
                   "type": "array",
                   "minItems": 4,
                   "items": {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
                   }
                 }
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -2018,7 +1974,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -2033,14 +1989,14 @@
                     "type": "array",
                     "minItems": 4,
                     "items": {
-                      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position3d"
+                      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position3d"
                     }
                   }
                 }
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           }
         },
@@ -2059,7 +2015,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -2076,7 +2032,7 @@
                       "type": "array",
                       "minItems": 4,
                       "items": {
-                        "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position3d"
+                        "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position3d"
                       }
                     }
                   }
@@ -2084,7 +2040,7 @@
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           }
         },
@@ -2104,27 +2060,27 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "base": {
               "oneOf": [
                 {
-                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Point"
                 },
                 {
-                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/LineString"
                 },
                 {
-                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polygon"
                 },
                 {
-                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPoint"
                 },
                 {
-                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiLineString"
                 },
                 {
-                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+                  "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolygon"
                 }
               ]
             },
@@ -2135,7 +2091,7 @@
               "type": "number"
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           }
         },
@@ -2154,16 +2110,16 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "prisms": {
               "type": "array",
               "items": {
-                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Prism"
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Prism"
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           }
         },
@@ -2182,35 +2138,35 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "geometries": {
               "type": "array",
               "items": {
                 "oneOf": [
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Point"
                   },
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPoint"
                   },
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/LineString"
                   },
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiLineString"
                   },
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polygon"
                   },
                   {
-                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolygon"
                   }
                 ]
               }
             },
             "bbox": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -2233,10 +2189,10 @@
         "bbox": {
           "oneOf": [
             {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox2d"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox2d"
             },
             {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           ]
         },
@@ -2257,13 +2213,74 @@
           }
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json"
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     }
   },
+  "title": "a JSON-FG Feature Collection",
+  "description": "This JSON Schema is part of JSON-FG version 0.1.1",
+  "type": "object",
+  "required": [
+    "type",
+    "features"
+  ],
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/_github_workspace_annotated-schemas_geo_json-fg_featureCollection_schema.json"
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.features.featureCollection"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "FeatureCollection"
+          ],
+          "x-jsonld-id": "@type"
+        },
+        "featureType": {
+          "x-jsonld-id": "https://purl.org/geojson/vocab#collectionFeatureType",
+          "allOf": [
+            {
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/featuretype"
+            }
+          ]
+        },
+        "geometryDimension": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "coordRefSys": {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/coordrefsys"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/link"
+              },
+              {
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
+              }
+            ]
+          },
+          "x-jsonld-id": "rdfs:seeAlso"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.feature"
+          },
+          "x-jsonld-container": "@set",
+          "x-jsonld-id": "https://purl.org/geojson/vocab#features"
+        }
+      }
     }
-  ]
+  ],
+  "x-jsonld-prefixes": {
+    "geojson": "https://purl.org/geojson/vocab#"
+  },
+  "x-schema-version": "https://json-schema.org/draft/2019-09/schema"
 }

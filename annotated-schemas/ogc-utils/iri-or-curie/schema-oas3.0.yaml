@@ -1,6 +1,34 @@
-x-defs:
-  _github_workspace_annotated-schemas_ogc-utils_iri-or-curie_schema.yaml:
-    x-schema-version: https://json-schema.org/draft/2020-12/schema
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml
+x-defs: {}
+description: IRI or CURIE
+$defs:
+  IRI:
+    type: string
+    pattern: ^\w+:/*([^:<>{}|\\^`"\s/]+[^<>{}|\\^`"\s]*(:[^:<>{}|\\^`"\s]+)?)?$
+  CURIE:
+    type: string
+    pattern: ^[A-Za-z_][^\s:/]*:[^:<>{}|\\^`"\s]*(\?[^<>{}|\\^`" ]*)?(#[^<>{}|\\^`"\s]*)?$
+  LocalPart:
+    type: string
+    pattern: ^[^:<>{}|\\^`"\s]*(\?[^<>{}|\\^`"\s]*)?(#[^<>{}|\\^`"\s]*)?$
+  Single:
+    anyOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/$defs/IRI
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/$defs/CURIE
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/$defs/LocalPart
+  Multiple:
+    oneOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/$defs/Single
+    - type: array
+      items:
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/$defs/Single
+  MultipleOrObject:
+    oneOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/$defs/Multiple
+    - type: object
+  MultipleOrObjectOrNull:
+    oneOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/$defs/MultipleOrObject
+    nullable: true
+x-schema-version: https://json-schema.org/draft/2020-12/schema
 allOf:
-- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/x-defs/_github_workspace_annotated-schemas_ogc-utils_iri-or-curie_schema.yaml
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.yaml#/$defs/Single

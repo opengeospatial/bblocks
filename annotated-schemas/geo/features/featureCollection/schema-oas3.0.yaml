@@ -1,33 +1,5 @@
 x-defs:
-  _github_workspace_annotated-schemas_geo_features_featureCollection_schema.yaml:
-    allOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/geojson.org_schema_FeatureCollection.json
-    - type: object
-      properties:
-        links:
-          type: array
-          items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml
-          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
-        timeStamp:
-          type: string
-          format: date-time
-        numberMatched:
-          type: integer
-          minimum: 0
-        numberReturned:
-          type: integer
-          minimum: 0
-        features:
-          type: array
-          items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_features_feature_schema.yaml
-    x-jsonld-extra-terms:
-      properties: '@nest'
-    x-jsonld-prefixes:
-      rdfs: http://www.w3.org/2000/01/rdf-schema#
-    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml
-  geojson.org_schema_FeatureCollection.json:
+  FeatureCollection:
     title: GeoJSON FeatureCollection
     type: object
     required:
@@ -376,9 +348,10 @@ x-defs:
         minItems: 4
         items:
           type: number
-    x-schema-version: http://json-schema.org/draft-07/schema#
     x-schema-source: https://geojson.org/schema/FeatureCollection.json
-  opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml:
+    x-schema-id: https://geojson.org/schema/FeatureCollection.json
+    x-schema-version: http://json-schema.org/draft-07/schema#
+  ogc.ogc-utils.json-link:
     description: JSON Link
     type: object
     required:
@@ -413,22 +386,23 @@ x-defs:
       oa: http://www.w3.org/ns/oa#
       rdfs: http://www.w3.org/2000/01/rdf-schema#
       dct: http://purl.org/dc/terms/
-    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
-  opengeospatial.github.io_bblocks_annotated-schemas_geo_features_feature_schema.yaml:
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
+  ogc.geo.features.feature:
     allOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.yaml
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.geo.common.data_types.geojson
     - type: object
       properties:
         bbox:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_bounding_box_schema.yaml
+          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.geo.common.data_types.bounding_box
         links:
           type: array
           items:
-            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_json-link_schema.yaml
+            $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
           x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
         type:
-          const: Feature
+          enum:
+          - Feature
       required:
       - type
       - geometry
@@ -438,7 +412,7 @@ x-defs:
     x-jsonld-prefixes:
       rdfs: http://www.w3.org/2000/01/rdf-schema#
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
-  opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_geojson_schema.yaml:
+  ogc.geo.common.data_types.geojson:
     title: GeoJSON Feature
     type: object
     required:
@@ -853,9 +827,10 @@ x-defs:
         x-jsonld-id: https://purl.org/geojson/vocab#features
     x-jsonld-prefixes:
       geojson: https://purl.org/geojson/vocab#
+    x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+    x-schema-id: https://geojson.org/schema/Feature.json
     x-schema-version: http://json-schema.org/draft-07/schema#
-    x-schema-source: https://geojson.org/schema/Feature.json
-  opengeospatial.github.io_bblocks_annotated-schemas_geo_common_data_types_bounding_box_schema.yaml:
+  ogc.geo.common.data_types.bounding_box:
     type: array
     oneOf:
     - minItems: 4
@@ -866,4 +841,28 @@ x-defs:
       type: number
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml
 allOf:
-- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/_github_workspace_annotated-schemas_geo_features_featureCollection_schema.yaml
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/FeatureCollection
+- type: object
+  properties:
+    links:
+      type: array
+      items:
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
+      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    timeStamp:
+      type: string
+      format: date-time
+    numberMatched:
+      type: integer
+      minimum: 0
+    numberReturned:
+      type: integer
+      minimum: 0
+    features:
+      type: array
+      items:
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema-oas3.0.yaml#/x-defs/ogc.geo.features.feature
+x-jsonld-extra-terms:
+  properties: '@nest'
+x-jsonld-prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#

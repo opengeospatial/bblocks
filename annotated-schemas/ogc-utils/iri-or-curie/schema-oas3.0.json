@@ -1,13 +1,68 @@
 {
-  "x-defs": {
-    "_github_workspace_annotated-schemas_ogc-utils_iri-or-curie_schema.json": {
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json"
+  "x-defs": {},
+  "description": "IRI or CURIE",
+  "$defs": {
+    "IRI": {
+      "type": "string",
+      "pattern": "^\\w+:/*([^:<>{}|\\\\^`\"\\s/]+[^<>{}|\\\\^`\"\\s]*(:[^:<>{}|\\\\^`\"\\s]+)?)?$"
+    },
+    "CURIE": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][^\\s:/]*:[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\" ]*)?(#[^<>{}|\\\\^`\"\\s]*)?$"
+    },
+    "LocalPart": {
+      "type": "string",
+      "pattern": "^[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\"\\s]*)?(#[^<>{}|\\\\^`\"\\s]*)?$"
+    },
+    "Single": {
+      "anyOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/$defs/IRI"
+        },
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/$defs/CURIE"
+        },
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/$defs/LocalPart"
+        }
+      ]
+    },
+    "Multiple": {
+      "oneOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/$defs/Single"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/$defs/Single"
+          }
+        }
+      ]
+    },
+    "MultipleOrObject": {
+      "oneOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/$defs/Multiple"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "MultipleOrObjectOrNull": {
+      "oneOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/$defs/MultipleOrObject"
+        }
+      ],
+      "nullable": true
     }
   },
+  "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/x-defs/_github_workspace_annotated-schemas_ogc-utils_iri-or-curie_schema.json"
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema-oas3.0.json#/$defs/Single"
     }
   ]
 }

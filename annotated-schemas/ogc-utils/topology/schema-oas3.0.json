@@ -1,42 +1,105 @@
 {
   "x-defs": {
-    "_github_workspace_annotated-schemas_ogc-utils_topology_schema.json": {
-      "description": "feature with geometry by reference",
-      "properties": {
-        "type": {},
-        "references": {
-          "type": "array",
-          "items": {
-            "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_iri-or-curie_schema.json"
-          },
-          "x-jsonld-id": "https://purl.org/geojson/vocab#relatedFeatures",
-          "x-jsonld-type": "@id",
-          "x-jsonld-container": "@list"
+    "ogc.ogc-utils.iri-or-curie": {
+      "description": "IRI or CURIE",
+      "$defs": {
+        "IRI": {
+          "type": "string",
+          "pattern": "^\\w+:/*([^:<>{}|\\\\^`\"\\s/]+[^<>{}|\\\\^`\"\\s]*(:[^:<>{}|\\\\^`\"\\s]+)?)?$"
+        },
+        "CURIE": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][^\\s:/]*:[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\" ]*)?(#[^<>{}|\\\\^`\"\\s]*)?$"
+        },
+        "LocalPart": {
+          "type": "string",
+          "pattern": "^[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\"\\s]*)?(#[^<>{}|\\\\^`\"\\s]*)?$"
+        },
+        "Single": {
+          "anyOf": [
+            {
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/IRI"
+            },
+            {
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/CURIE"
+            },
+            {
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/LocalPart"
+            }
+          ]
+        },
+        "Multiple": {
+          "oneOf": [
+            {
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single"
+              }
+            }
+          ]
+        },
+        "MultipleOrObject": {
+          "oneOf": [
+            {
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Multiple"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "MultipleOrObjectOrNull": {
+          "oneOf": [
+            {
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/MultipleOrObject"
+            }
+          ],
+          "nullable": true
         }
       },
-      "required": [
-        "references",
-        "type"
-      ],
-      "x-jsonld-extra-terms": {
-        "LineString": "https://purl.org/geojson/vocab#LineString"
-      },
-      "x-jsonld-prefixes": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "csdm": "https://linked.data.gov.au/def/csdm/",
-        "dct": "http://purl.org/dc/terms/"
-      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json"
-    },
-    "opengeospatial.github.io_bblocks_annotated-schemas_ogc-utils_iri-or-curie_schema.json": {
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+      "allOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single"
+        }
+      ]
     }
   },
-  "allOf": [
-    {
-      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/_github_workspace_annotated-schemas_ogc-utils_topology_schema.json"
+  "description": "feature with geometry by reference",
+  "properties": {
+    "type": {
+      "x-jsonld-id": "@type",
+      "allOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+        }
+      ]
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+      },
+      "x-jsonld-id": "https://purl.org/geojson/vocab#relatedFeatures",
+      "x-jsonld-type": "@id",
+      "x-jsonld-container": "@list"
     }
-  ]
+  },
+  "required": [
+    "references",
+    "type"
+  ],
+  "x-jsonld-extra-terms": {
+    "LineString": "https://purl.org/geojson/vocab#LineString"
+  },
+  "x-jsonld-prefixes": {
+    "geojson": "https://purl.org/geojson/vocab#",
+    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
 }
