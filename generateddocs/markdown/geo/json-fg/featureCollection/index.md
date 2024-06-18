@@ -257,11 +257,11 @@ Links to the schema:
           "@context": {
             "date": {
               "@id": "owlTime:hasTime",
-              "@type": "http://www.w3.org/2001/XMLSchema#date"
+              "@type": "xsd:date"
             },
             "timestamp": {
               "@id": "owlTime:hasTime",
-              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+              "@type": "xsd:dateTime"
             },
             "interval": {
               "@id": "owlTime:hasTime",

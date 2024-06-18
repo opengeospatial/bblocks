@@ -220,11 +220,11 @@ Links to the schema:
   "@context": {
     "date": {
       "@id": "time:hasTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
+      "@type": "xsd:date"
     },
     "timestamp": {
       "@id": "time:hasTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "interval": {
       "@id": "time:hasTime",
