@@ -39,10 +39,13 @@ definitions:
     properties:
       lat:
         type: number
+        x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#lat
       lon:
         type: number
+        x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#long
       h:
         type: number
+        x-jsonld-id: http://example.com/geopose/h
     required:
     - lat
     - lon
@@ -52,12 +55,16 @@ definitions:
     properties:
       x:
         type: number
+        x-jsonld-id: http://example.com/geopose/x
       y:
         type: number
+        x-jsonld-id: http://example.com/geopose/y
       z:
         type: number
+        x-jsonld-id: http://example.com/geopose/z
       w:
         type: number
+        x-jsonld-id: http://example.com/geopose/w
     required:
     - x
     - y
@@ -93,8 +100,23 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "position": "geopose:position",
-    "quaternion": "geopose:quaternion",
+    "position": {
+      "@context": {
+        "lat": "geo:lat",
+        "lon": "geo:long",
+        "h": "geopose:h"
+      },
+      "@id": "geopose:position"
+    },
+    "quaternion": {
+      "@context": {
+        "x": "geopose:x",
+        "y": "geopose:y",
+        "z": "geopose:z",
+        "w": "geopose:w"
+      },
+      "@id": "geopose:quaternion"
+    },
     "geopose": "http://example.com/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "@version": 1.1

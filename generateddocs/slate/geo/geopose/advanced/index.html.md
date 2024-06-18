@@ -53,12 +53,16 @@ definitions:
     properties:
       x:
         type: number
+        x-jsonld-id: http://example.com/geopose/x
       y:
         type: number
+        x-jsonld-id: http://example.com/geopose/y
       z:
         type: number
+        x-jsonld-id: http://example.com/geopose/z
       w:
         type: number
+        x-jsonld-id: http://example.com/geopose/w
     required:
     - x
     - y
@@ -102,7 +106,15 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "quaternion": "geopose:quaternion",
+    "quaternion": {
+      "@context": {
+        "x": "geopose:x",
+        "y": "geopose:y",
+        "z": "geopose:z",
+        "w": "geopose:w"
+      },
+      "@id": "geopose:quaternion"
+    },
     "position": {
       "@id": "geopose:position",
       "@context": {

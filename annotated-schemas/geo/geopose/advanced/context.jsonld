@@ -1,6 +1,14 @@
 {
   "@context": {
-    "quaternion": "geopose:quaternion",
+    "quaternion": {
+      "@context": {
+        "x": "geopose:x",
+        "y": "geopose:y",
+        "z": "geopose:z",
+        "w": "geopose:w"
+      },
+      "@id": "geopose:quaternion"
+    },
     "position": {
       "@id": "geopose:position",
       "@context": {

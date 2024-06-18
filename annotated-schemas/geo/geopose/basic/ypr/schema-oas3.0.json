@@ -6,13 +6,16 @@
       "type": "object",
       "properties": {
         "yaw": {
-          "type": "number"
+          "type": "number",
+          "x-jsonld-id": "http://example.com/geopose/yaw"
         },
         "pitch": {
-          "type": "number"
+          "type": "number",
+          "x-jsonld-id": "http://example.com/geopose/pitch"
         },
         "roll": {
-          "type": "number"
+          "type": "number",
+          "x-jsonld-id": "http://example.com/geopose/roll"
         }
       },
       "required": [
@@ -25,13 +28,16 @@
       "type": "object",
       "properties": {
         "lat": {
-          "type": "number"
+          "type": "number",
+          "x-jsonld-id": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
         },
         "lon": {
-          "type": "number"
+          "type": "number",
+          "x-jsonld-id": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
         },
         "h": {
-          "type": "number"
+          "type": "number",
+          "x-jsonld-id": "http://example.com/geopose/h"
         }
       },
       "required": [
