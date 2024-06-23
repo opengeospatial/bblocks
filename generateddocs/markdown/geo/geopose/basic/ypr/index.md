@@ -299,21 +299,19 @@ Links to the schema:
 {
   "@context": {
     "position": {
-      "@context": {
-        "lat": "geo:lat",
-        "lon": "geo:long",
-        "h": "geopose:h"
-      },
+      "@context": {},
       "@id": "geopose:position"
     },
     "angles": {
-      "@context": {
-        "yaw": "geopose:yaw",
-        "pitch": "geopose:pitch",
-        "roll": "geopose:roll"
-      },
+      "@context": {},
       "@id": "geopose:angles"
     },
+    "yaw": "geopose:yaw",
+    "pitch": "geopose:pitch",
+    "roll": "geopose:roll",
+    "lat": "geo:lat",
+    "lon": "geo:long",
+    "h": "geopose:h",
     "geopose": "http://example.com/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "@version": 1.1
