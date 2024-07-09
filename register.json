@@ -2,12 +2,12 @@
   "name": "OGC Main",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of building blocks managed by the OGC community through a variety of processes:\n\n- formal standards publication processes the Standards Working Groups\n- agreements with other standards bodies (eg. ISO)\n- community hosted examples of re-use (profiles and extensions of OGC standards)\n- informal \"incubator\" processes where more than one project needs a solution, and appropriate SWG scope is yet to be determined\n\n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n\n\nNotes:\n\n1. Policies are in preparation for naming and governance of these sub-registers, and this is subject to change pending adoption of such policies.\n1. Building Block identification will be designed to support transition between governance domains without change using symbolic references.\n1. A formal definition of Building Blocks and the level of \"granularity\" they represent with respect to the OGC Modular Specification is TBD.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2024-07-07T04:07:10.038276",
+  "modified": "2024-07-09T06:23:36.989087",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"4389cc3b7f4fa8fc8c16025a47138cfbc5ce7d9d",
-      "shortCommitId": "\"4389cc",
-      "date": "2024-07-05T09:09:03+00:00\""
+      "commitId": "\"59af8b65c87552d103c26900d115b39f46238b57",
+      "shortCommitId": "\"59af8b",
+      "date": "2024-07-08T08:08:11+00:00\""
     }
   },
   "gitRepository": "https://github.com/opengeospatial/bblocks",
@@ -549,8 +549,8 @@
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
       "schema": {
@@ -694,9 +694,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
+        "ogc.geo.json-fg.time",
         "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature",
-        "ogc.geo.json-fg.time"
+        "ogc.geo.features.feature"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
       "schema": {
@@ -747,9 +747,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
+        "ogc.geo.json-fg.time",
         "ogc.ogc-utils.json-link",
-        "ogc.geo.features.feature",
-        "ogc.geo.json-fg.time"
+        "ogc.geo.features.feature"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml",
@@ -794,9 +794,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.json-link",
+        "ogc.geo.features.featureCollection",
         "ogc.geo.json-fg.feature",
-        "ogc.geo.features.featureCollection"
+        "ogc.ogc-utils.json-link"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
       "schema": {
@@ -847,9 +847,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
+        "ogc.geo.features.featureCollection",
         "ogc.geo.json-fg.feature-lenient",
-        "ogc.ogc-utils.json-link",
-        "ogc.geo.features.featureCollection"
+        "ogc.ogc-utils.json-link"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
