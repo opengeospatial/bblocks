@@ -83,13 +83,14 @@ Links to the schema:
 {
   "@context": {
     "quaternion": {
-      "@context": {},
+      "@context": {
+        "x": "geopose:x",
+        "y": "geopose:y",
+        "z": "geopose:z",
+        "w": "geopose:w"
+      },
       "@id": "geopose:quaternion"
     },
-    "x": "geopose:x",
-    "y": "geopose:y",
-    "z": "geopose:z",
-    "w": "geopose:w",
     "position": {
       "@id": "geopose:position",
       "@context": {

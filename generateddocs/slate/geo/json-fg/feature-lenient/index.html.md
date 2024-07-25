@@ -1,6 +1,11 @@
 ---
 title: JSON-FG Feature - Lenient (Schema)
 
+language_tabs:
+  - json: JSON
+  - jsonld: JSON-LD
+  - turtle: RDF/Turtle
+
 toc_footers:
   - Version 0.1
   - <a href='#'>JSON-FG Feature - Lenient</a>
@@ -25,7 +30,7 @@ A OGC Features and Geometries JSON (JSON-FG) Feature that does not require the "
 </p>
 
 <aside class="success">
-This building block is <strong>valid</strong>
+This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/feature-lenient/" target="_blank">valid</a></strong>
 </aside>
 
 # Description
@@ -35,6 +40,911 @@ out-of-scope for GeoJSON, but that are essential or important for a variety of u
 
 This Building Block extends the standard JSON-FG one by removing the requirement to provide values for the 
 "time" and "place" properties.
+
+# Examples
+
+## Example feature for a fence without time or place
+
+
+
+```json
+{
+    "type": "Feature",
+    "id": "fence.1",
+    "conformsTo" : [ "[ogc-json-fg-1-0.2:core]", "[ogc-json-fg-1-0.2:3d]" ],
+    "featureType": "fence",
+    "geometry": null,
+    "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+    "properties": null
+}
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "type": "Feature",
+  "id": "fence.1",
+  "conformsTo": [
+    "[ogc-json-fg-1-0.2:core]",
+    "[ogc-json-fg-1-0.2:3d]"
+  ],
+  "featureType": "fence",
+  "geometry": null,
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+  "properties": null,
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+
+<https://example.com/json-fg/fence.1> a <https://example.com/json-fg/fence>,
+        geojson:Feature ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/7415" .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_1_1.ttl">Open in new window</a>
+</blockquote>
+
+
+
+## Example feature for a fence (full)
+
+
+
+```json
+{
+    "type": "Feature",
+    "id": "fence.1",
+    "conformsTo" : [ "[ogc-json-fg-1-0.2:core]", "[ogc-json-fg-1-0.2:3d]" ],
+    "featureType": "fence",
+    "time": {
+        "interval": [
+            "2022-07-12T16:55:18Z",
+            ".."
+        ]
+    },
+    "geometry": null,
+    "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+    "place": {
+        "type": "Prism",
+        "base": {
+            "type": "LineString",
+            "coordinates": [
+                [
+                    81220.15,
+                    455113.71
+                ],
+                [
+                    81223.15,
+                    455116.71
+                ]
+            ]
+        },
+        "lower": 2.02,
+        "upper": 3.22
+    },
+    "properties": null
+}
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_2_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "type": "Feature",
+  "id": "fence.1",
+  "conformsTo": [
+    "[ogc-json-fg-1-0.2:core]",
+    "[ogc-json-fg-1-0.2:3d]"
+  ],
+  "featureType": "fence",
+  "time": {
+    "interval": [
+      "2022-07-12T16:55:18Z",
+      ".."
+    ]
+  },
+  "geometry": null,
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+  "place": {
+    "type": "Prism",
+    "base": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          81220.15,
+          455113.71
+        ],
+        [
+          81223.15,
+          455116.71
+        ]
+      ]
+    },
+    "lower": 2.02,
+    "upper": 3.22
+  },
+  "properties": null,
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_2_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_2_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/json-fg/fence.1> a <https://example.com/json-fg/fence>,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Prism ;
+            geojson:prismBase [ a geojson:LineString ;
+                    geojson:coordinates ( ( 8.122015e+04 4.551137e+05 ) ( 8.122315e+04 4.551167e+05 ) ) ] ;
+            geojson:prismLower 2.02e+00 ;
+            geojson:prismUpper 3.22e+00 ] ;
+    dcterms:time [ time:hasTime ( "2022-07-12T16:55:18Z" ".." ) ] ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/7415" .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_2_1.ttl">Open in new window</a>
+</blockquote>
+
+
+
+## Example feature for a building without time or place
+
+
+
+```json
+{
+   "type": "Feature",
+   "id": "DENW19AL0000giv5BL",
+   "conformsTo": [
+      "[ogc-json-fg-1-0.2:core]"         ,
+      "[ogc-json-fg-1-0.2:types-schemas]",
+      "[ogc-json-fg-1-0.2:3d]"
+   ],
+   "featureType": "app:building",
+   "featureSchema": "https://example.org/data/v1/collections/buildings/schema",
+   "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/5555",
+   "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+         [
+            [8.7092045, 51.5035285, 100],
+            [8.7093128, 51.5034570, 100],
+            [8.7093919, 51.5035030, 100],
+            [8.7092837, 51.5035747, 100],
+            [8.7092045, 51.5035285, 100]
+         ]
+      ]
+   },
+   "links": [
+      {
+         "href": "https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______",
+         "rel": "http://www.opengis.net/def/rel/ogc/1.0/within",
+         "title": "Cadastral parcel 313 in district Wünnenberg (016)"
+      },
+      {
+         "href" : "https://inspire.ec.europa.eu/featureconcept/Building",
+         "rel"  : "type"                                                ,
+         "title": "This feature is of type 'building'"
+      }
+   ],
+   "properties": {
+      "lastChange": "2014-04-24T10:50:18Z",
+      "built": "2012-03",
+      "function": "Agricultural building",
+      "height_m": 20.0,
+      "owners": [
+         {"href": "https://example.org/john-doe", "title": "John Doe"},
+         {"href": "https://example.org/jane-doe", "title": "Jane Doe"}
+      ]
+   }
+}
+
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_3_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_3_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "type": "Feature",
+  "id": "DENW19AL0000giv5BL",
+  "conformsTo": [
+    "[ogc-json-fg-1-0.2:core]",
+    "[ogc-json-fg-1-0.2:types-schemas]",
+    "[ogc-json-fg-1-0.2:3d]"
+  ],
+  "featureType": "app:building",
+  "featureSchema": "https://example.org/data/v1/collections/buildings/schema",
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/5555",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          8.7092045,
+          51.5035285,
+          100
+        ],
+        [
+          8.7093128,
+          51.503457,
+          100
+        ],
+        [
+          8.7093919,
+          51.503503,
+          100
+        ],
+        [
+          8.7092837,
+          51.5035747,
+          100
+        ],
+        [
+          8.7092045,
+          51.5035285,
+          100
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "href": "https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______",
+      "rel": "http://www.opengis.net/def/rel/ogc/1.0/within",
+      "title": "Cadastral parcel 313 in district W\u00fcnnenberg (016)"
+    },
+    {
+      "href": "https://inspire.ec.europa.eu/featureconcept/Building",
+      "rel": "type",
+      "title": "This feature is of type 'building'"
+    }
+  ],
+  "properties": {
+    "lastChange": "2014-04-24T10:50:18Z",
+    "built": "2012-03",
+    "function": "Agricultural building",
+    "height_m": 20.0,
+    "owners": [
+      {
+        "href": "https://example.org/john-doe",
+        "title": "John Doe"
+      },
+      {
+        "href": "https://example.org/jane-doe",
+        "title": "Jane Doe"
+      }
+    ]
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_3_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_3_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/json-fg/DENW19AL0000giv5BL> a <app:building>,
+        geojson:Feature ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
+    rdfs:seeAlso [ rdfs:label "This feature is of type 'building'" ;
+            ns2:relation <http://www.iana.org/assignments/relation/type> ;
+            oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ],
+        [ rdfs:label "Cadastral parcel 313 in district Wünnenberg (016)" ;
+            ns2:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
+            oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ] ;
+    geojson:geometry [ a geojson:Polygon ;
+            geojson:coordinates ( ( ( 8.709205e+00 5.150353e+01 100 ) ( 8.709313e+00 5.150346e+01 100 ) ( 8.709392e+00 5.15035e+01 100 ) ( 8.709284e+00 5.150357e+01 100 ) ( 8.709205e+00 5.150353e+01 100 ) ) ) ] .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_3_1.ttl">Open in new window</a>
+</blockquote>
+
+
+
+## Example feature for a building (full)
+
+
+
+```json
+{
+   "type": "Feature",
+   "id": "DENW19AL0000giv5BL",
+   "conformsTo": [
+      "[ogc-json-fg-1-0.2:core]"         ,
+      "[ogc-json-fg-1-0.2:types-schemas]",
+      "[ogc-json-fg-1-0.2:3d]"
+   ],
+   "featureType": "app:building",
+   "featureSchema": "https://example.org/data/v1/collections/buildings/schema",
+   "time": { "interval": ["2014-04-24T10:50:18Z", ".."] },
+   "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/5555",
+   "place": {
+      "type": "Polyhedron",
+      "coordinates": [
+         [
+            [
+               [
+                  [479816.670, 5705861.672, 100],
+                  [479822.187, 5705866.783, 100],
+                  [479829.666, 5705858.785, 100],
+                  [479824.155, 5705853.684, 100],
+                  [479816.670, 5705861.672, 100]
+               ]
+            ],
+            [
+               [
+                  [479816.670, 5705861.672, 110],
+                  [479824.155, 5705853.684, 110],
+                  [479829.666, 5705858.785, 120],
+                  [479822.187, 5705866.783, 120],
+                  [479816.670, 5705861.672, 110]
+               ]
+            ],
+            [
+               [
+                  [479816.670, 5705861.672, 110],
+                  [479816.670, 5705861.672, 100],
+                  [479824.155, 5705853.684, 100],
+                  [479824.155, 5705853.684, 110],
+                  [479816.670, 5705861.672, 110]
+               ]
+            ],
+            [
+               [
+                  [479824.155, 5705853.684, 110],
+                  [479824.155, 5705853.684, 100],
+                  [479829.666, 5705858.785, 100],
+                  [479829.666, 5705858.785, 120],
+                  [479824.155, 5705853.684, 110]
+               ]
+            ],
+            [
+               [
+                  [479829.666, 5705858.785, 120],
+                  [479829.666, 5705858.785, 100],
+                  [479822.187, 5705866.783, 100],
+                  [479822.187, 5705866.783, 120],
+                  [479829.666, 5705858.785, 120]
+               ]
+            ],
+            [
+               [
+                  [479822.187, 5705866.783, 120],
+                  [479822.187, 5705866.783, 100],
+                  [479816.670, 5705861.672, 100],
+                  [479816.670, 5705861.672, 110],
+                  [479822.187, 5705866.783, 120]
+               ]
+            ]
+         ]
+      ]
+   },
+   "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+         [
+            [8.7092045, 51.5035285, 100],
+            [8.7093128, 51.5034570, 100],
+            [8.7093919, 51.5035030, 100],
+            [8.7092837, 51.5035747, 100],
+            [8.7092045, 51.5035285, 100]
+         ]
+      ]
+   },
+   "links": [
+      {
+         "href": "https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______",
+         "rel": "http://www.opengis.net/def/rel/ogc/1.0/within",
+         "title": "Cadastral parcel 313 in district Wünnenberg (016)"
+      },
+      {
+         "href" : "https://inspire.ec.europa.eu/featureconcept/Building",
+         "rel"  : "type"                                                ,
+         "title": "This feature is of type 'building'"
+      }
+   ],
+   "properties": {
+      "lastChange": "2014-04-24T10:50:18Z",
+      "built": "2012-03",
+      "function": "Agricultural building",
+      "height_m": 20.0,
+      "owners": [
+         {"href": "https://example.org/john-doe", "title": "John Doe"},
+         {"href": "https://example.org/jane-doe", "title": "Jane Doe"}
+      ]
+   }
+}
+
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_4_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_4_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "type": "Feature",
+  "id": "DENW19AL0000giv5BL",
+  "conformsTo": [
+    "[ogc-json-fg-1-0.2:core]",
+    "[ogc-json-fg-1-0.2:types-schemas]",
+    "[ogc-json-fg-1-0.2:3d]"
+  ],
+  "featureType": "app:building",
+  "featureSchema": "https://example.org/data/v1/collections/buildings/schema",
+  "time": {
+    "interval": [
+      "2014-04-24T10:50:18Z",
+      ".."
+    ]
+  },
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/5555",
+  "place": {
+    "type": "Polyhedron",
+    "coordinates": [
+      [
+        [
+          [
+            [
+              479816.67,
+              5705861.672,
+              100
+            ],
+            [
+              479822.187,
+              5705866.783,
+              100
+            ],
+            [
+              479829.666,
+              5705858.785,
+              100
+            ],
+            [
+              479824.155,
+              5705853.684,
+              100
+            ],
+            [
+              479816.67,
+              5705861.672,
+              100
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              479816.67,
+              5705861.672,
+              110
+            ],
+            [
+              479824.155,
+              5705853.684,
+              110
+            ],
+            [
+              479829.666,
+              5705858.785,
+              120
+            ],
+            [
+              479822.187,
+              5705866.783,
+              120
+            ],
+            [
+              479816.67,
+              5705861.672,
+              110
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              479816.67,
+              5705861.672,
+              110
+            ],
+            [
+              479816.67,
+              5705861.672,
+              100
+            ],
+            [
+              479824.155,
+              5705853.684,
+              100
+            ],
+            [
+              479824.155,
+              5705853.684,
+              110
+            ],
+            [
+              479816.67,
+              5705861.672,
+              110
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              479824.155,
+              5705853.684,
+              110
+            ],
+            [
+              479824.155,
+              5705853.684,
+              100
+            ],
+            [
+              479829.666,
+              5705858.785,
+              100
+            ],
+            [
+              479829.666,
+              5705858.785,
+              120
+            ],
+            [
+              479824.155,
+              5705853.684,
+              110
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              479829.666,
+              5705858.785,
+              120
+            ],
+            [
+              479829.666,
+              5705858.785,
+              100
+            ],
+            [
+              479822.187,
+              5705866.783,
+              100
+            ],
+            [
+              479822.187,
+              5705866.783,
+              120
+            ],
+            [
+              479829.666,
+              5705858.785,
+              120
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              479822.187,
+              5705866.783,
+              120
+            ],
+            [
+              479822.187,
+              5705866.783,
+              100
+            ],
+            [
+              479816.67,
+              5705861.672,
+              100
+            ],
+            [
+              479816.67,
+              5705861.672,
+              110
+            ],
+            [
+              479822.187,
+              5705866.783,
+              120
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          8.7092045,
+          51.5035285,
+          100
+        ],
+        [
+          8.7093128,
+          51.503457,
+          100
+        ],
+        [
+          8.7093919,
+          51.503503,
+          100
+        ],
+        [
+          8.7092837,
+          51.5035747,
+          100
+        ],
+        [
+          8.7092045,
+          51.5035285,
+          100
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "href": "https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______",
+      "rel": "http://www.opengis.net/def/rel/ogc/1.0/within",
+      "title": "Cadastral parcel 313 in district W\u00fcnnenberg (016)"
+    },
+    {
+      "href": "https://inspire.ec.europa.eu/featureconcept/Building",
+      "rel": "type",
+      "title": "This feature is of type 'building'"
+    }
+  ],
+  "properties": {
+    "lastChange": "2014-04-24T10:50:18Z",
+    "built": "2012-03",
+    "function": "Agricultural building",
+    "height_m": 20.0,
+    "owners": [
+      {
+        "href": "https://example.org/john-doe",
+        "title": "John Doe"
+      },
+      {
+        "href": "https://example.org/jane-doe",
+        "title": "Jane Doe"
+      }
+    ]
+  },
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_4_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_4_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.opengis.net/def/glossary/term/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/json-fg/DENW19AL0000giv5BL> a <app:building>,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Polyhedron ;
+            geojson:coordinates ( ( ( ( ( 4.798167e+05 5.705862e+06 100 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798167e+05 5.705862e+06 100 ) ) ) ( ( ( 4.798167e+05 5.705862e+06 110 ) ( 4.798242e+05 5.705854e+06 110 ) ( 4.798297e+05 5.705859e+06 120 ) ( 4.798222e+05 5.705867e+06 120 ) ( 4.798167e+05 5.705862e+06 110 ) ) ) ( ( ( 4.798167e+05 5.705862e+06 110 ) ( 4.798167e+05 5.705862e+06 100 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798242e+05 5.705854e+06 110 ) ( 4.798167e+05 5.705862e+06 110 ) ) ) ( ( ( 4.798242e+05 5.705854e+06 110 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798297e+05 5.705859e+06 120 ) ( 4.798242e+05 5.705854e+06 110 ) ) ) ( ( ( 4.798297e+05 5.705859e+06 120 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798222e+05 5.705867e+06 120 ) ( 4.798297e+05 5.705859e+06 120 ) ) ) ( ( ( 4.798222e+05 5.705867e+06 120 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798167e+05 5.705862e+06 100 ) ( 4.798167e+05 5.705862e+06 110 ) ( 4.798222e+05 5.705867e+06 120 ) ) ) ) ) ] ;
+    dcterms:time [ time:hasTime ( "2014-04-24T10:50:18Z" ".." ) ] ;
+    ns2:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
+    rdfs:seeAlso [ rdfs:label "Cadastral parcel 313 in district Wünnenberg (016)" ;
+            ns1:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
+            oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ],
+        [ rdfs:label "This feature is of type 'building'" ;
+            ns1:relation <http://www.iana.org/assignments/relation/type> ;
+            oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ] ;
+    geojson:geometry [ a geojson:Polygon ;
+            geojson:coordinates ( ( ( 8.709205e+00 5.150353e+01 100 ) ( 8.709313e+00 5.150346e+01 100 ) ( 8.709392e+00 5.15035e+01 100 ) ( 8.709284e+00 5.150357e+01 100 ) ( 8.709205e+00 5.150353e+01 100 ) ) ) ] .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_4_1.ttl">Open in new window</a>
+</blockquote>
+
+
+
+## Feature with a custom geometry (Arc) without time
+
+
+
+```json
+{
+  "type": "Feature",
+  "id": "my-space-station",
+  "conformsTo": [
+    "[ogc-json-fg-1-0.2:core]",
+    "[ogc-json-fg-1-0.2:3d]"
+  ],
+  "featureType": "space-station",
+  "geometry": null,
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+  "place": {
+    "type": "Arc",
+    "coordinates": [
+      81220.15,
+      455113.71,
+      44143.21
+    ]
+  },
+  "properties": {}
+}
+
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_5_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_5_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "type": "Feature",
+  "id": "my-space-station",
+  "conformsTo": [
+    "[ogc-json-fg-1-0.2:core]",
+    "[ogc-json-fg-1-0.2:3d]"
+  ],
+  "featureType": "space-station",
+  "geometry": null,
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+  "place": {
+    "type": "Arc",
+    "coordinates": [
+      81220.15,
+      455113.71,
+      44143.21
+    ]
+  },
+  "properties": {},
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_5_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fopengeospatial.github.io%2Fbblocks%2Ftests%2Fgeo%2Fjson-fg%2Ffeature-lenient%2Fexample_5_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/json-fg/my-space-station> a <https://example.com/json-fg/space-station>,
+        geojson:Feature ;
+    dcterms:spatial [ a <https://example.com/json-fg/Arc> ;
+            geojson:coordinates ( 8.122015e+04 4.551137e+05 4.414321e+04 ) ] ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/7415" .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/json-fg/feature-lenient/example_5_1.ttl">Open in new window</a>
+</blockquote>
+
+
+This feature follows
+[the Arc extension](https://github.com/opengeospatial/ogc-feat-geo-json/blob/main/core/examples/extensions/arc.json)
+for the `place` property.
+
 
 
 # JSON Schema

@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/json-fg/my-space-station> a <https://example.com/json-fg/space-station>,
+        geojson:Feature ;
+    dcterms:spatial [ a <https://example.com/json-fg/Arc> ;
+            geojson:coordinates ( 8.122015e+04 4.551137e+05 4.414321e+04 ) ] ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/7415" .
+
