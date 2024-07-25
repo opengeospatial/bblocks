@@ -1,16 +1,28 @@
-- title: Example feature for a fence
+- title: Example feature for a fence without time or place
+  snippets:
+    - language: json
+      ref: examples/fence-lenient.json
+      base-uri: https://example.com/json-fg/
+
+- title: Example feature for a fence (full)
   snippets:
     - language: json
       ref: https://github.com/opengeospatial/ogc-feat-geo-json/raw/main/core/examples/fence.json
       base-uri: https://example.com/json-fg/
 
-- title: Example feature for a building
+- title: Example feature for a building without time or place
+  snippets:
+    - language: json
+      ref: examples/building-lenient.json
+      base-uri: https://example.com/json-fg/
+
+- title: Example feature for a building (full)
   snippets:
     - language: json
       ref: https://github.com/opengeospatial/ogc-feat-geo-json/raw/main/core/examples/building.json
       base-uri: https://example.com/json-fg/
 
-- title: Feature with a custom geometry (Arc)
+- title: Feature with a custom geometry (Arc) without time
   content: |
     This feature follows
     [the Arc extension](https://github.com/opengeospatial/ogc-feat-geo-json/blob/main/core/examples/extensions/arc.json)
@@ -18,4 +30,4 @@
   snippets:
     - language: json
       base-uri: "https://example.com/json-fg/"
-      ref: examples/custom-geometry.json
+      ref: examples/custom-geometry-lenient.json
