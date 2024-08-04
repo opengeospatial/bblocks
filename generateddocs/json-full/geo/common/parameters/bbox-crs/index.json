@@ -35,7 +35,8 @@
       "snippets": [
         {
           "language": "python",
-          "code": "import urllib.parse\nimport urllib.request\n\nparams = {\n  'bbox': '-124.7844079,24.7433195,-66.9513812,49.3457868',\n  'bbox-crs': 'http://www.opengis.net/def/crs/EPSG/0/25832'\n}\n\nurl = 'https://demo.pygeoapi.io/master/collections/lakes/items?' \\\n    + urllib.parse.urlencode(params)\n\ncontents = urllib.request.urlopen(url)\n\nprint(contents.read())\n"
+          "code": "import urllib.parse\nimport urllib.request\n\nparams = {\n  'bbox': '-124.7844079,24.7433195,-66.9513812,49.3457868',\n  'bbox-crs': 'http://www.opengis.net/def/crs/EPSG/0/25832'\n}\n\nurl = 'https://demo.pygeoapi.io/master/collections/lakes/items?' \\\n    + urllib.parse.urlencode(params)\n\ncontents = urllib.request.urlopen(url)\n\nprint(contents.read())\n",
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox-crs/example_1_1.python"
         }
       ]
     }

@@ -52,6 +52,12 @@ The "IRI-or-CURIE" building block defines a data type representing either an IRI
 http://www.example.org/roles/myRoles?param=value#fragment
 ```
 
+<blockquote class="lang-specific plaintext">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_1_1.plaintext">Open in new window</a>
+</blockquote>
+
+
 
 
 ```json
@@ -73,6 +79,12 @@ http://www.example.org/roles/myRoles?param=value#fragment
 ```plaintext
 urn:isbn:9780387359731
 ```
+
+<blockquote class="lang-specific plaintext">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_2_1.plaintext">Open in new window</a>
+</blockquote>
+
 
 
 
@@ -96,6 +108,12 @@ urn:isbn:9780387359731
 dc:creator
 ```
 
+<blockquote class="lang-specific plaintext">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_3_1.plaintext">Open in new window</a>
+</blockquote>
+
+
 
 
 ```json
@@ -118,6 +136,12 @@ dc:creator
 relative-ref
 ```
 
+<blockquote class="lang-specific plaintext">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_4_1.plaintext">Open in new window</a>
+</blockquote>
+
+
 
 
 ```json
@@ -139,6 +163,12 @@ relative-ref
 ```plaintext
 #same-document-ref
 ```
+
+<blockquote class="lang-specific plaintext">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_5_1.plaintext">Open in new window</a>
+</blockquote>
+
 
 
 
@@ -165,6 +195,12 @@ http://www.example.org/roles/myRoles?param=value#fragment
 another-document#ref
 
 ```
+
+<blockquote class="lang-specific plaintext">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/ogc-utils/iri-or-curie/example_6_1.plaintext">Open in new window</a>
+</blockquote>
+
 
 
 

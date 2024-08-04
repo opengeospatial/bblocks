@@ -76,6 +76,12 @@ curl \
 bbox=-124.7844079,24.7433195,-66.9513812,49.3457868"
 ```
 
+<blockquote class="lang-specific shell">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox/example_2_1.shell">Open in new window</a>
+</blockquote>
+
+
 
 
 ```python
@@ -92,6 +98,12 @@ contents = urllib.request.urlopen(url)
 print(contents.read())
 ```
 
+<blockquote class="lang-specific python">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox/example_2_2.python">Open in new window</a>
+</blockquote>
+
+
 
 
 ```javascript
@@ -103,6 +115,12 @@ fetch(url + `bbox=${bbox.join(',')}`)
   .then((response) => response.json())
   .then((json) => console.log(json));
 ```
+
+<blockquote class="lang-specific javascript">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox/example_2_3.javascript">Open in new window</a>
+</blockquote>
+
 
 
 # JSON Schema

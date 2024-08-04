@@ -61,6 +61,12 @@ print(contents.read())
 
 ```
 
+<blockquote class="lang-specific python">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox-crs/example_1_1.python">Open in new window</a>
+</blockquote>
+
+
 The coordinates in the following bounding box are in the coordinate reference system ETRS89 / UTM zone 32N that is used, for example, in Germany.
 
 

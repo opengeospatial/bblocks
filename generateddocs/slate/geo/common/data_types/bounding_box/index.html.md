@@ -78,6 +78,12 @@ The text representation of a bounding box is based on the JSON representation an
 -124.7844079,24.7433195,-66.9513812,49.3457868
 ```
 
+<blockquote class="lang-specific plaintext">
+  <p class="example-links">
+    <a target="_blank" href="https://opengeospatial.github.io/bblocks/tests/geo/common/data_types/bounding_box/example_1_2.plaintext">Open in new window</a>
+</blockquote>
+
+
 
 # JSON Schema
 
