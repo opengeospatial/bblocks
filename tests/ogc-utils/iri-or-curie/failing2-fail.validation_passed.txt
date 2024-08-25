@@ -1,5 +1,5 @@
 Validation report for ogc.ogc-utils.iri-or-curie - IRI or CURIE
-Generated 2024-08-18T04:08:14.855452+00:00
+Generated 2024-08-25T04:07:22.974389+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -21,4 +21,18 @@ Failed validating 'anyOf' in schema:
 On instance:
     'https://www.google com/test'
 === End JSON Schema ===
+
+=== Unknown errors ===
+
+** Validation error **
+Traceback (most recent call last):
+,  File "/src/ogc/bblocks/validate.py", line 184, in _validate_resource
+    result = validator.validate(filename, output_filename, report,
+,  File "/src/ogc/bblocks/validation/rdf.py", line 299, in validate
+    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)
+,  File "/src/ogc/bblocks/validation/rdf.py", line 146, in _load_graph
+    if not self.jsonld_context and not self.prefixes:
+,AttributeError: 'RdfValidator' object has no attribute 'prefixes'
+
+=== End Unknown errors ===
 

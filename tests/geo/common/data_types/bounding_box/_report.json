@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.geo.common.data_types.bounding_box - Bounding Box",
   "bblockName": "Bounding Box",
   "bblockId": "ogc.geo.common.data_types.bounding_box",
-  "generated": "2024-08-18T04:08:14.726889+00:00",
-  "result": true,
+  "generated": "2024-08-25T04:07:22.859242+00:00",
+  "result": false,
   "items": [
     {
       "source": {
@@ -15,7 +15,7 @@
         "snippetIndex": 1,
         "language": "json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -38,6 +38,17 @@
               "message": "Validation passed"
             }
           ]
+        },
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": [
+            {
+              "exception": "AttributeError",
+              "isError": true,
+              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
+            }
+          ]
         }
       ]
     }
@@ -45,7 +56,7 @@
   "globalErrors": {},
   "counts": {
     "total": 1,
-    "passed": 1,
-    "failed": 0
+    "passed": 0,
+    "failed": 1
   }
 }

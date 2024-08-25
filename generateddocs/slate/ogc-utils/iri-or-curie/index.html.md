@@ -28,8 +28,8 @@ This Building Block defines a data type for a full IRI/URI or a CURIE (with or w
     <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/" target="_blank">failed</a></strong>
 </aside>
 
 # Description

@@ -28,8 +28,8 @@ The bounding box JSON object describes a simple spatial extent of a resource. Fo
     <a href="http://www.opengis.net/def/status/stable" target="_blank" data-rainbow-uri>Stable</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/" target="_blank">failed</a></strong>
 </aside>
 
 # Description
