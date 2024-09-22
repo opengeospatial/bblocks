@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.ogc-utils.iri-or-curie - IRI or CURIE",
   "bblockName": "IRI or CURIE",
   "bblockId": "ogc.ogc-utils.iri-or-curie",
-  "generated": "2024-09-15T04:08:10.607242+00:00",
-  "result": false,
+  "generated": "2024-09-22T04:08:47.757385+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -47,17 +47,6 @@
               "errorMessage": "' ' is not valid under any of the given schemas",
               "isError": true,
               "message": "ValidationError: ' ' is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'anyOf': [{'$ref': '#/$defs/IRI'},\n               {'$ref': '#/$defs/CURIE'},\n               {'$ref': '#/$defs/LocalPart'}]}\n\nOn instance:\n    ' '"
-            }
-          ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
             }
           ]
         }
@@ -107,17 +96,6 @@
               "message": "ValidationError: 'https://www.google com/test' is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'anyOf': [{'$ref': '#/$defs/IRI'},\n               {'$ref': '#/$defs/CURIE'},\n               {'$ref': '#/$defs/LocalPart'}]}\n\nOn instance:\n    'https://www.google com/test'"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -163,17 +141,6 @@
               "errorMessage": "'not an IRI' is not valid under any of the given schemas",
               "isError": true,
               "message": "ValidationError: 'not an IRI' is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'anyOf': [{'$ref': '#/$defs/IRI'},\n               {'$ref': '#/$defs/CURIE'},\n               {'$ref': '#/$defs/LocalPart'}]}\n\nOn instance:\n    'not an IRI'"
-            }
-          ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
             }
           ]
         }
@@ -223,17 +190,6 @@
               "message": "ValidationError: 'fails content - not a URI' is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'anyOf': [{'$ref': '#/$defs/IRI'},\n               {'$ref': '#/$defs/CURIE'},\n               {'$ref': '#/$defs/LocalPart'}]}\n\nOn instance:\n    'fails content - not a URI'"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -245,7 +201,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test1.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -268,17 +224,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -290,7 +235,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test10.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -313,17 +258,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -335,7 +269,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test11.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -358,17 +292,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -380,7 +303,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test12.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -403,17 +326,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -425,7 +337,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test13.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -448,17 +360,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -470,7 +371,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test14.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -493,17 +394,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -515,7 +405,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test15.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -538,17 +428,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -560,7 +439,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test16.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -583,17 +462,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -605,7 +473,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test17.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -628,17 +496,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -650,7 +507,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test18.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -673,17 +530,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -695,7 +541,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test19.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -718,17 +564,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -740,7 +575,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test2.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -763,17 +598,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -785,7 +609,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test20.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -808,17 +632,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -830,7 +643,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test21.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -853,17 +666,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -875,7 +677,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test22.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -898,17 +700,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -920,7 +711,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test23.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -943,17 +734,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -965,7 +745,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test24.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -988,17 +768,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1010,7 +779,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test25.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1033,17 +802,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1055,7 +813,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test26.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1078,17 +836,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1100,7 +847,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test27.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1123,17 +870,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1145,7 +881,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test28.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1168,17 +904,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1190,7 +915,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test29.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1213,17 +938,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1235,7 +949,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test3.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1258,17 +972,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1280,7 +983,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test30.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1303,17 +1006,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1325,7 +1017,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test31.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1348,17 +1040,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1370,7 +1051,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test32.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1393,17 +1074,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1415,7 +1085,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test33.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1438,17 +1108,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1460,7 +1119,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test34.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1483,17 +1142,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1505,7 +1153,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test35.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1528,17 +1176,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1550,7 +1187,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test36.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1573,17 +1210,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1595,7 +1221,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test37.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1618,17 +1244,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1640,7 +1255,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test38.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1663,17 +1278,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1685,7 +1289,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test39.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1708,17 +1312,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1730,7 +1323,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test4.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1753,17 +1346,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1775,7 +1357,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test40.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1798,17 +1380,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1820,7 +1391,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test41.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1843,17 +1414,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1865,7 +1425,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test42.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1888,17 +1448,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1910,7 +1459,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test43.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1933,17 +1482,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -1955,7 +1493,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test44.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -1978,17 +1516,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2000,7 +1527,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test45.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2023,17 +1550,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2045,7 +1561,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test46.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2068,17 +1584,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2090,7 +1595,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test47.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2113,17 +1618,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2135,7 +1629,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test48.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2158,17 +1652,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2180,7 +1663,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test49.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2203,17 +1686,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2225,7 +1697,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test5.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2248,17 +1720,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2270,7 +1731,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test50.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2293,17 +1754,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2315,7 +1765,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test51.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2338,17 +1788,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2360,7 +1799,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test52.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2383,17 +1822,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2405,7 +1833,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test53.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2428,17 +1856,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2450,7 +1867,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test54.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2473,17 +1890,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2495,7 +1901,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test55.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2518,17 +1924,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2540,7 +1935,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test56.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2563,17 +1958,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2585,7 +1969,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test57.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2608,17 +1992,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2630,7 +2003,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test58.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2653,17 +2026,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2675,7 +2037,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test59.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2698,17 +2060,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2720,7 +2071,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test6.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2743,17 +2094,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2765,7 +2105,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test60.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2788,17 +2128,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2810,7 +2139,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test61.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2833,17 +2162,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2855,7 +2173,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test62.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2878,17 +2196,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2900,7 +2207,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test63.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2923,17 +2230,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2945,7 +2241,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test64.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -2968,17 +2264,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -2990,7 +2275,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test65.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3013,17 +2298,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3035,7 +2309,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test66.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3058,17 +2332,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3080,7 +2343,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test67.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3103,17 +2366,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3125,7 +2377,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test68.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3148,17 +2400,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3170,7 +2411,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test69.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3193,17 +2434,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3215,7 +2445,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test7.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3238,17 +2468,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3260,7 +2479,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test70.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3283,17 +2502,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3305,7 +2513,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test71.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3328,17 +2536,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3350,7 +2547,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test72.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3373,17 +2570,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3395,7 +2581,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test73.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3418,17 +2604,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3440,7 +2615,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test74.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3463,17 +2638,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3485,7 +2649,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test75.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3508,17 +2672,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3530,7 +2683,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test76.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3553,17 +2706,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3575,7 +2717,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test77.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3598,17 +2740,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3620,7 +2751,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test78.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3643,17 +2774,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3665,7 +2785,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test79.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3688,17 +2808,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3710,7 +2819,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test8.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3733,17 +2842,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3755,7 +2853,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test80.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3778,17 +2876,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3800,7 +2887,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test81.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3823,17 +2910,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3845,7 +2921,7 @@
         "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/tests/test9.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3868,17 +2944,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3892,7 +2957,7 @@
         "snippetIndex": 2,
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3915,17 +2980,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3939,7 +2993,7 @@
         "snippetIndex": 2,
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -3962,17 +3016,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -3986,7 +3029,7 @@
         "snippetIndex": 2,
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -4009,17 +3052,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -4033,7 +3065,7 @@
         "snippetIndex": 2,
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -4056,17 +3088,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -4080,7 +3101,7 @@
         "snippetIndex": 2,
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -4103,17 +3124,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     },
@@ -4127,7 +3137,7 @@
         "snippetIndex": 2,
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -4155,17 +3165,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": [
-            {
-              "exception": "AttributeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 184, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in validate\n    graph = self._load_graph(filename, output_filename, report, contents, base_uri, prefixes)\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 146, in _load_graph\n    if not self.jsonld_context and not self.prefixes:\n,AttributeError: 'RdfValidator' object has no attribute 'prefixes'\n"
-            }
-          ]
         }
       ]
     }
@@ -4173,7 +3172,7 @@
   "globalErrors": {},
   "counts": {
     "total": 91,
-    "passed": 4,
-    "failed": 87
+    "passed": 91,
+    "failed": 0
   }
 }
