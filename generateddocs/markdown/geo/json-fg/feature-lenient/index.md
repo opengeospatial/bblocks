@@ -34,6 +34,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "fence.1",
   "conformsTo": [
@@ -43,8 +44,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
   "featureType": "fence",
   "geometry": null,
   "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
-  "properties": null,
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+  "properties": null
 }
 ```
 
@@ -102,6 +102,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "fence.1",
   "conformsTo": [
@@ -135,8 +136,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
     "lower": 2.02,
     "upper": 3.22
   },
-  "properties": null,
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+  "properties": null
 }
 ```
 
@@ -218,6 +218,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "DENW19AL0000giv5BL",
   "conformsTo": [
@@ -287,8 +288,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
         "title": "Jane Doe"
       }
     ]
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+  }
 }
 ```
 
@@ -435,6 +435,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "DENW19AL0000giv5BL",
   "conformsTo": [
@@ -691,8 +692,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
         "title": "Jane Doe"
       }
     ]
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+  }
 }
 ```
 
@@ -760,6 +760,7 @@ for the `place` property.
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "my-space-station",
   "conformsTo": [
@@ -777,8 +778,7 @@ for the `place` property.
       44143.21
     ]
   },
-  "properties": {},
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld"
+  "properties": {}
 }
 ```
 

@@ -34,12 +34,12 @@ See panel to right - note that a more user friendly "collapsable" version is in 
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld",
   "type": "LineString",
   "references": [
     "P1",
     "P2"
-  ],
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld"
+  ]
 }
 ```
 

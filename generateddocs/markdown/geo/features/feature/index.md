@@ -47,6 +47,7 @@ NB. uses a local @context in the data example where application specialisations 
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
   "id": "f1",
   "type": "Feature",
   "geometry": {
@@ -58,8 +59,7 @@ NB. uses a local @context in the data example where application specialisations 
   },
   "properties": {
     "comment": "An attribute value"
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld"
+  }
 }
 ```
 

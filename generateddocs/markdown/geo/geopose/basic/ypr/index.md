@@ -47,6 +47,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
   "position": {
     "lat": 47.7,
     "lon": -122.3,
@@ -56,8 +57,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "yaw": 5.514456741060452,
     "pitch": -0.43610515937237904,
     "roll": 0.0
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+  }
 }
 ```
 
@@ -99,6 +99,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
   "position": {
     "lat": 47.7,
     "lon": -122.3,
@@ -108,8 +109,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "yaw": 5.518671098486835,
     "pitch": -0.4381464123477409,
     "roll": 0.0
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+  }
 }
 ```
 
@@ -151,6 +151,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
   "position": {
     "lat": 47.7,
     "lon": -122.3,
@@ -160,8 +161,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "yaw": 5.522894747595089,
     "pitch": -0.4401787262476278,
     "roll": 0.0
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+  }
 }
 ```
 
@@ -203,6 +203,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
   "position": {
     "lat": 47.7,
     "lon": -122.3,
@@ -212,8 +213,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
     "yaw": 5.527127708845192,
     "pitch": -0.44220204512692407,
     "roll": 0.0
-  },
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld"
+  }
 }
 ```
 

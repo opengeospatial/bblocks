@@ -21,8 +21,8 @@ None
 #### jsonld
 ```jsonld
 {
-  "date": "2024-05-13",
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld"
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "date": "2024-05-13"
 }
 ```
 
@@ -49,8 +49,8 @@ None
 #### jsonld
 ```jsonld
 {
-  "timestamp": "2024-05-13T19:15:16Z",
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld"
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "timestamp": "2024-05-13T19:15:16Z"
 }
 ```
 
@@ -77,8 +77,8 @@ None
 #### jsonld
 ```jsonld
 {
-  "timestamp": "2024-05-13T19:15:16.987Z",
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld"
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "timestamp": "2024-05-13T19:15:16.987Z"
 }
 ```
 
@@ -108,11 +108,11 @@ None
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld",
   "interval": [
     "2024-05-13",
     "2024-05-16"
-  ],
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld"
+  ]
 }
 ```
 
@@ -142,11 +142,11 @@ None
 #### jsonld
 ```jsonld
 {
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld",
   "interval": [
     "2024-05-13T19:15:16Z",
     ".."
-  ],
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld"
+  ]
 }
 ```
 
