@@ -1,8 +1,11 @@
 # Building Blocks
 
-Bootstrap page containing an overview of building blocks and a building blocks register.
+OGC Building Blocks - register of OGC specification elements packaged as FAIR resources.
 
-[See it live here](https://blocks.ogc.org/)
+OGC Building Blocks and a building blocks register.
+For more information [read the docs](https://ogcincubator.github.io/bblocks-docs/)
+
+[See it live here](https://blocks.ogc.org/register)
 
 ## Validation Reports
 [Summary](https://opengeospatial.github.io/bblocks/tests/report.html)
