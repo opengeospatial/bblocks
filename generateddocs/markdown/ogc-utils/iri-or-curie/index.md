@@ -3,7 +3,7 @@
 
 `ogc.ogc-utils.iri-or-curie` *v1.0*
 
-This Building Block defines a data type for a full IRI/URI or a CURIE (with or without a prefix)
+This Building Block defines a data type allowing schemas and profiles to use string base type for a full IRI/URI or a CURIE (with or without a prefix). This common pattern is complex to implement, and this Building Block makes it easy to implement consistently where-ever need.
 
 [*Status*](http://www.opengis.net/def/status): Stable
 

@@ -3,13 +3,14 @@
 {
   "itemIdentifier": "ogc.geo.features.feature",
   "name": "Feature",
+  "highlighted": true,
   "abstract": "A feature. Every feature is a sub-resource of an OGC Collection.",
   "status": "stable",
   "dateTimeAddition": "2023-05-24T14:56:51+00:00",
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2023-05-15",
+  "dateOfLastChange": "2024-10-28",
   "sources": [
     {
       "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
@@ -26,8 +27,8 @@
   "shaclRules": {},
   "dependsOn": [
     "ogc.geo.common.data_types.geojson",
-    "ogc.geo.common.data_types.bounding_box",
-    "ogc.ogc-utils.json-link"
+    "ogc.ogc-utils.json-link",
+    "ogc.geo.common.data_types.bounding_box"
   ],
   "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
   "schema": {
