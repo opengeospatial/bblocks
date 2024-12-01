@@ -29,6 +29,9 @@
   "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Quaternion.Schema.json",
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/context.jsonld",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/",
+  "rdfData": [
+    "https://opengeospatial.github.io/bblocks/data.ttl"
+  ],
   "validationPassed": true,
   "annotatedSchema": "description: 'Basic-Quaternion: Basic GeoPose using quaternion to specify orientation'\ndefinitions:\n  Position:\n    type: object\n    properties:\n      lat:\n        type: number\n        x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#lat\n      lon:\n        type: number\n        x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#long\n      h:\n        type: number\n        x-jsonld-id: http://example.com/geopose/h\n    required:\n    - lat\n    - lon\n    - h\n  Quaternion:\n    type: object\n    properties:\n      x:\n        type: number\n        x-jsonld-id: http://example.com/geopose/x\n      y:\n        type: number\n        x-jsonld-id: http://example.com/geopose/y\n      z:\n        type: number\n        x-jsonld-id: http://example.com/geopose/z\n      w:\n        type: number\n        x-jsonld-id: http://example.com/geopose/w\n    required:\n    - x\n    - y\n    - z\n    - w\ntype: object\nproperties:\n  position:\n    $ref: '#/definitions/Position'\n    x-jsonld-id: http://example.com/geopose/position\n  quaternion:\n    $ref: '#/definitions/Quaternion'\n    x-jsonld-id: http://example.com/geopose/quaternion\nrequired:\n- position\n- quaternion\nx-jsonld-prefixes:\n  geopose: http://example.com/geopose/\n  geo: http://www.w3.org/2003/01/geo/wgs84_pos#\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
