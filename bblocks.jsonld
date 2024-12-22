@@ -107,7 +107,7 @@
   "abstract": "OGC Specification Elements packaged as FAIR Building Blocks.",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of [building blocks](https://ogcincubator.github.io/bblocks-docs/) managed by the OGC community through a variety of processes:\n\n- formal standards publication processes the Standards Working Groups\n- agreements with other standards bodies (eg. ISO)\n- community hosted examples of re-use (profiles and extensions of OGC standards)\n- informal \"incubator\" processes where more than one project needs a solution, and appropriate SWG scope is yet to be determined\n\n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n\n\nNotes:\n\n1. Policies are in preparation for naming and governance of these sub-registers, and this is subject to change pending adoption of such policies.\n1. Building Block identification will be designed to support transition between governance domains without change using symbolic references.\n1. A formal definition of Building Blocks and the level of \"granularity\" they represent with respect to the OGC Modular Specification is TBD.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2024-12-15T04:08:36.337759",
+  "modified": "2024-12-22T04:08:12.143443",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"4f836104f60184d3a6e2f2272208584d6cae081d",
@@ -919,8 +919,8 @@
       "shaclRules": {},
       "dependsOn": [
         "ogc.ogc-utils.json-link",
-        "ogc.geo.json-fg.time",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.geo.json-fg.time"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
       "schema": {
@@ -980,8 +980,8 @@
       "shaclRules": {},
       "dependsOn": [
         "ogc.ogc-utils.json-link",
-        "ogc.geo.json-fg.time",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.geo.json-fg.time"
       ],
       "schema": {
         "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml",
@@ -1035,9 +1035,9 @@
       "group": "JSON-FG",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.json-fg.feature",
+        "ogc.ogc-utils.json-link",
         "ogc.geo.features.featureCollection",
-        "ogc.ogc-utils.json-link"
+        "ogc.geo.json-fg.feature"
       ],
       "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
       "schema": {
