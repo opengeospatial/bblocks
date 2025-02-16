@@ -9,7 +9,7 @@
   "itemClass": "parameter",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2022-05-24",
+  "dateOfLastChange": "2025-02-09",
   "sources": [
     {
       "title": "OGC API - Features, Part 1, 7.15.3: Parameter bbox",
@@ -27,9 +27,7 @@
   "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/remote_cache/",
   "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/parameters/bbox.yaml",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
-  "rdfData": [
-    "https://opengeospatial.github.io/bblocks/data.ttl"
-  ],
+  "rdfData": [],
   "validationPassed": true,
   "description": "`bbox` is a query parameter that may be applied in GET requests on a collection of resources.\n\nThe parameter, if provided, selects the resources with a spatial extent that intersects the specified bounding box.\n\nThe coordinates of the bounding box are in longitude, latitude and optionally ellipsoidal height unless a different\ncoordinate reference system is specified in the query parameter `bbox-crs`.\n\nThe bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a\nvertical axis (height or depth):\n\n* Lower left corner, coordinate axis 1\n* Lower left corner, coordinate axis 2\n* Minimum value, coordinate axis 3 (optional)\n* Upper right corner, coordinate axis 1\n* Upper right corner, coordinate axis 2\n* Maximum value, coordinate axis 3 (optional)\n\nThe `bbox` parameter matches all resources in the collection that are not associated with a spatial geometry, too.\n\nIf a resource has multiple spatial geometry properties, it is the decision of the server whether only a single spatial\ngeometry property is used to determine the spatial extent or all relevant geometries.\n",
   "examples": [

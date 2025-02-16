@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2023-07-13",
+  "dateOfLastChange": "2025-02-09",
   "sources": [
     {
       "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
@@ -29,9 +29,7 @@
   "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json",
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/context.jsonld",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/",
-  "rdfData": [
-    "https://opengeospatial.github.io/bblocks/data.ttl"
-  ],
+  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/geopose/basic/ypr/",
   "description": "GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric\nobjects (\u201cPoses\u201d) within reference frames anchored to the earth\u2019s surface (\u201cGeo\u201d) or within other astronomical\ncoordinate systems.\n\nThe Basic-YPR Target has a simple structure with no options. Position is specified as a point in an LTP-ENU frame and\nrotation is specified by yaw, pitch, and roll angles specified in decimal degrees.\n\nThe Basic_YPR.position attribute shall represent the outer frame, specified by an implicit WGS-84 CRS and an implicit\nEPSG 4461-CS (LTP-ENU) coordinate system and explicit parameters to define the tangent point.\n\nThe Basic_YPR.angles attribute shall represent the inner frame, which is a rotation-only transformation with Yaw, Pitch,\nand Roll (YPR) angles, which expressed as three consecutive rotations of a reference frame oriented East-North-Up (ENU)\ncoordinate system (where the coordinate axes East, North, and Up correspond to the axes X, Y, Z) about the local (\nrotated) axes z, y, and x, applied in that order, corresponding to the conventional Yaw, Pitch, and Roll angles. The\nunit of measure SHALL be the degree and the angles represented as signed real number values.",

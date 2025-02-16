@@ -9,7 +9,7 @@
   "itemClass": "parameter",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2022-07-05",
+  "dateOfLastChange": "2025-02-09",
   "sources": [
     {
       "title": "OGC API - Features, Part 2, 6.3.1: Parameter bbox-crs",
@@ -26,9 +26,7 @@
   },
   "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/schema.yaml",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/",
-  "rdfData": [
-    "https://opengeospatial.github.io/bblocks/data.ttl"
-  ],
+  "rdfData": [],
   "validationPassed": true,
   "description": "If the `bbox-crs` parameter is specified, then the values of the `bbox` parameter are assumed to be in the specified\ncoordinate reference system and the server will perform the necessary internal transformations to properly fetch data\nfrom within the specified bounding box.\n\nOtherwise, the values for the `bbox` parameter shall be assumed to be WGS 84 longitude-latitude for coordinates\nwithout height and WGS 84 longitude-latitude-height for coordinates with height.",
   "examples": [
