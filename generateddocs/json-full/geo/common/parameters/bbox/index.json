@@ -17,16 +17,16 @@
     }
   ],
   "schema": {
-    "application/yaml": "https://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
-    "application/json": "https://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox/schema.json"
+    "application/yaml": "http://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
+    "application/json": "http://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox/schema.json"
   },
   "maturity": "mature",
   "scope": "geo",
   "group": "Common",
   "shaclRules": {},
-  "remoteCacheDir": "https://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox/remote_cache/",
+  "remoteCacheDir": "http://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox/remote_cache/",
   "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/parameters/bbox.yaml",
-  "sourceFiles": "https://blocks.ogc.org/registereditems/geo/common/parameters/bbox/",
+  "sourceFiles": "http://blocks.ogc.org/registereditems/geo/common/parameters/bbox/",
   "rdfData": [],
   "validationPassed": true,
   "description": "`bbox` is a query parameter that may be applied in GET requests on a collection of resources.\n\nThe parameter, if provided, selects the resources with a spatial extent that intersects the specified bounding box.\n\nThe coordinates of the bounding box are in longitude, latitude and optionally ellipsoidal height unless a different\ncoordinate reference system is specified in the query parameter `bbox-crs`.\n\nThe bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a\nvertical axis (height or depth):\n\n* Lower left corner, coordinate axis 1\n* Lower left corner, coordinate axis 2\n* Minimum value, coordinate axis 3 (optional)\n* Upper right corner, coordinate axis 1\n* Upper right corner, coordinate axis 2\n* Maximum value, coordinate axis 3 (optional)\n\nThe `bbox` parameter matches all resources in the collection that are not associated with a spatial geometry, too.\n\nIf a resource has multiple spatial geometry properties, it is the decision of the server whether only a single spatial\ngeometry property is used to determine the spatial extent or all relevant geometries.\n",
@@ -41,17 +41,17 @@
         {
           "language": "shell",
           "code": "curl \\\n\"https://demo.pygeoapi.io/master/collections/lakes/items?\\\nbbox=-124.7844079,24.7433195,-66.9513812,49.3457868\"",
-          "url": "https://blocks.ogc.org/tests/geo/common/parameters/bbox/example_2_1.shell"
+          "url": "http://blocks.ogc.org/tests/geo/common/parameters/bbox/example_2_1.shell"
         },
         {
           "language": "python",
           "code": "import urllib.parse\nimport urllib.request\n\nparams = {'bbox': '-124.7844079,24.7433195,-66.9513812,49.3457868'}\n\nurl = 'https://demo.pygeoapi.io/master/collections/lakes/items?' \\\n    + urllib.parse.urlencode(params)\n\ncontents = urllib.request.urlopen(url)\n\nprint(contents.read())",
-          "url": "https://blocks.ogc.org/tests/geo/common/parameters/bbox/example_2_2.python"
+          "url": "http://blocks.ogc.org/tests/geo/common/parameters/bbox/example_2_2.python"
         },
         {
           "language": "javascript",
           "code": "bbox = [-124.7844079,24.7433195,-66.9513812,49.3457868];\n\nurl = 'https://demo.pygeoapi.io/master/collections/lakes/items?';\n\nfetch(url + `bbox=${bbox.join(',')}`)\n  .then((response) => response.json())\n  .then((json) => console.log(json));",
-          "url": "https://blocks.ogc.org/tests/geo/common/parameters/bbox/example_2_3.javascript"
+          "url": "http://blocks.ogc.org/tests/geo/common/parameters/bbox/example_2_3.javascript"
         }
       ]
     }

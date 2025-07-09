@@ -55,8 +55,8 @@ explode: false
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox-crs/schema.json)
-* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml)
+* YAML version: [schema.yaml](http://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox-crs/schema.json)
+* JSON version: [schema.json](http://blocks.ogc.org/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml)
 
 ## Sources
 

@@ -29,11 +29,11 @@
   "group": "Common",
   "shaclRules": {},
   "schema": {
-    "application/yaml": "https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml",
-    "application/json": "https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+    "application/yaml": "http://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml",
+    "application/json": "http://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
   },
-  "sourceSchema": "https://blocks.ogc.org/registereditems/ogc-utils/iri-or-curie/schema.yaml",
-  "sourceFiles": "https://blocks.ogc.org/registereditems/ogc-utils/iri-or-curie/",
+  "sourceSchema": "http://blocks.ogc.org/registereditems/ogc-utils/iri-or-curie/schema.yaml",
+  "sourceFiles": "http://blocks.ogc.org/registereditems/ogc-utils/iri-or-curie/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/",
@@ -45,12 +45,12 @@
         {
           "language": "plaintext",
           "code": "http://www.example.org/roles/myRoles?param=value#fragment",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_1_1.plaintext"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_1_1.plaintext"
         },
         {
           "language": "json",
           "code": "\"http://www.example.org/roles/myRoles?param=value#fragment\"",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_1_2.json"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_1_2.json"
         }
       ]
     },
@@ -60,12 +60,12 @@
         {
           "language": "plaintext",
           "code": "urn:isbn:9780387359731",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_2_1.plaintext"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_2_1.plaintext"
         },
         {
           "language": "json",
           "code": "\"urn:isbn:9780387359731\"",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_2_2.json"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_2_2.json"
         }
       ]
     },
@@ -75,12 +75,12 @@
         {
           "language": "plaintext",
           "code": "dc:creator",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_3_1.plaintext"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_3_1.plaintext"
         },
         {
           "language": "json",
           "code": "\"dc:creator\"",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_3_2.json"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_3_2.json"
         }
       ]
     },
@@ -90,12 +90,12 @@
         {
           "language": "plaintext",
           "code": "relative-ref",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_4_1.plaintext"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_4_1.plaintext"
         },
         {
           "language": "json",
           "code": "\"relative-ref\"",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_4_2.json"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_4_2.json"
         }
       ]
     },
@@ -105,12 +105,12 @@
         {
           "language": "plaintext",
           "code": "#same-document-ref",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_5_1.plaintext"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_5_1.plaintext"
         },
         {
           "language": "json",
           "code": "\"#same-document-ref\"",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_5_2.json"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_5_2.json"
         }
       ]
     },
@@ -120,13 +120,13 @@
         {
           "language": "plaintext",
           "code": "urn:isbn:9780387359731\nhttp://www.example.org/roles/myRoles?param=value#fragment\n#same-document-ref\nanother-document#ref\n",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_6_1.plaintext"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_6_1.plaintext"
         },
         {
           "language": "json",
           "code": "[\n  \"urn:isbn:9780387359731\",\n  \"http://www.example.org/roles/myRoles?param=value#fragment\",\n  \"#same-document-ref\",\n  \"another-document#ref\"\n]\n",
           "schema-ref": "#/$defs/Multiple",
-          "url": "https://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_6_2.json"
+          "url": "http://blocks.ogc.org/tests/ogc-utils/iri-or-curie/example_6_2.json"
         }
       ]
     }

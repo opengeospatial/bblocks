@@ -16,7 +16,7 @@
       "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_5"
     }
   ],
-  "ldContext": "https://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/context.jsonld",
+  "ldContext": "http://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/context.jsonld",
   "maturity": "mature",
   "scope": "geo",
   "group": "Common",
@@ -26,12 +26,12 @@
     "ogc.ogc-utils.json-link"
   ],
   "schema": {
-    "application/yaml": "https://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.yaml",
-    "application/json": "https://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.json"
+    "application/yaml": "http://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.yaml",
+    "application/json": "http://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.json"
   },
-  "sourceSchema": "https://blocks.ogc.org/registereditems/geo/features/featureCollection/schema.yaml",
-  "sourceLdContext": "https://blocks.ogc.org/registereditems/geo/features/feature/context.jsonld",
-  "sourceFiles": "https://blocks.ogc.org/registereditems/geo/features/featureCollection/",
+  "sourceSchema": "http://blocks.ogc.org/registereditems/geo/features/featureCollection/schema.yaml",
+  "sourceLdContext": "http://blocks.ogc.org/registereditems/geo/features/feature/context.jsonld",
+  "sourceFiles": "http://blocks.ogc.org/registereditems/geo/features/featureCollection/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/featureCollection/",
@@ -45,22 +45,22 @@
           "ref": "example.json",
           "base-uri": "http://www.example.com/features/",
           "code": "{\n  \"@context\": {\n    \"my\": \"http://my.org/featureTypes/\",\n    \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n    \"name\": \"skos:prefLabel\"\n  },\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}",
-          "url": "https://blocks.ogc.org/tests/geo/features/featureCollection/example_1_1.json"
+          "url": "http://blocks.ogc.org/tests/geo/features/featureCollection/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": [\n    \"https://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/context.jsonld\",\n    {\n      \"my\": \"http://my.org/featureTypes/\",\n      \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n      \"name\": \"skos:prefLabel\"\n    }\n  ],\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}",
-          "url": "https://blocks.ogc.org/tests/geo/features/featureCollection/example_1_1.jsonld"
+          "code": "{\n  \"@context\": [\n    \"http://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/context.jsonld\",\n    {\n      \"my\": \"http://my.org/featureTypes/\",\n      \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n      \"name\": \"skos:prefLabel\"\n    }\n  ],\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}",
+          "url": "http://blocks.ogc.org/tests/geo/features/featureCollection/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;\n    skos:prefLabel \"MyFeatureCollection\" ;\n    geojson:features <http://www.example.com/features/f1> .\n\n<http://www.example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .\n\n",
-          "url": "https://blocks.ogc.org/tests/geo/features/featureCollection/example_1_1.ttl"
+          "url": "http://blocks.ogc.org/tests/geo/features/featureCollection/example_1_1.ttl"
         }
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://geojson.org/schema/FeatureCollection.json\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    timeStamp:\n      type: string\n      format: date-time\n    numberMatched:\n      type: integer\n      minimum: 0\n    numberReturned:\n      type: integer\n      minimum: 0\n    features:\n      type: array\n      items:\n        $ref: https://blocks.ogc.org/annotated-schemas/geo/features/feature/schema.yaml\nx-jsonld-extra-terms:\n  properties: '@nest'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n",
+  "annotatedSchema": "allOf:\n- $ref: https://geojson.org/schema/FeatureCollection.json\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    timeStamp:\n      type: string\n      format: date-time\n    numberMatched:\n      type: integer\n      minimum: 0\n    numberReturned:\n      type: integer\n      minimum: 0\n    features:\n      type: array\n      items:\n        $ref: http://blocks.ogc.org/annotated-schemas/geo/features/feature/schema.yaml\nx-jsonld-extra-terms:\n  properties: '@nest'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/features/featureCollection"
 }

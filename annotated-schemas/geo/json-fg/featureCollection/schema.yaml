@@ -6,7 +6,7 @@ required:
 - type
 - features
 allOf:
-- $ref: https://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.yaml
+- $ref: http://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.yaml
 - properties:
     type:
       type: string
@@ -27,12 +27,12 @@ allOf:
       items:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-        - $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
+        - $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: rdfs:seeAlso
     features:
       type: array
       items:
-        $ref: https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/schema.yaml
+        $ref: http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/schema.yaml
       x-jsonld-container: '@set'
       x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:

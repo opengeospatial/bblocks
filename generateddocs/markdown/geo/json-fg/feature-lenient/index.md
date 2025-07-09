@@ -34,7 +34,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "fence.1",
   "conformsTo": [
@@ -102,7 +102,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "fence.1",
   "conformsTo": [
@@ -218,7 +218,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "DENW19AL0000giv5BL",
   "conformsTo": [
@@ -295,8 +295,8 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### ttl
 ```ttl
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.opengis.net/def/glossary/term/> .
+@prefix ns1: <http://www.opengis.net/def/glossary/term/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -304,12 +304,12 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 
 <https://example.com/json-fg/DENW19AL0000giv5BL> a <app:building>,
         geojson:Feature ;
-    ns2:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
+    ns1:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
     rdfs:seeAlso [ rdfs:label "Cadastral parcel 313 in district Wünnenberg (016)" ;
-            ns1:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
+            ns2:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
             oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ],
         [ rdfs:label "This feature is of type 'building'" ;
-            ns1:relation <http://www.iana.org/assignments/relation/type> ;
+            ns2:relation <http://www.iana.org/assignments/relation/type> ;
             oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ] ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 8.709205e+00 5.150353e+01 100 ) ( 8.709313e+00 5.150346e+01 100 ) ( 8.709392e+00 5.15035e+01 100 ) ( 8.709284e+00 5.150357e+01 100 ) ( 8.709205e+00 5.150353e+01 100 ) ) ) ] .
@@ -435,7 +435,7 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "DENW19AL0000giv5BL",
   "conformsTo": [
@@ -760,7 +760,7 @@ for the `place` property.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
   "type": "Feature",
   "id": "my-space-station",
   "conformsTo": [
@@ -803,7 +803,7 @@ for the `place` property.
 
 ```yaml
 allOf:
-- $ref: https://blocks.ogc.org/annotated-schemas/geo/features/feature/schema.yaml
+- $ref: http://blocks.ogc.org/annotated-schemas/geo/features/feature/schema.yaml
 - type: object
   required:
   - type
@@ -828,10 +828,10 @@ allOf:
       items:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-        - $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
+        - $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     time:
-      $ref: https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.yaml
+      $ref: http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.yaml
       x-jsonld-id: http://purl.org/dc/terms/time
     coordRefSys:
       $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
@@ -891,8 +891,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/schema.json)
-* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml)
+* YAML version: [schema.yaml](http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/schema.json)
+* JSON version: [schema.json](http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml)
 
 
 # JSON-LD Context
@@ -997,7 +997,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld)
+[context.jsonld](http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld)
 
 ## Sources
 

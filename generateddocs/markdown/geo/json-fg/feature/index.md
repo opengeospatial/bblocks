@@ -74,7 +74,7 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/context.jsonld",
   "type": "Feature",
   "id": "fence.1",
   "conformsTo": [
@@ -252,7 +252,7 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/context.jsonld",
   "type": "Feature",
   "id": "DENW19AL0000giv5BL",
   "conformsTo": [
@@ -583,7 +583,7 @@ for the `place` property.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/context.jsonld",
   "type": "Feature",
   "id": "my-space-station",
   "conformsTo": [
@@ -644,7 +644,7 @@ required:
 - geometry
 - properties
 allOf:
-- $ref: https://blocks.ogc.org/annotated-schemas/geo/features/feature/schema.yaml
+- $ref: http://blocks.ogc.org/annotated-schemas/geo/features/feature/schema.yaml
 - properties:
     type:
       type: string
@@ -664,10 +664,10 @@ allOf:
       items:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-        - $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
+        - $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     time:
-      $ref: https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.yaml
+      $ref: http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.yaml
       x-jsonld-id: http://purl.org/dc/terms/time
     coordRefSys:
       $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
@@ -727,8 +727,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/schema.json)
-* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/schema.yaml)
+* YAML version: [schema.yaml](http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/schema.json)
+* JSON version: [schema.json](http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/schema.yaml)
 
 
 # JSON-LD Context
@@ -833,7 +833,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/context.jsonld)
+[context.jsonld](http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/context.jsonld)
 
 ## Sources
 

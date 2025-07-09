@@ -20,17 +20,17 @@
   ],
   "shaclRules": {},
   "dependsOn": [
-    "ogc.ogc-utils.json-link",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.ogc-utils.json-link"
   ],
-  "ldContext": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/context.jsonld",
+  "ldContext": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/context.jsonld",
   "schema": {
-    "application/yaml": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/schema.yaml",
-    "application/json": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/schema.json"
+    "application/yaml": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/schema.yaml",
+    "application/json": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/schema.json"
   },
-  "sourceSchema": "https://blocks.ogc.org/registereditems/geo/json-fg/link-role/schema.yaml",
-  "sourceLdContext": "https://blocks.ogc.org/registereditems/geo/json-fg/link-role/context.jsonld",
-  "sourceFiles": "https://blocks.ogc.org/registereditems/geo/json-fg/link-role/",
+  "sourceSchema": "http://blocks.ogc.org/registereditems/geo/json-fg/link-role/schema.yaml",
+  "sourceLdContext": "http://blocks.ogc.org/registereditems/geo/json-fg/link-role/context.jsonld",
+  "sourceFiles": "http://blocks.ogc.org/registereditems/geo/json-fg/link-role/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/link-role/",
@@ -44,22 +44,22 @@
           "ref": "example.json",
           "base-uri": "http://www.example.com/features/",
           "code": "{\n  \"@context\": {\n    \"@base\": \"http://example.org\"\n  },\n  \"href\": \"http//example.org/frog\",\n  \"rel\":\"related\",\n  \"role\": \"animals\"\n}",
-          "url": "https://blocks.ogc.org/tests/geo/json-fg/link-role/example_1_1.json"
+          "url": "http://blocks.ogc.org/tests/geo/json-fg/link-role/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": [\n    \"https://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/context.jsonld\",\n    {\n      \"@base\": \"http://example.org\"\n    }\n  ],\n  \"href\": \"http//example.org/frog\",\n  \"rel\": \"related\",\n  \"role\": \"animals\"\n}",
-          "url": "https://blocks.ogc.org/tests/geo/json-fg/link-role/example_1_1.jsonld"
+          "code": "{\n  \"@context\": [\n    \"http://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/context.jsonld\",\n    {\n      \"@base\": \"http://example.org\"\n    }\n  ],\n  \"href\": \"http//example.org/frog\",\n  \"rel\": \"related\",\n  \"role\": \"animals\"\n}",
+          "url": "http://blocks.ogc.org/tests/geo/json-fg/link-role/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n\n[] ns1:relation <http://www.iana.org/assignments/relation/related> ;\n    prof:hasRole <http://example.org/animals> ;\n    oa:hasTarget <http://example.org/http/example.org/frog> .\n\n",
-          "url": "https://blocks.ogc.org/tests/geo/json-fg/link-role/example_1_1.ttl"
+          "url": "http://blocks.ogc.org/tests/geo/json-fg/link-role/example_1_1.ttl"
         }
       ]
     }
   ],
-  "annotatedSchema": "description: annotated link with role and conformance\n$defs:\n  coderef:\n    $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n  coderefs:\n    $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull\nallOf:\n- $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml\n- properties:\n    role:\n      $ref: '#/$defs/coderef'\n      x-jsonld-id: http://www.w3.org/ns/dx/prof/hasRole\n      x-jsonld-type: '@id'\n    conformsTo:\n      $ref: '#/$defs/coderefs'\n      x-jsonld-id: http://purl.org/dc/terms/conformsTo\n      x-jsonld-type: '@id'\n  required:\n  - role\nx-jsonld-prefixes:\n  prof: http://www.w3.org/ns/dx/prof/\n  dct: http://purl.org/dc/terms/\n",
+  "annotatedSchema": "description: annotated link with role and conformance\n$defs:\n  coderef:\n    $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n  coderefs:\n    $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull\nallOf:\n- $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml\n- properties:\n    role:\n      $ref: '#/$defs/coderef'\n      x-jsonld-id: http://www.w3.org/ns/dx/prof/hasRole\n      x-jsonld-type: '@id'\n    conformsTo:\n      $ref: '#/$defs/coderefs'\n      x-jsonld-id: http://purl.org/dc/terms/conformsTo\n      x-jsonld-type: '@id'\n  required:\n  - role\nx-jsonld-prefixes:\n  prof: http://www.w3.org/ns/dx/prof/\n  dct: http://purl.org/dc/terms/\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/json-fg/link-role"
 }

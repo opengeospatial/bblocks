@@ -76,7 +76,7 @@ NB. uses a local @context in the data example where application specialisations 
 ```jsonld
 {
   "@context": [
-    "https://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
+    "http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
     {
       "my": "http://my.org/featureTypes/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
@@ -143,7 +143,7 @@ required:
 - type
 - features
 allOf:
-- $ref: https://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.yaml
+- $ref: http://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.yaml
 - properties:
     type:
       type: string
@@ -164,12 +164,12 @@ allOf:
       items:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-        - $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
+        - $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: rdfs:seeAlso
     features:
       type: array
       items:
-        $ref: https://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/schema.yaml
+        $ref: http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature/schema.yaml
       x-jsonld-container: '@set'
       x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-prefixes:
@@ -179,8 +179,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection/schema.json)
-* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection/schema.yaml)
+* YAML version: [schema.yaml](http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection/schema.json)
+* JSON version: [schema.json](http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection/schema.yaml)
 
 
 # JSON-LD Context
@@ -309,7 +309,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection/context.jsonld)
+[context.jsonld](http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection/context.jsonld)
 
 ## Sources
 

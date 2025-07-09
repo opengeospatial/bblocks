@@ -21,7 +21,7 @@ None
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
   "date": "2024-05-13"
 }
 ```
@@ -49,7 +49,7 @@ None
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
   "timestamp": "2024-05-13T19:15:16Z"
 }
 ```
@@ -77,7 +77,7 @@ None
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
   "timestamp": "2024-05-13T19:15:16.987Z"
 }
 ```
@@ -108,7 +108,7 @@ None
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
   "interval": [
     "2024-05-13",
     "2024-05-16"
@@ -142,7 +142,7 @@ None
 #### jsonld
 ```jsonld
 {
-  "@context": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "@context": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
   "interval": [
     "2024-05-13T19:15:16Z",
     ".."
@@ -209,8 +209,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.json)
-* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.yaml)
+* YAML version: [schema.yaml](http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.json)
+* JSON version: [schema.json](http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.yaml)
 
 
 # JSON-LD Context
@@ -238,7 +238,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld)
+[context.jsonld](http://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld)
 
 ## Sources
 

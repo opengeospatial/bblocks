@@ -19,16 +19,16 @@
   "maturity": "proposal",
   "scope": "geo",
   "schema": {
-    "application/yaml": "https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/schema.yaml",
-    "application/json": "https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/schema.json"
+    "application/yaml": "http://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/schema.yaml",
+    "application/json": "http://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/schema.json"
   },
   "group": "GeoPose",
   "shaclRules": {},
-  "ldContext": "https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
-  "remoteCacheDir": "https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/remote_cache/",
+  "ldContext": "http://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
+  "remoteCacheDir": "http://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/remote_cache/",
   "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json",
-  "sourceLdContext": "https://blocks.ogc.org/registereditems/geo/geopose/basic/ypr/context.jsonld",
-  "sourceFiles": "https://blocks.ogc.org/registereditems/geo/geopose/basic/ypr/",
+  "sourceLdContext": "http://blocks.ogc.org/registereditems/geo/geopose/basic/ypr/context.jsonld",
+  "sourceFiles": "http://blocks.ogc.org/registereditems/geo/geopose/basic/ypr/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/geopose/basic/ypr/",
@@ -39,17 +39,17 @@
         {
           "language": "json",
           "code": "{\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.514456741060452,\n    \"pitch\": -0.43610515937237904,\n    \"roll\": 0.0\n  }\n}\n",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_1_1.json"
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld\",\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.514456741060452,\n    \"pitch\": -0.43610515937237904,\n    \"roll\": 0.0\n  }\n}",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"http://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld\",\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.514456741060452,\n    \"pitch\": -0.43610515937237904,\n    \"roll\": 0.0\n  }\n}",
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix geopose: <http://example.com/geopose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] geopose:angles [ geopose:pitch -4.361052e-01 ;\n            geopose:roll 0e+00 ;\n            geopose:yaw 5.514457e+00 ] ;\n    geopose:position [ geopose:h 1.15e+01 ;\n            geo1:lat 4.77e+01 ;\n            geo1:long -1.223e+02 ] .\n\n",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_1_1.ttl"
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_1_1.ttl"
         }
       ]
     },
@@ -58,17 +58,17 @@
         {
           "language": "json",
           "code": "{\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.518671098486835,\n    \"pitch\": -0.4381464123477409,\n    \"roll\": 0.0\n  }\n}\n",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_2_1.json"
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_2_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld\",\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.518671098486835,\n    \"pitch\": -0.4381464123477409,\n    \"roll\": 0.0\n  }\n}",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_2_1.jsonld"
+          "code": "{\n  \"@context\": \"http://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld\",\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.518671098486835,\n    \"pitch\": -0.4381464123477409,\n    \"roll\": 0.0\n  }\n}",
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_2_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix geopose: <http://example.com/geopose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] geopose:angles [ geopose:pitch -4.381464e-01 ;\n            geopose:roll 0e+00 ;\n            geopose:yaw 5.518671e+00 ] ;\n    geopose:position [ geopose:h 1.15e+01 ;\n            geo1:lat 4.77e+01 ;\n            geo1:long -1.223e+02 ] .\n\n",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_2_1.ttl"
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_2_1.ttl"
         }
       ]
     },
@@ -77,17 +77,17 @@
         {
           "language": "json",
           "code": "{\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.522894747595089,\n    \"pitch\": -0.4401787262476278,\n    \"roll\": 0.0\n  }\n}\n",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_3_1.json"
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_3_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld\",\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.522894747595089,\n    \"pitch\": -0.4401787262476278,\n    \"roll\": 0.0\n  }\n}",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_3_1.jsonld"
+          "code": "{\n  \"@context\": \"http://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld\",\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.522894747595089,\n    \"pitch\": -0.4401787262476278,\n    \"roll\": 0.0\n  }\n}",
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_3_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix geopose: <http://example.com/geopose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] geopose:angles [ geopose:pitch -4.401787e-01 ;\n            geopose:roll 0e+00 ;\n            geopose:yaw 5.522895e+00 ] ;\n    geopose:position [ geopose:h 1.15e+01 ;\n            geo1:lat 4.77e+01 ;\n            geo1:long -1.223e+02 ] .\n\n",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_3_1.ttl"
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_3_1.ttl"
         }
       ]
     },
@@ -96,17 +96,17 @@
         {
           "language": "json",
           "code": "{\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.527127708845192,\n    \"pitch\": -0.44220204512692407,\n    \"roll\": 0.0\n  }\n}\n",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_4_1.json"
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_4_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld\",\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.527127708845192,\n    \"pitch\": -0.44220204512692407,\n    \"roll\": 0.0\n  }\n}",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_4_1.jsonld"
+          "code": "{\n  \"@context\": \"http://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld\",\n  \"position\": {\n    \"lat\": 47.7,\n    \"lon\": -122.3,\n    \"h\": 11.5\n  },\n  \"angles\": {\n    \"yaw\": 5.527127708845192,\n    \"pitch\": -0.44220204512692407,\n    \"roll\": 0.0\n  }\n}",
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_4_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix geopose: <http://example.com/geopose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] geopose:angles [ geopose:pitch -4.42202e-01 ;\n            geopose:roll 0e+00 ;\n            geopose:yaw 5.527128e+00 ] ;\n    geopose:position [ geopose:h 1.15e+01 ;\n            geo1:lat 4.77e+01 ;\n            geo1:long -1.223e+02 ] .\n\n",
-          "url": "https://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_4_1.ttl"
+          "url": "http://blocks.ogc.org/tests/geo/geopose/basic/ypr/example_4_1.ttl"
         }
       ]
     }

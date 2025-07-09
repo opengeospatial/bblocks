@@ -1,11 +1,11 @@
 description: annotated link with role and conformance
 $defs:
   coderef:
-    $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
   coderefs:
-    $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull
+    $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull
 allOf:
-- $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
+- $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
 - properties:
     role:
       $ref: '#/$defs/coderef'
