@@ -21,11 +21,11 @@
   "group": "Common",
   "shaclRules": {},
   "schema": {
-    "application/yaml": "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml",
-    "application/json": "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json"
+    "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml",
+    "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json"
   },
-  "sourceSchema": "http://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/schema.yaml",
-  "sourceFiles": "http://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/",
+  "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/schema.yaml",
+  "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/",
   "rdfData": [],
   "validationPassed": true,
   "description": "If the `bbox-crs` parameter is specified, then the values of the `bbox` parameter are assumed to be in the specified\ncoordinate reference system and the server will perform the necessary internal transformations to properly fetch data\nfrom within the specified bounding box.\n\nOtherwise, the values for the `bbox` parameter shall be assumed to be WGS 84 longitude-latitude for coordinates\nwithout height and WGS 84 longitude-latitude-height for coordinates with height.",
@@ -37,7 +37,7 @@
         {
           "language": "python",
           "code": "import urllib.parse\nimport urllib.request\n\nparams = {\n  'bbox': '-124.7844079,24.7433195,-66.9513812,49.3457868',\n  'bbox-crs': 'http://www.opengis.net/def/crs/EPSG/0/25832'\n}\n\nurl = 'https://demo.pygeoapi.io/master/collections/lakes/items?' \\\n    + urllib.parse.urlencode(params)\n\ncontents = urllib.request.urlopen(url)\n\nprint(contents.read())\n",
-          "url": "http://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox-crs/example_1_1.python"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox-crs/example_1_1.python"
         }
       ]
     }

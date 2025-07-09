@@ -47,7 +47,7 @@ NB. uses a local @context in the data example where application specialisations 
 ```jsonld
 {
   "@context": [
-    "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
     {
       "my": "http://my.org/featureTypes/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
@@ -104,7 +104,7 @@ allOf:
     links:
       type: array
       items:
-        $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     timeStamp:
       type: string
@@ -118,7 +118,7 @@ allOf:
     features:
       type: array
       items:
-        $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
 x-jsonld-extra-terms:
   properties: '@nest'
 x-jsonld-prefixes:
@@ -128,8 +128,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json)
-* JSON version: [schema.json](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml)
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml)
 
 
 # JSON-LD Context
@@ -196,7 +196,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld)
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld)
 
 ## Sources
 

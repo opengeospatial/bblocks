@@ -59,8 +59,8 @@ items:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json)
-* JSON version: [schema.json](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml)
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml)
 
 ## Sources
 

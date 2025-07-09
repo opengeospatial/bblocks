@@ -74,7 +74,7 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 #### jsonld
 ```jsonld
 {
-  "@context": "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
   "type": "Feature",
   "id": "fence.1",
   "conformsTo": [
@@ -252,7 +252,7 @@ JSON Schema is used to formally specify the JSON-FG syntax.
 #### jsonld
 ```jsonld
 {
-  "@context": "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
   "type": "Feature",
   "id": "DENW19AL0000giv5BL",
   "conformsTo": [
@@ -531,12 +531,12 @@ JSON Schema is used to formally specify the JSON-FG syntax.
             geojson:coordinates ( ( ( ( ( 4.798167e+05 5.705862e+06 100 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798167e+05 5.705862e+06 100 ) ) ) ( ( ( 4.798167e+05 5.705862e+06 110 ) ( 4.798242e+05 5.705854e+06 110 ) ( 4.798297e+05 5.705859e+06 120 ) ( 4.798222e+05 5.705867e+06 120 ) ( 4.798167e+05 5.705862e+06 110 ) ) ) ( ( ( 4.798167e+05 5.705862e+06 110 ) ( 4.798167e+05 5.705862e+06 100 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798242e+05 5.705854e+06 110 ) ( 4.798167e+05 5.705862e+06 110 ) ) ) ( ( ( 4.798242e+05 5.705854e+06 110 ) ( 4.798242e+05 5.705854e+06 100 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798297e+05 5.705859e+06 120 ) ( 4.798242e+05 5.705854e+06 110 ) ) ) ( ( ( 4.798297e+05 5.705859e+06 120 ) ( 4.798297e+05 5.705859e+06 100 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798222e+05 5.705867e+06 120 ) ( 4.798297e+05 5.705859e+06 120 ) ) ) ( ( ( 4.798222e+05 5.705867e+06 120 ) ( 4.798222e+05 5.705867e+06 100 ) ( 4.798167e+05 5.705862e+06 100 ) ( 4.798167e+05 5.705862e+06 110 ) ( 4.798222e+05 5.705867e+06 120 ) ) ) ) ) ] ;
     dcterms:time [ time:hasTime ( "2014-04-24T10:50:18Z" ".." ) ] ;
     ns2:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
-    rdfs:seeAlso [ rdfs:label "This feature is of type 'building'" ;
-            ns1:relation <http://www.iana.org/assignments/relation/type> ;
-            oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ],
-        [ rdfs:label "Cadastral parcel 313 in district Wünnenberg (016)" ;
+    rdfs:seeAlso [ rdfs:label "Cadastral parcel 313 in district Wünnenberg (016)" ;
             ns1:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
-            oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ] ;
+            oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ],
+        [ rdfs:label "This feature is of type 'building'" ;
+            ns1:relation <http://www.iana.org/assignments/relation/type> ;
+            oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ] ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 8.709205e+00 5.150353e+01 100 ) ( 8.709313e+00 5.150346e+01 100 ) ( 8.709392e+00 5.15035e+01 100 ) ( 8.709284e+00 5.150357e+01 100 ) ( 8.709205e+00 5.150353e+01 100 ) ) ) ] .
 
@@ -583,7 +583,7 @@ for the `place` property.
 #### jsonld
 ```jsonld
 {
-  "@context": "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
   "type": "Feature",
   "id": "my-space-station",
   "conformsTo": [
@@ -644,7 +644,7 @@ required:
 - geometry
 - properties
 allOf:
-- $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
 - properties:
     type:
       type: string
@@ -664,10 +664,10 @@ allOf:
       items:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-        - $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+        - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     time:
-      $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
       x-jsonld-id: http://purl.org/dc/terms/time
     coordRefSys:
       $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json
@@ -727,8 +727,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json)
-* JSON version: [schema.json](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml)
+* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json)
+* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml)
 
 
 # JSON-LD Context
@@ -833,7 +833,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld)
+[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld)
 
 ## Sources
 
