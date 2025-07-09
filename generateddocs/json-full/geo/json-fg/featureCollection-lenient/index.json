@@ -16,7 +16,7 @@
       "link": "http://docs.ogc.org/per/21-017r1.html"
     }
   ],
-  "ldContext": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld",
+  "ldContext": "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld",
   "seeAlso": [
     "ogc.geo.json-fg.featureCollection"
   ],
@@ -29,16 +29,16 @@
     "ogc.geo.features.featureCollection"
   ],
   "schema": {
-    "application/yaml": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
-    "application/json": "http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json"
+    "application/yaml": "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
+    "application/json": "http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json"
   },
-  "sourceSchema": "http://blocks.ogc.org/registereditems/geo/json-fg/featureCollection-lenient/schema.yaml",
-  "sourceLdContext": "http://blocks.ogc.org/registereditems/geo/json-fg/featureCollection/context.jsonld",
-  "sourceFiles": "http://blocks.ogc.org/registereditems/geo/json-fg/featureCollection-lenient/",
+  "sourceSchema": "http://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection-lenient/schema.yaml",
+  "sourceLdContext": "http://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/context.jsonld",
+  "sourceFiles": "http://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection-lenient/",
   "rdfData": [],
   "validationPassed": true,
   "description": "OGC Features and Geometries JSON (JSON-FG) extends GeoJSON to support a limited set of additional capabilities that are\nout-of-scope for GeoJSON, but that are essential or important for a variety of use cases involving feature data.\nA **lenient** feature collection contains a set of **lenient** features from a dataset (features that do not\nneed to provide values for their `place` or `time` properties).",
-  "annotatedSchema": "allOf:\n- $schema: https://json-schema.org/draft/2019-09/schema\n  title: a JSON-FG Feature Collection\n  description: This JSON Schema is part of JSON-FG version 0.1.1\n  type: object\n  required:\n  - type\n  - features\n  properties:\n    type:\n      type: string\n      enum:\n      - FeatureCollection\n      x-jsonld-id: '@type'\n    featureType:\n      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json\n      x-jsonld-id: https://purl.org/geojson/vocab#collectionFeatureType\n    geometryDimension:\n      type: integer\n      minimum: 0\n      maximum: 3\n    coordRefSys:\n      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json\n    links:\n      type: array\n      items:\n        allOf:\n        - $ref: https://beta.schemas.opengis.net/json-fg/link.json\n        - $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: rdfs:seeAlso\n    features:\n      type: array\n      items:\n        $ref: http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml\n      x-jsonld-container: '@set'\n      x-jsonld-id: https://purl.org/geojson/vocab#features\n- $ref: http://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.yaml\nx-jsonld-prefixes:\n  geojson: https://purl.org/geojson/vocab#\n",
+  "annotatedSchema": "allOf:\n- $schema: https://json-schema.org/draft/2019-09/schema\n  title: a JSON-FG Feature Collection\n  description: This JSON Schema is part of JSON-FG version 0.1.1\n  type: object\n  required:\n  - type\n  - features\n  properties:\n    type:\n      type: string\n      enum:\n      - FeatureCollection\n      x-jsonld-id: '@type'\n    featureType:\n      $ref: https://beta.schemas.opengis.net/json-fg/featuretype.json\n      x-jsonld-id: https://purl.org/geojson/vocab#collectionFeatureType\n    geometryDimension:\n      type: integer\n      minimum: 0\n      maximum: 3\n    coordRefSys:\n      $ref: https://beta.schemas.opengis.net/json-fg/coordrefsys.json\n    links:\n      type: array\n      items:\n        allOf:\n        - $ref: https://beta.schemas.opengis.net/json-fg/link.json\n        - $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: rdfs:seeAlso\n    features:\n      type: array\n      items:\n        $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml\n      x-jsonld-container: '@set'\n      x-jsonld-id: https://purl.org/geojson/vocab#features\n- $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml\nx-jsonld-prefixes:\n  geojson: https://purl.org/geojson/vocab#\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/json-fg/featureCollection-lenient"
 }

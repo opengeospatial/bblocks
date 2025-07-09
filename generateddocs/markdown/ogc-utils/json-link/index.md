@@ -50,8 +50,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.json)
-* JSON version: [schema.json](http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml)
+* YAML version: [schema.yaml](http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json)
+* JSON version: [schema.json](http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml)
 
 
 # JSON-LD Context
@@ -83,7 +83,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/context.jsonld)
+[context.jsonld](http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld)
 
 ## Sources
 

@@ -44,15 +44,15 @@ allOf:
       items:
         allOf:
         - $ref: https://beta.schemas.opengis.net/json-fg/link.json
-        - $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
+        - $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
       x-jsonld-id: rdfs:seeAlso
     features:
       type: array
       items:
-        $ref: http://blocks.ogc.org/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+        $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
       x-jsonld-container: '@set'
       x-jsonld-id: https://purl.org/geojson/vocab#features
-- $ref: http://blocks.ogc.org/annotated-schemas/geo/features/featureCollection/schema.yaml
+- $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
 
@@ -60,8 +60,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json)
-* JSON version: [schema.json](http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml)
+* YAML version: [schema.yaml](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json)
+* JSON version: [schema.json](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml)
 
 
 # JSON-LD Context
@@ -170,7 +170,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](http://blocks.ogc.org/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld)
+[context.jsonld](http://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld)
 
 ## Sources
 

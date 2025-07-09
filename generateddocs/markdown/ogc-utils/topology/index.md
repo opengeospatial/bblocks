@@ -34,7 +34,7 @@ See panel to right - note that a more user friendly "collapsable" version is in 
 #### jsonld
 ```jsonld
 {
-  "@context": "http://blocks.ogc.org/annotated-schemas/ogc-utils/topology/context.jsonld",
+  "@context": "http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld",
   "type": "LineString",
   "references": [
     "P1",
@@ -61,12 +61,12 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: feature with geometry by reference
 properties:
   type:
-    $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
     x-jsonld-id: '@type'
   references:
     type: array
     items:
-      $ref: http://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+      $ref: http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
     x-jsonld-id: https://purl.org/geojson/vocab#relatedFeatures
     x-jsonld-type: '@id'
     x-jsonld-container: '@list'
@@ -84,8 +84,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](http://blocks.ogc.org/annotated-schemas/ogc-utils/topology/schema.json)
-* JSON version: [schema.json](http://blocks.ogc.org/annotated-schemas/ogc-utils/topology/schema.yaml)
+* YAML version: [schema.yaml](http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.json)
+* JSON version: [schema.json](http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.yaml)
 
 
 # JSON-LD Context
@@ -109,7 +109,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](http://blocks.ogc.org/annotated-schemas/ogc-utils/topology/context.jsonld)
+[context.jsonld](http://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld)
 
 
 # For developers
