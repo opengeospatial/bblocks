@@ -27,7 +27,7 @@ See panel to right - note that a more user friendly "collapsable" version is in 
 ```jsonld
 {
   "@context": [
-    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
+    "https://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/context.jsonld",
     {
       "@base": "http://example.org"
     }
@@ -57,11 +57,11 @@ See panel to right - note that a more user friendly "collapsable" version is in 
 description: annotated link with role and conformance
 $defs:
   coderef:
-    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
   coderefs:
-    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull
+    $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml#/$defs/MultipleOrObjectOrNull
 allOf:
-- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+- $ref: https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml
 - properties:
     role:
       $ref: '#/$defs/coderef'
@@ -81,8 +81,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json)
-* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml)
+* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/schema.json)
+* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/schema.yaml)
 
 
 # JSON-LD Context
@@ -123,7 +123,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld)
+[context.jsonld](https://blocks.ogc.org/annotated-schemas/geo/json-fg/link-role/context.jsonld)
 
 
 # For developers

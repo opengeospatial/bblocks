@@ -47,7 +47,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### jsonld
 ```jsonld
 {
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
+  "@context": "https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
   "position": {
     "lat": 47.7,
     "lon": -122.3,
@@ -99,7 +99,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### jsonld
 ```jsonld
 {
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
+  "@context": "https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
   "position": {
     "lat": 47.7,
     "lon": -122.3,
@@ -151,7 +151,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### jsonld
 ```jsonld
 {
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
+  "@context": "https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
   "position": {
     "lat": 47.7,
     "lon": -122.3,
@@ -203,7 +203,7 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### jsonld
 ```jsonld
 {
-  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
+  "@context": "https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
   "position": {
     "lat": 47.7,
     "lon": -122.3,
@@ -289,8 +289,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json)
-* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml)
+* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/schema.json)
+* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/schema.yaml)
 
 
 # JSON-LD Context
@@ -322,7 +322,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld)
+[context.jsonld](https://blocks.ogc.org/annotated-schemas/geo/geopose/basic/ypr/context.jsonld)
 
 ## Sources
 

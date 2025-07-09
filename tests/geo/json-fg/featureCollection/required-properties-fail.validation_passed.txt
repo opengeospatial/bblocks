@@ -1,5 +1,5 @@
 Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection
-Generated 2025-07-08T09:04:05.330375+00:00
+Generated 2025-07-09T07:30:00.267590+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -18,7 +18,7 @@ ValidationError: 'time' is a required property
 
 Failed validating 'required' in schema['allOf'][1]['properties']['features']['items']:
     {'$schema': 'https://json-schema.org/draft/2019-09/schema',
-     'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml'},
+     'allOf': [{'$ref': 'https://blocks.ogc.org/annotated-schemas/geo/features/feature/schema.yaml'},
                {'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json',
                                                'x-jsonld-id': 'http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS'},
                                'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json',
@@ -29,7 +29,7 @@ Failed validating 'required' in schema['allOf'][1]['properties']['features']['it
                                                 {'type': 'string'}],
                                       'x-jsonld-id': '@id'},
                                'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},
-                                                             {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml'}]},
+                                                             {'$ref': 'https://blocks.ogc.org/annotated-schemas/ogc-utils/json-link/schema.yaml'}]},
                                          'type': 'array',
                                          'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},
                                'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json',
@@ -37,7 +37,7 @@ Failed validating 'required' in schema['allOf'][1]['properties']['features']['it
                                'properties': {'oneOf': [{'type': 'null'},
                                                         {'type': 'object'}],
                                               'x-jsonld-id': '@nest'},
-                               'time': {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml',
+                               'time': {'$ref': 'https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.yaml',
                                         'x-jsonld-id': 'http://purl.org/dc/terms/time'},
                                'type': {'enum': ['Feature'],
                                         'type': 'string',

@@ -444,8 +444,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json)
-* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml)
+* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/geo/common/data_types/geojson/schema.json)
+* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/geo/common/data_types/geojson/schema.yaml)
 
 
 # JSON-LD Context
@@ -489,7 +489,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld)
+[context.jsonld](https://blocks.ogc.org/annotated-schemas/geo/common/data_types/geojson/context.jsonld)
 
 ## Sources
 

@@ -8,10 +8,10 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.2.2",
-  "dateOfLastChange": "2025-07-08",
+  "dateOfLastChange": "2025-07-09",
   "schema": {
-    "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml",
-    "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json"
+    "application/yaml": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.yaml",
+    "application/json": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/schema.json"
   },
   "sources": [
     {
@@ -22,11 +22,11 @@
   "scope": "geo",
   "group": "JSON-FG",
   "shaclRules": {},
-  "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld",
-  "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/remote_cache/",
+  "ldContext": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld",
+  "remoteCacheDir": "https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/remote_cache/",
   "sourceSchema": "https://beta.schemas.opengis.net/json-fg/time.json",
-  "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/time/context.jsonld",
-  "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/time/",
+  "sourceLdContext": "https://blocks.ogc.org/registereditems/geo/json-fg/time/context.jsonld",
+  "sourceFiles": "https://blocks.ogc.org/registereditems/geo/json-fg/time/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/time/",
@@ -37,17 +37,17 @@
         {
           "language": "json",
           "code": "{ \n  \"date\": \"2024-05-13\"\n}\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_1_1.json"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"date\": \"2024-05-13\"\n}",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"date\": \"2024-05-13\"\n}",
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix time: <http://www.w3.org/2006/time#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] time:hasTime \"2024-05-13\"^^xsd:date .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_1_1.ttl"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_1_1.ttl"
         }
       ]
     },
@@ -57,17 +57,17 @@
         {
           "language": "json",
           "code": "{ \n  \"timestamp\": \"2024-05-13T19:15:16Z\"\n}\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_2_1.json"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_2_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"timestamp\": \"2024-05-13T19:15:16Z\"\n}",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_2_1.jsonld"
+          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"timestamp\": \"2024-05-13T19:15:16Z\"\n}",
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_2_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix time: <http://www.w3.org/2006/time#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] time:hasTime \"2024-05-13T19:15:16+00:00\"^^xsd:dateTime .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_2_1.ttl"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_2_1.ttl"
         }
       ]
     },
@@ -77,17 +77,17 @@
         {
           "language": "json",
           "code": "{ \n  \"timestamp\": \"2024-05-13T19:15:16.987Z\"\n}\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_3_1.json"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_3_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"timestamp\": \"2024-05-13T19:15:16.987Z\"\n}",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_3_1.jsonld"
+          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"timestamp\": \"2024-05-13T19:15:16.987Z\"\n}",
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_3_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix time: <http://www.w3.org/2006/time#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] time:hasTime \"2024-05-13T19:15:16.987000+00:00\"^^xsd:dateTime .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_3_1.ttl"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_3_1.ttl"
         }
       ]
     },
@@ -97,17 +97,17 @@
         {
           "language": "json",
           "code": "{ \n  \"interval\": [\n    \"2024-05-13\", \n    \"2024-05-16\"\n  ]\n}\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_4_1.json"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_4_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"interval\": [\n    \"2024-05-13\",\n    \"2024-05-16\"\n  ]\n}",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_4_1.jsonld"
+          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"interval\": [\n    \"2024-05-13\",\n    \"2024-05-16\"\n  ]\n}",
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_4_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix time: <http://www.w3.org/2006/time#> .\n\n[] time:hasTime ( \"2024-05-13\" \"2024-05-16\" ) .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_4_1.ttl"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_4_1.ttl"
         }
       ]
     },
@@ -117,17 +117,17 @@
         {
           "language": "json",
           "code": "{ \n  \"interval\": [\n    \"2024-05-13T19:15:16Z\",\n    \"..\"\n  ]\n}\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_5_1.json"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_5_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"interval\": [\n    \"2024-05-13T19:15:16Z\",\n    \"..\"\n  ]\n}",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_5_1.jsonld"
+          "code": "{\n  \"@context\": \"https://blocks.ogc.org/annotated-schemas/geo/json-fg/time/context.jsonld\",\n  \"interval\": [\n    \"2024-05-13T19:15:16Z\",\n    \"..\"\n  ]\n}",
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_5_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix time: <http://www.w3.org/2006/time#> .\n\n[] time:hasTime ( \"2024-05-13T19:15:16Z\" \"..\" ) .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/time/example_5_1.ttl"
+          "url": "https://blocks.ogc.org/tests/geo/json-fg/time/example_5_1.ttl"
         }
       ]
     }

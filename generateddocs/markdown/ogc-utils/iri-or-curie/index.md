@@ -140,8 +140,8 @@ $ref: '#/$defs/Single'
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json)
-* JSON version: [schema.json](https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml)
+* YAML version: [schema.yaml](https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.json)
+* JSON version: [schema.json](https://blocks.ogc.org/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml)
 
 ## Sources
 
