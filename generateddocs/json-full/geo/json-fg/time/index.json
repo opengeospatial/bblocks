@@ -8,7 +8,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.2.2",
-  "dateOfLastChange": "2025-09-07",
+  "dateOfLastChange": "2025-09-14",
   "schema": {
     "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml",
     "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json"
@@ -132,7 +132,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://beta.schemas.opengis.net/json-fg/time.json\ntitle: the time member\ndescription: This JSON Schema is part of JSON-FG version 0.2.2\noneOf:\n- type: 'null'\n- type: object\n  properties:\n    date:\n      $ref: '#/$defs/date'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-type: http://www.w3.org/2001/XMLSchema#date\n    timestamp:\n      $ref: '#/$defs/timestamp'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n    interval:\n      $ref: '#/$defs/interval'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-container: '@list'\n$defs:\n  date:\n    type: string\n    pattern: ^\\d{4}-\\d{2}-\\d{2}$\n  timestamp:\n    type: string\n    pattern: ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$\n  interval:\n    type: array\n    minItems: 2\n    maxItems: 2\n    items:\n      oneOf:\n      - $ref: '#/$defs/date'\n      - $ref: '#/$defs/timestamp'\n      - type: string\n        enum:\n        - ..\nx-jsonld-prefixes:\n  time: http://www.w3.org/2006/time#\n  xsd: http://www.w3.org/2001/XMLSchema#\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://beta.schemas.opengis.net/json-fg/time.json\ntitle: the value of the 'time' member\ndescription: This JSON Schema is part of JSON-FG version 0.3.0.\noneOf:\n- type: 'null'\n- type: object\n  minProperties: 1\n  properties:\n    date:\n      $ref: '#/$defs/date'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-type: http://www.w3.org/2001/XMLSchema#date\n    timestamp:\n      $ref: '#/$defs/timestamp'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n    interval:\n      $ref: '#/$defs/interval'\n      x-jsonld-id: http://www.w3.org/2006/time#hasTime\n      x-jsonld-container: '@list'\n$defs:\n  date:\n    type: string\n    pattern: ^\\d{4}-\\d{2}-\\d{2}$\n  timestamp:\n    type: string\n    pattern: ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$\n  interval:\n    type: array\n    minItems: 2\n    maxItems: 2\n    items:\n      anyOf:\n      - oneOf:\n        - $ref: '#/$defs/date'\n        - type: string\n          enum:\n          - ..\n      - oneOf:\n        - $ref: '#/$defs/timestamp'\n        - type: string\n          enum:\n          - ..\nx-jsonld-prefixes:\n  time: http://www.w3.org/2006/time#\n  xsd: http://www.w3.org/2001/XMLSchema#\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/json-fg/time"
 }

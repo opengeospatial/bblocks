@@ -165,11 +165,12 @@ None
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: https://beta.schemas.opengis.net/json-fg/time.json
-title: the time member
-description: This JSON Schema is part of JSON-FG version 0.2.2
+title: the value of the 'time' member
+description: This JSON Schema is part of JSON-FG version 0.3.0.
 oneOf:
 - type: 'null'
 - type: object
+  minProperties: 1
   properties:
     date:
       $ref: '#/$defs/date'
@@ -195,12 +196,17 @@ $defs:
     minItems: 2
     maxItems: 2
     items:
-      oneOf:
-      - $ref: '#/$defs/date'
-      - $ref: '#/$defs/timestamp'
-      - type: string
-        enum:
-        - ..
+      anyOf:
+      - oneOf:
+        - $ref: '#/$defs/date'
+        - type: string
+          enum:
+          - ..
+      - oneOf:
+        - $ref: '#/$defs/timestamp'
+        - type: string
+          enum:
+          - ..
 x-jsonld-prefixes:
   time: http://www.w3.org/2006/time#
   xsd: http://www.w3.org/2001/XMLSchema#
