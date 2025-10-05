@@ -78,7 +78,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "quaternion": "geopose:quaternion",
     "position": {
       "@id": "geopose:position",
       "@context": {
@@ -87,6 +86,7 @@ Links to the schema:
         "h": "geopose:h"
       }
     },
+    "quaternion": "geopose:quaternion",
     "geopose": "http://example.com/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "@version": 1.1

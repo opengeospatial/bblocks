@@ -157,6 +157,19 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
     "type": "@type",
     "id": "@id",
     "properties": "@nest",
@@ -172,19 +185,6 @@ Links to the schema:
     "bbox": {
       "@container": "@list",
       "@id": "geojson:bbox"
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
     },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",

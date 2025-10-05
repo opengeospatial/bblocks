@@ -117,13 +117,6 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "id": "@id",
-    "properties": "@nest",
-    "geometry": "geojson:geometry",
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -133,6 +126,13 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": "geojson:geometry",
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
     "Polyhedron": "geojson:Polyhedron",
     "MultiPolyhedron": "geojson:MultiPolyhedron",
     "Prism": {

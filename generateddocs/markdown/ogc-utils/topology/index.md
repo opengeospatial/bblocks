@@ -93,13 +93,13 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "LineString": "geojson:LineString",
     "type": "@type",
     "references": {
       "@id": "geojson:relatedFeatures",
       "@type": "@id",
       "@container": "@list"
     },
-    "LineString": "geojson:LineString",
     "geojson": "https://purl.org/geojson/vocab#",
     "csdm": "https://linked.data.gov.au/def/csdm/",
     "dct": "http://purl.org/dc/terms/",
