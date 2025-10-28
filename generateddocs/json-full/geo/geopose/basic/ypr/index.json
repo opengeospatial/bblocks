@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-26",
+  "dateOfLastChange": "2025-10-28",
   "sources": [
     {
       "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
@@ -48,7 +48,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix geopose: <http://example.com/geopose/> .\n\n[] geopose:angles [ ] ;\n    geopose:position [ ] .\n\n",
+          "code": "@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix geopose: <http://example.com/geopose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] geopose:angles [ geopose:pitch -4.361052e-01 ;\n            geopose:roll 0e+00 ;\n            geopose:yaw 5.514457e+00 ] ;\n    geopose:position [ geopose:h 1.15e+01 ;\n            geo1:lat 4.77e+01 ;\n            geo1:long -1.223e+02 ] .\n\n",
           "url": "https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_1_1.ttl"
         }
       ]
@@ -67,7 +67,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix geopose: <http://example.com/geopose/> .\n\n[] geopose:angles [ ] ;\n    geopose:position [ ] .\n\n",
+          "code": "@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix geopose: <http://example.com/geopose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] geopose:angles [ geopose:pitch -4.381464e-01 ;\n            geopose:roll 0e+00 ;\n            geopose:yaw 5.518671e+00 ] ;\n    geopose:position [ geopose:h 1.15e+01 ;\n            geo1:lat 4.77e+01 ;\n            geo1:long -1.223e+02 ] .\n\n",
           "url": "https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_2_1.ttl"
         }
       ]
@@ -86,7 +86,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix geopose: <http://example.com/geopose/> .\n\n[] geopose:angles [ ] ;\n    geopose:position [ ] .\n\n",
+          "code": "@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix geopose: <http://example.com/geopose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] geopose:angles [ geopose:pitch -4.401787e-01 ;\n            geopose:roll 0e+00 ;\n            geopose:yaw 5.522895e+00 ] ;\n    geopose:position [ geopose:h 1.15e+01 ;\n            geo1:lat 4.77e+01 ;\n            geo1:long -1.223e+02 ] .\n\n",
           "url": "https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_3_1.ttl"
         }
       ]
@@ -105,13 +105,13 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix geopose: <http://example.com/geopose/> .\n\n[] geopose:angles [ ] ;\n    geopose:position [ ] .\n\n",
+          "code": "@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix geopose: <http://example.com/geopose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] geopose:angles [ geopose:pitch -4.42202e-01 ;\n            geopose:roll 0e+00 ;\n            geopose:yaw 5.527128e+00 ] ;\n    geopose:position [ geopose:h 1.15e+01 ;\n            geo1:lat 4.77e+01 ;\n            geo1:long -1.223e+02 ] .\n\n",
           "url": "https://opengeospatial.github.io/bblocks/tests/geo/geopose/basic/ypr/example_4_1.ttl"
         }
       ]
     }
   ],
-  "annotatedSchema": "description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'\ndefinitions:\n  angles:\n    type: object\n    properties:\n      yaw:\n        type: number\n      pitch:\n        type: number\n      roll:\n        type: number\n    required:\n    - yaw\n    - pitch\n    - roll\n  Position:\n    type: object\n    properties:\n      lat:\n        type: number\n      lon:\n        type: number\n      h:\n        type: number\n    required:\n    - lat\n    - lon\n    - h\ntype: object\nproperties:\n  position:\n    $ref: '#/definitions/Position'\n    x-jsonld-id: http://example.com/geopose/position\n  angles:\n    $ref: '#/definitions/angles'\n    x-jsonld-id: http://example.com/geopose/angles\nrequired:\n- position\n- angles\nx-jsonld-prefixes:\n  geopose: http://example.com/geopose/\n  geo: http://www.w3.org/2003/01/geo/wgs84_pos#\n",
+  "annotatedSchema": "description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'\ndefinitions:\n  angles:\n    type: object\n    properties:\n      yaw:\n        type: number\n        x-jsonld-id: http://example.com/geopose/yaw\n      pitch:\n        type: number\n        x-jsonld-id: http://example.com/geopose/pitch\n      roll:\n        type: number\n        x-jsonld-id: http://example.com/geopose/roll\n    required:\n    - yaw\n    - pitch\n    - roll\n  Position:\n    type: object\n    properties:\n      lat:\n        type: number\n        x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#lat\n      lon:\n        type: number\n        x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#long\n      h:\n        type: number\n        x-jsonld-id: http://example.com/geopose/h\n    required:\n    - lat\n    - lon\n    - h\ntype: object\nproperties:\n  position:\n    $ref: '#/definitions/Position'\n    x-jsonld-id: http://example.com/geopose/position\n  angles:\n    $ref: '#/definitions/angles'\n    x-jsonld-id: http://example.com/geopose/angles\nrequired:\n- position\n- angles\nx-jsonld-prefixes:\n  geopose: http://example.com/geopose/\n  geo: http://www.w3.org/2003/01/geo/wgs84_pos#\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/geopose/basic/ypr"
 }
