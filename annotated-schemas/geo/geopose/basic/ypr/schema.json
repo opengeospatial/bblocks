@@ -6,15 +6,15 @@
       "properties": {
         "yaw": {
           "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/yaw"
+          "x-jsonld-id": "https://w3id.org/ogc/geopose/yaw"
         },
         "pitch": {
           "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/pitch"
+          "x-jsonld-id": "https://w3id.org/ogc/geopose/pitch"
         },
         "roll": {
           "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/roll"
+          "x-jsonld-id": "https://w3id.org/ogc/geopose/roll"
         }
       },
       "required": [
@@ -36,7 +36,7 @@
         },
         "h": {
           "type": "number",
-          "x-jsonld-id": "http://example.com/geopose/h"
+          "x-jsonld-id": "https://w3id.org/ogc/geopose/h"
         }
       },
       "required": [
@@ -50,11 +50,11 @@
   "properties": {
     "position": {
       "$ref": "#/definitions/Position",
-      "x-jsonld-id": "http://example.com/geopose/position"
+      "x-jsonld-id": "https://w3id.org/ogc/geopose/position"
     },
     "angles": {
       "$ref": "#/definitions/angles",
-      "x-jsonld-id": "http://example.com/geopose/angles"
+      "x-jsonld-id": "https://w3id.org/ogc/geopose/angles"
     }
   },
   "required": [
@@ -62,7 +62,7 @@
     "angles"
   ],
   "x-jsonld-prefixes": {
-    "geopose": "http://example.com/geopose/",
+    "geopose": "https://w3id.org/ogc/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
   }
 }

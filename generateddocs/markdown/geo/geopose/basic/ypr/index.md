@@ -64,15 +64,15 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### ttl
 ```ttl
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix geopose: <http://example.com/geopose/> .
+@prefix geopose: <https://w3id.org/ogc/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] geopose:angles [ geopose:pitch -4.361052e-01 ;
             geopose:roll 0e+00 ;
             geopose:yaw 5.514457e+00 ] ;
-    geopose:position [ geopose:h 1.15e+01 ;
-            geo1:lat 4.77e+01 ;
-            geo1:long -1.223e+02 ] .
+    geopose:position [ geo1:lat 4.77e+01 ;
+            geo1:long -1.223e+02 ;
+            geopose:h 1.15e+01 ] .
 
 
 ```
@@ -116,15 +116,15 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### ttl
 ```ttl
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix geopose: <http://example.com/geopose/> .
+@prefix geopose: <https://w3id.org/ogc/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] geopose:angles [ geopose:pitch -4.381464e-01 ;
             geopose:roll 0e+00 ;
             geopose:yaw 5.518671e+00 ] ;
-    geopose:position [ geopose:h 1.15e+01 ;
-            geo1:lat 4.77e+01 ;
-            geo1:long -1.223e+02 ] .
+    geopose:position [ geo1:lat 4.77e+01 ;
+            geo1:long -1.223e+02 ;
+            geopose:h 1.15e+01 ] .
 
 
 ```
@@ -168,15 +168,15 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### ttl
 ```ttl
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix geopose: <http://example.com/geopose/> .
+@prefix geopose: <https://w3id.org/ogc/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] geopose:angles [ geopose:pitch -4.401787e-01 ;
             geopose:roll 0e+00 ;
             geopose:yaw 5.522895e+00 ] ;
-    geopose:position [ geopose:h 1.15e+01 ;
-            geo1:lat 4.77e+01 ;
-            geo1:long -1.223e+02 ] .
+    geopose:position [ geo1:lat 4.77e+01 ;
+            geo1:long -1.223e+02 ;
+            geopose:h 1.15e+01 ] .
 
 
 ```
@@ -220,15 +220,15 @@ unit of measure SHALL be the degree and the angles represented as signed real nu
 #### ttl
 ```ttl
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix geopose: <http://example.com/geopose/> .
+@prefix geopose: <https://w3id.org/ogc/geopose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] geopose:angles [ geopose:pitch -4.42202e-01 ;
             geopose:roll 0e+00 ;
             geopose:yaw 5.527128e+00 ] ;
-    geopose:position [ geopose:h 1.15e+01 ;
-            geo1:lat 4.77e+01 ;
-            geo1:long -1.223e+02 ] .
+    geopose:position [ geo1:lat 4.77e+01 ;
+            geo1:long -1.223e+02 ;
+            geopose:h 1.15e+01 ] .
 
 
 ```
@@ -243,13 +243,13 @@ definitions:
     properties:
       yaw:
         type: number
-        x-jsonld-id: http://example.com/geopose/yaw
+        x-jsonld-id: https://w3id.org/ogc/geopose/yaw
       pitch:
         type: number
-        x-jsonld-id: http://example.com/geopose/pitch
+        x-jsonld-id: https://w3id.org/ogc/geopose/pitch
       roll:
         type: number
-        x-jsonld-id: http://example.com/geopose/roll
+        x-jsonld-id: https://w3id.org/ogc/geopose/roll
     required:
     - yaw
     - pitch
@@ -265,7 +265,7 @@ definitions:
         x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#long
       h:
         type: number
-        x-jsonld-id: http://example.com/geopose/h
+        x-jsonld-id: https://w3id.org/ogc/geopose/h
     required:
     - lat
     - lon
@@ -274,15 +274,15 @@ type: object
 properties:
   position:
     $ref: '#/definitions/Position'
-    x-jsonld-id: http://example.com/geopose/position
+    x-jsonld-id: https://w3id.org/ogc/geopose/position
   angles:
     $ref: '#/definitions/angles'
-    x-jsonld-id: http://example.com/geopose/angles
+    x-jsonld-id: https://w3id.org/ogc/geopose/angles
 required:
 - position
 - angles
 x-jsonld-prefixes:
-  geopose: http://example.com/geopose/
+  geopose: https://w3id.org/ogc/geopose/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
 
 ```
@@ -314,7 +314,7 @@ Links to the schema:
       },
       "@id": "geopose:angles"
     },
-    "geopose": "http://example.com/geopose/",
+    "geopose": "https://w3id.org/ogc/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "@version": 1.1
   }
