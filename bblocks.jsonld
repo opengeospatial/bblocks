@@ -144,12 +144,12 @@
   "abstract": "OGC Specification Elements packaged as FAIR Building Blocks.",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of [building blocks](https://ogcincubator.github.io/bblocks-docs/) managed by the OGC community through a variety of processes:\n\n- formal standards publication processes the Standards Working Groups\n- agreements with other standards bodies (eg. ISO)\n- community hosted examples of re-use (profiles and extensions of OGC standards)\n- informal \"incubator\" processes where more than one project needs a solution, and appropriate SWG scope is yet to be determined\n\n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n\n\nNotes:\n\n1. Policies are in preparation for naming and governance of these sub-registers, and this is subject to change pending adoption of such policies.\n1. Building Block identification will be designed to support transition between governance domains without change using symbolic references.\n1. A formal definition of Building Blocks and the level of \"granularity\" they represent with respect to the OGC Modular Specification is TBD.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2025-11-25T13:51:17.482591",
+  "modified": "2025-11-26T11:36:49.373958",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"e77c5cac2385db92e168a89ff2a014b0f8aa957a",
-      "shortCommitId": "\"e77c5c",
-      "date": "2025-11-25T13:48:24+00:00\""
+      "commitId": "\"b4de9576dbcbbfe7076fd291e3b3c36062972192",
+      "shortCommitId": "\"b4de95",
+      "date": "2025-11-26T11:28:24+00:00\""
     }
   },
   "gitRepository": "https://github.com/opengeospatial/bblocks",
@@ -201,12 +201,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/schema.yaml",
@@ -262,12 +264,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "maturity": "mature",
@@ -277,7 +281,8 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/remote_cache/",
       "sourceSchema": "https://geojson.org/schema/Feature.json",
@@ -332,12 +337,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "maturity": "mature",
@@ -401,12 +408,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/schema.yaml",
@@ -463,18 +472,21 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/schema.yaml",
@@ -531,12 +543,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "group": "GeoPose",
@@ -544,7 +558,8 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/remote_cache/",
       "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Advanced.Schema.json",
@@ -601,12 +616,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "group": "GeoPose",
@@ -614,7 +631,8 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/remote_cache/",
       "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Quaternion.Schema.json",
@@ -671,12 +689,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "group": "GeoPose",
@@ -684,7 +704,8 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/remote_cache/",
       "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json",
@@ -733,12 +754,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sources": [
@@ -753,7 +776,8 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/remote_cache/",
       "sourceSchema": "https://beta.schemas.opengis.net/json-fg/time.json",
@@ -821,12 +845,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/schema.yaml",
@@ -888,25 +914,28 @@
       "group": "Common",
       "shaclShapes": null,
       "dependsOn": [
+        "bblocks://ogc.geo.common.data_types.geojson",
         "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.common.data_types.bounding_box",
-        "bblocks://ogc.geo.common.data_types.geojson"
+        "bblocks://ogc.geo.common.data_types.bounding_box"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/schema.yaml",
@@ -961,24 +990,27 @@
       ],
       "shaclShapes": null,
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.iri-or-curie",
-        "bblocks://ogc.ogc-utils.json-link"
+        "bblocks://ogc.ogc-utils.json-link",
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/schema.yaml",
@@ -1039,18 +1071,21 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/schema.yaml",
@@ -1104,7 +1139,8 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "maturity": "mature",
       "scope": "geo",
@@ -1118,12 +1154,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/schema.yaml",
@@ -1180,24 +1218,27 @@
       "shaclShapes": null,
       "dependsOn": [
         "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.features.feature",
-        "bblocks://ogc.geo.json-fg.time"
+        "bblocks://ogc.geo.json-fg.time",
+        "bblocks://ogc.geo.features.feature"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/schema.json",
@@ -1251,7 +1292,8 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "seeAlso": [
         "ogc.geo.json-fg.feature"
@@ -1261,19 +1303,21 @@
       "shaclShapes": null,
       "dependsOn": [
         "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.features.feature",
-        "bblocks://ogc.geo.json-fg.time"
+        "bblocks://ogc.geo.json-fg.time",
+        "bblocks://ogc.geo.features.feature"
       ],
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature-lenient/schema.yaml",
@@ -1335,18 +1379,21 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/schema.json",
@@ -1400,7 +1447,8 @@
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld",
         "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json"
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
       "seeAlso": [
         "ogc.geo.json-fg.featureCollection"
@@ -1417,12 +1465,14 @@
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml"
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json",
           "prof:hasRole": "role:schema",
-          "dct:format": "application/json"
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         }
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection-lenient/schema.yaml",
