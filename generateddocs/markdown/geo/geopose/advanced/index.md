@@ -90,6 +90,10 @@ Links to the schema:
         "h": "geopose:h"
       }
     },
+    "authority": {},
+    "id": {},
+    "parameters": {},
+    "frameSpecification": {},
     "quaternion": {
       "@context": {
         "x": "geopose:x",
@@ -99,6 +103,7 @@ Links to the schema:
       },
       "@id": "geopose:quaternion"
     },
+    "validTime": {},
     "geopose": "https://w3id.org/ogc/geopose/",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "@version": 1.1

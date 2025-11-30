@@ -119,15 +119,15 @@ NB. uses a local @context in the data example where application specialisations 
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
-    skos:prefLabel "MyFeatureCollection" ;
-    geojson:features <http://www.example.com/features/f1> .
-
 <http://www.example.com/features/f1> a my:FeatureType,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] ;
     ns1:CoordinateReferenceSystemCRS "EPSG" .
+
+[] a geojson:FeatureCollection ;
+    skos:prefLabel "MyFeatureCollection" ;
+    geojson:features <http://www.example.com/features/f1> .
 
 
 ```
@@ -188,39 +188,26 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "links": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
+    "type": "@type",
     "features": {
-      "@container": "@set",
-      "@id": "geojson:features",
       "@context": {
+        "id": "@id",
+        "geometry": {
+          "@context": {
+            "measures": {
+              "@context": {
+                "enabled": {},
+                "unit": {},
+                "description": {}
+              }
+            }
+          },
+          "@id": "geojson:geometry"
+        },
+        "bbox": {
+          "@id": "geojson:bbox",
+          "@container": "@list"
+        },
         "links": {
           "@context": {
             "href": {
@@ -234,6 +221,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
@@ -259,19 +247,71 @@ Links to the schema:
           },
           "@id": "dct:time"
         },
-        "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-        "place": "dct:spatial"
-      }
+        "coordRefSys": {
+          "@context": {
+            "href": {},
+            "epoch": {}
+          },
+          "@id": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"
+        },
+        "place": {
+          "@context": {
+            "measures": {
+              "@context": {
+                "enabled": {},
+                "unit": {},
+                "description": {}
+              }
+            },
+            "base": {},
+            "lower": {},
+            "upper": {},
+            "prisms": {}
+          },
+          "@id": "dct:spatial"
+        }
+      },
+      "@id": "geojson:features",
+      "@container": "@set"
     },
-    "type": "@type",
-    "id": "@id",
+    "bbox": {},
+    "links": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "anchor": {},
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "timeStamp": {},
+    "numberMatched": {},
+    "numberReturned": {},
     "properties": "@nest",
-    "geometry": "geojson:geometry",
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
     "featureType": "geojson:collectionFeatureType",
+    "geometryDimension": {},
+    "coordRefSys": {},
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
     "Polyhedron": "geojson:Polyhedron",
     "MultiPolyhedron": "geojson:MultiPolyhedron",
     "Prism": {

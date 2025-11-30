@@ -137,6 +137,15 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "type": "@type",
+    "features": {
+      "@id": "geojson:features",
+      "@container": "@set"
+    },
+    "bbox": {
+      "@id": "geojson:bbox",
+      "@container": "@list"
+    },
     "links": {
       "@context": {
         "href": {
@@ -150,6 +159,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
+        "anchor": {},
         "type": "dct:type",
         "hreflang": "dct:language",
         "title": "rdfs:label",
@@ -157,6 +167,9 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
+    "timeStamp": {},
+    "numberMatched": {},
+    "numberReturned": {},
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -166,11 +179,6 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
-    },
-    "type": "@type",
     "id": "@id",
     "properties": "@nest",
     "geometry": {
@@ -178,13 +186,10 @@ Links to the schema:
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        }
+        },
+        "geometries": {}
       },
       "@id": "geojson:geometry"
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
     },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",

@@ -305,12 +305,12 @@ This Building Block extends the standard JSON-FG one by removing the requirement
 <https://example.com/json-fg/DENW19AL0000giv5BL> a <app:building>,
         geojson:Feature ;
     ns2:CoordinateReferenceSystemCRS "http://www.opengis.net/def/crs/EPSG/0/5555" ;
-    rdfs:seeAlso [ rdfs:label "This feature is of type 'building'" ;
-            ns1:relation <http://www.iana.org/assignments/relation/type> ;
-            oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ],
-        [ rdfs:label "Cadastral parcel 313 in district Wünnenberg (016)" ;
+    rdfs:seeAlso [ rdfs:label "Cadastral parcel 313 in district Wünnenberg (016)" ;
             ns1:relation <http://www.opengis.net/def/rel/ogc/1.0/within> ;
-            oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ] ;
+            oa:hasTarget <https://example.org/data/v1/collections/cadastralparcel/items/05297001600313______> ],
+        [ rdfs:label "This feature is of type 'building'" ;
+            ns1:relation <http://www.iana.org/assignments/relation/type> ;
+            oa:hasTarget <https://inspire.ec.europa.eu/featureconcept/Building> ] ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 8.709205e+00 5.150353e+01 100 ) ( 8.709313e+00 5.150346e+01 100 ) ( 8.709392e+00 5.15035e+01 100 ) ( 8.709284e+00 5.150357e+01 100 ) ( 8.709205e+00 5.150353e+01 100 ) ) ) ] .
 
@@ -916,7 +916,18 @@ Links to the schema:
     "type": "@type",
     "id": "@id",
     "properties": "@nest",
-    "geometry": "geojson:geometry",
+    "geometry": {
+      "@context": {
+        "measures": {
+          "@context": {
+            "enabled": {},
+            "unit": {},
+            "description": {}
+          }
+        }
+      },
+      "@id": "geojson:geometry"
+    },
     "bbox": {
       "@container": "@list",
       "@id": "geojson:bbox"
@@ -934,6 +945,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
+        "anchor": {},
         "type": "dct:type",
         "hreflang": "dct:language",
         "title": "rdfs:label",
@@ -959,8 +971,29 @@ Links to the schema:
       },
       "@id": "dct:time"
     },
-    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-    "place": "dct:spatial",
+    "coordRefSys": {
+      "@context": {
+        "href": {},
+        "epoch": {}
+      },
+      "@id": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"
+    },
+    "place": {
+      "@context": {
+        "measures": {
+          "@context": {
+            "enabled": {},
+            "unit": {},
+            "description": {}
+          }
+        },
+        "base": {},
+        "lower": {},
+        "upper": {},
+        "prisms": {}
+      },
+      "@id": "dct:spatial"
+    },
     "Polyhedron": "geojson:Polyhedron",
     "MultiPolyhedron": "geojson:MultiPolyhedron",
     "Prism": {
