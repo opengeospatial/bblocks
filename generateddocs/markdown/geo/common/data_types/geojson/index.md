@@ -474,8 +474,7 @@ Links to the schema:
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        },
-        "geometries": {}
+        }
       },
       "@id": "geojson:geometry"
     },

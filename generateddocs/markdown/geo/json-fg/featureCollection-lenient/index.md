@@ -71,8 +71,6 @@ Links to the schema:
   "@context": {
     "type": "@type",
     "featureType": "geojson:collectionFeatureType",
-    "geometryDimension": {},
-    "coordRefSys": {},
     "links": {
       "@context": {
         "href": {
@@ -86,7 +84,6 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "anchor": {},
         "type": "dct:type",
         "hreflang": "dct:language",
         "title": "rdfs:label",
@@ -97,18 +94,7 @@ Links to the schema:
     "features": {
       "@context": {
         "id": "@id",
-        "geometry": {
-          "@context": {
-            "measures": {
-              "@context": {
-                "enabled": {},
-                "unit": {},
-                "description": {}
-              }
-            }
-          },
-          "@id": "geojson:geometry"
-        },
+        "geometry": "geojson:geometry",
         "bbox": {
           "@container": "@list",
           "@id": "geojson:bbox"
@@ -131,37 +117,12 @@ Links to the schema:
           },
           "@id": "dct:time"
         },
-        "coordRefSys": {
-          "@context": {
-            "href": {},
-            "epoch": {}
-          },
-          "@id": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"
-        },
-        "place": {
-          "@context": {
-            "measures": {
-              "@context": {
-                "enabled": {},
-                "unit": {},
-                "description": {}
-              }
-            },
-            "base": {},
-            "lower": {},
-            "upper": {},
-            "prisms": {}
-          },
-          "@id": "dct:spatial"
-        }
+        "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+        "place": "dct:spatial"
       },
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "bbox": {},
-    "timeStamp": {},
-    "numberMatched": {},
-    "numberReturned": {},
     "properties": "@nest",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
