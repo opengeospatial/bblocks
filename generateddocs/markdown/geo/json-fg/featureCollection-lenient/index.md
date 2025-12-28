@@ -74,8 +74,8 @@ Links to the schema:
     "links": {
       "@context": {
         "href": {
-          "@id": "oa:hasTarget",
-          "@type": "@id"
+          "@type": "@id",
+          "@id": "oa:hasTarget"
         },
         "rel": {
           "@context": {
@@ -95,32 +95,8 @@ Links to the schema:
       "@context": {
         "id": "@id",
         "geometry": "geojson:geometry",
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
-        },
-        "featureType": "@type",
-        "time": {
-          "@context": {
-            "date": {
-              "@id": "owlTime:hasTime",
-              "@type": "xsd:date"
-            },
-            "timestamp": {
-              "@id": "owlTime:hasTime",
-              "@type": "xsd:dateTime"
-            },
-            "interval": {
-              "@id": "owlTime:hasTime",
-              "@container": "@list"
-            }
-          },
-          "@id": "dct:time"
-        },
-        "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-        "place": "dct:spatial"
+        "bbox": "geojson:bbox"
       },
-      "@container": "@set",
       "@id": "geojson:features"
     },
     "properties": "@nest",
