@@ -139,10 +139,13 @@ Links to the schema:
   "@context": {
     "type": "@type",
     "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
+      "@id": "geojson:features",
+      "@container": "@set"
     },
-    "bbox": "geojson:bbox",
+    "bbox": {
+      "@id": "geojson:bbox",
+      "@container": "@list"
+    },
     "links": {
       "@context": {
         "href": {
@@ -179,10 +182,6 @@ Links to the schema:
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        },
-        "bbox": {
-          "@container": "@list",
-          "@id": "geojson:bbox"
         }
       },
       "@id": "geojson:geometry"

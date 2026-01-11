@@ -753,7 +753,10 @@ Links to the schema:
     "id": "@id",
     "properties": "@nest",
     "geometry": "geojson:geometry",
-    "bbox": "geojson:bbox",
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
     "links": {
       "@context": {
         "href": {
