@@ -96,7 +96,7 @@
         "@id": "bblocks:dependsOn",
         "@type": "@id"
       },
-      "profileOf": {
+      "isProfileOf": {
         "@id": "prof:isProfileOf",
         "@type": "@id"
       },
@@ -153,6 +153,14 @@
       "links": {
         "@id": "prof:hasResource",
         "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld"
+      },
+      "concept": {
+        "@id": "skos:closeMatch",
+        "@type": "@id"
+      },
+      "rdfType": {
+        "@id": "rdfs:subClassOf",
+        "@type": "@id"
       }
     }
   ],
@@ -160,12 +168,12 @@
   "abstract": "OGC Specification Elements packaged as FAIR Building Blocks.",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of [building blocks](https://ogcincubator.github.io/bblocks-docs/) managed by the OGC community through a variety of processes:\n\n- formal standards publication processes the Standards Working Groups\n- agreements with other standards bodies (eg. ISO)\n- community hosted examples of re-use (profiles and extensions of OGC standards)\n- informal \"incubator\" processes where more than one project needs a solution, and appropriate SWG scope is yet to be determined\n\n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n\n\nNotes:\n\n1. Policies are in preparation for naming and governance of these sub-registers, and this is subject to change pending adoption of such policies.\n1. Building Block identification will be designed to support transition between governance domains without change using symbolic references.\n1. A formal definition of Building Blocks and the level of \"granularity\" they represent with respect to the OGC Modular Specification is TBD.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2026-01-18T04:24:11.581183",
+  "modified": "2026-01-25T04:30:03.293304",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"e31f9b7205a141a60831e312d473ddf981d03c99",
-      "shortCommitId": "\"e31f9b",
-      "date": "2026-01-13T14:30:58+00:00\""
+      "commitId": "\"da938c570c326dad590b43582182bcf06cc63198",
+      "shortCommitId": "\"da938c",
+      "date": "2026-01-19T11:49:34+00:00\""
     }
   },
   "gitRepository": "https://github.com/opengeospatial/bblocks",
@@ -197,7 +205,8 @@
   ],
   "@type": [
     "skos:ConceptScheme",
-    "dcat:Catalog"
+    "dcat:Catalog",
+    "bblocks:BBlocksRegister"
   ],
   "skos:prefLabel": "Building Blocks - OGC Main",
   "hasConcepts": [
@@ -210,7 +219,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response",
@@ -225,12 +234,6 @@
       ],
       "maturity": "mature",
       "scope": "geo",
-      "concept": [
-        {
-          "label": "",
-          "link": ""
-        }
-      ],
       "group": "Common",
       "shaclShapes": null,
       "schema": [
@@ -270,14 +273,15 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "Bounding Box",
       "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -291,7 +295,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "IETF RFC 7946 - The GeoJSON Format",
@@ -346,13 +350,14 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "GeoJSON",
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -366,7 +371,7 @@
       "itemClass": "parameter",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.15.3: Parameter bbox",
@@ -414,14 +419,15 @@
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "bbox",
       "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -435,7 +441,7 @@
       "itemClass": "parameter",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC API - Features, Part 2, 6.3.1: Parameter bbox-crs",
@@ -482,14 +488,15 @@
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "bbox-crs",
       "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -503,7 +510,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "IETF RFC 8288 - Web Linking",
@@ -556,13 +563,14 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "JSON Link",
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -576,7 +584,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
@@ -631,13 +639,14 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "GeoPose Advanced",
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -651,7 +660,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
@@ -706,13 +715,14 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "GeoPose Basic-Quaternion",
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -726,7 +736,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
@@ -782,13 +792,14 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "GeoPose Basic-YPR",
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -801,7 +812,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.2.2",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml",
@@ -856,13 +867,14 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "JSON-FG time member",
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -877,7 +889,7 @@
       "itemClass": "datatype",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax",
@@ -932,14 +944,15 @@
       "@type": [
         "bblocks:Datatype",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "IRI or CURIE",
       "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
       "dependsOn": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -954,7 +967,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
@@ -970,8 +983,8 @@
       "group": "Common",
       "shaclShapes": null,
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.json-link",
         "bblocks://ogc.geo.common.data_types.bounding_box",
+        "bblocks://ogc.ogc-utils.json-link",
         "bblocks://ogc.geo.common.data_types.geojson"
       ],
       "ldContext": {
@@ -1018,12 +1031,13 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "Feature",
       "openAPIDocument": null,
       "ontology": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -1037,7 +1051,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [],
       "maturity": "development",
       "scope": "unstable",
@@ -1095,12 +1109,13 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "Link with role and target conformance",
       "openAPIDocument": null,
       "ontology": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -1114,7 +1129,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [],
       "maturity": "development",
@@ -1172,12 +1187,13 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "Geometry using references",
       "openAPIDocument": null,
       "ontology": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -1191,7 +1207,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response",
@@ -1250,12 +1266,13 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "Feature Collection",
       "openAPIDocument": null,
       "ontology": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -1270,7 +1287,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1329,12 +1346,13 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "JSON-FG Feature",
       "openAPIDocument": null,
       "ontology": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -1348,7 +1366,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1410,12 +1428,13 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "JSON-FG Feature - Lenient",
       "openAPIDocument": null,
       "ontology": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -1429,7 +1448,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1440,9 +1459,9 @@
       "group": "JSON-FG",
       "shaclShapes": null,
       "dependsOn": [
+        "bblocks://ogc.geo.json-fg.feature",
         "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.features.featureCollection",
-        "bblocks://ogc.geo.json-fg.feature"
+        "bblocks://ogc.geo.features.featureCollection"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
@@ -1488,12 +1507,13 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "JSON-FG Feature Collection",
       "openAPIDocument": null,
       "ontology": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }
@@ -1507,7 +1527,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-01-11",
+      "dateOfLastChange": "2026-01-18",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1527,8 +1547,8 @@
       "group": "JSON-FG",
       "shaclShapes": null,
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.json-link",
         "bblocks://ogc.geo.json-fg.feature-lenient",
+        "bblocks://ogc.ogc-utils.json-link",
         "bblocks://ogc.geo.features.featureCollection"
       ],
       "schema": [
@@ -1568,12 +1588,13 @@
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
+        "dcat:Dataset",
+        "bblocks:BBlock"
       ],
       "skos:prefLabel": "JSON-FG Feature Collection - Lenient",
       "openAPIDocument": null,
       "ontology": null,
-      "profileOf": null,
+      "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
       }

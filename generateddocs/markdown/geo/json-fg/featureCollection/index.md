@@ -188,15 +188,30 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "type": "@type",
+    "links": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
     "features": {
       "@context": {
         "id": "@id",
         "geometry": "geojson:geometry",
-        "bbox": {
-          "@id": "geojson:bbox",
-          "@container": "@list"
-        },
         "links": {
           "@context": {
             "href": {
@@ -238,30 +253,11 @@ Links to the schema:
         "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
         "place": "dct:spatial"
       },
-      "@id": "geojson:features",
-      "@container": "@set"
-    },
-    "links": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
+      "@container": "@set",
+      "@id": "geojson:features"
     },
     "properties": "@nest",
+    "type": "@type",
     "featureType": "geojson:collectionFeatureType",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -287,6 +283,10 @@ Links to the schema:
       "@context": {
         "prisms": "geojson:prisms"
       }
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
     },
     "coordinates": {
       "@container": "@list",
