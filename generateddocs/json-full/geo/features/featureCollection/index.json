@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-03-01",
+  "dateOfLastChange": "2026-03-08",
   "sources": [
     {
       "title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response",
@@ -31,6 +31,7 @@
   },
   "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/schema.yaml",
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/context.jsonld",
+  "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/resolvedProperties.json",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/",
   "rdfData": [],
   "validationPassed": true,
@@ -54,7 +55,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;\n    skos:prefLabel \"MyFeatureCollection\" ;\n    geojson:features <http://www.example.com/features/f1> .\n\n<http://www.example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .\n\n",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n[] skos:prefLabel \"MyFeatureCollection\" ;\n    geojson:features [ ] .\n\n",
           "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.ttl"
         }
       ]

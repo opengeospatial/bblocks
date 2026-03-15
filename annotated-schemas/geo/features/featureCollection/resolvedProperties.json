@@ -1,0 +1,263 @@
+[
+  {
+    "path": "/type",
+    "required": true,
+    "schema_type": "string",
+    "enum": [
+      "FeatureCollection"
+    ],
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json"
+    ]
+  },
+  {
+    "path": "/features",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "bblocks://ogc.geo.features.featureCollection"
+    ]
+  },
+  {
+    "path": "/features/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "enum": [
+      "Feature"
+    ],
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/features/id",
+    "id": "@id",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "@id"
+  },
+  {
+    "path": "/features/properties",
+    "id": "@nest",
+    "required": true,
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "@nest"
+  },
+  {
+    "path": "/features/geometry",
+    "id": "https://purl.org/geojson/vocab#geometry",
+    "required": true,
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#geometry"
+  },
+  {
+    "path": "/features/geometry/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/features/geometry/coordinates",
+    "id": "https://purl.org/geojson/vocab#coordinates",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#coordinates"
+  },
+  {
+    "path": "/features/geometry/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  },
+  {
+    "path": "/features/geometry/geometries",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ]
+  },
+  {
+    "path": "/features/geometry/geometries/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/features/geometry/geometries/coordinates",
+    "id": "https://purl.org/geojson/vocab#coordinates",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#coordinates"
+  },
+  {
+    "path": "/features/geometry/geometries/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  },
+  {
+    "path": "/features/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  },
+  {
+    "path": "/bbox",
+    "schema_type": "array",
+    "sources": [
+      "https://geojson.org/schema/FeatureCollection.json"
+    ]
+  },
+  {
+    "path": "/links",
+    "id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "schema_type": "array",
+    "sources": [
+      "bblocks://ogc.geo.features.featureCollection"
+    ],
+    "effectiveId": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+  },
+  {
+    "path": "/links/href",
+    "id": "http://www.w3.org/ns/oa#hasTarget",
+    "jsonld_type": "@id",
+    "required": true,
+    "schema_type": "string",
+    "format": "uri-reference",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml"
+    ],
+    "effectiveId": "http://www.w3.org/ns/oa#hasTarget"
+  },
+  {
+    "path": "/links/rel",
+    "id": "http://www.iana.org/assignments/relation",
+    "jsonld_type": "@id",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml"
+    ],
+    "effectiveId": "http://www.iana.org/assignments/relation"
+  },
+  {
+    "path": "/links/anchor",
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml"
+    ]
+  },
+  {
+    "path": "/links/type",
+    "id": "http://purl.org/dc/terms/type",
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/type"
+  },
+  {
+    "path": "/links/hreflang",
+    "id": "http://purl.org/dc/terms/language",
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/language"
+  },
+  {
+    "path": "/links/title",
+    "id": "http://www.w3.org/2000/01/rdf-schema#label",
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml"
+    ],
+    "effectiveId": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  {
+    "path": "/links/length",
+    "id": "http://purl.org/dc/terms/extent",
+    "schema_type": "integer",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/extent"
+  },
+  {
+    "path": "/timeStamp",
+    "schema_type": "string",
+    "format": "date-time",
+    "sources": [
+      "bblocks://ogc.geo.features.featureCollection"
+    ]
+  },
+  {
+    "path": "/numberMatched",
+    "schema_type": "integer",
+    "sources": [
+      "bblocks://ogc.geo.features.featureCollection"
+    ]
+  },
+  {
+    "path": "/numberReturned",
+    "schema_type": "integer",
+    "sources": [
+      "bblocks://ogc.geo.features.featureCollection"
+    ]
+  },
+  {
+    "path": "/features/links",
+    "id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "schema_type": "array",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml"
+    ],
+    "effectiveId": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+  }
+]

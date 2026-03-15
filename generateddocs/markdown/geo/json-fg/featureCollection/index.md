@@ -208,6 +208,9 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
+    "properties": "@nest",
+    "type": "@type",
+    "featureType": "geojson:collectionFeatureType",
     "features": {
       "@context": {
         "id": "@id",
@@ -256,9 +259,6 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "properties": "@nest",
-    "type": "@type",
-    "featureType": "geojson:collectionFeatureType",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",

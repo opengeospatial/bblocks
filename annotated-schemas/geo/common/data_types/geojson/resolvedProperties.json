@@ -1,0 +1,116 @@
+[
+  {
+    "path": "/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "enum": [
+      "Feature"
+    ],
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/id",
+    "id": "@id",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "@id"
+  },
+  {
+    "path": "/properties",
+    "id": "@nest",
+    "required": true,
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "@nest"
+  },
+  {
+    "path": "/geometry",
+    "id": "https://purl.org/geojson/vocab#geometry",
+    "required": true,
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#geometry"
+  },
+  {
+    "path": "/geometry/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/geometry/coordinates",
+    "id": "https://purl.org/geojson/vocab#coordinates",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#coordinates"
+  },
+  {
+    "path": "/geometry/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  },
+  {
+    "path": "/geometry/geometries",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ]
+  },
+  {
+    "path": "/geometry/geometries/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/geometry/geometries/coordinates",
+    "id": "https://purl.org/geojson/vocab#coordinates",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#coordinates"
+  },
+  {
+    "path": "/geometry/geometries/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  },
+  {
+    "path": "/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "bblocks://ogc.geo.common.data_types.geojson"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  }
+]

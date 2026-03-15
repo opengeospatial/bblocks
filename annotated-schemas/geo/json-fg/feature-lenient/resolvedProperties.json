@@ -1,0 +1,388 @@
+[
+  {
+    "path": "/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "enum": [
+      "Feature"
+    ],
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/id",
+    "id": "@id",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "@id"
+  },
+  {
+    "path": "/properties",
+    "id": "@nest",
+    "required": true,
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "@nest"
+  },
+  {
+    "path": "/geometry",
+    "id": "https://purl.org/geojson/vocab#geometry",
+    "required": true,
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#geometry"
+  },
+  {
+    "path": "/geometry/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/geometry/coordinates",
+    "id": "https://purl.org/geojson/vocab#coordinates",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#coordinates"
+  },
+  {
+    "path": "/geometry/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  },
+  {
+    "path": "/geometry/geometries",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ]
+  },
+  {
+    "path": "/geometry/geometries/type",
+    "id": "@type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/geometry/geometries/coordinates",
+    "id": "https://purl.org/geojson/vocab#coordinates",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#coordinates"
+  },
+  {
+    "path": "/geometry/geometries/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  },
+  {
+    "path": "/bbox",
+    "id": "https://purl.org/geojson/vocab#bbox",
+    "schema_type": "array",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml",
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml"
+    ],
+    "effectiveId": "https://purl.org/geojson/vocab#bbox"
+  },
+  {
+    "path": "/links",
+    "id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "schema_type": "array",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml",
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+  },
+  {
+    "path": "/links/href",
+    "id": "http://www.w3.org/ns/oa#hasTarget",
+    "jsonld_type": "@id",
+    "required": true,
+    "schema_type": "string",
+    "format": "uri-reference",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+      "https://beta.schemas.opengis.net/json-fg/link.json"
+    ],
+    "effectiveId": "http://www.w3.org/ns/oa#hasTarget"
+  },
+  {
+    "path": "/links/rel",
+    "id": "http://www.iana.org/assignments/relation",
+    "jsonld_type": "@id",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+      "https://beta.schemas.opengis.net/json-fg/link.json"
+    ],
+    "effectiveId": "http://www.iana.org/assignments/relation"
+  },
+  {
+    "path": "/links/anchor",
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+      "https://beta.schemas.opengis.net/json-fg/link.json"
+    ]
+  },
+  {
+    "path": "/links/type",
+    "id": "http://purl.org/dc/terms/type",
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+      "https://beta.schemas.opengis.net/json-fg/link.json"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/type"
+  },
+  {
+    "path": "/links/hreflang",
+    "id": "http://purl.org/dc/terms/language",
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+      "https://beta.schemas.opengis.net/json-fg/link.json"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/language"
+  },
+  {
+    "path": "/links/title",
+    "id": "http://www.w3.org/2000/01/rdf-schema#label",
+    "schema_type": "string",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+      "https://beta.schemas.opengis.net/json-fg/link.json"
+    ],
+    "effectiveId": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  {
+    "path": "/links/length",
+    "id": "http://purl.org/dc/terms/extent",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml",
+      "https://beta.schemas.opengis.net/json-fg/link.json"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/extent"
+  },
+  {
+    "path": "/featureType",
+    "id": "@type",
+    "sources": [
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "@type"
+  },
+  {
+    "path": "/time",
+    "id": "http://purl.org/dc/terms/time",
+    "sources": [
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/time"
+  },
+  {
+    "path": "/time/date",
+    "id": "http://www.w3.org/2006/time#hasTime",
+    "jsonld_type": "http://www.w3.org/2001/XMLSchema#date",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml"
+    ],
+    "effectiveId": "http://www.w3.org/2006/time#hasTime"
+  },
+  {
+    "path": "/time/timestamp",
+    "id": "http://www.w3.org/2006/time#hasTime",
+    "jsonld_type": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml"
+    ],
+    "effectiveId": "http://www.w3.org/2006/time#hasTime"
+  },
+  {
+    "path": "/time/interval",
+    "id": "http://www.w3.org/2006/time#hasTime",
+    "sources": [
+      "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml"
+    ],
+    "effectiveId": "http://www.w3.org/2006/time#hasTime"
+  },
+  {
+    "path": "/coordRefSys",
+    "id": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+    "sources": [
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"
+  },
+  {
+    "path": "/coordRefSys/type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
+    ]
+  },
+  {
+    "path": "/coordRefSys/href",
+    "required": true,
+    "schema_type": "string",
+    "format": "uri-reference",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
+    ]
+  },
+  {
+    "path": "/coordRefSys/epoch",
+    "schema_type": "number",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
+    ]
+  },
+  {
+    "path": "/place",
+    "id": "http://purl.org/dc/terms/spatial",
+    "sources": [
+      "bblocks://ogc.geo.json-fg.feature-lenient"
+    ],
+    "effectiveId": "http://purl.org/dc/terms/spatial"
+  },
+  {
+    "path": "/place/type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/coordRefSys",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/measures",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/measures/enabled",
+    "required": true,
+    "schema_type": "boolean",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/measures.json"
+    ]
+  },
+  {
+    "path": "/place/measures/unit",
+    "schema_type": "string",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/measures.json"
+    ]
+  },
+  {
+    "path": "/place/measures/description",
+    "schema_type": "string",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/measures.json"
+    ]
+  },
+  {
+    "path": "/place/coordinates",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/bbox",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/geometries",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/base",
+    "required": true,
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/lower",
+    "schema_type": "number",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/upper",
+    "required": true,
+    "schema_type": "number",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/prisms",
+    "required": true,
+    "schema_type": "array",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  },
+  {
+    "path": "/place/geometries/type",
+    "required": true,
+    "schema_type": "string",
+    "sources": [
+      "https://beta.schemas.opengis.net/json-fg/geometry-object.json"
+    ]
+  }
+]

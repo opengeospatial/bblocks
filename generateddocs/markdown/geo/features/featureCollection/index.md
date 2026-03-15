@@ -79,17 +79,10 @@ NB. uses a local @context in the data example where application specialisations 
 #### ttl
 ```ttl
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.example.com/features/MyFeatureCollection> a geojson:FeatureCollection ;
-    skos:prefLabel "MyFeatureCollection" ;
-    geojson:features <http://www.example.com/features/f1> .
-
-<http://www.example.com/features/f1> a geojson:Feature ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .
+[] skos:prefLabel "MyFeatureCollection" ;
+    geojson:features [ ] .
 
 
 ```
@@ -157,6 +150,7 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
+    "properties": "@nest",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -169,22 +163,6 @@ Links to the schema:
     "features": {
       "@container": "@set",
       "@id": "geojson:features"
-    },
-    "type": "@type",
-    "id": "@id",
-    "properties": "@nest",
-    "geometry": {
-      "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
-      },
-      "@id": "geojson:geometry"
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
     },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
