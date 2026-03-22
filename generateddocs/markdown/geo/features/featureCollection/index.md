@@ -78,11 +78,9 @@ NB. uses a local @context in the data example where application specialisations 
 
 #### ttl
 ```ttl
-@prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-[] skos:prefLabel "MyFeatureCollection" ;
-    geojson:features [ ] .
+[] skos:prefLabel "MyFeatureCollection" .
 
 
 ```
@@ -160,10 +158,6 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
-    },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",

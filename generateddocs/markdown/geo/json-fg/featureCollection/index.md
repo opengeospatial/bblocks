@@ -188,33 +188,15 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "links": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
-    },
-    "properties": "@nest",
     "type": "@type",
-    "featureType": "geojson:collectionFeatureType",
     "features": {
       "@context": {
         "id": "@id",
         "geometry": "geojson:geometry",
+        "bbox": {
+          "@id": "geojson:bbox",
+          "@container": "@list"
+        },
         "links": {
           "@context": {
             "href": {
@@ -256,9 +238,31 @@ Links to the schema:
         "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
         "place": "dct:spatial"
       },
-      "@container": "@set",
-      "@id": "geojson:features"
+      "@id": "geojson:features",
+      "@container": "@set"
     },
+    "links": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "properties": "@nest",
+    "featureType": "geojson:collectionFeatureType",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -283,10 +287,6 @@ Links to the schema:
       "@context": {
         "prisms": "geojson:prisms"
       }
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
     },
     "coordinates": {
       "@container": "@list",

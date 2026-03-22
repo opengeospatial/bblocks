@@ -74,8 +74,8 @@ Links to the schema:
     "links": {
       "@context": {
         "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
+          "@id": "oa:hasTarget",
+          "@type": "@id"
         },
         "rel": {
           "@context": {
@@ -95,6 +95,10 @@ Links to the schema:
       "@context": {
         "id": "@id",
         "geometry": "geojson:geometry",
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
+        },
         "featureType": "@type",
         "time": {
           "@context": {
@@ -144,10 +148,6 @@ Links to the schema:
       "@context": {
         "prisms": "geojson:prisms"
       }
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
     },
     "coordinates": {
       "@container": "@list",
