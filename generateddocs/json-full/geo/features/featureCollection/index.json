@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-04-05",
+  "dateOfLastChange": "2026-04-08",
   "sources": [
     {
       "title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response",
@@ -55,13 +55,13 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n[] skos:prefLabel \"MyFeatureCollection\" .\n\n",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .\n\n[] skos:prefLabel \"MyFeatureCollection\" ;\n    geojson:features <http://www.example.com/features/f1> .\n\n",
           "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/featureCollection/example_1_1.ttl"
         }
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://geojson.org/schema/FeatureCollection.json\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    timeStamp:\n      type: string\n      format: date-time\n    numberMatched:\n      type: integer\n      minimum: 0\n    numberReturned:\n      type: integer\n      minimum: 0\n    features:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\nx-jsonld-extra-terms:\n  properties: '@nest'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n",
+  "annotatedSchema": "allOf:\n- $ref: https://geojson.org/schema/FeatureCollection.json\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    timeStamp:\n      type: string\n      format: date-time\n    numberMatched:\n      type: integer\n      minimum: 0\n    numberReturned:\n      type: integer\n      minimum: 0\n    features:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n      x-jsonld-container: '@set'\n      x-jsonld-id: https://purl.org/geojson/vocab#features\nx-jsonld-extra-terms:\n  properties: '@nest'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  geojson: https://purl.org/geojson/vocab#\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/features/featureCollection"
 }

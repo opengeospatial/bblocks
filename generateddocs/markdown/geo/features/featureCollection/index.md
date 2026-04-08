@@ -78,9 +78,17 @@ NB. uses a local @context in the data example where application specialisations 
 
 #### ttl
 ```ttl
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] skos:prefLabel "MyFeatureCollection" .
+<http://www.example.com/features/f1> a geojson:Feature ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .
+
+[] skos:prefLabel "MyFeatureCollection" ;
+    geojson:features <http://www.example.com/features/f1> .
 
 
 ```
@@ -110,10 +118,13 @@ allOf:
       type: array
       items:
         $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+      x-jsonld-container: '@set'
+      x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-extra-terms:
   properties: '@nest'
 x-jsonld-prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
+  geojson: https://purl.org/geojson/vocab#
 
 ```
 
@@ -128,6 +139,27 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "features": {
+      "@context": {
+        "type": "@type",
+        "id": "@id",
+        "geometry": {
+          "@context": {
+            "coordinates": {
+              "@id": "geojson:coordinates",
+              "@container": "@list"
+            }
+          },
+          "@id": "geojson:geometry"
+        },
+        "bbox": {
+          "@id": "geojson:bbox",
+          "@container": "@list"
+        }
+      },
+      "@id": "geojson:features",
+      "@container": "@set"
+    },
     "links": {
       "@context": {
         "href": {
@@ -159,9 +191,9 @@ Links to the schema:
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
-    "geojson": "https://purl.org/geojson/vocab#",
     "@version": 1.1
   }
 }
