@@ -1,0 +1,153 @@
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oa:      <http://www.w3.org/ns/oa#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix iana-rel: <http://www.iana.org/assignments/relation/> .
+
+#
+# GeoJSON Feature shape
+#
+
+geojson:FeatureShape
+    a sh:NodeShape ;
+    sh:targetClass geojson:Feature ;
+    sh:name "GeoJSON Feature" ;
+    sh:description "Validates a GeoJSON Feature as uplifted to RDF via the OGC GeoJSON building block." ;
+
+    # geometry is optional (null geometry produces no RDF triple); at most one
+    sh:property [
+        sh:path     geojson:geometry ;
+        sh:name     "geometry" ;
+        sh:description "A Feature may have at most one geometry value; null geometry produces no RDF triple." ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:node     geojson:GeometryShape ;
+    ] ;
+
+    # bbox is optional; when present it must be a single RDF list (blank node head)
+    sh:property [
+        sh:path     geojson:bbox ;
+        sh:name     "bbox" ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:BlankNode ;
+    ] ;
+
+    # links (rdfs:seeAlso) are optional; each must conform to LinkShape
+    sh:property [
+        sh:path  rdfs:seeAlso ;
+        sh:name  "links" ;
+        sh:node  geojson:LinkShape ;
+    ] .
+
+
+#
+# GeoJSON Geometry shape
+#
+
+geojson:GeometryShape
+    a sh:NodeShape ;
+    sh:name "GeoJSON Geometry" ;
+    sh:description "A GeoJSON geometry object: must carry a recognised geometry type and either coordinates (simple geometries) or member geometries (GeometryCollection)." ;
+
+    # rdf:type must be one of the seven GeoJSON geometry classes
+    sh:property [
+        sh:path     rdf:type ;
+        sh:name     "geometry type" ;
+        sh:description "Geometry type must be one of the seven GeoJSON geometry classes." ;
+        sh:minCount 1 ;
+        sh:in (
+            geojson:Point
+            geojson:MultiPoint
+            geojson:LineString
+            geojson:MultiLineString
+            geojson:Polygon
+            geojson:MultiPolygon
+            geojson:GeometryCollection
+        ) ;
+    ] ;
+
+    # either coordinates (simple geometry) or geojson:geometries (collection) must be present
+    sh:or (
+        # simple geometry: has exactly one coordinates list
+        [
+            sh:property [
+                sh:path     geojson:coordinates ;
+                sh:name     "coordinates" ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:nodeKind sh:BlankNode ;   # RDF list head is always a blank node
+            ]
+        ]
+        # geometry collection: typed as GeometryCollection and has at least one member
+        [
+            sh:class geojson:GeometryCollection ;
+            sh:property [
+                sh:path     geojson:geometries ;
+                sh:name     "geometries" ;
+                sh:minCount 1 ;
+            ]
+        ]
+    ) .
+
+
+#
+# Link (rdfs:seeAlso) shape
+#
+
+geojson:LinkShape
+    a sh:NodeShape ;
+    sh:name "OGC JSON Link" ;
+    sh:description "Validates a link object as uplifted from the OGC JSON Link building block." ;
+
+    # href (oa:hasTarget) is required and must be an IRI
+    sh:property [
+        sh:path     oa:hasTarget ;
+        sh:name     "href" ;
+        sh:description "Link href must be present as an IRI." ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+
+    # rel (IANA relation) is optional and must be an IRI when present
+    sh:property [
+        sh:path     <http://www.iana.org/assignments/relation> ;
+        sh:name     "rel" ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+
+    # type → dct:type, optional string
+    sh:property [
+        sh:path     dct:type ;
+        sh:name     "type" ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # hreflang → dct:language, optional string
+    sh:property [
+        sh:path     dct:language ;
+        sh:name     "hreflang" ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # title → rdfs:label, optional string
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "title" ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # length → dct:extent, optional non-negative integer
+    sh:property [
+        sh:path     dct:extent ;
+        sh:name     "length" ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+    ] .

@@ -1,0 +1,5 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+
+# A Feature with null geometry produces no geojson:geometry triple after uplift.
+# The SHACL shape imposes no minCount on geometry, so this must pass.
+<http://www.example.com/features/nogeom2> a geojson:Feature .

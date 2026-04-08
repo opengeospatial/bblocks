@@ -1,0 +1,10 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ex:      <http://www.example.com/vocab#> .
+
+# Geometry typed as ex:Circle — not one of the seven GeoJSON geometry classes.
+# Must fail the sh:in constraint on rdf:type inside GeometryShape.
+<http://www.example.com/features/bad-geom1> a geojson:Feature ;
+    geojson:geometry [
+        a ex:Circle ;
+        geojson:coordinates ( 174.7 -36.9 500.0 )
+    ] .

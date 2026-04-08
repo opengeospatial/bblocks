@@ -1,0 +1,13 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ex:      <http://www.example.com/vocab#> .
+
+# The member feature has a geometry typed as ex:Cone — not a recognised GeoJSON type.
+# Must fail GeometryShape's sh:in constraint via the FeatureCollectionShape → FeatureShape chain.
+<http://www.example.com/features/bad-fc1> a geojson:Feature ;
+    geojson:geometry [
+        a ex:Cone ;
+        geojson:coordinates ( 174.7 -36.9 )
+    ] .
+
+<http://www.example.com/collections/bad-c1>
+    geojson:features <http://www.example.com/features/bad-fc1> .

@@ -1,0 +1,7 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+
+# Point geometry with no geojson:coordinates triple.
+# Must fail the sh:or in GeometryShape: neither branch is satisfied
+# (not a GeometryCollection, and no coordinates present).
+<http://www.example.com/features/bad-geom2> a geojson:Feature ;
+    geojson:geometry [ a geojson:Point ] .
