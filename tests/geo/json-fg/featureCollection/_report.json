@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection",
   "bblockName": "JSON-FG Feature Collection",
   "bblockId": "ogc.geo.json-fg.featureCollection",
-  "generated": "2026-04-08T08:21:00.975891+00:00",
+  "generated": "2026-04-08T09:49:51.261724+00:00",
   "result": true,
   "items": [
     {
@@ -68,6 +68,77 @@
               "message": "ValidationError: 'time' is a required property\n\nFailed validating 'required' in schema['allOf'][1]['properties']['features']['items']:\n    {'$schema': 'https://json-schema.org/draft/2019-09/schema',\n     'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml'},\n               {'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json',\n                                               'x-jsonld-id': 'http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS'},\n                               'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json',\n                                               'x-jsonld-id': '@type'},\n                               'geometry': {'$ref': 'https://beta.schemas.opengis.net/json-fg/geometry.json',\n                                            'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},\n                               'id': {'oneOf': [{'type': 'number'},\n                                                {'type': 'string'}],\n                                      'x-jsonld-id': '@id'},\n                               'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},\n                                                             {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml'}]},\n                                         'type': 'array',\n                                         'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},\n                               'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json',\n                                         'x-jsonld-id': 'http://purl.org/dc/terms/spatial'},\n                               'properties': {'oneOf': [{'type': 'null'},\n                                                        {'type': 'object'}],\n                                              'x-jsonld-id': '@nest'},\n                               'time': {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml',\n                                        'x-jsonld-id': 'http://purl.org/dc/terms/time'},\n                               'type': {'enum': ['Feature'],\n                                        'type': 'string',\n                                        'x-jsonld-id': '@type'}}}],\n     'description': 'This JSON Schema is part of JSON-FG version 0.1.1',\n     'required': ['type', 'time', 'place', 'geometry', 'properties'],\n     'title': 'a JSON-FG Feature',\n     'type': 'object',\n     'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',\n                              'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',\n                              'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',\n                              'LineString': 'https://purl.org/geojson/vocab#LineString',\n                              'MultiLineString': 'https://purl.org/geojson/vocab#MultiLineString',\n                              'MultiPoint': 'https://purl.org/geojson/vocab#MultiPoint',\n                              'MultiPolygon': 'https://purl.org/geojson/vocab#MultiPolygon',\n                              'MultiPolyhedron': 'https://purl.org/geojson/vocab#MultiPolyhedron',\n                              'MultiPrism': {'x-jsonld-context': {'prisms': 'https://purl.org/geojson/vocab#prisms'},\n                                             'x-jsonld-id': 'https://purl.org/geojson/vocab#MultiPrism'},\n                              'Point': 'https://purl.org/geojson/vocab#Point',\n                              'Polygon': 'https://purl.org/geojson/vocab#Polygon',\n                              'Polyhedron': 'https://purl.org/geojson/vocab#Polyhedron',\n                              'Prism': {'x-jsonld-context': {'base': 'https://purl.org/geojson/vocab#prismBase',\n                                                             'lower': 'https://purl.org/geojson/vocab#prismLower',\n                                                             'upper': 'https://purl.org/geojson/vocab#prismUpper'},\n                                        'x-jsonld-id': 'https://purl.org/geojson/vocab#Prism'},\n                              'bbox': {'x-jsonld-container': '@list',\n                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                              'coordinates': {'x-jsonld-container': '@list',\n                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                              'features': {'x-jsonld-container': '@set',\n                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#features'},\n                              'geometries': {'x-jsonld-container': '@list',\n                                             'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'}},\n     'x-jsonld-prefixes': {'dct': 'http://purl.org/dc/terms/',\n                           'geojson': 'https://purl.org/geojson/vocab#',\n                           'owlTime': 'http://www.w3.org/2006/time#',\n                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#'}}\n\nOn instance['features'][0]:\n    {'geometry': {'coordinates': [174.7501603083, -36.9307359096],\n                  'type': 'Point'},\n     'id': 'f1',\n     'properties': {'comment': 'An attribute value'},\n     'type': 'Feature'}"
             }
           ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+              "focusNodes": {
+                "geojson:FeatureCollectionShape": {
+                  "nodes": [
+                    "_:N52248a3f443345ba86fe4e7c753dc27c"
+                  ]
+                },
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: _:N52248a3f443345ba86fe4e7c753dc27c\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+              "focusNodes": {
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<file:///github/workspace/f1>"
+                  ]
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:LinkShape: *none*\n"
+            }
+          ]
         }
       ]
     },
@@ -121,6 +192,77 @@
               "result": true,
               "isError": false,
               "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+              "focusNodes": {
+                "geojson:FeatureCollectionShape": {
+                  "nodes": [
+                    "_:Na0ae33599a4b42b68ddb00836ad081a6"
+                  ]
+                },
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: _:Na0ae33599a4b42b68ddb00836ad081a6\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+              "focusNodes": {
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<http://www.example.com/features/f1>"
+                  ]
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/f1>\n - Shape geojson:LinkShape: *none*\n"
             }
           ]
         }

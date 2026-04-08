@@ -87,7 +87,8 @@ NB. uses a local @context in the data example where application specialisations 
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .
 
-[] skos:prefLabel "MyFeatureCollection" ;
+[] a geojson:FeatureCollection ;
+    skos:prefLabel "MyFeatureCollection" ;
     geojson:features <http://www.example.com/features/f1> .
 
 
@@ -122,6 +123,7 @@ allOf:
       x-jsonld-id: https://purl.org/geojson/vocab#features
 x-jsonld-extra-terms:
   properties: '@nest'
+  type: '@type'
 x-jsonld-prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   geojson: https://purl.org/geojson/vocab#
@@ -139,9 +141,9 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "type": "@type",
     "features": {
       "@context": {
-        "type": "@type",
         "id": "@id",
         "geometry": {
           "@context": {

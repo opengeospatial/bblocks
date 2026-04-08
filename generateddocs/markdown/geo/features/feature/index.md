@@ -92,6 +92,7 @@ allOf:
       x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
     type:
       const: Feature
+      x-jsonld-id: '@type'
   required:
   - type
   - geometry

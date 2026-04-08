@@ -1,0 +1,39 @@
+Validation report for ogc.geo.features.featureCollection - Feature Collection
+Generated 2026-04-08T09:49:42.072871+00:00
+=== Files ===
+Using collection-multiple-geometries.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD collection-multiple-geometries.jsonld created
+Output Turtle collection-multiple-geometries.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for registereditems/geo/features/featureCollection/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:FeatureCollectionShape: _:N8dbfd8b01fc345fe830df97cbfc1aa12
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:LinkShape: *none*
+
+Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureShape: <http://www.example.com/features/ls1>,<http://www.example.com/features/nogeom1>,<http://www.example.com/features/pt1>
+ - Shape geojson:LinkShape: *none*
+
+=== End SHACL ===
+

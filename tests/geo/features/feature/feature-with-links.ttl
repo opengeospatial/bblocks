@@ -1,0 +1,16 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/features/linked1> a geojson:Feature ;
+    rdfs:seeAlso [ rdfs:label "This feature" ;
+            dct:type "application/geo+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <http://www.example.com/features/linked1> ] ;
+    geojson:geometry [ a geojson:LineString ;
+            geojson:coordinates ( ( 1.747e+02 -3.69e+01 ) ( 1.749e+02 -3.71e+01 ) ( 1.752e+02 -3.73e+01 ) ) ] .
+

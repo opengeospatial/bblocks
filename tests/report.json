@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.geo.common.data_types.bounding_box - Bounding Box",
       "bblockName": "Bounding Box",
       "bblockId": "ogc.geo.common.data_types.bounding_box",
-      "generated": "2026-04-08T08:20:51.170477+00:00",
+      "generated": "2026-04-08T09:49:41.394528+00:00",
       "result": true,
       "items": [
         {
@@ -61,7 +61,7 @@
       "title": "Validation report for ogc.geo.common.data_types.geojson - GeoJSON",
       "bblockName": "GeoJSON",
       "bblockId": "ogc.geo.common.data_types.geojson",
-      "generated": "2026-04-08T08:20:51.186273+00:00",
+      "generated": "2026-04-08T09:49:41.409852+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -75,7 +75,7 @@
       "title": "Validation report for ogc.geo.common.parameters.bbox - bbox",
       "bblockName": "bbox",
       "bblockId": "ogc.geo.common.parameters.bbox",
-      "generated": "2026-04-08T08:20:51.192532+00:00",
+      "generated": "2026-04-08T09:49:41.415802+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -89,7 +89,7 @@
       "title": "Validation report for ogc.geo.common.parameters.bbox-crs - bbox-crs",
       "bblockName": "bbox-crs",
       "bblockId": "ogc.geo.common.parameters.bbox-crs",
-      "generated": "2026-04-08T08:20:51.198047+00:00",
+      "generated": "2026-04-08T09:49:41.421213+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -103,7 +103,7 @@
       "title": "Validation report for ogc.ogc-utils.json-link - JSON Link",
       "bblockName": "JSON Link",
       "bblockId": "ogc.ogc-utils.json-link",
-      "generated": "2026-04-08T08:20:51.206006+00:00",
+      "generated": "2026-04-08T09:49:41.428979+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -117,7 +117,7 @@
       "title": "Validation report for ogc.geo.geopose.advanced - GeoPose Advanced",
       "bblockName": "GeoPose Advanced",
       "bblockId": "ogc.geo.geopose.advanced",
-      "generated": "2026-04-08T08:20:51.215356+00:00",
+      "generated": "2026-04-08T09:49:41.438018+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -131,7 +131,7 @@
       "title": "Validation report for ogc.geo.geopose.basic.quaternion - GeoPose Basic-Quaternion",
       "bblockName": "GeoPose Basic-Quaternion",
       "bblockId": "ogc.geo.geopose.basic.quaternion",
-      "generated": "2026-04-08T08:20:51.224504+00:00",
+      "generated": "2026-04-08T09:49:41.446908+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -145,7 +145,7 @@
       "title": "Validation report for ogc.geo.geopose.basic.ypr - GeoPose Basic-YPR",
       "bblockName": "GeoPose Basic-YPR",
       "bblockId": "ogc.geo.geopose.basic.ypr",
-      "generated": "2026-04-08T08:20:51.247723+00:00",
+      "generated": "2026-04-08T09:49:41.469683+00:00",
       "result": true,
       "items": [
         {
@@ -380,7 +380,7 @@
       "title": "Validation report for ogc.geo.json-fg.time - JSON-FG time member",
       "bblockName": "JSON-FG time member",
       "bblockId": "ogc.geo.json-fg.time",
-      "generated": "2026-04-08T08:20:51.271850+00:00",
+      "generated": "2026-04-08T09:49:41.492939+00:00",
       "result": true,
       "items": [
         {
@@ -670,7 +670,7 @@
       "title": "Validation report for ogc.ogc-utils.iri-or-curie - IRI or CURIE",
       "bblockName": "IRI or CURIE",
       "bblockId": "ogc.ogc-utils.iri-or-curie",
-      "generated": "2026-04-08T08:20:51.316987+00:00",
+      "generated": "2026-04-08T09:49:41.537032+00:00",
       "result": true,
       "items": [
         {
@@ -3848,9 +3848,601 @@
       "title": "Validation report for ogc.geo.features.feature - Feature",
       "bblockName": "Feature",
       "bblockId": "ogc.geo.features.feature",
-      "generated": "2026-04-08T08:20:51.338970+00:00",
+      "generated": "2026-04-08T09:49:41.655193+00:00",
       "result": true,
       "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "registereditems/geo/features/feature/tests/feature-missing-geometry-key-fail.json",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/feature-missing-geometry-key-fail.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-missing-geometry-key-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "feature-missing-geometry-key-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD feature-missing-geometry-key-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "feature-missing-geometry-key-fail.ttl",
+                  "size": 1,
+                  "isError": false,
+                  "message": "Output Turtle feature-missing-geometry-key-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": false,
+                  "exception": "ValidationError",
+                  "errorMessage": "'geometry' is a required property",
+                  "isError": true,
+                  "message": "ValidationError: 'geometry' is a required property\n\nFailed validating 'required' in schema['allOf'][0]:\n    {'$id': 'https://geojson.org/schema/Feature.json',\n     '$schema': 'http://json-schema.org/draft-07/schema#',\n     'properties': {'bbox': {'items': {'type': 'number'},\n                             'minItems': 4,\n                             'type': 'array',\n                             'x-jsonld-container': '@list',\n                             'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                    'geometry': {'oneOf': [{'type': 'null'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'type': 'number'},\n                                                                           'minItems': 2,\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['Point'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON Point',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                     'minItems': 2,\n                                                                                     'type': 'array'},\n                                                                           'minItems': 2,\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['LineString'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON LineString',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                               'minItems': 2,\n                                                                                               'type': 'array'},\n                                                                                     'minItems': 4,\n                                                                                     'type': 'array'},\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['Polygon'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON Polygon',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                     'minItems': 2,\n                                                                                     'type': 'array'},\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['MultiPoint'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON MultiPoint',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                               'minItems': 2,\n                                                                                               'type': 'array'},\n                                                                                     'minItems': 2,\n                                                                                     'type': 'array'},\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['MultiLineString'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON '\n                                                     'MultiLineString',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                         'minItems': 2,\n                                                                                                         'type': 'array'},\n                                                                                               'minItems': 4,\n                                                                                               'type': 'array'},\n                                                                                     'type': 'array'},\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['MultiPolygon'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON MultiPolygon',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'geometries': {'items': {'oneOf': [{'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'type': 'number'},\n                                                                                                                              'minItems': 2,\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['Point'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'Point',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                                        'minItems': 2,\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'minItems': 2,\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['LineString'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'LineString',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                  'minItems': 2,\n                                                                                                                                                  'type': 'array'},\n                                                                                                                                        'minItems': 4,\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['Polygon'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'Polygon',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                                        'minItems': 2,\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['MultiPoint'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'MultiPoint',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                  'minItems': 2,\n                                                                                                                                                  'type': 'array'},\n                                                                                                                                        'minItems': 2,\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['MultiLineString'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'MultiLineString',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                            'minItems': 2,\n                                                                                                                                                            'type': 'array'},\n                                                                                                                                                  'minItems': 4,\n                                                                                                                                                  'type': 'array'},\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['MultiPolygon'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'MultiPolygon',\n                                                                                               'type': 'object'}]},\n                                                                          'type': 'array'},\n                                                           'type': {'enum': ['GeometryCollection'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'geometries'],\n                                            'title': 'GeoJSON '\n                                                     'GeometryCollection',\n                                            'type': 'object'}],\n                                 'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},\n                    'id': {'oneOf': [{'type': 'number'},\n                                     {'type': 'string'}],\n                           'x-jsonld-id': '@id'},\n                    'properties': {'oneOf': [{'type': 'null'},\n                                             {'type': 'object'}],\n                                   'x-jsonld-id': '@nest'},\n                    'type': {'enum': ['Feature'],\n                             'type': 'string',\n                             'x-jsonld-id': '@type'}},\n     'required': ['type', 'properties', 'geometry'],\n     'title': 'GeoJSON Feature',\n     'type': 'object',\n     'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',\n                              'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',\n                              'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',\n                              'LineString': 'https://purl.org/geojson/vocab#LineString',\n                              'MultiLineString': 'https://purl.org/geojson/vocab#MultiLineString',\n                              'MultiPoint': 'https://purl.org/geojson/vocab#MultiPoint',\n                              'MultiPolygon': 'https://purl.org/geojson/vocab#MultiPolygon',\n                              'Point': 'https://purl.org/geojson/vocab#Point',\n                              'Polygon': 'https://purl.org/geojson/vocab#Polygon',\n                              'features': {'x-jsonld-container': '@set',\n                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#features'}},\n     'x-jsonld-prefixes': {'geojson': 'https://purl.org/geojson/vocab#'}}\n\nOn instance:\n    {'id': 'http://www.example.com/features/bad2',\n     'properties': {'note': 'geometry key is absent, not null \u2014 fails JSON '\n                            'schema'},\n     'type': 'Feature'}"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/bad2>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/bad2>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "registereditems/geo/features/feature/tests/feature-missing-type-fail.json",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/feature-missing-type-fail.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-missing-type-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "feature-missing-type-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD feature-missing-type-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "feature-missing-type-fail.ttl",
+                  "size": 7,
+                  "isError": false,
+                  "message": "Output Turtle feature-missing-type-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": false,
+                  "exception": "ValidationError",
+                  "errorMessage": "'type' is a required property",
+                  "isError": true,
+                  "message": "ValidationError: 'type' is a required property\n\nFailed validating 'required' in schema['allOf'][0]:\n    {'$id': 'https://geojson.org/schema/Feature.json',\n     '$schema': 'http://json-schema.org/draft-07/schema#',\n     'properties': {'bbox': {'items': {'type': 'number'},\n                             'minItems': 4,\n                             'type': 'array',\n                             'x-jsonld-container': '@list',\n                             'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                    'geometry': {'oneOf': [{'type': 'null'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'type': 'number'},\n                                                                           'minItems': 2,\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['Point'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON Point',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                     'minItems': 2,\n                                                                                     'type': 'array'},\n                                                                           'minItems': 2,\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['LineString'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON LineString',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                               'minItems': 2,\n                                                                                               'type': 'array'},\n                                                                                     'minItems': 4,\n                                                                                     'type': 'array'},\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['Polygon'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON Polygon',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                     'minItems': 2,\n                                                                                     'type': 'array'},\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['MultiPoint'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON MultiPoint',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                               'minItems': 2,\n                                                                                               'type': 'array'},\n                                                                                     'minItems': 2,\n                                                                                     'type': 'array'},\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['MultiLineString'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON '\n                                                     'MultiLineString',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'coordinates': {'items': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                         'minItems': 2,\n                                                                                                         'type': 'array'},\n                                                                                               'minItems': 4,\n                                                                                               'type': 'array'},\n                                                                                     'type': 'array'},\n                                                                           'type': 'array',\n                                                                           'x-jsonld-container': '@list',\n                                                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                           'type': {'enum': ['MultiPolygon'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'coordinates'],\n                                            'title': 'GeoJSON MultiPolygon',\n                                            'type': 'object'},\n                                           {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                    'minItems': 4,\n                                                                    'type': 'array',\n                                                                    'x-jsonld-container': '@list',\n                                                                    'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                           'geometries': {'items': {'oneOf': [{'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'type': 'number'},\n                                                                                                                              'minItems': 2,\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['Point'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'Point',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                                        'minItems': 2,\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'minItems': 2,\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['LineString'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'LineString',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                  'minItems': 2,\n                                                                                                                                                  'type': 'array'},\n                                                                                                                                        'minItems': 4,\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['Polygon'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'Polygon',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                                        'minItems': 2,\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['MultiPoint'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'MultiPoint',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                  'minItems': 2,\n                                                                                                                                                  'type': 'array'},\n                                                                                                                                        'minItems': 2,\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['MultiLineString'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'MultiLineString',\n                                                                                               'type': 'object'},\n                                                                                              {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                       'minItems': 4,\n                                                                                                                       'type': 'array',\n                                                                                                                       'x-jsonld-container': '@list',\n                                                                                                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                                                                                                              'coordinates': {'items': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                            'minItems': 2,\n                                                                                                                                                            'type': 'array'},\n                                                                                                                                                  'minItems': 4,\n                                                                                                                                                  'type': 'array'},\n                                                                                                                                        'type': 'array'},\n                                                                                                                              'type': 'array',\n                                                                                                                              'x-jsonld-container': '@list',\n                                                                                                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                                                                                                              'type': {'enum': ['MultiPolygon'],\n                                                                                                                       'type': 'string',\n                                                                                                                       'x-jsonld-id': '@type'}},\n                                                                                               'required': ['type',\n                                                                                                            'coordinates'],\n                                                                                               'title': 'GeoJSON '\n                                                                                                        'MultiPolygon',\n                                                                                               'type': 'object'}]},\n                                                                          'type': 'array'},\n                                                           'type': {'enum': ['GeometryCollection'],\n                                                                    'type': 'string',\n                                                                    'x-jsonld-id': '@type'}},\n                                            'required': ['type',\n                                                         'geometries'],\n                                            'title': 'GeoJSON '\n                                                     'GeometryCollection',\n                                            'type': 'object'}],\n                                 'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},\n                    'id': {'oneOf': [{'type': 'number'},\n                                     {'type': 'string'}],\n                           'x-jsonld-id': '@id'},\n                    'properties': {'oneOf': [{'type': 'null'},\n                                             {'type': 'object'}],\n                                   'x-jsonld-id': '@nest'},\n                    'type': {'enum': ['Feature'],\n                             'type': 'string',\n                             'x-jsonld-id': '@type'}},\n     'required': ['type', 'properties', 'geometry'],\n     'title': 'GeoJSON Feature',\n     'type': 'object',\n     'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',\n                              'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',\n                              'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',\n                              'LineString': 'https://purl.org/geojson/vocab#LineString',\n                              'MultiLineString': 'https://purl.org/geojson/vocab#MultiLineString',\n                              'MultiPoint': 'https://purl.org/geojson/vocab#MultiPoint',\n                              'MultiPolygon': 'https://purl.org/geojson/vocab#MultiPolygon',\n                              'Point': 'https://purl.org/geojson/vocab#Point',\n                              'Polygon': 'https://purl.org/geojson/vocab#Polygon',\n                              'features': {'x-jsonld-container': '@set',\n                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#features'}},\n     'x-jsonld-prefixes': {'geojson': 'https://purl.org/geojson/vocab#'}}\n\nOn instance:\n    {'geometry': {'coordinates': [174.7, -36.9], 'type': 'Point'},\n     'id': 'http://www.example.com/features/bad1',\n     'properties': {}}"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "registereditems/geo/features/feature/tests/feature-no-geometry.ttl",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/feature-no-geometry.ttl",
+            "language": "ttl"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-no-geometry.ttl from test resources"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/nogeom2>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/nogeom2>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "registereditems/geo/features/feature/tests/feature-null-geometry.json",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/feature-null-geometry.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-null-geometry.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "feature-null-geometry.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD feature-null-geometry.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "feature-null-geometry.ttl",
+                  "size": 1,
+                  "isError": false,
+                  "message": "Output Turtle feature-null-geometry.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/nogeom1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/nogeom1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "registereditems/geo/features/feature/tests/feature-point.json",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/feature-point.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-point.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "feature-point.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD feature-point.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "feature-point.ttl",
+                  "size": 8,
+                  "isError": false,
+                  "message": "Output Turtle feature-point.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/point1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/point1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "registereditems/geo/features/feature/tests/feature-polygon.ttl",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/feature-polygon.ttl",
+            "language": "ttl"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-polygon.ttl from test resources"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/polygon1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/polygon1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "registereditems/geo/features/feature/tests/feature-with-links.json",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/feature-with-links.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-with-links.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "feature-with-links.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD feature-with-links.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "feature-with-links.ttl",
+                  "size": 27,
+                  "isError": false,
+                  "message": "Output Turtle feature-with-links.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/linked1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/linked1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
         {
           "source": {
             "type": "EXAMPLE",
@@ -3903,14 +4495,51 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/f1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/f1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         }
       ],
       "globalErrors": {},
       "counts": {
-        "total": 1,
-        "passed": 1,
+        "total": 8,
+        "passed": 8,
         "failed": 0
       }
     },
@@ -3918,7 +4547,7 @@
       "title": "Validation report for ogc.geo.json-fg.link-role - Link with role and target conformance",
       "bblockName": "Link with role and target conformance",
       "bblockId": "ogc.geo.json-fg.link-role",
-      "generated": "2026-04-08T08:20:51.352838+00:00",
+      "generated": "2026-04-08T09:49:41.670055+00:00",
       "result": true,
       "items": [
         {
@@ -3988,7 +4617,7 @@
       "title": "Validation report for ogc.ogc-utils.topology - Geometry using references",
       "bblockName": "Geometry using references",
       "bblockId": "ogc.ogc-utils.topology",
-      "generated": "2026-04-08T08:20:51.365261+00:00",
+      "generated": "2026-04-08T09:49:41.681903+00:00",
       "result": true,
       "items": [
         {
@@ -4058,9 +4687,486 @@
       "title": "Validation report for ogc.geo.features.featureCollection - Feature Collection",
       "bblockName": "Feature Collection",
       "bblockId": "ogc.geo.features.featureCollection",
-      "generated": "2026-04-08T08:20:51.663449+00:00",
+      "generated": "2026-04-08T09:49:42.084862+00:00",
       "result": true,
       "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "registereditems/geo/features/featureCollection/tests/collection-empty.json",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/tests/collection-empty.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using collection-empty.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "collection-empty.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD collection-empty.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "collection-empty.ttl",
+                  "size": 1,
+                  "isError": false,
+                  "message": "Output Turtle collection-empty.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:FeatureCollectionShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "registereditems/geo/features/featureCollection/tests/collection-features.ttl",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/tests/collection-features.ttl",
+            "language": "ttl"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using collection-features.ttl from test resources"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:FeatureCollectionShape": {
+                      "nodes": [
+                        "<http://www.example.com/collections/c1>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/c1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/ls2>",
+                        "<http://www.example.com/features/pt2>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/ls2>,<http://www.example.com/features/pt2>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "registereditems/geo/features/featureCollection/tests/collection-missing-type-fail.json",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/tests/collection-missing-type-fail.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using collection-missing-type-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "collection-missing-type-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD collection-missing-type-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "collection-missing-type-fail.ttl",
+                  "size": 9,
+                  "isError": false,
+                  "message": "Output Turtle collection-missing-type-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": false,
+                  "exception": "ValidationError",
+                  "errorMessage": "'type' is a required property",
+                  "isError": true,
+                  "message": "ValidationError: 'type' is a required property\n\nFailed validating 'required' in schema['allOf'][0]:\n    {'$id': 'https://geojson.org/schema/FeatureCollection.json',\n     '$schema': 'http://json-schema.org/draft-07/schema#',\n     'properties': {'bbox': {'items': {'type': 'number'},\n                             'minItems': 4,\n                             'type': 'array'},\n                    'features': {'items': {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                   'minItems': 4,\n                                                                   'type': 'array'},\n                                                          'geometry': {'oneOf': [{'type': 'null'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'type': 'number'},\n                                                                                                                 'minItems': 2,\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['Point'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'Point',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                           'minItems': 2,\n                                                                                                                           'type': 'array'},\n                                                                                                                 'minItems': 2,\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['LineString'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'LineString',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                     'minItems': 2,\n                                                                                                                                     'type': 'array'},\n                                                                                                                           'minItems': 4,\n                                                                                                                           'type': 'array'},\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['Polygon'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'Polygon',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                           'minItems': 2,\n                                                                                                                           'type': 'array'},\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['MultiPoint'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'MultiPoint',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                     'minItems': 2,\n                                                                                                                                     'type': 'array'},\n                                                                                                                           'minItems': 2,\n                                                                                                                           'type': 'array'},\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['MultiLineString'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'MultiLineString',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                               'minItems': 2,\n                                                                                                                                               'type': 'array'},\n                                                                                                                                     'minItems': 4,\n                                                                                                                                     'type': 'array'},\n                                                                                                                           'type': 'array'},\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['MultiPolygon'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'MultiPolygon',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'geometries': {'items': {'oneOf': [{'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'type': 'number'},\n                                                                                                                                                                    'minItems': 2,\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['Point'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'Point',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'minItems': 2,\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['LineString'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'LineString',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                                        'minItems': 2,\n                                                                                                                                                                                        'type': 'array'},\n                                                                                                                                                                              'minItems': 4,\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['Polygon'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'Polygon',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['MultiPoint'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'MultiPoint',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                                        'minItems': 2,\n                                                                                                                                                                                        'type': 'array'},\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['MultiLineString'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'MultiLineString',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                                                  'minItems': 2,\n                                                                                                                                                                                                  'type': 'array'},\n                                                                                                                                                                                        'minItems': 4,\n                                                                                                                                                                                        'type': 'array'},\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['MultiPolygon'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'MultiPolygon',\n                                                                                                                                     'type': 'object'}]},\n                                                                                                                'type': 'array'},\n                                                                                                 'type': {'enum': ['GeometryCollection'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'geometries'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'GeometryCollection',\n                                                                                  'type': 'object'}]},\n                                                          'id': {'oneOf': [{'type': 'number'},\n                                                                           {'type': 'string'}]},\n                                                          'properties': {'oneOf': [{'type': 'null'},\n                                                                                   {'type': 'object'}]},\n                                                          'type': {'enum': ['Feature'],\n                                                                   'type': 'string'}},\n                                           'required': ['type',\n                                                        'properties',\n                                                        'geometry'],\n                                           'title': 'GeoJSON Feature',\n                                           'type': 'object'},\n                                 'type': 'array'},\n                    'type': {'enum': ['FeatureCollection'],\n                             'type': 'string'}},\n     'required': ['type', 'features'],\n     'title': 'GeoJSON FeatureCollection',\n     'type': 'object'}\n\nOn instance:\n    {'features': [{'geometry': {'coordinates': [174.7, -36.9],\n                                'type': 'Point'},\n                   'id': 'http://www.example.com/features/pt3',\n                   'properties': {},\n                   'type': 'Feature'}]}"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:FeatureCollectionShape": {
+                      "nodes": [
+                        "_:Nea5929c798944962ada5de0b313b4e31"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: _:Nea5929c798944962ada5de0b313b4e31\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/pt3>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt3>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "registereditems/geo/features/featureCollection/tests/collection-multiple-geometries.json",
+            "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/tests/collection-multiple-geometries.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using collection-multiple-geometries.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "collection-multiple-geometries.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD collection-multiple-geometries.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "collection-multiple-geometries.ttl",
+                  "size": 29,
+                  "isError": false,
+                  "message": "Output Turtle collection-multiple-geometries.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:FeatureCollectionShape": {
+                      "nodes": [
+                        "_:N8dbfd8b01fc345fe830df97cbfc1aa12"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: _:N8dbfd8b01fc345fe830df97cbfc1aa12\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/ls1>",
+                        "<http://www.example.com/features/nogeom1>",
+                        "<http://www.example.com/features/pt1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/ls1>,<http://www.example.com/features/nogeom1>,<http://www.example.com/features/pt1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
         {
           "source": {
             "type": "EXAMPLE",
@@ -4096,7 +5202,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 10,
+                  "size": 11,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
@@ -4113,14 +5219,85 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:FeatureCollectionShape": {
+                      "nodes": [
+                        "_:N28ed4ee0916f48eab18b24eab2772400"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: _:N28ed4ee0916f48eab18b24eab2772400\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/f1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/f1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         }
       ],
       "globalErrors": {},
       "counts": {
-        "total": 1,
-        "passed": 1,
+        "total": 5,
+        "passed": 5,
         "failed": 0
       }
     },
@@ -4128,7 +5305,7 @@
       "title": "Validation report for ogc.geo.json-fg.feature - JSON-FG Feature",
       "bblockName": "JSON-FG Feature",
       "bblockId": "ogc.geo.json-fg.feature",
-      "generated": "2026-04-08T08:20:54.906465+00:00",
+      "generated": "2026-04-08T09:49:45.307902+00:00",
       "result": true,
       "items": [
         {
@@ -4182,6 +5359,43 @@
                   "result": true,
                   "isError": false,
                   "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/json-fg/fence.1>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/json-fg/fence.1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
                 }
               ]
             }
@@ -4240,6 +5454,43 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/json-fg/DENW19AL0000giv5BL>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/json-fg/DENW19AL0000giv5BL>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         },
@@ -4295,6 +5546,43 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/json-fg/my-space-station>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/json-fg/my-space-station>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         }
@@ -4310,7 +5598,7 @@
       "title": "Validation report for ogc.geo.json-fg.feature-lenient - JSON-FG Feature - Lenient",
       "bblockName": "JSON-FG Feature - Lenient",
       "bblockId": "ogc.geo.json-fg.feature-lenient",
-      "generated": "2026-04-08T08:20:58.168109+00:00",
+      "generated": "2026-04-08T09:49:48.530683+00:00",
       "result": true,
       "items": [
         {
@@ -4363,6 +5651,43 @@
                   "result": true,
                   "isError": false,
                   "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/json-fg/fence.1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <https://example.com/json-fg/fence.1>\n - Shape geojson:LinkShape: *none*\n"
                 }
               ]
             }
@@ -4421,6 +5746,43 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/json-fg/fence.1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <https://example.com/json-fg/fence.1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         },
@@ -4474,6 +5836,43 @@
                   "result": true,
                   "isError": false,
                   "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/json-fg/DENW19AL0000giv5BL>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <https://example.com/json-fg/DENW19AL0000giv5BL>\n - Shape geojson:LinkShape: *none*\n"
                 }
               ]
             }
@@ -4532,6 +5931,43 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/json-fg/DENW19AL0000giv5BL>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <https://example.com/json-fg/DENW19AL0000giv5BL>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         },
@@ -4587,6 +6023,43 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/json-fg/my-space-station>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <https://example.com/json-fg/my-space-station>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         }
@@ -4602,7 +6075,7 @@
       "title": "Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection",
       "bblockName": "JSON-FG Feature Collection",
       "bblockId": "ogc.geo.json-fg.featureCollection",
-      "generated": "2026-04-08T08:21:00.975891+00:00",
+      "generated": "2026-04-08T09:49:51.261724+00:00",
       "result": true,
       "items": [
         {
@@ -4668,6 +6141,77 @@
                   "message": "ValidationError: 'time' is a required property\n\nFailed validating 'required' in schema['allOf'][1]['properties']['features']['items']:\n    {'$schema': 'https://json-schema.org/draft/2019-09/schema',\n     'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml'},\n               {'properties': {'coordRefSys': {'$ref': 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json',\n                                               'x-jsonld-id': 'http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS'},\n                               'featureType': {'$ref': 'https://beta.schemas.opengis.net/json-fg/featuretype.json',\n                                               'x-jsonld-id': '@type'},\n                               'geometry': {'$ref': 'https://beta.schemas.opengis.net/json-fg/geometry.json',\n                                            'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'},\n                               'id': {'oneOf': [{'type': 'number'},\n                                                {'type': 'string'}],\n                                      'x-jsonld-id': '@id'},\n                               'links': {'items': {'allOf': [{'$ref': 'https://beta.schemas.opengis.net/json-fg/link.json'},\n                                                             {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml'}]},\n                                         'type': 'array',\n                                         'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#seeAlso'},\n                               'place': {'$ref': 'https://beta.schemas.opengis.net/json-fg/place.json',\n                                         'x-jsonld-id': 'http://purl.org/dc/terms/spatial'},\n                               'properties': {'oneOf': [{'type': 'null'},\n                                                        {'type': 'object'}],\n                                              'x-jsonld-id': '@nest'},\n                               'time': {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml',\n                                        'x-jsonld-id': 'http://purl.org/dc/terms/time'},\n                               'type': {'enum': ['Feature'],\n                                        'type': 'string',\n                                        'x-jsonld-id': '@type'}}}],\n     'description': 'This JSON Schema is part of JSON-FG version 0.1.1',\n     'required': ['type', 'time', 'place', 'geometry', 'properties'],\n     'title': 'a JSON-FG Feature',\n     'type': 'object',\n     'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',\n                              'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',\n                              'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',\n                              'LineString': 'https://purl.org/geojson/vocab#LineString',\n                              'MultiLineString': 'https://purl.org/geojson/vocab#MultiLineString',\n                              'MultiPoint': 'https://purl.org/geojson/vocab#MultiPoint',\n                              'MultiPolygon': 'https://purl.org/geojson/vocab#MultiPolygon',\n                              'MultiPolyhedron': 'https://purl.org/geojson/vocab#MultiPolyhedron',\n                              'MultiPrism': {'x-jsonld-context': {'prisms': 'https://purl.org/geojson/vocab#prisms'},\n                                             'x-jsonld-id': 'https://purl.org/geojson/vocab#MultiPrism'},\n                              'Point': 'https://purl.org/geojson/vocab#Point',\n                              'Polygon': 'https://purl.org/geojson/vocab#Polygon',\n                              'Polyhedron': 'https://purl.org/geojson/vocab#Polyhedron',\n                              'Prism': {'x-jsonld-context': {'base': 'https://purl.org/geojson/vocab#prismBase',\n                                                             'lower': 'https://purl.org/geojson/vocab#prismLower',\n                                                             'upper': 'https://purl.org/geojson/vocab#prismUpper'},\n                                        'x-jsonld-id': 'https://purl.org/geojson/vocab#Prism'},\n                              'bbox': {'x-jsonld-container': '@list',\n                                       'x-jsonld-id': 'https://purl.org/geojson/vocab#bbox'},\n                              'coordinates': {'x-jsonld-container': '@list',\n                                              'x-jsonld-id': 'https://purl.org/geojson/vocab#coordinates'},\n                              'features': {'x-jsonld-container': '@set',\n                                           'x-jsonld-id': 'https://purl.org/geojson/vocab#features'},\n                              'geometries': {'x-jsonld-container': '@list',\n                                             'x-jsonld-id': 'https://purl.org/geojson/vocab#geometry'}},\n     'x-jsonld-prefixes': {'dct': 'http://purl.org/dc/terms/',\n                           'geojson': 'https://purl.org/geojson/vocab#',\n                           'owlTime': 'http://www.w3.org/2006/time#',\n                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#'}}\n\nOn instance['features'][0]:\n    {'geometry': {'coordinates': [174.7501603083, -36.9307359096],\n                  'type': 'Point'},\n     'id': 'f1',\n     'properties': {'comment': 'An attribute value'},\n     'type': 'Feature'}"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:FeatureCollectionShape": {
+                      "nodes": [
+                        "_:N52248a3f443345ba86fe4e7c753dc27c"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: _:N52248a3f443345ba86fe4e7c753dc27c\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<file:///github/workspace/f1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         },
@@ -4723,6 +6267,77 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:FeatureCollectionShape": {
+                      "nodes": [
+                        "_:Na0ae33599a4b42b68ddb00836ad081a6"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: _:Na0ae33599a4b42b68ddb00836ad081a6\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://www.example.com/features/f1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/f1>\n - Shape geojson:LinkShape: *none*\n"
+                }
+              ]
             }
           ]
         }
@@ -4738,7 +6353,7 @@
       "title": "Validation report for ogc.geo.json-fg.featureCollection-lenient - JSON-FG Feature Collection - Lenient",
       "bblockName": "JSON-FG Feature Collection - Lenient",
       "bblockId": "ogc.geo.json-fg.featureCollection-lenient",
-      "generated": "2026-04-08T08:21:00.986807+00:00",
+      "generated": "2026-04-08T09:49:51.281611+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},

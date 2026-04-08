@@ -24,11 +24,15 @@
   "maturity": "mature",
   "scope": "geo",
   "group": "Common",
-  "shaclShapes": {},
+  "shaclShapes": {
+    "ogc.geo.features.feature": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ]
+  },
   "dependsOn": [
+    "ogc.ogc-utils.json-link",
     "ogc.geo.common.data_types.geojson",
-    "ogc.geo.common.data_types.bounding_box",
-    "ogc.ogc-utils.json-link"
+    "ogc.geo.common.data_types.bounding_box"
   ],
   "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
   "schema": {
@@ -68,7 +72,7 @@
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml\n- type: object\n  properties:\n    bbox:\n      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml\n    links:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    type:\n      const: Feature\n  required:\n  - type\n  - geometry\n  - properties\nx-jsonld-extra-terms:\n  properties: '@nest'\n  features:\n    x-jsonld-container: '@set'\n    x-jsonld-id: https://purl.org/geojson/vocab#features\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  geojson: https://purl.org/geojson/vocab#\n",
+  "annotatedSchema": "allOf:\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml\n- type: object\n  properties:\n    bbox:\n      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.yaml\n    links:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    type:\n      const: Feature\n      x-jsonld-id: '@type'\n  required:\n  - type\n  - geometry\n  - properties\nx-jsonld-extra-terms:\n  properties: '@nest'\n  features:\n    x-jsonld-container: '@set'\n    x-jsonld-id: https://purl.org/geojson/vocab#features\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  geojson: https://purl.org/geojson/vocab#\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/features/feature"
 }

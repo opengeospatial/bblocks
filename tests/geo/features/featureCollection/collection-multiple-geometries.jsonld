@@ -1,0 +1,48 @@
+{
+  "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "http://www.example.com/features/pt1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7501603083,
+          -36.9307359096
+        ]
+      },
+      "properties": {
+        "name": "Point feature"
+      }
+    },
+    {
+      "id": "http://www.example.com/features/ls1",
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            174.7,
+            -36.9
+          ],
+          [
+            175.0,
+            -37.1
+          ]
+        ]
+      },
+      "properties": {
+        "name": "LineString feature"
+      }
+    },
+    {
+      "id": "http://www.example.com/features/nogeom1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Null-geometry feature"
+      }
+    }
+  ]
+}

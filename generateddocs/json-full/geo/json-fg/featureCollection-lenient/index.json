@@ -22,10 +22,17 @@
   ],
   "scope": "geo",
   "group": "JSON-FG",
-  "shaclShapes": {},
+  "shaclShapes": {
+    "ogc.geo.features.featureCollection": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+    ],
+    "ogc.geo.features.feature": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ]
+  },
   "dependsOn": [
-    "ogc.ogc-utils.json-link",
     "ogc.geo.features.featureCollection",
+    "ogc.ogc-utils.json-link",
     "ogc.geo.json-fg.feature-lenient"
   ],
   "schema": {

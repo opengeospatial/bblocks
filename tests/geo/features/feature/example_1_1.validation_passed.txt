@@ -1,5 +1,5 @@
 Validation report for ogc.geo.features.feature - Feature
-Generated 2026-04-08T08:20:51.338916+00:00
+Generated 2026-04-08T09:49:41.655135+00:00
 === Files ===
 Using example.json from examples
 JSON-LD context is present - uplifting
@@ -10,4 +10,18 @@ Output Turtle example_1_1.ttl created
 === JSON Schema ===
 Validation passed
 === End JSON Schema ===
+
+=== SHACL ===
+Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: <http://www.example.com/features/f1>
+ - Shape geojson:LinkShape: *none*
+
+=== End SHACL ===
 
