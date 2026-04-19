@@ -9,7 +9,7 @@
   "itemClass": "parameter",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-04-08",
+  "dateOfLastChange": "2022-05-24",
   "sources": [
     {
       "title": "OGC API - Features, Part 1, 7.15.3: Parameter bbox",
@@ -41,17 +41,17 @@
         {
           "language": "shell",
           "code": "curl \\\n\"https://demo.pygeoapi.io/master/collections/lakes/items?\\\nbbox=-124.7844079,24.7433195,-66.9513812,49.3457868\"",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox/example_2_1.shell"
+          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/tests/geo/common/parameters/bbox/example_2_1.shell"
         },
         {
           "language": "python",
           "code": "import urllib.parse\nimport urllib.request\n\nparams = {'bbox': '-124.7844079,24.7433195,-66.9513812,49.3457868'}\n\nurl = 'https://demo.pygeoapi.io/master/collections/lakes/items?' \\\n    + urllib.parse.urlencode(params)\n\ncontents = urllib.request.urlopen(url)\n\nprint(contents.read())",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox/example_2_2.python"
+          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/tests/geo/common/parameters/bbox/example_2_2.python"
         },
         {
           "language": "javascript",
           "code": "bbox = [-124.7844079,24.7433195,-66.9513812,49.3457868];\n\nurl = 'https://demo.pygeoapi.io/master/collections/lakes/items?';\n\nfetch(url + `bbox=${bbox.join(',')}`)\n  .then((response) => response.json())\n  .then((json) => console.log(json));",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/common/parameters/bbox/example_2_3.javascript"
+          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/tests/geo/common/parameters/bbox/example_2_3.javascript"
         }
       ]
     }
