@@ -43,7 +43,6 @@
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/context.jsonld",
   "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/resolvedProperties.json",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/",
-  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/feature/",
   "description": "A feature is an abstraction of real world phenomena [ISO 19101-1:2014].\n\nThe GeoJSON representation is the currently recommended representation that all APIs should support, where GeoJSON can\nbe used for the data.\n\nEach GeoJSON feature includes the following JSON members:\n\n* `type`: fixed value \"Feature\".\n* `geometry`: the primary geometry of the feature describing its location as a GeoJSON geometry object. `null`, if the\n  feature has no spatial geometry.\n* `properties`: an object with a member for each feature property.",
@@ -57,17 +56,17 @@
           "ref": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/example.json",
           "base-uri": "http://www.example.com/features/",
           "code": "{\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      174.7501603083,\n      -36.9307359096\n    ]\n  },\n  \"properties\": {\n    \"comment\": \"An attribute value\"\n  }\n}",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/geo/features/feature/example_1_1.json"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld\",\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      174.7501603083,\n      -36.9307359096\n    ]\n  },\n  \"properties\": {\n    \"comment\": \"An attribute value\"\n  }\n}",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/geo/features/feature/example_1_1.jsonld"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/tests/geo/features/feature/example_1_1.ttl"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.ttl"
         }
       ]
     }

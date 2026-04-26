@@ -32,7 +32,6 @@
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/context.jsonld",
   "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/resolvedProperties.json",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/",
-  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/topology/",
   "description": "A datatype containing ordered list of references to other features. \n\nOther features may be either features with topology properties or GeoJSON (or FG-JSON) point objects.\n\nThis is a generalisation of the TopoJSON concept using inline data, and not limited to linestrings.\n\n",
@@ -46,17 +45,17 @@
           "ref": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/example.json",
           "base-uri": "http://www.example.com/features/",
           "code": "{\n  \"type\": \"LineString\",\n  \"references\": [\n    \"P1\",\n    \"P2\"\n  ]\n}",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/tests/ogc-utils/topology/example_1_1.json"
+          "url": "https://opengeospatial.github.io/bblocks/tests/ogc-utils/topology/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld\",\n  \"type\": \"LineString\",\n  \"references\": [\n    \"P1\",\n    \"P2\"\n  ]\n}",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/tests/ogc-utils/topology/example_1_1.jsonld"
+          "url": "https://opengeospatial.github.io/bblocks/tests/ogc-utils/topology/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] a geojson:LineString ;\n    geojson:relatedFeatures ( <http://www.example.com/features/P1> <http://www.example.com/features/P2> ) .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/tests/ogc-utils/topology/example_1_1.ttl"
+          "url": "https://opengeospatial.github.io/bblocks/tests/ogc-utils/topology/example_1_1.ttl"
         }
       ]
     }

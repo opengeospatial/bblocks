@@ -161,6 +161,33 @@
       "rdfType": {
         "@id": "rdfs:subClassOf",
         "@type": "@id"
+      },
+      "resources": {
+        "@id": "prof:hasResource",
+        "@context": {
+          "role": {
+            "@id": "prof:hasRole",
+            "@type": "@id"
+          },
+          "constraints": "role:constraints",
+          "example": "role:example",
+          "guidance": "role:guidance",
+          "mapping": "role:mapping",
+          "schema": "role:schema",
+          "specification": "role:specification",
+          "validation": "role:validation",
+          "vocabulary": "role:vocabulary",
+          "data": "role:data",
+          "ref": {
+            "@id": "prof:hasArtifact",
+            "@type": "@id"
+          },
+          "format": "dct:format",
+          "conformsTo": {
+            "@id": "dct:conformsTo",
+            "@type": "@id"
+          }
+        }
       }
     }
   ],
@@ -168,12 +195,12 @@
   "abstract": "OGC Specification Elements packaged as FAIR Building Blocks.",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of [building blocks](https://ogcincubator.github.io/bblocks-docs/) managed by the OGC community through a variety of processes:\n\n- formal standards publication processes the Standards Working Groups\n- agreements with other standards bodies (eg. ISO)\n- community hosted examples of re-use (profiles and extensions of OGC standards)\n- informal \"incubator\" processes where more than one project needs a solution, and appropriate SWG scope is yet to be determined\n\n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n\n\nNotes:\n\n1. Policies are in preparation for naming and governance of these sub-registers, and this is subject to change pending adoption of such policies.\n1. Building Block identification will be designed to support transition between governance domains without change using symbolic references.\n1. A formal definition of Building Blocks and the level of \"granularity\" they represent with respect to the OGC Modular Specification is TBD.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2026-04-19T05:07:36.536457",
+  "modified": "2026-04-26T05:09:31.188515",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"82fc8650df6a65be1e17f7c6440191f0b7c6ccff",
-      "shortCommitId": "\"82fc86",
-      "date": "2026-04-17T09:37:57+00:00\""
+      "commitId": "\"a45f3f710418bc91a1b2148677a2104cfc43e7d8",
+      "shortCommitId": "\"a45f3f",
+      "date": "2026-04-23T10:40:45+00:00\""
     }
   },
   "gitRepository": "https://github.com/opengeospatial/bblocks",
@@ -252,7 +279,6 @@
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/schema.yaml",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/bounding_box/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/common/data_types/bounding_box/",
       "documentation": {
@@ -280,6 +306,7 @@
       "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -331,7 +358,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "json-full": {
@@ -357,6 +383,7 @@
       "skos:prefLabel": "GeoJSON",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -400,7 +427,6 @@
       "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox/remote_cache/",
       "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/parameters/bbox.yaml",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "json-full": {
@@ -427,6 +453,7 @@
       "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -469,7 +496,6 @@
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/schema.yaml",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/common/parameters/bbox-crs/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "json-full": {
@@ -496,6 +522,7 @@
       "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -545,7 +572,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "json-full": {
@@ -571,6 +597,7 @@
       "skos:prefLabel": "JSON Link",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -622,7 +649,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/advanced/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/advanced/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "json-full": {
@@ -648,6 +674,7 @@
       "skos:prefLabel": "GeoPose Advanced",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -699,7 +726,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "json-full": {
@@ -725,6 +751,7 @@
       "skos:prefLabel": "GeoPose Basic-Quaternion",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -776,7 +803,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/geopose/basic/ypr/",
       "documentation": {
@@ -803,6 +829,7 @@
       "skos:prefLabel": "GeoPose Basic-YPR",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -852,7 +879,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/time/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/time/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/time/",
       "documentation": {
@@ -879,6 +905,7 @@
       "skos:prefLabel": "JSON-FG time member",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -929,7 +956,6 @@
       ],
       "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/schema.yaml",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/iri-or-curie/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/iri-or-curie/",
       "documentation": {
@@ -957,6 +983,7 @@
       "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
@@ -1027,7 +1054,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/feature/",
       "documentation": {
@@ -1054,6 +1080,7 @@
       "skos:prefLabel": "Feature",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
@@ -1079,8 +1106,8 @@
       ],
       "shaclShapes": null,
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.ogc-utils.iri-or-curie"
+        "bblocks://ogc.ogc-utils.iri-or-curie",
+        "bblocks://ogc.ogc-utils.json-link"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
@@ -1106,7 +1133,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/link-role/",
       "documentation": {
@@ -1133,6 +1159,7 @@
       "skos:prefLabel": "Link with role and target conformance",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
@@ -1185,7 +1212,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/ogc-utils/topology/",
       "documentation": {
@@ -1212,6 +1238,7 @@
       "skos:prefLabel": "Geometry using references",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
@@ -1284,7 +1311,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/features/featureCollection/",
       "documentation": {
@@ -1311,6 +1337,7 @@
       "skos:prefLabel": "Feature Collection",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
@@ -1347,9 +1374,9 @@
         }
       ],
       "dependsOn": [
+        "bblocks://ogc.geo.json-fg.time",
         "bblocks://ogc.geo.features.feature",
-        "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.json-fg.time"
+        "bblocks://ogc.ogc-utils.json-link"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
@@ -1375,7 +1402,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/feature/",
       "documentation": {
@@ -1402,6 +1428,7 @@
       "skos:prefLabel": "JSON-FG Feature",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
@@ -1446,9 +1473,9 @@
         }
       ],
       "dependsOn": [
+        "bblocks://ogc.geo.json-fg.time",
         "bblocks://ogc.geo.features.feature",
-        "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.json-fg.time"
+        "bblocks://ogc.ogc-utils.json-link"
       ],
       "schema": [
         {
@@ -1468,7 +1495,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/feature-lenient/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/feature-lenient/",
       "documentation": {
@@ -1495,6 +1521,7 @@
       "skos:prefLabel": "JSON-FG Feature - Lenient",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
@@ -1539,8 +1566,8 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.json-link",
         "bblocks://ogc.geo.features.featureCollection",
+        "bblocks://ogc.ogc-utils.json-link",
         "bblocks://ogc.geo.json-fg.feature"
       ],
       "ldContext": {
@@ -1567,7 +1594,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/featureCollection/",
       "documentation": {
@@ -1594,6 +1620,7 @@
       "skos:prefLabel": "JSON-FG Feature Collection",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"
@@ -1629,27 +1656,27 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
             "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.features.featureCollection",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
         }
       ],
       "dependsOn": [
+        "bblocks://ogc.geo.features.featureCollection",
         "bblocks://ogc.geo.json-fg.feature-lenient",
-        "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.features.featureCollection"
+        "bblocks://ogc.ogc-utils.json-link"
       ],
       "schema": [
         {
@@ -1669,7 +1696,6 @@
       "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/context.jsonld",
       "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/resolvedProperties.json",
       "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection-lenient/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "json-full": {
@@ -1695,6 +1721,7 @@
       "skos:prefLabel": "JSON-FG Feature Collection - Lenient",
       "openAPIDocument": null,
       "ontology": null,
+      "rdfData": [],
       "isProfileOf": null,
       "skos:topConceptOf": {
         "@id": "https://opengeospatial.github.io/bblocks/"

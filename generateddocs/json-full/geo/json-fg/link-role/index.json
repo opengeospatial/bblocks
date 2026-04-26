@@ -20,8 +20,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.ogc-utils.json-link",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.ogc-utils.json-link"
   ],
   "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld",
   "schema": {
@@ -32,7 +32,6 @@
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/context.jsonld",
   "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/resolvedProperties.json",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/",
-  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/link-role/",
   "examples": [
@@ -45,17 +44,17 @@
           "ref": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/example.json",
           "base-uri": "http://www.example.com/features/",
           "code": "{\n  \"@context\": {\n    \"@base\": \"http://example.org\"\n  },\n  \"href\": \"http//example.org/frog\",\n  \"rel\":\"related\",\n  \"role\": \"animals\"\n}",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/tests/geo/json-fg/link-role/example_1_1.json"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/link-role/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": [\n    \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld\",\n    {\n      \"@base\": \"http://example.org\"\n    }\n  ],\n  \"href\": \"http//example.org/frog\",\n  \"rel\": \"related\",\n  \"role\": \"animals\"\n}",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/tests/geo/json-fg/link-role/example_1_1.jsonld"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/link-role/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n\n[] ns1:relation <http://www.iana.org/assignments/relation/related> ;\n    prof:hasRole <http://example.org/animals> ;\n    oa:hasTarget <http://example.org/http/example.org/frog> .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/link-role/tests/geo/json-fg/link-role/example_1_1.ttl"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/link-role/example_1_1.ttl"
         }
       ]
     }

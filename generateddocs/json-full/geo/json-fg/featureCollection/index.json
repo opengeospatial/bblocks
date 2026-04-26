@@ -27,8 +27,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.ogc-utils.json-link",
     "ogc.geo.features.featureCollection",
+    "ogc.ogc-utils.json-link",
     "ogc.geo.json-fg.feature"
   ],
   "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld",
@@ -40,7 +40,6 @@
   "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/context.jsonld",
   "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/resolvedProperties.json",
   "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/",
-  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/json-fg/featureCollection/",
   "description": "OGC Features and Geometries JSON (JSON-FG) extends GeoJSON to support a limited set of additional capabilities that are\nout-of-scope for GeoJSON, but that are essential or important for a variety of use cases involving feature data.\nA **feature collection** contains a set of features from a dataset.\n\nInformation that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in\nadditional top-level members of GeoJSON objects. The members use keys that do not conflict with GeoJSON including the\nobsolete version that pre-dates the IETF standard. GeoJSON clients will be able to parse and understand all aspects that\nare specified by GeoJSON, JSON-FG clients will also parse and understand the additional capabilities.\n\nThis Standard specifies the following minimal extensions to the GeoJSON Standard:\n\n* The ability to use Coordinate Reference Systems (CRSs) other than WGS 84;\n* The ability to use non-Euclidean metrics, in particular ellipsoidal metrics;\n* Support for solids and prisms as geometry types;\n* The ability to encode temporal characteristics of a feature; and\n* The ability to declare the type and the schema of a feature.\n\nInformation that can be represented as GeoJSON is encoded as GeoJSON. Additional information is mainly encoded in\nadditional members of the GeoJSON objects. The additional members use keys that do not conflict with GeoJSON. This is so\nexisting and future GeoJSON clients will continue to parse and understand GeoJSON content. JSON-FG enabled clients will\nalso be able to parse and understand the additional members.\n\nJSON Schema is used to formally specify the JSON-FG syntax.",
@@ -54,17 +53,17 @@
           "ref": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/example.json",
           "base-uri": "http://www.example.com/features/",
           "code": "{\n  \"@context\": {\n    \"my\": \"http://my.org/featureTypes/\",\n    \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n    \"name\": \"skos:prefLabel\"\n  },\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"featureType\": \"my:FeatureType\",\n      \"geometry\": null,\n      \"time\": null,\n      \"coordRefSys\": \"EPSG\",\n      \"place\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/tests/geo/json-fg/featureCollection/example_1_1.json"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": [\n    \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld\",\n    {\n      \"my\": \"http://my.org/featureTypes/\",\n      \"skos\": \"http://www.w3.org/2004/02/skos/core#\",\n      \"name\": \"skos:prefLabel\"\n    }\n  ],\n  \"id\": \"MyFeatureCollection\",\n  \"name\": \"MyFeatureCollection\",\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"id\": \"f1\",\n      \"type\": \"Feature\",\n      \"featureType\": \"my:FeatureType\",\n      \"geometry\": null,\n      \"time\": null,\n      \"coordRefSys\": \"EPSG\",\n      \"place\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          174.7501603083,\n          -36.9307359096\n        ]\n      },\n      \"properties\": {\n        \"comment\": \"An attribute value\"\n      }\n    }\n  ]\n}",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/tests/geo/json-fg/featureCollection/example_1_1.jsonld"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix my: <http://my.org/featureTypes/> .\n@prefix ns1: <http://www.opengis.net/def/glossary/term/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/f1> a my:FeatureType,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] ;\n    ns1:CoordinateReferenceSystemCRS \"EPSG\" .\n\n[] a geojson:FeatureCollection ;\n    skos:prefLabel \"MyFeatureCollection\" ;\n    geojson:features <http://www.example.com/features/f1> .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/registereditems/geo/json-fg/featureCollection/tests/geo/json-fg/featureCollection/example_1_1.ttl"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/json-fg/featureCollection/example_1_1.ttl"
         }
       ]
     }
