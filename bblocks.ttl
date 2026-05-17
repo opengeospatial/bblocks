@@ -22,12 +22,12 @@
     rdfs:label "bbox" ;
     dct:abstract "The bbox query parameter provides a simple mechanism for filtering resources based on their location. It selects all resources that intersect a rectangle (map view) or box (including height information)."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.parameters.bbox> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox/index.json> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox/index.md> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2022-05-24"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_bbox> ;
@@ -55,10 +55,10 @@
     dct:created "2022-07-05T01:01:01+02:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.parameters.bbox-crs> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox-crs/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox-crs/index.md> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/parameters/bbox-crs/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/parameters/bbox-crs/index.json> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2022-07-05"^^xsd:date ;
     dct:source <http://www.opengis.net/doc/IS/ogcapi-features-2/1.0#_parameter_bbox_crs> ;
@@ -66,12 +66,12 @@
     skos:prefLabel "bbox-crs" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/parameters/bbox-crs/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> ;
@@ -84,10 +84,10 @@
     rdfs:label "GeoPose Advanced" ;
     dct:abstract "Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-07-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/advanced/index.md> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/advanced/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/advanced/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.advanced> ] ;
     dct:hasVersion "0.1" ;
@@ -120,12 +120,12 @@
     rdfs:label "GeoPose Basic-Quaternion" ;
     dct:abstract "Basic GeoPose using quaternion to specify orientation"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-07-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.basic.quaternion> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/quaternion/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/quaternion/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/quaternion/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.basic.quaternion> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-07-13"^^xsd:date ;
     dct:source <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ;
@@ -156,29 +156,29 @@
     rdfs:label "GeoPose Basic-YPR" ;
     dct:abstract "Basic GeoPose using yaw, pitch, and roll to specify orientation"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-03-15T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/ypr/index.json> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.basic.ypr> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/ypr/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/ypr/index.json> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/ypr/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-07-13"^^xsd:date ;
     dct:source <https://docs.ogc.org/dis/21-056r10/21-056r10.html> ;
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     skos:prefLabel "GeoPose Basic-YPR" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
@@ -194,17 +194,30 @@
     dct:created "2023-05-31T14:56:51+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.featureCollection> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection/index.json> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.featureCollection> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-05-31"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     skos:prefLabel "JSON-FG Feature Collection" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json> ;
             prof:hasRole role:schema ],
@@ -212,19 +225,6 @@
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
             prof:hasRole role:validation ] ;
     bblocks:dependsOn <bblocks://ogc.geo.features.featureCollection>,
         <bblocks://ogc.geo.json-fg.feature>,
@@ -241,10 +241,10 @@
     rdfs:label "JSON-FG Feature Collection - Lenient" ;
     dct:abstract "A collection of lenient OGC Features and Geometries JSON (JSON-FG) Features, that do not require the \"time\" and \"place\" properties"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-08-08T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection-lenient/index.md> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/featureCollection-lenient/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/featureCollection-lenient/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.featureCollection-lenient> ] ;
     dct:hasVersion "0.1" ;
@@ -258,23 +258,23 @@
             rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:dependsOn <bblocks://ogc.geo.features.featureCollection>,
         <bblocks://ogc.geo.json-fg.feature-lenient>,
         <bblocks://ogc.ogc-utils.json-link> ;
@@ -290,12 +290,12 @@
     rdfs:label "Link with role and target conformance" ;
     dct:abstract "A JSON-FG compliant web link with mandatory annotation of link role and optional conformance information to describe target resource. Compliant with profile resource descriptor model."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-08-21T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/link-role/index.json> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.link-role> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/link-role/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/link-role/index.json> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/link-role/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-08-21"^^xsd:date ;
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
@@ -304,14 +304,14 @@
     dcat:keyword "json-fg",
         "link",
         "profile" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml> ;
             prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json> ;
@@ -330,12 +330,12 @@
     rdfs:label "Geometry using references" ;
     dct:abstract "Demonstration of a schema using coordinates of points, withpout duplication"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/topology/index.md> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/topology/index.json> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.ogc-utils.topology> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/topology/index.json> ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/topology/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-05-24"^^xsd:date ;
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
@@ -345,16 +345,16 @@
         "geometry",
         "topology" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.json> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.yaml> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.yaml> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie> ;
     bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/context.jsonld> ;
@@ -376,18 +376,18 @@
 
 <https://opengeospatial.github.io/bblocks/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N6dd8df9c7e764258a1fc68315296e8c8 ;
+    prov:wasAttributedTo _:N746b3c74436145f180c26bcb9ed5e5ca ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-05-10T08:13:14.727997"^^xsd:dateTime ;
-            prov:startedAtTime "2026-05-10T08:13:14.481295"^^xsd:dateTime ;
+            prov:endedAtTime "2026-05-17T05:26:03.117344"^^xsd:dateTime ;
+            prov:startedAtTime "2026-05-17T05:26:02.892859"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:38c6676f46e7b5cd9ad063fc6400bd82ae6dba2b" ;
+                    dct:hasVersion "git:3103a50ebf6f7546d1a6078e7ef77b243d7f74c8" ;
                     rdfs:seeAlso <https://opengeospatial.github.io/bblocks/register.json> ],
                 [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:N6dd8df9c7e764258a1fc68315296e8c8 ] .
+            prov:wasAssociatedWith _:N746b3c74436145f180c26bcb9ed5e5ca ] .
 
 <https://www.ietf.org/rfc/rfc3986.txt> rdfs:label "IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax" .
 
@@ -406,12 +406,12 @@
     rdfs:label "Bounding Box" ;
     dct:abstract "The bounding box JSON object describes a simple spatial extent of a resource. For OGC API’s this could be a feature, a feature collection or a dataset, but it can be used in any JSON resource that wants to communicate its rough location. The extent is simple in that the bounding box does not describe the precise location and shape of the resource, but provides an axis-aligned approximation of the spatial extent that can be used as an initial test whether two resources are potentially intersecting each other."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2022-05-24T13:51:38+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.data_types.bounding_box> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/common/data_types/bounding_box/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/common/data_types/bounding_box/index.md> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.common.data_types.bounding_box> ] ;
     dct:hasVersion "1.0.1" ;
     dct:modified "2023-03-09"^^xsd:date ;
     dct:source <http://www.opengis.net/doc/IS/ogcapi-features-1/1.0#_response_4> ;
@@ -451,17 +451,17 @@
     skos:prefLabel "GeoJSON" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/geo/common/data_types/geojson/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> ;
@@ -486,7 +486,12 @@
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     skos:prefLabel "JSON-FG Feature" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json> ;
             prof:hasRole role:schema ],
@@ -497,12 +502,7 @@
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:mapping ] ;
     bblocks:dependsOn <bblocks://ogc.geo.features.feature>,
         <bblocks://ogc.geo.json-fg.time>,
         <bblocks://ogc.ogc-utils.json-link> ;
@@ -520,33 +520,33 @@
     dct:created "2023-08-08T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/feature-lenient/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/feature-lenient/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.feature-lenient> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.feature-lenient> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/feature-lenient/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-08-08"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     skos:prefLabel "JSON-FG Feature - Lenient" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld> ;
-            prof:hasRole role:mapping ],
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml> ;
             prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json> ;
-            prof:hasRole role:schema ] ;
+            prof:hasRole role:validation ] ;
     bblocks:dependsOn <bblocks://ogc.geo.features.feature>,
         <bblocks://ogc.geo.json-fg.time>,
         <bblocks://ogc.ogc-utils.json-link> ;
@@ -561,12 +561,12 @@
         bblocks:Schema ;
     rdfs:label "JSON-FG time member" ;
     dct:created "2024-05-28T09:45:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/time/index.md> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.time> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/json-fg/time/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.json-fg.time> ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/json-fg/time/index.md> ] ;
     dct:hasVersion "0.2.2" ;
     dct:modified "2024-05-28"^^xsd:date ;
     dct:source <http://docs.ogc.org/per/21-017r1.html> ;
@@ -574,12 +574,12 @@
     skos:prefLabel "JSON-FG time member" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
@@ -597,12 +597,12 @@
     rdfs:label "IRI or CURIE" ;
     dct:abstract "This Building Block defines a data type allowing schemas and profiles to use string base type for a full IRI/URI or a CURIE (with or without a prefix). This common pattern is complex to implement, and this Building Block makes it easy to implement consistently where-ever need."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-08-08T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/iri-or-curie/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.ogc-utils.iri-or-curie> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/iri-or-curie/index.md> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/iri-or-curie/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/iri-or-curie/index.json> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-03-09"^^xsd:date ;
     dct:source <https://www.ietf.org/rfc/rfc3986.txt>,
@@ -612,12 +612,12 @@
     skos:prefLabel "IRI or CURIE" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/geo> ;
     bblocks:status <http://www.opengis.net/def/status/stable> ;
@@ -634,35 +634,35 @@
     rdfs:label "Feature Collection" ;
     dct:abstract "A collection of features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-06-26T14:56:51+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/featureCollection/index.json> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.features.featureCollection> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/featureCollection/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/featureCollection/index.json> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/featureCollection/index.md> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-06-26"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_5> ;
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     skos:prefLabel "Feature Collection" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld> ;
             prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
@@ -682,30 +682,30 @@
     rdfs:label "JSON Link" ;
     dct:abstract "Web linking is used to express relationships between resources. The JSON object representation of links described here is used consistently in OGC API’s."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2022-05-18T15:21:59+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.ogc-utils.json-link> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/ogc-utils/json-link/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/json-link/index.json> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/ogc-utils/json-link/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.ogc-utils.json-link> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2022-05-18"^^xsd:date ;
     dct:source <https://www.rfc-editor.org/rfc/rfc8288.txt> ;
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     skos:prefLabel "JSON Link" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/json-link/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/ogc-utils> ;
     bblocks:status <http://www.opengis.net/def/status/stable> ;
@@ -720,10 +720,10 @@
     dct:created "2023-05-24T14:56:51+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.features.feature> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/feature/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md> ] ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/features/feature/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/features/feature/index.json> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2023-05-15"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7>,
@@ -731,22 +731,22 @@
     skos:inScheme <https://opengeospatial.github.io/bblocks/> ;
     skos:prefLabel "Feature" ;
     skos:topConceptOf <https://opengeospatial.github.io/bblocks/> ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.geo.common.data_types.bounding_box>,
         <bblocks://ogc.geo.common.data_types.geojson>,
@@ -778,7 +778,7 @@ Notes:
 1. Building Block identification will be designed to support transition between governance domains without change using symbolic references.
 1. A formal definition of Building Blocks and the level of "granularity" they represent with respect to the OGC Modular Specification is TBD.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-05-10T08:12:48.886310"^^xsd:dateTime ;
+    dct:modified "2026-05-17T05:25:35.307267"^^xsd:dateTime ;
     void:sparqlEndpoint <https://defs-dev.opengis.net/fuseki/query> ;
     skos:hasTopConcept <bblocks://ogc.geo.common.data_types.bounding_box>,
         <bblocks://ogc.geo.common.data_types.geojson>,
@@ -799,22 +799,22 @@ Notes:
         <bblocks://ogc.ogc-utils.json-link>,
         <bblocks://ogc.ogc-utils.topology> ;
     skos:prefLabel "Building Blocks - OGC Main" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
-            dct:type "application/json" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://opengeospatial.github.io/bblocks/register.json> ],
+            ns1:hasTarget <https://opengeospatial.github.io/bblocks/bblocks.ttl> ],
         [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
             ns1:hasTarget <https://opengeospatial.github.io/bblocks/bblocks.jsonld> ],
-        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
-            dct:type "text/turtle" ;
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://opengeospatial.github.io/bblocks/bblocks.ttl> ] ;
+            ns1:hasTarget <https://opengeospatial.github.io/bblocks/register.json> ] ;
     foaf:homepage <https://opengeospatial.github.io/bblocks/register/> ;
     bblocks:hasValidationReport <https://opengeospatial.github.io/bblocks/tests/report.html> .
 
-_:N6dd8df9c7e764258a1fc68315296e8c8 a prov:Agent,
+_:N746b3c74436145f180c26bcb9ed5e5ca a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.28" ;
