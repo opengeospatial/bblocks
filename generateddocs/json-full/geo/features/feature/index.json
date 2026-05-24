@@ -30,9 +30,9 @@
     ]
   },
   "dependsOn": [
-    "ogc.geo.common.data_types.geojson",
+    "ogc.geo.common.data_types.bounding_box",
     "ogc.ogc-utils.json-link",
-    "ogc.geo.common.data_types.bounding_box"
+    "ogc.geo.common.data_types.geojson"
   ],
   "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
   "schema": {
@@ -55,18 +55,18 @@
           "language": "json",
           "ref": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/example.json",
           "base-uri": "http://www.example.com/features/",
-          "code": "{\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      174.7501603083,\n      -36.9307359096\n    ]\n  },\n  \"properties\": {\n    \"comment\": \"An attribute value\"\n  }\n}",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.json"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.json",
+          "code": "{\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      174.7501603083,\n      -36.9307359096\n    ]\n  },\n  \"properties\": {\n    \"comment\": \"An attribute value\"\n  }\n}"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld\",\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      174.7501603083,\n      -36.9307359096\n    ]\n  },\n  \"properties\": {\n    \"comment\": \"An attribute value\"\n  }\n}",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.jsonld"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.jsonld",
+          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld\",\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      174.7501603083,\n      -36.9307359096\n    ]\n  },\n  \"properties\": {\n    \"comment\": \"An attribute value\"\n  }\n}"
         },
         {
           "language": "ttl",
-          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .\n\n",
-          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.ttl"
+          "url": "https://opengeospatial.github.io/bblocks/tests/geo/features/feature/example_1_1.ttl",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://www.example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .\n\n"
         }
       ]
     }
