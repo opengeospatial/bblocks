@@ -45,16 +45,19 @@
           "ref": "https://opengeospatial.github.io/bblocks/registereditems/ogc-utils/topology/example.json",
           "base-uri": "http://www.example.com/features/",
           "url": "https://opengeospatial.github.io/bblocks/tests/ogc-utils/topology/example_1_1.json",
+          "sizeBytes": 68,
           "code": "{\n  \"type\": \"LineString\",\n  \"references\": [\n    \"P1\",\n    \"P2\"\n  ]\n}"
         },
         {
           "language": "jsonld",
           "url": "https://opengeospatial.github.io/bblocks/tests/ogc-utils/topology/example_1_1.jsonld",
+          "sizeBytes": 178,
           "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/topology/context.jsonld\",\n  \"type\": \"LineString\",\n  \"references\": [\n    \"P1\",\n    \"P2\"\n  ]\n}"
         },
         {
           "language": "ttl",
           "url": "https://opengeospatial.github.io/bblocks/tests/ogc-utils/topology/example_1_1.ttl",
+          "sizeBytes": 250,
           "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] a geojson:LineString ;\n    geojson:relatedFeatures ( <http://www.example.com/features/P1> <http://www.example.com/features/P2> ) .\n\n"
         }
       ]

@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.geo.features.featureCollection - Feature Collection",
   "bblockName": "Feature Collection",
   "bblockId": "ogc.geo.features.featureCollection",
-  "generated": "2026-06-28T05:39:54.388117+00:00",
+  "generated": "2026-07-05T05:25:39.049613+00:00",
   "result": true,
   "items": [
     {
@@ -70,7 +70,16 @@
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 },
                 "geojson:FeatureShape": {
@@ -78,19 +87,10 @@
                 },
                 "geojson:FeatureCollectionShape": {
                   "nodes": []
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -102,24 +102,24 @@
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:FeatureShape": {
-                  "nodes": []
-                },
-                "geojson:LinkShape": {
+                "geojson:GeometryShape": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape": {
+                "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape/sh:or/rdf:first": {
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n"
             }
           ]
         }
@@ -159,7 +159,16 @@
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 },
                 "geojson:FeatureShape": {
@@ -169,19 +178,10 @@
                   "nodes": [
                     "<http://www.example.com/collections/c1>"
                   ]
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/c1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/c1>\n"
             },
             {
               "op": "shacl-report",
@@ -193,27 +193,27 @@
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:FeatureShape": {
-                  "nodes": [
-                    "<http://www.example.com/features/pt2>",
-                    "<http://www.example.com/features/ls2>"
-                  ]
-                },
-                "geojson:LinkShape": {
+                "geojson:GeometryShape": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<http://www.example.com/features/ls2>",
+                    "<http://www.example.com/features/pt2>"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt2>,<http://www.example.com/features/ls2>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/ls2>,<http://www.example.com/features/pt2>\n"
             }
           ]
         }
@@ -297,7 +297,16 @@
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 },
                 "geojson:FeatureShape": {
@@ -305,21 +314,12 @@
                 },
                 "geojson:FeatureCollectionShape": {
                   "nodes": [
-                    "_:N160a4461c51d42a59cb34a6466cad994"
+                    "_:N79e0c1906eab4151914dabb3b5a44389"
                   ]
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N160a4461c51d42a59cb34a6466cad994\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N79e0c1906eab4151914dabb3b5a44389\n"
             },
             {
               "op": "shacl-report",
@@ -331,26 +331,26 @@
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:FeatureShape": {
-                  "nodes": [
-                    "<http://www.example.com/features/pt3>"
-                  ]
-                },
-                "geojson:LinkShape": {
+                "geojson:GeometryShape": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<http://www.example.com/features/pt3>"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt3>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt3>\n"
             }
           ]
         }
@@ -421,7 +421,16 @@
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 },
                 "geojson:FeatureShape": {
@@ -429,21 +438,12 @@
                 },
                 "geojson:FeatureCollectionShape": {
                   "nodes": [
-                    "_:N0a7fad86ba1442f88d6f0aa8795ac3ec"
+                    "_:N9ae327b423754c898febfe720a5507c4"
                   ]
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N0a7fad86ba1442f88d6f0aa8795ac3ec\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N9ae327b423754c898febfe720a5507c4\n"
             },
             {
               "op": "shacl-report",
@@ -455,28 +455,28 @@
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:FeatureShape": {
-                  "nodes": [
-                    "<http://www.example.com/features/pt1>",
-                    "<http://www.example.com/features/nogeom1>",
-                    "<http://www.example.com/features/ls1>"
-                  ]
-                },
-                "geojson:LinkShape": {
+                "geojson:GeometryShape": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<http://www.example.com/features/nogeom1>",
+                    "<http://www.example.com/features/ls1>",
+                    "<http://www.example.com/features/pt1>"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt1>,<http://www.example.com/features/nogeom1>,<http://www.example.com/features/ls1>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/nogeom1>,<http://www.example.com/features/ls1>,<http://www.example.com/features/pt1>\n"
             }
           ]
         }
@@ -549,7 +549,16 @@
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 },
                 "geojson:FeatureShape": {
@@ -557,21 +566,12 @@
                 },
                 "geojson:FeatureCollectionShape": {
                   "nodes": [
-                    "_:N382290f35e8e4a1cad4f57bd0896878b"
+                    "_:N87d031cea8054c4d8e54a79b28fe2b3a"
                   ]
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N382290f35e8e4a1cad4f57bd0896878b\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N87d031cea8054c4d8e54a79b28fe2b3a\n"
             },
             {
               "op": "shacl-report",
@@ -583,26 +583,26 @@
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:FeatureShape": {
-                  "nodes": [
-                    "<http://www.example.com/features/f1>"
-                  ]
-                },
-                "geojson:LinkShape": {
+                "geojson:GeometryShape": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<http://www.example.com/features/f1>"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/f1>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/f1>\n"
             }
           ]
         }
