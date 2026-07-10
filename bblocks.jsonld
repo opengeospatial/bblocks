@@ -195,12 +195,12 @@
   "abstract": "OGC Specification Elements packaged as FAIR Building Blocks.",
   "description": "\nThe OGC Building Blocks register provides an overview of a series of [building blocks](https://ogcincubator.github.io/bblocks-docs/) managed by the OGC community through a variety of processes:\n\n- formal standards publication processes the Standards Working Groups\n- agreements with other standards bodies (eg. ISO)\n- community hosted examples of re-use (profiles and extensions of OGC standards)\n- informal \"incubator\" processes where more than one project needs a solution, and appropriate SWG scope is yet to be determined\n\n![](https://lucid.app/publicSegments/view/9d075f82-8611-4f32-83eb-994143669cc8/image.png)\n\n\nNotes:\n\n1. Policies are in preparation for naming and governance of these sub-registers, and this is subject to change pending adoption of such policies.\n1. Building Block identification will be designed to support transition between governance domains without change using symbolic references.\n1. A formal definition of Building Blocks and the level of \"granularity\" they represent with respect to the OGC Modular Specification is TBD.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2026-07-05T08:25:44.636787",
+  "modified": "2026-07-10T11:11:46.157816",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"6a10405b6d14cb859cbcbeb1762f51a8815960bd",
-      "shortCommitId": "\"6a1040",
-      "date": "2026-07-01T11:39:30+00:00\""
+      "commitId": "\"782e6be7338edb48ec5ec9a0c1d7f8df22df5ca0",
+      "shortCommitId": "\"782e6b",
+      "date": "2026-07-10T07:19:45+00:00\""
     }
   },
   "gitRepository": "https://github.com/opengeospatial/bblocks",
@@ -246,7 +246,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0.1",
-      "dateOfLastChange": "2023-03-09",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.13.2: Feature Collections Response",
@@ -322,7 +322,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2023-05-15",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "IETF RFC 7946 - The GeoJSON Format",
@@ -399,7 +399,7 @@
       "itemClass": "parameter",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2022-05-24",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.15.3: Parameter bbox",
@@ -469,7 +469,7 @@
       "itemClass": "parameter",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2022-07-05",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC API - Features, Part 2, 6.3.1: Parameter bbox-crs",
@@ -538,7 +538,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2022-05-18",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "IETF RFC 8288 - Web Linking",
@@ -605,238 +605,6 @@
       }
     },
     {
-      "itemIdentifier": "ogc.geo.geopose.advanced",
-      "name": "GeoPose Advanced",
-      "abstract": "Advanced GeoPose allowing flexible outer frame specification, quaternion orientation, and valid time.",
-      "status": "under-development",
-      "dateTimeAddition": "2023-07-13T00:00:00+00:00",
-      "itemClass": "schema",
-      "register": "ogc-building-block-register",
-      "version": "0.1",
-      "dateOfLastChange": "2023-07-13",
-      "sources": [
-        {
-          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
-          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
-        }
-      ],
-      "maturity": "proposal",
-      "scope": "geo",
-      "schema": [
-        {
-          "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "group": "GeoPose",
-      "shaclShapes": null,
-      "ldContext": {
-        "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/remote_cache/",
-      "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Advanced.Schema.json",
-      "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/advanced/context.jsonld",
-      "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/advanced/resolvedProperties.json",
-      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/advanced/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/advanced/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/advanced/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.advanced"
-        }
-      },
-      "@id": "bblocks://ogc.geo.geopose.advanced",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "GeoPose Advanced",
-      "openAPIDocument": null,
-      "ontology": null,
-      "rdfData": [],
-      "dependsOn": null,
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://opengeospatial.github.io/bblocks/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.geo.geopose.basic.quaternion",
-      "name": "GeoPose Basic-Quaternion",
-      "abstract": "Basic GeoPose using quaternion to specify orientation",
-      "status": "under-development",
-      "dateTimeAddition": "2023-07-13T00:00:00+00:00",
-      "itemClass": "schema",
-      "register": "ogc-building-block-register",
-      "version": "0.1",
-      "dateOfLastChange": "2023-07-13",
-      "sources": [
-        {
-          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
-          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
-        }
-      ],
-      "maturity": "proposal",
-      "scope": "geo",
-      "schema": [
-        {
-          "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "group": "GeoPose",
-      "shaclShapes": null,
-      "ldContext": {
-        "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/remote_cache/",
-      "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.Quaternion.Schema.json",
-      "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/context.jsonld",
-      "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/quaternion/resolvedProperties.json",
-      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/quaternion/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/quaternion/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/quaternion/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.basic.quaternion"
-        }
-      },
-      "@id": "bblocks://ogc.geo.geopose.basic.quaternion",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "GeoPose Basic-Quaternion",
-      "openAPIDocument": null,
-      "ontology": null,
-      "rdfData": [],
-      "dependsOn": null,
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://opengeospatial.github.io/bblocks/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.geo.geopose.basic.ypr",
-      "name": "GeoPose Basic-YPR",
-      "abstract": "Basic GeoPose using yaw, pitch, and roll to specify orientation",
-      "status": "under-development",
-      "dateTimeAddition": "2023-03-15T00:00:00+00:00",
-      "itemClass": "schema",
-      "register": "ogc-building-block-register",
-      "version": "0.1",
-      "dateOfLastChange": "2023-07-13",
-      "sources": [
-        {
-          "title": "OGC GeoPose 1.0 Data Exchange Draft Standard",
-          "link": "https://docs.ogc.org/dis/21-056r10/21-056r10.html"
-        }
-      ],
-      "maturity": "proposal",
-      "scope": "geo",
-      "schema": [
-        {
-          "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "group": "GeoPose",
-      "shaclShapes": null,
-      "ldContext": {
-        "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "remoteCacheDir": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/remote_cache/",
-      "sourceSchema": "https://schemas.opengis.net/geopose/1.0/schemata/GeoPose.Basic.YPR.Schema.json",
-      "sourceLdContext": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/context.jsonld",
-      "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/geopose/basic/ypr/resolvedProperties.json",
-      "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/geo/geopose/basic/ypr/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/geo/geopose/basic/ypr/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/markdown/geo/geopose/basic/ypr/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://opengeospatial.github.io/bblocks/generateddocs/json-full/geo/geopose/basic/ypr/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://opengeospatial.github.io/bblocks/register/bblock/ogc.geo.geopose.basic.ypr"
-        }
-      },
-      "@id": "bblocks://ogc.geo.geopose.basic.ypr",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "GeoPose Basic-YPR",
-      "openAPIDocument": null,
-      "ontology": null,
-      "rdfData": [],
-      "dependsOn": null,
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://opengeospatial.github.io/bblocks/"
-      }
-    },
-    {
       "itemIdentifier": "ogc.geo.json-fg.time",
       "name": "JSON-FG time member",
       "status": "stable",
@@ -844,7 +612,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.2.2",
-      "dateOfLastChange": "2024-05-28",
+      "dateOfLastChange": "2026-07-10",
       "schema": [
         {
           "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml",
@@ -922,7 +690,7 @@
       "itemClass": "datatype",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2023-03-09",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax",
@@ -1000,7 +768,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2023-05-15",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
@@ -1026,9 +794,9 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.geo.common.data_types.geojson",
+        "bblocks://ogc.geo.common.data_types.bounding_box",
         "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.common.data_types.bounding_box"
+        "bblocks://ogc.geo.common.data_types.geojson"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/context.jsonld",
@@ -1095,7 +863,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2023-08-21",
+      "dateOfLastChange": "2026-07-10",
       "sources": [],
       "maturity": "development",
       "scope": "unstable",
@@ -1174,7 +942,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2023-05-24",
+      "dateOfLastChange": "2026-07-10",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [],
       "maturity": "development",
@@ -1253,7 +1021,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.0",
-      "dateOfLastChange": "2023-06-26",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response",
@@ -1353,7 +1121,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2023-05-31",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1374,9 +1142,9 @@
         }
       ],
       "dependsOn": [
+        "bblocks://ogc.geo.json-fg.time",
         "bblocks://ogc.ogc-utils.json-link",
-        "bblocks://ogc.geo.features.feature",
-        "bblocks://ogc.geo.json-fg.time"
+        "bblocks://ogc.geo.features.feature"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/context.jsonld",
@@ -1443,7 +1211,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2023-08-08",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1473,8 +1241,8 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.json-link",
         "bblocks://ogc.geo.json-fg.time",
+        "bblocks://ogc.ogc-utils.json-link",
         "bblocks://ogc.geo.features.feature"
       ],
       "schema": [
@@ -1536,7 +1304,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2023-05-31",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1635,7 +1403,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2023-08-08",
+      "dateOfLastChange": "2026-07-10",
       "sources": [
         {
           "title": "OGC Testbed-17: OGC Features and Geometries JSON Engineering Report",
@@ -1743,15 +1511,6 @@
     },
     {
       "@id": "bblocks://ogc.ogc-utils.json-link"
-    },
-    {
-      "@id": "bblocks://ogc.geo.geopose.advanced"
-    },
-    {
-      "@id": "bblocks://ogc.geo.geopose.basic.quaternion"
-    },
-    {
-      "@id": "bblocks://ogc.geo.geopose.basic.ypr"
     },
     {
       "@id": "bblocks://ogc.geo.json-fg.time"
