@@ -1,16 +1,30 @@
 Validation report for ogc.geo.features.featureCollection - Feature Collection
-Generated 2026-08-30T04:21:12.331692+00:00
+Generated 2026-08-30T04:21:11.982855+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
 === Files ===
-Using collection-features.ttl from test resources
+Using collection-bad-link-fail.ttl from test resources
 === End Files ===
 
 === SHACL ===
+
+** Validation error **
 Validation result for registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
-  Conforms: True
+  Conforms: False
+  Results (1):
+  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:name Literal("links") ; sh:node geojson:LinkShape ; sh:path rdfs:seeAlso ]
+  	Focus Node: <http://www.example.com/collections/bad-c2>
+  	Value Node: [ ]
+  	Result Path: rdfs:seeAlso
+  	Message: Value does not conform to Shape geojson:LinkShape
   
 Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/c1>
+ - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/bad-c2>
  - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
@@ -23,7 +37,7 @@ Validation result for registereditems/geo/features/feature/shapes.shacl:
   
 Focus nodes for registereditems/geo/features/feature/shapes.shacl:
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: <http://www.example.com/features/pt2>,<http://www.example.com/features/ls2>
+ - Shape geojson:FeatureShape: <http://www.example.com/features/ok1>
  - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*

@@ -1,0 +1,34 @@
+Validation report for ogc.geo.features.feature - Feature
+Generated 2026-08-30T04:21:11.887546+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using feature-point-no-coordinates-fail.ttl from test resources
+=== End Files ===
+
+=== SHACL ===
+
+** Validation error **
+Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:description Literal("A Feature may have at most one geometry value; null geometry produces no RDF triple.") ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:name Literal("geometry") ; sh:node geojson:GeometryShape ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path geojson:geometry ]
+  	Focus Node: <http://www.example.com/features/bad-geom2>
+  	Value Node: [ rdf:type geojson:Point ]
+  	Result Path: geojson:geometry
+  	Message: Value does not conform to Shape geojson:GeometryShape
+  
+Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: <http://www.example.com/features/bad-geom2>
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+
+=== End SHACL ===
+

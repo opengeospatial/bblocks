@@ -64,7 +64,7 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2026-08-23T04:17:57.229660+00:00</small>
+            <small class="datetime">Generated at 2026-08-30T04:21:23.101174+00:00</small>
                 <p class="summary fw-semibold text-success">
                     Number of passing building blocks: 15 / 15 (100%)
                 </p>
@@ -3351,7 +3351,7 @@ On instance:
                             <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.features.feature">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
-                                            Test passed: 8 / 8
+                                            Test passed: 11 / 11
                                         </p>
                                         <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.feature-1">
                                             <div class="card-body">
@@ -3363,7 +3363,7 @@ On instance:
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
-                                                    <a href="../registereditems/geo/features/feature/tests/feature-missing-geometry-key-fail.json" target="_blank">feature-missing-geometry-key-fail.json</a>
+                                                    <a href="../registereditems/geo/features/feature/tests/feature-bad-link-fail.ttl" target="_blank">feature-bad-link-fail.ttl</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                         <span class="badge text-bg-info">Requires fail</span>
                                                     <a class="anchor" href="#item-ogc.geo.features.feature-1">¶</a>
@@ -3372,6 +3372,61 @@ On instance:
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-98">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">General</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using feature-bad-link-fail.ttl from test resources</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:name Literal(&quot;links&quot;) ; sh:node geojson:LinkShape ; sh:path rdfs:seeAlso ]
+  	Focus Node: &lt;http://www.example.com/features/bad-link1&gt;
+  	Value Node: [ ]
+  	Result Path: rdfs:seeAlso
+  	Message: Value does not conform to Shape geojson:LinkShape
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/bad-link1&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.feature-2">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-99"
+                                                            aria-expanded="false" aria-controls="uid-99"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="../registereditems/geo/features/feature/tests/feature-missing-geometry-key-fail.json" target="_blank">feature-missing-geometry-key-fail.json</a>
+                                                    <span class="badge bg-secondary test_resource">Test resource</span>
+                                                        <span class="badge text-bg-info">Requires fail</span>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-2">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-99">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">General</div>
                                                                 
@@ -3692,22 +3747,22 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: &lt;http://www.example.com/features/bad2&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.feature-2">
+                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.feature-3">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-99"
-                                                            aria-expanded="false" aria-controls="uid-99"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-100"
+                                                            aria-expanded="false" aria-controls="uid-100"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -3715,12 +3770,12 @@ On instance:
                                                     <a href="../registereditems/geo/features/feature/tests/feature-missing-type-fail.json" target="_blank">feature-missing-type-fail.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                         <span class="badge text-bg-info">Requires fail</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.feature-2">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-3">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-99">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-100">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">General</div>
                                                                 
@@ -4040,53 +4095,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: *none*
-</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-3">
-                                            <div class="card-body">
-                                                <div class="card-title mb-0 anchor-container">
-                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-100"
-                                                            aria-expanded="false" aria-controls="uid-100"
-                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                                        <i class="bi bi-caret-right-fill caret"></i>
-                                                        Details
-                                                    </button>
-                                                    <a href="../registereditems/geo/features/feature/tests/feature-no-geometry.ttl" target="_blank">feature-no-geometry.ttl</a>
-                                                    <span class="badge bg-secondary test_resource">Test resource</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.feature-3">¶</a>
-                                                    <div class="float-end">
-                                                            <span class="badge text-bg-success me-2">Passed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-100">
-                                                    <div class="validation-text-inner">
-                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                
-                                                                    
-                                                                    <div class="font-monospace entry-message section-files ">Using feature-no-geometry.ttl from test resources</div>
-                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
-                                                                
-                                                                    
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;http://www.example.com/features/nogeom2&gt;
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -4102,7 +4115,7 @@ On instance:
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
-                                                    <a href="../registereditems/geo/features/feature/tests/feature-null-geometry.json" target="_blank">feature-null-geometry.json</a>
+                                                    <a href="../registereditems/geo/features/feature/tests/feature-no-geometry.ttl" target="_blank">feature-no-geometry.ttl</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                     <a class="anchor" href="#item-ogc.geo.features.feature-4">¶</a>
                                                     <div class="float-end">
@@ -4110,6 +4123,48 @@ On instance:
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-101">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using feature-no-geometry.ttl from test resources</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/nogeom2&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-5">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-102"
+                                                            aria-expanded="false" aria-controls="uid-102"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="../registereditems/geo/features/feature/tests/feature-null-geometry.json" target="_blank">feature-null-geometry.json</a>
+                                                    <span class="badge bg-secondary test_resource">Test resource</span>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-5">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-102">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4134,34 +4189,89 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: &lt;http://www.example.com/features/nogeom1&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-5">
+                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.feature-6">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-102"
-                                                            aria-expanded="false" aria-controls="uid-102"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-103"
+                                                            aria-expanded="false" aria-controls="uid-103"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="../registereditems/geo/features/feature/tests/feature-point-no-coordinates-fail.ttl" target="_blank">feature-point-no-coordinates-fail.ttl</a>
+                                                    <span class="badge bg-secondary test_resource">Test resource</span>
+                                                        <span class="badge text-bg-info">Requires fail</span>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-6">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-103">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">General</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using feature-point-no-coordinates-fail.ttl from test resources</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:description Literal(&quot;A Feature may have at most one geometry value; null geometry produces no RDF triple.&quot;) ; sh:maxCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:name Literal(&quot;geometry&quot;) ; sh:node geojson:GeometryShape ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path geojson:geometry ]
+  	Focus Node: &lt;http://www.example.com/features/bad-geom2&gt;
+  	Value Node: [ rdf:type geojson:Point ]
+  	Result Path: geojson:geometry
+  	Message: Value does not conform to Shape geojson:GeometryShape
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/bad-geom2&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-7">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-104"
+                                                            aria-expanded="false" aria-controls="uid-104"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
                                                     <a href="../registereditems/geo/features/feature/tests/feature-point.json" target="_blank">feature-point.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.feature-5">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-7">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-102">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-104">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4186,34 +4296,34 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: &lt;http://www.example.com/features/point1&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-6">
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-8">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-103"
-                                                            aria-expanded="false" aria-controls="uid-103"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-105"
+                                                            aria-expanded="false" aria-controls="uid-105"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
                                                     <a href="../registereditems/geo/features/feature/tests/feature-polygon.ttl" target="_blank">feature-polygon.ttl</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.feature-6">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-8">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-103">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-105">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4228,34 +4338,89 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: &lt;http://www.example.com/features/polygon1&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-7">
+                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.feature-9">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-104"
-                                                            aria-expanded="false" aria-controls="uid-104"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-106"
+                                                            aria-expanded="false" aria-controls="uid-106"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="../registereditems/geo/features/feature/tests/feature-unknown-geometry-type-fail.ttl" target="_blank">feature-unknown-geometry-type-fail.ttl</a>
+                                                    <span class="badge bg-secondary test_resource">Test resource</span>
+                                                        <span class="badge text-bg-info">Requires fail</span>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-9">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-106">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">General</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using feature-unknown-geometry-type-fail.ttl from test resources</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:description Literal(&quot;A Feature may have at most one geometry value; null geometry produces no RDF triple.&quot;) ; sh:maxCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:name Literal(&quot;geometry&quot;) ; sh:node geojson:GeometryShape ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path geojson:geometry ]
+  	Focus Node: &lt;http://www.example.com/features/bad-geom1&gt;
+  	Value Node: [ geojson:coordinates ( Literal(&quot;174.7&quot;, datatype=xsd:decimal) Literal(&quot;-36.9&quot;, datatype=xsd:decimal) Literal(&quot;500.0&quot;, datatype=xsd:decimal) ) ; rdf:type ex:Circle ]
+  	Result Path: geojson:geometry
+  	Message: Value does not conform to Shape geojson:GeometryShape
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/bad-geom1&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-10">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-107"
+                                                            aria-expanded="false" aria-controls="uid-107"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
                                                     <a href="../registereditems/geo/features/feature/tests/feature-with-links.json" target="_blank">feature-with-links.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.feature-7">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-10">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-104">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-107">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4280,34 +4445,34 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: &lt;http://www.example.com/features/linked1&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-8">
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.feature-11">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-105"
-                                                            aria-expanded="false" aria-controls="uid-105"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-108"
+                                                            aria-expanded="false" aria-controls="uid-108"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
                                                     <a href="geo/features/feature/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.feature-8">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.feature-11">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-105">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-108">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4332,11 +4497,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: &lt;http://www.example.com/features/f1&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -4371,8 +4536,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-106"
-                                                            aria-expanded="false" aria-controls="uid-106"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-109"
+                                                            aria-expanded="false" aria-controls="uid-109"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -4384,7 +4549,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-106">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-109">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4433,8 +4598,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-107"
-                                                            aria-expanded="false" aria-controls="uid-107"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-110"
+                                                            aria-expanded="false" aria-controls="uid-110"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -4446,7 +4611,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-107">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-110">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4489,26 +4654,95 @@ On instance:
                             <div class="accordion-collapse collapse " id="bblock-collapse-ogc.geo.features.featureCollection">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
-                                            Test passed: 5 / 5
+                                            Test passed: 7 / 7
                                         </p>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.featureCollection-1">
+                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.featureCollection-1">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-108"
-                                                            aria-expanded="false" aria-controls="uid-108"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-111"
+                                                            aria-expanded="false" aria-controls="uid-111"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="../registereditems/geo/features/featureCollection/tests/collection-bad-link-fail.ttl" target="_blank">collection-bad-link-fail.ttl</a>
+                                                    <span class="badge bg-secondary test_resource">Test resource</span>
+                                                        <span class="badge text-bg-info">Requires fail</span>
+                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-111">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">General</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using collection-bad-link-fail.ttl from test resources</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation result for registereditems/geo/features/featureCollection/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:name Literal(&quot;links&quot;) ; sh:node geojson:LinkShape ; sh:path rdfs:seeAlso ]
+  	Focus Node: &lt;http://www.example.com/collections/bad-c2&gt;
+  	Value Node: [ ]
+  	Result Path: rdfs:seeAlso
+  	Message: Value does not conform to Shape geojson:LinkShape
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:FeatureCollectionShape: &lt;http://www.example.com/collections/bad-c2&gt;
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+</div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/ok1&gt;
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.featureCollection-2">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-112"
+                                                            aria-expanded="false" aria-controls="uid-112"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
                                                     <a href="../registereditems/geo/features/featureCollection/tests/collection-empty.json" target="_blank">collection-empty.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-1">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-2">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-108">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-112">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4533,12 +4767,12 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:FeatureCollectionShape: *none*
+ - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
@@ -4547,34 +4781,111 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.featureCollection-2">
+                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.featureCollection-3">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-109"
-                                                            aria-expanded="false" aria-controls="uid-109"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-113"
+                                                            aria-expanded="false" aria-controls="uid-113"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="../registereditems/geo/features/featureCollection/tests/collection-feature-bad-geometry-fail.ttl" target="_blank">collection-feature-bad-geometry-fail.ttl</a>
+                                                    <span class="badge bg-secondary test_resource">Test resource</span>
+                                                        <span class="badge text-bg-info">Requires fail</span>
+                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-3">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-113">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">General</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using collection-feature-bad-geometry-fail.ttl from test resources</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation result for registereditems/geo/features/featureCollection/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:class geojson:Feature ; sh:name Literal(&quot;features&quot;) ; sh:node geojson:FeatureShape ; sh:path geojson:features ]
+  	Focus Node: &lt;http://www.example.com/collections/bad-c1&gt;
+  	Value Node: &lt;http://www.example.com/features/bad-fc1&gt;
+  	Result Path: geojson:features
+  	Message: Value does not conform to Shape geojson:FeatureShape
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:FeatureCollectionShape: &lt;http://www.example.com/collections/bad-c1&gt;
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+</div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:description Literal(&quot;A Feature may have at most one geometry value; null geometry produces no RDF triple.&quot;) ; sh:maxCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:name Literal(&quot;geometry&quot;) ; sh:node geojson:GeometryShape ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path geojson:geometry ]
+  	Focus Node: &lt;http://www.example.com/features/bad-fc1&gt;
+  	Value Node: [ geojson:coordinates ( Literal(&quot;174.7&quot;, datatype=xsd:decimal) Literal(&quot;-36.9&quot;, datatype=xsd:decimal) ) ; rdf:type ex:Cone ]
+  	Result Path: geojson:geometry
+  	Message: Value does not conform to Shape geojson:GeometryShape
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/bad-fc1&gt;
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.featureCollection-4">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-114"
+                                                            aria-expanded="false" aria-controls="uid-114"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
                                                     <a href="../registereditems/geo/features/featureCollection/tests/collection-features.ttl" target="_blank">collection-features.ttl</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-2">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-4">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-109">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-114">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4589,12 +4900,12 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:FeatureCollectionShape: &lt;http://www.example.com/collections/c1&gt;
+ - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
@@ -4603,22 +4914,22 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/pt2&gt;,&lt;http://www.example.com/features/ls2&gt;
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;http://www.example.com/features/ls2&gt;,&lt;http://www.example.com/features/pt2&gt;
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.featureCollection-3">
+                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.geo.features.featureCollection-5">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-110"
-                                                            aria-expanded="false" aria-controls="uid-110"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-115"
+                                                            aria-expanded="false" aria-controls="uid-115"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -4626,12 +4937,12 @@ On instance:
                                                     <a href="../registereditems/geo/features/featureCollection/tests/collection-missing-type-fail.json" target="_blank">collection-missing-type-fail.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
                                                         <span class="badge text-bg-info">Requires fail</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-3">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-5">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-110">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-115">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">General</div>
                                                                 
@@ -4888,12 +5199,12 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:FeatureCollectionShape: _:Nc8df3e1a6817495cb028eb06597c17c5
+ - Shape geojson:FeatureCollectionShape: _:N5163ef2c483a4fd298908510ce593e9d
+ - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
@@ -4902,34 +5213,34 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: &lt;http://www.example.com/features/pt3&gt;
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.featureCollection-4">
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.featureCollection-6">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-111"
-                                                            aria-expanded="false" aria-controls="uid-111"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-116"
+                                                            aria-expanded="false" aria-controls="uid-116"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
                                                     <a href="../registereditems/geo/features/featureCollection/tests/collection-multiple-geometries.json" target="_blank">collection-multiple-geometries.json</a>
                                                     <span class="badge bg-secondary test_resource">Test resource</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-4">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-6">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-111">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-116">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -4954,12 +5265,12 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:FeatureCollectionShape: _:N3f2fb548b8644035ad25934ba3641cd8
+ - Shape geojson:FeatureCollectionShape: _:Na4853f7cabd943aea650c845420a382f
+ - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
@@ -4968,34 +5279,34 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/pt1&gt;,&lt;http://www.example.com/features/ls1&gt;,&lt;http://www.example.com/features/nogeom1&gt;
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;http://www.example.com/features/ls1&gt;,&lt;http://www.example.com/features/nogeom1&gt;,&lt;http://www.example.com/features/pt1&gt;
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.featureCollection-5">
+                                        <div class="card mb-2 validation-item " id="item-ogc.geo.features.featureCollection-7">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-112"
-                                                            aria-expanded="false" aria-controls="uid-112"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-117"
+                                                            aria-expanded="false" aria-controls="uid-117"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
                                                     <a href="geo/features/featureCollection/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
-                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-5">¶</a>
+                                                    <a class="anchor" href="#item-ogc.geo.features.featureCollection-7">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-112">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-117">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5020,12 +5331,12 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:FeatureCollectionShape: _:N53b68ebb538a4796aa1311293b9bb3c4
+ - Shape geojson:FeatureCollectionShape: _:Nf82a418442e0443597701a7b03d52bec
+ - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
@@ -5034,11 +5345,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: &lt;http://www.example.com/features/f1&gt;
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -5073,8 +5384,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-113"
-                                                            aria-expanded="false" aria-controls="uid-113"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-118"
+                                                            aria-expanded="false" aria-controls="uid-118"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5086,7 +5397,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-113">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-118">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5111,11 +5422,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/fence.1&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/fence.1&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -5125,8 +5436,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-114"
-                                                            aria-expanded="false" aria-controls="uid-114"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-119"
+                                                            aria-expanded="false" aria-controls="uid-119"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5138,7 +5449,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-114">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-119">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5163,11 +5474,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/DENW19AL0000giv5BL&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/DENW19AL0000giv5BL&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -5177,8 +5488,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-115"
-                                                            aria-expanded="false" aria-controls="uid-115"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-120"
+                                                            aria-expanded="false" aria-controls="uid-120"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5190,7 +5501,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-115">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-120">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5215,11 +5526,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/my-space-station&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/my-space-station&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -5254,8 +5565,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-116"
-                                                            aria-expanded="false" aria-controls="uid-116"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-121"
+                                                            aria-expanded="false" aria-controls="uid-121"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5267,7 +5578,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-116">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-121">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5292,11 +5603,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/fence.1&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/fence.1&gt;
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -5306,8 +5617,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-117"
-                                                            aria-expanded="false" aria-controls="uid-117"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-122"
+                                                            aria-expanded="false" aria-controls="uid-122"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5319,7 +5630,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-117">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-122">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5344,11 +5655,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/fence.1&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/fence.1&gt;
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -5358,8 +5669,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-118"
-                                                            aria-expanded="false" aria-controls="uid-118"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-123"
+                                                            aria-expanded="false" aria-controls="uid-123"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5371,7 +5682,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-118">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-123">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5396,11 +5707,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/DENW19AL0000giv5BL&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/DENW19AL0000giv5BL&gt;
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -5410,8 +5721,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-119"
-                                                            aria-expanded="false" aria-controls="uid-119"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-124"
+                                                            aria-expanded="false" aria-controls="uid-124"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5423,7 +5734,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-119">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-124">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5448,11 +5759,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/DENW19AL0000giv5BL&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/DENW19AL0000giv5BL&gt;
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -5462,8 +5773,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-120"
-                                                            aria-expanded="false" aria-controls="uid-120"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-125"
+                                                            aria-expanded="false" aria-controls="uid-125"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5475,7 +5786,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-120">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-125">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5500,11 +5811,11 @@ On instance:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/my-space-station&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/json-fg/my-space-station&gt;
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -5539,8 +5850,8 @@ On instance:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-121"
-                                                            aria-expanded="false" aria-controls="uid-121"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-126"
+                                                            aria-expanded="false" aria-controls="uid-126"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5553,7 +5864,7 @@ On instance:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-121">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-126">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">General</div>
                                                                 
@@ -5643,31 +5954,31 @@ On instance[&#x27;features&#x27;][0]:
                                                                     <div class="font-monospace subsection-title mt-2">SHACL</div>
                                                                 
                                                                     
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;file:///github/workspace/f1&gt;
-</div>
-                                                                    
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureCollectionShape: _:Nf00c44e4b56240dab1ffc5430e93a8dd
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureCollectionShape: _:Nb263e3ff129d4e95ab687af9fbfacb5b
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+</div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;file:///github/workspace/f1&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -5677,8 +5988,8 @@ On instance[&#x27;features&#x27;][0]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-122"
-                                                            aria-expanded="false" aria-controls="uid-122"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-127"
+                                                            aria-expanded="false" aria-controls="uid-127"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -5690,7 +6001,7 @@ On instance[&#x27;features&#x27;][0]:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-122">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-127">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                 
@@ -5709,31 +6020,31 @@ On instance[&#x27;features&#x27;][0]:
                                                                     <div class="font-monospace subsection-title mt-2">SHACL</div>
                                                                 
                                                                     
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;http://www.example.com/features/f1&gt;
-</div>
-                                                                    
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureCollectionShape: _:Ne5ddad43c28c434a8a12114a691554f6
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureCollectionShape: _:Nf8f5a09d68e14576aa70e54d2ab953ff
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+</div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;http://www.example.com/features/f1&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape: *none*
 </div>
                                                     </div>
                                                 </div>
