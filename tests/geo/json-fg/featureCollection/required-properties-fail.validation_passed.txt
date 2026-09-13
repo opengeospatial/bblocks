@@ -1,5 +1,5 @@
 Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection
-Generated 2026-09-06T04:21:39.819833+00:00
+Generated 2026-09-13T04:21:48.066203+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -85,28 +85,28 @@ On instance['features'][0]:
 === End JSON Schema ===
 
 === SHACL ===
-Validation result for registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:FeatureShape: <file:///github/workspace/f1>
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
-
 Validation result for registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:FeatureCollectionShape: _:Nd5815a5a196943ada56ccf9a3aed13ab
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+
+Validation result for registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureCollectionShape: _:Nfbe47cc8f7e4402a9a485dab1506c3f2
+ - Shape geojson:FeatureShape: <file:///github/workspace/f1>
 
 === End SHACL ===
 
