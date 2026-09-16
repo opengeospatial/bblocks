@@ -1,0 +1,69 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.exception",
+  "name": "Exception schema",
+  "status": "under-development",
+  "dateTimeAddition": "2025-10-23T22:40:00+01:00",
+  "itemClass": "schema",
+  "register": "ogcapi-common",
+  "version": "0.1",
+  "dateOfLastChange": "2026-09-16",
+  "sources": [
+    {
+      "title": "OGC API - Common - Part 1: Core",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-common"
+  ],
+  "abstract": "Alias of the OGC API - Common exception schema, published in the OGC API Common building blocks register.",
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.common.part1.schemas.exception"
+  ],
+  "license": {
+    "url": "https://opengeospatial.github.io/bblocks/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/exception/schema.yaml",
+    "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/exception/schema.json"
+  },
+  "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/api/common/exception/schema.yaml",
+  "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/exception/context.jsonld",
+  "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/exception/resolvedProperties.json",
+  "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/api/common/exception/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/api/common/exception/",
+  "description": "This block is an alias of the [Exception schema](bblocks://ogc.api.common.part1.schemas.exception)\ndefined in the OGC API - Common building blocks register. It exists so that other blocks in this\nregister can depend on it directly, without importing the OGC API - Common register themselves.\n",
+  "examples": [
+    {
+      "title": "Example exception",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/examples/ExceptionExample.json",
+          "url": "https://opengeospatial.github.io/bblocks/tests/api/common/exception/example_1_1.json",
+          "sizeBytes": 247,
+          "code": "{\n \"type\": \"https://example.net/validation-error\",\n \"title\": \"Your request parameters didn't validate.\",\n \"status\": 400,\n \"detail\": \"the 'age' and 'color' parameters do not validate\",\n \"instance\": \"urn:uuid:ebd2e7f0-1b27-11e8-accf-0ed5f89f718b\"\n }"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://opengeospatial.github.io/bblocks/tests/api/common/exception/example_1_1.jsonld",
+          "sizeBytes": 363,
+          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/exception/context.jsonld\",\n  \"type\": \"https://example.net/validation-error\",\n  \"title\": \"Your request parameters didn't validate.\",\n  \"status\": 400,\n  \"detail\": \"the 'age' and 'color' parameters do not validate\",\n  \"instance\": \"urn:uuid:ebd2e7f0-1b27-11e8-accf-0ed5f89f718b\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://opengeospatial.github.io/bblocks/tests/api/common/exception/example_1_1.ttl",
+          "sizeBytes": 400,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix httpv: <http://www.w3.org/2011/http#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<urn:uuid:ebd2e7f0-1b27-11e8-accf-0ed5f89f718b> a <https://example.net/validation-error> ;\n    dct:description \"the 'age' and 'color' parameters do not validate\" ;\n    dct:title \"Your request parameters didn't validate.\" ;\n    httpv:statusCodeNumber 400 .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/exception/schema.yaml\n",
+  "gitRepository": "https://github.com/opengeospatial/bblocks",
+  "gitPath": "registereditems/api/common/exception"
+}

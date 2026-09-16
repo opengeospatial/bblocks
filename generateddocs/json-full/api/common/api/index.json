@@ -1,0 +1,37 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.api",
+  "name": "OGC API - Common",
+  "status": "under-development",
+  "dateTimeAddition": "2025-10-23T22:40:00+01:00",
+  "itemClass": "api",
+  "register": "ogcapi-common",
+  "version": "0.1",
+  "dateOfLastChange": "2026-09-16",
+  "sources": [
+    {
+      "title": "OGC API - Common - Part 1: Core",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-common"
+  ],
+  "abstract": "Alias of the OGC API - Common OpenAPI document, published in the OGC API Common building blocks register.",
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.common.part1.api"
+  ],
+  "license": {
+    "url": "https://opengeospatial.github.io/bblocks/LICENSE"
+  },
+  "sourceOpenAPIDocument": "https://opengeospatial.github.io/bblocks/registereditems/api/common/api/openapi.yaml",
+  "openAPIDocument": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/api/openapi.yaml",
+  "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/api/common/api/",
+  "validationPassed": true,
+  "description": "This block is an alias of the [OGC API - Common](bblocks://ogc.api.common.part1.api) OpenAPI\ndocument, defined in the OGC API - Common building blocks register. It exists so that other\nblocks in this register can depend on it directly, without importing the OGC API - Common\nregister themselves.\n\n**Note:** this alias resolves `$ref` at the root of the OpenAPI document, which is not a location\nwhere `$ref` is normally valid per the OpenAPI specification. Verify this renders correctly\nwherever the compiled document is consumed (e.g. the viewer, Swagger UI/Redoc) before relying on it.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/opengeospatial/bblocks",
+  "gitPath": "registereditems/api/common/api"
+}

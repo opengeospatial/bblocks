@@ -62,6 +62,18 @@ Web linking is used to express relationships between resources. The JSON object 
 
 This Building Block defines a data type allowing schemas and profiles to use string base type for a full IRI/URI or a CURIE (with or without a prefix). This common pattern is complex to implement, and this Building Block makes it easy to implement consistently where-ever need.
 
+### `ogc.api.common.confClasses` — Conformance Classes schema
+
+**Type:** schema
+
+Alias of the OGC API - Common confClasses schema, published in the OGC API Common building blocks register.
+
+### `ogc.api.common.exception` — Exception schema
+
+**Type:** schema
+
+Alias of the OGC API - Common exception schema, published in the OGC API Common building blocks register.
+
 ### `ogc.geo.features.feature` — Feature
 
 **Type:** schema
@@ -79,6 +91,12 @@ A JSON-FG compliant web link with mandatory annotation of link role and optional
 **Type:** schema
 
 Demonstration of a schema using coordinates of points, withpout duplication
+
+### `ogc.api.common.landingPage` — Landing Page schema
+
+**Type:** schema
+
+Alias of the OGC API - Common Landing Page schema, published in the OGC API Common building blocks register.
 
 ### `ogc.geo.features.featureCollection` — Feature Collection
 
@@ -109,4 +127,10 @@ A collection of OGC Features and Geometries JSON (JSON-FG) Features, extending G
 **Type:** schema
 
 A collection of lenient OGC Features and Geometries JSON (JSON-FG) Features, that do not require the "time" and "place" properties
+
+### `ogc.api.common.api` — OGC API - Common
+
+**Type:** api
+
+Alias of the OGC API - Common OpenAPI document, published in the OGC API Common building blocks register.
 

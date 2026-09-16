@@ -1,0 +1,69 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.landingPage",
+  "name": "Landing Page schema",
+  "status": "under-development",
+  "dateTimeAddition": "2025-10-23T22:40:00+01:00",
+  "itemClass": "schema",
+  "register": "ogcapi-common",
+  "version": "0.1",
+  "dateOfLastChange": "2026-09-16",
+  "sources": [
+    {
+      "title": "OGC API - Common - Part 1: Core",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-common"
+  ],
+  "abstract": "Alias of the OGC API - Common Landing Page schema, published in the OGC API Common building blocks register.",
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.common.part1.schemas.landingPage"
+  ],
+  "license": {
+    "url": "https://opengeospatial.github.io/bblocks/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/landingPage/schema.yaml",
+    "application/json": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/landingPage/schema.json"
+  },
+  "sourceSchema": "https://opengeospatial.github.io/bblocks/registereditems/api/common/landingPage/schema.yaml",
+  "ldContext": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/landingPage/context.jsonld",
+  "resolvedSchemaProperties": "https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/landingPage/resolvedProperties.json",
+  "sourceFiles": "https://opengeospatial.github.io/bblocks/registereditems/api/common/landingPage/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/opengeospatial/bblocks/blob/master/tests/api/common/landingPage/",
+  "description": "This block is an alias of the [Landing Page schema](bblocks://ogc.api.common.part1.schemas.landingPage)\ndefined in the OGC API - Common building blocks register. It exists so that other blocks in this\nregister can depend on it directly, without importing the OGC API - Common register themselves.\n",
+  "examples": [
+    {
+      "title": "Example landing page",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/examples/LandingPageExample.json",
+          "url": "https://opengeospatial.github.io/bblocks/tests/api/common/landingPage/example_1_1.json",
+          "sizeBytes": 2747,
+          "code": "{\n  \"title\": \"Example API Landing Page\",\n  \"description\": \"This is an example of an API landing page in JSON format\",\n  \"attribution\": \"<a href='www.ign.es' rel=' '>IGN</a> <a href='www.govdata.de/dl-de/by-2-0'>(c)</a>\",\n  \"links\": [\n    {\n      \"rel\": \"service-desc\",\n      \"type\": \"application/json\",\n      \"title\": \"API definition for this endpoint as JSON\",\n      \"href\": \"http://www.example.com/oapi-c/api?f=application/json\"\n    },\n    {\n      \"rel\": \"service-desc\",\n      \"type\": \"text/html\",\n      \"title\": \"API definition for this endpoint as HTML\",\n      \"href\": \"http://www.example.com/oapi-c/api?f=text/html\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/data-meta\",\n      \"type\": \"application/xml\",\n      \"title\": \"ISO 19115 Metadata as XML\",\n      \"href\": \"http://www.example.com/oapi-c/data-meta?f=application/xml\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/conformance\",\n      \"type\": \"application/json\",\n      \"title\": \"Conformance Declaration as JSON\",\n      \"href\": \"http://www.example.com/oapi-c/conformance?f=application/json\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/conformance\",\n      \"type\": \"application/xml\",\n      \"title\": \"Conformance Declaration as XML\",\n      \"href\": \"http://www.example.com/oapi-c/conformance?f=application/xml\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/conformance\",\n      \"type\": \"text/html\",\n      \"title\": \"Conformance Declaration as HTML\",\n      \"href\": \"http://www.example.com/oapi-c/conformance?f=text/html\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/data\",\n      \"type\": \"application/json\",\n      \"title\": \"Collections Metadata as JSON\",\n      \"href\": \"http://www.example.com/oapi-c/collections?f=application/json\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/data\",\n      \"type\": \"application/xml\",\n      \"title\": \"Collections Metadata as XML\",\n      \"href\": \"http://www.example.com/oapi-c/collections?f=application/xml\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/data\",\n      \"type\": \"text/html\",\n      \"title\": \"Collections Metadata as HTML\",\n      \"href\": \"http://www.example.com/oapi-c/collections?f=text/html\"\n    },\n    {\n      \"rel\": \"self\",\n      \"type\": \"application/json\",\n      \"title\": \"This Document\",\n      \"href\": \"http://www.example.com/oapi-c?f=application/json\"\n    },\n    {\n      \"rel\": \"alternate\",\n      \"type\": \"application/xml\",\n      \"title\": \"This Document as XML\",\n      \"href\": \"http://www.example.com/oapi-c?f=application/xml\"\n    },\n    {\n      \"rel\": \"alternate\",\n      \"type\": \"text/html\",\n      \"title\": \"This Document as HTML\",\n      \"href\": \"http://www.example.com/oapi-c?f=text/html\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://opengeospatial.github.io/bblocks/tests/api/common/landingPage/example_1_1.jsonld",
+          "sizeBytes": 2861,
+          "code": "{\n  \"@context\": \"https://opengeospatial.github.io/bblocks/annotated-schemas/api/common/landingPage/context.jsonld\",\n  \"title\": \"Example API Landing Page\",\n  \"description\": \"This is an example of an API landing page in JSON format\",\n  \"attribution\": \"<a href='www.ign.es' rel=' '>IGN</a> <a href='www.govdata.de/dl-de/by-2-0'>(c)</a>\",\n  \"links\": [\n    {\n      \"rel\": \"service-desc\",\n      \"type\": \"application/json\",\n      \"title\": \"API definition for this endpoint as JSON\",\n      \"href\": \"http://www.example.com/oapi-c/api?f=application/json\"\n    },\n    {\n      \"rel\": \"service-desc\",\n      \"type\": \"text/html\",\n      \"title\": \"API definition for this endpoint as HTML\",\n      \"href\": \"http://www.example.com/oapi-c/api?f=text/html\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/data-meta\",\n      \"type\": \"application/xml\",\n      \"title\": \"ISO 19115 Metadata as XML\",\n      \"href\": \"http://www.example.com/oapi-c/data-meta?f=application/xml\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/conformance\",\n      \"type\": \"application/json\",\n      \"title\": \"Conformance Declaration as JSON\",\n      \"href\": \"http://www.example.com/oapi-c/conformance?f=application/json\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/conformance\",\n      \"type\": \"application/xml\",\n      \"title\": \"Conformance Declaration as XML\",\n      \"href\": \"http://www.example.com/oapi-c/conformance?f=application/xml\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/conformance\",\n      \"type\": \"text/html\",\n      \"title\": \"Conformance Declaration as HTML\",\n      \"href\": \"http://www.example.com/oapi-c/conformance?f=text/html\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/data\",\n      \"type\": \"application/json\",\n      \"title\": \"Collections Metadata as JSON\",\n      \"href\": \"http://www.example.com/oapi-c/collections?f=application/json\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/data\",\n      \"type\": \"application/xml\",\n      \"title\": \"Collections Metadata as XML\",\n      \"href\": \"http://www.example.com/oapi-c/collections?f=application/xml\"\n    },\n    {\n      \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/data\",\n      \"type\": \"text/html\",\n      \"title\": \"Collections Metadata as HTML\",\n      \"href\": \"http://www.example.com/oapi-c/collections?f=text/html\"\n    },\n    {\n      \"rel\": \"self\",\n      \"type\": \"application/json\",\n      \"title\": \"This Document\",\n      \"href\": \"http://www.example.com/oapi-c?f=application/json\"\n    },\n    {\n      \"rel\": \"alternate\",\n      \"type\": \"application/xml\",\n      \"title\": \"This Document as XML\",\n      \"href\": \"http://www.example.com/oapi-c?f=application/xml\"\n    },\n    {\n      \"rel\": \"alternate\",\n      \"type\": \"text/html\",\n      \"title\": \"This Document as HTML\",\n      \"href\": \"http://www.example.com/oapi-c?f=text/html\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://opengeospatial.github.io/bblocks/tests/api/common/landingPage/example_1_1.ttl",
+          "sizeBytes": 168,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n\n[] dct:description \"This is an example of an API landing page in JSON format\" ;\n    dct:title \"Example API Landing Page\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml\n",
+  "gitRepository": "https://github.com/opengeospatial/bblocks",
+  "gitPath": "registereditems/api/common/landingPage"
+}
