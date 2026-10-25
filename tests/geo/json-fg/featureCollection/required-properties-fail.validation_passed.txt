@@ -1,5 +1,5 @@
 Validation report for ogc.geo.json-fg.featureCollection - JSON-FG Feature Collection
-Generated 2026-10-18T04:20:23.034427+00:00
+Generated 2026-10-25T04:20:43.068931+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -46,6 +46,10 @@ Failed validating 'required' in schema['allOf'][1]['properties']['features']['it
      'required': ['type', 'time', 'place', 'geometry', 'properties'],
      'title': 'a JSON-FG Feature',
      'type': 'object',
+     'x-bblocks-metadata': {'dateOfLastChange': '2026-10-18',
+                            'itemIdentifier': 'ogc.geo.json-fg.feature',
+                            'register': 'https://opengeospatial.github.io/bblocks/register.json',
+                            'version': '0.1'},
      'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',
                               'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',
                               'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',
@@ -91,22 +95,22 @@ Validation result for registereditems/geo/features/featureCollection/shapes.shac
   
 Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:FeatureCollectionShape: _:Naa9efbaefaa64b9b9a2c361618597edd
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureCollectionShape: _:N8b8867adbf0c4b778ca74f7633ac72b5
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:LinkShape: *none*
 
 Validation result for registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: <file:///github/workspace/f1>
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureShape: <file:///github/workspace/f1>
+ - Shape geojson:LinkShape: *none*
 
 === End SHACL ===
 

@@ -197,6 +197,11 @@ register can depend on it directly, without importing the OGC API - Common regis
 
 ```yaml
 $ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.common.landingPage
+  register: https://opengeospatial.github.io/bblocks/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-18'
 
 ```
 

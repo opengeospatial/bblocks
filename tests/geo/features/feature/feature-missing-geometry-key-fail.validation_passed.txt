@@ -1,5 +1,5 @@
 Validation report for ogc.geo.features.feature - Feature
-Generated 2026-10-18T04:20:15.524009+00:00
+Generated 2026-10-25T04:20:35.468911+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -289,6 +289,10 @@ Failed validating 'required' in schema['allOf'][0]:
      'required': ['type', 'properties', 'geometry'],
      'title': 'GeoJSON Feature',
      'type': 'object',
+     'x-bblocks-metadata': {'dateOfLastChange': '2026-10-18',
+                            'itemIdentifier': 'ogc.geo.common.data_types.geojson',
+                            'register': 'https://opengeospatial.github.io/bblocks/register.json',
+                            'version': '1.0'},
      'x-jsonld-extra-terms': {'Feature': 'https://purl.org/geojson/vocab#Feature',
                               'FeatureCollection': 'https://purl.org/geojson/vocab#FeatureCollection',
                               'GeometryCollection': 'https://purl.org/geojson/vocab#GeometryCollection',
@@ -315,11 +319,11 @@ Validation result for registereditems/geo/features/feature/shapes.shacl:
   Conforms: True
   
 Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: <http://www.example.com/features/bad2>
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: <http://www.example.com/features/bad2>
+ - Shape geojson:LinkShape: *none*
 
 === End SHACL ===
 

@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-10-11",
+  "dateOfLastChange": "2026-10-18",
   "sources": [
     {
       "title": "OGC API - Features, Part 1, 7.14.2: Feature Collection Response",
@@ -73,7 +73,7 @@
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://geojson.org/schema/FeatureCollection.json\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    timeStamp:\n      type: string\n      format: date-time\n    numberMatched:\n      type: integer\n      minimum: 0\n    numberReturned:\n      type: integer\n      minimum: 0\n    features:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n      x-jsonld-container: '@set'\n      x-jsonld-id: https://purl.org/geojson/vocab#features\nx-jsonld-extra-terms:\n  properties: '@nest'\n  type: '@type'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  geojson: https://purl.org/geojson/vocab#\n",
+  "annotatedSchema": "allOf:\n- $ref: https://geojson.org/schema/FeatureCollection.json\n- type: object\n  properties:\n    links:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml\n      x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    timeStamp:\n      type: string\n      format: date-time\n    numberMatched:\n      type: integer\n      minimum: 0\n    numberReturned:\n      type: integer\n      minimum: 0\n    features:\n      type: array\n      items:\n        $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n      x-jsonld-container: '@set'\n      x-jsonld-id: https://purl.org/geojson/vocab#features\nx-jsonld-extra-terms:\n  properties: '@nest'\n  type: '@type'\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  geojson: https://purl.org/geojson/vocab#\nx-bblocks-metadata:\n  itemIdentifier: ogc.geo.features.featureCollection\n  register: https://opengeospatial.github.io/bblocks/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-10-18'\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/geo/features/featureCollection"
 }

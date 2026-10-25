@@ -210,6 +210,11 @@ $defs:
 x-jsonld-prefixes:
   time: http://www.w3.org/2006/time#
   xsd: http://www.w3.org/2001/XMLSchema#
+x-bblocks-metadata:
+  itemIdentifier: ogc.geo.json-fg.time
+  register: https://opengeospatial.github.io/bblocks/register.json
+  version: 0.2.2
+  dateOfLastChange: '2026-10-18'
 
 ```
 

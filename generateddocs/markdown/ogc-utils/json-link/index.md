@@ -45,6 +45,11 @@ x-jsonld-prefixes:
   oa: http://www.w3.org/ns/oa#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: ogc.ogc-utils.json-link
+  register: https://opengeospatial.github.io/bblocks/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-18'
 
 ```
 

@@ -10,7 +10,7 @@
   "itemClass": "datatype",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-10-11",
+  "dateOfLastChange": "2026-10-18",
   "sources": [
     {
       "title": "IETF RFC 3986 - Uniform Resource Identifiers (URI): Generic Syntax",
@@ -145,7 +145,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: IRI or CURIE\n$defs:\n  IRI:\n    type: string\n    pattern: ^\\w+:/*([^:<>{}|\\\\^`\"\\s/]+[^<>{}|\\\\^`\"\\s]*(:[^:<>{}|\\\\^`\"\\s]+)?)?$\n  CURIE:\n    type: string\n    pattern: ^[A-Za-z_][^\\s:/]*:[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\" ]*)?(#[^<>{}|\\\\^`\"\\s]*)?$\n  LocalPart:\n    type: string\n    pattern: ^[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\"\\s]*)?(#[^<>{}|\\\\^`\"\\s]*)?$\n  Single:\n    anyOf:\n    - $ref: '#/$defs/IRI'\n    - $ref: '#/$defs/CURIE'\n    - $ref: '#/$defs/LocalPart'\n  Multiple:\n    oneOf:\n    - $ref: '#/$defs/Single'\n    - type: array\n      items:\n        $ref: '#/$defs/Single'\n  MultipleOrObject:\n    oneOf:\n    - $ref: '#/$defs/Multiple'\n    - type: object\n  MultipleOrObjectOrNull:\n    oneOf:\n    - $ref: '#/$defs/MultipleOrObject'\n    - type: 'null'\n$ref: '#/$defs/Single'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: IRI or CURIE\n$defs:\n  IRI:\n    type: string\n    pattern: ^\\w+:/*([^:<>{}|\\\\^`\"\\s/]+[^<>{}|\\\\^`\"\\s]*(:[^:<>{}|\\\\^`\"\\s]+)?)?$\n  CURIE:\n    type: string\n    pattern: ^[A-Za-z_][^\\s:/]*:[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\" ]*)?(#[^<>{}|\\\\^`\"\\s]*)?$\n  LocalPart:\n    type: string\n    pattern: ^[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\"\\s]*)?(#[^<>{}|\\\\^`\"\\s]*)?$\n  Single:\n    anyOf:\n    - $ref: '#/$defs/IRI'\n    - $ref: '#/$defs/CURIE'\n    - $ref: '#/$defs/LocalPart'\n  Multiple:\n    oneOf:\n    - $ref: '#/$defs/Single'\n    - type: array\n      items:\n        $ref: '#/$defs/Single'\n  MultipleOrObject:\n    oneOf:\n    - $ref: '#/$defs/Multiple'\n    - type: object\n  MultipleOrObjectOrNull:\n    oneOf:\n    - $ref: '#/$defs/MultipleOrObject'\n    - type: 'null'\n$ref: '#/$defs/Single'\nx-bblocks-metadata:\n  itemIdentifier: ogc.ogc-utils.iri-or-curie\n  register: https://opengeospatial.github.io/bblocks/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-10-18'\n",
   "gitRepository": "https://github.com/opengeospatial/bblocks",
   "gitPath": "registereditems/ogc-utils/iri-or-curie"
 }
