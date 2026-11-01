@@ -61,7 +61,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.api.common.exception
   register: https://opengeospatial.github.io/bblocks/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-18'
+  dateOfLastChange: '2026-10-25'
 
 ```
 

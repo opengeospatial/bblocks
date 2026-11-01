@@ -443,7 +443,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.geo.common.data_types.geojson
   register: https://opengeospatial.github.io/bblocks/register.json
   version: '1.0'
-  dateOfLastChange: '2026-10-18'
+  dateOfLastChange: '2026-10-25'
 
 ```
 
