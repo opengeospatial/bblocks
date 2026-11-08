@@ -1,5 +1,5 @@
 Validation report for ogc.geo.features.feature - Feature
-Generated 2026-11-01T04:14:00.168541+00:00
+Generated 2026-11-08T04:13:35.194335+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -9,26 +9,28 @@ Using feature-point-no-coordinates-fail.ttl from test resources
 === End Files ===
 
 === SHACL ===
+Validation result for registereditems/geo/features/feature/shapes.shacl: 2 violations
 
 ** Validation error **
-Validation result for registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: False
-  Results (1):
-  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:description Literal("A Feature may have at most one geometry value; null geometry produces no RDF triple.") ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:name Literal("geometry") ; sh:node geojson:GeometryShape ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path geojson:geometry ]
-  	Focus Node: <http://www.example.com/features/bad-geom2>
-  	Value Node: [ rdf:type geojson:Point ]
-  	Result Path: geojson:geometry
-  	Message: Value does not conform to Shape geojson:GeometryShape
-  
+Violation (sh:OrConstraintComponent):
+  Source shape: geojson:GeometryShape
+  Focus node: _:n722394647456473aaf78141f7d577f0ab1
+  Value: _:n722394647456473aaf78141f7d577f0ab1
+  Message: Node [ rdf:type geojson:Point ] must conform to one or more shapes in [ sh:property [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("coordinates") ; sh:nodeKind sh:BlankNode ; sh:path geojson:coordinates ] ] , [ sh:class geojson:GeometryCollection ; sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("geometries") ; sh:path geojson:geometries ] ]
+
+** Validation error **
+Violation (sh:NodeConstraintComponent):
+  Source shape: geojson:FeatureShape/sh:property "geometry" (path geojson:geometry)
+  Focus node: <http://www.example.com/features/bad-geom2>
+  Result path: geojson:geometry
+  Value: _:n722394647456473aaf78141f7d577f0ab1
+  Message: Value does not conform to Shape geojson:GeometryShape. See details for more information.
 Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:FeatureShape: <http://www.example.com/features/bad-geom2>
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
 
 === End SHACL ===
 

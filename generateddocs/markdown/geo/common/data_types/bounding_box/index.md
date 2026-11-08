@@ -58,7 +58,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.geo.common.data_types.bounding_box
   register: https://opengeospatial.github.io/bblocks/register.json
   version: 1.0.1
-  dateOfLastChange: '2026-10-25'
+  dateOfLastChange: '2026-11-01'
 
 ```
 

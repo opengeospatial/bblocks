@@ -1,5 +1,5 @@
 Validation report for ogc.geo.features.featureCollection - Feature Collection
-Generated 2026-11-01T04:14:00.577974+00:00
+Generated 2026-11-08T04:13:36.376155+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -9,48 +9,62 @@ Using collection-feature-bad-geometry-fail.ttl from test resources
 === End Files ===
 
 === SHACL ===
+Validation result for registereditems/geo/features/featureCollection/shapes.shacl: 3 violations
 
 ** Validation error **
-Validation result for registereditems/geo/features/featureCollection/shapes.shacl:
-  Validation Report
-  Conforms: False
-  Results (1):
-  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:class geojson:Feature ; sh:name Literal("features") ; sh:node geojson:FeatureShape ; sh:path geojson:features ]
-  	Focus Node: <http://www.example.com/collections/bad-c1>
-  	Value Node: <http://www.example.com/features/bad-fc1>
-  	Result Path: geojson:features
-  	Message: Value does not conform to Shape geojson:FeatureShape
-  
+Violation (sh:NodeConstraintComponent):
+  Source shape: geojson:FeatureCollectionShape/sh:property "features" (path geojson:features)
+  Focus node: <http://www.example.com/collections/bad-c1>
+  Result path: geojson:features
+  Value: <http://www.example.com/features/bad-fc1>
+  Message: Value does not conform to Shape geojson:FeatureShape. See details for more information.
+
+** Validation error **
+Violation (sh:NodeConstraintComponent):
+  Source shape: geojson:FeatureShape/sh:property "geometry" (path geojson:geometry)
+  Focus node: <http://www.example.com/features/bad-fc1>
+  Result path: geojson:geometry
+  Value: _:n901baed523e14193b4929d2150404b46b1
+  Message: Value does not conform to Shape geojson:GeometryShape. See details for more information.
+
+** Validation error **
+Violation (sh:InConstraintComponent):
+  Source shape: geojson:GeometryShape/sh:property "geometry type" (path rdf:type)
+  Focus node: _:n901baed523e14193b4929d2150404b46b1
+  Result path: rdf:type
+  Value: ex:Cone
+  Message: Value ex:Cone not in list ['geojson:MultiPoint', 'geojson:Polygon', 'geojson:Point', 'geojson:LineString', 'geojson:MultiLineString', 'geojson:GeometryCollection', 'geojson:MultiPolygon']
 Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:FeatureShape: *none*
  - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/bad-c1>
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
 
+Validation result for registereditems/geo/features/feature/shapes.shacl: 2 violations
 
 ** Validation error **
-Validation result for registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: False
-  Results (1):
-  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:description Literal("A Feature may have at most one geometry value; null geometry produces no RDF triple.") ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:name Literal("geometry") ; sh:node geojson:GeometryShape ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path geojson:geometry ]
-  	Focus Node: <http://www.example.com/features/bad-fc1>
-  	Value Node: [ geojson:coordinates ( Literal("174.7", datatype=xsd:decimal) Literal("-36.9", datatype=xsd:decimal) ) ; rdf:type ex:Cone ]
-  	Result Path: geojson:geometry
-  	Message: Value does not conform to Shape geojson:GeometryShape
-  
+Violation (sh:NodeConstraintComponent):
+  Source shape: geojson:FeatureShape/sh:property "geometry" (path geojson:geometry)
+  Focus node: <http://www.example.com/features/bad-fc1>
+  Result path: geojson:geometry
+  Value: _:n901baed523e14193b4929d2150404b46b1
+  Message: Value does not conform to Shape geojson:GeometryShape. See details for more information.
+
+** Validation error **
+Violation (sh:InConstraintComponent):
+  Source shape: geojson:GeometryShape/sh:property "geometry type" (path rdf:type)
+  Focus node: _:n901baed523e14193b4929d2150404b46b1
+  Result path: rdf:type
+  Value: ex:Cone
+  Message: Value ex:Cone not in list ['geojson:MultiPoint', 'geojson:Polygon', 'geojson:Point', 'geojson:LineString', 'geojson:MultiLineString', 'geojson:GeometryCollection', 'geojson:MultiPolygon']
 Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:FeatureShape: <http://www.example.com/features/bad-fc1>
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
 
 === End SHACL ===
 

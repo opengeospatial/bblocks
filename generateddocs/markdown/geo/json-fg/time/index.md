@@ -214,7 +214,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.geo.json-fg.time
   register: https://opengeospatial.github.io/bblocks/register.json
   version: 0.2.2
-  dateOfLastChange: '2026-10-25'
+  dateOfLastChange: '2026-11-01'
 
 ```
 

@@ -1,5 +1,5 @@
 Validation report for ogc.geo.features.feature - Feature
-Generated 2026-11-01T04:14:00.096495+00:00
+Generated 2026-11-08T04:13:35.039869+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -9,26 +9,28 @@ Using feature-bad-link-fail.ttl from test resources
 === End Files ===
 
 === SHACL ===
+Validation result for registereditems/geo/features/feature/shapes.shacl: 2 violations
 
 ** Validation error **
-Validation result for registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: False
-  Results (1):
-  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:name Literal("links") ; sh:node geojson:LinkShape ; sh:path rdfs:seeAlso ]
-  	Focus Node: <http://www.example.com/features/bad-link1>
-  	Value Node: [ ]
-  	Result Path: rdfs:seeAlso
-  	Message: Value does not conform to Shape geojson:LinkShape
-  
+Violation (sh:MinCountConstraintComponent):
+  Source shape: geojson:LinkShape/sh:property "href" (path oa:hasTarget)
+  Focus node: _:n59f70f6f884a46fa82c90a85e3243f48b4
+  Result path: <http://www.w3.org/ns/oa#hasTarget>
+  Message: Less than 1 values on [ ]->oa:hasTarget
+
+** Validation error **
+Violation (sh:NodeConstraintComponent):
+  Source shape: geojson:FeatureShape/sh:property "links" (path rdfs:seeAlso)
+  Focus node: <http://www.example.com/features/bad-link1>
+  Result path: rdfs:seeAlso
+  Value: _:n59f70f6f884a46fa82c90a85e3243f48b4
+  Message: Value does not conform to Shape geojson:LinkShape. See details for more information.
 Focus nodes for registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:FeatureShape: <http://www.example.com/features/bad-link1>
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
 
 === End SHACL ===
 

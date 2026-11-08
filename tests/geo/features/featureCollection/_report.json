@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.geo.features.featureCollection - Feature Collection",
   "bblockName": "Feature Collection",
   "bblockId": "ogc.geo.features.featureCollection",
-  "generated": "2026-11-01T04:14:00.664482+00:00",
+  "generated": "2026-11-08T04:13:36.845084+00:00",
   "result": true,
   "items": [
     {
@@ -14,6 +14,7 @@
         "language": "ttl"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "GENERAL",
@@ -43,19 +44,43 @@
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
-              "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <http://www.example.com/collections/bad-c2> ;\n            sh:resultMessage \"Value does not conform to Shape geojson:LinkShape\" ;\n            sh:resultPath rdfs:seeAlso ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeConstraintComponent ;\n            sh:sourceShape [ sh:name \"links\" ;\n                    sh:node geojson:LinkShape ;\n                    sh:path rdfs:seeAlso ] ;\n            sh:value [ ] ] .\n\n",
+              "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:detail [ a sh:ValidationResult ;\n                    sh:focusNode _:n2f4e338f5b644e2cb3af3d7e1b9f7c84b1 ;\n                    sh:resultMessage \"Less than 1 values on [ ]->oa:hasTarget\" ;\n                    sh:resultPath oa:hasTarget ;\n                    sh:resultSeverity sh:Violation ;\n                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n                    sh:sourceShape [ sh:description \"Link href must be present as an IRI.\" ;\n                            sh:maxCount 1 ;\n                            sh:minCount 1 ;\n                            sh:name \"href\" ;\n                            sh:nodeKind sh:IRI ;\n                            sh:path oa:hasTarget ] ] ;\n            sh:focusNode <http://www.example.com/collections/bad-c2> ;\n            sh:resultMessage \"Value does not conform to Shape geojson:LinkShape. See details for more information.\" ;\n            sh:resultPath rdfs:seeAlso ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeConstraintComponent ;\n            sh:sourceShape [ sh:name \"links\" ;\n                    sh:node geojson:LinkShape ;\n                    sh:path rdfs:seeAlso ] ;\n            sh:value _:n2f4e338f5b644e2cb3af3d7e1b9f7c84b1 ] .\n\n",
+              "isError": false,
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl: 2 violations"
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Violation",
+              "focusNode": "n2f4e338f5b644e2cb3af3d7e1b9f7c84b1",
+              "resultPath": "<http://www.w3.org/ns/oa#hasTarget>",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "geojson:LinkShape/sh:property \"href\" (path oa:hasTarget)",
+              "value": null,
+              "resultMessage": "Less than 1 values on [ ]->oa:hasTarget",
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "isError": true,
-              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:name Literal(\"links\") ; sh:node geojson:LinkShape ; sh:path rdfs:seeAlso ]\n  \tFocus Node: <http://www.example.com/collections/bad-c2>\n  \tValue Node: [ ]\n  \tResult Path: rdfs:seeAlso\n  \tMessage: Value does not conform to Shape geojson:LinkShape\n  "
+              "severity": "error",
+              "message": "Violation (sh:MinCountConstraintComponent):\n  Source shape: geojson:LinkShape/sh:property \"href\" (path oa:hasTarget)\n  Focus node: _:n2f4e338f5b644e2cb3af3d7e1b9f7c84b1\n  Result path: <http://www.w3.org/ns/oa#hasTarget>\n  Message: Less than 1 values on [ ]->oa:hasTarget"
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Violation",
+              "focusNode": "http://www.example.com/collections/bad-c2",
+              "resultPath": "rdfs:seeAlso",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#NodeConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "geojson:FeatureCollectionShape/sh:property \"links\" (path rdfs:seeAlso)",
+              "value": "_:n2f4e338f5b644e2cb3af3d7e1b9f7c84b1",
+              "resultMessage": "Value does not conform to Shape geojson:LinkShape. See details for more information.",
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+              "isError": true,
+              "severity": "error",
+              "message": "Violation (sh:NodeConstraintComponent):\n  Source shape: geojson:FeatureCollectionShape/sh:property \"links\" (path rdfs:seeAlso)\n  Focus node: <http://www.example.com/collections/bad-c2>\n  Result path: rdfs:seeAlso\n  Value: _:n2f4e338f5b644e2cb3af3d7e1b9f7c84b1\n  Message: Value does not conform to Shape geojson:LinkShape. See details for more information."
             },
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
@@ -69,41 +94,47 @@
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/bad-c2>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/bad-c2>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             },
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
                 "geojson:FeatureShape": {
                   "nodes": [
                     "<http://www.example.com/features/ok1>"
                   ]
                 },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/ok1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/ok1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             }
           ]
         }
@@ -118,6 +149,7 @@
         "language": "json"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "FILES",
@@ -169,17 +201,11 @@
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
@@ -191,39 +217,45 @@
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             },
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
+                "geojson:FeatureShape": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "geojson:FeatureShape": {
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             }
           ]
         }
@@ -238,6 +270,7 @@
         "language": "ttl"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "GENERAL",
@@ -267,19 +300,58 @@
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
-              "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <http://www.example.com/collections/bad-c1> ;\n            sh:resultMessage \"Value does not conform to Shape geojson:FeatureShape\" ;\n            sh:resultPath geojson:features ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeConstraintComponent ;\n            sh:sourceShape [ sh:class geojson:Feature ;\n                    sh:name \"features\" ;\n                    sh:node geojson:FeatureShape ;\n                    sh:path geojson:features ] ;\n            sh:value <http://www.example.com/features/bad-fc1> ] .\n\n",
+              "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:detail [ a sh:ValidationResult ;\n                    sh:detail [ a sh:ValidationResult ;\n                            sh:focusNode _:n901baed523e14193b4929d2150404b46b1 ;\n                            sh:resultMessage \"Value ex:Cone not in list ['geojson:MultiPoint', 'geojson:Polygon', 'geojson:Point', 'geojson:LineString', 'geojson:MultiLineString', 'geojson:GeometryCollection', 'geojson:MultiPolygon']\" ;\n                            sh:resultPath rdf:type ;\n                            sh:resultSeverity sh:Violation ;\n                            sh:sourceConstraintComponent sh:InConstraintComponent ;\n                            sh:sourceShape [ sh:description \"Geometry type must be one of the seven GeoJSON geometry classes.\" ;\n                                    sh:in ( geojson:Point geojson:MultiPoint geojson:LineString geojson:MultiLineString geojson:Polygon geojson:MultiPolygon geojson:GeometryCollection ) ;\n                                    sh:minCount 1 ;\n                                    sh:name \"geometry type\" ;\n                                    sh:path rdf:type ] ;\n                            sh:value <http://www.example.com/vocab#Cone> ] ;\n                    sh:focusNode <http://www.example.com/features/bad-fc1> ;\n                    sh:resultMessage \"Value does not conform to Shape geojson:GeometryShape. See details for more information.\" ;\n                    sh:resultPath geojson:geometry ;\n                    sh:resultSeverity sh:Violation ;\n                    sh:sourceConstraintComponent sh:NodeConstraintComponent ;\n                    sh:sourceShape [ sh:description \"A Feature may have at most one geometry; null geometry produces no RDF triple.\" ;\n                            sh:maxCount 1 ;\n                            sh:name \"geometry\" ;\n                            sh:node geojson:GeometryShape ;\n                            sh:nodeKind sh:BlankNodeOrIRI ;\n                            sh:path geojson:geometry ] ;\n                    sh:value _:n901baed523e14193b4929d2150404b46b1 ] ;\n            sh:focusNode <http://www.example.com/collections/bad-c1> ;\n            sh:resultMessage \"Value does not conform to Shape geojson:FeatureShape. See details for more information.\" ;\n            sh:resultPath geojson:features ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeConstraintComponent ;\n            sh:sourceShape [ sh:class geojson:Feature ;\n                    sh:name \"features\" ;\n                    sh:node geojson:FeatureShape ;\n                    sh:path geojson:features ] ;\n            sh:value <http://www.example.com/features/bad-fc1> ] .\n\n_:N2a9f947ccae54addab80a52f309c4cf0 rdf:first -36.9 ;\n    rdf:rest () .\n\n_:Ncbf8f6fb7d774f46bee61b04f6167e90 rdf:first 174.7 ;\n    rdf:rest _:N2a9f947ccae54addab80a52f309c4cf0 .\n\n_:n901baed523e14193b4929d2150404b46b1 a <http://www.example.com/vocab#Cone> ;\n    geojson:coordinates _:Ncbf8f6fb7d774f46bee61b04f6167e90 .\n\n",
+              "isError": false,
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl: 3 violations"
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Violation",
+              "focusNode": "http://www.example.com/collections/bad-c1",
+              "resultPath": "geojson:features",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#NodeConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "geojson:FeatureCollectionShape/sh:property \"features\" (path geojson:features)",
+              "value": "<http://www.example.com/features/bad-fc1>",
+              "resultMessage": "Value does not conform to Shape geojson:FeatureShape. See details for more information.",
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "isError": true,
-              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:class geojson:Feature ; sh:name Literal(\"features\") ; sh:node geojson:FeatureShape ; sh:path geojson:features ]\n  \tFocus Node: <http://www.example.com/collections/bad-c1>\n  \tValue Node: <http://www.example.com/features/bad-fc1>\n  \tResult Path: geojson:features\n  \tMessage: Value does not conform to Shape geojson:FeatureShape\n  "
+              "severity": "error",
+              "message": "Violation (sh:NodeConstraintComponent):\n  Source shape: geojson:FeatureCollectionShape/sh:property \"features\" (path geojson:features)\n  Focus node: <http://www.example.com/collections/bad-c1>\n  Result path: geojson:features\n  Value: <http://www.example.com/features/bad-fc1>\n  Message: Value does not conform to Shape geojson:FeatureShape. See details for more information."
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Violation",
+              "focusNode": "http://www.example.com/features/bad-fc1",
+              "resultPath": "geojson:geometry",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#NodeConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "geojson:FeatureShape/sh:property \"geometry\" (path geojson:geometry)",
+              "value": "_:n901baed523e14193b4929d2150404b46b1",
+              "resultMessage": "Value does not conform to Shape geojson:GeometryShape. See details for more information.",
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+              "isError": true,
+              "severity": "error",
+              "message": "Violation (sh:NodeConstraintComponent):\n  Source shape: geojson:FeatureShape/sh:property \"geometry\" (path geojson:geometry)\n  Focus node: <http://www.example.com/features/bad-fc1>\n  Result path: geojson:geometry\n  Value: _:n901baed523e14193b4929d2150404b46b1\n  Message: Value does not conform to Shape geojson:GeometryShape. See details for more information."
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Violation",
+              "focusNode": "n901baed523e14193b4929d2150404b46b1",
+              "resultPath": "rdf:type",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#InConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "geojson:GeometryShape/sh:property \"geometry type\" (path rdf:type)",
+              "value": "ex:Cone",
+              "resultMessage": "Value ex:Cone not in list ['geojson:MultiPoint', 'geojson:Polygon', 'geojson:Point', 'geojson:LineString', 'geojson:MultiLineString', 'geojson:GeometryCollection', 'geojson:MultiPolygon']",
+              "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
+              "isError": true,
+              "severity": "error",
+              "message": "Violation (sh:InConstraintComponent):\n  Source shape: geojson:GeometryShape/sh:property \"geometry type\" (path rdf:type)\n  Focus node: _:n901baed523e14193b4929d2150404b46b1\n  Result path: rdf:type\n  Value: ex:Cone\n  Message: Value ex:Cone not in list ['geojson:MultiPoint', 'geojson:Polygon', 'geojson:Point', 'geojson:LineString', 'geojson:MultiLineString', 'geojson:GeometryCollection', 'geojson:MultiPolygon']"
             },
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
@@ -293,41 +365,77 @@
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/bad-c1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
-              "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <http://www.example.com/features/bad-fc1> ;\n            sh:resultMessage \"Value does not conform to Shape geojson:GeometryShape\" ;\n            sh:resultPath geojson:geometry ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeConstraintComponent ;\n            sh:sourceShape [ sh:description \"A Feature may have at most one geometry value; null geometry produces no RDF triple.\" ;\n                    sh:maxCount 1 ;\n                    sh:name \"geometry\" ;\n                    sh:node geojson:GeometryShape ;\n                    sh:nodeKind sh:BlankNodeOrIRI ;\n                    sh:path geojson:geometry ] ;\n            sh:value [ a <http://www.example.com/vocab#Cone> ;\n                    geojson:coordinates ( 174.7 -36.9 ) ] ] .\n\n",
-              "isError": true,
-              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:description Literal(\"A Feature may have at most one geometry value; null geometry produces no RDF triple.\") ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:name Literal(\"geometry\") ; sh:node geojson:GeometryShape ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path geojson:geometry ]\n  \tFocus Node: <http://www.example.com/features/bad-fc1>\n  \tValue Node: [ geojson:coordinates ( Literal(\"174.7\", datatype=xsd:decimal) Literal(\"-36.9\", datatype=xsd:decimal) ) ; rdf:type ex:Cone ]\n  \tResult Path: geojson:geometry\n  \tMessage: Value does not conform to Shape geojson:GeometryShape\n  "
-            },
-            {
-              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
-              "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
                 },
                 "geojson:GeometryShape": {
                   "nodes": []
                 },
-                "geojson:GeometryShape/sh:or/rdf:first": {
+                "geojson:LinkShape": {
                   "nodes": []
-                },
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/bad-c1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+              "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:detail [ a sh:ValidationResult ;\n                    sh:focusNode _:n901baed523e14193b4929d2150404b46b1 ;\n                    sh:resultMessage \"Value ex:Cone not in list ['geojson:MultiPoint', 'geojson:Polygon', 'geojson:Point', 'geojson:LineString', 'geojson:MultiLineString', 'geojson:GeometryCollection', 'geojson:MultiPolygon']\" ;\n                    sh:resultPath rdf:type ;\n                    sh:resultSeverity sh:Violation ;\n                    sh:sourceConstraintComponent sh:InConstraintComponent ;\n                    sh:sourceShape [ sh:description \"Geometry type must be one of the seven GeoJSON geometry classes.\" ;\n                            sh:in ( geojson:Point geojson:MultiPoint geojson:LineString geojson:MultiLineString geojson:Polygon geojson:MultiPolygon geojson:GeometryCollection ) ;\n                            sh:minCount 1 ;\n                            sh:name \"geometry type\" ;\n                            sh:path rdf:type ] ;\n                    sh:value <http://www.example.com/vocab#Cone> ] ;\n            sh:focusNode <http://www.example.com/features/bad-fc1> ;\n            sh:resultMessage \"Value does not conform to Shape geojson:GeometryShape. See details for more information.\" ;\n            sh:resultPath geojson:geometry ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeConstraintComponent ;\n            sh:sourceShape [ sh:description \"A Feature may have at most one geometry value; null geometry produces no RDF triple.\" ;\n                    sh:maxCount 1 ;\n                    sh:name \"geometry\" ;\n                    sh:node geojson:GeometryShape ;\n                    sh:nodeKind sh:BlankNodeOrIRI ;\n                    sh:path geojson:geometry ] ;\n            sh:value _:n901baed523e14193b4929d2150404b46b1 ] .\n\n_:N0836342235224626ba75e86c148e402f rdf:first -36.9 ;\n    rdf:rest () .\n\n_:N38d315d352004cf69dd72fc7c08f8eea rdf:first 174.7 ;\n    rdf:rest _:N0836342235224626ba75e86c148e402f .\n\n_:n901baed523e14193b4929d2150404b46b1 a <http://www.example.com/vocab#Cone> ;\n    geojson:coordinates _:N38d315d352004cf69dd72fc7c08f8eea .\n\n",
+              "isError": false,
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl: 2 violations"
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Violation",
+              "focusNode": "http://www.example.com/features/bad-fc1",
+              "resultPath": "geojson:geometry",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#NodeConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "geojson:FeatureShape/sh:property \"geometry\" (path geojson:geometry)",
+              "value": "_:n901baed523e14193b4929d2150404b46b1",
+              "resultMessage": "Value does not conform to Shape geojson:GeometryShape. See details for more information.",
+              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+              "isError": true,
+              "severity": "error",
+              "message": "Violation (sh:NodeConstraintComponent):\n  Source shape: geojson:FeatureShape/sh:property \"geometry\" (path geojson:geometry)\n  Focus node: <http://www.example.com/features/bad-fc1>\n  Result path: geojson:geometry\n  Value: _:n901baed523e14193b4929d2150404b46b1\n  Message: Value does not conform to Shape geojson:GeometryShape. See details for more information."
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Violation",
+              "focusNode": "n901baed523e14193b4929d2150404b46b1",
+              "resultPath": "rdf:type",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#InConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "geojson:GeometryShape/sh:property \"geometry type\" (path rdf:type)",
+              "value": "ex:Cone",
+              "resultMessage": "Value ex:Cone not in list ['geojson:MultiPoint', 'geojson:Polygon', 'geojson:Point', 'geojson:LineString', 'geojson:MultiLineString', 'geojson:GeometryCollection', 'geojson:MultiPolygon']",
+              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+              "isError": true,
+              "severity": "error",
+              "message": "Violation (sh:InConstraintComponent):\n  Source shape: geojson:GeometryShape/sh:property \"geometry type\" (path rdf:type)\n  Focus node: _:n901baed523e14193b4929d2150404b46b1\n  Result path: rdf:type\n  Value: ex:Cone\n  Message: Value ex:Cone not in list ['geojson:MultiPoint', 'geojson:Polygon', 'geojson:Point', 'geojson:LineString', 'geojson:MultiLineString', 'geojson:GeometryCollection', 'geojson:MultiPolygon']"
+            },
+            {
+              "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
+              "focusNodes": {
                 "geojson:FeatureShape": {
                   "nodes": [
                     "<http://www.example.com/features/bad-fc1>"
                   ]
                 },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/bad-fc1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/bad-fc1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             }
           ]
         }
@@ -342,6 +450,7 @@
         "language": "ttl"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "FILES",
@@ -362,17 +471,11 @@
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
@@ -386,42 +489,48 @@
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/c1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: <http://www.example.com/collections/c1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             },
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
                 "geojson:FeatureShape": {
                   "nodes": [
                     "<http://www.example.com/features/pt2>",
                     "<http://www.example.com/features/ls2>"
                   ]
                 },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt2>,<http://www.example.com/features/ls2>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt2>,<http://www.example.com/features/ls2>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             }
           ]
         }
@@ -436,6 +545,7 @@
         "language": "json"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "GENERAL",
@@ -487,7 +597,7 @@
               "exception": "ValidationError",
               "errorMessage": "'type' is a required property",
               "isError": true,
-              "message": "ValidationError: 'type' is a required property\n\nFailed validating 'required' in schema['allOf'][0]:\n    {'$id': 'https://geojson.org/schema/FeatureCollection.json',\n     '$schema': 'http://json-schema.org/draft-07/schema#',\n     'properties': {'bbox': {'items': {'type': 'number'},\n                             'minItems': 4,\n                             'type': 'array'},\n                    'features': {'items': {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                   'minItems': 4,\n                                                                   'type': 'array'},\n                                                          'geometry': {'oneOf': [{'type': 'null'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'type': 'number'},\n                                                                                                                 'minItems': 2,\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['Point'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'Point',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                           'minItems': 2,\n                                                                                                                           'type': 'array'},\n                                                                                                                 'minItems': 2,\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['LineString'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'LineString',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                     'minItems': 2,\n                                                                                                                                     'type': 'array'},\n                                                                                                                           'minItems': 4,\n                                                                                                                           'type': 'array'},\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['Polygon'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'Polygon',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                           'minItems': 2,\n                                                                                                                           'type': 'array'},\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['MultiPoint'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'MultiPoint',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                     'minItems': 2,\n                                                                                                                                     'type': 'array'},\n                                                                                                                           'minItems': 2,\n                                                                                                                           'type': 'array'},\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['MultiLineString'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'MultiLineString',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'coordinates': {'items': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                               'minItems': 2,\n                                                                                                                                               'type': 'array'},\n                                                                                                                                     'minItems': 4,\n                                                                                                                                     'type': 'array'},\n                                                                                                                           'type': 'array'},\n                                                                                                                 'type': 'array'},\n                                                                                                 'type': {'enum': ['MultiPolygon'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'MultiPolygon',\n                                                                                  'type': 'object'},\n                                                                                 {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                          'minItems': 4,\n                                                                                                          'type': 'array'},\n                                                                                                 'geometries': {'items': {'oneOf': [{'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'type': 'number'},\n                                                                                                                                                                    'minItems': 2,\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['Point'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'Point',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'minItems': 2,\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['LineString'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'LineString',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                                        'minItems': 2,\n                                                                                                                                                                                        'type': 'array'},\n                                                                                                                                                                              'minItems': 4,\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['Polygon'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'Polygon',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['MultiPoint'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'MultiPoint',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                                        'minItems': 2,\n                                                                                                                                                                                        'type': 'array'},\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['MultiLineString'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'MultiLineString',\n                                                                                                                                     'type': 'object'},\n                                                                                                                                    {'properties': {'bbox': {'items': {'type': 'number'},\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'type': 'array'},\n                                                                                                                                                    'coordinates': {'items': {'items': {'items': {'items': {'type': 'number'},\n                                                                                                                                                                                                  'minItems': 2,\n                                                                                                                                                                                                  'type': 'array'},\n                                                                                                                                                                                        'minItems': 4,\n                                                                                                                                                                                        'type': 'array'},\n                                                                                                                                                                              'type': 'array'},\n                                                                                                                                                                    'type': 'array'},\n                                                                                                                                                    'type': {'enum': ['MultiPolygon'],\n                                                                                                                                                             'type': 'string'}},\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'title': 'GeoJSON '\n                                                                                                                                              'MultiPolygon',\n                                                                                                                                     'type': 'object'}]},\n                                                                                                                'type': 'array'},\n                                                                                                 'type': {'enum': ['GeometryCollection'],\n                                                                                                          'type': 'string'}},\n                                                                                  'required': ['type',\n                                                                                               'geometries'],\n                                                                                  'title': 'GeoJSON '\n                                                                                           'GeometryCollection',\n                                                                                  'type': 'object'}]},\n                                                          'id': {'oneOf': [{'type': 'number'},\n                                                                           {'type': 'string'}]},\n                                                          'properties': {'oneOf': [{'type': 'null'},\n                                                                                   {'type': 'object'}]},\n                                                          'type': {'enum': ['Feature'],\n                                                                   'type': 'string'}},\n                                           'required': ['type',\n                                                        'properties',\n                                                        'geometry'],\n                                           'title': 'GeoJSON Feature',\n                                           'type': 'object'},\n                                 'type': 'array'},\n                    'type': {'enum': ['FeatureCollection'],\n                             'type': 'string'}},\n     'required': ['type', 'features'],\n     'title': 'GeoJSON FeatureCollection',\n     'type': 'object'}\n\nOn instance:\n    {'features': [{'geometry': {'coordinates': [174.7, -36.9],\n                                'type': 'Point'},\n                   'id': 'http://www.example.com/features/pt3',\n                   'properties': {},\n                   'type': 'Feature'}]}"
+              "message": "ValidationError: 'type' is a required property\n\nFailed validating 'required' in schema['allOf'][0]:\n    {'$schema': 'http://json-schema.org/draft-07/schema#',\n     '$id': 'https://geojson.org/schema/FeatureCollection.json',\n     'title': 'GeoJSON FeatureCollection',\n     'type': 'object',\n     'required': ['type', 'features'],\n     'properties': {'type': {'type': 'string',\n                             'enum': ['FeatureCollection']},\n                    'features': {'type': 'array',\n                                 'items': {'title': 'GeoJSON Feature',\n                                           'type': 'object',\n                                           'required': ['type',\n                                                        'properties',\n                                                        'geometry'],\n                                           'properties': {'type': {'type': 'string',\n                                                                   'enum': ['Feature']},\n                                                          'id': {'oneOf': [{'type': 'number'},\n                                                                           {'type': 'string'}]},\n                                                          'properties': {'oneOf': [{'type': 'null'},\n                                                                                   {'type': 'object'}]},\n                                                          'geometry': {'oneOf': [{'type': 'null'},\n                                                                                 {'title': 'GeoJSON '\n                                                                                           'Point',\n                                                                                  'type': 'object',\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'properties': {'type': {'type': 'string',\n                                                                                                          'enum': ['Point']},\n                                                                                                 'coordinates': {'type': 'array',\n                                                                                                                 'minItems': 2,\n                                                                                                                 'items': {'type': 'number'}},\n                                                                                                 'bbox': {'type': 'array',\n                                                                                                          'minItems': 4,\n                                                                                                          'items': {'type': 'number'}}}},\n                                                                                 {'title': 'GeoJSON '\n                                                                                           'LineString',\n                                                                                  'type': 'object',\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'properties': {'type': {'type': 'string',\n                                                                                                          'enum': ['LineString']},\n                                                                                                 'coordinates': {'type': 'array',\n                                                                                                                 'minItems': 2,\n                                                                                                                 'items': {'type': 'array',\n                                                                                                                           'minItems': 2,\n                                                                                                                           'items': {'type': 'number'}}},\n                                                                                                 'bbox': {'type': 'array',\n                                                                                                          'minItems': 4,\n                                                                                                          'items': {'type': 'number'}}}},\n                                                                                 {'title': 'GeoJSON '\n                                                                                           'Polygon',\n                                                                                  'type': 'object',\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'properties': {'type': {'type': 'string',\n                                                                                                          'enum': ['Polygon']},\n                                                                                                 'coordinates': {'type': 'array',\n                                                                                                                 'items': {'type': 'array',\n                                                                                                                           'minItems': 4,\n                                                                                                                           'items': {'type': 'array',\n                                                                                                                                     'minItems': 2,\n                                                                                                                                     'items': {'type': 'number'}}}},\n                                                                                                 'bbox': {'type': 'array',\n                                                                                                          'minItems': 4,\n                                                                                                          'items': {'type': 'number'}}}},\n                                                                                 {'title': 'GeoJSON '\n                                                                                           'MultiPoint',\n                                                                                  'type': 'object',\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'properties': {'type': {'type': 'string',\n                                                                                                          'enum': ['MultiPoint']},\n                                                                                                 'coordinates': {'type': 'array',\n                                                                                                                 'items': {'type': 'array',\n                                                                                                                           'minItems': 2,\n                                                                                                                           'items': {'type': 'number'}}},\n                                                                                                 'bbox': {'type': 'array',\n                                                                                                          'minItems': 4,\n                                                                                                          'items': {'type': 'number'}}}},\n                                                                                 {'title': 'GeoJSON '\n                                                                                           'MultiLineString',\n                                                                                  'type': 'object',\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'properties': {'type': {'type': 'string',\n                                                                                                          'enum': ['MultiLineString']},\n                                                                                                 'coordinates': {'type': 'array',\n                                                                                                                 'items': {'type': 'array',\n                                                                                                                           'minItems': 2,\n                                                                                                                           'items': {'type': 'array',\n                                                                                                                                     'minItems': 2,\n                                                                                                                                     'items': {'type': 'number'}}}},\n                                                                                                 'bbox': {'type': 'array',\n                                                                                                          'minItems': 4,\n                                                                                                          'items': {'type': 'number'}}}},\n                                                                                 {'title': 'GeoJSON '\n                                                                                           'MultiPolygon',\n                                                                                  'type': 'object',\n                                                                                  'required': ['type',\n                                                                                               'coordinates'],\n                                                                                  'properties': {'type': {'type': 'string',\n                                                                                                          'enum': ['MultiPolygon']},\n                                                                                                 'coordinates': {'type': 'array',\n                                                                                                                 'items': {'type': 'array',\n                                                                                                                           'items': {'type': 'array',\n                                                                                                                                     'minItems': 4,\n                                                                                                                                     'items': {'type': 'array',\n                                                                                                                                               'minItems': 2,\n                                                                                                                                               'items': {'type': 'number'}}}}},\n                                                                                                 'bbox': {'type': 'array',\n                                                                                                          'minItems': 4,\n                                                                                                          'items': {'type': 'number'}}}},\n                                                                                 {'title': 'GeoJSON '\n                                                                                           'GeometryCollection',\n                                                                                  'type': 'object',\n                                                                                  'required': ['type',\n                                                                                               'geometries'],\n                                                                                  'properties': {'type': {'type': 'string',\n                                                                                                          'enum': ['GeometryCollection']},\n                                                                                                 'geometries': {'type': 'array',\n                                                                                                                'items': {'oneOf': [{'title': 'GeoJSON '\n                                                                                                                                              'Point',\n                                                                                                                                     'type': 'object',\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'properties': {'type': {'type': 'string',\n                                                                                                                                                             'enum': ['Point']},\n                                                                                                                                                    'coordinates': {'type': 'array',\n                                                                                                                                                                    'minItems': 2,\n                                                                                                                                                                    'items': {'type': 'number'}},\n                                                                                                                                                    'bbox': {'type': 'array',\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'items': {'type': 'number'}}}},\n                                                                                                                                    {'title': 'GeoJSON '\n                                                                                                                                              'LineString',\n                                                                                                                                     'type': 'object',\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'properties': {'type': {'type': 'string',\n                                                                                                                                                             'enum': ['LineString']},\n                                                                                                                                                    'coordinates': {'type': 'array',\n                                                                                                                                                                    'minItems': 2,\n                                                                                                                                                                    'items': {'type': 'array',\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'items': {'type': 'number'}}},\n                                                                                                                                                    'bbox': {'type': 'array',\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'items': {'type': 'number'}}}},\n                                                                                                                                    {'title': 'GeoJSON '\n                                                                                                                                              'Polygon',\n                                                                                                                                     'type': 'object',\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'properties': {'type': {'type': 'string',\n                                                                                                                                                             'enum': ['Polygon']},\n                                                                                                                                                    'coordinates': {'type': 'array',\n                                                                                                                                                                    'items': {'type': 'array',\n                                                                                                                                                                              'minItems': 4,\n                                                                                                                                                                              'items': {'type': 'array',\n                                                                                                                                                                                        'minItems': 2,\n                                                                                                                                                                                        'items': {'type': 'number'}}}},\n                                                                                                                                                    'bbox': {'type': 'array',\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'items': {'type': 'number'}}}},\n                                                                                                                                    {'title': 'GeoJSON '\n                                                                                                                                              'MultiPoint',\n                                                                                                                                     'type': 'object',\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'properties': {'type': {'type': 'string',\n                                                                                                                                                             'enum': ['MultiPoint']},\n                                                                                                                                                    'coordinates': {'type': 'array',\n                                                                                                                                                                    'items': {'type': 'array',\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'items': {'type': 'number'}}},\n                                                                                                                                                    'bbox': {'type': 'array',\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'items': {'type': 'number'}}}},\n                                                                                                                                    {'title': 'GeoJSON '\n                                                                                                                                              'MultiLineString',\n                                                                                                                                     'type': 'object',\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'properties': {'type': {'type': 'string',\n                                                                                                                                                             'enum': ['MultiLineString']},\n                                                                                                                                                    'coordinates': {'type': 'array',\n                                                                                                                                                                    'items': {'type': 'array',\n                                                                                                                                                                              'minItems': 2,\n                                                                                                                                                                              'items': {'type': 'array',\n                                                                                                                                                                                        'minItems': 2,\n                                                                                                                                                                                        'items': {'type': 'number'}}}},\n                                                                                                                                                    'bbox': {'type': 'array',\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'items': {'type': 'number'}}}},\n                                                                                                                                    {'title': 'GeoJSON '\n                                                                                                                                              'MultiPolygon',\n                                                                                                                                     'type': 'object',\n                                                                                                                                     'required': ['type',\n                                                                                                                                                  'coordinates'],\n                                                                                                                                     'properties': {'type': {'type': 'string',\n                                                                                                                                                             'enum': ['MultiPolygon']},\n                                                                                                                                                    'coordinates': {'type': 'array',\n                                                                                                                                                                    'items': {'type': 'array',\n                                                                                                                                                                              'items': {'type': 'array',\n                                                                                                                                                                                        'minItems': 4,\n                                                                                                                                                                                        'items': {'type': 'array',\n                                                                                                                                                                                                  'minItems': 2,\n                                                                                                                                                                                                  'items': {'type': 'number'}}}}},\n                                                                                                                                                    'bbox': {'type': 'array',\n                                                                                                                                                             'minItems': 4,\n                                                                                                                                                             'items': {'type': 'number'}}}}]}},\n                                                                                                 'bbox': {'type': 'array',\n                                                                                                          'minItems': 4,\n                                                                                                          'items': {'type': 'number'}}}}]},\n                                                          'bbox': {'type': 'array',\n                                                                   'minItems': 4,\n                                                                   'items': {'type': 'number'}}}}},\n                    'bbox': {'type': 'array',\n                             'minItems': 4,\n                             'items': {'type': 'number'}}}}\n\nOn instance:\n    {'features': [{'id': 'http://www.example.com/features/pt3',\n                   'type': 'Feature',\n                   'geometry': {'type': 'Point',\n                                'coordinates': [174.7, -36.9]},\n                   'properties': {}}]}"
             }
           ]
         },
@@ -500,17 +610,11 @@
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
@@ -519,46 +623,52 @@
                 },
                 "geojson:FeatureCollectionShape": {
                   "nodes": [
-                    "_:N4f4984d708da4f63b2ec554938edb2c0"
+                    "_:N74ff7bc1c2404983b978277aa6ca80c8"
                   ]
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N4f4984d708da4f63b2ec554938edb2c0\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N74ff7bc1c2404983b978277aa6ca80c8\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             },
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
                 "geojson:FeatureShape": {
                   "nodes": [
                     "<http://www.example.com/features/pt3>"
                   ]
                 },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt3>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/pt3>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             }
           ]
         }
@@ -573,6 +683,7 @@
         "language": "json"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "FILES",
@@ -624,17 +735,11 @@
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
@@ -643,35 +748,32 @@
                 },
                 "geojson:FeatureCollectionShape": {
                   "nodes": [
-                    "_:Ne3aaca3a8f264317bf5b1f49e1600328"
+                    "_:N8733fb318f724924bd68199094eab7ba"
                   ]
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:Ne3aaca3a8f264317bf5b1f49e1600328\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N8733fb318f724924bd68199094eab7ba\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             },
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
                 "geojson:FeatureShape": {
                   "nodes": [
                     "<http://www.example.com/features/nogeom1>",
@@ -679,12 +781,21 @@
                     "<http://www.example.com/features/pt1>"
                   ]
                 },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/nogeom1>,<http://www.example.com/features/ls1>,<http://www.example.com/features/pt1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/nogeom1>,<http://www.example.com/features/ls1>,<http://www.example.com/features/pt1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             }
           ]
         }
@@ -701,6 +812,7 @@
         "language": "application/json"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "FILES",
@@ -752,17 +864,11 @@
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/featureCollection/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/featureCollection/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
@@ -771,46 +877,52 @@
                 },
                 "geojson:FeatureCollectionShape": {
                   "nodes": [
-                    "_:Nb58290ef61464aa795bb23ab7714e411"
+                    "_:N36bb8df7320741b389a3838a7f312672"
                   ]
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:Nb58290ef61464aa795bb23ab7714e411\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: _:N36bb8df7320741b389a3838a7f312672\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             },
             {
               "op": "shacl-report",
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for registereditems/geo/features/feature/shapes.shacl: no results"
             },
             {
               "shaclFile": "registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
-                "geojson:GeometryShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
                 "geojson:FeatureShape": {
                   "nodes": [
                     "<http://www.example.com/features/f1>"
                   ]
                 },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://www.example.com/features/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://www.example.com/features/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             }
           ]
         }
@@ -818,6 +930,7 @@
     }
   ],
   "globalErrors": {},
+  "hasWarnings": false,
   "counts": {
     "total": 7,
     "passed": 7,
