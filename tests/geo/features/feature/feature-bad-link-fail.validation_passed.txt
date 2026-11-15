@@ -1,5 +1,5 @@
 Validation report for ogc.geo.features.feature - Feature
-Generated 2026-11-08T04:13:35.039869+00:00
+Generated 2026-11-15T04:13:38.562132+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -14,7 +14,7 @@ Validation result for registereditems/geo/features/feature/shapes.shacl: 2 viola
 ** Validation error **
 Violation (sh:MinCountConstraintComponent):
   Source shape: geojson:LinkShape/sh:property "href" (path oa:hasTarget)
-  Focus node: _:n59f70f6f884a46fa82c90a85e3243f48b4
+  Focus node: _:n28a0a1ea1a4942c2b230be051c031909b4
   Result path: <http://www.w3.org/ns/oa#hasTarget>
   Message: Less than 1 values on [ ]->oa:hasTarget
 
@@ -23,13 +23,13 @@ Violation (sh:NodeConstraintComponent):
   Source shape: geojson:FeatureShape/sh:property "links" (path rdfs:seeAlso)
   Focus node: <http://www.example.com/features/bad-link1>
   Result path: rdfs:seeAlso
-  Value: _:n59f70f6f884a46fa82c90a85e3243f48b4
+  Value: _:n28a0a1ea1a4942c2b230be051c031909b4
   Message: Value does not conform to Shape geojson:LinkShape. See details for more information.
 Focus nodes for registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:FeatureShape: <http://www.example.com/features/bad-link1>
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:LinkShape: *none*
 
 === End SHACL ===
